@@ -1,77 +1,22 @@
 import { Locale } from '@/lib/i18n';
+import fs from 'fs';
+import path from 'path';
 
 interface ExperienceMetricsProps {
   locale: Locale;
 }
 
 export default function ExperienceMetrics({ locale }: ExperienceMetricsProps) {
-  const content = {
-    en: {
-      title: "Data-Backed Experience",
-      metrics: [
-        {
-          number: "500+",
-          label: "ATR Assessments",
-          detail: "Grid feasibility analysis and network capacity testing across 41 Romanian counties."
-        },
-        {
-          number: "850+",
-          label: "MW Technical Advisory",
-          detail: "Grid integration and risk modeling across solar, wind, BESS, and hybrid technologies."
-        },
-        {
-          number: "10+",
-          label: "Years Cross-Border Operations",
-          detail: "Turkey origins, Romania focus — regulatory adaptation and ANRE compliance."
-        }
-      ],
-      insight: "These numbers don't claim 'mastery'—they demonstrate experience quality. Every ATR is part of a grid risk test."
-    },
-    tr: {
-      title: "Veriye Dayalı Deneyim",
-      metrics: [
-        {
-          number: "500+",
-          label: "ATR Değerlendirmesi",
-          detail: "Romanya'nın 41 ilçesinde grid fizibilite analizi ve şebeke kapasite testi."
-        },
-        {
-          number: "850+",
-          label: "MW Teknik Danışmanlık",
-          detail: "Solar, wind, BESS, hybrid teknolojilerinde şebeke entegrasyonu ve risk modellemesi."
-        },
-        {
-          number: "10+",
-          label: "Yıl Sınır Ötesi Operasyon",
-          detail: "Türkiye başlangıç, Romanya fokus — regülasyon adaptasyonu ve ANRE uyumu."
-        }
-      ],
-      insight: "Bu rakamlar 'ustalık' iddiası değildir. Deneyim kalitesini gösterir. Her ATR, grid risk testinin bir parçasıdır."
-    },
-    ro: {
-      title: "Experiență Bazată pe Date",
-      metrics: [
-        {
-          number: "500+",
-          label: "Evaluări ATR",
-          detail: "Analiza viabilitate rețea și testare capacitate rețea în 41 județe române."
-        },
-        {
-          number: "850+",
-          label: "MW Consultanță Tehnică",
-          detail: "Integrare rețea și modelare risc în tehnologii solare, eoliene, BESS și hibride."
-        },
-        {
-          number: "10+",
-          label: "Ani Operațiuni Transfrontaliere",
-          detail: "Origini Turcia, fokus România — adaptare regulatoare și conformitate ANRE."
-        }
-      ],
-      insight: "Aceste numere nu pretind 'măiestrie'—demonstrează calitatea experienței. Fiecare ATR este parte a unui test de risc rețea."
-    }
-  };
+  // Load content from JSON structure
+  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
+  const metricsData = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).metrics;
 
-  const currentContent = content[locale];
+  // Flatten metrics from groups for current component structure
+  const currentContent = {
+    title: metricsData.title,
+    metrics: metricsData.groups.flatMap((group: any) => group.metrics),
+    insight: "Bu rakamlar 'ustalık' iddiası değildir. Deneyim kalitesini gösterir. Her ATR, grid risk testinin bir parçasıdır."
+  };
 
   return (
     <section className="py-20 bg-muted">

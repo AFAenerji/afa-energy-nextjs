@@ -1,80 +1,28 @@
 import { Locale } from '@/lib/i18n';
+import fs from 'fs';
+import path from 'path';
 
 interface RoleClarityProps {
   locale: Locale;
 }
 
 export default function RoleClarity({ locale }: RoleClarityProps) {
-  const content = {
-    en: {
-      title: "Role Clarity",
-      does: {
-        title: "AFA Does",
-        items: [
-          "Provides technical risk assessment",
-          "Offers investment readiness analysis", 
-          "Coordinates pre-TDD process",
-          "Delivers bankability framework"
-        ]
-      },
-      doesnt: {
-        title: "AFA Doesn't",
-        items: [
-          "Does not develop projects",
-          "Does not provide financing",
-          "Is not an official approval authority",
-          "Does not provide investment guarantee"
-        ]
-      },
-      conclusion: "These boundaries protect AFA's independence. As an investor-side advisor, there are no conflicts of interest."
-    },
-    tr: {
-      title: "Rol Netliği",
-      does: {
-        title: "AFA YAPAR",
-        items: [
-          "Teknik risk değerlendirmesi yapar",
-          "Yatırıma hazırlık analizi sunar",
-          "Pre-TDD koordinasyonu sağlar",
-          "Banka finansmanına uygunluk çerçevesi sunar"
-        ]
-      },
-      doesnt: {
-        title: "AFA YAPMAZ",
-        items: [
-          "Proje geliştirme yapmaz",
-          "Finansman sağlamaz",
-          "Resmi onay makamı değildir",
-          "Yatırım garantisi vermez"
-        ]
-      },
-      conclusion: "Bu sınırlar AFA'nın bağımsızlığını korur. Yatırımcı tarafında konumlanan bir danışman olarak, çıkar çatışması olmaz."
-    },
-    ro: {
-      title: "Claritate Roluri",
-      does: {
-        title: "AFA FACE",
-        items: [
-          "Furnizează evaluare risc tehnic",
-          "Oferă analiză pregătire investiție",
-          "Coordonează procesul pre-TDD",
-          "Furnizează cadru finanțabilitate"
-        ]
-      },
-      doesnt: {
-        title: "AFA NU FACE",
-        items: [
-          "Nu dezvoltă proiecte",
-          "Nu furnizează finanțare",
-          "Nu este o autoritate oficială de aprobare",
-          "Nu furnizează garanție investiție"
-        ]
-      },
-      conclusion: "Aceste limite protejează independența AFA. Ca consultant pe partea investitorului, nu există conflicte de interese."
-    }
-  };
+  // Load content from JSON structure
+  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
+  const roleData = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).roleClarity;
 
-  const currentContent = content[locale];
+  const currentContent = {
+    title: roleData.roleTitle,
+    does: {
+      title: "AFA YAPAR",
+      items: roleData.does
+    },
+    doesnt: {
+      title: "AFA YAPMAZ", 
+      items: roleData.doesNot
+    },
+    conclusion: roleData.boundaryNote
+  };
 
   return (
     <section className="py-20">

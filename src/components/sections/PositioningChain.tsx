@@ -1,77 +1,15 @@
 import { Locale } from '@/lib/i18n';
+import fs from 'fs';
+import path from 'path';
 
 interface PositioningChainProps {
   locale: Locale;
 }
 
 export default function PositioningChain({ locale }: PositioningChainProps) {
-  const content = {
-    en: {
-      title: "Investment Readiness Chain",
-      stages: [
-        {
-          title: "Technical Pre-Assessment",
-          description: "Project fundamental eligibility — grid, permits, financing framework.",
-          outcome: "Yes/No decision gate"
-        },
-        {
-          title: "Grid & Connection Assessment",
-          description: "Connection feasibility and capacity framework.",
-          outcome: "Financial model preparation"
-        },
-        {
-          title: "Investment Readiness Analysis",
-          description: "Integration of technical findings into financial decision structure.",
-          outcome: "Investment committee decision"
-        }
-      ],
-      conclusion: "If any link in this chain is missing or fails, investment stalls. AFA's role is to make every link speak the same language."
-    },
-    tr: {
-      title: "Yatırımın Hazırlık Zinciri",
-      stages: [
-        {
-          title: "Teknik Ön Değerlendirme",
-          description: "Projenin temel uygunluk analizi — şebeke, izin, finansman çerçevesi.",
-          outcome: "Evet / Hayır karar noktası"
-        },
-        {
-          title: "Şebeke & Bağlantı Değerlendirmesi",
-          description: "Bağlantı fizibilitesi ve kapasite çerçevesi.",
-          outcome: "Finansal model hazırlığı"
-        },
-        {
-          title: "Yatırıma Hazırlık Analizi",
-          description: "Teknik bulguların finansal karar yapısına entegrasyonu.",
-          outcome: "Yatırım komitesi kararı"
-        }
-      ],
-      conclusion: "Bu zincirin herhangi bir halkası eksikse veya başarısız olursa, yatırım ilerlemez. AFA'nın rolü, tüm halkaları aynı dilde konuşturmaktır."
-    },
-    ro: {
-      title: "Lanț de Pregătire pentru Investiții",
-      stages: [
-        {
-          title: "Pre-Evaluare Tehnică",
-          description: "Eligibilitate fundamentală a proiectului — rețea, autorizații, cadru de finanțare.",
-          outcome: "Punct de decizie Da/Nu"
-        },
-        {
-          title: "Evaluare Rețea și Conexiune",
-          description: "Viabilitate conexiune și cadru capacitate.",
-          outcome: "Pregătire model financiar"
-        },
-        {
-          title: "Analiză Pregătire Investiție",
-          description: "Integrarea constatărilor tehnice în structura decizională financiară.",
-          outcome: "Decizie comitet de investiții"
-        }
-      ],
-      conclusion: "Dacă orice legătură din acest lanț lipsește sau eșuează, investiția stagnează. Rolul AFA este să facă ca fiecare legătură să vorbească aceeași limbă."
-    }
-  };
-
-  const currentContent = content[locale];
+  // Load content from JSON structure
+  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
+  const currentContent = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).investmentChain;
 
   return (
     <section className="py-20">

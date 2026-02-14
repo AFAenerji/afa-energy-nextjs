@@ -1,19 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Locale } from '@/lib/i18n';
+import fs from 'fs';
+import path from 'path';
 
 interface HeroSectionProps {
   locale: Locale;
 }
 
 export default function HeroSection({ locale }: HeroSectionProps) {
-  // TODO: Fetch from JSON - temporary hardcoded
-  const hero = {
-    motto: "YATIRIMDAN ÖNCE NETLİK.",
-    supporting: "Teknik Doğruluk. Yatırımcı Disiplini.",
-    primaryCta: "Projenizi Değerlendiriniz",
-    secondaryCta: "Yatırımcı Profil"
-  };
+  // Load content from JSON structure
+  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
+  const hero = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).hero;
 
   return (
     <section className="relative min-h-screen overflow-hidden">
