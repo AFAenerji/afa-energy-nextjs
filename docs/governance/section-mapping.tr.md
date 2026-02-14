@@ -1,6 +1,6 @@
 # AFA Energy - Sistem Bolum Haritasi (TR)
 
-**Olusturulma Tarihi:** 2026-02-14T14:01:19.184Z
+**Olusturulma Tarihi:** 2026-02-14T15:58:04.848Z
 
 | Bolum Kimligi | Veri Yolu (JSON) | Baslik / Etiket | Durum |
 |---|---|---|---|

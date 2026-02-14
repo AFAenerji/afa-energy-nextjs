@@ -1,6 +1,4 @@
-'use client';
-
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Locale } from '@/lib/i18n';
 import fs from 'fs';
 import path from 'path';
@@ -10,12 +8,6 @@ interface DecisionInterfaceProps {
 }
 
 export default function DecisionInterface({ locale }: DecisionInterfaceProps) {
-  const router = useRouter();
-
-  const handleNavigation = (path: string) => {
-    router.push(`/${locale}${path}`);
-  };
-
   // Load content from JSON structure
   const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
   const currentContent = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).decisionCards;
@@ -42,12 +34,12 @@ export default function DecisionInterface({ locale }: DecisionInterfaceProps) {
               </div>
 
               {/* Primary Button */}
-              <button
-                onClick={() => handleNavigation('/investor')}
-                className="w-full bg-primary text-accent px-6 py-3 rounded-[4px] font-bold hover:opacity-90 text-center"
+              <Link
+                href={`/${locale}/investor`}
+                className="block w-full bg-primary text-accent px-6 py-3 rounded-[4px] font-bold hover:opacity-90 text-center transition-none"
               >
                 {currentContent.investor.cta}
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -55,7 +47,7 @@ export default function DecisionInterface({ locale }: DecisionInterfaceProps) {
           <div className="bg-white rounded-[12px] shadow-sm overflow-hidden">
             <div className="border-t-4 border-t-secondary p-6">
               <h3 className="text-xl font-bold mb-4 text-dark font-heading">
-                {currentContent.developer.persona}
+                {currentContent.developer.title}
               </h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 {currentContent.developer.description}
@@ -64,17 +56,17 @@ export default function DecisionInterface({ locale }: DecisionInterfaceProps) {
               {/* Offer Box */}
               <div className="bg-[#E8F8FA] p-4 rounded-[4px] mb-6">
                 <div className="text-gray-700 font-medium">
-                  {currentContent.developer.offer}
+                  ✓ Bağımsız teknik analiz
                 </div>
               </div>
 
               {/* Secondary Button */}
-              <button
-                onClick={() => handleNavigation('/developer')}
-                className="w-full bg-transparent text-secondary border border-secondary px-6 py-3 rounded-[4px] font-bold hover:bg-secondary hover:text-white text-center"
+              <Link
+                href={`/${locale}/developer`}
+                className="block w-full bg-transparent text-secondary border border-secondary px-6 py-3 rounded-[4px] font-bold hover:bg-secondary hover:text-white text-center transition-none"
               >
-                {currentContent.developer.buttonText}
-              </button>
+                {currentContent.developer.cta}
+              </Link>
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@ export default function HeroSection({ locale }: HeroSectionProps) {
   const hero = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).hero;
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* --- MOBILE LAYOUT (<1024px) --- */}
+    <section className="relative h-[calc(100vh-64px)] overflow-hidden">
+      {/* --- MOBILE BACKGROUND (<1024px) --- */}
       <div className="absolute inset-0 lg:hidden">
         <Image
           src="/images/hero-main_1200_1500_mobile.jpg"
@@ -29,7 +29,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/30" />
       </div>
 
-      {/* --- DESKTOP LAYOUT (>=1024px) --- */}
+      {/* --- DESKTOP BACKGROUND (>=1024px) --- */}
       <div className="absolute inset-0 hidden lg:block">
         <Image
           src="/images/hero-main_2560_1100.jpg"
@@ -37,18 +37,17 @@ export default function HeroSection({ locale }: HeroSectionProps) {
           fill
           priority
           sizes="100vw"
-          // Anchor image slightly left to balance with the right-side panel
           className="object-cover object-[20%_center]"
           quality={90}
         />
       </div>
 
-      {/* --- CONTENT LAYER --- */}
-      <div className="relative w-full z-10 h-full pointer-events-none">
-        <div className="mx-auto max-w-7xl px-6 h-full flex items-center">
+      {/* --- CONTENT LAYER (absolute overlay) --- */}
+      <div className="absolute inset-0 z-10 flex items-center">
+        <div className="mx-auto max-w-7xl w-full px-6">
           
-          {/* Text Container */}
-          <div className="w-full max-w-xl mx-auto lg:mr-0 lg:ml-auto lg:max-w-2xl pointer-events-auto">
+          {/* Text Container: centered on mobile, right-aligned on desktop */}
+          <div className="w-full max-w-xl mx-auto lg:mr-0 lg:ml-auto lg:max-w-2xl">
             
             {/* AUDIT REPORT PANEL (Desktop Only): 
                 - White background (95% opacity)
@@ -56,7 +55,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
                 - Left Yellow Accent Border (Corporate Identity)
                 - Thin Gray Border
             */}
-            <div className="lg:bg-white/95 lg:p-10 lg:rounded-[4px] lg:border lg:border-gray-200 lg:border-l-[4px] lg:border-l-[#FFCB00] lg:shadow-none">
+            <div className="p-6 lg:bg-white/95 lg:p-10 lg:rounded-[4px] lg:border lg:border-gray-200 lg:border-l-[4px] lg:border-l-[#FFCB00] lg:shadow-none">
               
               {/* Motto */}
               <h1 className="text-white lg:text-slate-900 font-bold tracking-tight text-4xl lg:text-6xl leading-tight text-center lg:text-left">
