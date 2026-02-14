@@ -37,7 +37,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[20%_center]"
+          className="object-cover object-[10%_center]"
           quality={90}
         />
       </div>
@@ -47,7 +47,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
         <div className="mx-auto max-w-7xl w-full px-6">
           
           {/* Text Container: centered on mobile, right-aligned on desktop */}
-          <div className="w-full max-w-xl mx-auto lg:mr-0 lg:ml-auto lg:max-w-2xl">
+          <div className="w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-0 lg:max-w-lg">
             
             {/* AUDIT REPORT PANEL (Desktop Only): 
                 - White background (95% opacity)
