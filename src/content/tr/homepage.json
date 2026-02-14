@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "motto": "YATIRIMDAN ÖNCE NETLİK.",
+    "supporting": "Teknik Doğruluk. Yatırımcı Disiplini.",
+    "primaryCta": "Projenizi Değerlendiriniz",
+    "secondaryCta": "Yatırımcı Profil"
+  },
+  "decisionCards": {
+    "investor": {
+      "title": "Yatırımcı",
+      "description": "Teknik doğrulanmış projeler için yatırım karar disiplini.",
+      "cta": "Portfolyo Değerlendirmesi"
+    },
+    "developer": {
+      "title": "Geliştirici",
+      "description": "Bağlantı ve şebeke fizibilitesi için teknik analiz.",
+      "cta": "Teknik Değerlendirme"
+    }
+  },
+  "introStatement": {
+    "text": "AFA Energy, Romanya yenilenebilir enerji pazarında şebeke uyumluluğu ve yatırım hazırlık analizinde teknik doğrulama merkezi olarak konumlanmıştır. Değerlendirmelerimiz yatırım komitesi standartlarına uygun, çıkar çatışmasından arındırılmış bağımsız analizler sunar."
+  },
+  "investmentChain": {
+    "title": "Yatırımın Hazırlık Zinciri",
+    "stages": [
+      {
+        "title": "Teknik Ön Değerlendirme",
+        "description": "Projenin temel uygunluk analizi — şebeke, izin, finansman çerçevesi.",
+        "outcome": "Evet / Hayır karar noktası"
+      },
+      {
+        "title": "Şebeke & Bağlantı Değerlendirmesi",
+        "description": "Bağlantı fizibilitesi ve kapasite çerçevesi.",
+        "outcome": "Finansal model hazırlığı"
+      },
+      {
+        "title": "Yatırıma Hazırlık Analizi",
+        "description": "Teknik bulguların finansal karar yapısına entegrasyonu.",
+        "outcome": "Yatırım komitesi kararı"
+      }
+    ]
+  },
+  "metrics": {
+    "title": "Veriye Dayalı Deneyim",
+    "groups": [
+      {
+        "name": "Türkiye",
+        "title": "Türkiye Operasyonları",
+        "metrics": [
+          {
+            "number": "500+",
+            "label": "ATR Değerlendirmesi",
+            "detail": "Romanya'nın 41 ilçesinde grid fizibilite analizi ve şebeke kapasite testi."
+          },
+          {
+            "number": "850+",
+            "label": "MW Teknik Danışmanlık",
+            "detail": "Solar, wind, BESS, hybrid teknolojilerinde şebeke entegrasyonu ve risk modellemesi."
+          }
+        ]
+      },
+      {
+        "name": "Romanya",
+        "title": "Romanya Uzmanlığı",
+        "metrics": [
+          {
+            "number": "10+",
+            "label": "Yıl Sınır Ötesi Operasyon",
+            "detail": "Türkiye başlangıç, Romanya fokus — regülasyon adaptasyonu ve ANRE uyumu."
+          }
+        ]
+      }
+    ]
+  },
+  "roleClarity": {
+    "roleTitle": "AFA'nın Rolü ve Sınırları",
+    "does": [
+      "Teknik doğrulama ve fizibilite analizi",
+      "Şebeke kapasitesi ve bağlantı değerlendirmesi",
+      "Yatırım komitesi standartlarında raporlama",
+      "Bağımsız, çıkar çatışmasından arındırılmış danışmanlık"
+    ],
+    "doesNot": [
+      "Proje geliştirme veya mühendislik",
+      "EPC taahhüt veya tedarik zinciri yönetimi",
+      "Finansal aracılık veya yatırım yönetimi",
+      "Taraf olunan projelerde danışmanlık"
+    ],
+    "boundaryNote": "Bu sınırlar, bağımsız doğrulama hizmetimizin bütünlüğünü ve yatırım kararlarının objektifliğini garanti altına alır."
+  },
+  "formSuccess": {
+    "message": "Başvurunuz teknik değerlendirme için kaydedilmiştir. 24 saat içinde size ulaşacağız."
+  },
+  "scopeDisclaimer": {
+    "text": "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır."
+  },
+  "footer": {
+    "formsOnly": "Sadece teknik değerlendirme formları aktiftir."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "motto": "YATIRIMDAN ÖNCE NETLİK.",
+    "subhead": "Teknik Doğruluk. Yatırımcı Disiplini.",
+    "primaryCta": "Projenizi Değerlendiriniz",
+    "secondaryCta": "Yatırımcı Profil"
+  },
+  "valueProposition": {
+    "title": "Şebeke Uygulanabilirliği ve Yatırım Karar Disiplini",
+    "body": "Romanya yenilenebilir enerji pazarında proje değerinin temel belirleyicisi, kâğıt üzerindeki kurgu ile fiili şebeke kapasitesinin uyumudur. Piyasa uygulamalarının önemli bir kısmı geliştirme perspektifine odaklanırken; AFA projeleri yatırımcı ve finansman standartları ekseninde yapılandırılmış teknik filtrelerden geçirir. Teknik Bağlantı Onayı (Aviz Tehnic de Racordare – ATR) aşamasında veya sonrasında karşılaşılan şebeke koşulları ve bağlantı maliyeti kapsamı yatırım ekonomisini doğrudan etkiler. Bu nedenle değerlendirme modeli yalnızca izin statüsüne değil; şebekeye verilebilirlik (evacuation capability), teslim edilebilirlik (deliverability) ve banka finansmanına uygunluk (bankability) eşiklerine dayanır. Geliştirici veya mühendislik, tedarik ve yapım yüklenicisi rolü üstlenilmez. Bu yaklaşım, çıkar çatışmasından arındırılmış bağımsız doğrulama sağlar."
+  },
+  "atrMatrix": {
+    "title": "ATR Matrix™ Framework",
+    "framework": [
+      {
+        "id": "01",
+        "title": "Kapasite ve Şebeke Entegrasyonu",
+        "description": "Bağlantı noktası doluluk seviyesi analizi ve şebekeye verilebilirlik stres testi. Üretim kısıtı projeksiyonlarının doğrulanması."
+      },
+      {
+        "id": "02",
+        "title": "Regülasyon ve İzin Geçerliliği",
+        "description": "ATR ve ilgili izinlerin yasal geçerlilik süreleri ile ANRE mevzuat uyum kontrolü."
+      },
+      {
+        "id": "03",
+        "title": "CAPEX ve Bağlantı Ekonomisi",
+        "description": "Bağlantı maliyeti kapsam doğrulaması ve yatırım bütçesinin rasyonelleştirilmesi."
+      },
+      {
+        "id": "04",
+        "title": "Bankabilite ve Veri Doğruluğu",
+        "description": "Teknik bulguların banka finansmanına uygunluk eşikleriyle eşleştirilmesi."
+      }
+    ]
+  },
+  "regulatory": {
+    "atrFull": "Aviz Tehnic de Racordare",
+    "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+    "citations": [
+      {
+        "reference": "ANRE Ordin 59/2023",
+        "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
+      },
+      {
+        "reference": "ANRE Ordin 30/2022",
+        "description": "Condiţiile tehnice de racordare la reţelele electrice"
+      }
+    ]
+  },
+  "legal": {
+    "disclaimer": "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır."
+  },
+  "forms": {
+    "labels": {
+      "investorType": "Yatırımcı Kategorisi",
+      "capacity": "Hedef Kapasite (MWp)",
+      "email": "Kurumsal E-posta",
+      "name": "Ad Soyad",
+      "company": "Şirket Adı",
+      "phone": "Telefon"
+    },
+    "placeholders": {
+      "investorType": "Seçiniz...",
+      "email": "isim@sirket.ro",
+      "name": "Adınızı giriniz",
+      "company": "Şirket adını giriniz",
+      "phone": "+90 532 000 00 00"
+    },
+    "status": {
+      "processing": "Veri Doğrulanıyor...",
+      "success": "Başvuru Kaydedildi.",
+      "error": "Geçersiz Veri Girişi.",
+      "loading": "İşleniyor..."
+    },
+    "validation": {
+      "requiredThreshold": "Teknik değerlendirme için bu veri zorunludur.",
+      "emailCorporate": "Teknik iletişim için kurumsal e-posta zorunludur.",
+      "invalidEmail": "Geçerli bir e-posta adresi giriniz.",
+      "fieldRequired": "Bu alan zorunludur."
+    }
+  },
+  "navigation": {
+    "home": "Ana Sayfa",
+    "investor": "Yatırımcı",
+    "developer": "Geliştirici",
+    "services": "Hizmetler",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  }
+}

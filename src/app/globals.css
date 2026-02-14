@@ -1,0 +1,342 @@
+@import "tailwindcss";
+/* ============================================================
+   AFA Energy Romania — Tailwind v4 Theme + Brand System
+   Slogan ve Kurumsal Dil Rehberi v1.2 Uyumlu
+   ============================================================ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   AFA ENERGY ROMANIA - CORPORATE DIGITAL GOVERNANCE v5.0
+   Audit Aesthetic • Investment Committee Interface Standard
+   ============================================================ */
+
+/* 1. GLOBAL DESIGN RULES - CSS VARIABLES */
+:root {
+  /* Primary Colors */
+  --green-authority: #18625F;
+  --green-deep: #0F2E2C;
+  --yellow-accent: #FFCB00;
+  --yellow-hover: #e6b800;
+  --white: #FFFFFF;
+  --muted: #F5F5F5;
+  --border: #E0E0E0;
+
+  /* Status Colors */
+  --error: #F25F5C;
+  --error-bg: #FFF5F5;
+
+  /* Text Colors */
+  --text-primary: #0B1F1E;
+  --text-body: #333333;
+  --text-muted: #666666;
+  --text-on-green: #FFFFFF;
+  --text-on-yellow: #0B1F1E;
+
+  /* Geometry & Standards */
+  --radius: 4px;
+  --line-weight: 1px;
+  --line-weight-bold: 1.5px;
+  --container: 1200px;
+
+  /* Grid System */
+  --grid-columns: 12;
+  --grid-gap: 24px;
+
+  /* Spacing Scale (4px base) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Form Standards */
+  --form-gap: var(--space-md);
+
+  /* Breakpoints */
+  --bp-tablet: 1024px;
+  --bp-mobile: 768px;
+  --bp-small: 960px;
+}
+
+/* 2. MOTION-FREE POLICY */
+*,
+*::before,
+*::after {
+  transition-property: none !important;
+  animation: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* 3. HERO TYPOGRAPHY */
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.hero-bg-image {
+  background-image: url('/images/hero-main.jpg');
+  filter: contrast(1.1) brightness(0.9) grayscale(0.2);
+}
+
+/* 3. BASE */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-body);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+/* 4. LAYOUT */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* 5. GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+}
+
+@media (max-width: var(--bp-mobile)) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* 6. BUTTON STANDARDS */
+.btn-primary {
+  background: var(--yellow-accent);
+  color: var(--text-on-yellow);
+  border-radius: var(--radius);
+  padding: 14px 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--yellow-hover);
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--yellow-accent);
+  color: var(--text-on-green);
+  border-radius: var(--radius);
+  padding: 14px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: var(--yellow-accent);
+  color: var(--text-on-yellow);
+}
+
+/* 7. CARD STANDARDS */
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+.card:hover {
+  border-color: var(--green-authority);
+}
+
+/* 8. FORM ELEMENTS */
+input, select, textarea {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px var(--space-md);
+  background: var(--white);
+  color: var(--text-body);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--green-authority);
+  outline: none;
+}
+
+.form-group {
+  margin-bottom: var(--form-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.input-error {
+  border-color: var(--error);
+  background: var(--error-bg);
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: var(--space-xs);
+}
+
+/* 9. ACCESSIBILITY */
+:focus-visible {
+  outline: 2px solid var(--yellow-accent);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 10. HERO SECTION */
+.hero-mask {
+  width: 42%;
+  background: var(--green-authority);
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
+}
+
+.hero-bg {
+  filter: contrast(1.1) brightness(0.9) grayscale(0.2);
+}
+
+@media (max-width: var(--bp-tablet)) {
+  .hero-mask { 
+    width: 55%; 
+  }
+  .hero-content { 
+    padding-left: 60px; 
+  }
+}
+
+@media (max-width: var(--bp-mobile)) {
+  .hero-mask { 
+    display: none; 
+  }
+  .hero-content {
+    background: var(--green-authority);
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+/* 11. ATR MATRIX TABLE */
+.matrix-row {
+  transition: none !important;
+}
+
+.matrix-row:hover {
+  background: #F9F9F9;
+}
+
+@media (max-width: var(--bp-mobile)) {
+  .matrix-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.matrix-table-wrap {
+  scrollbar-color: var(--border) transparent;
+  scrollbar-width: thin;
+}
+
+.matrix-table-wrap::-webkit-scrollbar {
+  height: 8px;
+}
+
+.matrix-table-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.matrix-table-wrap::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+/* 12. PROOF STRIP */
+.proof-strip {
+  background: var(--green-deep);
+  color: var(--white);
+}
+
+.proof-number {
+  color: var(--yellow-accent);
+  font-weight: 800;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+@media (max-width: var(--bp-tablet)) {
+  .proof-number { 
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: var(--bp-mobile)) {
+  .proof-number { 
+    font-size: 2rem; 
+  }
+}
+
+/* 13. LOADING STATES */
+.btn-loading {
+  cursor: progress;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* 14. MOBILE MENU */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease !important;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+/* ============================================================
+   Footer Buttons — Brief Section 2.4 (Footer)
+   Radius: 4px, no animations
+   ============================================================ */
+.footer-primary-btn {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  cursor: pointer;
+  border: none;
+}
+
+.footer-primary-btn:hover {
+  opacity: 0.9;
+}
+
+.footer-secondary-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  cursor: pointer;
+}
+
+.footer-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
