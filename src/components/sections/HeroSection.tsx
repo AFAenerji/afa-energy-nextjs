@@ -14,77 +14,81 @@ export default function HeroSection({ locale }: HeroSectionProps) {
   const hero = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).hero;
 
   return (
-    <section className="relative h-[calc(100vh-64px)] overflow-hidden">
-      {/* --- MOBILE BACKGROUND (<1024px) --- */}
+    <section className="relative min-h-[700px] lg:h-[calc(100vh-64px)]">
+      {/* === MOBILE (<1024px): Image + Overlay + Centered Text === */}
       <div className="absolute inset-0 lg:hidden">
         <Image
           src="/images/hero-main_1200_1500_mobile.jpg"
-          alt="" 
+          alt=""
           fill
           priority
           sizes="100vw"
           className="object-cover object-top"
         />
-        {/* Dark overlay for text readability on mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/30" />
       </div>
 
-      {/* --- DESKTOP BACKGROUND (>=1024px) --- */}
+      {/* Mobile Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-[700px] px-6 lg:hidden">
+        <div className="w-full max-w-xl text-center">
+          <h1 className="text-white font-bold tracking-tight text-4xl leading-tight">
+            {hero.motto}
+          </h1>
+          <p className="mt-6 text-white/95 text-lg leading-relaxed">
+            {hero.supporting}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center">
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-[#FFCB00] px-6 py-3.5 text-[#18625F] font-bold border border-[#FFCB00] transition-none hover:bg-[#e6b800]"
+            >
+              {hero.primaryCta}
+            </Link>
+            <Link
+              href={`/${locale}/investor-profile`}
+              className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-transparent px-6 py-3.5 text-white font-bold border border-[#FFCB00] transition-none hover:bg-[#FFCB00] hover:text-[#18625F]"
+            >
+              {hero.secondaryCta}
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* === DESKTOP (>=1024px): Image left, Panel absolute right === */}
       <div className="absolute inset-0 hidden lg:block">
         <Image
           src="/images/hero-main_2560_1100.jpg"
-          alt="" 
+          alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[10%_center]"
+          className="object-cover object-left"
           quality={90}
         />
       </div>
 
-      {/* --- CONTENT LAYER (absolute overlay) --- */}
-      <div className="absolute inset-0 z-10 flex items-center">
-        <div className="mx-auto max-w-7xl w-full px-6">
-          
-          {/* Text Container: centered on mobile, right-aligned on desktop */}
-          <div className="w-full max-w-xl mx-auto lg:mx-0 lg:ml-auto lg:mr-0 lg:max-w-lg">
-            
-            {/* AUDIT REPORT PANEL (Desktop Only): 
-                - White background (95% opacity)
-                - No Blur
-                - Left Yellow Accent Border (Corporate Identity)
-                - Thin Gray Border
-            */}
-            <div className="p-6 lg:bg-white/95 lg:p-10 lg:rounded-[4px] lg:border lg:border-gray-200 lg:border-l-[4px] lg:border-l-[#FFCB00] lg:shadow-none">
-              
-              {/* Motto */}
-              <h1 className="text-white lg:text-slate-900 font-bold tracking-tight text-4xl lg:text-6xl leading-tight text-center lg:text-left">
-                {hero.motto}
-              </h1>
-
-              {/* Subhead */}
-              <p className="mt-6 text-white/95 lg:text-slate-700 text-lg lg:text-xl leading-relaxed text-center lg:text-left">
-                {hero.supporting}
-              </p>
-
-              {/* Action Buttons */}
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center lg:justify-start">
-                <Link
-                  href={`/${locale}/contact`}
-                  className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-[#FFCB00] px-6 py-3.5 text-[#18625F] font-bold border border-[#FFCB00] transition-none hover:bg-[#e6b800]"
-                >
-                  {hero.primaryCta}
-                </Link>
-
-                <Link
-                  href={`/${locale}/investor-profile`}
-                  className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-transparent px-6 py-3.5 text-white lg:text-[#0B1F1E] font-bold border border-[#FFCB00] transition-none hover:bg-[#FFCB00] hover:text-[#18625F]"
-                >
-                  {hero.secondaryCta}
-                </Link>
-              </div>
-            </div>
-            
+      {/* Desktop Panel — absolute right, vertically centered */}
+      <div className="hidden lg:block absolute right-[10%] top-1/2 -translate-y-1/2 z-10 w-[500px]">
+        <div className="bg-white/95 p-10 rounded-[4px] border border-gray-200 border-l-[4px] border-l-[#FFCB00]">
+          <h1 className="text-slate-900 font-bold tracking-tight text-5xl leading-tight">
+            {hero.motto}
+          </h1>
+          <p className="mt-6 text-slate-700 text-xl leading-relaxed">
+            {hero.supporting}
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex justify-center items-center rounded-[4px] bg-[#FFCB00] px-6 py-3.5 text-[#18625F] font-bold border border-[#FFCB00] transition-none hover:bg-[#e6b800]"
+            >
+              {hero.primaryCta}
+            </Link>
+            <Link
+              href={`/${locale}/investor-profile`}
+              className="inline-flex justify-center items-center rounded-[4px] bg-transparent px-6 py-3.5 text-[#0B1F1E] font-bold border border-[#FFCB00] transition-none hover:bg-[#FFCB00] hover:text-[#18625F]"
+            >
+              {hero.secondaryCta}
+            </Link>
           </div>
         </div>
       </div>
