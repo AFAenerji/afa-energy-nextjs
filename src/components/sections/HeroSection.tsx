@@ -14,7 +14,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
   const hero = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).hero;
 
   return (
-    <section className="relative min-h-[700px] lg:h-[calc(100vh-64px)]">
+    <section className="relative min-h-[700px] lg:h-screen -mt-16 pt-16">
       {/* === MOBILE (<1024px): Image + Overlay + Centered Text === */}
       <div className="absolute inset-0 lg:hidden">
         <Image
@@ -65,15 +65,20 @@ export default function HeroSection({ locale }: HeroSectionProps) {
           className="object-cover object-left"
           quality={90}
         />
+        {/* Corporate Turquoise Triangle Overlay */}
+        <div
+          className="absolute inset-0 bg-[#18625F]/80"
+          style={{ clipPath: 'polygon(100% 0, 100% 100%, 40% 100%)' }}
+        />
       </div>
 
-      {/* Desktop Panel — absolute right, vertically centered */}
-      <div className="hidden lg:block absolute right-[10%] top-1/2 -translate-y-1/2 z-10 w-[500px]">
-        <div className="bg-white/95 p-10 rounded-[4px] border border-gray-200 border-l-[4px] border-l-[#FFCB00]">
-          <h1 className="text-slate-900 font-bold tracking-tight text-5xl leading-tight">
+      {/* Desktop Panel — lower right corner */}
+      <div className="hidden lg:block absolute right-0 bottom-20 z-10 w-[650px]">
+        <div className="bg-white/95 p-16 rounded-[4px] border border-gray-200 border-l-[4px] border-l-[#FFCB00]">
+          <h1 className="text-slate-900 font-bold tracking-tight text-6xl leading-tight">
             {hero.motto}
           </h1>
-          <p className="mt-6 text-slate-700 text-xl leading-relaxed">
+          <p className="mt-8 text-slate-700 text-2xl leading-relaxed">
             {hero.supporting}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
