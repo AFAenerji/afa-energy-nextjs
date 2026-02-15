@@ -1,97 +1,96 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Locale } from '@/lib/i18n';
-import type { HeroContent } from '@/types/homepage';
+import type { Locale } from "@/lib/i18n";
+import type { HeroData } from "@/types/homepage";
 
-interface HeroSectionProps {
-  data: HeroContent;
+type Props = {
+  data: HeroData;
   locale: Locale;
-}
+};
 
-export default function HeroSection({ data, locale }: HeroSectionProps) {
-  const hero = data;
+export default function HeroSection({ data, locale }: Props) {
+  // Routes based on locale
+  const hrefPrimary = `/${locale}/developer`;
+  const hrefSecondary = `/${locale}/investor`;
 
   return (
-    <section className="relative min-h-[700px] lg:h-screen -mt-16 pt-16">
-      {/* === MOBILE (<1024px): Image + Overlay + Centered Text === */}
-      <div className="absolute inset-0 lg:hidden">
-        <Image
-          src="/images/hero-main_1200_1500_mobile.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/30" />
-      </div>
+    <section className="w-full scroll-mt-[72px]">
+      {/* --- MOBILE LAYOUT (<1024px) --- */}
+      {/* Design: Stacked. Image on top, Content in white block below. */}
+      <div className="lg:hidden flex flex-col">
+        {/* 1. Mobile Image Area */}
+        <div className="relative h-[400px] w-full">
+          <Image
+            src="/images/hero-main_1200_1500_mobile.jpg"
+            alt="AFA Energy hero"
+            fill
+            priority
+            className="object-cover object-[70%_40%]"
+          />
+        </div>
 
-      {/* Mobile Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-[700px] px-6 lg:hidden">
-        <div className="w-full max-w-xl text-center">
-          <h1 className="text-white font-bold tracking-tight text-4xl leading-tight">
-            {hero.motto}
+        {/* 2. White Content Block */}
+        <div className="bg-white px-6 py-10">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#18625F] leading-tight">
+            {data.motto}
           </h1>
-          <p className="mt-6 text-white/95 text-lg leading-relaxed">
-            {hero.subhead}
+          <p className="mt-4 text-base leading-relaxed text-[#3A3A3A]">
+            {data.subhead}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center">
+
+          <div className="mt-8 flex flex-col gap-3">
             <Link
-              href={`/${locale}/contact`}
-              className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-[#FFCB00] px-6 py-3.5 text-[#18625F] font-bold border border-[#FFCB00] transition-none hover:bg-[#e6b800]"
+              href={hrefPrimary}
+              className="inline-flex w-full items-center justify-center rounded-md bg-[#FFCB00] px-5 py-3 text-sm font-bold text-black shadow-sm active:scale-[0.98] transition-transform"
             >
-              {hero.primaryCta}
+              {data.primaryCta}
             </Link>
             <Link
-              href={`/${locale}/investor-profile`}
-              className="inline-flex justify-center items-center w-full sm:w-auto rounded-[4px] bg-transparent px-6 py-3.5 text-white font-bold border border-[#FFCB00] transition-none hover:bg-[#FFCB00] hover:text-[#18625F]"
+              href={hrefSecondary}
+              className="inline-flex w-full items-center justify-center rounded-md border-2 border-[#18625F] bg-white px-5 py-3 text-sm font-bold text-[#18625F] active:scale-[0.98] transition-transform"
             >
-              {hero.secondaryCta}
+              {data.secondaryCta}
             </Link>
           </div>
         </div>
       </div>
 
-      {/* === DESKTOP (>=1024px): Image left, Panel absolute right === */}
-      <div className="absolute inset-0 hidden lg:block">
+      {/* --- DESKTOP LAYOUT (≥1024px) --- */}
+      {/* Design: Full width image with floating card on the right */}
+      <div className="relative hidden lg:block h-[600px] w-full">
         <Image
           src="/images/hero-main_2560_1100.jpg"
-          alt=""
+          alt="AFA Energy hero"
           fill
           priority
-          sizes="100vw"
-          className="object-cover object-left"
-          quality={90}
+          className="object-cover object-[70%_40%]"
         />
-        {/* Corporate Turquoise Triangle Overlay */}
-        <div
-          className="absolute inset-0 bg-[#18625F]/80"
-          style={{ clipPath: 'polygon(100% 0, 100% 100%, 40% 100%)' }}
-        />
-      </div>
+        {/* Subtle overlay for contrast */}
+        <div className="pointer-events-none absolute inset-0 bg-black/15" />
 
-      {/* Desktop Panel — lower right corner */}
-      <div className="hidden lg:block absolute right-0 bottom-20 z-10 w-[650px]">
-        <div className="bg-white/95 p-16 rounded-[4px] border border-gray-200 border-l-[4px] border-l-[#FFCB00]">
-          <h1 className="text-slate-900 font-bold tracking-tight text-6xl leading-tight">
-            {hero.motto}
-          </h1>
-          <p className="mt-8 text-slate-700 text-2xl leading-relaxed">
-            {hero.subhead}
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href={`/${locale}/contact`}
-              className="inline-flex justify-center items-center rounded-[4px] bg-[#FFCB00] px-6 py-3.5 text-[#18625F] font-bold border border-[#FFCB00] transition-none hover:bg-[#e6b800]"
-            >
-              {hero.primaryCta}
-            </Link>
-            <Link
-              href={`/${locale}/investor-profile`}
-              className="inline-flex justify-center items-center rounded-[4px] bg-transparent px-6 py-3.5 text-[#0B1F1E] font-bold border border-[#FFCB00] transition-none hover:bg-[#FFCB00] hover:text-[#18625F]"
-            >
-              {hero.secondaryCta}
-            </Link>
+        {/* Content Card Positioned Right */}
+        <div className="absolute inset-y-0 right-0 flex w-[45%] min-w-[500px] items-center justify-center pr-12 pl-4">
+          <div className="w-full rounded-lg bg-white/95 p-10 shadow-sm border border-[#E5E7EB] backdrop-blur-sm">
+            <h1 className="text-4xl xl:text-5xl font-extrabold tracking-tight text-[#0B2E2D]">
+              {data.motto}
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-[#3A3A3A]">
+              {data.subhead}
+            </p>
+            <div className="mt-8 flex items-center gap-4">
+              <Link
+                href={hrefPrimary}
+                className="inline-flex items-center justify-center rounded-md bg-[#FFCB00] px-8 py-3 text-base font-bold text-black hover:bg-[#E6B800] transition-colors"
+              >
+                {data.primaryCta}
+              </Link>
+              <Link
+                href={hrefSecondary}
+                className="inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-8 py-3 text-base font-bold text-[#18625F] hover:bg-[#18625F] hover:text-white transition-colors"
+              >
+                {data.secondaryCta}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

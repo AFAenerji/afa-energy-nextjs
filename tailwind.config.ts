@@ -28,10 +28,6 @@ const config: Config = {
       fontWeight: {
         '800': '800',
       },
-      screens: {
-        'mobile': {'max': '960px'},
-        'desktop': {'min': '961px'},
-      },
       boxShadow: {
         'header': '0 2px 8px rgba(0, 0, 0, 0.1)',
         'mobile': '-20px 0 60px rgba(0, 0, 0, 0.25)',

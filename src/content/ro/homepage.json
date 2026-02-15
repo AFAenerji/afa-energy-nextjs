@@ -1,28 +1,25 @@
 {
-  "meta": {
-    "version": "v5.2.1",
-    "expectedSectionCount": 3,
-    "expectedSectionIds": ["hero", "intro", "atr-matrix"]
-  },
+  "meta": { "version": "v5.2.1" },
   "sections": [
-    { "id": "hero",       "order": 10, "component": "HeroSection",           "dataKey": "hero",             "enabled": true  },
-    { "id": "intro",      "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true  },
-    { "id": "atr-matrix", "order": 30, "component": "PositioningChain",      "dataKey": "atrMatrix",        "enabled": true  },
-    { "id": "metrics",    "order": 40, "component": "ExperienceMetrics",     "dataKey": "metrics",          "enabled": false },
-    { "id": "role",       "order": 50, "component": "RoleClarity",           "dataKey": "roleClarity",      "enabled": false },
-    { "id": "decision",   "order": 60, "component": "DecisionInterface",     "dataKey": "decisionCards",    "enabled": false },
-    { "id": "closing",    "order": 70, "component": "ClosingStatement",      "dataKey": "closing",          "enabled": false }
+    { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
+    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true },
+    { "id": "atr-matrix", "order": 30, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
+
+    { "id": "metrics", "order": 40, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": false },
+    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": false },
+    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": false },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": false }
   ],
   "data": {
     "hero": {
       "motto": "CLARITATE ÎNAINTE DE INVESTIȚIE.",
-      "subhead": "Acuratețe Tehnică. Disciplină de Investitor.",
-      "primaryCta": "Evaluați Proiectul",
+      "subhead": "Acuratețe Tehnică. Disciplină pentru Investitori.",
+      "primaryCta": "Evaluați Proiectul Dvs.",
       "secondaryCta": "Creați Profilul Dvs. de Investitor"
     },
     "valueProposition": {
-      "title": "Aplicabilitatea Rețelei și Disciplina Deciziei de Investiție",
-      "body": "AFA Energy este poziționat ca un centru de verificare tehnică pentru compatibilitatea rețelei și analiza pregătirii investițiilor pe piața de energie regenerabilă din România. Evaluările noastre oferă analize independente aliniate cu standardele comitetului de investiții, fără conflicte de interese."
+      "title": "Fezabilitate de Rețea și Disciplină în Decizia de Investiție",
+      "body": "În piața românească de energie regenerabilă, valoarea proiectului este determinată în principal de alinierea dintre proiectarea „pe hârtie” și capacitatea reală a rețelei. În timp ce multe practici de piață sunt orientate către perspectiva de dezvoltare, AFA aplică filtre tehnice aliniate standardelor investitorilor și finanțării. Condițiile de rețea și aria costurilor de racordare întâlnite în etapa sau după Avizul Tehnic de Racordare (ATR) pot influența direct economia investiției. De aceea, evaluarea nu se limitează la statutul avizelor; ea este ancorată în praguri pentru capacitatea de evacuare (evacuation capability), livrabilitate (deliverability) și finanțabilitate (bankability). Nu preluăm rolul de dezvoltator sau antreprenor EPC, asigurând o verificare independentă, fără conflict de interese."
     },
     "atrMatrix": {
       "title": "ATR Matrix™ Framework",
@@ -30,93 +27,76 @@
         {
           "id": "01",
           "title": "Capacitate și Integrare în Rețea",
-          "description": "Analiza nivelului de ocupare a punctului de conectare și testarea de stres a evacuării în rețea. Verificarea proiecțiilor de reducere."
+          "description": "Analiza gradului de ocupare la punctul de racordare și test de stres pentru capacitatea de evacuare. Validarea proiecțiilor de limitare a producției."
         },
         {
           "id": "02",
-          "title": "Reglementare și Validitatea Permiselor",
-          "description": "Perioadele de valabilitate ATR și ale permiselor conexe cu verificări de conformitate ANRE."
+          "title": "Reglementare și Valabilitatea Avizelor",
+          "description": "Verificarea conformității ATR și a avizelor aferente cu cerințele ANRE și termenele de valabilitate."
         },
         {
           "id": "03",
-          "title": "CAPEX și Economia Conectării",
-          "description": "Verificarea domeniului costurilor de conectare și raționalizarea bugetului de investiții."
+          "title": "CAPEX și Economia Racordării",
+          "description": "Verificarea ariei costurilor de racordare și raționalizarea bugetului investițional."
         },
         {
           "id": "04",
-          "title": "Bancabilitate și Acuratețea Datelor",
-          "description": "Corelarea constatărilor tehnice cu pragurile de eligibilitate pentru finanțare bancară."
+          "title": "Finanțabilitate și Integritatea Datelor",
+          "description": "Corelarea constatărilor tehnice cu pragurile de finanțabilitate."
         }
       ]
     },
-    "decisionCards": {
-      "investor": {
-        "title": "Investitor",
-        "description": "Disciplina deciziei de investiție pentru proiecte verificate tehnic.",
-        "cta": "Evaluare Portofoliu"
-      },
-      "developer": {
-        "title": "Dezvoltator",
-        "description": "Analiză tehnică pentru fezabilitatea conectării și rețelei.",
-        "cta": "Evaluare Tehnică"
-      }
-    },
-    "metrics": {
-      "title": "Experiență Bazată pe Date",
-      "groups": [
+    "regulatory": {
+      "atrFull": "Aviz Tehnic de Racordare",
+      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+      "citations": [
         {
-          "name": "Turcia",
-          "title": "Operațiuni Turcia",
-          "metrics": [
-            {
-              "number": "500+",
-              "label": "Evaluări ATR",
-              "detail": "Analiză de fezabilitate a rețelei și testare a capacității în 41 de județe din România."
-            },
-            {
-              "number": "850+",
-              "label": "MW Consultanță Tehnică",
-              "detail": "Integrare în rețea și modelare a riscurilor în tehnologii solar, eolian, BESS, hibrid."
-            }
-          ]
+          "reference": "ANRE Ordin 59/2023",
+          "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
         },
         {
-          "name": "România",
-          "title": "Expertiză România",
-          "metrics": [
-            {
-              "number": "10+",
-              "label": "Ani Operațiuni Transfrontaliere",
-              "detail": "Origine Turcia, focus România — adaptare reglementară și conformitate ANRE."
-            }
-          ]
+          "reference": "ANRE Ordin 30/2022",
+          "description": "Condiţiile tehnice de racordare la reţelele electrice"
         }
       ]
     },
-    "roleClarity": {
-      "roleTitle": "Rolul și Limitele AFA",
-      "does": [
-        "Verificare tehnică și analiză de fezabilitate",
-        "Evaluarea capacității rețelei și a conectării",
-        "Raportare la standardele comitetului de investiții",
-        "Consultanță independentă, fără conflicte de interese"
-      ],
-      "doesNot": [
-        "Dezvoltare de proiecte sau inginerie",
-        "Contractare EPC sau managementul lanțului de aprovizionare",
-        "Intermediere financiară sau management de investiții",
-        "Consultanță pentru proiecte în care suntem parte"
-      ],
-      "boundaryNote": "Aceste limite garantează integritatea serviciului nostru de verificare independentă și obiectivitatea deciziilor de investiție."
+    "legal": {
+      "disclaimer": "Evaluările au caracter tehnic și comercial și nu constituie consultanță juridică. Decizia finală de investiție rămâne responsabilitatea investitorului."
     },
-    "formSuccess": {
-      "message": "Cererea dumneavoastră a fost înregistrată pentru evaluare tehnică. Vă vom contacta în 24 de ore."
+    "forms": {
+      "labels": {
+        "investorType": "Categoria Investitorului",
+        "capacity": "Capacitate Țintă (MWp)",
+        "email": "E-mail Corporativ",
+        "name": "Nume și Prenume",
+        "company": "Numele Companiei"
+      },
+      "placeholders": {
+        "investorType": "Selectați...",
+        "email": "nume@companie.ro",
+        "name": "Introduceți numele",
+        "company": "Introduceți numele companiei"
+      },
+      "status": {
+        "processing": "Se validează datele...",
+        "success": "Trimiterea a fost salvată.",
+        "error": "Date introduse nevalide."
+      },
+      "validation": {
+        "requiredThreshold": "Aceste date sunt necesare pentru evaluarea tehnică.",
+        "emailCorporate": "Pentru comunicare tehnică este necesar un e-mail corporativ.",
+        "invalidEmail": "Introduceți o adresă de e-mail validă.",
+        "fieldRequired": "Acest câmp este obligatoriu."
+      }
     },
-    "scopeDisclaimer": {
-      "text": "Evaluările sunt de natură tehnică și comercială. Nu constituie consultanță juridică. Decizia finală de investiție este responsabilitatea investitorului."
-    },
-    "footer": {
-      "formsOnly": "Doar formularele de evaluare tehnică sunt active."
+    "navigation": {
+      "home": "Acasă",
+      "investor": "Investitor",
+      "developer": "Dezvoltator",
+      "services": "Servicii",
+      "about": "Despre",
+      "contact": "Contact"
     }
-  }
+  },
+  "locale": "ro"
 }

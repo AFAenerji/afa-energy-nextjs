@@ -28,16 +28,14 @@ export default function Footer({ locale }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-[#0B1F1E] text-white" role="contentinfo">
-      <div className="max-w-[1200px] mx-auto px-4 py-10">
-        {/* Desktop: 3 columns, Mobile: 1 column */}
-        <div className="grid grid-cols-1 desktop:grid-cols-[1.3fr_1fr_1fr] gap-5 desktop:gap-7">
-          
-          {/* COLUMN 1: Corporate Identity & Slogans */}
-          <div className="space-y-4">
-            {/* Logo + Brand Name */}
-            <div className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-[4px] overflow-hidden bg-accent flex items-center justify-center">
+    <footer className="bg-[#0B2420] text-white" role="contentinfo">
+      <div className="mx-auto max-w-6xl px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12">
+
+          {/* Brand col */}
+          <div className="lg:col-span-3">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="relative w-9 h-9 rounded-[4px] overflow-hidden flex items-center justify-center">
                 <Image
                   src="/images/afa_beyaz.png"
                   alt="AFA Energy Romania"
@@ -46,130 +44,97 @@ export default function Footer({ locale }: FooterProps) {
                   sizes="36px"
                 />
               </div>
-              <div>
-                <h3 className="font-bold text-[13px] leading-tight">
-                  {t('companyName')}
-                </h3>
-              </div>
+              <span className="font-bold text-sm text-white">{t('companyName')}</span>
             </div>
-
-            {/* MAIN MOTTO */}
-            <div>
-              <p className="font-extrabold text-base leading-tight">
-                {t('motto')}
-              </p>
-            </div>
-
-            {/* Value Slogan */}
-            <div>
-              <p className="font-bold text-sm leading-tight opacity-95">
-                {t('valueSlogan')}
-              </p>
-            </div>
-
-            {/* Finance Slogan - Short Version */}
-            <div>
-              <p className="text-[13px] opacity-90 max-w-[44ch]">
-                {t('financeSlogan')}
-              </p>
-            </div>
-
-            {/* Footer Blurb */}
-            <div>
-              <p className="text-[13px] opacity-90">
-                {t('footerBlurb')}
-              </p>
-            </div>
+            <p className="text-lg font-bold text-white leading-snug">
+              {t('motto')}
+            </p>
+            <p className="text-sm text-white/70 mt-1">
+              {t('valueSlogan')}
+            </p>
+            <p className="text-sm text-white/50 leading-relaxed mt-4">
+              {t('financeSlogan')}
+            </p>
           </div>
 
-          {/* COLUMN 2: Navigation Links */}
-          <div className="space-y-4">
-            <h4 className="font-extrabold text-sm">
+          {/* Nav col */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-semibold tracking-[0.15em] text-white/40 uppercase mb-5">
               {t('technicalServices')}
             </h4>
-            <div className="space-y-2">
+            <nav className="flex flex-col gap-2">
               {navigationLinks.map((link) => (
                 <button
                   key={link.key}
                   onClick={() => handleNavigation(link.path)}
-                  className="block text-[13px] opacity-[0.92] hover:opacity-100 hover:underline text-left"
+                  className="text-sm text-white/70 hover:text-white py-1 text-left"
                 >
                   {t(link.key as keyof import('@/lib/i18n').Translations)}
                 </button>
               ))}
-            </div>
+            </nav>
           </div>
 
-          {/* COLUMN 3: Contact Section */}
-          <div className="space-y-4">
-            <h4 className="font-extrabold text-sm">
+          {/* Contact col */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-semibold tracking-[0.15em] text-white/40 uppercase mb-5">
               {t('contact')}
             </h4>
-
-            {/* Forms Only Policy Box */}
-            <div className="border-t border-white/10 border-b border-white/10 py-2 my-3">
-              <div className="flex items-center gap-2">
-                <span className="text-lg">📋</span>
-                <p className="text-xs font-semibold opacity-95">
-                  {t('formsOnlyPolicy')}
-                </p>
-              </div>
-            </div>
-
-            {/* Full Address */}
-            <div className="space-y-1 text-xs opacity-92 leading-[1.7]">
-              <p>{t('addressLine1')}</p>
-              <p>{t('addressLine2')}</p>
-              <p>{t('addressLine3')}</p>
-            </div>
-
-            {/* Call-to-Action Buttons */}
-            <div className="flex flex-wrap gap-2.5 mt-2.5">
-              {/* Button 1: Primary */}
-              <button
-                onClick={() => handleNavigation('/contact')}
-                className="footer-primary-btn font-extrabold px-3 py-2.5 rounded-[4px]"
-              >
-                {t('contactForm')}
-              </button>
-
-              {/* Button 2: Secondary */}
-              <button
-                onClick={() => handleNavigation('/investor/intake')}
-                className="footer-secondary-btn font-extrabold px-3 py-2.5 rounded-[4px]"
-              >
-                {t('investorIntake')}
-              </button>
-            </div>
+            <address className="not-italic text-sm text-white/60 leading-relaxed">
+              {t('addressLine1')}<br />
+              {t('addressLine2')}<br />
+              {t('addressLine3')}
+            </address>
+            <button
+              onClick={() => handleNavigation('/contact')}
+              className="text-sm text-[#28AFB0] hover:text-white mt-4 inline-block"
+            >
+              {t('contactForm')} →
+            </button>
           </div>
+
+          {/* CTA col */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-semibold tracking-[0.15em] text-white/40 uppercase mb-5">
+              {t('investorIntake')}
+            </h4>
+            <button
+              onClick={() => handleNavigation('/developer')}
+              className="w-full bg-[#FFCB00] text-black font-semibold text-sm px-5 py-3 rounded-[4px] text-center block"
+            >
+              {t('contactForm')}
+            </button>
+            <button
+              onClick={() => handleNavigation('/investor')}
+              className="w-full mt-3 border border-white/20 text-white font-semibold text-sm px-5 py-3 rounded-[4px] text-center block hover:border-white/50"
+            >
+              {t('investorGate')}
+            </button>
+            <p className="mt-5 text-xs text-white/30 leading-relaxed">
+              {t('formsOnlyPolicy')}
+            </p>
+          </div>
+
         </div>
-      </div>
 
-      {/* Footer Bottom Bar */}
-      <div className="border-t border-white/14">
-        <div className="max-w-[1200px] mx-auto px-4 py-3">
-          <div className="flex flex-col desktop:flex-row justify-between items-center text-xs opacity-[0.92] gap-2">
-            {/* Left Side */}
-            <div>
-              <span>{t('companyName')}</span>
-            </div>
-
-            {/* Right Side */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => handleNavigation('/privacy')}
-                className="hover:underline"
-              >
-                {t('privacyPolicy')}
-              </button>
-              <span className="opacity-70 px-2">|</span>
-              <button
-                onClick={() => handleNavigation('/terms')}
-                className="hover:underline"
-              >
-                {t('terms')}
-              </button>
-            </div>
+        {/* Bottom bar */}
+        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-white/30">
+            {t('companyName')}
+          </p>
+          <div className="flex gap-6">
+            <button
+              onClick={() => handleNavigation('/privacy')}
+              className="text-xs text-white/30 hover:text-white/60"
+            >
+              {t('privacyPolicy')}
+            </button>
+            <button
+              onClick={() => handleNavigation('/terms')}
+              className="text-xs text-white/30 hover:text-white/60"
+            >
+              {t('terms')}
+            </button>
           </div>
         </div>
       </div>

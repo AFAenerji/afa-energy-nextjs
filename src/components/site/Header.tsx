@@ -27,9 +27,9 @@ export default function Header({ locale }: HeaderProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[999] bg-white border-b border-gray-200 shadow-sm">
+      <header className="fixed top-0 left-0 w-full z-[999] bg-white border-b border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
         <div className="max-w-[1200px] mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-[72px]">
             {/* Logo + Brand Name */}
             <a 
               href={`/${locale}`}
@@ -48,17 +48,17 @@ export default function Header({ locale }: HeaderProps) {
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden desktop:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-6">
               {/* Ghost Buttons */}
               <button
                 onClick={() => handleNavigation('/investor')}
-                className="ghost-btn"
+                className="border border-[#18625F] text-[#18625F] px-4 py-1.5 rounded-sm text-sm font-semibold hover:bg-[#18625F] hover:text-white"
               >
                 {t('investor')}
               </button>
               <button
                 onClick={() => handleNavigation('/developer')}
-                className="ghost-btn"
+                className="border border-[#FFCB00] text-[#0B1F1E] px-4 py-1.5 rounded-sm text-sm font-semibold hover:bg-[#FFCB00] hover:text-black"
               >
                 {t('developer')}
               </button>
@@ -66,31 +66,31 @@ export default function Header({ locale }: HeaderProps) {
               {/* Regular Links */}
               <button
                 onClick={() => handleNavigation('/services')}
-                className="text-[#0B1F1E] hover:text-[#18625F]"
+                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
               >
                 {t('services')}
               </button>
               <button
                 onClick={() => handleNavigation('/cases')}
-                className="text-[#0B1F1E] hover:text-[#18625F]"
+                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
               >
                 {t('cases')}
               </button>
               <button
                 onClick={() => handleNavigation('/about')}
-                className="text-[#0B1F1E] hover:text-[#18625F]"
+                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
               >
                 {t('about')}
               </button>
               <button
                 onClick={() => handleNavigation('/info')}
-                className="text-[#0B1F1E] hover:text-[#18625F]"
+                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
               >
                 {t('info')}
               </button>
               <button
                 onClick={() => handleNavigation('/contact')}
-                className="text-[#0B1F1E] hover:text-[#18625F]"
+                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
               >
                 {t('contact')}
               </button>
@@ -99,16 +99,16 @@ export default function Header({ locale }: HeaderProps) {
             {/* Right Section */}
             <div className="flex items-center gap-4">
               {/* Language Switcher */}
-              <div className="hidden desktop:block">
+              <div className="hidden lg:block">
                 <LanguageSwitcher currentLocale={locale} />
               </div>
 
               {/* Mobile Toggle */}
               <button
                 onClick={toggleMobileMenu}
-                className="desktop:hidden text-[#0B1F1E] hover:text-[#18625F]"
+                className="lg:hidden text-[#0B1F1E] hover:text-[#18625F]"
                 aria-label="Toggle mobile menu"
-                aria-expanded={mobileMenuOpen ? 'true' : 'false'}
+                aria-expanded={mobileMenuOpen}
               >
                 {/* Hamburger Icon */}
                 <div className="w-6 h-5 flex flex-col justify-between">

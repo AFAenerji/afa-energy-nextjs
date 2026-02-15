@@ -1,4 +1,4 @@
-// AFA Energy Romania — Homepage Type Contracts (v5.2 Governance)
+// AFA Energy Romania — Homepage Type Contracts (v5.2.1 Governance)
 
 import type { Locale } from '@/lib/i18n';
 
@@ -6,20 +6,9 @@ import type { Locale } from '@/lib/i18n';
 
 export interface HeroContent {
   motto: string;
-  subhead: string;
+  subhead: string; // supporting değil
   primaryCta: string;
   secondaryCta: string;
-}
-
-export interface DecisionCard {
-  title: string;
-  description: string;
-  cta: string;
-}
-
-export interface DecisionCardsContent {
-  investor: DecisionCard;
-  developer: DecisionCard;
 }
 
 export interface ValuePropositionContent {
@@ -36,6 +25,32 @@ export interface AtrMatrixItem {
 export interface AtrMatrixContent {
   title: string;
   framework: AtrMatrixItem[];
+}
+
+export interface RegulatoryCitation {
+  reference: string;
+  description: string;
+}
+
+export interface RegulatoryContent {
+  atrFull: string;
+  anreFull: string;
+  citations: RegulatoryCitation[];
+}
+
+export interface LegalContent {
+  disclaimer: string;
+}
+
+export interface FormsContent {
+  labels: Record<string, string>;
+  placeholders: Record<string, string>;
+  status: Record<string, string>;
+  validation: Record<string, string>;
+}
+
+export interface NavigationContent {
+  [key: string]: string;
 }
 
 export interface Metric {
@@ -62,22 +77,21 @@ export interface RoleClarityContent {
   boundaryNote: string;
 }
 
+export interface DecisionCard {
+  title: string;
+  description: string;
+  cta: string;
+}
+
+export interface DecisionCardsContent {
+  investor: DecisionCard;
+  developer: DecisionCard;
+}
+
 export interface ClosingContent {
   motto: string;
   subhead: string;
   primaryCta: string;
-}
-
-export interface FormSuccessContent {
-  message: string;
-}
-
-export interface ScopeDisclaimerContent {
-  text: string;
-}
-
-export interface FooterContent {
-  formsOnly: string;
 }
 
 // ─── Strict Data Aliases (Component ↔ Data contract) ──────────
@@ -104,15 +118,17 @@ export type SectionComponentName =
 // ─── Component → Data Type Map ───────────────────────────────
 
 export interface SectionDataMap {
-  HeroSection: HeroData;
-  IntroductoryStatement: IntroData;
-  PositioningChain: PositioningChainData;
+  HeroSection: HeroContent;
+  IntroductoryStatement: ValuePropositionContent;
+  PositioningChain: AtrMatrixContent;
+
   ExperienceMetrics: MetricsData;
   RoleClarity: RoleClarityData;
   DecisionInterface: DecisionData;
   ClosingStatement: ClosingData;
 }
 
+// Registry’nin import ettiği isimle uyum kilidi
 export type SectionDataByComponent = SectionDataMap;
 
 // ─── Section & Dictionary Contracts ──────────────────────────
@@ -122,18 +138,15 @@ export interface SectionBase {
   order: number;
   component: SectionComponentName;
   dataKey: string;
-  enabled: boolean;
-}
-
-export interface DictionaryMeta {
-  version: string;
-  expectedSectionCount: number;
-  expectedSectionIds: string[];
+  enabled?: boolean;
 }
 
 export interface HomepageDictionary {
-  meta: DictionaryMeta;
+  meta: {
+    version: string;
+  };
   sections: SectionBase[];
+  // HomepageRenderer data[section.dataKey] okuyor; burada key/value serbest ama içerik bizim sözleşmemize göre gelecek
   data: Record<string, unknown>;
   locale: Locale;
 }
@@ -141,7 +154,23 @@ export interface HomepageDictionary {
 // ─── Raw JSON shape (v5.2 Dictionary Format) ─────────────────
 
 export interface HomepageContentV5 {
-  meta: DictionaryMeta;
+  meta: {
+    version: string;
+    expectedSectionCount?: number;
+    expectedSectionIds?: string[];
+  };
   sections: SectionBase[];
   data: Record<string, unknown>;
+}
+
+// ─── Flat Content Shape (data{} içindeki içerik) ─────────────
+
+export interface HomepageContent {
+  hero: HeroContent;
+  valueProposition: ValuePropositionContent;
+  atrMatrix: AtrMatrixContent;
+  regulatory: RegulatoryContent;
+  legal: LegalContent;
+  forms: FormsContent;
+  navigation: NavigationContent;
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Locale, getTranslation } from '@/lib/i18n';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -22,12 +22,31 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
 
   const [servicesOpen, setServicesOpen] = useState(false);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Mobile Menu Panel */}
-      <div className="mobile-menu open fixed top-0 right-0 h-screen w-[min(360px,92vw)] bg-primary z-[100] shadow-mobile">
+    <div className="fixed inset-0 z-50">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+
+      {/* Menu Panel */}
+      <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[92vw] bg-[#18625F] shadow-xl flex flex-col">
         {/* Top Section */}
         <div className="border-b border-white/10 p-4">
           <div className="flex items-center justify-between">
@@ -43,7 +62,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
         </div>
 
         {/* Primary Navigation */}
-        <div className="p-4">
+        <div className="flex-1 overflow-y-auto p-6">
           {/* Ghost Buttons */}
           <div className="space-y-3 mb-6">
             <button
@@ -67,9 +86,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               className="flex items-center justify-between w-full text-white hover:opacity-80"
             >
               <span>{t('services')}</span>
-              <span 
-                className={servicesOpen ? 'rotate-180' : ''}
-              >
+              <span className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`}>
                 ▾
               </span>
             </button>
@@ -121,12 +138,12 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
         </div>
 
         {/* Footer Section */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-white/10">
+        <div className="p-4 border-t border-white/10">
           <p className="text-white/90 text-sm font-medium">
             {t('motto')}
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

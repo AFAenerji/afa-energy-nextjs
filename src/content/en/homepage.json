@@ -1,17 +1,14 @@
 {
-  "meta": {
-    "version": "v5.2.1",
-    "expectedSectionCount": 3,
-    "expectedSectionIds": ["hero", "intro", "atr-matrix"]
-  },
+  "meta": { "version": "v5.2.1" },
   "sections": [
-    { "id": "hero",       "order": 10, "component": "HeroSection",           "dataKey": "hero",             "enabled": true  },
-    { "id": "intro",      "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true  },
-    { "id": "atr-matrix", "order": 30, "component": "PositioningChain",      "dataKey": "atrMatrix",        "enabled": true  },
-    { "id": "metrics",    "order": 40, "component": "ExperienceMetrics",     "dataKey": "metrics",          "enabled": false },
-    { "id": "role",       "order": 50, "component": "RoleClarity",           "dataKey": "roleClarity",      "enabled": false },
-    { "id": "decision",   "order": 60, "component": "DecisionInterface",     "dataKey": "decisionCards",    "enabled": false },
-    { "id": "closing",    "order": 70, "component": "ClosingStatement",      "dataKey": "closing",          "enabled": false }
+    { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
+    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true },
+    { "id": "atr-matrix", "order": 30, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
+
+    { "id": "metrics", "order": 40, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": false },
+    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": false },
+    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": false },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": false }
   ],
   "data": {
     "hero": {
@@ -21,102 +18,85 @@
       "secondaryCta": "Create Your Investor Profile"
     },
     "valueProposition": {
-      "title": "Grid Applicability and Investment Decision Discipline",
-      "body": "AFA Energy is positioned as a technical verification center for grid compatibility and investment readiness analysis in Romania's renewable energy market. Our assessments provide independent analyses aligned with investment committee standards, free from conflicts of interest."
+      "title": "Grid Feasibility and Investment Decision Discipline",
+      "body": "In Romania’s renewable energy market, project value is primarily determined by the alignment between a paper design and actual grid capacity. While many market practices focus on development optics, AFA applies investor- and financing-grade technical filters. Grid conditions and connection cost scope encountered at or after the Technical Connection Approval (Aviz Tehnic de Racordare – ATR) can directly impact project economics. Therefore, our assessment is not limited to permit status; it is anchored to thresholds for evacuation capability, deliverability, and bankability. We do not assume the role of developer or EPC contractor, enabling independent verification without conflicts of interest."
     },
     "atrMatrix": {
       "title": "ATR Matrix™ Framework",
       "framework": [
         {
           "id": "01",
-          "title": "Capacity & Grid Integration",
-          "description": "Connection point occupancy analysis and grid evacuation stress testing. Verification of curtailment projections."
+          "title": "Capacity and Grid Integration",
+          "description": "Connection point occupancy analysis and evacuation capability stress testing. Validation of curtailment projections."
         },
         {
           "id": "02",
-          "title": "Regulation & Permit Validity",
-          "description": "ATR and related permit validity periods with ANRE regulatory compliance checks."
+          "title": "Regulatory and Permit Validity",
+          "description": "Compliance review of ATR and related permits against ANRE requirements and validity periods."
         },
         {
           "id": "03",
-          "title": "CAPEX & Connection Economics",
-          "description": "Connection cost scope verification and investment budget rationalization."
+          "title": "CAPEX and Connection Economics",
+          "description": "Verification of connection cost scope and rationalization of the investment budget."
         },
         {
           "id": "04",
-          "title": "Bankability & Data Accuracy",
-          "description": "Matching technical findings with bank financing eligibility thresholds."
+          "title": "Bankability and Data Integrity",
+          "description": "Mapping technical findings against bankability thresholds."
         }
       ]
     },
-    "decisionCards": {
-      "investor": {
-        "title": "Investor",
-        "description": "Investment decision discipline for technically verified projects.",
-        "cta": "Portfolio Assessment"
-      },
-      "developer": {
-        "title": "Developer",
-        "description": "Technical analysis for connection and grid feasibility.",
-        "cta": "Technical Assessment"
-      }
-    },
-    "metrics": {
-      "title": "Data-Driven Experience",
-      "groups": [
+    "regulatory": {
+      "atrFull": "Aviz Tehnic de Racordare",
+      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+      "citations": [
         {
-          "name": "Turkey",
-          "title": "Turkey Operations",
-          "metrics": [
-            {
-              "number": "500+",
-              "label": "ATR Assessments",
-              "detail": "Grid feasibility analysis and capacity testing across 41 counties in Romania."
-            },
-            {
-              "number": "850+",
-              "label": "MW Technical Advisory",
-              "detail": "Grid integration and risk modeling in solar, wind, BESS, hybrid technologies."
-            }
-          ]
+          "reference": "ANRE Ordin 59/2023",
+          "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
         },
         {
-          "name": "Romania",
-          "title": "Romania Expertise",
-          "metrics": [
-            {
-              "number": "10+",
-              "label": "Years Cross-Border Operations",
-              "detail": "Turkey origin, Romania focus — regulatory adaptation and ANRE compliance."
-            }
-          ]
+          "reference": "ANRE Ordin 30/2022",
+          "description": "Condiţiile tehnice de racordare la reţelele electrice"
         }
       ]
     },
-    "roleClarity": {
-      "roleTitle": "AFA's Role and Boundaries",
-      "does": [
-        "Technical verification and feasibility analysis",
-        "Grid capacity and connection assessment",
-        "Investment committee standard reporting",
-        "Independent, conflict-free advisory"
-      ],
-      "doesNot": [
-        "Project development or engineering",
-        "EPC contracting or supply chain management",
-        "Financial intermediation or investment management",
-        "Advisory on projects where we are a party"
-      ],
-      "boundaryNote": "These boundaries guarantee the integrity of our independent verification service and the objectivity of investment decisions."
+    "legal": {
+      "disclaimer": "Assessments are technical and commercial in nature and do not constitute legal advice. The final investment decision remains the responsibility of the investor."
     },
-    "formSuccess": {
-      "message": "Your application has been recorded for technical evaluation. We will contact you within 24 hours."
+    "forms": {
+      "labels": {
+        "investorType": "Investor Category",
+        "capacity": "Target Capacity (MWp)",
+        "email": "Corporate Email",
+        "name": "Full Name",
+        "company": "Company Name"
+      },
+      "placeholders": {
+        "investorType": "Select...",
+        "email": "name@company.ro",
+        "name": "Enter your name",
+        "company": "Enter your company name"
+      },
+      "status": {
+        "processing": "Validating data...",
+        "success": "Submission saved.",
+        "error": "Invalid input."
+      },
+      "validation": {
+        "requiredThreshold": "This data is required for technical assessment.",
+        "emailCorporate": "A corporate email is required for technical communication.",
+        "invalidEmail": "Enter a valid email address.",
+        "fieldRequired": "This field is required."
+      }
     },
-    "scopeDisclaimer": {
-      "text": "Assessments are of a technical and commercial nature. They do not constitute legal advice. The final investment decision is the investor's responsibility."
-    },
-    "footer": {
-      "formsOnly": "Only technical evaluation forms are active."
+    "navigation": {
+      "home": "Home",
+      "investor": "Investor",
+      "developer": "Developer",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
     }
-  }
+  },
+  "locale": "en"
 }

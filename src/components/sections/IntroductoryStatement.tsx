@@ -9,9 +9,9 @@ interface IntroductoryStatementProps {
 export default function IntroductoryStatement({ data }: IntroductoryStatementProps) {
   return (
     <section className="bg-white py-24">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div className="max-w-3xl mx-auto text-left px-6">
         {/* Decorative accent line */}
-        <div className="w-16 h-1 bg-amber-400 mx-auto mb-10" />
+        <div className="w-16 h-1 bg-amber-400 mb-10" />
 
         <h2 className="text-2xl font-bold text-slate-900 font-heading mb-6">
           {data.title}
@@ -21,7 +21,7 @@ export default function IntroductoryStatement({ data }: IntroductoryStatementPro
         </p>
 
         {/* Bottom accent */}
-        <div className="w-10 h-[2px] bg-slate-800 mx-auto mt-10" />
+        <div className="w-10 h-[2px] bg-slate-800 mt-10" />
       </div>
     </section>
   );

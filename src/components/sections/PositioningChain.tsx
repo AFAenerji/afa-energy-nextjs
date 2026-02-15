@@ -8,7 +8,7 @@ interface PositioningChainProps {
 
 export default function PositioningChain({ data }: PositioningChainProps) {
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-white py-24">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Title */}
         <h2 className="text-3xl font-bold text-center text-slate-900 font-heading mb-4">
@@ -21,20 +21,20 @@ export default function PositioningChain({ data }: PositioningChainProps) {
           {data.framework.map((item: AtrMatrixItem) => (
             <div
               key={item.id}
-              className="bg-white border border-gray-200 rounded-sm p-8 border-l-4 border-l-teal-800 hover:shadow-md hover:-translate-y-1 group"
+              className="bg-white border border-[#E5E7EB] rounded-[4px] p-6"
             >
               {/* Step Number */}
-              <div className="w-10 h-10 bg-teal-800 text-white rounded-sm flex items-center justify-center font-bold text-lg mb-6 group-hover:bg-amber-400 group-hover:text-teal-900">
+              <div className="text-[#28AFB0] text-xs font-bold tracking-[0.2em] mb-3">
                 {item.id}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-slate-900 font-heading mb-3">
+              <h3 className="text-[#0B1F1E] font-semibold text-base mb-2">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-slate-600 leading-relaxed">
+              <p className="text-[#5A5A5A] text-sm leading-relaxed mt-2">
                 {item.description}
               </p>
             </div>

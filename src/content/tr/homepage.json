@@ -1,17 +1,14 @@
 {
-  "meta": {
-    "version": "v5.2.1",
-    "expectedSectionCount": 3,
-    "expectedSectionIds": ["hero", "intro", "atr-matrix"]
-  },
+  "meta": { "version": "v5.2.1" },
   "sections": [
-    { "id": "hero",       "order": 10, "component": "HeroSection",           "dataKey": "hero",             "enabled": true  },
-    { "id": "intro",      "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true  },
-    { "id": "atr-matrix", "order": 30, "component": "PositioningChain",      "dataKey": "atrMatrix",        "enabled": true  },
-    { "id": "metrics",    "order": 40, "component": "ExperienceMetrics",     "dataKey": "metrics",          "enabled": false },
-    { "id": "role",       "order": 50, "component": "RoleClarity",           "dataKey": "roleClarity",      "enabled": false },
-    { "id": "decision",   "order": 60, "component": "DecisionInterface",     "dataKey": "decisionCards",    "enabled": false },
-    { "id": "closing",    "order": 70, "component": "ClosingStatement",      "dataKey": "closing",          "enabled": false }
+    { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
+    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true },
+    { "id": "atr-matrix", "order": 30, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
+
+    { "id": "metrics", "order": 40, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": false },
+    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": false },
+    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": false },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": false }
   ],
   "data": {
     "hero": {
@@ -22,7 +19,7 @@
     },
     "valueProposition": {
       "title": "Şebeke Uygulanabilirliği ve Yatırım Karar Disiplini",
-      "body": "AFA Energy, Romanya yenilenebilir enerji pazarında şebeke uyumluluğu ve yatırım hazırlık analizinde teknik doğrulama merkezi olarak konumlanmıştır. Değerlendirmelerimiz yatırım komitesi standartlarına uygun, çıkar çatışmasından arındırılmış bağımsız analizler sunar."
+      "body": "Romanya yenilenebilir enerji pazarında proje değerinin temel belirleyicisi, kâğıt üzerindeki kurgu ile fiili şebeke kapasitesinin uyumudur. Piyasa uygulamalarının önemli bir kısmı geliştirme perspektifine odaklanırken; AFA projeleri yatırımcı ve finansman standartları ekseninde yapılandırılmış teknik filtrelerden geçirir. Teknik Bağlantı Onayı (Aviz Tehnic de Racordare – ATR) aşamasında veya sonrasında karşılaşılan şebeke koşulları ve bağlantı maliyeti kapsamı yatırım ekonomisini doğrudan etkiler. Bu nedenle değerlendirme modeli yalnızca izin statüsüne değil; şebekeye verilebilirlik (evacuation capability), teslim edilebilirlik (deliverability) ve banka finansmanına uygunluk (bankability) eşiklerine dayanır. Geliştirici veya mühendislik, tedarik ve yapım yüklenicisi rolü üstlenilmez. Bu yaklaşım, çıkar çatışmasından arındırılmış bağımsız doğrulama sağlar."
     },
     "atrMatrix": {
       "title": "ATR Matrix™ Framework",
@@ -49,74 +46,57 @@
         }
       ]
     },
-    "decisionCards": {
-      "investor": {
-        "title": "Yatırımcı",
-        "description": "Teknik doğrulanmış projeler için yatırım karar disiplini.",
-        "cta": "Portfolyo Değerlendirmesi"
-      },
-      "developer": {
-        "title": "Geliştirici",
-        "description": "Bağlantı ve şebeke fizibilitesi için teknik analiz.",
-        "cta": "Teknik Değerlendirme"
-      }
-    },
-    "metrics": {
-      "title": "Veriye Dayalı Deneyim",
-      "groups": [
+    "regulatory": {
+      "atrFull": "Aviz Tehnic de Racordare",
+      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+      "citations": [
         {
-          "name": "Türkiye",
-          "title": "Türkiye Operasyonları",
-          "metrics": [
-            {
-              "number": "500+",
-              "label": "ATR Değerlendirmesi",
-              "detail": "Romanya'nın 41 ilçesinde grid fizibilite analizi ve şebeke kapasite testi."
-            },
-            {
-              "number": "850+",
-              "label": "MW Teknik Danışmanlık",
-              "detail": "Solar, wind, BESS, hybrid teknolojilerinde şebeke entegrasyonu ve risk modellemesi."
-            }
-          ]
+          "reference": "ANRE Ordin 59/2023",
+          "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
         },
         {
-          "name": "Romanya",
-          "title": "Romanya Uzmanlığı",
-          "metrics": [
-            {
-              "number": "10+",
-              "label": "Yıl Sınır Ötesi Operasyon",
-              "detail": "Türkiye başlangıç, Romanya fokus — regülasyon adaptasyonu ve ANRE uyumu."
-            }
-          ]
+          "reference": "ANRE Ordin 30/2022",
+          "description": "Condiţiile tehnice de racordare la reţelele electrice"
         }
       ]
     },
-    "roleClarity": {
-      "roleTitle": "AFA'nın Rolü ve Sınırları",
-      "does": [
-        "Teknik doğrulama ve fizibilite analizi",
-        "Şebeke kapasitesi ve bağlantı değerlendirmesi",
-        "Yatırım komitesi standartlarında raporlama",
-        "Bağımsız, çıkar çatışmasından arındırılmış danışmanlık"
-      ],
-      "doesNot": [
-        "Proje geliştirme veya mühendislik",
-        "EPC taahhüt veya tedarik zinciri yönetimi",
-        "Finansal aracılık veya yatırım yönetimi",
-        "Taraf olunan projelerde danışmanlık"
-      ],
-      "boundaryNote": "Bu sınırlar, bağımsız doğrulama hizmetimizin bütünlüğünü ve yatırım kararlarının objektifliğini garanti altına alır."
+    "legal": {
+      "disclaimer": "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır."
     },
-    "formSuccess": {
-      "message": "Başvurunuz teknik değerlendirme için kaydedilmiştir. 24 saat içinde size ulaşacağız."
+    "forms": {
+      "labels": {
+        "investorType": "Yatırımcı Kategorisi",
+        "capacity": "Hedef Kapasite (MWp)",
+        "email": "Kurumsal E-posta",
+        "name": "Ad Soyad",
+        "company": "Şirket Adı"
+      },
+      "placeholders": {
+        "investorType": "Seçiniz...",
+        "email": "isim@sirket.ro",
+        "name": "Adınızı giriniz",
+        "company": "Şirket adını giriniz"
+      },
+      "status": {
+        "processing": "Veri Doğrulanıyor...",
+        "success": "Başvuru Kaydedildi.",
+        "error": "Geçersiz Veri Girişi."
+      },
+      "validation": {
+        "requiredThreshold": "Teknik değerlendirme için bu veri zorunludur.",
+        "emailCorporate": "Teknik iletişim için kurumsal e-posta zorunludur.",
+        "invalidEmail": "Geçerli bir e-posta adresi giriniz.",
+        "fieldRequired": "Bu alan zorunludur."
+      }
     },
-    "scopeDisclaimer": {
-      "text": "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır."
-    },
-    "footer": {
-      "formsOnly": "Sadece teknik değerlendirme formları aktiftir."
+    "navigation": {
+      "home": "Ana Sayfa",
+      "investor": "Yatırımcı",
+      "developer": "Geliştirici",
+      "services": "Hizmetler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
     }
-  }
+  },
+  "locale": "tr"
 }
