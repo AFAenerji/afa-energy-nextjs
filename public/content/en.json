@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "version": "v5.2.1"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "order": 10,
+      "component": "HeroSection",
+      "dataKey": "hero",
+      "enabled": true
+    },
+    {
+      "id": "intro",
+      "order": 20,
+      "component": "IntroductoryStatement",
+      "dataKey": "valueProposition",
+      "enabled": true
+    },
+    {
+      "id": "positioning",
+      "order": 30,
+      "component": "PositioningChain",
+      "dataKey": "atrMatrix",
+      "enabled": true
+    },
+    {
+      "id": "metrics",
+      "order": 40,
+      "component": "ExperienceMetrics",
+      "dataKey": "metrics",
+      "enabled": false
+    },
+    {
+      "id": "role-clarity",
+      "order": 50,
+      "component": "RoleClarity",
+      "dataKey": "roleClarity",
+      "enabled": false
+    },
+    {
+      "id": "decision",
+      "order": 60,
+      "component": "DecisionInterface",
+      "dataKey": "decisionCards",
+      "enabled": false
+    },
+    {
+      "id": "closing",
+      "order": 70,
+      "component": "ClosingStatement",
+      "dataKey": "closing",
+      "enabled": false
+    }
+  ],
+  "data": {
+    "hero": {
+      "motto": "CLARITY BEFORE INVESTMENT.",
+      "subhead": "Technical Accuracy. Investor Discipline.",
+      "primaryCta": "Evaluate Your Project",
+      "secondaryCta": "Create Investor Profile"
+    },
+    "valueProposition": {
+      "title": "Grid Feasibility and Investment Decision Discipline",
+      "body": "In the Romanian renewable energy market, the fundamental determinant of project value is the alignment between paper-based design and actual grid capacity. While market practices often focus on development perspectives, AFA filters projects through technical mechanisms structured around investor and financing standards. Grid conditions encountered during or after the Technical Connection Approval (ATR) stage directly impact investment economics. Therefore, the evaluation model relies not only on permitting status but on thresholds of evacuation capability, deliverability, and bankability. We do not assume developer or EPC contractor roles. This approach ensures independent verification free from conflicts of interest."
+    },
+    "atrMatrix": {
+      "title": "ATR Matrix™ Framework",
+      "framework": [
+        {
+          "id": "01",
+          "title": "Capacity & Grid Integration",
+          "description": "Nodal capacity analysis and evacuation stress testing. Verification of curtailment projections."
+        },
+        {
+          "id": "02",
+          "title": "Regulatory & Permit Validity",
+          "description": "Legal validity checks of ATR and permits, ensuring compliance with ANRE regulations."
+        },
+        {
+          "id": "03",
+          "title": "CAPEX & Connection Economics",
+          "description": "Verification of connection cost scope and rationalization of the investment budget."
+        },
+        {
+          "id": "04",
+          "title": "Bankability & Data Accuracy",
+          "description": "Matching technical findings with bank financing eligibility thresholds."
+        }
+      ]
+    },
+    "regulatory": {
+      "atrFull": "Aviz Tehnic de Racordare",
+      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+      "citations": [
+        {
+          "reference": "ANRE Order 59/2023",
+          "description": "Authorization procedure for renewable energy producers"
+        },
+        {
+          "reference": "ANRE Order 30/2022",
+          "description": "Technical conditions for connection to electrical networks"
+        }
+      ]
+    },
+    "legal": {
+      "disclaimer": "Evaluations are technical and commercial in nature. They do not constitute legal advice. Final investment decisions are the responsibility of the investor."
+    },
+    "forms": {
+      "labels": {
+        "investorType": "Investor Category",
+        "capacity": "Target Capacity (MWp)",
+        "email": "Corporate Email",
+        "name": "Full Name",
+        "company": "Company Name"
+      },
+      "placeholders": {
+        "investorType": "Select...",
+        "email": "name@company.com",
+        "name": "Enter your name",
+        "company": "Enter company name"
+      },
+      "status": {
+        "processing": "Verifying Data...",
+        "success": "Application Recorded.",
+        "error": "Invalid Data Entry."
+      },
+      "validation": {
+        "requiredThreshold": "This data is mandatory for technical evaluation.",
+        "emailCorporate": "Corporate email is required for technical communication.",
+        "invalidEmail": "Please enter a valid email address.",
+        "fieldRequired": "This field is required."
+      }
+    },
+    "navigation": {
+      "home": "Home",
+      "investor": "Investor",
+      "developer": "Developer",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact"
+    }
+  }
+}

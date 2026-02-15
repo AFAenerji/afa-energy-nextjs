@@ -1,0 +1,6 @@
+services:
+  afaenergynextjs:
+    image: afaenergynextjs
+    build:
+      context: .
+      dockerfile: ./Dockerfile

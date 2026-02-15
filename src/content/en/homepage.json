@@ -1,100 +1,122 @@
 {
-  "hero": {
-    "motto": "YATIRIMDAN ÖNCE NETLİK.",
-    "supporting": "Teknik Doğruluk. Yatırımcı Disiplini.",
-    "primaryCta": "Projenizi Değerlendiriniz",
-    "secondaryCta": "Yatırımcı Profil"
+  "meta": {
+    "version": "v5.2.1",
+    "expectedSectionCount": 3,
+    "expectedSectionIds": ["hero", "intro", "atr-matrix"]
   },
-  "decisionCards": {
-    "investor": {
-      "title": "Yatırımcı",
-      "description": "Teknik doğrulanmış projeler için yatırım karar disiplini.",
-      "cta": "Portfolyo Değerlendirmesi"
+  "sections": [
+    { "id": "hero",       "order": 10, "component": "HeroSection",           "dataKey": "hero",             "enabled": true  },
+    { "id": "intro",      "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true  },
+    { "id": "atr-matrix", "order": 30, "component": "PositioningChain",      "dataKey": "atrMatrix",        "enabled": true  },
+    { "id": "metrics",    "order": 40, "component": "ExperienceMetrics",     "dataKey": "metrics",          "enabled": false },
+    { "id": "role",       "order": 50, "component": "RoleClarity",           "dataKey": "roleClarity",      "enabled": false },
+    { "id": "decision",   "order": 60, "component": "DecisionInterface",     "dataKey": "decisionCards",    "enabled": false },
+    { "id": "closing",    "order": 70, "component": "ClosingStatement",      "dataKey": "closing",          "enabled": false }
+  ],
+  "data": {
+    "hero": {
+      "motto": "CLARITY BEFORE INVESTMENT.",
+      "subhead": "Technical Accuracy. Investor Discipline.",
+      "primaryCta": "Evaluate Your Project",
+      "secondaryCta": "Create Your Investor Profile"
     },
-    "developer": {
-      "title": "Geliştirici",
-      "description": "Bağlantı ve şebeke fizibilitesi için teknik analiz.",
-      "cta": "Teknik Değerlendirme"
+    "valueProposition": {
+      "title": "Grid Applicability and Investment Decision Discipline",
+      "body": "AFA Energy is positioned as a technical verification center for grid compatibility and investment readiness analysis in Romania's renewable energy market. Our assessments provide independent analyses aligned with investment committee standards, free from conflicts of interest."
+    },
+    "atrMatrix": {
+      "title": "ATR Matrix™ Framework",
+      "framework": [
+        {
+          "id": "01",
+          "title": "Capacity & Grid Integration",
+          "description": "Connection point occupancy analysis and grid evacuation stress testing. Verification of curtailment projections."
+        },
+        {
+          "id": "02",
+          "title": "Regulation & Permit Validity",
+          "description": "ATR and related permit validity periods with ANRE regulatory compliance checks."
+        },
+        {
+          "id": "03",
+          "title": "CAPEX & Connection Economics",
+          "description": "Connection cost scope verification and investment budget rationalization."
+        },
+        {
+          "id": "04",
+          "title": "Bankability & Data Accuracy",
+          "description": "Matching technical findings with bank financing eligibility thresholds."
+        }
+      ]
+    },
+    "decisionCards": {
+      "investor": {
+        "title": "Investor",
+        "description": "Investment decision discipline for technically verified projects.",
+        "cta": "Portfolio Assessment"
+      },
+      "developer": {
+        "title": "Developer",
+        "description": "Technical analysis for connection and grid feasibility.",
+        "cta": "Technical Assessment"
+      }
+    },
+    "metrics": {
+      "title": "Data-Driven Experience",
+      "groups": [
+        {
+          "name": "Turkey",
+          "title": "Turkey Operations",
+          "metrics": [
+            {
+              "number": "500+",
+              "label": "ATR Assessments",
+              "detail": "Grid feasibility analysis and capacity testing across 41 counties in Romania."
+            },
+            {
+              "number": "850+",
+              "label": "MW Technical Advisory",
+              "detail": "Grid integration and risk modeling in solar, wind, BESS, hybrid technologies."
+            }
+          ]
+        },
+        {
+          "name": "Romania",
+          "title": "Romania Expertise",
+          "metrics": [
+            {
+              "number": "10+",
+              "label": "Years Cross-Border Operations",
+              "detail": "Turkey origin, Romania focus — regulatory adaptation and ANRE compliance."
+            }
+          ]
+        }
+      ]
+    },
+    "roleClarity": {
+      "roleTitle": "AFA's Role and Boundaries",
+      "does": [
+        "Technical verification and feasibility analysis",
+        "Grid capacity and connection assessment",
+        "Investment committee standard reporting",
+        "Independent, conflict-free advisory"
+      ],
+      "doesNot": [
+        "Project development or engineering",
+        "EPC contracting or supply chain management",
+        "Financial intermediation or investment management",
+        "Advisory on projects where we are a party"
+      ],
+      "boundaryNote": "These boundaries guarantee the integrity of our independent verification service and the objectivity of investment decisions."
+    },
+    "formSuccess": {
+      "message": "Your application has been recorded for technical evaluation. We will contact you within 24 hours."
+    },
+    "scopeDisclaimer": {
+      "text": "Assessments are of a technical and commercial nature. They do not constitute legal advice. The final investment decision is the investor's responsibility."
+    },
+    "footer": {
+      "formsOnly": "Only technical evaluation forms are active."
     }
-  },
-  "introStatement": {
-    "text": "AFA Energy, Romanya yenilenebilir enerji pazarında şebeke uyumluluğu ve yatırım hazırlık analizinde teknik doğrulama merkezi olarak konumlanmıştır. Değerlendirmelerimiz yatırım komitesi standartlarına uygun, çıkar çatışmasından arındırılmış bağımsız analizler sunar."
-  },
-  "investmentChain": {
-    "title": "Yatırımın Hazırlık Zinciri",
-    "stages": [
-      {
-        "title": "Teknik Ön Değerlendirme",
-        "description": "Projenin temel uygunluk analizi — şebeke, izin, finansman çerçevesi.",
-        "outcome": "Evet / Hayır karar noktası"
-      },
-      {
-        "title": "Şebeke & Bağlantı Değerlendirmesi",
-        "description": "Bağlantı fizibilitesi ve kapasite çerçevesi.",
-        "outcome": "Finansal model hazırlığı"
-      },
-      {
-        "title": "Yatırıma Hazırlık Analizi",
-        "description": "Teknik bulguların finansal karar yapısına entegrasyonu.",
-        "outcome": "Yatırım komitesi kararı"
-      }
-    ]
-  },
-  "metrics": {
-    "title": "Veriye Dayalı Deneyim",
-    "groups": [
-      {
-        "name": "Türkiye",
-        "title": "Türkiye Operasyonları",
-        "metrics": [
-          {
-            "number": "500+",
-            "label": "ATR Değerlendirmesi",
-            "detail": "Romanya'nın 41 ilçesinde grid fizibilite analizi ve şebeke kapasite testi."
-          },
-          {
-            "number": "850+",
-            "label": "MW Teknik Danışmanlık",
-            "detail": "Solar, wind, BESS, hybrid teknolojilerinde şebeke entegrasyonu ve risk modellemesi."
-          }
-        ]
-      },
-      {
-        "name": "Romanya",
-        "title": "Romanya Uzmanlığı",
-        "metrics": [
-          {
-            "number": "10+",
-            "label": "Yıl Sınır Ötesi Operasyon",
-            "detail": "Türkiye başlangıç, Romanya fokus — regülasyon adaptasyonu ve ANRE uyumu."
-          }
-        ]
-      }
-    ]
-  },
-  "roleClarity": {
-    "roleTitle": "AFA'nın Rolü ve Sınırları",
-    "does": [
-      "Teknik doğrulama ve fizibilite analizi",
-      "Şebeke kapasitesi ve bağlantı değerlendirmesi",
-      "Yatırım komitesi standartlarında raporlama",
-      "Bağımsız, çıkar çatışmasından arındırılmış danışmanlık"
-    ],
-    "doesNot": [
-      "Proje geliştirme veya mühendislik",
-      "EPC taahhüt veya tedarik zinciri yönetimi",
-      "Finansal aracılık veya yatırım yönetimi",
-      "Taraf olunan projelerde danışmanlık"
-    ],
-    "boundaryNote": "Bu sınırlar, bağımsız doğrulama hizmetimizin bütünlüğünü ve yatırım kararlarının objektifliğini garanti altına alır."
-  },
-  "formSuccess": {
-    "message": "Başvurunuz teknik değerlendirme için kaydedilmiştir. 24 saat içinde size ulaşacağız."
-  },
-  "scopeDisclaimer": {
-    "text": "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır."
-  },
-  "footer": {
-    "formsOnly": "Sadece teknik değerlendirme formları aktiftir."
   }
 }

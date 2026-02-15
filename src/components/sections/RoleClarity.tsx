@@ -1,73 +1,62 @@
-import { Locale } from '@/lib/i18n';
-import fs from 'fs';
-import path from 'path';
+import type { Locale } from '@/lib/i18n';
+import type { RoleClarityData } from '@/types/homepage';
 
 interface RoleClarityProps {
+  data: RoleClarityData;
   locale: Locale;
 }
 
-export default function RoleClarity({ locale }: RoleClarityProps) {
-  // Load content from JSON structure
-  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
-  const roleData = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).roleClarity;
-
-  const currentContent = {
-    title: roleData.roleTitle,
-    does: {
-      title: "AFA YAPAR",
-      items: roleData.does
-    },
-    doesnt: {
-      title: "AFA YAPMAZ", 
-      items: roleData.doesNot
-    },
-    conclusion: roleData.boundaryNote
-  };
-
+export default function RoleClarity({ data }: RoleClarityProps) {
   return (
-    <section className="py-20">
-      <div className="max-w-[1200px] mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-16 text-dark font-heading">
-          {currentContent.title}
+    <section className="bg-white py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Section Title */}
+        <h2 className="text-3xl font-bold text-center text-slate-900 font-heading mb-4">
+          {data.roleTitle}
         </h2>
+        <div className="w-12 h-1 bg-amber-400 mx-auto mb-16" />
 
-        {/* Two-Column Matrix */}
-        <div className="grid grid-cols-1 desktop:grid-cols-2 gap-8 mb-12">
-          {/* AFA Does Column */}
-          <div className="bg-[#E8F5F5] border-l-4 border-l-primary rounded-[12px] p-6">
-            <h3 className="text-xl font-bold mb-6 text-dark font-heading">
-              {currentContent.does.title}
+        {/* Two-Column Comparison */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {/* AFA DOES — Clarity */}
+          <div className="bg-white border border-gray-200 rounded-sm p-8 border-l-4 border-l-teal-800">
+            <h3 className="text-xl font-bold text-teal-800 font-heading mb-6 uppercase tracking-wide">
+              AFA YAPAR
             </h3>
-            <ul className="space-y-3">
-              {currentContent.does.items.map((item, index) => (
+            <ul className="space-y-4">
+              {data.does.map((item: string, index: number) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="text-green-600 font-bold text-lg">✓</span>
-                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                  <span className="w-6 h-6 bg-teal-800 text-white rounded-sm flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                    ✓
+                  </span>
+                  <span className="text-slate-700 leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* AFA Doesn't Column */}
-          <div className="bg-[#FFF5E8] border-l-4 border-l-[#F25F5C] rounded-[12px] p-6">
-            <h3 className="text-xl font-bold mb-6 text-dark font-heading">
-              {currentContent.doesnt.title}
+          {/* AFA DOES NOT — Ambiguity */}
+          <div className="bg-white border border-gray-200 rounded-sm p-8 border-l-4 border-l-red-500">
+            <h3 className="text-xl font-bold text-red-600 font-heading mb-6 uppercase tracking-wide">
+              AFA YAPMAZ
             </h3>
-            <ul className="space-y-3">
-              {currentContent.doesnt.items.map((item, index) => (
+            <ul className="space-y-4">
+              {data.doesNot.map((item: string, index: number) => (
                 <li key={index} className="flex items-start gap-3">
-                  <span className="text-red-600 font-bold text-lg">✗</span>
-                  <span className="text-gray-700 leading-relaxed">{item}</span>
+                  <span className="w-6 h-6 bg-red-500 text-white rounded-sm flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                    ✗
+                  </span>
+                  <span className="text-slate-700 leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        {/* Conclusion */}
-        <div className="bg-muted border-l-4 border-l-accent p-5 max-w-[800px] mx-auto">
-          <p className="text-gray-700 italic leading-relaxed">
-            {currentContent.conclusion}
+        {/* Boundary Note */}
+        <div className="bg-gray-50 border-l-4 border-l-amber-400 p-6 max-w-3xl mx-auto rounded-sm">
+          <p className="text-slate-600 leading-relaxed italic">
+            {data.boundaryNote}
           </p>
         </div>
       </div>

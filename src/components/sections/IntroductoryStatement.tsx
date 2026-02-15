@@ -1,26 +1,27 @@
-import { Locale } from '@/lib/i18n';
-import fs from 'fs';
-import path from 'path';
+import type { Locale } from '@/lib/i18n';
+import type { IntroData } from '@/types/homepage';
 
 interface IntroductoryStatementProps {
+  data: IntroData;
   locale: Locale;
 }
 
-export default function IntroductoryStatement({ locale }: IntroductoryStatementProps) {
-  // Load content from JSON structure
-  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
-  const content = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).introStatement.text;
-
+export default function IntroductoryStatement({ data }: IntroductoryStatementProps) {
   return (
-    <section className="py-16">
-      <div className="max-w-[1200px] mx-auto px-4">
-        <div className="bg-muted border-l-3 border-border max-w-[600px] mx-auto">
-          <div className="p-4">
-            <p className="text-[15px] font-normal leading-[1.7] text-gray-600">
-              {content}
-            </p>
-          </div>
-        </div>
+    <section className="bg-white py-24">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        {/* Decorative accent line */}
+        <div className="w-16 h-1 bg-amber-400 mx-auto mb-10" />
+
+        <h2 className="text-2xl font-bold text-slate-900 font-heading mb-6">
+          {data.title}
+        </h2>
+        <p className="text-slate-600 text-xl leading-relaxed">
+          {data.body}
+        </p>
+
+        {/* Bottom accent */}
+        <div className="w-10 h-[2px] bg-slate-800 mx-auto mt-10" />
       </div>
     </section>
   );

@@ -28,7 +28,7 @@ export default function Footer({ locale }: FooterProps) {
   ];
 
   return (
-    <footer className="bg-primary text-white mt-[60px]" role="contentinfo">
+    <footer className="bg-[#0B1F1E] text-white" role="contentinfo">
       <div className="max-w-[1200px] mx-auto px-4 py-10">
         {/* Desktop: 3 columns, Mobile: 1 column */}
         <div className="grid grid-cols-1 desktop:grid-cols-[1.3fr_1fr_1fr] gap-5 desktop:gap-7">

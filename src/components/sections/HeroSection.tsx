@@ -1,17 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Locale } from '@/lib/i18n';
-import fs from 'fs';
-import path from 'path';
+import type { HeroContent } from '@/types/homepage';
 
 interface HeroSectionProps {
+  data: HeroContent;
   locale: Locale;
 }
 
-export default function HeroSection({ locale }: HeroSectionProps) {
-  // Load content from JSON structure
-  const contentPath = path.join(process.cwd(), 'src', 'content', locale, 'homepage.json');
-  const hero = JSON.parse(fs.readFileSync(contentPath, 'utf-8')).hero;
+export default function HeroSection({ data, locale }: HeroSectionProps) {
+  const hero = data;
 
   return (
     <section className="relative min-h-[700px] lg:h-screen -mt-16 pt-16">
@@ -35,7 +33,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
             {hero.motto}
           </h1>
           <p className="mt-6 text-white/95 text-lg leading-relaxed">
-            {hero.supporting}
+            {hero.subhead}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row justify-center">
             <Link
@@ -79,7 +77,7 @@ export default function HeroSection({ locale }: HeroSectionProps) {
             {hero.motto}
           </h1>
           <p className="mt-8 text-slate-700 text-2xl leading-relaxed">
-            {hero.supporting}
+            {hero.subhead}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link

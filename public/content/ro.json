@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "version": "v5.2.1"
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "order": 10,
+      "component": "HeroSection",
+      "dataKey": "hero",
+      "enabled": true
+    },
+    {
+      "id": "intro",
+      "order": 20,
+      "component": "IntroductoryStatement",
+      "dataKey": "valueProposition",
+      "enabled": true
+    },
+    {
+      "id": "positioning",
+      "order": 30,
+      "component": "PositioningChain",
+      "dataKey": "atrMatrix",
+      "enabled": true
+    },
+    {
+      "id": "metrics",
+      "order": 40,
+      "component": "ExperienceMetrics",
+      "dataKey": "metrics",
+      "enabled": false
+    },
+    {
+      "id": "role-clarity",
+      "order": 50,
+      "component": "RoleClarity",
+      "dataKey": "roleClarity",
+      "enabled": false
+    },
+    {
+      "id": "decision",
+      "order": 60,
+      "component": "DecisionInterface",
+      "dataKey": "decisionCards",
+      "enabled": false
+    },
+    {
+      "id": "closing",
+      "order": 70,
+      "component": "ClosingStatement",
+      "dataKey": "closing",
+      "enabled": false
+    }
+  ],
+  "data": {
+    "hero": {
+      "motto": "CLARITATE ÎNAINTE DE INVESTIȚIE.",
+      "subhead": "Acuratețe Tehnică. Disciplină Investițională.",
+      "primaryCta": "Evaluează Proiectul",
+      "secondaryCta": "Creează Profil Investitor"
+    },
+    "valueProposition": {
+      "title": "Fezabilitatea Rețelei și Disciplina Deciziei de Investiție",
+      "body": "Pe piața energiei regenerabile din România, determinantul fundamental al valorii proiectului este alinierea dintre proiectarea pe hârtie și capacitatea reală a rețelei. În timp ce practicile pieței se concentrează adesea pe perspectivele de dezvoltare, AFA filtrează proiectele prin mecanisme tehnice structurate în jurul standardelor investitorilor și finanțatorilor. Condițiile de rețea întâlnite în timpul sau după etapa ATR (Aviz Tehnic de Racordare) impactează direct economia investiției. Prin urmare, modelul de evaluare se bazează nu doar pe statutul autorizației, ci pe praguri de capacitate de evacuare, livrabilitate și bancabilitate. Nu ne asumăm roluri de dezvoltator sau contractor EPC. Această abordare asigură o verificare independentă, lipsită de conflicte de interese."
+    },
+    "atrMatrix": {
+      "title": "Cadrul ATR Matrix™",
+      "framework": [
+        {
+          "id": "01",
+          "title": "Capacitate și Integrare în Rețea",
+          "description": "Analiza capacității nodale și teste de stres pentru evacuare. Verificarea proiecțiilor de limitare (curtailment)."
+        },
+        {
+          "id": "02",
+          "title": "Reglementare și Validitate Avize",
+          "description": "Verificarea validității legale a ATR și avizelor, asigurând conformitatea cu reglementările ANRE."
+        },
+        {
+          "id": "03",
+          "title": "CAPEX și Economia Conexiunii",
+          "description": "Verificarea sferei costurilor de racordare și raționalizarea bugetului de investiții."
+        },
+        {
+          "id": "04",
+          "title": "Bancabilitate și Acuratețea Datelor",
+          "description": "Corelarea constatărilor tehnice cu pragurile de eligibilitate pentru finanțare bancară."
+        }
+      ]
+    },
+    "regulatory": {
+      "atrFull": "Aviz Tehnic de Racordare",
+      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
+      "citations": [
+        {
+          "reference": "Ordinul ANRE 59/2023",
+          "description": "Procedura de autorizare a producătorilor de energie electrică"
+        },
+        {
+          "reference": "Ordinul ANRE 30/2022",
+          "description": "Condițiile tehnice de racordare la rețelele electrice"
+        }
+      ]
+    },
+    "legal": {
+      "disclaimer": "Evaluările sunt de natură tehnică și comercială. Nu constituie consultanță juridică. Decizia finală de investiție este responsabilitatea investitorului."
+    },
+    "forms": {
+      "labels": {
+        "investorType": "Categorie Investitor",
+        "capacity": "Capacitate Țintă (MWp)",
+        "email": "Email Corporativ",
+        "name": "Nume Complet",
+        "company": "Nume Companie"
+      },
+      "placeholders": {
+        "investorType": "Selectează...",
+        "email": "nume@companie.ro",
+        "name": "Introduceți numele",
+        "company": "Introduceți numele companiei"
+      },
+      "status": {
+        "processing": "Se Verifică Datele...",
+        "success": "Cerere Înregistrată.",
+        "error": "Date Introduse Invalid."
+      },
+      "validation": {
+        "requiredThreshold": "Această dată este obligatorie pentru evaluarea tehnică.",
+        "emailCorporate": "Emailul corporativ este necesar pentru comunicarea tehnică.",
+        "invalidEmail": "Vă rugăm să introduceți o adresă de email validă.",
+        "fieldRequired": "Acest câmp este obligatoriu."
+      }
+    },
+    "navigation": {
+      "home": "Acasă",
+      "investor": "Investitor",
+      "developer": "Dezvoltator",
+      "services": "Servicii",
+      "about": "Despre Noi",
+      "contact": "Contact"
+    }
+  }
+}
