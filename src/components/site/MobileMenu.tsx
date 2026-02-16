@@ -46,7 +46,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
       />
 
       {/* Menu Panel */}
-      <div className="absolute right-0 top-0 bottom-0 w-80 max-w-[92vw] bg-[#18625F] shadow-xl flex flex-col">
+      <div id="mobile-menu" className="absolute right-0 top-0 bottom-0 w-80 max-w-[92vw] bg-[#18625F] shadow-xl flex flex-col">
         {/* Top Section */}
         <div className="border-b border-white/10 p-4">
           <div className="flex items-center justify-between">
@@ -67,13 +67,13 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
           <div className="space-y-3 mb-6">
             <button
               onClick={() => handleNavigation('/investor')}
-              className="ghost-btn w-full text-left"
+              className="w-full text-left"
             >
               {t('investor')}
             </button>
             <button
               onClick={() => handleNavigation('/developer')}
-              className="ghost-btn w-full text-left"
+              className="w-full text-left"
             >
               {t('developer')}
             </button>
@@ -86,7 +86,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               className="flex items-center justify-between w-full text-white hover:opacity-80"
             >
               <span>{t('services')}</span>
-              <span className={`transition-transform ${servicesOpen ? 'rotate-180' : ''}`}>
+              <span className={`${servicesOpen ? 'rotate-180' : ''}`}>
                 ▾
               </span>
             </button>

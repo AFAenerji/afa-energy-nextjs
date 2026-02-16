@@ -31,7 +31,6 @@ export default function DecisionInterface({ data, locale }: Props) {
                 className={`
                   text-left p-8 rounded-[4px] cursor-pointer w-full
                   flex flex-col min-h-[220px]
-                  transition-all duration-200
                   focus:outline-none focus-visible:outline-2 focus-visible:outline-[#18625F]
                   ${isSelected
                     ? 'border-2 border-[#FFCB00] bg-[rgba(255,203,0,0.03)]'
@@ -54,7 +53,7 @@ export default function DecisionInterface({ data, locale }: Props) {
         <div className="mt-12 text-center">
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-[4px] hover:bg-[#0F5654] transition-colors duration-200"
+            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-[4px] hover:bg-[#0F5654]"
           >
             {data.cta}
           </Link>

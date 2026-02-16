@@ -25,6 +25,9 @@ export default function Header({ locale }: HeaderProps) {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  // Explicit ARIA values to satisfy linter
+  const ariaExpandedValue = Boolean(mobileMenuOpen);
+
   return (
     <>
       <header className="fixed top-0 left-0 w-full z-[999] bg-white border-b border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
@@ -107,8 +110,11 @@ export default function Header({ locale }: HeaderProps) {
               <button
                 onClick={toggleMobileMenu}
                 className="lg:hidden text-[#0B1F1E] hover:text-[#18625F]"
+                role="button"
                 aria-label="Toggle mobile menu"
-                aria-expanded={mobileMenuOpen ? "true" : "false"}
+                aria-expanded={ariaExpandedValue}
+                aria-controls="mobile-menu"
+                type="button"
               >
                 {/* Hamburger Icon */}
                 <div className="w-6 h-5 flex flex-col justify-between">

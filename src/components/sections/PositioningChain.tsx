@@ -27,7 +27,7 @@ export default function PositioningChain({ data }: Props) {
           {data.cards.map((card) => (
             <div 
               key={card.id}
-              className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 flex flex-col min-h-[260px] hover:border-[#CCCCCC] transition-colors"
+              className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 flex flex-col min-h-[260px] hover:border-[#CCCCCC]"
             >
               {/* Card Header (Fixed Height) */}
               <div className="min-h-[80px] mb-4">
