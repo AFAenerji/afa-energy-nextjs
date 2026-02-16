@@ -1,64 +1,68 @@
-import type { Locale } from '@/lib/i18n';
-import type { RoleClarityData } from '@/types/homepage';
+import type { RoleClarityData } from "@/types/homepage";
 
-interface RoleClarityProps {
+type Props = {
   data: RoleClarityData;
-  locale: Locale;
-}
+};
 
-export default function RoleClarity({ data }: RoleClarityProps) {
+export default function RoleClarity({ data }: Props) {
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Title */}
-        <h2 className="text-3xl font-bold text-center text-slate-900 font-heading mb-4">
-          {data.roleTitle}
-        </h2>
-        <div className="w-12 h-1 bg-amber-400 mx-auto mb-16" />
-
-        {/* Two-Column Comparison */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* AFA DOES — Clarity */}
-          <div className="bg-white border border-gray-200 rounded-sm p-8 border-l-4 border-l-teal-800">
-            <h3 className="text-xl font-bold text-teal-800 font-heading mb-6 uppercase tracking-wide">
-              AFA YAPAR
-            </h3>
-            <ul className="space-y-4">
-              {data.does.map((item: string, index: number) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-teal-800 text-white rounded-sm flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                    ✓
-                  </span>
-                  <span className="text-slate-700 leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* AFA DOES NOT — Ambiguity */}
-          <div className="bg-white border border-gray-200 rounded-sm p-8 border-l-4 border-l-red-500">
-            <h3 className="text-xl font-bold text-red-600 font-heading mb-6 uppercase tracking-wide">
-              AFA YAPMAZ
-            </h3>
-            <ul className="space-y-4">
-              {data.doesNot.map((item: string, index: number) => (
-                <li key={index} className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-red-500 text-white rounded-sm flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
-                    ✗
-                  </span>
-                  <span className="text-slate-700 leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Boundary Note */}
-        <div className="bg-gray-50 border-l-4 border-l-amber-400 p-6 max-w-3xl mx-auto rounded-sm">
-          <p className="text-slate-600 leading-relaxed italic">
-            {data.boundaryNote}
+    <section className="w-full bg-[#F5F5F5] py-24">
+      <div className="mx-auto max-w-6xl px-8">
+        
+        {/* Header */}
+        <div className="max-w-xl mb-12">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#28AFB0] mb-3">
+            BAĞIMSIZLIK SINIRI
           </p>
+          <h2 className="text-2xl font-bold text-[#0B1F1E]">
+            {data.title}
+          </h2>
         </div>
+
+        {/* 2 Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          {/* AFA YAPAR */}
+          <div className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 h-full">
+            <h3 className="text-xs font-bold tracking-[0.15em] uppercase text-[#18625F] mb-6 pb-4 border-b border-slate-100">
+              {data.do.title}
+            </h3>
+            <ul className="flex flex-col gap-4">
+              {data.do.items.map((item, idx) => (
+                <li key={idx} className="flex gap-3 items-start">
+                  <span className="text-[#18625F] font-bold shrink-0 mt-0.5 leading-none">—</span>
+                  <span className="text-sm text-[#333333] leading-relaxed">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* AFA YAPMAZ */}
+          <div className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 h-full">
+            <h3 className="text-xs font-bold tracking-[0.15em] uppercase text-[#666666] mb-6 pb-4 border-b border-slate-100">
+              {data.dont.title}
+            </h3>
+            <ul className="flex flex-col gap-4">
+              {data.dont.items.map((item, idx) => (
+                <li key={idx} className="flex gap-3 items-start">
+                  <span className="text-[#999999] font-bold shrink-0 mt-0.5 leading-none">—</span>
+                  <span className="text-sm text-[#666666] leading-relaxed">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Closing Sentence - Plain */}
+        <p className="mt-10 text-sm text-[#666666] leading-relaxed max-w-2xl border-l-4 border-[#CCCCCC] pl-4">
+          {data.closing}
+        </p>
+
       </div>
     </section>
   );

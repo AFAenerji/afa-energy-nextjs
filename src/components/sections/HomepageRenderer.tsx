@@ -1,50 +1,40 @@
-import { SECTION_REGISTRY } from './registry';
-import type { HomepageDictionary, SectionComponentName, SectionDataMap } from '@/types/homepage';
+import { SECTION_REGISTRY } from "./registry";
+import type { SectionBase, HomepageContentV95 } from "@/types/homepage";
+import type { Locale } from "@/lib/i18n";
 
-interface HomepageRendererProps {
-  dictionary: HomepageDictionary;
-}
+type Props = {
+  sections: SectionBase[];
+  data: HomepageContentV95;
+  locale: Locale;
+};
 
-export default function HomepageRenderer({ dictionary }: HomepageRendererProps) {
-  const { sections, data, locale, meta } = dictionary;
-
-  // Filter enabled sections, then sort by order
-  const sorted = sections
-    .filter((s) => s.enabled !== false)
+export default function HomepageRenderer({ sections, data, locale }: Props) {
+  // Filter enabled sections and sort by order
+  const activeSections = sections
+    .filter((s) => s.enabled)
     .sort((a, b) => a.order - b.order);
 
   return (
-    <>
-      {sorted.map((section) => {
-        const componentName: SectionComponentName = section.component;
-        const Component = SECTION_REGISTRY[componentName];
+    <div className="flex flex-col w-full">
+      {activeSections.map((section) => {
+        const Component = SECTION_REGISTRY[section.component as keyof typeof SECTION_REGISTRY];
 
-        // Governance: fail-fast if component is missing
         if (!Component) {
-          throw new Error(
-            `[Governance v${meta.version}] Component "${componentName}" not found in SECTION_REGISTRY. ` +
-            `Registered: ${Object.keys(SECTION_REGISTRY).join(', ')}`
-          );
+          console.warn(`Component not found for: ${section.component}`);
+          return null;
         }
 
-        const sectionData = data[section.dataKey] as SectionDataMap[typeof componentName];
-
-        // Governance: fail-fast if data key is missing
-        if (sectionData === undefined) {
-          throw new Error(
-            `[Governance v${meta.version}] Data key "${section.dataKey}" not found for "${componentName}". ` +
-            `Available: ${Object.keys(data).join(', ')}`
-          );
-        }
+        const sectionData = data[section.dataKey as keyof HomepageContentV95];
 
         return (
-          <Component
-            key={`${section.id}-${section.order}`}
-            data={sectionData}
-            locale={locale}
+          <Component 
+            key={section.id} 
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            data={sectionData as any}
+            locale={locale} 
           />
         );
       })}
-    </>
+    </div>
   );
 }

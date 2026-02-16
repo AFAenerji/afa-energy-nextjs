@@ -14,7 +14,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <main>
-      <HomepageRenderer dictionary={dictionary} />
+      <HomepageRenderer sections={dictionary.sections} data={dictionary.data} locale={locale} />
     </main>
   );
 }

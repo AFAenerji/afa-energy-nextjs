@@ -1,10 +1,10 @@
 import type { Locale } from '@/lib/i18n';
-import type { HomepageDictionary, HomepageContentV5 } from '@/types/homepage';
+import type { HomepageDictionary } from '@/types/homepage';
 
-const dictionaries: Record<Locale, () => Promise<HomepageContentV5>> = {
-  tr: () => import('@/content/tr/homepage.json').then((m) => m.default as unknown as HomepageContentV5),
-  en: () => import('@/content/en/homepage.json').then((m) => m.default as unknown as HomepageContentV5),
-  ro: () => import('@/content/ro/homepage.json').then((m) => m.default as unknown as HomepageContentV5),
+const dictionaries: Record<Locale, () => Promise<HomepageDictionary>> = {
+  tr: () => import('@/content/tr/homepage.json').then((m) => m.default as unknown as HomepageDictionary),
+  en: () => import('@/content/en/homepage.json').then((m) => m.default as unknown as HomepageDictionary),
+  ro: () => import('@/content/ro/homepage.json').then((m) => m.default as unknown as HomepageDictionary),
 };
 
 export async function getHomepageDictionary(locale: Locale): Promise<HomepageDictionary> {
@@ -19,10 +19,5 @@ export async function getHomepageDictionary(locale: Locale): Promise<HomepageDic
     throw new Error(`[Governance] Missing meta.version in dictionary for locale: ${locale}`);
   }
 
-  return {
-    meta: json.meta,
-    sections: json.sections,
-    data: json.data,
-    locale,
-  };
+  return json;
 }

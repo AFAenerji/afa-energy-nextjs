@@ -1,6 +1,8 @@
 import type { ComponentType } from 'react';
 import type { Locale } from '@/lib/i18n';
-import type { SectionComponentName } from '@/types/homepage';
+import type { SectionDataMap } from '@/types/homepage';
+
+export type { SectionDataMap as SectionDataByComponent } from '@/types/homepage';
 
 import HeroSection from './HeroSection';
 import IntroductoryStatement from './IntroductoryStatement';
@@ -17,8 +19,8 @@ export interface SectionProps {
   locale: Locale;
 }
 
-// SECTION_REGISTRY — Exhaustive map keyed by SectionComponentName
-export const SECTION_REGISTRY: Record<SectionComponentName, ComponentType<SectionProps>> = {
+// SECTION_REGISTRY — Exhaustive map keyed by component name
+export const SECTION_REGISTRY: Record<keyof SectionDataMap, ComponentType<SectionProps>> = {
   HeroSection,
   IntroductoryStatement,
   PositioningChain,

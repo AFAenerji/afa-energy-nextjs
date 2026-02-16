@@ -1,102 +1,68 @@
 {
-  "meta": { "version": "v5.2.1" },
+  "meta": { "version": "v9.5-FINAL-SEALED" },
   "sections": [
     { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
-    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true },
-    { "id": "atr-matrix", "order": 30, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
-
-    { "id": "metrics", "order": 40, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": false },
-    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": false },
-    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": false },
-    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": false }
+    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "intro", "enabled": true },
+    { "id": "metrics", "order": 30, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": true },
+    { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
+    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
+    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
     "hero": {
-      "motto": "CLARITY BEFORE INVESTMENT.",
-      "subhead": "Technical Accuracy. Investor Discipline.",
-      "primaryCta": "Evaluate Your Project",
-      "secondaryCta": "Create Your Investor Profile"
+      "tag": "Romania Renewable Energy Investments",
+      "motto": "Clarity Before Investment.",
+      "subhead": "Clarify grid and bank financing risks of your Romania investments before committing capital. AFA Energy Romania is an independent technical advisory acting on behalf of the investor.",
+      "primaryCta": "Request Technical Assessment",
+      "secondaryCta": "Explore Services",
+      "disclaimer": "AFA Energy Romania is an independent technical advisory; not a project developer, EPC contractor, or broker."
     },
-    "valueProposition": {
-      "title": "Grid Feasibility and Investment Decision Discipline",
-      "body": "In Romania’s renewable energy market, project value is primarily determined by the alignment between a paper design and actual grid capacity. While many market practices focus on development optics, AFA applies investor- and financing-grade technical filters. Grid conditions and connection cost scope encountered at or after the Technical Connection Approval (Aviz Tehnic de Racordare – ATR) can directly impact project economics. Therefore, our assessment is not limited to permit status; it is anchored to thresholds for evacuation capability, deliverability, and bankability. We do not assume the role of developer or EPC contractor, enabling independent verification without conflicts of interest."
+    "intro": {
+      "heading": "Value Proposition",
+      "paragraphs": [
+        "In Romania's renewable energy market, a project's true value depends on how well its paper design aligns with the grid's actual capacity.",
+        "Grid conditions and connection costs that emerge during or after the Technical Connection Approval (ATR) process directly impact investment economics.",
+        "Therefore, pre-investment assessment must go beyond permit status — it should be anchored to grid capacity, connection cost, and bank financing eligibility thresholds."
+      ]
+    },
+    "metrics": {
+      "eyebrow": "Data-Driven Experience",
+      "items": [
+        { "value": "850+", "unit": "MW", "label": "Assessed Project Capacity" },
+        { "value": "500+", "unit": "ATR", "label": "Grid Connection Permit Analysis" },
+        { "value": "10+", "unit": "Years", "label": "Technical Market Experience in Turkey & Romania" }
+      ],
+      "note": "These figures represent the total technical assessments conducted within the scope of ATR analysis, grid feasibility, and Pre-TDD."
     },
     "atrMatrix": {
-      "title": "ATR Matrix™ Framework",
-      "framework": [
-        {
-          "id": "01",
-          "title": "Capacity and Grid Integration",
-          "description": "Connection point occupancy analysis and evacuation capability stress testing. Validation of curtailment projections."
-        },
-        {
-          "id": "02",
-          "title": "Regulatory and Permit Validity",
-          "description": "Compliance review of ATR and related permits against ANRE requirements and validity periods."
-        },
-        {
-          "id": "03",
-          "title": "CAPEX and Connection Economics",
-          "description": "Verification of connection cost scope and rationalization of the investment budget."
-        },
-        {
-          "id": "04",
-          "title": "Bankability and Data Integrity",
-          "description": "Mapping technical findings against bankability thresholds."
-        }
+      "title": "AFA ATR Matrix™ — Pre-Investment Technical Decision Filter",
+      "description": "The goal is not to show a project as 'technically feasible' but to clarify whether it is investable. This is not software or a platform.",
+      "cards": [
+        { "id": "01", "title": "Connection Point Capacity & Evacuation Analysis", "description": "Technical assessment of the connection point's existing load and the new project's grid evacuation feasibility." },
+        { "id": "02", "title": "Technical Permits & Regulatory Control", "description": "Verification of Technical Connection Approval (ATR) and related permit validity periods and ANRE regulatory compliance." },
+        { "id": "03", "title": "Grid Connection Cost & Risk", "description": "Verification of connection cost technical scope; making grid reinforcement, operational curtailment, and time delay risks visible in the investment budget." },
+        { "id": "04", "title": "Bank Financing Eligibility Verification", "description": "Verification of technical findings' acceptability for bank financing and supporting documentation." }
       ]
     },
-    "regulatory": {
-      "atrFull": "Aviz Tehnic de Racordare",
-      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
-      "citations": [
-        {
-          "reference": "ANRE Ordin 59/2023",
-          "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
-        },
-        {
-          "reference": "ANRE Ordin 30/2022",
-          "description": "Condiţiile tehnice de racordare la reţelele electrice"
-        }
-      ]
+    "roleClarity": {
+      "title": "Independence Boundary — What AFA Does and Doesn't Do",
+      "do": { "title": "AFA DOES", "items": ["Conducts technical risk analysis", "Structures investment readiness analysis", "Coordinates pre-technical due diligence (Pre-TDD)", "Performs bank financing eligibility assessment"] },
+      "dont": { "title": "AFA DOES NOT", "items": ["Develop projects", "Provide financing", "Act as an official approval authority", "Guarantee investment returns"] },
+      "closing": "These boundaries preserve the independent advisory approach and structurally prevent situations that could create conflicts of interest."
     },
-    "legal": {
-      "disclaimer": "Assessments are technical and commercial in nature and do not constitute legal advice. The final investment decision remains the responsibility of the investor."
+    "decisionCards": {
+      "title": "What Need Are You Addressing?",
+      "cards": [
+        { "type": "investor", "title": "INVESTOR / FUND MANAGER", "description": "I want to evaluate projects in Romania through independent technical review and clarify critical risks before investing." },
+        { "type": "developer", "title": "DEVELOPER / PROJECT COMPANY", "description": "I want to put my project through an independent technical review and clarify gaps before presenting to investors." }
+      ],
+      "cta": "Request Technical Assessment"
     },
-    "forms": {
-      "labels": {
-        "investorType": "Investor Category",
-        "capacity": "Target Capacity (MWp)",
-        "email": "Corporate Email",
-        "name": "Full Name",
-        "company": "Company Name"
-      },
-      "placeholders": {
-        "investorType": "Select...",
-        "email": "name@company.ro",
-        "name": "Enter your name",
-        "company": "Enter your company name"
-      },
-      "status": {
-        "processing": "Validating data...",
-        "success": "Submission saved.",
-        "error": "Invalid input."
-      },
-      "validation": {
-        "requiredThreshold": "This data is required for technical assessment.",
-        "emailCorporate": "A corporate email is required for technical communication.",
-        "invalidEmail": "Enter a valid email address.",
-        "fieldRequired": "This field is required."
-      }
-    },
-    "navigation": {
-      "home": "Home",
-      "investor": "Investor",
-      "developer": "Developer",
-      "services": "Services",
-      "about": "About",
-      "contact": "Contact"
+    "closing": {
+      "motto": "Clarity Before Investment",
+      "principles": ["Full Independence", "Technical Filtering", "Bank Financing Eligibility Focus"],
+      "legal": "This content is a technical and commercial assessment guide; it does not contain official approval or investment return commitments."
     }
-  },
-  "locale": "en"
+  }
 }

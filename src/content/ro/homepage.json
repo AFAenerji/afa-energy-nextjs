@@ -1,102 +1,21 @@
-{
-  "meta": { "version": "v5.2.1" },
-  "sections": [
-    { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
-    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "valueProposition", "enabled": true },
-    { "id": "atr-matrix", "order": 30, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
-
-    { "id": "metrics", "order": 40, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": false },
-    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": false },
-    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": false },
-    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": false }
-  ],
-  "data": {
-    "hero": {
-      "motto": "CLARITATE ÎNAINTE DE INVESTIȚIE.",
-      "subhead": "Acuratețe Tehnică. Disciplină pentru Investitori.",
-      "primaryCta": "Evaluați Proiectul Dvs.",
-      "secondaryCta": "Creați Profilul Dvs. de Investitor"
-    },
-    "valueProposition": {
-      "title": "Fezabilitate de Rețea și Disciplină în Decizia de Investiție",
-      "body": "În piața românească de energie regenerabilă, valoarea proiectului este determinată în principal de alinierea dintre proiectarea „pe hârtie” și capacitatea reală a rețelei. În timp ce multe practici de piață sunt orientate către perspectiva de dezvoltare, AFA aplică filtre tehnice aliniate standardelor investitorilor și finanțării. Condițiile de rețea și aria costurilor de racordare întâlnite în etapa sau după Avizul Tehnic de Racordare (ATR) pot influența direct economia investiției. De aceea, evaluarea nu se limitează la statutul avizelor; ea este ancorată în praguri pentru capacitatea de evacuare (evacuation capability), livrabilitate (deliverability) și finanțabilitate (bankability). Nu preluăm rolul de dezvoltator sau antreprenor EPC, asigurând o verificare independentă, fără conflict de interese."
-    },
-    "atrMatrix": {
-      "title": "ATR Matrix™ Framework",
-      "framework": [
+"metrics": {
+      "eyebrow": "Experiență Bazată pe Date",
+      "items": [
         {
-          "id": "01",
-          "title": "Capacitate și Integrare în Rețea",
-          "description": "Analiza gradului de ocupare la punctul de racordare și test de stres pentru capacitatea de evacuare. Validarea proiecțiilor de limitare a producției."
+          "value": "850+",
+          "unit": "MW",
+          "label": "Capacitate Proiect Evaluată"
         },
         {
-          "id": "02",
-          "title": "Reglementare și Valabilitatea Avizelor",
-          "description": "Verificarea conformității ATR și a avizelor aferente cu cerințele ANRE și termenele de valabilitate."
+          "value": "500+",
+          "unit": "ATR",
+          "label": "Analiză Aviz Tehnic de Racordare"
         },
         {
-          "id": "03",
-          "title": "CAPEX și Economia Racordării",
-          "description": "Verificarea ariei costurilor de racordare și raționalizarea bugetului investițional."
-        },
-        {
-          "id": "04",
-          "title": "Finanțabilitate și Integritatea Datelor",
-          "description": "Corelarea constatărilor tehnice cu pragurile de finanțabilitate."
+          "value": "10+",
+          "unit": "Ani",
+          "label": "Experiență de Piață Tehnică în Turcia și România"
         }
-      ]
+      ],
+      "note": "Aceste cifre reprezintă totalul evaluărilor tehnice efectuate în cadrul analizei ATR, fezabilității rețelei și Pre-TDD."
     },
-    "regulatory": {
-      "atrFull": "Aviz Tehnic de Racordare",
-      "anreFull": "Autoritatea Națională de Reglementare în domeniul Energiei",
-      "citations": [
-        {
-          "reference": "ANRE Ordin 59/2023",
-          "description": "Procedura de autorizare a producerilor de energie electrică din surse regenerabile"
-        },
-        {
-          "reference": "ANRE Ordin 30/2022",
-          "description": "Condiţiile tehnice de racordare la reţelele electrice"
-        }
-      ]
-    },
-    "legal": {
-      "disclaimer": "Evaluările au caracter tehnic și comercial și nu constituie consultanță juridică. Decizia finală de investiție rămâne responsabilitatea investitorului."
-    },
-    "forms": {
-      "labels": {
-        "investorType": "Categoria Investitorului",
-        "capacity": "Capacitate Țintă (MWp)",
-        "email": "E-mail Corporativ",
-        "name": "Nume și Prenume",
-        "company": "Numele Companiei"
-      },
-      "placeholders": {
-        "investorType": "Selectați...",
-        "email": "nume@companie.ro",
-        "name": "Introduceți numele",
-        "company": "Introduceți numele companiei"
-      },
-      "status": {
-        "processing": "Se validează datele...",
-        "success": "Trimiterea a fost salvată.",
-        "error": "Date introduse nevalide."
-      },
-      "validation": {
-        "requiredThreshold": "Aceste date sunt necesare pentru evaluarea tehnică.",
-        "emailCorporate": "Pentru comunicare tehnică este necesar un e-mail corporativ.",
-        "invalidEmail": "Introduceți o adresă de e-mail validă.",
-        "fieldRequired": "Acest câmp este obligatoriu."
-      }
-    },
-    "navigation": {
-      "home": "Acasă",
-      "investor": "Investitor",
-      "developer": "Dezvoltator",
-      "services": "Servicii",
-      "about": "Despre",
-      "contact": "Contact"
-    }
-  },
-  "locale": "ro"
-}
