@@ -7,6 +7,7 @@
     { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
+    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimerSection", "dataKey": "scopeDisclaimer", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
@@ -60,6 +61,9 @@
         { "type": "developer", "title": "DEVELOPER / PROJECT COMPANY", "description": "I want to pass the project through an independent technical check and clarify gaps before presenting to investors." }
       ],
       "cta": "Request Technical Assessment"
+    },
+    "scopeDisclaimer": {
+      "text": "This simulation is for informational purposes only and does not constitute definitive investment advice."
     },
     "closing": {
       "motto": "Clarity Before Investment",

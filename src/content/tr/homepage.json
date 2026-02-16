@@ -7,6 +7,7 @@
     { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
+    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimerSection", "dataKey": "scopeDisclaimer", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
@@ -60,6 +61,9 @@
         { "type": "developer", "title": "Geliştirici / Proje Şirketi", "description": "Projeyi yatırımcıya sunmadan önce bağımsız bir teknik kontrolden geçirmek ve eksikleri netleştirmek istiyorum." }
       ],
       "cta": "Teknik Değerlendirme Talep Edin"
+    },
+    "scopeDisclaimer": {
+      "text": "Bu simülasyon sadece bilgilendirme amaçlıdır ve kesin yatırım tavsiyesi değildir."
     },
     "closing": {
       "motto": "Yatırımdan Önce Netlik",

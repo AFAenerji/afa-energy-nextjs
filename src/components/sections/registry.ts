@@ -10,6 +10,7 @@ import PositioningChain from './PositioningChain';
 import ExperienceMetrics from './ExperienceMetrics';
 import RoleClarity from './RoleClarity';
 import DecisionInterface from './DecisionInterface';
+import ScopeDisclaimer from './ScopeDisclaimer';
 import ClosingStatement from './ClosingStatement';
 
 // Props contract: every section receives its data slice + locale
@@ -27,5 +28,6 @@ export const SECTION_REGISTRY: Record<keyof SectionDataMap, ComponentType<Sectio
   ExperienceMetrics,
   RoleClarity,
   DecisionInterface,
+  ScopeDisclaimer,
   ClosingStatement,
 };

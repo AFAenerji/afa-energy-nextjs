@@ -110,7 +110,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--space-lg);
 }
 
-/* 5. GRID — removed .grid rule to prevent collision with Tailwind's grid utility */
+/* 5. GRID — Override for specific homepage sections */
+.grid {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
 
 /* 6. BUTTON STANDARDS */
 .btn-primary {

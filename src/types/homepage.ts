@@ -50,6 +50,10 @@ export interface DecisionData {
   cta: string;
 }
 
+export interface ScopeDisclaimerData {
+  text: string;
+}
+
 export interface ClosingData {
   motto: string;
   principles: string[];
@@ -64,6 +68,7 @@ export interface HomepageContentV95 {
   atrMatrix: PositioningChainData;
   roleClarity: RoleClarityData;
   decisionCards: DecisionData;
+  scopeDisclaimer: ScopeDisclaimerData;
   closing: ClosingData;
 }
 
@@ -81,6 +86,8 @@ export interface SectionDataMap {
   PositioningChain: PositioningChainData;
   RoleClarity: RoleClarityData;
   DecisionInterface: DecisionData;
+  ScopeDisclaimer: ScopeDisclaimerData;
   ClosingStatement: ClosingData;
 }
+
 export type SectionDataByComponent = SectionDataMap;

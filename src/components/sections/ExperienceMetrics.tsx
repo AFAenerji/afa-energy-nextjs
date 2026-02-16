@@ -21,8 +21,8 @@ export default function ExperienceMetrics({ data }: Props) {
           {data.items.map((item, index) => (
             <div key={index} className="relative flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-6">
               
-              {/* Vertical Divider (Desktop Only) */}
-              {index < data.items.length - 1 && (
+              {/* Vertical Divider (Desktop Only) - Conditional based on number of metrics */}
+              {index < data.items.length - 1 && data.items.length > 1 && (
                 <div className="hidden lg:block absolute right-[-1rem] top-0 h-full w-px bg-white/10" />
               )}
 
