@@ -108,7 +108,7 @@ export default function Header({ locale }: HeaderProps) {
                 onClick={toggleMobileMenu}
                 className="lg:hidden text-[#0B1F1E] hover:text-[#18625F]"
                 aria-label="Toggle mobile menu"
-                aria-expanded={mobileMenuOpen}
+                aria-expanded={mobileMenuOpen ? "true" : "false"}
               >
                 {/* Hamburger Icon */}
                 <div className="w-6 h-5 flex flex-col justify-between">

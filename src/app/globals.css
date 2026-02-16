@@ -111,19 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--space-lg);
 }
 
-/* 5. GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  gap: var(--grid-gap);
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-lg);
-  }
-}
+/* 5. GRID — removed .grid rule to prevent collision with Tailwind's grid utility */
 
 /* 6. BUTTON STANDARDS */
 .btn-primary {

@@ -1,21 +1,70 @@
-"metrics": {
+{
+  "meta": { "version": "v9.5-FINAL-SEALED" },
+  "sections": [
+    { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
+    { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "intro", "enabled": true },
+    { "id": "metrics", "order": 30, "component": "ExperienceMetrics", "dataKey": "metrics", "enabled": true },
+    { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
+    { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
+    { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
+  ],
+  "data": {
+    "hero": {
+      "tag": "Investiții în Energie Regenerabilă România",
+      "motto": "Claritate Înainte de Investiție.",
+      "subhead": "Clarificați riscurile de rețea și bancabilitate înainte de a investi în România. AFA Energy Romania este o firmă independentă de consultanță tehnică care acționează în numele investitorului.",
+      "primaryCta": "Solicită Evaluare Tehnică",
+      "secondaryCta": "Vezi Servicii",
+      "disclaimer": "AFA Energy Romania este o firmă independentă de consultanță tehnică; nu este dezvoltator, contractor EPC sau broker."
+    },
+    "intro": {
+      "heading": "Propunere de Valoare",
+      "bullets": ["Inteligență Conectare Rețea", "Model Partea Investitorului", "Raportare IC-Ready"],
+      "paragraphs": [
+        "Pe piața energiei regenerabile din România, valoarea reală a unui proiect depinde de cât de bine se potrivește designul pe hârtie cu capacitatea reală a rețelei.",
+        "Condițiile de rețea și costurile de conectare care apar în timpul sau după procesul ATR au un impact direct asupra economiei investiției.",
+        "Prin urmare, evaluarea preliminară trebuie să depășească statutul avizelor și să acopere capacitatea rețelei, costurile de conectare și pragurile de bancabilitate."
+      ]
+    },
+    "metrics": {
       "eyebrow": "Experiență Bazată pe Date",
       "items": [
-        {
-          "value": "850+",
-          "unit": "MW",
-          "label": "Capacitate Proiect Evaluată"
-        },
-        {
-          "value": "500+",
-          "unit": "ATR",
-          "label": "Analiză Aviz Tehnic de Racordare"
-        },
-        {
-          "value": "10+",
-          "unit": "Ani",
-          "label": "Experiență de Piață Tehnică în Turcia și România"
-        }
+        { "value": "850+", "unit": "MW", "label": "Capacitate de Proiecte Evaluate" },
+        { "value": "500+", "unit": "ATR", "label": "Analize Aviz Tehnic de Racordare" },
+        { "value": "300+", "unit": "MW", "label": "Experiență în Proiectare" },
+        { "value": "10+", "unit": "Ani", "label": "Experiență în Sector" }
       ],
       "note": "Aceste cifre reprezintă totalul evaluărilor tehnice efectuate în cadrul analizei ATR, fezabilității rețelei și Pre-TDD."
     },
+    "atrMatrix": {
+      "title": "AFA ATR Matrix™ — Filtru Tehnic Pre-Investiție",
+      "description": "Scopul nostru nu este să arătăm proiectul ca fiind 'tehnic posibil', ci să clarificăm dacă este viabil pentru investiție. Nu este un software sau o platformă.",
+      "cards": [
+        { "id": "01", "title": "Analiză Capacitate și Evacuare Punct Conectare", "description": "Evaluarea tehnică a capacității rețelei de a evacua energia din noul proiect, luând în considerare sarcina existentă." },
+        { "id": "02", "title": "Verificare Avize Tehnice și Reglementări", "description": "Verificarea termenelor de valabilitate ATR și conformitatea cu reglementările ANRE." },
+        { "id": "03", "title": "Cost și Risc Conectare Rețea", "description": "Verificarea sferei costurilor de conectare; vizibilitatea riscurilor de întărire rețea, limitare și întârzieri în buget." },
+        { "id": "04", "title": "Verificare Bancabilitate", "description": "Verificarea faptului că constatările tehnice sunt acceptabile pentru finanțarea bancară și susținerea lor cu documentație." }
+      ]
+    },
+    "roleClarity": {
+      "title": "Limita Independenței — Ce Facem și Ce Nu",
+      "do": { "title": "AFA FACE", "items": ["Analiză risc tehnic", "Structurare analiză pregătire investiție", "Coordonare proces Pre-TDD", "Evaluare bancabilitate"] },
+      "dont": { "title": "AFA NU FACE", "items": ["Dezvoltare proiecte", "Finanțare", "Rol de autoritate oficială de aprobare", "Garanții de investiții"] },
+      "closing": "Aceste limite protejează abordarea noastră independentă de consultanță și previn structural conflictele de interese."
+    },
+    "decisionCards": {
+      "title": "Cum procedați?",
+      "cards": [
+        { "type": "investor", "title": "INVESTITOR / MANAGER FOND", "description": "Vreau să evaluez proiecte din România cu o analiză tehnică independentă și să clarific riscurile critice înainte de a investi." },
+        { "type": "developer", "title": "DEZVOLTATOR / COMPANIE PROIECT", "description": "Vreau să trec proiectul printr-o verificare tehnică independentă și să clarific lipsurile înainte de a-l prezenta investitorilor." }
+      ],
+      "cta": "Solicită Evaluare Tehnică"
+    },
+    "closing": {
+      "motto": "Claritate Înainte de Investiție",
+      "principles": ["Independență Totală", "Filtrare Tehnică", "Focus pe Bancabilitate"],
+      "legal": "Acest conținut este un ghid de evaluare tehnică și comercială; nu constituie aprobare oficială sau garanții de rentabilitate a investiției."
+    }
+  }
+}

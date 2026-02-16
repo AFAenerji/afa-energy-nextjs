@@ -20,6 +20,7 @@
     },
     "intro": {
       "heading": "Değer Önerisi",
+      "bullets": ["Şebeke Bağlantı Zekası", "Yatırımcı Tarafı Model", "IC-Ready Raporlama"],
       "paragraphs": [
         "Romanya yenilenebilir enerji pazarında projenin gerçek değeri, kâğıt üzerindeki kurgusu ile şebekenin fiilî kapasitesinin ne kadar uyumlu olduğuna bağlıdır.",
         "Teknik Bağlantı Onayı (ATR) süreci sırasında veya sonrasında ortaya çıkan şebeke koşulları ve bağlantı maliyetleri, yatırımın ekonomisini doğrudan etkiler.",
@@ -31,7 +32,8 @@
       "items": [
         { "value": "850+", "unit": "MW", "label": "İncelenen Proje Kapasitesi" },
         { "value": "500+", "unit": "ATR", "label": "Teknik Bağlantı Onayı Analizi" },
-        { "value": "10+", "unit": "YIL", "label": "Türkiye ve Romanya Teknik Piyasa Tecrübesi" }
+        { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi" },
+        { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim" }
       ],
       "note": "Bu rakamlar; ATR analizi, şebeke fizibilitesi ve Pre-TDD kapsamında yürütülen teknik incelemelerin toplamını ifade eder."
     },
@@ -55,7 +57,7 @@
       "title": "Hangi İhtiyaçla İlerliyorsunuz?",
       "cards": [
         { "type": "investor", "title": "YATIRIMCI / FON YÖNETİCİSİ", "description": "Romanya'daki projeleri bağımsız teknik incelemeyle değerlendirmek ve kritik riskleri yatırım öncesi netleştirmek istiyorum." },
-        { "type": "developer", "title": "GELİŞTİRİCİ / PROJE ŞİRKETİ", "description": "Projeyi yatırımcıya sunmadan önce bağımsız bir teknik kontrolden geçirmek ve eksikleri netleştirmek istiyorum." }
+        { "type": "developer", "title": "Geliştirici / Proje Şirketi", "description": "Projeyi yatırımcıya sunmadan önce bağımsız bir teknik kontrolden geçirmek ve eksikleri netleştirmek istiyorum." }
       ],
       "cta": "Teknik Değerlendirme Talep Edin"
     },

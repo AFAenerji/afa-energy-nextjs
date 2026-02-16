@@ -45,7 +45,7 @@ export default async function RootLayout({
       <body className={`${montserrat.variable} ${openSans.variable}`}>
         <div className="min-h-screen flex flex-col">
           <Header locale={locale} />
-          <main className="flex-grow pt-16">
+          <main className="flex-grow w-full pt-16">
             {children}
           </main>
           <Footer locale={locale} />
