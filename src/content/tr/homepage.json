@@ -1,5 +1,5 @@
 {
-  "meta": { "version": "v9.5-FINAL-SEALED" },
+  "meta": { "version": "v9.5", "approvalStatus": "kilitlenmiş" },
   "sections": [
     { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
     { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "intro", "enabled": true },
@@ -7,14 +7,14 @@
     { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
-    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimerSection", "dataKey": "scopeDisclaimer", "enabled": true },
+    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
     "hero": {
       "tag": "Romanya Yenilenebilir Enerji Yatırımları",
       "motto": "Yatırımdan Önce Netlik.",
-      "subhead": "Romanya yatırımlarınızın şebeke ve banka finansmanı risklerini yatırım öncesi netleştirin. AFA Energy Romania, yatırımcı adına hareket eden bağımsız bir teknik danışmanlık kuruluşudur.",
+      "subhead": "Yatırım kararını etkileyen şebeke ve bağlantı maliyeti varsayımlarının bağımsız doğrulanması.",
       "primaryCta": "Teknik Değerlendirme Talep Edin",
       "secondaryCta": "Hizmetleri İnceleyin",
       "disclaimer": "AFA Energy Romania, bağımsız bir teknik danışmanlık kuruluşudur; proje geliştirici, EPC yüklenicisi veya broker değildir."
@@ -33,10 +33,10 @@
       "items": [
         { "value": "850+", "unit": "MW", "label": "İncelenen Proje Kapasitesi" },
         { "value": "500+", "unit": "ATR", "label": "Teknik Bağlantı Onayı Analizi" },
-        { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi" },
+        { "value": "100+", "unit": "", "label": "Erken Tespit Edilen Kritik Bulgular" },
         { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim" }
       ],
-      "note": "Bu rakamlar; ATR analizi, şebeke fizibilitesi ve Pre-TDD kapsamında yürütülen teknik incelemelerin toplamını ifade eder."
+      "note": "Bu metrikler Türkiye'de 2013'ten beri yürütülen çalışmalar ile Romanya'da 2025 itibarıyla kurulan yerel yapının toplam çalışma ölçeğini yansıtır. Yeterli veri seti sağlandığında, ilk ön inceleme çıktısı genellikle 3 iş günü içinde tamamlanabilir; süre veri kalitesi ve üçüncü taraf yanıtlarına bağlı olarak değişebilir."
     },
     "atrMatrix": {
       "title": "AFA ATR Matrix™ — Yatırım Öncesi Teknik Karar Filtresi",
@@ -45,14 +45,14 @@
         { "id": "01", "title": "Bağlantı Noktasının Kapasite ve Tahliye Analizi", "description": "Bağlantı noktasının mevcut yükü ile yeni projenin şebekeye tahliye edilebilirliğinin teknik açıdan değerlendirilmesi." },
         { "id": "02", "title": "Teknik İzinler ve Regülasyon Kontrolü", "description": "Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması." },
         { "id": "03", "title": "Şebeke Bağlantı Maliyeti ve Riski", "description": "Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, operasyonel kısıntı ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi." },
-        { "id": "04", "title": "Banka Finansmanına Uygunluk Doğrulaması", "description": "Teknik bulguların banka finansmanında kabul edilebilirliğinin doğrulanması ve belgelerle desteklenmesi." }
+        { "id": "04", "title": "Arazi ve izin belgelerinin teknik tutarlılık kontrolü; gerektiğinde uzman hukuk danışmanına yönlendirme ve koordinasyon.", "description": "Teknik bulguların banka finansmanında kabul edilebilirliğinin doğrulanması ve belgelerle desteklenmesi." }
       ]
     },
     "roleClarity": {
       "title": "Bağımsızlık Sınırı — AFA Yapar ve Yapmaz",
       "do": { "title": "AFA YAPAR", "items": ["Teknik risk analizi yürütür", "Yatırıma hazırlık analizini yapılandırır", "Ön teknik durum tespiti (Pre-TDD) sürecini koordine eder", "Banka finansmanına uygunluk değerlendirmesi gerçekleştirir"] },
       "dont": { "title": "AFA YAPMAZ", "items": ["Proje geliştirme yapmaz", "Finansman sağlamaz", "Resmî onay mercii rolü üstlenmez", "Yatırım garantisi vermez"] },
-      "closing": "Bu sınırlar, bağımsız danışmanlık yaklaşımını korur ve çıkar çatışması doğurabilecek durumları yapısal olarak engeller."
+      "closing": "AFA satıcı tarafını temsil etmez; bağımsız değerlendirmeyi yatırımcı tarafı ihtiyaçlarına göre yürütür. Bu sınırlar, bağımsız değerlendirme yaklaşımını korur ve çıkar çatışması doğurabilecek durumları yapısal olarak engeller."
     },
     "decisionCards": {
       "title": "Hangi İhtiyaçla İlerliyorsunuz?",
@@ -63,7 +63,7 @@
       "cta": "Teknik Değerlendirme Talep Edin"
     },
     "scopeDisclaimer": {
-      "text": "Bu simülasyon sadece bilgilendirme amaçlıdır ve kesin yatırım tavsiyesi değildir."
+      "text": "Bu içerik teknik ve ticari değerlendirme amaçlıdır; resmî onay veya yatırım taahhüdü niteliği taşımaz."
     },
     "closing": {
       "motto": "Yatırımdan Önce Netlik",

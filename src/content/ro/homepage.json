@@ -1,5 +1,5 @@
 {
-  "meta": { "version": "v9.5-FINAL-SEALED" },
+  "meta": { "version": "v9.5", "approvalStatus": "kilitlenmiş" },
   "sections": [
     { "id": "hero", "order": 10, "component": "HeroSection", "dataKey": "hero", "enabled": true },
     { "id": "intro", "order": 20, "component": "IntroductoryStatement", "dataKey": "intro", "enabled": true },
@@ -7,7 +7,7 @@
     { "id": "atr-matrix", "order": 40, "component": "PositioningChain", "dataKey": "atrMatrix", "enabled": true },
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
-    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimerSection", "dataKey": "scopeDisclaimer", "enabled": true },
+    { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
