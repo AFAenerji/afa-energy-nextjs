@@ -12,18 +12,18 @@ export default function ExperienceMetrics({ data }: Props) {
       <div className="w-full max-w-6xl px-6 lg:px-8">
         
         {/* Eyebrow - Centered on mobile, left on desktop */}
-        <p className="mb-10 text-sm font-bold uppercase tracking-[0.2em] text-white/80 text-center lg:text-left md:mb-12">
+        <p className="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-white/80 text-center lg:text-left md:mb-10">
           {data.eyebrow || "Veriye Dayalı Deneyim"}
         </p>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-16 relative">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-14 relative">
           {data.items.map((item, index) => (
-            <div key={index} className="relative flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-6">
+            <div key={index} className="relative flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-6 md:px-4">
               
               {/* Vertical Divider (Desktop Only) - Conditional based on number of metrics */}
               {index < data.items.length - 1 && data.items.length > 1 && (
-                <div className="hidden lg:block absolute right-[-1rem] top-0 h-full w-px bg-white/10" />
+                <div className="hidden lg:block absolute right-0 top-0 h-full w-px bg-white/10" />
               )}
 
               {/* Value & Unit */}
@@ -37,7 +37,7 @@ export default function ExperienceMetrics({ data }: Props) {
               </div>
 
               {/* Label - High Visibility */}
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/95 mx-auto lg:mx-0 max-w-[260px] lg:max-w-[240px]">
+              <p className="mt-4 text-base font-medium leading-relaxed text-white/95 mx-auto lg:mx-0 max-w-[220px]">
                 {item.label}
               </p>
             </div>

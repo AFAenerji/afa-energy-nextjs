@@ -17,11 +17,11 @@
       "subhead": "Yatırım kararını etkileyen şebeke ve bağlantı maliyeti varsayımlarının bağımsız doğrulanması.",
       "primaryCta": "Teknik Değerlendirme Talep Edin",
       "secondaryCta": "Hizmetleri İnceleyin",
-      "disclaimer": "AFA Energy Romania, bağımsız bir teknik danışmanlık kuruluşudur; proje geliştirici, EPC yüklenicisi veya broker değildir."
+      "disclaimer": "AFA Energy Romania, bağımsız bir teknik danışmanlık kuruluşudur; proje geliştirici veya EPC yüklenicisi değildir; aracılık faaliyeti yürütmez."
     },
     "intro": {
       "heading": "Değer Önerisi",
-      "bullets": ["Şebeke Bağlantı Zekası", "Yatırımcı Tarafı Model", "IC-Ready Raporlama"],
+      "bullets": ["Şebeke Bağlantı Zekası", "Yatırımcı Tarafı Model", "Yatırım Komitesi Uyumlu Raporlama"],
       "paragraphs": [
         "Romanya yenilenebilir enerji pazarında projenin gerçek değeri, kâğıt üzerindeki kurgusu ile şebekenin fiilî kapasitesinin ne kadar uyumlu olduğuna bağlıdır.",
         "Teknik Bağlantı Onayı (ATR) süreci sırasında veya sonrasında ortaya çıkan şebeke koşulları ve bağlantı maliyetleri, yatırımın ekonomisini doğrudan etkiler.",
@@ -33,19 +33,19 @@
       "items": [
         { "value": "850+", "unit": "MW", "label": "İncelenen Proje Kapasitesi" },
         { "value": "500+", "unit": "ATR", "label": "Teknik Bağlantı Onayı Analizi" },
-        { "value": "100+", "unit": "", "label": "Erken Tespit Edilen Kritik Bulgular" },
+        { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi" },
         { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim" }
       ],
-      "note": "Bu metrikler Türkiye'de 2013'ten beri yürütülen çalışmalar ile Romanya'da 2025 itibarıyla kurulan yerel yapının toplam çalışma ölçeğini yansıtır. Yeterli veri seti sağlandığında, ilk ön inceleme çıktısı genellikle 3 iş günü içinde tamamlanabilir; süre veri kalitesi ve üçüncü taraf yanıtlarına bağlı olarak değişebilir."
+      "note": "Bu metrikler Türkiye'de 2013'ten beri yürütülen çalışmalar ile Romanya'da 2025 itibarıyla kurulan yerel yapının toplam çalışma ölçeğini yansıtır. Yeterli veri seti sağlandığında, ilk ön inceleme çıktısı genellikle 3 iş günü içinde tamamlanabilir; süre veri kalitesi ve üçüncü taraf yanıtlarına bağlı olarak değişebilir. 'Kritik bulgu' ifadesi, ön inceleme kapsamında raporlanan teknik tutarsızlık ve risk başlıklarının toplam sayısını ifade eder."
     },
     "atrMatrix": {
       "title": "AFA ATR Matrix™ — Yatırım Öncesi Teknik Karar Filtresi",
-      "description": "Amaç, projeyi 'teknik olarak mümkün' göstermek değil; yatırım açısından ilerlenebilir olup olmadığını netleştirmektir. Bir yazılım veya platform değildir.",
+      "description": "Amaç, projenin yatırım açısından ilerlenebilir olup olmadığını erken aşamada netleştirmektir. AFA'nın yatırım öncesi teknik değerlendirme metodolojisidir.",
       "cards": [
         { "id": "01", "title": "Bağlantı Noktasının Kapasite ve Tahliye Analizi", "description": "Bağlantı noktasının mevcut yükü ile yeni projenin şebekeye tahliye edilebilirliğinin teknik açıdan değerlendirilmesi." },
         { "id": "02", "title": "Teknik İzinler ve Regülasyon Kontrolü", "description": "Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması." },
         { "id": "03", "title": "Şebeke Bağlantı Maliyeti ve Riski", "description": "Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, operasyonel kısıntı ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi." },
-        { "id": "04", "title": "Arazi ve izin belgelerinin teknik tutarlılık kontrolü; gerektiğinde uzman hukuk danışmanına yönlendirme ve koordinasyon.", "description": "Teknik bulguların banka finansmanında kabul edilebilirliğinin doğrulanması ve belgelerle desteklenmesi." }
+        { "id": "04", "title": "Banka Finansmanına Uygunluk Dokümantasyonu", "description": "Teknik bulguların banka finansmanına uygunluk açısından dokümante edilmesi; arazi ve izin belgelerinin teknik tutarlılık kontrolü; gerektiğinde uzman hukuk danışmanına yönlendirme ve koordinasyon." }
       ]
     },
     "roleClarity": {
@@ -57,7 +57,7 @@
     "decisionCards": {
       "title": "Hangi İhtiyaçla İlerliyorsunuz?",
       "cards": [
-        { "type": "investor", "title": "YATIRIMCI / FON YÖNETİCİSİ", "description": "Romanya'daki projeleri bağımsız teknik incelemeyle değerlendirmek ve kritik riskleri yatırım öncesi netleştirmek istiyorum." },
+        { "type": "investor", "title": "Yatırımcı / Fon Yöneticisi", "description": "Romanya'daki projeleri bağımsız teknik incelemeyle değerlendirmek ve kritik riskleri yatırım öncesi netleştirmek istiyorum." },
         { "type": "developer", "title": "Geliştirici / Proje Şirketi", "description": "Projeyi yatırımcıya sunmadan önce bağımsız bir teknik kontrolden geçirmek ve eksikleri netleştirmek istiyorum." }
       ],
       "cta": "Teknik Değerlendirme Talep Edin"
