@@ -26,7 +26,7 @@ export default function Header({ locale }: HeaderProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-20 bg-white border-b border-[#E0E0E0] shadow-[0_10px_30px_rgba(0,0,0,0.12)] relative">
+      <header className="sticky top-0 z-50 h-24 bg-white border-b border-[#E0E0E0] shadow-[0_10px_30px_rgba(0,0,0,0.12)] relative">
         <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#28AFB0]"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex items-center justify-between h-full">
@@ -51,37 +51,37 @@ export default function Header({ locale }: HeaderProps) {
             <nav className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => handleNavigation('/investor')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] border-2 border-[#28AFB0] px-4 py-1.5 rounded-[4px] hover:bg-[#28AFB0] hover:text-white transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] border-2 border-[#28AFB0] px-4 rounded-[4px] hover:bg-[#28AFB0] hover:text-white transition-all duration-200"
               >
                 {t('investor')}
               </button>
               <button
                 onClick={() => handleNavigation('/developer')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] border-2 border-[#FFCB00] px-4 py-1.5 rounded-[4px] hover:bg-[#FFCB00] hover:text-[#0B1F1E] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] border-2 border-[#FFCB00] px-4 rounded-[4px] hover:bg-[#FFCB00] hover:text-[#0B1F1E] transition-all duration-200"
               >
                 {t('developer')}
               </button>
               <button
                 onClick={() => handleNavigation('/services')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('services')}
               </button>
               <button
                 onClick={() => handleNavigation('/cases')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('cases')}
               </button>
               <button
                 onClick={() => handleNavigation('/about')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('about')}
               </button>
               <button
                 onClick={() => handleNavigation('/info')}
-                className="flex items-center justify-center h-10 text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('info')}
               </button>
@@ -111,7 +111,7 @@ export default function Header({ locale }: HeaderProps) {
               {/* CTA Button */}
               <button
                 onClick={() => handleNavigation('/contact')}
-                className="flex items-center justify-center h-10 px-5 py-2.5 bg-[#18625F] text-white border-2 border-[#18625F] rounded-[4px] text-base font-semibold hover:bg-white hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 px-5 bg-[#18625F] text-white border-2 border-[#18625F] rounded-[4px] text-base font-semibold leading-none hover:bg-white hover:text-[#18625F] transition-all duration-200"
               >
                 {t('contact')}
               </button>
