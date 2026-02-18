@@ -21,12 +21,10 @@
     },
     "intro": {
       "heading": "Propunere de Valoare",
-      "bullets": ["Inteligență Conectare Rețea", "Model Partea Investitorului", "Raportare IC-Ready"],
-      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
-      "paragraphs": [
-        "Pe piața energiei regenerabile din România, valoarea reală a unui proiect depinde de cât de bine se potrivește designul pe hârtie cu capacitatea reală a rețelei.",
-        "Condițiile de rețea și costurile de conectare care apar în timpul sau după procesul ATR au un impact direct asupra economiei investiției.",
-        "Prin urmare, evaluarea preliminară trebuie să depășească statutul avizelor și să acopere capacitatea rețelei, costurile de conectare și pragurile de bancabilitate."
+      "cards": [
+        { "title": "Inteligență Conectare Rețea", "desc": "Analizăm din timp impactul capacității rețelei și al costurilor de conectare asupra valorii proiectului." },
+        { "title": "Model Partea Investitorului", "desc": "Evaluăm independent riscurile tehnice și financiare pe parcursul procesului ATR." },
+        { "title": "Raportare IC-Ready", "desc": "Oferim evaluări preliminare aliniate la criteriile de bancabilitate." }
       ]
     },
     "metrics": {
@@ -58,8 +56,8 @@
     "decisionCards": {
       "title": "Cum procedați?",
       "cards": [
-        { "type": "investor", "title": "INVESTITOR / MANAGER FOND", "description": "Vreau să evaluez proiecte din România cu o analiză tehnică independentă și să clarific riscurile critice înainte de a investi." },
-        { "type": "developer", "title": "DEZVOLTATOR / COMPANIE PROIECT", "description": "Vreau să trec proiectul printr-o verificare tehnică independentă și să clarific lipsurile înainte de a-l prezenta investitorilor." }
+        { "type": "investor", "title": "Investitor", "description": "Clarificați riscurile critice cu o analiză tehnică independentă înainte de a investi." },
+        { "type": "developer", "title": "Dezvoltator", "description": "Treceți proiectul printr-o verificare tehnică independentă înainte de prezentare." }
       ],
       "cta": "Solicită Evaluare Tehnică"
     },

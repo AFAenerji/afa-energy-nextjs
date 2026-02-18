@@ -14,7 +14,7 @@ export default function RoleClarity({ data }: Props) {
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#28AFB0] mb-3">
             BAĞIMSIZLIK SINIRI
           </p>
-          <h2 className="text-2xl font-bold text-[#0B1F1E]">
+          <h2 className="text-2xl font-bold text-[#0B1F1E] tracking-tight">
             {data.title}
           </h2>
         </div>
@@ -30,7 +30,9 @@ export default function RoleClarity({ data }: Props) {
             <ul className="flex flex-col gap-4">
               {data.do.items.map((item, idx) => (
                 <li key={idx} className="flex gap-3 items-start">
-                  <span className="text-[#18625F] font-bold shrink-0 mt-0.5 leading-none">—</span>
+                  <svg aria-hidden="true" className="w-5 h-5 shrink-0 mt-0.5 text-[#FFCB00]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
                   <span className="text-sm text-[#333333] leading-relaxed">
                     {item}
                   </span>
@@ -40,14 +42,16 @@ export default function RoleClarity({ data }: Props) {
           </div>
 
           {/* AFA YAPMAZ */}
-          <div className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 h-full">
+          <div className="bg-gray-50/50 border border-[#E0E0E0] rounded-[4px] p-8 h-full">
             <h3 className="text-xs font-bold tracking-[0.15em] uppercase text-[#666666] mb-6 pb-4 border-b border-slate-100">
               {data.dont.title}
             </h3>
             <ul className="flex flex-col gap-4">
               {data.dont.items.map((item, idx) => (
                 <li key={idx} className="flex gap-3 items-start">
-                  <span className="text-[#999999] font-bold shrink-0 mt-0.5 leading-none">—</span>
+                  <svg aria-hidden="true" className="w-5 h-5 shrink-0 mt-0.5 text-[#999999]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                   <span className="text-sm text-[#666666] leading-relaxed">
                     {item}
                   </span>

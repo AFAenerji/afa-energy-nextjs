@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import type { DecisionData } from "@/types/homepage";
 
@@ -10,53 +7,62 @@ type Props = {
 };
 
 export default function DecisionInterface({ data, locale }: Props) {
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-
   return (
-    <section className="w-full bg-white py-24">
+    <section className="w-full bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        
-        <h2 className="text-2xl font-bold text-[#0B1F1E] mb-12 text-center">
+
+        {/* Transition Bridge */}
+        <div className="mb-12">
+          <div className="h-px w-full bg-[#E0E0E0]" />
+          <div className="mt-3 h-[3px] w-16 bg-[#FFCB00]" />
+        </div>
+
+        <h2 className="text-2xl font-bold text-[#0B1F1E] tracking-tight mb-12 text-center">
           {data.title}
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Centered Card Grid */}
+        <div className="flex flex-col md:flex-row flex-wrap justify-center gap-8 lg:gap-10">
           {data.cards.map((card) => {
-            const isSelected = selectedId === card.type;
-            
+            const isInvestor = card.type === "investor";
+
             return (
-              <button
+              <div
                 key={card.type}
-                onClick={() => setSelectedId(card.type)}
                 className={`
-                  text-left p-8 rounded-[4px] cursor-pointer w-full
+                  p-8 rounded-[4px] w-full md:w-[340px]
                   flex flex-col min-h-[220px]
-                  focus:outline-none focus-visible:outline-2 focus-visible:outline-[#18625F]
-                  ${isSelected
-                    ? 'border-2 border-[#FFCB00] bg-[rgba(255,203,0,0.03)]'
-                    : 'border border-[#E0E0E0] bg-white hover:border-[#28AFB0]'
+                  ${isInvestor
+                    ? "border-2 border-[#18625F] bg-white shadow-lg"
+                    : "border border-gray-300 bg-white shadow-sm"
                   }
                 `}
               >
-                <h3 className="text-lg font-semibold text-[#0B1F1E] mb-3">
+                <h3 className={`tracking-tight mb-3 ${
+                  isInvestor
+                    ? "text-xl font-bold text-[#18625F]"
+                    : "text-lg font-semibold text-gray-700"
+                }`}>
                   {card.title}
                 </h3>
-                <p className="text-sm text-[#5A5A5A] leading-relaxed">
+                <p className="text-sm text-[#5A5A5A] leading-relaxed mb-8">
                   {card.description}
                 </p>
-              </button>
+                <div className="mt-auto">
+                  <Link
+                    href={`/${locale}/contact`}
+                    className={`inline-flex items-center justify-center w-full rounded-[4px] px-6 py-3 text-[15px] transition-colors ${
+                      isInvestor
+                        ? "bg-[#FFCB00] text-[#0B1F1E] font-bold hover:bg-[#E6B800]"
+                        : "border-2 border-[#18625F] text-[#18625F] font-semibold bg-transparent hover:bg-[#18625F] hover:text-white"
+                    }`}
+                  >
+                    {data.cta}
+                  </Link>
+                </div>
+              </div>
             );
           })}
-        </div>
-
-        {/* CTA Button - ALWAYS GREEN */}
-        <div className="mt-12 text-center">
-          <Link
-            href={`/${locale}/contact`}
-            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-[4px] hover:bg-[#0F5654] transition-colors"
-          >
-            {data.cta}
-          </Link>
         </div>
 
       </div>

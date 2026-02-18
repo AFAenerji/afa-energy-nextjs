@@ -17,9 +17,10 @@ export interface HeroData {
 
 export interface IntroData {
   heading: string;
-  paragraphs: string[];
+  paragraphs?: string[];
   bullets?: string[];
   icons?: string[];
+  cards?: { title: string; desc: string }[];
 }
 
 export interface MetricsData {

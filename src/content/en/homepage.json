@@ -21,12 +21,10 @@
     },
     "intro": {
       "heading": "Value Proposition",
-      "bullets": ["Grid Connection Intelligence", "Investor-Side Model", "IC-Ready Reporting"],
-      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
-      "paragraphs": [
-        "In the Romanian renewable energy market, the real value of a project depends on how well its paper design matches the actual grid capacity.",
-        "Grid conditions and connection costs that emerge during or after the ATR process directly impact investment economics.",
-        "Therefore, preliminary assessment must go beyond permit status to cover grid capacity, connection costs, and bankability thresholds."
+      "cards": [
+        { "title": "Grid Connection Intelligence", "desc": "We analyze the impact of grid capacity and connection costs on project value upfront." },
+        { "title": "Investor-Side Model", "desc": "We independently assess technical and financial risks throughout the ATR process." },
+        { "title": "IC-Ready Reporting", "desc": "We deliver preliminary assessments aligned with bankability criteria." }
       ]
     },
     "metrics": {
@@ -58,8 +56,8 @@
     "decisionCards": {
       "title": "How are you proceeding?",
       "cards": [
-        { "type": "investor", "title": "INVESTOR / FUND MANAGER", "description": "I want to assess Romanian projects with independent technical review and clarify critical risks before investing." },
-        { "type": "developer", "title": "DEVELOPER / PROJECT COMPANY", "description": "I want to pass the project through an independent technical check and clarify gaps before presenting to investors." }
+        { "type": "investor", "title": "Investor", "description": "Clarify critical risks with independent technical review before investing." },
+        { "type": "developer", "title": "Developer", "description": "Pass your project through independent technical review before presenting to investors." }
       ],
       "cta": "Request Technical Assessment"
     },

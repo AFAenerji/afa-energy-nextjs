@@ -21,12 +21,10 @@
     },
     "intro": {
       "heading": "Değer Önerisi",
-      "bullets": ["Şebeke Bağlantı Zekası", "Yatırımcı Tarafı Model", "Yatırım Komitesi Uyumlu Raporlama"],
-      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
-      "paragraphs": [
-        "Romanya yenilenebilir enerji pazarında projenin gerçek değeri, kâğıt üzerindeki kurgusu ile şebekenin fiilî kapasitesinin ne kadar uyumlu olduğuna bağlıdır.",
-        "Teknik Bağlantı Onayı (ATR) süreci sırasında veya sonrasında ortaya çıkan şebeke koşulları ve bağlantı maliyetleri, yatırımın ekonomisini doğrudan etkiler.",
-        "Bu nedenle ön değerlendirme; izin statüsünün ötesinde, şebeke kapasitesi, bağlantı maliyeti ve banka finansmanına uygunluk eşiklerine dayanmalıdır."
+      "cards": [
+        { "title": "Şebeke Bağlantı Zekası", "desc": "Şebeke kapasitesi ve bağlantı maliyetlerinin proje değerine etkisini önceden analiz ederiz." },
+        { "title": "Yatırımcı Tarafı Model", "desc": "ATR sürecindeki teknik ve finansal riskleri bağımsız olarak değerlendiririz." },
+        { "title": "Uyumlu Raporlama", "desc": "Banka finansmanına uygunluk kriterlerine göre ön değerlendirme sunarız." }
       ]
     },
     "metrics": {
@@ -59,8 +57,8 @@
     "decisionCards": {
       "title": "Hangi İhtiyaçla İlerliyorsunuz?",
       "cards": [
-        { "type": "investor", "title": "Yatırımcı / Fon Yöneticisi", "description": "Romanya'daki projeleri bağımsız teknik incelemeyle değerlendirmek ve kritik riskleri yatırım öncesi netleştirmek istiyorum." },
-        { "type": "developer", "title": "Geliştirici / Proje Şirketi", "description": "Projeyi yatırımcıya sunmadan önce bağımsız bir teknik kontrolden geçirmek ve eksikleri netleştirmek istiyorum." }
+        { "type": "investor", "title": "Yatırımcı", "description": "Yatırım öncesi bağımsız teknik inceleme ile kritik riskleri netleştirin." },
+        { "type": "developer", "title": "Geliştirici", "description": "Projenizi yatırımcıya sunmadan önce bağımsız teknik kontrolden geçirin." }
       ],
       "cta": "Teknik Değerlendirme Talep Edin"
     },

@@ -16,13 +16,13 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section className="w-full bg-[#0F2E2C] text-white">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full py-16 lg:py-20">
+    <section id="experience-metrics" className="w-full bg-[#0F2E2C] text-white">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full pt-32 pb-16 lg:pb-20">
         
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
         <div className="mb-12">
-          <div className="h-px w-full bg-white/10" />
-          <div className="mt-4 h-[3px] w-16 bg-[#FFCB00]" />
+          <div className="h-px w-full bg-white/20" />
+          <div className="mt-4 h-[3px] w-24 bg-[#FFCB00]" />
         </div>
 
         {/* Eyebrow */}
