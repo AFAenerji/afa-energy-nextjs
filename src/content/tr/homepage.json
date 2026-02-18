@@ -57,10 +57,14 @@
     "decisionCards": {
       "title": "Hangi İhtiyaçla İlerliyorsunuz?",
       "cards": [
-        { "type": "investor", "title": "Yatırımcı", "description": "Yatırım öncesi bağımsız teknik inceleme ile kritik riskleri netleştirin." },
-        { "type": "developer", "title": "Geliştirici", "description": "Projenizi yatırımcıya sunmadan önce bağımsız teknik kontrolden geçirin." }
+        { "type": "investor", "title": "Yatırımcı / Fon", "description": "Yatırım kararı öncesinde şebeke kapasitesi, bağlantı maliyeti ve teknik riskleri bağımsız olarak netleştirin." },
+        { "type": "developer", "title": "Geliştirici / Proje", "description": "Projenizi yatırımcıya sunmadan önce bağımsız teknik kontrolden geçirerek güvenilirliğini artırın." }
       ],
-      "cta": "Teknik Değerlendirme Talep Edin"
+      "cta": {
+        "default": "Teknik Değerlendirme Talep Edin",
+        "investor": "Yatırım Öncesi Teknik Filtreyi Başlatın",
+        "developer": "Yatırımcı Sunumu Öncesi Teknik Kontrol"
+      }
     },
     "scopeDisclaimer": {
       "text": "Bu içerik teknik ve ticari değerlendirme amaçlıdır; resmî onay veya yatırım taahhüdü niteliği taşımaz."

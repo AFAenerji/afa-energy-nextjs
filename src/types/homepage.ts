@@ -49,7 +49,7 @@ export interface RoleClarityData {
 export interface DecisionData {
   title: string;
   cards: { type: string; title: string; description: string }[];
-  cta: string;
+  cta: string | { default: string; investor: string; developer: string };
 }
 
 export interface ScopeDisclaimerData {

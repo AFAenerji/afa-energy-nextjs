@@ -56,10 +56,14 @@
     "decisionCards": {
       "title": "How are you proceeding?",
       "cards": [
-        { "type": "investor", "title": "Investor", "description": "Clarify critical risks with independent technical review before investing." },
-        { "type": "developer", "title": "Developer", "description": "Pass your project through independent technical review before presenting to investors." }
+        { "type": "investor", "title": "Investor / Fund", "description": "Clarify grid capacity, connection costs, and technical risks independently before your investment decision." },
+        { "type": "developer", "title": "Developer / Project", "description": "Strengthen your project's credibility with an independent technical review before presenting to investors." }
       ],
-      "cta": "Request Technical Assessment"
+      "cta": {
+        "default": "Request Technical Assessment",
+        "investor": "Start Pre-Investment Technical Filter",
+        "developer": "Pre-Presentation Technical Review"
+      }
     },
     "scopeDisclaimer": {
       "text": "This content is for technical and commercial assessment purposes; it does not constitute official approval or investment commitment."

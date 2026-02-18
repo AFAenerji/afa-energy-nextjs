@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Locale, getTranslation } from '@/lib/i18n';
 import MobileMenu from './MobileMenu';
+import ThemeToggle from '@/components/ui/ThemeToggle';
 
 interface HeaderProps {
   locale: Locale;
@@ -107,6 +108,9 @@ export default function Header({ locale }: HeaderProps) {
                   ))}
                 </div>
               </div>
+
+              {/* Theme Toggle */}
+              <ThemeToggle />
 
               {/* CTA Button */}
               <button

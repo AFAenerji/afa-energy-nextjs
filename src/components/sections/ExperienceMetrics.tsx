@@ -17,7 +17,7 @@ export default function ExperienceMetrics({ data }: Props) {
 
   return (
     <section id="experience-metrics" className="w-full bg-[#0F2E2C] text-white">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full pt-32 pb-16 lg:pb-20">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full pt-32 pb-16 lg:pb-20">
         
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
         <div className="mb-12">
@@ -31,11 +31,11 @@ export default function ExperienceMetrics({ data }: Props) {
         </p>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-14 relative">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-12 relative">
           {data.items.map((item, index) => (
             <div
               key={index}
-              className="relative flex flex-col items-center text-center lg:items-start lg:text-left lg:pr-6 md:px-4"
+              className="relative flex flex-col items-center text-center lg:items-start lg:text-left px-4"
             >
               {/* Vertical Divider (Desktop Only) */}
               {index < data.items.length - 1 && data.items.length > 1 && (

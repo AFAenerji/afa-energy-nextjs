@@ -56,10 +56,14 @@
     "decisionCards": {
       "title": "Cum procedați?",
       "cards": [
-        { "type": "investor", "title": "Investitor", "description": "Clarificați riscurile critice cu o analiză tehnică independentă înainte de a investi." },
-        { "type": "developer", "title": "Dezvoltator", "description": "Treceți proiectul printr-o verificare tehnică independentă înainte de prezentare." }
+        { "type": "investor", "title": "Investitor / Fond", "description": "Clarificați capacitatea rețelei, costurile de conectare și riscurile tehnice independent înainte de decizia de investiție." },
+        { "type": "developer", "title": "Dezvoltator / Proiect", "description": "Consolidați credibilitatea proiectului cu o verificare tehnică independentă înainte de prezentare." }
       ],
-      "cta": "Solicită Evaluare Tehnică"
+      "cta": {
+        "default": "Solicită Evaluare Tehnică",
+        "investor": "Începeți Filtrul Tehnic Pre-Investiție",
+        "developer": "Control Tehnic Pre-Prezentare"
+      }
     },
     "scopeDisclaimer": {
       "text": "Această simulare are doar scop informativ și nu constituie un sfat de investiții definitiv."
