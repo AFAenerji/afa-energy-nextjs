@@ -3,9 +3,7 @@
    Slogan ve Kurumsal Dil Rehberi v1.2 Uyumlu
    ============================================================ */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ============================================================
    AFA ENERGY ROMANIA - CORPORATE DIGITAL GOVERNANCE v5.0

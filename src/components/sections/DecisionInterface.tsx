@@ -53,7 +53,7 @@ export default function DecisionInterface({ data, locale }: Props) {
         <div className="mt-12 text-center">
           <Link
             href={`/${locale}/contact`}
-            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-[4px] hover:bg-[#0F5654]"
+            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-[4px] hover:bg-[#0F5654] transition-colors"
           >
             {data.cta}
           </Link>

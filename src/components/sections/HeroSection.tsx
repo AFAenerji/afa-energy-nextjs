@@ -40,13 +40,13 @@ export default function HeroSection({ data, locale }: Props) {
           <div className="mt-8 flex flex-col gap-3">
             <Link
               href={hrefPrimary}
-              className="inline-flex w-full items-center justify-center rounded-md bg-[#FFCB00] px-5 py-3 text-sm font-bold text-black"
+              className="inline-flex w-full items-center justify-center rounded-md bg-[#FFCB00] px-5 py-3 text-sm font-bold text-black hover:bg-[#E6B800] transition-colors"
             >
               {data.primaryCta}
             </Link>
             <Link
               href={hrefSecondary}
-              className="inline-flex w-full items-center justify-center rounded-md border-2 border-[#18625F] bg-white px-5 py-3 text-sm font-bold text-[#18625F]"
+              className="inline-flex w-full items-center justify-center rounded-md border-2 border-[#18625F] bg-white px-5 py-3 text-sm font-bold text-[#18625F] hover:bg-[#18625F] hover:text-white transition-colors"
             >
               {data.secondaryCta}
             </Link>
@@ -83,13 +83,13 @@ export default function HeroSection({ data, locale }: Props) {
             <div className="mt-8 flex items-center gap-4">
               <Link
                 href={hrefPrimary}
-                className="inline-flex items-center justify-center rounded-md bg-[#FFCB00] px-8 py-3 text-base font-bold text-black hover:bg-[#E6B800]"
+                className="inline-flex items-center justify-center rounded-md bg-[#FFCB00] px-8 py-3 text-base font-bold text-black hover:bg-[#E6B800] transition-colors"
               >
                 {data.primaryCta}
               </Link>
               <Link
                 href={hrefSecondary}
-                className="inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-8 py-3 text-base font-bold text-[#18625F] hover:bg-[#18625F] hover:text-white"
+                className="inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-8 py-3 text-base font-bold text-[#18625F] hover:bg-[#18625F] hover:text-white transition-colors"
               >
                 {data.secondaryCta}
               </Link>

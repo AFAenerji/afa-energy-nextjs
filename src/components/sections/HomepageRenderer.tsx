@@ -27,12 +27,13 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
         const sectionData = data[section.dataKey as keyof HomepageContentV95];
 
         return (
-          <Component 
-            key={section.id} 
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            data={sectionData as any}
-            locale={locale} 
-          />
+          <div key={section.id} className="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24 w-full">
+            <Component 
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              data={sectionData as any}
+              locale={locale} 
+            />
+          </div>
         );
       })}
     </div>

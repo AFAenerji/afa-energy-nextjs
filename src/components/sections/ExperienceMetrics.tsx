@@ -8,8 +8,7 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section className="w-full bg-[#0F2E2C] py-20 md:py-24 lg:py-28 border-t border-white/10 flex justify-center">
-      <div className="w-full max-w-6xl px-6 lg:px-8">
+    <section className="w-full bg-[#0F2E2C] border-t border-white/10 flex justify-center text-white">
         
         {/* Eyebrow - Centered on mobile, left on desktop */}
         <p className="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-white/80 text-center lg:text-left md:mb-10">
@@ -37,7 +36,7 @@ export default function ExperienceMetrics({ data }: Props) {
               </div>
 
               {/* Label - High Visibility */}
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/95 mx-auto lg:mx-0 max-w-[220px]">
+              <p className="mt-4 text-base font-medium leading-relaxed text-white mx-auto lg:mx-0 max-w-[220px]">
                 {item.label}
               </p>
             </div>
@@ -51,7 +50,6 @@ export default function ExperienceMetrics({ data }: Props) {
           </p>
         </div>
         
-      </div>
     </section>
   );
 }
