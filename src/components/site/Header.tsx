@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Locale, getTranslation } from '@/lib/i18n';
-import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 
 interface HeaderProps {
@@ -25,102 +24,109 @@ export default function Header({ locale }: HeaderProps) {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // Explicit ARIA values to satisfy linter
-  const ariaExpandedValue = Boolean(mobileMenuOpen);
-
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-[999] bg-white border-b border-[#E0E0E0] shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-        <div className="max-w-[1200px] mx-auto px-4">
-          <div className="flex items-center justify-between h-[72px]">
+      <header className="sticky top-0 z-50 h-20 bg-white border-b border-[#E0E0E0]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="flex items-center justify-between h-full">
             {/* Logo + Brand Name */}
             <a 
               href={`/${locale}`}
               className="flex items-center gap-3 no-underline"
             >
-              <div className="relative w-10 h-10 rounded-[4px] overflow-hidden flex items-center justify-center">
+              <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
                 <Image
-                  src="/images/afa_renkli.png"
+                  src="/images/afa_1.png"
                   alt="AFA Energy Romania"
-                  fill
+                  width={32}
+                  height={32}
                   className="object-contain"
-                  sizes="40px"
                 />
               </div>
-              <span className="text-[#0B1F1E] font-bold text-lg font-heading">AFA Energy</span>
+              <span className="text-xl font-bold tracking-tight whitespace-nowrap">AFA Energy Romania</span>
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-6">
-              {/* Ghost Buttons */}
+            <nav className="hidden md:flex items-center gap-10">
               <button
                 onClick={() => handleNavigation('/investor')}
-                className="border border-[#18625F] text-[#18625F] px-4 py-1.5 rounded-sm text-sm font-semibold hover:bg-[#18625F] hover:text-white"
+                className="text-base font-semibold text-[#0B1F1E] border-2 border-[#28AFB0] px-4 py-1.5 rounded-[4px] hover:bg-[#28AFB0] hover:text-white transition-all duration-200"
               >
                 {t('investor')}
               </button>
               <button
                 onClick={() => handleNavigation('/developer')}
-                className="border border-[#FFCB00] text-[#0B1F1E] px-4 py-1.5 rounded-sm text-sm font-semibold hover:bg-[#FFCB00] hover:text-black"
+                className="text-base font-semibold text-[#0B1F1E] border-2 border-[#FFCB00] px-4 py-1.5 rounded-[4px] hover:bg-[#FFCB00] hover:text-[#0B1F1E] transition-all duration-200"
               >
                 {t('developer')}
               </button>
-
-              {/* Regular Links */}
               <button
                 onClick={() => handleNavigation('/services')}
-                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
+                className="text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('services')}
               </button>
               <button
                 onClick={() => handleNavigation('/cases')}
-                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
+                className="text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('cases')}
               </button>
               <button
                 onClick={() => handleNavigation('/about')}
-                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
+                className="text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('about')}
               </button>
               <button
                 onClick={() => handleNavigation('/info')}
-                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
+                className="text-base font-semibold text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('info')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/contact')}
-                className="relative text-[#0B1F1E] font-medium tracking-wide hover:text-[#18625F] pb-1 border-b-2 border-transparent hover:border-[#FFCB00]"
-              >
-                {t('contact')}
               </button>
             </nav>
 
             {/* Right Section */}
             <div className="flex items-center gap-4">
               {/* Language Switcher */}
-              <div className="hidden lg:block">
-                <LanguageSwitcher currentLocale={locale} />
+              <div className="hidden md:block">
+                <div className="flex items-center border border-[#E0E0E0] rounded-[4px] p-1">
+                  {['tr', 'en', 'ro'].map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => handleNavigation(`/${lang}`)}
+                      className={`px-3 py-1 text-sm font-medium rounded-[2px] transition-colors duration-200 ${
+                        locale === lang 
+                          ? 'bg-[#18625F] text-white' 
+                          : 'text-[#666666] hover:text-[#18625F]'
+                      }`}
+                    >
+                      {lang.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
               </div>
+
+              {/* CTA Button */}
+              <button
+                onClick={() => handleNavigation('/contact')}
+                className="px-5 py-2.5 bg-[#18625F] text-white border-2 border-[#18625F] rounded-[4px] text-sm font-semibold hover:bg-white hover:text-[#18625F] transition-all duration-200"
+              >
+                {t('contact')}
+              </button>
 
               {/* Mobile Toggle */}
               <button
                 onClick={toggleMobileMenu}
-                className="lg:hidden text-[#0B1F1E] hover:text-[#18625F]"
-                role="button"
-                aria-label="Toggle mobile menu"
-                aria-expanded={ariaExpandedValue}
+                className="md:hidden p-2 text-[#0B1F1E]"
+                aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
-                type="button"
+                aria-label="Toggle navigation menu"
               >
-                {/* Hamburger Icon */}
-                <div className="w-6 h-5 flex flex-col justify-between">
-                  <div className="h-0.5 bg-[#0B1F1E]"></div>
-                  <div className="h-0.5 bg-[#0B1F1E]"></div>
-                  <div className="h-0.5 bg-[#0B1F1E]"></div>
+                <div className="w-6 h-5 relative flex flex-col justify-center">
+                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
                 </div>
               </button>
             </div>

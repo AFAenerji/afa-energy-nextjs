@@ -8,15 +8,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   const translations = {
     tr: {
-      title: 'AFA Energy Romania',
+      title: 'AFA Energy Romania | Yenilikçi Enerji Çözümleri',
       description: 'Romanya yenilenebilir enerji yatırımları için bağımsız teknik danışmanlık ve yatırım kararı desteği'
     },
     en: {
-      title: 'AFA Energy Romania', 
+      title: 'AFA Energy Romania | Innovative Energy Solutions', 
       description: 'Independent technical advisory and investment decision support for renewable energy investments in Romania'
     },
     ro: {
-      title: 'AFA Energy Romania',
+      title: 'AFA Energy Romania | Soluții Energetice Inovatoare',
       description: 'Consultanță tehnică independentă și suport pentru decizii de investiții în energie regenerabilă în România'
     }
   };
@@ -33,11 +33,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       url: `https://afaenergy.ro/${locale}`,
       siteName: 'AFA Energy Romania',
+      images: [
+        {
+          url: 'https://afaenergy.ro/images/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'AFA Energy Romania - Innovative Energy Solutions',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: metadata.title,
       description: metadata.description,
+      images: ['https://afaenergy.ro/images/og-image.jpg'],
     },
     alternates: {
       canonical: `https://afaenergy.ro/${locale}`,
