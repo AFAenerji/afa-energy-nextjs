@@ -36,7 +36,8 @@
         { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi" },
         { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim" }
       ],
-      "note": "Bu metrikler Türkiye'de 2013'ten beri yürütülen çalışmalar ile Romanya'da 2025 itibarıyla kurulan yerel yapının toplam çalışma ölçeğini yansıtır. Yeterli veri seti sağlandığında, ilk ön inceleme çıktısı genellikle 3 iş günü içinde tamamlanabilir; süre veri kalitesi ve üçüncü taraf yanıtlarına bağlı olarak değişebilir. 'Kritik bulgu' ifadesi, ön inceleme kapsamında raporlanan teknik tutarsızlık ve risk başlıklarının toplam sayısını ifade eder."
+      "note": "Bu rakamlar, Türkiye'de edinilmiş ve Romanya pazarına uyarlanmış toplam teknik değerlendirme ölçeğini temsil eder.",
+      "methodology": "Tüm hesaplamalarımız ANRE standartları ve şebeke kısıt analizi algoritmaları ile doğrulanmaktadır."
     },
     "atrMatrix": {
       "title": "AFA ATR Matrix™ — Yatırım Öncesi Teknik Karar Filtresi",

@@ -27,7 +27,7 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
         const sectionData = data[section.dataKey as keyof HomepageContentV95];
 
         return (
-          <div key={section.id} className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
+          <div key={section.id} className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
             <Component 
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               data={sectionData as any}

@@ -69,7 +69,7 @@ export default function Header({ locale }: HeaderProps) {
               </button>
               <button
                 onClick={() => handleNavigation('/cases')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200 pointer-events-none opacity-50 cursor-not-allowed"
               >
                 {t('cases')}
               </button>
@@ -81,7 +81,7 @@ export default function Header({ locale }: HeaderProps) {
               </button>
               <button
                 onClick={() => handleNavigation('/info')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
+                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200 pointer-events-none opacity-50 cursor-not-allowed"
               >
                 {t('info')}
               </button>
