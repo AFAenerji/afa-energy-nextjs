@@ -1,4 +1,4 @@
-import { Locale, locales } from '@/lib/i18n';
+import { Locale } from '@/lib/i18n';
 import { getHomepageDictionary } from '@/lib/getHomepageDictionary';
 import HomepageRenderer from '@/components/sections/HomepageRenderer';
 
@@ -17,6 +17,6 @@ export default async function HomePage({ params }: HomePageProps) {
   );
 }
 
-export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+export function generateStaticParams() {
+  return [{ locale: 'tr' }];
 }

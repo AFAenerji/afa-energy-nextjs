@@ -1,13 +1,11 @@
-export type Locale = 'en' | 'tr' | 'ro';
+export type Locale = 'tr';
 
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = 'tr';
 
-export const locales: Locale[] = ['en', 'tr', 'ro'];
+export const locales = ['tr'] as const;
 
 export const localeNames: Record<Locale, string> = {
-  en: 'English',
   tr: 'Türkçe',
-  ro: 'Română',
 };
 
 export interface Translations {
@@ -58,52 +56,6 @@ export interface Translations {
 }
 
 export const translations: Record<Locale, Translations> = {
-  en: {
-    // Navigation
-    investor: 'Investor',
-    developer: 'Developer',
-    services: 'Services',
-    cases: 'Case Studies',
-    about: 'About',
-    info: 'Info',
-    contact: 'Contact',
-    investorGate: 'Investor Gate',
-    developerArea: 'Developer Area',
-    home: 'Home',
-    faq: 'FAQ',
-    reachUs: 'Contact Us',
-    
-    // Slogans (Official AFA Energy Guide v1.2)
-    motto: 'Clarity Before Investment.',
-    valueSlogan: 'Technical Accuracy. Investor Discipline.',
-    financeSlogan: 'Independent Advisory. Bankable Investments.',
-    footerBlurb: 'Independent technical advisory and investment decision support.',
-    
-    // Footer specific
-    technicalServices: 'Technical Services',
-    contactForm: 'Contact Form',
-    investorIntake: 'Investor Intake',
-    formsOnlyPolicy: 'Requests are accepted only via forms.',
-    privacyPolicy: 'Privacy Policy',
-    terms: 'Terms',
-    
-    // Company info
-    companyName: 'AFA Energy Romania S.R.L.',
-    addressLine1: 'Calea GRIVIȚEI Nr. 84–98',
-    addressLine2: 'THE MARK OFFICE, Etaj 7',
-    addressLine3: 'Bucharest, Sector 1, Romania',
-    
-    // Homepage content
-    whyChoose: 'Why Choose AFA Energy?',
-    renewableEnergy: 'Renewable Energy',
-    renewableEnergyDesc: 'Solar and wind energy solutions tailored to your needs.',
-    energyEfficiency: 'Energy Efficiency',
-    energyEfficiencyDesc: 'Consumption optimization and operational cost reduction.',
-    expertConsulting: 'Expert Consulting',
-    expertConsultingDesc: 'Experienced team of specialists in the energy sector.',
-    ctaTitle: 'Start Your Clean Energy Transition',
-    ctaSubtitle: 'Contact us today for a free assessment of your energy needs',
-  },
   tr: {
     // Navigation
     investor: 'Yatırımcı',
@@ -149,52 +101,6 @@ export const translations: Record<Locale, Translations> = {
     expertConsultingDesc: 'Enerji sektöründe deneyimli uzman ekibi.',
     ctaTitle: 'Temiz Enerjiye Geçişe Başlayın',
     ctaSubtitle: 'Enerji ihtiyaçlarınız için ücretsiz değerlendirme talebinde bulunun',
-  },
-  ro: {
-    // Navigation
-    investor: 'Investitor',
-    developer: 'Dezvoltator',
-    services: 'Servicii',
-    cases: 'Studii de caz',
-    about: 'Despre',
-    info: 'Info',
-    contact: 'Contact',
-    investorGate: 'Portal Investitori',
-    developerArea: 'Zona Dezvoltatori',
-    home: 'Acasă',
-    faq: 'Întrebări frecvente',
-    reachUs: 'Contactați-ne',
-    
-    // Slogans (Official AFA Energy Guide v1.2)
-    motto: 'Claritate înainte de Investiție.',
-    valueSlogan: 'Rigoare Tehnică. Disciplină de Investiții.',
-    financeSlogan: 'Investiții Finanțabile. Consultanță Independentă.',
-    footerBlurb: 'Consultanță tehnică independentă și suport pentru decizia investițională.',
-    
-    // Footer specific
-    technicalServices: 'Servicii Tehnice',
-    contactForm: 'Formular de contact',
-    investorIntake: 'Profil Investitor',
-    formsOnlyPolicy: 'Solicitările sunt preluate exclusiv prin formulare.',
-    privacyPolicy: 'Politica de confidențialitate',
-    terms: 'Termeni',
-    
-    // Company info
-    companyName: 'AFA Energy Romania S.R.L.',
-    addressLine1: 'Calea GRIVIȚEI Nr. 84–98',
-    addressLine2: 'THE MARK OFFICE, Etaj 7',
-    addressLine3: 'Bucharest, Sector 1, Romania',
-    
-    // Homepage content
-    whyChoose: 'De Ce AFA Energy?',
-    renewableEnergy: 'Energie Regenerabilă',
-    renewableEnergyDesc: 'Soluții solare și eoliene adaptate nevoilor dumneavoastră.',
-    energyEfficiency: 'Eficiență Energetică',
-    energyEfficiencyDesc: 'Optimizarea consumului și reducerea costurilor operaționale.',
-    expertConsulting: 'Consultanță Expertă',
-    expertConsultingDesc: 'Echipă de specialiști cu experiență în sectorul energetic.',
-    ctaTitle: 'Începeți Tranziția la Energie Curată',
-    ctaSubtitle: 'Contactați-ne astăzi pentru o evaluare gratuită a nevoilor dumneavoastră energetice',
   },
 };
 

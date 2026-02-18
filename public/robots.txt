@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /tr
+Disallow: /en
+Disallow: /ro
+Sitemap: https://afaenergy.ro/sitemap.xml

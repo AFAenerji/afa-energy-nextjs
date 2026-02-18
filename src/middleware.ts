@@ -1,43 +1,28 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { defaultLocale, locales } from './lib/i18n';
+import { defaultLocale } from './lib/i18n';
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
+  // Immediate redirect for unsupported locales (301 permanent)
+  if (pathname.startsWith('/en') || pathname.startsWith('/ro')) {
+    // Remove the unsupported locale prefix and redirect to Turkish
+    const newPathname = pathname.replace(/^\/(en|ro)/, '') || '/';
+    return NextResponse.redirect(
+      new URL(`/${defaultLocale}${newPathname}`, request.url),
+      301
+    );
+  }
+  
   // Check if there is any supported locale in the pathname
-  const pathnameIsMissingLocale = locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
+  const pathnameIsMissingLocale = !pathname.startsWith(`/${defaultLocale}/`) && pathname !== `/${defaultLocale}`;
 
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
-    // Get the preferred locale from the Accept-Language header or use default
-    const acceptLanguage = request.headers.get('accept-language');
-    let locale = defaultLocale;
-    
-    if (acceptLanguage) {
-      const preferredLocale = acceptLanguage
-        .split(',')[0]
-        .split('-')[0]
-        .toLowerCase();
-      
-      // Map common language codes to our supported locales
-      const localeMap: Record<string, string> = {
-        'en': 'en',
-        'tr': 'tr',
-        'ro': 'ro',
-        'en-us': 'en',
-        'tr-tr': 'tr',
-        'ro-ro': 'ro',
-      };
-      
-      locale = (localeMap[preferredLocale] || defaultLocale) as typeof defaultLocale;
-    }
-    
-    // Redirect to the locale-prefixed URL
+    // Always redirect to Turkish locale
     return NextResponse.redirect(
-      new URL(`/${locale}${pathname}`, request.url)
+      new URL(`/${defaultLocale}${pathname}`, request.url)
     );
   }
   
