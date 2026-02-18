@@ -22,6 +22,7 @@ export default function HeroSection({ data, locale }: Props) {
             alt="AFA Energy hero"
             fill
             priority
+            sizes="100vw"
             className="object-cover object-[70%_40%]"
           />
         </div>
@@ -30,10 +31,10 @@ export default function HeroSection({ data, locale }: Props) {
           <p className="text-xs font-bold tracking-[0.2em] text-[#28AFB0] uppercase mb-3">
             {data.tag}
           </p>
-          <h1 className="text-6xl font-extrabold tracking-tight text-[#0B2E2D] leading-tight">
+          <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-[#0B1F1E]">
             {data.motto}
           </h1>
-          <p className="mt-4 text-base leading-relaxed text-[#3A3A3A]">
+          <p className="mt-4 text-base leading-[1.6] text-[#3A3A3A]">
             {data.subhead}
           </p>
 
@@ -46,14 +47,14 @@ export default function HeroSection({ data, locale }: Props) {
             </Link>
             <Link
               href={hrefSecondary}
-              className="flex-1 inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-5 py-3 text-sm lg:text-base font-bold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
+              className="flex-1 inline-flex items-center justify-center rounded-md border-[1.5px] border-[#18625F] bg-transparent px-5 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
             >
               {data.secondaryCta}
             </Link>
           </div>
 
-          <div className="border-t border-[#E5E7EB] mt-6 pt-4">
-            <p className="text-xs text-[#6B7280] leading-relaxed">
+          <div className="mt-16 pt-4 border-t border-[#18625F]/15">
+            <p className="text-xs text-slate-500 leading-relaxed">
               {data.disclaimer}
             </p>
           </div>
@@ -67,6 +68,7 @@ export default function HeroSection({ data, locale }: Props) {
           alt="AFA Energy hero"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-[70%_40%]"
         />
         <div className="pointer-events-none absolute inset-0 bg-black/15" />
@@ -76,13 +78,13 @@ export default function HeroSection({ data, locale }: Props) {
             <p className="text-xs font-bold tracking-[0.2em] text-[#28AFB0] uppercase mb-4">
               {data.tag}
             </p>
-            <h1 className="text-6xl font-extrabold tracking-tight text-[#0B2E2D] leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-extrabold leading-[1.05] max-w-[760px] tracking-tight text-[#0B1F1E]">
               {data.motto}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-[#3A3A3A]">
+            <p className="mt-5 text-lg leading-[1.6] max-w-[640px] text-[#3A3A3A]">
               {data.subhead}
             </p>
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-8 flex items-center gap-8">
               <Link
                 href={hrefPrimary}
                 className="flex-1 inline-flex items-center justify-center rounded-md bg-[#FFCB00] px-8 py-3 text-sm lg:text-base font-bold text-black leading-tight hover:bg-[#E6B800] transition-colors no-underline"
@@ -91,13 +93,13 @@ export default function HeroSection({ data, locale }: Props) {
               </Link>
               <Link
                 href={hrefSecondary}
-                className="flex-1 inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-8 py-3 text-sm lg:text-base font-bold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
+                className="flex-1 inline-flex items-center justify-center rounded-md border-[1.5px] border-[#18625F] bg-transparent px-8 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
               >
                 {data.secondaryCta}
               </Link>
             </div>
-            <div className="border-t border-[#E5E7EB] mt-6 pt-4">
-              <p className="text-xs text-[#6B7280] leading-relaxed">
+            <div className="mt-16 pt-4 border-t border-[#18625F]/15">
+              <p className="text-xs text-slate-500 leading-relaxed">
                 {data.disclaimer}
               </p>
             </div>

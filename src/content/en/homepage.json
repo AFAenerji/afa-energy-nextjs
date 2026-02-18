@@ -22,6 +22,7 @@
     "intro": {
       "heading": "Value Proposition",
       "bullets": ["Grid Connection Intelligence", "Investor-Side Model", "IC-Ready Reporting"],
+      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
       "paragraphs": [
         "In the Romanian renewable energy market, the real value of a project depends on how well its paper design matches the actual grid capacity.",
         "Grid conditions and connection costs that emerge during or after the ATR process directly impact investment economics.",

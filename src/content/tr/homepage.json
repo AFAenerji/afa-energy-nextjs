@@ -22,6 +22,7 @@
     "intro": {
       "heading": "Değer Önerisi",
       "bullets": ["Şebeke Bağlantı Zekası", "Yatırımcı Tarafı Model", "Yatırım Komitesi Uyumlu Raporlama"],
+      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
       "paragraphs": [
         "Romanya yenilenebilir enerji pazarında projenin gerçek değeri, kâğıt üzerindeki kurgusu ile şebekenin fiilî kapasitesinin ne kadar uyumlu olduğuna bağlıdır.",
         "Teknik Bağlantı Onayı (ATR) süreci sırasında veya sonrasında ortaya çıkan şebeke koşulları ve bağlantı maliyetleri, yatırımın ekonomisini doğrudan etkiler.",

@@ -19,6 +19,7 @@ export interface IntroData {
   heading: string;
   paragraphs: string[];
   bullets?: string[];
+  icons?: string[];
 }
 
 export interface MetricsData {

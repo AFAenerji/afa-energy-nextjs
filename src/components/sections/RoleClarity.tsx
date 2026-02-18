@@ -7,7 +7,7 @@ type Props = {
 export default function RoleClarity({ data }: Props) {
   return (
     <section className="w-full bg-[#F5F5F5] py-24">
-      <div className="mx-auto max-w-6xl px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         
         {/* Header */}
         <div className="max-w-xl mb-12">

@@ -22,6 +22,7 @@
     "intro": {
       "heading": "Propunere de Valoare",
       "bullets": ["Inteligență Conectare Rețea", "Model Partea Investitorului", "Raportare IC-Ready"],
+      "icons": ["/images/grid-intelligence.png", "/images/investor-model.png", "/images/compliant-reporting.png"],
       "paragraphs": [
         "Pe piața energiei regenerabile din România, valoarea reală a unui proiect depinde de cât de bine se potrivește designul pe hârtie cu capacitatea reală a rețelei.",
         "Condițiile de rețea și costurile de conectare care apar în timpul sau după procesul ATR au un impact direct asupra economiei investiției.",

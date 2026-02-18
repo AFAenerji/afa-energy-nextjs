@@ -14,7 +14,7 @@ export default function DecisionInterface({ data, locale }: Props) {
 
   return (
     <section className="w-full bg-white py-24">
-      <div className="mx-auto max-w-4xl px-8">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         
         <h2 className="text-2xl font-bold text-[#0B1F1E] mb-12 text-center">
           {data.title}

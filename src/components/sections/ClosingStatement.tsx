@@ -7,7 +7,7 @@ type Props = {
 export default function ClosingStatement({ data }: Props) {
   return (
     <section className="w-full bg-[#0F2E2C] py-32 border-t border-white/10">
-      <div className="mx-auto max-w-4xl px-6 lg:px-8 text-center">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 text-center">
         
         {/* Big Motto */}
         <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-16">

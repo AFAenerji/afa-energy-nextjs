@@ -1,38 +1,44 @@
 import { SECTION_REGISTRY } from "./registry";
-import type { SectionBase, HomepageContentV95 } from "@/types/homepage";
+import type { HomepageContentV95, SectionBase } from "@/types/homepage";
 import type { Locale } from "@/lib/i18n";
 
-type Props = {
+interface Props {
   sections: SectionBase[];
   data: HomepageContentV95;
   locale: Locale;
-};
+}
 
 export default function HomepageRenderer({ sections, data, locale }: Props) {
-  // Filter enabled sections and sort by order
+  // 1. Filter enabled and sort by order
   const activeSections = sections
     .filter((s) => s.enabled)
     .sort((a, b) => a.order - b.order);
 
-  return (
-    <div className="flex flex-col w-full items-center">
-      {activeSections.map((section) => {
-        const Component = SECTION_REGISTRY[section.component as keyof typeof SECTION_REGISTRY];
+  // 2. Dedupe by component + dataKey (Safety logic)
+  const seen = new Set<string>();
+  const uniqueSections = activeSections.filter((s) => {
+    const key = `${s.component}::${s.dataKey}`;
+    if (seen.has(key)) {
+      console.warn(`Duplicate section skipped: ${key} (id=${s.id})`);
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
 
+  return (
+    <div className="flex flex-col w-full">
+      {uniqueSections.map((section) => {
+        const Component = SECTION_REGISTRY[section.component as keyof typeof SECTION_REGISTRY];
         if (!Component) {
           console.warn(`Component not found for: ${section.component}`);
           return null;
         }
 
         const sectionData = data[section.dataKey as keyof HomepageContentV95];
-
         return (
-          <div key={section.id} className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
-            <Component 
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              data={sectionData as any}
-              locale={locale} 
-            />
+          <div key={section.id} className="w-full">
+            <Component data={sectionData} locale={locale} />
           </div>
         );
       })}
