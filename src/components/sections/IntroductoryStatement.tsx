@@ -14,7 +14,7 @@ export default function IntroductoryStatement({ data }: Props) {
 
   return (
     <section className="w-full bg-white py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
           {/* Left Column: Yellow Line + Title + Dash List */}

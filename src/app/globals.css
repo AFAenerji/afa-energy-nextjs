@@ -302,8 +302,8 @@ input:focus, select:focus, textarea:focus {
    Radius: 4px, no animations
    ============================================================ */
 .footer-primary-btn {
-  background: var(--color-accent);
-  color: var(--color-primary);
+  background: var(--yellow-accent);
+  color: var(--text-primary);
   cursor: pointer;
   border: none;
 }

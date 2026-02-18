@@ -7,6 +7,7 @@ type Props = {
 export default function PositioningChain({ data }: Props) {
   return (
     <section className="w-full bg-[#F5F5F5]">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
         
         {/* Header Left-Aligned */}
         <div className="max-w-xl mb-14">
@@ -46,6 +47,7 @@ export default function PositioningChain({ data }: Props) {
           ))}
         </div>
 
+      </div>
     </section>
   );
 }

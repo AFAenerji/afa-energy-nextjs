@@ -15,7 +15,7 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
     .sort((a, b) => a.order - b.order);
 
   return (
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full items-center">
       {activeSections.map((section) => {
         const Component = SECTION_REGISTRY[section.component as keyof typeof SECTION_REGISTRY];
 
@@ -27,7 +27,7 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
         const sectionData = data[section.dataKey as keyof HomepageContentV95];
 
         return (
-          <div key={section.id} className="mx-auto max-w-7xl px-6 lg:px-8 py-16 md:py-24 w-full">
+          <div key={section.id} className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
             <Component 
               // eslint-disable-next-line @typescript-eslint/no-explicit-any
               data={sectionData as any}

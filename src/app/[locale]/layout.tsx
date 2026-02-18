@@ -1,23 +1,7 @@
 import type { Metadata } from 'next';
-import { Montserrat, Open_Sans } from 'next/font/google';
-import '../globals.css';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
-
-const montserrat = Montserrat({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-heading',
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-});
-
-const openSans = Open_Sans({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-body',
-  weight: ['400', '500', '600', '700', '800'],
-  display: 'swap',
-});
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -70,7 +54,7 @@ export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
@@ -83,16 +67,12 @@ export default async function RootLayout({
     : defaultLocale;
 
   return (
-    <html lang={locale}>
-      <body className={`${montserrat.variable} ${openSans.variable}`}>
-        <div className="min-h-screen flex flex-col">
-          <Header locale={locale} />
-          <main className="flex-grow w-full pt-16">
-            {children}
-          </main>
-          <Footer locale={locale} />
-        </div>
-      </body>
-    </html>
+    <div className="min-h-screen flex flex-col">
+      <Header locale={locale} />
+      <main className="flex-grow w-full pt-16">
+        {children}
+      </main>
+      <Footer locale={locale} />
+    </div>
   );
 }

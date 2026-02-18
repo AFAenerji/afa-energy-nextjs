@@ -8,7 +8,8 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section className="w-full bg-[#0F2E2C] border-t border-white/10 flex justify-center text-white">
+    <section className="w-full bg-[#0F2E2C] border-t border-white/10 text-white">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
         
         {/* Eyebrow - Centered on mobile, left on desktop */}
         <p className="mb-8 text-sm font-bold uppercase tracking-[0.3em] text-white/80 text-center lg:text-left md:mb-10">
@@ -50,6 +51,7 @@ export default function ExperienceMetrics({ data }: Props) {
           </p>
         </div>
         
+      </div>
     </section>
   );
 }
