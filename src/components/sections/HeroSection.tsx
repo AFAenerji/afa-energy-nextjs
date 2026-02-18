@@ -13,7 +13,7 @@ export default function HeroSection({ data, locale }: Props) {
   const hrefSecondary = `/${locale}/services`;
 
   return (
-    <section className="relative w-full min-h-[85vh] overflow-hidden bg-white scroll-mt-[96px] pt-32">
+    <section className="relative w-full min-h-[85vh] overflow-hidden bg-white scroll-mt-[72px]">
       {/* --- MOBILE LAYOUT (<1024px) --- */}
       <div className="lg:hidden flex flex-col">
         <div className="relative h-[400px] w-full">

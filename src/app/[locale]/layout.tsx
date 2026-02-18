@@ -78,7 +78,7 @@ export default async function LocaleLayout({
   return (
     <div className="min-h-screen flex flex-col">
       <Header locale={locale} />
-      <main className="flex-grow w-full pt-24">
+      <main className="flex-grow w-full pt-[72px]">
         {children}
       </main>
       <Footer locale={locale} />
