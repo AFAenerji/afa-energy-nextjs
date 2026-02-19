@@ -54,6 +54,13 @@
   /* Breakpoints */
   --bp-tablet: 1024px;
   --bp-mobile: 768px;
+
+  /* White Opacity Tokens */
+  --white-85: rgba(255, 255, 255, 0.85);
+  --white-70: rgba(255, 255, 255, 0.70);
+  --white-60: rgba(255, 255, 255, 0.60);
+  --white-50: rgba(255, 255, 255, 0.50);
+  --white-40: rgba(255, 255, 255, 0.40);
 }
 
 /* 2. MOTION — Respect user preference */
@@ -128,17 +135,17 @@ h1, h2, h3, h4, h5, h6 {
 .dark-section h4,
 .dark-section h5,
 .dark-section h6 {
-  color: #FFFFFF !important;
+  color: #FFFFFF;
 }
 .dark-section p {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: var(--white-85);
 }
 .dark-section .text-muted {
-  color: rgba(255, 255, 255, 0.60) !important;
+  color: var(--white-60);
 }
 
 /* 4. LAYOUT */
-.container {
+.afa-container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--space-lg);
@@ -152,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 6. BUTTON STANDARDS */
-.btn-primary {
+.afa-btn-primary {
   background: var(--yellow-accent);
   color: var(--text-on-yellow);
   border-radius: var(--radius);
@@ -162,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.btn-primary:hover {
+.afa-btn-primary:hover {
   background: var(--yellow-hover);
 }
 
@@ -182,13 +189,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 7. CARD STANDARDS */
-.card {
+.afa-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: none;
 }
 
-.card:hover {
+.afa-card:hover {
   border-color: var(--green-authority);
 }
 
@@ -268,7 +275,7 @@ input:focus, select:focus, textarea:focus {
 
 /* 11. ATR MATRIX TABLE */
 .matrix-row {
-  transition: none !important;
+  transition: none;
 }
 
 .matrix-row:hover {

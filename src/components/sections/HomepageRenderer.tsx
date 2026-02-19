@@ -19,7 +19,9 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
   const uniqueSections = activeSections.filter((s) => {
     const key = `${s.component}::${s.dataKey}`;
     if (seen.has(key)) {
-      console.warn(`Duplicate section skipped: ${key} (id=${s.id})`);
+      if (process.env.NODE_ENV !== "production") {
+        console.warn(`Duplicate section skipped: ${key} (id=${s.id})`);
+      }
       return false;
     }
     seen.add(key);
@@ -31,7 +33,9 @@ export default function HomepageRenderer({ sections, data, locale }: Props) {
       {uniqueSections.map((section) => {
         const Component = SECTION_REGISTRY[section.component as keyof typeof SECTION_REGISTRY];
         if (!Component) {
-          console.warn(`Component not found for: ${section.component}`);
+          if (process.env.NODE_ENV !== "production") {
+            console.warn(`Component not found for: ${section.component}`);
+          }
           return null;
         }
 
