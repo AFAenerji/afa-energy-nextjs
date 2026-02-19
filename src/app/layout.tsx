@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body suppressHydrationWarning>
+      <body className="page-light" suppressHydrationWarning>
         <ThemeProvider>
           {children}
         </ThemeProvider>

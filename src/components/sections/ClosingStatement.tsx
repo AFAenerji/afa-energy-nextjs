@@ -1,50 +1,67 @@
-import type { ClosingData } from "@/types/homepage";
+import React from "react";
+
+type ClosingStatementData = {
+  title?: string;
+  subtitle?: string;
+  items?: string[];
+  disclaimer?: string;
+};
 
 type Props = {
-  data: ClosingData;
+  data?: ClosingStatementData;
 };
 
 export default function ClosingStatement({ data }: Props) {
+  const title = data?.title ?? "Yatırımdan Önce Netlik";
+  const subtitle =
+    data?.subtitle ??
+    "Yatırım kararını etkileyen teknik varsayımları, yatırım komitesi seviyesinde okunabilir ve doğrulanabilir bir yapıya dönüştürürüz.";
+
+  const items =
+    data?.items ?? ["Tam Bağımsızlık", "Teknik Filtreleme", "Banka finansmanına uygunluk odağı"];
+
+  const disclaimer =
+    data?.disclaimer ??
+    "Bu içerik teknik ve ticari değerlendirme rehberidir; resmî onay veya yatırım getirisi taahhüdü içermez.";
+
   return (
-    <section className="w-full bg-[#0F2E2C] relative overflow-hidden py-20 lg:py-28">
-      {/* Grid Texture Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none grid-texture" />
-
-      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full relative z-10">
-
-        {/* Transition Bridge */}
-        <div className="mb-16">
-          <div className="h-px w-full bg-white/10" />
-          <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
+    <section className="relative w-full bg-white py-20 lg:py-24">
+      <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
+        <div className="mb-12 flex flex-col items-center">
+          <div className="h-px w-full bg-[#E0E0E0]" />
+          <div className="mt-3 h-[3px] w-16 bg-[#FFCB00]" />
         </div>
 
-        {/* Big Motto */}
-        <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight mb-16 text-center leading-tight">
-          {data.motto}
-        </h2>
-
-        {/* 3 Principles — Interactive */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-          {data.principles.map((principle, idx) => (
-            <div key={idx} className="group flex flex-col items-center text-center cursor-default">
-              <div className="h-[3px] w-12 bg-[#FFCB00] mb-5 rounded-sm origin-center transition-transform duration-300 group-hover:scale-x-125" />
-              <span className="w-10 h-10 rounded-full border-2 border-[#FFCB00]/40 text-[#FFCB00] text-sm font-bold flex items-center justify-center mb-4 transition-colors duration-300 group-hover:border-[#FFCB00] group-hover:bg-[#FFCB00]/10">
-                {idx + 1}
-              </span>
-              <p className="text-lg font-medium text-white/70 leading-snug max-w-[240px] transition-colors duration-300 group-hover:text-[#FFCB00]">
-                {principle}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Legal Disclaimer */}
-        <div className="mt-20 pt-8 border-t border-white/10">
-          <p className="text-sm text-white/50 italic max-w-2xl mx-auto leading-relaxed text-center">
-            {data.legal}
+        <header className="mx-auto max-w-4xl text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] text-[#0B1F1E]">
+            {title}
+          </h2>
+          <p className="mt-6 text-base md:text-lg leading-relaxed text-[#475467]">
+            {subtitle}
           </p>
+        </header>
+
+        <div className="mt-14">
+          <div className="mx-auto grid w-fit grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
+            {items.slice(0, 3).map((label, idx) => (
+              <div
+                key={`${label}-${idx}`}
+                className="w-full rounded-lg border border-[#E5E7EB] bg-white px-6 py-10 text-center"
+              >
+                <div className="mx-auto h-[2px] w-12 bg-[#FFCB00]" />
+                <p className="mt-6 text-sm md:text-base font-semibold tracking-tight text-[#0B1F1E] leading-snug">
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
+        <footer className="mx-auto mt-16 max-w-4xl border-t border-[#E5E7EB] pt-8 text-center">
+          <p className="text-xs md:text-sm leading-relaxed text-[#667085]">
+            {disclaimer}
+          </p>
+        </footer>
       </div>
     </section>
   );

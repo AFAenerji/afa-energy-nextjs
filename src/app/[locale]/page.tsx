@@ -3,9 +3,7 @@ import { getHomepageDictionary } from '@/lib/getHomepageDictionary';
 import HomepageRenderer from '@/components/sections/HomepageRenderer';
 
 interface HomePageProps {
-  params: Promise<{
-    locale: Locale;
-  }>;
+  params: Promise<{ locale: Locale }>;
 }
 
 export default async function HomePage({ params }: HomePageProps) {
@@ -18,5 +16,5 @@ export default async function HomePage({ params }: HomePageProps) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'tr' }];
+  return [{ locale: 'tr' }, { locale: 'en' }, { locale: 'ro' }];
 }

@@ -34,8 +34,6 @@
 
   /* Geometry & Standards */
   --radius: 4px;
-  --line-weight: 1px;
-  --line-weight-bold: 1.5px;
   --container: 1200px;
 
   /* Grid System */
@@ -56,21 +54,21 @@
   /* Breakpoints */
   --bp-tablet: 1024px;
   --bp-mobile: 768px;
-  --bp-small: 960px;
 }
 
-/* 2. MOTION-FREE POLICY */
-*,
-*::before,
-*::after {
-  transition-property: none !important;
-  animation: none !important;
-  scroll-behavior: auto !important;
+/* 2. MOTION — Respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-/* 2b. SMOOTH SCROLL — Premium section transitions */
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 
 /* 3. HERO TYPOGRAPHY */
@@ -101,9 +99,35 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
-  color: var(--text-primary);
   letter-spacing: -0.02em;
   margin: 0;
+}
+
+/* Scoped light-section typography colors */
+.page-light h1,
+.page-light h2,
+.page-light h3,
+.page-light h4,
+.page-light h5,
+.page-light h6 {
+  color: var(--text-primary);
+}
+
+.page-light p {
+  color: var(--text-body);
+}
+
+/* Dark section: force white text hierarchy */
+.dark-section {
+  color: #FFFFFF;
+}
+.dark-section h1,
+.dark-section h2,
+.dark-section h3 {
+  color: #FFFFFF !important;
+}
+.dark-section p {
+  color: rgba(255, 255, 255, 0.80) !important;
 }
 
 /* 4. LAYOUT */
@@ -113,8 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--space-lg);
 }
 
-/* 5. GRID — Override for specific homepage sections */
-.grid {
+/* 5. GRID — Namespaced to avoid Tailwind conflicts */
+.afa-grid {
   display: grid;
   gap: var(--grid-gap);
   grid-template-columns: repeat(var(--grid-columns), 1fr);
@@ -342,7 +366,7 @@ input:focus, select:focus, textarea:focus {
 /* 16. GRID TEXTURE — Closing section overlay */
 .grid-texture {
   background-image:
-    linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
