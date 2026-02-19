@@ -8,16 +8,22 @@ const dictionaries: Record<Locale, () => Promise<HomepageDictionary>> = {
 };
 
 export async function getHomepageDictionary(locale: Locale): Promise<HomepageDictionary> {
-  const loader = dictionaries[locale];
-  if (!loader) {
-    throw new Error(`[Governance] No dictionary loader for locale: ${locale}`);
+  try {
+    const loader = dictionaries[locale];
+    if (!loader) {
+      throw new Error(`[Governance] No dictionary loader for locale: ${locale}`);
+    }
+
+    const json = await loader();
+
+    if (!json.meta?.version) {
+      throw new Error(`[Governance] Missing meta.version in dictionary for locale: ${locale}`);
+    }
+
+    return json;
+  } catch (error) {
+    console.warn(`[Governance] Failed to load dictionary for locale "${locale}", falling back to "tr".`, error);
+    const fallback = await dictionaries.tr();
+    return fallback;
   }
-
-  const json = await loader();
-
-  if (!json.meta?.version) {
-    throw new Error(`[Governance] Missing meta.version in dictionary for locale: ${locale}`);
-  }
-
-  return json;
 }

@@ -119,18 +119,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Dark section: permanent contrast seal */
 .dark-section {
-  background-color: #0F2E2C !important;
-  color: #FFFFFF !important;
+  background-color: var(--green-deep);
+  color: #FFFFFF;
 }
 .dark-section h1,
 .dark-section h2,
 .dark-section h3,
 .dark-section h4,
-.dark-section p {
+.dark-section h5,
+.dark-section h6 {
   color: #FFFFFF !important;
 }
 .dark-section p {
   color: rgba(255, 255, 255, 0.85) !important;
+}
+.dark-section .text-muted {
+  color: rgba(255, 255, 255, 0.60) !important;
 }
 
 /* 4. LAYOUT */

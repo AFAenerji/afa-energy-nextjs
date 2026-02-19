@@ -16,7 +16,7 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section id="experience-metrics" className="w-full bg-[#0F2E2C] py-20 lg:py-24 dark-section">
+    <section id="experience-metrics" className="w-full dark-section bg-[#0F2E2C] py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
@@ -31,7 +31,7 @@ export default function ExperienceMetrics({ data }: Props) {
         </p>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-4 lg:gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 relative">
           {data.items.map((item, index) => (
             <div
               key={index}
@@ -51,7 +51,7 @@ export default function ExperienceMetrics({ data }: Props) {
                 </span>
               </div>
 
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/85">
+              <p className="mt-4 text-base font-medium leading-relaxed" style={{ color: "rgba(255,255,255,0.85)" }}>
                 {item.label}
               </p>
             </div>
