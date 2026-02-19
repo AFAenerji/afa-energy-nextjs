@@ -8,8 +8,8 @@
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
     { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
-    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true },
-    { "id": "technical-faq", "order": 75, "component": "TechnicalFAQ", "dataKey": "technicalKnowledgeCenter", "enabled": true }
+    { "id": "technical-faq", "order": 68, "component": "TechnicalFAQ", "dataKey": "technicalKnowledgeCenter", "enabled": true },
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
     "hero": {

@@ -388,7 +388,30 @@ input:focus, select:focus, textarea:focus {
   display: none;
 }
 
-/* 16. GRID TEXTURE — Closing section overlay */
+/* 16. KNOWLEDGE CENTER — Component token classes */
+.afa-term-link {
+  color: var(--yellow-accent);
+}
+.afa-term-link:hover {
+  color: var(--yellow-hover);
+}
+.afa-group-heading {
+  color: var(--yellow-accent);
+}
+.afa-toggle-label {
+  color: var(--yellow-accent);
+}
+.afa-bridge-accent {
+  background: var(--yellow-accent);
+}
+.afa-backlink {
+  color: var(--white-50);
+}
+.afa-backlink:hover {
+  color: var(--yellow-accent);
+}
+
+/* 17. GRID TEXTURE — Closing section overlay */
 .grid-texture {
   background-image:
     linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),

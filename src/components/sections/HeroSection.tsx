@@ -19,7 +19,7 @@ export default function HeroSection({ data, locale }: Props) {
         <div className="relative h-[400px] w-full">
           <Image
             src="/images/hero-main_1200_1500_mobile.jpg"
-            alt="AFA Energy hero"
+            alt="Renewable energy infrastructure in Romania — AFA Energy Romania independent technical advisory"
             fill
             priority
             sizes="100vw"
@@ -65,7 +65,7 @@ export default function HeroSection({ data, locale }: Props) {
       <div className="relative hidden lg:block h-[600px] w-full">
         <Image
           src="/images/hero-main_2560_1100.jpg"
-          alt="AFA Energy hero"
+          alt="Renewable energy infrastructure in Romania — AFA Energy Romania independent technical advisory"
           fill
           priority
           sizes="100vw"

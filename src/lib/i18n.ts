@@ -23,6 +23,7 @@ export interface Translations {
   developerArea: string;
   home: string;
   faq: string;
+  knowledgeCenter: string;
   reachUs: string;
   
   // Slogans (from AFA Energy Guide v1.2)
@@ -70,6 +71,7 @@ export const translations: Record<Locale, Translations> = {
     developerArea: 'Developer Area',
     home: 'Home',
     faq: 'FAQ',
+    knowledgeCenter: 'Knowledge Center',
     reachUs: 'Reach Us',
     motto: 'Clarity Before Investment.',
     valueSlogan: 'Technical Accuracy. Investor Discipline.',
@@ -107,6 +109,7 @@ export const translations: Record<Locale, Translations> = {
     developerArea: 'Zona Dezvoltatorului',
     home: 'Acasă',
     faq: 'Întrebări frecvente',
+    knowledgeCenter: 'Centrul de Cunoștințe',
     reachUs: 'Contactați-ne',
     motto: 'Claritate Înainte de Investiție.',
     valueSlogan: 'Acuratețe Tehnică. Disciplină de Investitor.',
@@ -145,6 +148,7 @@ export const translations: Record<Locale, Translations> = {
     developerArea: 'Geliştirici Alanı',
     home: 'Ana Sayfa',
     faq: 'Sıkça Sorulan Sorular',
+    knowledgeCenter: 'Bilgi Merkezi',
     reachUs: 'Bize Ulaşın',
     
     // Slogans (Official AFA Energy Guide v1.2)

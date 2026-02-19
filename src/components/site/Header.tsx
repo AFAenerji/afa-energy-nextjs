@@ -96,7 +96,7 @@ export default function Header({ locale }: HeaderProps) {
                   {['tr', 'en', 'ro'].map((lang) => (
                     <button
                       key={lang}
-                      onClick={() => handleNavigation(`/${lang}`)}
+                      onClick={() => router.push(`/${lang}`)}
                       className={`px-3 py-1 text-sm font-medium rounded-[2px] transition-colors duration-200 ${
                         locale === lang 
                           ? 'bg-[#18625F] text-white' 

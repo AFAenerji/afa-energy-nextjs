@@ -16,7 +16,7 @@ export default function Footer({ locale }: FooterProps) {
     { key: 'services', path: '/services' },
     { key: 'cases', path: '/cases' },
     { key: 'about', path: '/about' },
-    { key: 'faq', path: '/faq' },
+    { key: 'knowledgeCenter', path: '/bilgi-merkezi' },
     { key: 'reachUs', path: '/contact' },
   ];
 

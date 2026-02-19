@@ -1,111 +1,149 @@
+'use client';
+
+import { useId, useState, useCallback, useMemo } from 'react';
 import type { TechnicalKnowledgeCenterData } from '@/types/homepage';
-import type { Locale } from '@/lib/i18n';
+import { slugify } from '@/lib/slugify';
 import TechnicalGlossary from './TechnicalGlossary';
 import FAQSchema from '@/components/seo/FAQSchema';
 import GlossarySchema from '@/components/seo/GlossarySchema';
 
-const GLOSSARY_TERMS = [
+/* ── Glossary terms eligible for cross-linking ── */
+const HIGHLIGHT_TERMS = [
+  'Grid Connection', 'Pre-TDD',
   'ATR', 'DSCR', 'Curtailment', 'ANRE', 'CfD', 'PPA',
-  'Pre-TDD', 'Prosumer', 'Bankability', 'Grid Connection',
-];
+  'Prosumer', 'Bankability',
+] as const;
 
-function slugify(text: string): string {
-  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-}
+/* Longest-match-first regex: multi-word / hyphenated terms before short ones */
+const TERM_REGEX = new RegExp(
+  `(${HIGHLIGHT_TERMS.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
+  'g',
+);
 
+/* ── Helpers ── */
 function faqId(gIdx: number, iIdx: number): string {
   return `faq-${gIdx}-${iIdx}`;
 }
 
-function linkTermsToGlossary(text: string): React.ReactNode[] {
-  const regex = new RegExp(`\\b(${GLOSSARY_TERMS.join('|')})\\b`, 'g');
-  const parts = text.split(regex);
-  return parts.map((part, i) =>
-    GLOSSARY_TERMS.includes(part) ? (
-      <a
-        key={i}
-        href={`#${slugify(part)}`}
-        className="text-[#FFCB00] font-semibold hover:underline"
-      >
-        {part}
-      </a>
-    ) : (
-      <span key={i}>{part}</span>
-    ),
-  );
+function highlightAndLink(text: string): React.ReactNode[] {
+  const parts = text.split(TERM_REGEX);
+  return parts.map((part, i) => {
+    if ((HIGHLIGHT_TERMS as readonly string[]).includes(part)) {
+      return (
+        <a
+          key={i}
+          href={`#${slugify(part)}`}
+          className="afa-term-link font-semibold hover:underline"
+        >
+          {part}
+        </a>
+      );
+    }
+    return part.length > 0 ? <span key={i}>{part}</span> : null;
+  });
 }
 
+/* ── Types ── */
 type Props = {
   data: TechnicalKnowledgeCenterData;
-  locale?: Locale | string;
+  locale?: string;
 };
 
+/* ── Component ── */
 export default function TechnicalFAQ({ data, locale = 'tr' }: Props) {
+  const baseId = useId();
+  const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
+
+  const toggleItem = useCallback((key: string) => {
+    setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
+  }, []);
+
+  const backLinks = useMemo(() => buildGlossaryBackLinks(data), [data]);
+
   if (!data?.groups?.length) return null;
 
   return (
     <>
+      {/* JSON-LD: FAQPage + DefinedTermSet */}
       <FAQSchema groups={data.groups} />
       {data.glossary && data.glossary.length > 0 && (
-        <GlossarySchema terms={data.glossary} locale={String(locale)} />
+        <GlossarySchema terms={data.glossary} locale={locale} />
       )}
 
       <section
         id="knowledge-center"
-        className="w-full dark-section bg-[#0F2E2C] py-20 lg:py-24"
+        aria-label="Teknik Bilgi Merkezi"
+        className="w-full dark-section py-20 lg:py-24"
       >
-        <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
-          {/* Bridge */}
+        <div className="afa-container">
+          {/* Bridge accent */}
           <div className="mb-12" aria-hidden="true">
             <div className="h-px w-full bg-white/10" />
-            <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
+            <div className="mt-4 h-[3px] w-16 rounded-sm afa-bridge-accent" />
           </div>
 
           {/* Title */}
           <header className="mb-14 text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
               {data.title}
             </h2>
             {data.subtitle && (
-              <p className="mt-4 text-base md:text-lg text-white/70 max-w-3xl">
+              <p className="mt-4 text-base md:text-lg afa-text-secondary max-w-3xl">
                 {data.subtitle}
               </p>
             )}
           </header>
 
-          {/* FAQ Groups — <details>/<summary> for SSR-friendly accordion */}
+          {/* FAQ Groups */}
           <div className="space-y-12">
             {data.groups.map((group, gIdx) => (
-              <div key={gIdx} id={`faq-group-${gIdx}`}>
-                <h3 className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-[#FFCB00]">
+              <div key={gIdx} id={`faq-group-${gIdx}`} role="group" aria-label={group.name}>
+                <h3 className="mb-6 text-sm font-bold uppercase tracking-[0.25em] afa-group-heading">
                   {group.name}
                 </h3>
-                <div className="space-y-3">
-                  {group.items.map((item, iIdx) => (
-                    <details
-                      key={`${gIdx}-${iIdx}`}
-                      id={faqId(gIdx, iIdx)}
-                      className="group rounded-lg border border-white/10 bg-white/[0.03] scroll-mt-24"
-                    >
-                      <summary className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.04] list-none [&::-webkit-details-marker]:hidden">
-                        <span className="text-sm md:text-base font-medium text-white/90">
-                          {linkTermsToGlossary(item.question)}
-                        </span>
-                        <span
-                          className="shrink-0 text-xs font-semibold text-[#FFCB00] transition-transform group-open:rotate-45"
-                          aria-hidden="true"
+                <ul className="space-y-3 list-none p-0 m-0" role="list">
+                  {group.items.map((item, iIdx) => {
+                    const key = `${gIdx}-${iIdx}`;
+                    const isOpen = !!openItems[key];
+                    const panelId = `${baseId}-panel-${key}`;
+                    const buttonId = `${baseId}-btn-${key}`;
+
+                    return (
+                      <li
+                        key={key}
+                        id={faqId(gIdx, iIdx)}
+                        className="rounded-lg border border-white/10 bg-white/[0.03] scroll-mt-24"
+                      >
+                        <button
+                          id={buttonId}
+                          type="button"
+                          onClick={() => toggleItem(key)}
+                          aria-expanded={isOpen}
+                          aria-controls={panelId}
+                          className="afa-faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.04] focus-visible:ring-2 focus-visible:ring-[var(--yellow-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--green-deep)] rounded-lg"
                         >
-                          +
-                        </span>
-                      </summary>
-                      <div className="border-t border-white/10 px-6 py-5">
-                        <p className="text-sm md:text-base leading-relaxed text-white/75">
-                          {linkTermsToGlossary(item.answer)}
-                        </p>
-                      </div>
-                    </details>
-                  ))}
-                </div>
+                          <span className="text-sm md:text-base font-medium afa-text-primary">
+                            {highlightAndLink(item.question)}
+                          </span>
+                          <span className="shrink-0 text-xs font-semibold afa-toggle-label">
+                            {isOpen ? 'Kapat' : 'Aç'}
+                          </span>
+                        </button>
+
+                        <div
+                          id={panelId}
+                          role="region"
+                          aria-labelledby={buttonId}
+                          className={isOpen ? 'border-t border-white/10 px-6 py-5' : 'sr-only'}
+                        >
+                          <p className="text-sm md:text-base leading-relaxed afa-text-secondary">
+                            {highlightAndLink(item.answer)}
+                          </p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             ))}
           </div>
@@ -114,8 +152,8 @@ export default function TechnicalFAQ({ data, locale = 'tr' }: Props) {
           {data.glossary && data.glossary.length > 0 && (
             <TechnicalGlossary
               terms={data.glossary}
-              locale={String(locale)}
-              faqBackLinks={buildGlossaryBackLinks(data)}
+              locale={locale}
+              faqBackLinks={backLinks}
             />
           )}
         </div>
@@ -124,6 +162,7 @@ export default function TechnicalFAQ({ data, locale = 'tr' }: Props) {
   );
 }
 
+/* ── Build reverse map: glossary term → FAQ items that mention it ── */
 function buildGlossaryBackLinks(
   data: TechnicalKnowledgeCenterData,
 ): Record<string, { id: string; label: string }[]> {
@@ -132,7 +171,7 @@ function buildGlossaryBackLinks(
   data.groups.forEach((group, gIdx) => {
     group.items.forEach((item, iIdx) => {
       const text = `${item.question} ${item.answer}`;
-      for (const term of GLOSSARY_TERMS) {
+      for (const term of HIGHLIGHT_TERMS) {
         if (text.includes(term)) {
           if (!map[term]) map[term] = [];
           const id = faqId(gIdx, iIdx);

@@ -99,10 +99,10 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
                   {t('technicalServices')}
                 </button>
                 <button
-                  onClick={() => handleNavigation('/services/faq')}
+                  onClick={() => handleNavigation('/bilgi-merkezi')}
                   className="text-white/90 hover:opacity-100 text-left w-full"
                 >
-                  {t('faq')}
+                  {t('knowledgeCenter')}
                 </button>
               </div>
             )}

@@ -63,12 +63,19 @@ export default async function LocaleLayout({
     : defaultLocale;
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header locale={locale} />
-      <main className="flex-grow w-full pt-[72px]">
-        {children}
-      </main>
-      <Footer locale={locale} />
-    </div>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang="${locale}";`,
+        }}
+      />
+      <div className="min-h-screen flex flex-col">
+        <Header locale={locale} />
+        <main className="flex-grow w-full pt-[72px]">
+          {children}
+        </main>
+        <Footer locale={locale} />
+      </div>
+    </>
   );
 }

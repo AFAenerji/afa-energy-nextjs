@@ -8,6 +8,7 @@
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
     { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
+    { "id": "technical-faq", "order": 68, "component": "TechnicalFAQ", "dataKey": "technicalKnowledgeCenter", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
@@ -72,6 +73,58 @@
       "motto": "Clarity Before Investment.",
       "principles": ["Full Independence.", "Technical Filtering.", "Focus on Bankability."],
       "legal": "This content is a technical and commercial assessment guide; it does not constitute official approval or investment return guarantees."
+    },
+    "technicalKnowledgeCenter": {
+      "title": "Technical Knowledge Center (FAQ & Glossary)",
+      "subtitle": "Frequently asked questions for investors, developers, and technical decision-makers.",
+      "groups": [
+        {
+          "name": "Investor Questions",
+          "items": [
+            { "question": "What is an ATR (Aviz Tehnic de Racordare) and why is it important?", "answer": "ATR is the mandatory technical approval for grid connection in Romania. It determines the project's compatibility with grid capacity and connection conditions. Without ATR, construction permits cannot be obtained and bank financing cannot be secured." },
+            { "question": "How does an independent technical assessment (Pre-TDD) affect my investment decision?", "answer": "Pre-TDD makes the project's technical risks visible before the investment decision. It independently verifies critical parameters such as grid capacity, connection cost, curtailment risk, and regulatory compliance." },
+            { "question": "What is DSCR (Debt Service Coverage Ratio) and why do banks care?", "answer": "DSCR is the financial ratio showing a project's debt repayment capacity. Banks typically require a minimum 1.20x DSCR. Accurate assessment of technical risks directly affects the reliability of DSCR projections." },
+            { "question": "What is the minimum capital requirement for renewable energy investment in Romania?", "answer": "The minimum capital requirement varies by project size and technology. Generally, 20-30% of total investment cost is expected as equity. AFA supports your project's financial structure with technical findings." }
+          ]
+        },
+        {
+          "name": "Developer Questions",
+          "items": [
+            { "question": "How long does the ATR application process take?", "answer": "The ATR application process typically takes between 30-90 business days. Duration depends on the grid operator's workload, technical complexity of the connection point, and completeness of the application file." },
+            { "question": "How is curtailment (grid curtailment) risk assessed?", "answer": "Curtailment risk is assessed by analyzing the existing load at the connection point, planned capacity increases, and the grid infrastructure's evacuation capacity. AFA integrates this risk into the investment model." },
+            { "question": "What is the difference between prosumer status and large-scale producer?", "answer": "A prosumer is a small-scale producer (typically <100 kW) that generates energy for own consumption and sells the surplus to the grid. Large-scale producers trade energy through direct sales or PPA." },
+            { "question": "What factors affect grid connection cost?", "answer": "Key factors affecting connection cost include: distance to connection point, required transformer capacity, grid reinforcement needs, and line construction costs. AFA analyzes these costs in detail before investment." }
+          ]
+        },
+        {
+          "name": "Market & Regulation",
+          "items": [
+            { "question": "What is ANRE's role?", "answer": "ANRE (Autoritatea Națională de Reglementare în domeniul Energiei) is Romania's energy regulatory authority. It has jurisdiction over licensing, tariff setting, market rules, and consumer protection." },
+            { "question": "How does the CfD (Contract for Difference) mechanism work in Romania?", "answer": "CfD is a long-term contract mechanism guaranteeing a fixed reference price to the producer. If the market price falls below the reference price, the difference is paid to the producer; if above, the producer returns the difference." },
+            { "question": "What is the difference between PPA (Power Purchase Agreement) and CfD?", "answer": "PPA is a bilateral energy sales contract between producer and buyer. CfD is a state-backed price guarantee mechanism. PPA carries private sector risk, while CfD offers state guarantee." }
+          ]
+        },
+        {
+          "name": "Independence & Methodology",
+          "items": [
+            { "question": "Why does AFA emphasize 'independent' advisory?", "answer": "AFA is not a project developer, EPC contractor, or equipment supplier. It has no commercial relationship with any seller side. This structural independence guarantees that technical assessments are free from conflicts of interest." },
+            { "question": "What is AFA's technical assessment methodology based on?", "answer": "AFA's methodology is based on ANRE standards, grid constraint analysis algorithms, and international bankability criteria. Each assessment includes technical data verification and independent risk scoring." },
+            { "question": "What standards are technical assessment reports prepared to?", "answer": "Reports are prepared in formats compliant with international bank financing standards (IFC Performance Standards, Equator Principles). Technical findings, risk matrix, and recommendations are presented in a structured manner." }
+          ]
+        }
+      ],
+      "glossary": [
+        { "term": "ATR", "definition": "Aviz Tehnic de Racordare — Mandatory technical approval document for grid connection in Romania." },
+        { "term": "DSCR", "definition": "Debt Service Coverage Ratio — Financial ratio showing a project's debt repayment capacity." },
+        { "term": "Curtailment", "definition": "Grid curtailment — Limitation of production due to insufficient grid capacity." },
+        { "term": "ANRE", "definition": "Autoritatea Națională de Reglementare în domeniul Energiei — Romania's energy regulatory authority." },
+        { "term": "CfD", "definition": "Contract for Difference — Long-term contract mechanism guaranteeing a fixed reference price." },
+        { "term": "PPA", "definition": "Power Purchase Agreement — Bilateral energy sales contract between producer and buyer." },
+        { "term": "Pre-TDD", "definition": "Pre-Technical Due Diligence — Independent preliminary technical assessment before investment decision." },
+        { "term": "Prosumer", "definition": "Small-scale producer that generates energy for own consumption and sells surplus to the grid." },
+        { "term": "Bankability", "definition": "A project's capacity to meet bank financing criteria." },
+        { "term": "Grid Connection", "definition": "Physical and technical connection of an energy production facility to the national electricity grid." }
+      ]
     }
   }
 }

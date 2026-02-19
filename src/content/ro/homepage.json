@@ -8,6 +8,7 @@
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
     { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
+    { "id": "technical-faq", "order": 68, "component": "TechnicalFAQ", "dataKey": "technicalKnowledgeCenter", "enabled": true },
     { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
   ],
   "data": {
@@ -72,6 +73,58 @@
       "motto": "Claritate Înainte de Investiție.",
       "principles": ["Independență Totală.", "Filtrare Tehnică.", "Focus pe Bancabilitate."],
       "legal": "Acest conținut este un ghid de evaluare tehnică și comercială; nu constituie aprobare oficială sau garanții de rentabilitate a investiției."
+    },
+    "technicalKnowledgeCenter": {
+      "title": "Centrul de Cunoștințe Tehnice (FAQ și Glosar)",
+      "subtitle": "Întrebări frecvente pentru investitori, dezvoltatori și factori de decizie tehnici.",
+      "groups": [
+        {
+          "name": "Întrebări Investitori",
+          "items": [
+            { "question": "Ce este ATR (Aviz Tehnic de Racordare) și de ce este important?", "answer": "ATR este aprobarea tehnică obligatorie pentru conectarea la rețea în România. Determină compatibilitatea proiectului cu capacitatea rețelei și condițiile de conectare. Fără ATR, nu se pot obține autorizații de construcție și nu se poate asigura finanțarea bancară." },
+            { "question": "Cum afectează o evaluare tehnică independentă (Pre-TDD) decizia mea de investiție?", "answer": "Pre-TDD face vizibile riscurile tehnice ale proiectului înainte de decizia de investiție. Verifică independent parametri critici precum capacitatea rețelei, costul de conectare, riscul de curtailment și conformitatea regulatorie." },
+            { "question": "Ce este DSCR (Debt Service Coverage Ratio) și de ce le pasă băncilor?", "answer": "DSCR este raportul financiar care arată capacitatea de rambursare a datoriei unui proiect. Băncile solicită de obicei un DSCR minim de 1.20x. Evaluarea corectă a riscurilor tehnice afectează direct fiabilitatea proiecțiilor DSCR." },
+            { "question": "Care este cerința minimă de capital pentru investiții în energie regenerabilă în România?", "answer": "Cerința minimă de capital variază în funcție de dimensiunea proiectului și tehnologie. În general, se așteaptă ca 20-30% din costul total al investiției să fie capital propriu. AFA susține structura financiară a proiectului cu constatări tehnice." }
+          ]
+        },
+        {
+          "name": "Întrebări Dezvoltatori",
+          "items": [
+            { "question": "Cât durează procesul de solicitare ATR?", "answer": "Procesul de solicitare ATR durează de obicei între 30-90 de zile lucrătoare. Durata depinde de volumul de lucru al operatorului de rețea, complexitatea tehnică a punctului de conectare și completitudinea dosarului de solicitare." },
+            { "question": "Cum se evaluează riscul de curtailment (limitare rețea)?", "answer": "Riscul de curtailment se evaluează prin analiza sarcinii existente la punctul de conectare, creșterile de capacitate planificate și capacitatea de evacuare a infrastructurii rețelei. AFA integrează acest risc în modelul de investiție." },
+            { "question": "Care este diferența dintre statutul de prosumer și producătorul la scară mare?", "answer": "Un prosumer este un producător la scară mică (de obicei <100 kW) care generează energie pentru consum propriu și vinde surplusul în rețea. Producătorii la scară mare comercializează energia prin vânzări directe sau PPA." },
+            { "question": "Ce factori afectează costul de conectare la rețea?", "answer": "Factorii principali care afectează costul de conectare includ: distanța până la punctul de conectare, capacitatea necesară a transformatorului, nevoile de întărire a rețelei și costurile de construcție a liniei. AFA analizează aceste costuri în detaliu înainte de investiție." }
+          ]
+        },
+        {
+          "name": "Piață și Reglementare",
+          "items": [
+            { "question": "Care este rolul ANRE?", "answer": "ANRE (Autoritatea Națională de Reglementare în domeniul Energiei) este autoritatea de reglementare energetică a României. Are jurisdicție asupra licențierii, stabilirii tarifelor, regulilor de piață și protecției consumatorilor." },
+            { "question": "Cum funcționează mecanismul CfD (Contract for Difference) în România?", "answer": "CfD este un mecanism de contract pe termen lung care garantează producătorului un preț de referință fix. Dacă prețul pieței scade sub prețul de referință, diferența este plătită producătorului; dacă este mai mare, producătorul returnează diferența." },
+            { "question": "Care este diferența dintre PPA (Power Purchase Agreement) și CfD?", "answer": "PPA este un contract bilateral de vânzare a energiei între producător și cumpărător. CfD este un mecanism de garantare a prețului susținut de stat. PPA implică risc din sectorul privat, în timp ce CfD oferă garanție de stat." }
+          ]
+        },
+        {
+          "name": "Independență și Metodologie",
+          "items": [
+            { "question": "De ce subliniază AFA consultanța 'independentă'?", "answer": "AFA nu este dezvoltator de proiecte, contractor EPC sau furnizor de echipamente. Nu are nicio relație comercială cu nicio parte vânzătoare. Această independență structurală garantează că evaluările tehnice sunt libere de conflicte de interese." },
+            { "question": "Pe ce se bazează metodologia de evaluare tehnică a AFA?", "answer": "Metodologia AFA se bazează pe standardele ANRE, algoritmii de analiză a constrângerilor rețelei și criteriile internaționale de bancabilitate. Fiecare evaluare include verificarea datelor tehnice și scorarea independentă a riscurilor." },
+            { "question": "La ce standarde sunt pregătite rapoartele de evaluare tehnică?", "answer": "Rapoartele sunt pregătite în formate conforme cu standardele internaționale de finanțare bancară (IFC Performance Standards, Equator Principles). Constatările tehnice, matricea de risc și recomandările sunt prezentate într-o manieră structurată." }
+          ]
+        }
+      ],
+      "glossary": [
+        { "term": "ATR", "definition": "Aviz Tehnic de Racordare — Document de aprobare tehnică obligatoriu pentru conectarea la rețea în România." },
+        { "term": "DSCR", "definition": "Debt Service Coverage Ratio — Raport financiar care arată capacitatea de rambursare a datoriei unui proiect." },
+        { "term": "Curtailment", "definition": "Limitare rețea — Limitarea producției din cauza capacității insuficiente a rețelei." },
+        { "term": "ANRE", "definition": "Autoritatea Națională de Reglementare în domeniul Energiei — Autoritatea de reglementare energetică a României." },
+        { "term": "CfD", "definition": "Contract for Difference — Mecanism de contract pe termen lung care garantează un preț de referință fix." },
+        { "term": "PPA", "definition": "Power Purchase Agreement — Contract bilateral de vânzare a energiei între producător și cumpărător." },
+        { "term": "Pre-TDD", "definition": "Pre-Technical Due Diligence — Evaluare tehnică preliminară independentă înainte de decizia de investiție." },
+        { "term": "Prosumer", "definition": "Producător la scară mică care generează energie pentru consum propriu și vinde surplusul în rețea." },
+        { "term": "Bankability", "definition": "Capacitatea unui proiect de a îndeplini criteriile de finanțare bancară." },
+        { "term": "Grid Connection", "definition": "Conectarea fizică și tehnică a unei instalații de producție a energiei la rețeaua electrică națională." }
+      ]
     }
   }
 }
