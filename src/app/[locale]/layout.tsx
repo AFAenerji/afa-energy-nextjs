@@ -1,60 +1,47 @@
 import type { Metadata } from 'next';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
+import { getMetadata } from '@/lib/dictionaries/metadata';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.ro';
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  
-  const translations = {
-    tr: {
-      title: 'AFA Energy Romania | Yenilikçi Enerji Çözümleri',
-      description: 'Romanya yenilenebilir enerji yatırımları için bağımsız teknik danışmanlık ve yatırım kararı desteği'
-    },
-    en: {
-      title: 'AFA Energy Romania | Innovative Energy Solutions', 
-      description: 'Independent technical advisory and investment decision support for renewable energy investments in Romania'
-    },
-    ro: {
-      title: 'AFA Energy Romania | Soluții Energetice Inovatoare',
-      description: 'Consultanță tehnică independentă și suport pentru decizii de investiții în energie regenerabilă în România'
-    }
-  };
-
-  const metadata = translations[locale as keyof typeof translations] || translations.tr;
+  const validLocale = locales.includes(locale as Locale) ? (locale as Locale) : defaultLocale;
+  const meta = getMetadata(validLocale);
 
   return {
-    title: metadata.title,
-    description: metadata.description,
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
     openGraph: {
-      title: metadata.title,
-      description: metadata.description,
-      locale: locale,
+      title: meta.title,
+      description: meta.description,
+      locale: validLocale,
       type: 'website',
-      url: `https://afaenergy.ro/${locale}`,
+      url: `${SITE_URL}/${validLocale}`,
       siteName: 'AFA Energy Romania',
       images: [
         {
-          url: 'https://afaenergy.ro/images/og-image.jpg',
+          url: `${SITE_URL}/images/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: 'AFA Energy Romania - Innovative Energy Solutions',
+          alt: meta.title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: metadata.title,
-      description: metadata.description,
-      images: ['https://afaenergy.ro/images/og-image.jpg'],
+      title: meta.title,
+      description: meta.description,
+      images: [`${SITE_URL}/images/og-image.jpg`],
     },
     alternates: {
-      canonical: `https://afaenergy.ro/${locale}`,
-      languages: {
-        'tr': 'https://afaenergy.ro/tr',
-        'en': 'https://afaenergy.ro/en', 
-        'ro': 'https://afaenergy.ro/ro',
-      },
+      canonical: `${SITE_URL}/${validLocale}`,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${SITE_URL}/${l}`])
+      ),
     },
   };
 }

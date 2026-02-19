@@ -138,10 +138,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 .dark-section p {
-  color: var(--white-85);
+  color: inherit;
 }
 .dark-section .text-muted {
   color: var(--white-60);
+}
+
+/* Dark section helper classes */
+.afa-text-primary {
+  color: var(--white-85);
+}
+.afa-text-secondary {
+  color: var(--white-70);
+}
+.afa-text-muted {
+  color: var(--white-50);
 }
 
 /* 4. LAYOUT */
