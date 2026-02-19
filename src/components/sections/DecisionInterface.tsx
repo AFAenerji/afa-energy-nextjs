@@ -12,14 +12,9 @@ type Props = {
 export default function DecisionInterface({ data, locale }: Props) {
   const [selectedId, setSelectedId] = useState<string>("investor");
 
-  const ctaText =
-    typeof data.cta === "object"
-      ? data.cta[selectedId as keyof typeof data.cta] || data.cta.default
-      : data.cta;
-
   return (
     <section className="w-full bg-white py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
 
         {/* Signature Bar */}
         <div className="w-16 h-[3px] bg-[#FFCB00] mb-8 rounded-sm mx-auto" />
@@ -36,16 +31,18 @@ export default function DecisionInterface({ data, locale }: Props) {
           {data.cards.map((card) => {
             const isInvestor = card.type === "investor";
             const isSelected = selectedId === card.type;
+            const cardCtaText =
+              typeof data.cta === "object"
+                ? data.cta[card.type as keyof typeof data.cta] || data.cta.default
+                : data.cta;
 
             return (
-              <button
+              <div
                 key={card.type}
-                type="button"
                 onClick={() => setSelectedId(card.type)}
                 className={`
                   relative text-left p-8 rounded-lg flex flex-col
                   transition-all duration-300 cursor-pointer
-                  focus:outline-none focus-visible:ring-2 focus-visible:ring-[#18625F]
                   ${isInvestor
                     ? "border-2 border-[#18625F] bg-white shadow-md"
                     : "border border-gray-300 bg-white shadow-sm"
@@ -53,7 +50,14 @@ export default function DecisionInterface({ data, locale }: Props) {
                   ${isSelected ? "ring-2 ring-[#FFCB00] ring-offset-2" : ""}
                 `}
               >
-                {/* Badge */}
+                {/* Premium Badge (Investor only) */}
+                {isInvestor && (
+                  <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[#FFCB00] text-[#0B1F1E]">
+                    Premium
+                  </span>
+                )}
+
+                {/* Role Badge */}
                 <span className={`inline-block text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 ${
                   isInvestor
                     ? "bg-[#18625F]/10 text-[#18625F]"
@@ -69,22 +73,34 @@ export default function DecisionInterface({ data, locale }: Props) {
                 }`}>
                   {card.title}
                 </h3>
-                <p className="text-sm text-[#5A5A5A] leading-relaxed">
+                <p className="text-sm text-[#5A5A5A] leading-relaxed mb-6 flex-grow">
                   {card.description}
                 </p>
-              </button>
+
+                {/* In-Card CTA */}
+                <Link
+                  href={`/${locale}/contact?role=${card.type}`}
+                  className={`inline-flex items-center justify-center w-full rounded-lg px-6 py-3 text-[15px] font-bold transition-colors ${
+                    isInvestor
+                      ? "bg-[#FFCB00] text-[#0B1F1E] hover:bg-[#E6B800]"
+                      : "border-2 border-[#18625F] text-[#18625F] bg-transparent hover:bg-[#18625F] hover:text-white"
+                  }`}
+                >
+                  {cardCtaText}
+                </Link>
+              </div>
             );
           })}
         </div>
 
-        {/* Dynamic CTA */}
-        <div className="mt-10 text-center">
-          <Link
-            href={`/${locale}/contact?role=${selectedId}`}
-            className="inline-flex items-center justify-center bg-[#18625F] text-white font-semibold text-[15px] px-8 py-4 rounded-lg hover:bg-[#0F5654] transition-colors"
-          >
-            {ctaText}
-          </Link>
+        {/* Dynamic Status Note */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-[#5A5A5A] leading-relaxed max-w-2xl mx-auto">
+            <span className="inline-block w-2 h-2 rounded-full bg-[#FFCB00] mr-2 align-middle" />
+            {selectedId === "investor"
+              ? "Yatırımcı olarak devam ediyorsunuz: Teknik değerlendirme, Yatırım Komitesi standartlarına göre özelleştirilecektir."
+              : "Geliştirici olarak devam ediyorsunuz: Teknik kontrol, yatırımcı sunumu öncesi güvenilirlik odaklı hazırlanacaktır."}
+          </p>
         </div>
 
       </div>

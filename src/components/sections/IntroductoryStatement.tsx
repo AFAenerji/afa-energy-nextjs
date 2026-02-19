@@ -1,18 +1,51 @@
 'use client';
 
-import React from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import type { IntroData } from "@/types/homepage";
 
 type Props = {
   data: IntroData;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function IntroductoryStatement({ data }: Props) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cards = data.cards || [];
+  const cardRefs = useRef<(HTMLElement | null)[]>([]);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const setCardRef = useCallback((el: HTMLElement | null, idx: number) => {
+    cardRefs.current[idx] = el;
+  }, []);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const idx = cardRefs.current.indexOf(entry.target as HTMLElement);
+            if (idx !== -1) setActiveIndex(idx);
+          }
+        }
+      },
+      { rootMargin: "-30% 0px -50% 0px", threshold: 0.1 }
+    );
+
+    cardRefs.current.forEach((el) => {
+      if (el) observerRef.current?.observe(el);
+    });
+
+    return () => observerRef.current?.disconnect();
+  }, [cards.length]);
+
+  const scrollToCard = (idx: number) => {
+    setActiveIndex(idx);
+    cardRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <section className="w-full bg-white py-20 lg:py-32 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
+
         {/* Signature Header & Gold Bar */}
         <div className="text-center mb-16 lg:mb-24">
           <div className="h-[3px] w-16 bg-[#FFCB00] mx-auto mb-8 rounded-sm" />
@@ -24,63 +57,92 @@ export default function IntroductoryStatement({ data }: Props) {
           </p>
         </div>
 
-        {/* 3-Card Investment-Grade Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-stretch">
-          
-          {/* CARD 1: GRID INTELLIGENCE */}
-          <article 
-            aria-label="Şebeke Bağlantı Zekası"
-            className="group relative bg-white rounded-2xl border border-gray-100 p-8 transition-all duration-500 hover:shadow-2xl hover:border-[#18625F]/30 hover:-translate-y-2 flex flex-col"
-          >
-            <div className="w-12 h-12 rounded-xl bg-[#18625F]/5 flex items-center justify-center mb-8 group-hover:bg-[#FFCB00] transition-colors duration-500">
-               <svg aria-hidden="true" className="w-7 h-7 text-[#18625F] group-hover:text-[#0B1F1E] transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M13 10V3L4 14h7v7l9-11h-7z M2 12h20 M12 2v20 M4.93 4.93l14.14 14.14" opacity="0.8" />
-                  <circle cx="12" cy="12" r="3" strokeWidth={1.5} />
-               </svg>
-            </div>
-            <h3 className="text-xl font-bold text-[#0B1F1E] mb-4">Şebeke Bağlantı Zekası</h3>
-            <p className="text-base text-[#667085] leading-relaxed flex-grow">
-              Şebeke kapasitesi ve bağlantı maliyetlerinin proje değerine etkisini, ATR sürecinden önce analiz ederek finansal sürprizleri önleriz.
-            </p>
-          </article>
+        {/* 12-Column Sticky + Focus Mode Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
 
-          {/* CARD 2: INVESTOR-SIDE MODEL (Highlight) */}
-          <article 
-            aria-label="Yatırımcı Tarafı Model"
-            className="group relative bg-[#0F2E2C] rounded-2xl p-8 shadow-2xl md:-mt-6 md:mb-6 border border-[#FFCB00]/20 flex flex-col justify-between"
-          >
-            <div className="absolute top-0 right-8">
-              <div className="h-1.5 w-12 bg-[#FFCB00] rounded-b-md shadow-sm" />
+          {/* Left Column (5/12): Sticky Navigation */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
+            <nav className="flex flex-col gap-6 mb-10">
+              {cards.map((card, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => scrollToCard(idx)}
+                  className="group flex items-center gap-4 text-left transition-all duration-300"
+                >
+                  {/* Expanding Gold Bar */}
+                  <div
+                    className={`h-[3px] rounded-sm transition-all duration-300 ${
+                      activeIndex === idx
+                        ? "w-16 bg-[#FFCB00]"
+                        : "w-10 bg-[#E0E0E0] group-hover:w-16 group-hover:bg-[#FFCB00]/60"
+                    }`}
+                  />
+                  <span
+                    className={`text-sm font-semibold tracking-tight transition-colors duration-300 ${
+                      activeIndex === idx
+                        ? "text-[#0B1F1E]"
+                        : "text-[#999999] group-hover:text-[#0B1F1E]"
+                    }`}
+                  >
+                    {card.title}
+                  </span>
+                </button>
+              ))}
+            </nav>
+
+            {/* Methodology Card */}
+            <div className="hidden lg:block rounded-xl border border-[#E0E0E0] bg-[#F5F5F5] p-6">
+              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#28AFB0] mb-2">
+                METODOLOJİ
+              </p>
+              <p className="text-sm text-[#5A5A5A] leading-relaxed">
+                Her değerlendirme, şebeke verisi, maliyet analizi ve bağımsız risk modellemesi üzerine kuruludur.
+              </p>
             </div>
-            <div>
-                <div className="w-12 h-12 rounded-xl bg-[#FFCB00] flex items-center justify-center mb-8 shadow-lg shadow-[#FFCB00]/20">
-                <svg aria-hidden="true" className="w-7 h-7 text-[#0B1F1E]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2" />
-                </svg>
+          </div>
+
+          {/* Right Column (7/12): Focus Mode Content */}
+          <div className="lg:col-span-7 flex flex-col gap-10">
+            {cards.map((card, idx) => (
+              <article
+                key={idx}
+                ref={(el) => setCardRef(el, idx)}
+                aria-label={card.title}
+                className={`rounded-2xl border p-8 transition-all duration-500 ${
+                  activeIndex === idx
+                    ? "border-[#18625F]/20 bg-white shadow-lg opacity-100 scale-100"
+                    : "border-gray-100 bg-gray-50/50 opacity-50 scale-[0.98] hover:opacity-70"
+                }`}
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <span
+                    className={`w-8 h-8 rounded-full text-sm font-bold flex items-center justify-center shrink-0 transition-colors duration-300 ${
+                      activeIndex === idx
+                        ? "bg-[#FFCB00] text-[#0B1F1E]"
+                        : "bg-gray-100 text-gray-400"
+                    }`}
+                  >
+                    {idx + 1}
+                  </span>
+                  <h3
+                    className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
+                      activeIndex === idx ? "text-[#0B1F1E]" : "text-[#999999]"
+                    }`}
+                  >
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="text-2xl font-extrabold text-white mb-4">Yatırımcı Tarafı Model</h3>
-                <p className="text-base text-white/90 leading-relaxed">
-                Teknik riskleri, geliştirici perspektifinden değil, doğrudan yatırımcının finansal modeline (IRR/NPV) etkileriyle değerlendiririz.
+                <p
+                  className={`text-base leading-relaxed transition-colors duration-300 ${
+                    activeIndex === idx ? "text-[#667085]" : "text-[#999999]"
+                  }`}
+                >
+                  {card.desc}
                 </p>
-            </div>
-          </article>
-
-          {/* CARD 3: COMPLIANT REPORTING */}
-          <article 
-            aria-label="Uyumlu Raporlama"
-            className="group relative bg-white rounded-2xl border border-gray-100 p-8 transition-all duration-500 hover:shadow-2xl hover:border-[#18625F]/30 hover:-translate-y-2 flex flex-col"
-          >
-            <div className="w-12 h-12 rounded-xl bg-[#18625F]/5 flex items-center justify-center mb-8 group-hover:bg-[#FFCB00] transition-colors duration-500">
-               <svg aria-hidden="true" className="w-7 h-7 text-[#18625F] group-hover:text-[#0B1F1E] transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622" opacity="0.8" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4" />
-               </svg>
-            </div>
-            <h3 className="text-xl font-bold text-[#0B1F1E] mb-4">Uyumlu Raporlama</h3>
-            <p className="text-base text-[#667085] leading-relaxed flex-grow">
-              Bulguları, uluslararası fonların yatırım komitelerinin (IC) beklediği standartta, net ve banka finansmanına uygun bir formatta sunarız.
-            </p>
-          </article>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

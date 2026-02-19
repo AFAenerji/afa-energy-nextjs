@@ -1,6 +1,6 @@
 import type { Locale } from '@/lib/i18n';
 import LegalScopeDisclaimer from '@/components/legal/LegalScopeDisclaimer';
-import ContactForm from '@/components/contact/ContactForm';
+import ContactForm from '@/components/forms/ContactForm';
 
 const roleContent = {
   investor: {

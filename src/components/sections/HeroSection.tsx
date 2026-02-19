@@ -28,7 +28,7 @@ export default function HeroSection({ data, locale }: Props) {
         </div>
 
         <div className="bg-white/95 backdrop-blur-sm px-6 py-10">
-          <p className="text-xs font-bold tracking-[0.2em] text-[#28AFB0] uppercase mb-3">
+          <p className="text-xs font-bold tracking-[0.18em] text-[#28AFB0] uppercase mb-3">
             {data.tag}
           </p>
           <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-[#0B1F1E]">
@@ -47,7 +47,7 @@ export default function HeroSection({ data, locale }: Props) {
             </Link>
             <Link
               href={hrefSecondary}
-              className="flex-1 inline-flex items-center justify-center rounded-md border-[1.5px] border-[#18625F] bg-transparent px-5 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
+              className="flex-1 inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-5 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
             >
               {data.secondaryCta}
             </Link>
@@ -74,8 +74,8 @@ export default function HeroSection({ data, locale }: Props) {
         <div className="pointer-events-none absolute inset-0 z-10 bg-black/15" />
 
         <div className="absolute inset-y-0 right-0 z-20 flex w-[40%] max-w-[580px] min-w-[480px] items-center justify-center pr-16 pl-4">
-          <div className="w-full rounded-lg bg-white/95 p-10 shadow-sm border border-[#E5E7EB] backdrop-blur-sm">
-            <p className="text-xs font-bold tracking-[0.2em] text-[#28AFB0] uppercase mb-4">
+          <div className="w-full rounded-2xl bg-white/95 p-10 shadow-2xl backdrop-blur-sm">
+            <p className="text-xs font-bold tracking-[0.18em] text-[#28AFB0] uppercase mb-4">
               {data.tag}
             </p>
             <h1 className="text-4xl lg:text-5xl font-extrabold leading-[1.05] max-w-[760px] tracking-tight text-[#0B1F1E]">
@@ -93,7 +93,7 @@ export default function HeroSection({ data, locale }: Props) {
               </Link>
               <Link
                 href={hrefSecondary}
-                className="flex-1 inline-flex items-center justify-center rounded-md border-[1.5px] border-[#18625F] bg-transparent px-8 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
+                className="flex-1 inline-flex items-center justify-center rounded-md border-2 border-[#18625F] bg-transparent px-8 py-3 text-sm lg:text-base font-semibold text-[#18625F] leading-tight hover:bg-[#18625F] hover:text-white transition-colors no-underline"
               >
                 {data.secondaryCta}
               </Link>

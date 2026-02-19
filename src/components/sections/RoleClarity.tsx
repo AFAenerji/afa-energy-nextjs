@@ -7,7 +7,7 @@ type Props = {
 export default function RoleClarity({ data }: Props) {
   return (
     <section className="w-full bg-[#F5F5F5] py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
         
         {/* Header */}
         <div className="max-w-xl mb-12">
@@ -22,8 +22,8 @@ export default function RoleClarity({ data }: Props) {
         {/* 2 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          {/* AFA YAPAR */}
-          <div className="bg-white border border-[#E0E0E0] rounded-[4px] p-8 h-full">
+          {/* AFA YAPAR — White/Gold */}
+          <div className="bg-white border border-[#E0E0E0] border-l-[3px] border-l-[#FFCB00] rounded-[4px] p-8 h-full shadow-sm">
             <h3 className="text-xs font-bold tracking-[0.15em] uppercase text-[#18625F] mb-6 pb-4 border-b border-slate-100">
               {data.do.title}
             </h3>
@@ -41,8 +41,8 @@ export default function RoleClarity({ data }: Props) {
             </ul>
           </div>
 
-          {/* AFA YAPMAZ */}
-          <div className="bg-gray-50/50 border border-[#E0E0E0] rounded-[4px] p-8 h-full">
+          {/* AFA YAPMAZ — Gray/Dashed */}
+          <div className="bg-gray-50/80 border border-dashed border-gray-300 rounded-[4px] p-8 h-full">
             <h3 className="text-xs font-bold tracking-[0.15em] uppercase text-[#666666] mb-6 pb-4 border-b border-slate-100">
               {data.dont.title}
             </h3>

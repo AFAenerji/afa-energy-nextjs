@@ -21,8 +21,8 @@ export default function ExperienceMetrics({ data }: Props) {
         
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
         <div className="mb-12">
-          <div className="h-px w-full bg-white/20" />
-          <div className="mt-4 h-[3px] w-24 bg-[#FFCB00]" />
+          <div className="h-px w-full bg-white/10" />
+          <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
         </div>
 
         {/* Eyebrow */}
@@ -51,7 +51,7 @@ export default function ExperienceMetrics({ data }: Props) {
                 </span>
               </div>
 
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/90 mx-auto lg:mx-0 max-w-[220px]">
+              <p className="mt-4 text-base font-medium leading-relaxed text-white/85 mx-auto lg:mx-0 max-w-[220px]">
                 {item.label}
               </p>
             </div>
