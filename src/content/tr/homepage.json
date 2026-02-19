@@ -8,7 +8,8 @@
     { "id": "role", "order": 50, "component": "RoleClarity", "dataKey": "roleClarity", "enabled": true },
     { "id": "decision", "order": 60, "component": "DecisionInterface", "dataKey": "decisionCards", "enabled": true },
     { "id": "scope-disclaimer", "order": 65, "component": "ScopeDisclaimer", "dataKey": "scopeDisclaimer", "enabled": true },
-    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true }
+    { "id": "closing", "order": 70, "component": "ClosingStatement", "dataKey": "closing", "enabled": true },
+    { "id": "technical-faq", "order": 75, "component": "TechnicalFAQ", "dataKey": "technicalKnowledgeCenter", "enabled": true }
   ],
   "data": {
     "hero": {
@@ -30,10 +31,10 @@
     "metrics": {
       "eyebrow": "Veriye Dayalı Deneyim",
       "items": [
-        { "value": "850+", "unit": "MW", "label": "İncelenen Proje Kapasitesi" },
-        { "value": "500+", "unit": "ATR", "label": "Teknik Bağlantı Onayı Analizi" },
-        { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi" },
-        { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim" }
+        { "value": "850+", "unit": "MW", "label": "İncelenen Proje Kapasitesi." },
+        { "value": "500+", "unit": "ATR", "label": "Teknik Bağlantı Onayı Analizi." },
+        { "value": "300+", "unit": "MW", "label": "Proje Dizayn Tecrübesi." },
+        { "value": "10+", "unit": "Yıl", "label": "Sektörel Deneyim." }
       ],
       "note": "Bu rakamlar, Türkiye'de edinilmiş ve Romanya pazarına uyarlanmış toplam teknik değerlendirme ölçeğini temsil eder.",
       "methodology": "Tüm hesaplamalarımız ANRE standartları ve şebeke kısıt analizi algoritmaları ile doğrulanmaktadır."
@@ -50,8 +51,8 @@
     },
     "roleClarity": {
       "title": "Bağımsızlık Sınırı — AFA Yapar ve Yapmaz",
-      "do": { "title": "AFA YAPAR", "items": ["Teknik risk analizi yürütür", "Yatırıma hazırlık analizini yapılandırır", "Ön teknik durum tespiti (Pre-TDD) sürecini koordine eder", "Banka finansmanına uygunluk değerlendirmesi gerçekleştirir"] },
-      "dont": { "title": "AFA YAPMAZ", "items": ["Proje geliştirme yapmaz", "Finansman sağlamaz", "Resmî onay mercii rolü üstlenmez", "Yatırım garantisi vermez"] },
+      "do": { "title": "AFA YAPAR", "items": ["Teknik risk analizi yürütür.", "Yatırıma hazırlık analizini yapılandırır.", "Ön teknik durum tespiti (Pre-TDD) sürecini koordine eder.", "Banka finansmanına uygunluk değerlendirmesi gerçekleştirir."] },
+      "dont": { "title": "AFA YAPMAZ", "items": ["Proje geliştirme yapmaz.", "Finansman sağlamaz.", "Resmî onay mercii rolü üstlenmez.", "Yatırım garantisi vermez."] },
       "closing": "AFA satıcı tarafını temsil etmez; bağımsız değerlendirmeyi yatırımcı tarafı ihtiyaçlarına göre yürütür. Bu sınırlar, bağımsız değerlendirme yaklaşımını korur ve çıkar çatışması doğurabilecek durumları yapısal olarak engeller."
     },
     "decisionCards": {
@@ -70,9 +71,61 @@
       "text": "Bu içerik teknik ve ticari değerlendirme amaçlıdır; resmî onay veya yatırım taahhüdü niteliği taşımaz."
     },
     "closing": {
-      "motto": "Yatırımdan Önce Netlik",
-      "principles": ["Tam Bağımsızlık", "Teknik Filtreleme", "Banka Finansmanına Uygunluk Odağı"],
+      "motto": "Yatırımdan Önce Netlik.",
+      "principles": ["Tam Bağımsızlık.", "Teknik Filtreleme.", "Banka Finansmanına Uygunluk Odağı."],
       "legal": "Bu içerik teknik ve ticari değerlendirme rehberidir; resmî onay veya yatırım getirisi taahhüdü içermez."
+    },
+    "technicalKnowledgeCenter": {
+      "title": "Teknik Bilgi Merkezi (SSS ve Sözlük)",
+      "subtitle": "Yatırımcılar, geliştiriciler ve teknik karar vericiler için sık sorulan sorular.",
+      "groups": [
+        {
+          "name": "Yatırımcı Soruları",
+          "items": [
+            { "question": "ATR (Aviz Tehnic de Racordare) nedir ve neden önemlidir?", "answer": "ATR, Romanya'da şebekeye bağlantı için zorunlu teknik onaydır. Projenin şebeke kapasitesine uygunluğunu ve bağlantı koşullarını belirler. ATR olmadan inşaat izni alınamaz ve banka finansmanı sağlanamaz." },
+            { "question": "Bağımsız teknik değerlendirme (Pre-TDD) yatırım kararımı nasıl etkiler?", "answer": "Pre-TDD, projenin teknik risklerini yatırım kararı öncesinde görünür hale getirir. Şebeke kapasitesi, bağlantı maliyeti, curtailment riski ve regülasyon uyumluluğu gibi kritik parametreleri bağımsız olarak doğrular." },
+            { "question": "DSCR (Debt Service Coverage Ratio) nedir ve bankalar neden önemser?", "answer": "DSCR, projenin borç ödeme kapasitesini gösteren finansal orandır. Bankalar genellikle minimum 1.20x DSCR talep eder. Teknik risklerin doğru değerlendirilmesi, DSCR projeksiyonlarının güvenilirliğini doğrudan etkiler." },
+            { "question": "Romanya'da yenilenebilir enerji yatırımı için minimum sermaye gereksinimi nedir?", "answer": "Minimum sermaye gereksinimi proje büyüklüğüne ve teknolojiye göre değişir. Genel olarak toplam yatırım maliyetinin %20-30'u özkaynak olarak beklenir. AFA, projenizin finansal yapısını teknik bulgularla destekler." }
+          ]
+        },
+        {
+          "name": "Geliştirici Soruları",
+          "items": [
+            { "question": "ATR başvuru süreci ne kadar sürer?", "answer": "ATR başvuru süreci ortalama 30-90 iş günü arasında değişir. Süre, şebeke operatörünün iş yoğunluğuna, bağlantı noktasının teknik karmaşıklığına ve başvuru dosyasının eksiksizliğine bağlıdır." },
+            { "question": "Curtailment (şebeke kısıntısı) riski nasıl değerlendirilir?", "answer": "Curtailment riski, bağlantı noktasındaki mevcut yük, planlanan kapasite artışları ve şebeke altyapısının tahliye kapasitesi analiz edilerek değerlendirilir. AFA, bu riski yatırım modeline entegre eder." },
+            { "question": "Prosumer statüsü ile büyük ölçekli üretici arasındaki fark nedir?", "answer": "Prosumer, kendi tüketimi için enerji üreten ve fazlasını şebekeye satan küçük ölçekli üreticidir (genellikle <100 kW). Büyük ölçekli üreticiler ise doğrudan satış veya PPA yoluyla enerji ticareti yapar." },
+            { "question": "Grid connection (şebeke bağlantı) maliyetini etkileyen faktörler nelerdir?", "answer": "Bağlantı maliyetini etkileyen başlıca faktörler: bağlantı noktasına mesafe, gerekli trafo kapasitesi, şebeke güçlendirme ihtiyacı ve hat yapım maliyetleridir. AFA bu maliyetleri yatırım öncesinde detaylı analiz eder." }
+          ]
+        },
+        {
+          "name": "Pazar ve Regülasyon",
+          "items": [
+            { "question": "ANRE'nin rolü nedir?", "answer": "ANRE (Autoritatea Națională de Reglementare în domeniul Energiei), Romanya'nın enerji düzenleyici kurumudur. Lisanslama, tarife belirleme, piyasa kuralları ve tüketici koruma konularında yetkilidir." },
+            { "question": "Romanya'da CfD (Contract for Difference) mekanizması nasıl işler?", "answer": "CfD, üreticiye sabit bir referans fiyat garanti eden uzun vadeli sözleşme mekanizmasıdır. Piyasa fiyatı referans fiyatın altında kalırsa fark üreticiye ödenir; üstünde kalırsa üretici farkı iade eder." },
+            { "question": "PPA (Power Purchase Agreement) ile CfD arasındaki fark nedir?", "answer": "PPA, üretici ile alıcı arasındaki ikili enerji satış sözleşmesidir. CfD ise devlet destekli bir fiyat garanti mekanizmasıdır. PPA özel sektör riski taşırken, CfD devlet garantisi sunar." }
+          ]
+        },
+        {
+          "name": "Bağımsızlık ve Metodoloji",
+          "items": [
+            { "question": "AFA neden 'bağımsız' danışmanlık vurgular?", "answer": "AFA, proje geliştirici, EPC yüklenicisi veya ekipman tedarikçisi değildir. Herhangi bir satıcı tarafıyla ticari ilişkisi yoktur. Bu yapısal bağımsızlık, teknik değerlendirmelerin çıkar çatışmasından arındırılmış olmasını garanti eder." },
+            { "question": "AFA'nın teknik değerlendirme metodolojisi neye dayanır?", "answer": "AFA metodolojisi ANRE standartları, şebeke kısıt analizi algoritmaları ve uluslararası bankabilite kriterlerine dayanır. Her değerlendirme, teknik veri doğrulaması ve bağımsız risk skorlaması içerir." },
+            { "question": "Teknik değerlendirme raporu hangi standartlarda hazırlanır?", "answer": "Raporlar, uluslararası banka finansmanı standartlarına (IFC Performance Standards, Equator Principles) uyumlu formatta hazırlanır. Teknik bulgular, risk matrisi ve öneriler yapılandırılmış şekilde sunulur." }
+          ]
+        }
+      ],
+      "glossary": [
+        { "term": "ATR", "definition": "Aviz Tehnic de Racordare — Romanya'da şebekeye bağlantı için zorunlu teknik onay belgesi." },
+        { "term": "DSCR", "definition": "Debt Service Coverage Ratio — Projenin borç ödeme kapasitesini gösteren finansal oran." },
+        { "term": "Curtailment", "definition": "Şebeke kısıntısı — Şebeke kapasitesi yetersizliği nedeniyle üretimin sınırlandırılması." },
+        { "term": "ANRE", "definition": "Autoritatea Națională de Reglementare în domeniul Energiei — Romanya enerji düzenleyici kurumu." },
+        { "term": "CfD", "definition": "Contract for Difference — Sabit referans fiyat garanti eden uzun vadeli sözleşme mekanizması." },
+        { "term": "PPA", "definition": "Power Purchase Agreement — Üretici ile alıcı arasındaki ikili enerji satış sözleşmesi." },
+        { "term": "Pre-TDD", "definition": "Pre-Technical Due Diligence — Yatırım kararı öncesi bağımsız teknik ön değerlendirme süreci." },
+        { "term": "Prosumer", "definition": "Kendi tüketimi için enerji üreten ve fazlasını şebekeye satan küçük ölçekli üretici." },
+        { "term": "Bankability", "definition": "Bir projenin banka finansmanı kriterlerini karşılama kapasitesi." },
+        { "term": "Grid Connection", "definition": "Enerji üretim tesisinin ulusal elektrik şebekesine fiziksel ve teknik bağlantısı." }
+      ]
     }
   }
 }

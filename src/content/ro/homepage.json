@@ -30,10 +30,10 @@
     "metrics": {
       "eyebrow": "Experiență Bazată pe Date",
       "items": [
-        { "value": "850+", "unit": "MW", "label": "Capacitate de Proiecte Evaluate" },
-        { "value": "500+", "unit": "ATR", "label": "Analize Aviz Tehnic de Racordare" },
-        { "value": "300+", "unit": "MW", "label": "Experiență în Proiectare" },
-        { "value": "10+", "unit": "Ani", "label": "Experiență în Sector" }
+        { "value": "850+", "unit": "MW", "label": "Capacitate de Proiecte Evaluate." },
+        { "value": "500+", "unit": "ATR", "label": "Analize Aviz Tehnic de Racordare." },
+        { "value": "300+", "unit": "MW", "label": "Experiență în Proiectare." },
+        { "value": "10+", "unit": "Ani", "label": "Experiență în Sector." }
       ],
       "note": "Aceste cifre reprezintă totalul evaluărilor tehnice efectuate în cadrul analizei ATR, fezabilității rețelei și Pre-TDD."
     },
@@ -49,8 +49,8 @@
     },
     "roleClarity": {
       "title": "Limita Independenței — Ce Facem și Ce Nu",
-      "do": { "title": "AFA FACE", "items": ["Analiză risc tehnic", "Structurare analiză pregătire investiție", "Coordonare proces Pre-TDD", "Evaluare bancabilitate"] },
-      "dont": { "title": "AFA NU FACE", "items": ["Dezvoltare proiecte", "Finanțare", "Rol de autoritate oficială de aprobare", "Garanții de investiții"] },
+      "do": { "title": "AFA FACE", "items": ["Analiză risc tehnic.", "Structurare analiză pregătire investiție.", "Coordonare proces Pre-TDD.", "Evaluare bancabilitate."] },
+      "dont": { "title": "AFA NU FACE", "items": ["Dezvoltare proiecte.", "Finanțare.", "Rol de autoritate oficială de aprobare.", "Garanții de investiții."] },
       "closing": "Aceste limite protejează abordarea noastră independentă de consultanță și previn structural conflictele de interese."
     },
     "decisionCards": {
@@ -69,8 +69,8 @@
       "text": "Această simulare are doar scop informativ și nu constituie un sfat de investiții definitiv."
     },
     "closing": {
-      "motto": "Claritate Înainte de Investiție",
-      "principles": ["Independență Totală", "Filtrare Tehnică", "Focus pe Bancabilitate"],
+      "motto": "Claritate Înainte de Investiție.",
+      "principles": ["Independență Totală.", "Filtrare Tehnică.", "Focus pe Bancabilitate."],
       "legal": "Acest conținut este un ghid de evaluare tehnică și comercială; nu constituie aprobare oficială sau garanții de rentabilitate a investiției."
     }
   }

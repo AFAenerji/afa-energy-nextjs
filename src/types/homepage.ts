@@ -62,6 +62,28 @@ export interface ClosingData {
   legal: string;
 }
 
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+export interface FAQGroup {
+  name: string;
+  items: FAQItem[];
+}
+
+export interface GlossaryTerm {
+  term: string;
+  definition: string;
+}
+
+export interface TechnicalKnowledgeCenterData {
+  title: string;
+  subtitle?: string;
+  groups: FAQGroup[];
+  glossary?: GlossaryTerm[];
+}
+
 // Map key names to types
 export interface HomepageContentV95 {
   hero: HeroData;
@@ -72,6 +94,7 @@ export interface HomepageContentV95 {
   decisionCards: DecisionData;
   scopeDisclaimer: ScopeDisclaimerData;
   closing: ClosingData;
+  technicalKnowledgeCenter?: TechnicalKnowledgeCenterData;
 }
 
 export interface HomepageDictionary {
@@ -90,6 +113,7 @@ export interface SectionDataMap {
   DecisionInterface: DecisionData;
   ScopeDisclaimer: ScopeDisclaimerData;
   ClosingStatement: ClosingData;
+  TechnicalFAQ: TechnicalKnowledgeCenterData;
 }
 
 export type SectionDataByComponent = SectionDataMap;

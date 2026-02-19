@@ -30,10 +30,10 @@
     "metrics": {
       "eyebrow": "Data-Driven Experience",
       "items": [
-        { "value": "850+", "unit": "MW", "label": "Assessed Project Capacity" },
-        { "value": "500+", "unit": "ATR", "label": "Grid Connection Approval Analysis" },
-        { "value": "100+", "unit": "", "label": "Critical Risks Identified" },
-        { "value": "10+", "unit": "Years", "label": "Sector Experience" }
+        { "value": "850+", "unit": "MW", "label": "Assessed Project Capacity." },
+        { "value": "500+", "unit": "ATR", "label": "Grid Connection Approval Analysis." },
+        { "value": "100+", "unit": "", "label": "Critical Risks Identified." },
+        { "value": "10+", "unit": "Years", "label": "Sector Experience." }
       ],
       "note": "These figures represent total technical assessments within the scope of ATR analysis, grid feasibility, and Pre-TDD."
     },
@@ -49,8 +49,8 @@
     },
     "roleClarity": {
       "title": "Independence Boundary — Do's and Don'ts",
-      "do": { "title": "AFA DOES", "items": ["Conduct technical risk analysis", "Structure investment readiness analysis", "Coordinate Pre-TDD process", "Perform bankability assessment"] },
-      "dont": { "title": "AFA DOES NOT", "items": ["Develop projects", "Provide financing", "Act as an official approval authority", "Provide investment guarantees"] },
+      "do": { "title": "AFA DOES", "items": ["Conduct technical risk analysis.", "Structure investment readiness analysis.", "Coordinate Pre-TDD process.", "Perform bankability assessment."] },
+      "dont": { "title": "AFA DOES NOT", "items": ["Develop projects.", "Provide financing.", "Act as an official approval authority.", "Provide investment guarantees."] },
       "closing": "These boundaries protect our independent advisory approach and structurally prevent conflicts of interest."
     },
     "decisionCards": {
@@ -69,8 +69,8 @@
       "text": "This content is for technical and commercial assessment purposes; it does not constitute official approval or investment commitment."
     },
     "closing": {
-      "motto": "Clarity Before Investment",
-      "principles": ["Full Independence", "Technical Filtering", "Focus on Bankability"],
+      "motto": "Clarity Before Investment.",
+      "principles": ["Full Independence.", "Technical Filtering.", "Focus on Bankability."],
       "legal": "This content is a technical and commercial assessment guide; it does not constitute official approval or investment return guarantees."
     }
   }

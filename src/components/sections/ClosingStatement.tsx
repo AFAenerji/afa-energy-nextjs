@@ -14,13 +14,13 @@ type Props = {
 };
 
 export default function ClosingStatement({ data }: Props) {
-  const title = data?.title ?? "Yatırımdan Önce Netlik";
+  const title = data?.title ?? "Yatırımdan Önce Netlik.";
   const subtitle =
     data?.subtitle ??
     "Yatırım kararını etkileyen teknik varsayımları, yatırım komitesi seviyesinde okunabilir ve doğrulanabilir bir yapıya dönüştürürüz.";
 
   const items =
-    data?.items ?? ["Tam Bağımsızlık", "Teknik Filtreleme", "Banka finansmanına uygunluk odağı"];
+    data?.items ?? ["Tam Bağımsızlık.", "Teknik Filtreleme.", "Banka Finansmanına Uygunluk Odağı."];
 
   const disclaimer =
     data?.disclaimer ??

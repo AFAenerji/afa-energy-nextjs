@@ -12,6 +12,7 @@ import RoleClarity from './RoleClarity';
 import DecisionInterface from './DecisionInterface';
 import ScopeDisclaimer from './ScopeDisclaimer';
 import ClosingStatement from './ClosingStatement';
+import TechnicalFAQ from './TechnicalFAQ';
 
 // Props contract: every section receives its data slice + locale
 export interface SectionProps {
@@ -30,4 +31,5 @@ export const SECTION_REGISTRY: Record<keyof SectionDataMap, ComponentType<Sectio
   DecisionInterface,
   ScopeDisclaimer,
   ClosingStatement,
+  TechnicalFAQ,
 };

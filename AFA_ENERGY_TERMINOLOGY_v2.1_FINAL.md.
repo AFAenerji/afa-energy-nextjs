@@ -1,0 +1,54 @@
+# AFA Energy – Kapsamlı Terminoloji Referansı (TR/EN/RO) v2.1
+
+**Son Güncelleme:** Şubat 2026
+**Kapsam:** Enerji sektörü, yatırımcı iletişimi, teknik dokümantasyon, finansal analiz
+
+---
+
+## KULLANIM KURALLARI
+
+### İlk Geçiş Kuralı (First Mention Rule)
+**İLK KULLANIM FORMATI:** `Türkçe Terim (English Term, Kısaltma)`
+**Örnek:** "alım anlaşması (Power Purchase Agreement, PPA)"
+
+### Kaynak Zorunluluğu
+Teknik veri içeren her iddianın formatı: `[KAYNAK: OPCOM/ANRE/EPDK] [TARİH: Ay-Yıl] [METRİK: birim]`
+
+---
+
+## 1. KRİTİK TERMİNOLOJİ DÜZELTMELERİ
+
+| ❌ YASAK / HATALI | ✅ DOĞRU / MÜHÜRLÜ | Gerekçe |
+| :--- | :--- | :--- |
+| Sınırsız Tahliye | Onaylı bağlantı gücü | Teknik ve hukuki risk yönetimi |
+| MV | Orta gerilim (OG) | Türkçe teknik standart |
+| HV | Yüksek gerilim (YG) | Türkçe teknik standart |
+| Bankalanabilir | Banka finansmanına uygun | Kurumsal dil disiplini |
+| Perdeleme / Azaltma | Şebeke kısıntısı (Curtailment) | Sektörel doğruluk |
+| Dispatch Önceliği | Sistem işletme öncelikleri | Yerel mevzuat uyumu |
+
+---
+
+## 2. ATR & ŞEBEKE BAĞLANTI SÜRECİ
+
+| Aşama | TR (AFA Standardı) | EN Kısaltma | RO Term |
+| :--- | :--- | :--- | :--- |
+| 1 | Teknik Bağlantı Onayı | ATR | Aviz Tehnic de Racordare |
+| 2 | Şebeke Bağlantı Anlaşması | GCA | Contract de Racordare |
+| 3 | İnşaat Ruhsatı | BP | Autorizație de Construire |
+| 4 | İnşaata Hazır Statü | RTB | Stadiu Pregătit pentru Construcție |
+
+---
+
+## 3. FİNANSAL VE STRATEJİK METRİKLER
+
+* **İç Verim Oranı (Internal Rate of Return, IRR):** Projenin karlılık göstergesi.
+* **Banka Finansmanına Uygun (Bankable):** Projenin teknik ve mali risklerinin banka tarafından kabul edilebilirliği.
+* **Şebeke Kısıntısı (Curtailment):** Sistem güvenliği nedeniyle üretimin operatörce sınırlandırılması.
+* **Dengeli Enerji Maliyeti (Levelized Cost of Energy, LCOE):** Enerji üretim birim maliyeti.
+
+---
+
+## 4. DİSİPLİN MÜHRÜ
+* Tüm slogan, başlık ve madde sonlarına mutlaka nokta (.) konulacaktır.
+* "Yatırımdan Önce Netlik." ifadesi her dilde ana motto olarak korunacaktır.

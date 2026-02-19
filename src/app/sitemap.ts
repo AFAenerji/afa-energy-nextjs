@@ -5,7 +5,8 @@ const ROUTES: { path: string; changeFrequency: 'weekly' | 'monthly'; priority: n
   { path: '',          changeFrequency: 'weekly',  priority: 1.0 },
   { path: '/contact',  changeFrequency: 'monthly', priority: 0.7 },
   { path: '/investor', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/developer',changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/developer',       changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/knowledge-center', changeFrequency: 'monthly', priority: 0.9 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
