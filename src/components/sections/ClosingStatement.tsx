@@ -25,31 +25,31 @@ export default function ClosingStatement({ data }: Props) {
     "Bu içerik teknik ve ticari değerlendirme rehberidir; resmî onay veya yatırım getirisi taahhüdü içermez.";
 
   return (
-    <section className="relative w-full bg-white py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
+    <section className="w-full bg-[#0F2E2C] py-20 lg:py-24 dark-section">
+      <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 flex flex-col items-center">
-          <div className="h-px w-full bg-[#E0E0E0]" />
+          <div className="h-px w-full bg-white/10" />
           <div className="mt-3 h-[3px] w-16 bg-[#FFCB00]" />
         </div>
 
         <header className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] text-[#0B1F1E]">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.1] text-white">
             {title}
           </h2>
-          <p className="mt-6 text-base md:text-lg leading-relaxed text-[#475467]">
+          <p className="mt-6 text-base md:text-lg leading-relaxed text-white/80">
             {subtitle}
           </p>
         </header>
 
         <div className="mt-14">
-          <div className="mx-auto grid w-fit grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
+          <div className="mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             {items.slice(0, 3).map((label, idx) => (
               <div
                 key={`${label}-${idx}`}
-                className="w-full rounded-lg border border-[#E5E7EB] bg-white px-6 py-10 text-center"
+                className="w-full rounded-lg border border-white/10 bg-white/5 px-6 py-10 text-center"
               >
                 <div className="mx-auto h-[2px] w-12 bg-[#FFCB00]" />
-                <p className="mt-6 text-sm md:text-base font-semibold tracking-tight text-[#0B1F1E] leading-snug">
+                <p className="mt-6 text-sm md:text-base font-semibold text-white/90">
                   {label}
                 </p>
               </div>
@@ -57,8 +57,8 @@ export default function ClosingStatement({ data }: Props) {
           </div>
         </div>
 
-        <footer className="mx-auto mt-16 max-w-4xl border-t border-[#E5E7EB] pt-8 text-center">
-          <p className="text-xs md:text-sm leading-relaxed text-[#667085]">
+        <footer className="mx-auto mt-16 max-w-4xl border-t border-white/10 pt-8 text-center">
+          <p className="text-xs md:text-sm leading-relaxed text-white/60">
             {disclaimer}
           </p>
         </footer>

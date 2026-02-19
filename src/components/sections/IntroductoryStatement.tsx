@@ -37,11 +37,6 @@ export default function IntroductoryStatement({ data }: Props) {
     return () => observerRef.current?.disconnect();
   }, [cards.length]);
 
-  const scrollToCard = (idx: number) => {
-    setActiveIndex(idx);
-    cardRefs.current[idx]?.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-
   return (
     <section className="w-full bg-white py-20 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-6xl px-6 lg:px-8 w-full">
@@ -62,35 +57,6 @@ export default function IntroductoryStatement({ data }: Props) {
 
           {/* Left Column (5/12): Sticky Navigation */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-            <nav className="flex flex-col gap-6 mb-10">
-              {cards.map((card, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => scrollToCard(idx)}
-                  className="group flex items-center gap-4 text-left transition-all duration-300"
-                >
-                  {/* Expanding Gold Bar */}
-                  <div
-                    className={`h-[3px] rounded-sm transition-all duration-300 ${
-                      activeIndex === idx
-                        ? "w-16 bg-[#FFCB00]"
-                        : "w-10 bg-[#E0E0E0] group-hover:w-16 group-hover:bg-[#FFCB00]/60"
-                    }`}
-                  />
-                  <span
-                    className={`text-sm font-semibold tracking-tight transition-colors duration-300 ${
-                      activeIndex === idx
-                        ? "text-[#0B1F1E]"
-                        : "text-[#999999] group-hover:text-[#0B1F1E]"
-                    }`}
-                  >
-                    {card.title}
-                  </span>
-                </button>
-              ))}
-            </nav>
-
             {/* Methodology Card */}
             <div className="hidden lg:block rounded-xl border border-[#E0E0E0] bg-[#F5F5F5] p-6">
               <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#28AFB0] mb-2">

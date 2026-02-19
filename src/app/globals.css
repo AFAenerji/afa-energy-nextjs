@@ -117,17 +117,20 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-body);
 }
 
-/* Dark section: force white text hierarchy */
+/* Dark section: permanent contrast seal */
 .dark-section {
-  color: #FFFFFF;
+  background-color: #0F2E2C !important;
+  color: #FFFFFF !important;
 }
 .dark-section h1,
 .dark-section h2,
-.dark-section h3 {
+.dark-section h3,
+.dark-section h4,
+.dark-section p {
   color: #FFFFFF !important;
 }
 .dark-section p {
-  color: rgba(255, 255, 255, 0.80) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* 4. LAYOUT */
@@ -138,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 5. GRID — Namespaced to avoid Tailwind conflicts */
-.afa-grid {
+.afa-custom-grid {
   display: grid;
   gap: var(--grid-gap);
   grid-template-columns: repeat(var(--grid-columns), 1fr);

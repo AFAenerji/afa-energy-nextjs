@@ -43,7 +43,7 @@ export default function Footer({ locale }: FooterProps) {
       `}</style>
 
       <footer
-        className="footer-lock bg-[#0B2420] !text-white"
+        className="dark-section footer-lock bg-[#0B2420] !text-white"
         role="contentinfo"
       >
         <div className="mx-auto max-w-6xl px-8 py-16">

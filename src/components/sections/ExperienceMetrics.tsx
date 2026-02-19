@@ -16,8 +16,8 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section id="experience-metrics" className="w-full bg-[#0F2E2C] text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 w-full pt-32 pb-16 lg:pb-20">
+    <section id="experience-metrics" className="w-full bg-[#0F2E2C] py-20 lg:py-24 dark-section">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
         
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
         <div className="mb-12">
@@ -51,7 +51,7 @@ export default function ExperienceMetrics({ data }: Props) {
                 </span>
               </div>
 
-              <p className="mt-4 text-base font-medium leading-relaxed text-white/85 mx-auto lg:mx-0 max-w-[220px]">
+              <p className="mt-4 text-base font-medium leading-relaxed text-white/85">
                 {item.label}
               </p>
             </div>
