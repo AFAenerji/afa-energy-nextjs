@@ -1,11 +1,13 @@
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+
 export const siteConfig = {
   name: 'AFA Energy Romania',
-  url: 'https://afaenergy.ro',
-  ogImage: 'https://afaenergy.ro/images/og-image.jpg',
+  url: SITE_URL,
+  ogImage: `${SITE_URL}/images/og-image.jpg`,
   locales: ['tr', 'en', 'ro'] as const,
   defaultLocale: 'tr' as const,
   pages: ['/', '/contact', '/investor', '/developer'],
-} as const;
+};
 
 export const seoTranslations = {
   tr: {

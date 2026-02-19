@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
+import OrganizationSchema from '@/components/seo/OrganizationSchema';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body className="page-light">
+        <OrganizationSchema locale="en" />
         <ThemeProvider>
           {children}
         </ThemeProvider>

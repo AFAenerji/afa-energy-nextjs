@@ -1,0 +1,37 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "afaenergy.ro"
+        }
+      ],
+      "destination": "https://afaenergy.eu/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.afaenergy.ro"
+        }
+      ],
+      "destination": "https://afaenergy.eu/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.afaenergy.eu"
+        }
+      ],
+      "destination": "https://afaenergy.eu/$1",
+      "permanent": true
+    }
+  ]
+}
