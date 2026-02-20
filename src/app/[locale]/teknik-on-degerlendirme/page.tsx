@@ -72,6 +72,7 @@ const pageContent = {
         emailInvalid: 'Geçerli bir e-posta adresi giriniz.',
       },
     },
+    trustSignal: 'Verileriniz bağımsızlık ilkelerimiz gereği gizli tutulur ve üçüncü taraflarla paylaşılmaz.',
   },
   en: {
     meta: {
@@ -139,6 +140,7 @@ const pageContent = {
         emailInvalid: 'Please enter a valid email address.',
       },
     },
+    trustSignal: 'Your data is kept confidential in accordance with our independence principles and is not shared with third parties.',
   },
   ro: {
     meta: {
@@ -206,6 +208,7 @@ const pageContent = {
         emailInvalid: 'Vă rugăm introduceți o adresă de email validă.',
       },
     },
+    trustSignal: 'Datele dumneavoastră sunt păstrate confidențiale conform principiilor noastre de independență și nu sunt partajate cu terți.',
   },
 } as const;
 
@@ -279,6 +282,9 @@ export default async function TeknikOnDegerlendirmePage({ params }: PageProps) {
       <section className="w-full dark-section py-12 lg:py-16">
         <div className="afa-container">
           <TechnicalAssessmentForm locale={locale} content={content.form} />
+          <p className="mt-6 text-center text-xs text-white/40 max-w-xl mx-auto">
+            {content.trustSignal}
+          </p>
         </div>
       </section>
     </>

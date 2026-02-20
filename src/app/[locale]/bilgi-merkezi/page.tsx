@@ -4,16 +4,19 @@ import { getHomepageDictionary } from '@/lib/getHomepageDictionary';
 import TechnicalFAQ from '@/components/sections/TechnicalFAQ';
 import FAQSchema from '@/components/seo/FAQSchema';
 import GlossarySchema from '@/components/seo/GlossarySchema';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
 
-const pageMeta: Record<Locale, { title: string; description: string; heroTitle: string; heroSubtitle: string }> = {
+const pageMeta: Record<Locale, { title: string; description: string; heroTitle: string; heroSubtitle: string; breadcrumbHome: string; breadcrumbSelf: string }> = {
   tr: {
     title: 'Teknik Bilgi Merkezi | AFA Energy Romania',
     description:
       'Romanya yenilenebilir enerji yatırımları için teknik SSS, sözlük ve bağımsız değerlendirme rehberi.',
     heroTitle: 'Teknik Bilgi Merkezi',
     heroSubtitle: 'Yatırımcılar, geliştiriciler ve teknik karar vericiler için kapsamlı SSS ve teknik sözlük.',
+    breadcrumbHome: 'Ana Sayfa',
+    breadcrumbSelf: 'Bilgi Merkezi',
   },
   en: {
     title: 'Technical Knowledge Center | AFA Energy Romania',
@@ -21,6 +24,8 @@ const pageMeta: Record<Locale, { title: string; description: string; heroTitle: 
       'Technical FAQ, glossary, and independent assessment guide for renewable energy investments in Romania.',
     heroTitle: 'Technical Knowledge Center',
     heroSubtitle: 'Comprehensive FAQ and technical glossary for investors, developers, and technical decision-makers.',
+    breadcrumbHome: 'Home',
+    breadcrumbSelf: 'Knowledge Center',
   },
   ro: {
     title: 'Centrul de Cunoștințe Tehnice | AFA Energy Romania',
@@ -28,6 +33,8 @@ const pageMeta: Record<Locale, { title: string; description: string; heroTitle: 
       'Întrebări frecvente tehnice, glosar și ghid de evaluare independentă pentru investiții în energie regenerabilă în România.',
     heroTitle: 'Centrul de Cunoștințe Tehnice',
     heroSubtitle: 'Întrebări frecvente și glosar tehnic pentru investitori, dezvoltatori și factori de decizie tehnici.',
+    breadcrumbHome: 'Acasă',
+    breadcrumbSelf: 'Centrul de Cunoștințe',
   },
 };
 
@@ -88,6 +95,12 @@ export default async function BilgiMerkeziPage({
   return (
     <>
       {/* JSON-LD Schemas */}
+      <BreadcrumbSchema
+        items={[
+          { name: meta.breadcrumbHome, url: `${SITE_URL}/${locale}` },
+          { name: meta.breadcrumbSelf, url: `${SITE_URL}/${locale}/bilgi-merkezi` },
+        ]}
+      />
       <FAQSchema groups={kc.groups} />
       {kc.glossary && (
         <GlossarySchema terms={kc.glossary} locale={locale} />

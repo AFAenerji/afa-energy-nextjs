@@ -6,6 +6,8 @@ import ServicesGrid from '@/components/services/ServicesGrid';
 import RiskFramework from '@/components/services/RiskFramework';
 import TrustSection from '@/components/services/TrustSection';
 import CTASection from '@/components/services/CTASection';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import ServicesFAQSchema from '@/components/seo/ServicesFAQSchema';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
 
@@ -160,6 +162,15 @@ const pageContent = {
       title: 'Teknik Ön Değerlendirme Talebi',
       subtitle: 'Projenizin teknik fizibilitesini bağımsız olarak değerlendirmek için formu doldurun. İlk geri dönüş 48 saat içinde yapılır.',
     },
+    breadcrumbHome: 'Ana Sayfa',
+    breadcrumbSelf: 'Hizmetler',
+    faq: [
+      { question: 'ATR (Aviz Tehnic de Racordare) nedir?', answer: 'ATR, Romanya\'da şebekeye bağlantı için zorunlu teknik onaydır. Projenin şebeke kapasitesine uygunluğunu ve bağlantı koşullarını belirler.' },
+      { question: 'Bağımsız teknik değerlendirme yatırım kararını nasıl etkiler?', answer: 'Şebeke kapasitesi, bağlantı maliyeti, kısıntı riski ve regülasyon uyumluluğu gibi kritik parametreleri yatırım kararı öncesinde bağımsız olarak doğrular.' },
+      { question: 'Kısıntı (curtailment) riski nasıl değerlendirilir?', answer: 'Bağlantı noktasındaki mevcut yük, planlanan kapasite artışları ve şebeke altyapısının tahliye kapasitesi analiz edilerek kısıntı riski modellenir.' },
+      { question: 'Banka finansmanına uygunluk değerlendirmesi neleri kapsar?', answer: 'IFC Performans Standartları ve Ekvator Prensipleri uyumlu formatta teknik bulguların raporlanması, DSCR projeksiyonlarına teknik girdi ve risk matrisi hazırlanmasını kapsar.' },
+      { question: 'AFA Energy neden bağımsız danışmanlık vurgular?', answer: 'AFA, proje geliştirici, EPC yüklenicisi veya ekipman tedarikçisi değildir. Herhangi bir satıcı tarafıyla ticari ilişkisi yoktur. Bu yapısal bağımsızlık, teknik değerlendirmelerin tarafsızlığını garanti eder.' },
+    ],
   },
   en: {
     meta: {
@@ -310,6 +321,15 @@ const pageContent = {
       title: 'Request Technical Pre-Assessment',
       subtitle: 'Fill out the form to have your project\'s technical feasibility independently assessed. Initial response within 48 hours.',
     },
+    breadcrumbHome: 'Home',
+    breadcrumbSelf: 'Services',
+    faq: [
+      { question: 'What is ATR (Aviz Tehnic de Racordare)?', answer: 'ATR is the mandatory technical approval for grid connection in Romania. It determines the project\'s grid capacity compatibility and connection conditions.' },
+      { question: 'How does independent technical assessment affect investment decisions?', answer: 'It independently verifies critical parameters such as grid capacity, connection cost, curtailment risk, and regulatory compliance before the investment decision.' },
+      { question: 'How is curtailment risk assessed?', answer: 'Curtailment risk is modeled by analyzing the existing load at the connection point, planned capacity increases, and the grid infrastructure\'s evacuation capacity.' },
+      { question: 'What does bankability assessment cover?', answer: 'It covers structured reporting of technical findings per IFC Performance Standards and Equator Principles, technical input for DSCR projections, and risk matrix preparation.' },
+      { question: 'Why does AFA Energy emphasize independence?', answer: 'AFA is not a project developer, EPC contractor, or equipment supplier. It has no commercial relationship with any vendor party. This structural independence guarantees the impartiality of technical assessments.' },
+    ],
   },
   ro: {
     meta: {
@@ -460,6 +480,15 @@ const pageContent = {
       title: 'Solicitați Evaluare Tehnică Preliminară',
       subtitle: 'Completați formularul pentru a avea fezabilitatea tehnică a proiectului dumneavoastră evaluată independent. Răspuns inițial în 48 de ore.',
     },
+    breadcrumbHome: 'Acasă',
+    breadcrumbSelf: 'Servicii',
+    faq: [
+      { question: 'Ce este ATR (Aviz Tehnic de Racordare)?', answer: 'ATR este aprobarea tehnică obligatorie pentru conectarea la rețea în România. Determină compatibilitatea capacității rețelei proiectului și condițiile de conectare.' },
+      { question: 'Cum afectează evaluarea tehnică independentă deciziile de investiție?', answer: 'Verifică independent parametrii critici precum capacitatea rețelei, costul de conectare, riscul de curtailment și conformitatea reglementară înainte de decizia de investiție.' },
+      { question: 'Cum se evaluează riscul de curtailment?', answer: 'Riscul de curtailment este modelat prin analiza sarcinii existente la punctul de conectare, creșterile de capacitate planificate și capacitatea de evacuare a infrastructurii rețelei.' },
+      { question: 'Ce acoperă evaluarea bancabilității?', answer: 'Acoperă raportarea structurată a constatărilor tehnice conform IFC Performance Standards și Equator Principles, input tehnic pentru proiecțiile DSCR și pregătirea matricei de risc.' },
+      { question: 'De ce pune AFA Energy accent pe independență?', answer: 'AFA nu este dezvoltator de proiecte, contractor EPC sau furnizor de echipamente. Nu are nicio relație comercială cu nicio parte vânzătoare. Această independență structurală garantează imparțialitatea evaluărilor tehnice.' },
+    ],
   },
 } as const;
 
@@ -513,6 +542,15 @@ export default async function HizmetlerPage({ params }: HizmetlerPageProps) {
 
   return (
     <>
+      {/* JSON-LD Schemas */}
+      <BreadcrumbSchema
+        items={[
+          { name: content.breadcrumbHome, url: `${SITE_URL}/${locale}` },
+          { name: content.breadcrumbSelf, url: `${SITE_URL}/${locale}/hizmetler` },
+        ]}
+      />
+      <ServicesFAQSchema items={content.faq} />
+
       <ServicesHero
         locale={locale}
         title={content.hero.title}

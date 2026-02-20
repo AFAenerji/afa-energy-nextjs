@@ -1,4 +1,40 @@
+import React from 'react';
 import Link from 'next/link';
+
+/* ── Internal linking: key terms → /bilgi-merkezi glossary anchors ── */
+const TERM_LINKS: { pattern: RegExp; slug: string; }[] = [
+  { pattern: /\bATR\b/g, slug: 'atr' },
+  { pattern: /\bDSCR\b/g, slug: 'dscr' },
+  { pattern: /\b[Cc]urtailment\b/g, slug: 'curtailment' },
+  { pattern: /\b[Bb]anka [Ff]inansmanına [Uu]ygunluk\b/g, slug: 'bankability' },
+  { pattern: /\b[Bb]ankability\b/g, slug: 'bankability' },
+  { pattern: /\bGrid [Cc]onnection\b/g, slug: 'grid-connection' },
+];
+
+function linkTerms(text: string, locale: string): React.ReactNode {
+  const combined = new RegExp(
+    TERM_LINKS.map((t) => `(${t.pattern.source})`).join('|'),
+    'g',
+  );
+  const parts = text.split(combined).filter(Boolean);
+  if (parts.length <= 1) return text;
+
+  return parts.map((part, i) => {
+    const match = TERM_LINKS.find((t) => new RegExp(t.pattern.source, 'i').test(part));
+    if (match) {
+      return (
+        <a
+          key={i}
+          href={`/${locale}/bilgi-merkezi#${match.slug}`}
+          className="font-semibold text-[var(--afa-deep)] hover:underline"
+        >
+          {part}
+        </a>
+      );
+    }
+    return <React.Fragment key={i}>{part}</React.Fragment>;
+  });
+}
 
 type DecisionInput = {
   label: string;
@@ -40,7 +76,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
                 {phase.title}
               </h3>
               <p className="text-sm md:text-base leading-relaxed afa-text-body-muted mb-6">
-                {phase.description}
+                {linkTerms(phase.description, locale)}
               </p>
 
               {/* Deliverables */}
@@ -48,7 +84,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
                 {phase.deliverables.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm">
                     <span className={`shrink-0 mt-1 w-1.5 h-1.5 rounded-full ${phase.anchor === 'asama-2' ? 'afa-sky-dot' : 'bg-[var(--green-authority)]'}`} />
-                    <span>{item}</span>
+                    <span>{linkTerms(item, locale)}</span>
                   </li>
                 ))}
               </ul>

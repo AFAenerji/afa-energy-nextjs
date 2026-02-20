@@ -11,12 +11,12 @@ type Props = {
 };
 
 const SERVICE_MAP: Record<string, { label: string; path: string }> = {
-  ATR: { label: 'ATR Check', path: '/services/atr-check' },
-  'Grid Connection': { label: 'Grid Feasibility', path: '/services/grid-feasibility' },
-  Curtailment: { label: 'Grid Feasibility', path: '/services/grid-feasibility' },
-  Bankability: { label: 'Bankability Reporting', path: '/services/bankability-reporting' },
-  DSCR: { label: 'Bankability Reporting', path: '/services/bankability-reporting' },
-  'Pre-TDD': { label: 'ATR Check', path: '/services/atr-check' },
+  ATR: { label: 'ATR Analizi', path: '/hizmetler#asama-1' },
+  'Grid Connection': { label: 'Teknik İnceleme', path: '/hizmetler#asama-2' },
+  Curtailment: { label: 'Teknik İnceleme', path: '/hizmetler#asama-2' },
+  Bankability: { label: 'Operasyonel Denetim', path: '/hizmetler#asama-3' },
+  DSCR: { label: 'Operasyonel Denetim', path: '/hizmetler#asama-3' },
+  'Pre-TDD': { label: 'ATR Analizi', path: '/hizmetler#asama-1' },
 };
 
 export default function TechnicalGlossary({
