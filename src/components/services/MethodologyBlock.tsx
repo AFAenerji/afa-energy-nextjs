@@ -33,7 +33,7 @@ export default function MethodologyBlock({ title, description, pillars }: Props)
               <span className="text-xs font-bold tracking-[0.15em] uppercase afa-eyebrow mb-3">
                 {pillar.id}
               </span>
-              <h3 className="text-base font-bold mb-2">
+              <h3 className="text-base font-bold mb-2 afa-methodology-title">
                 {pillar.title}
               </h3>
               <p className="text-sm leading-relaxed afa-text-body-muted">

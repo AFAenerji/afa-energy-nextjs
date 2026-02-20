@@ -28,9 +28,9 @@ const pageContent = {
       title: 'AFA ATR Matrix™ — Yatırım Öncesi Teknik Karar Filtresi',
       description: 'Amaç, projenin yatırım açısından ilerlenebilir olup olmadığını erken aşamada netleştirmektir. Her değerlendirme üç temel sütun üzerine kuruludur.',
       pillars: [
-        { id: 'SÜTUN 1', title: 'Şebeke Kapasitesi ve Tahliye Analizi', description: 'Bağlantı noktasının mevcut yükü ile yeni projenin şebekeye tahliye edilebilirliğinin teknik açıdan değerlendirilmesi.' },
-        { id: 'SÜTUN 2', title: 'Regülasyon ve İzin Kontrolü', description: 'Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması.' },
-        { id: 'SÜTUN 3', title: 'Maliyet ve Risk Modelleme', description: 'Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, curtailment ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi.' },
+        { id: 'TEKNİK DOĞRULAMA', title: 'Şebeke Kapasitesi ve Tahliye Analizi', description: 'Bağlantı noktasının mevcut yükü ile yeni projenin şebekeye tahliye edilebilirliğinin teknik açıdan değerlendirilmesi.' },
+        { id: 'MEVZUAT UYUMU', title: 'Regülasyon ve İzin Kontrolü', description: 'Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması.' },
+        { id: 'FİNANSAL MODELLEME', title: 'Maliyet ve Risk Modelleme', description: 'Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, kısıntı ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi.' },
       ],
     },
     phases: [
@@ -73,7 +73,7 @@ const pageContent = {
         id: 'phase-3',
         anchor: 'asama-3',
         tag: 'AŞAMA 3',
-        title: 'Bankability Raporlama',
+        title: 'Banka Finansmanına Uygunluk Raporlaması',
         description: 'Teknik bulguların banka finansmanına uygunluk kriterlerine göre yapılandırılmış raporlaması. IFC Performance Standards ve Equator Principles uyumlu format.',
         deliverables: [
           'Banka finansmanına uygunluk değerlendirme raporu',
@@ -83,7 +83,7 @@ const pageContent = {
           'Yatırım komitesi sunum paketi',
         ],
         decisionInputs: [
-          { label: 'Bankability Skoru', value: 'Uygun / Koşullu uygun / Uygun değil' },
+          { label: 'Finansman Uygunluk Skoru', value: 'Uygun / Koşullu uygun / Uygun değil' },
           { label: 'DSCR Etkisi', value: 'Teknik risklerin DSCR projeksiyonuna etkisi' },
         ],
       },

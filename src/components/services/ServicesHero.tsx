@@ -31,7 +31,7 @@ export default function ServicesHero({ locale, title, subtitle, navItems }: Prop
               <Link
                 key={item.anchor}
                 href={`/${locale}/hizmetler#${item.anchor}`}
-                className="inline-flex items-center px-4 py-2 text-sm font-semibold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--yellow-accent)] hover:text-[var(--yellow-accent)] transition-colors"
+                className="inline-flex items-center px-4 py-2 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--yellow-accent)] hover:text-[var(--yellow-accent)] transition-colors"
               >
                 {item.label}
               </Link>

@@ -7,6 +7,7 @@ const ROUTES: { path: string; changeFrequency: 'weekly' | 'monthly'; priority: n
   { path: '/investor', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/developer',       changeFrequency: 'monthly', priority: 0.8 },
   { path: '/hizmetler',     changeFrequency: 'monthly', priority: 0.9 },
+  { path: '/teknik-on-degerlendirme', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/bilgi-merkezi', changeFrequency: 'monthly', priority: 0.9 },
 ];
 

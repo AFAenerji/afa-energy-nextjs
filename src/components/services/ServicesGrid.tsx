@@ -46,7 +46,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
               <ul className="space-y-2 mb-6">
                 {phase.deliverables.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm">
-                    <span className="shrink-0 mt-1 w-1.5 h-1.5 rounded-full bg-[var(--green-authority)]" />
+                    <span className={`shrink-0 mt-1 w-1.5 h-1.5 rounded-full ${phase.anchor === 'asama-2' ? 'afa-sky-dot' : 'bg-[var(--green-authority)]'}`} />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -61,7 +61,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
                   <dl className="space-y-2">
                     {phase.decisionInputs.map((input, idx) => (
                       <div key={idx} className="flex flex-col sm:flex-row sm:gap-3">
-                        <dt className="text-sm font-semibold shrink-0 sm:w-48">{input.label}</dt>
+                        <dt className="text-sm shrink-0 sm:w-48 afa-decision-label">{input.label}</dt>
                         <dd className="text-sm afa-text-body-muted">{input.value}</dd>
                       </div>
                     ))}

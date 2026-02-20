@@ -21,6 +21,13 @@
   --muted: #F5F5F5;
   --border: #E0E0E0;
 
+  /* AFA Corporate Palette */
+  --afa-deep: #18625F;
+  --afa-verdigris: #28AFB0;
+  --afa-sky: #4CC9F0;
+  --afa-yellow: #FFCB00;
+  --afa-risk: #F25F5C;
+
   /* Status Colors */
   --error: #F25F5C;
   --error-bg: #FFF5F5;
@@ -418,8 +425,48 @@ input:focus, select:focus, textarea:focus {
 .afa-text-body-muted {
   color: var(--text-muted);
 }
+.afa-methodology-title {
+  color: var(--afa-verdigris);
+}
+.afa-sky-accent {
+  color: var(--afa-sky);
+}
+.afa-sky-dot {
+  background: var(--afa-sky);
+}
+.afa-risk-keyword {
+  color: var(--afa-risk);
+  font-weight: 600;
+}
+.afa-decision-label {
+  color: var(--text-primary);
+  font-weight: 700;
+}
 
-/* 18. GRID TEXTURE — Closing section overlay */
+/* 18. FORM INPUTS — Technical Assessment Form */
+.afa-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.afa-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+.afa-input:focus {
+  border-color: var(--afa-yellow);
+}
+.afa-input option {
+  background: var(--green-deep);
+  color: #ffffff;
+}
+
+/* 19. GRID TEXTURE — Closing section overlay */
 .grid-texture {
   background-image:
     linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),

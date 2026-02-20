@@ -84,9 +84,9 @@ export const translations: Record<Locale, Translations> = {
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
-    addressLine1: 'Calea GRIVIȚEI Nr. 84–98',
-    addressLine2: 'THE MARK OFFICE, Floor 7',
-    addressLine3: 'Bucharest, Sector 1, Romania',
+    addressLine1: 'Strada NERVA TRAIAN, Nr. 27\u201333',
+    addressLine2: 'Bucure\u0219ti, Sector 3',
+    addressLine3: 'Romania',
     whyChoose: 'Why AFA Energy?',
     renewableEnergy: 'Renewable Energy',
     renewableEnergyDesc: 'Solar and wind energy solutions tailored to your needs.',
@@ -122,9 +122,9 @@ export const translations: Record<Locale, Translations> = {
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
-    addressLine1: 'Calea GRIVIȚEI Nr. 84–98',
-    addressLine2: 'THE MARK OFFICE, Etaj 7',
-    addressLine3: 'București, Sector 1, România',
+    addressLine1: 'Strada NERVA TRAIAN, Nr. 27\u201333',
+    addressLine2: 'Bucure\u0219ti, Sector 3',
+    addressLine3: 'România',
     whyChoose: 'De ce AFA Energy?',
     renewableEnergy: 'Energie Regenerabilă',
     renewableEnergyDesc: 'Soluții de energie solară și eoliană adaptate nevoilor dumneavoastră.',
@@ -167,9 +167,9 @@ export const translations: Record<Locale, Translations> = {
     
     // Company info
     companyName: 'AFA Energy Romania S.R.L.',
-    addressLine1: 'Calea GRIVIȚEI Nr. 84–98',
-    addressLine2: 'THE MARK OFFICE, Etaj 7',
-    addressLine3: 'Bucharest, Sector 1, Romania',
+    addressLine1: 'Strada NERVA TRAIAN, Nr. 27\u201333',
+    addressLine2: 'Bucure\u0219ti, Sector 3',
+    addressLine3: 'Romania',
     
     // Homepage content
     whyChoose: 'Neden AFA Energy?',
