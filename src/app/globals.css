@@ -418,7 +418,28 @@ input:focus, select:focus, textarea:focus {
   color: var(--yellow-accent);
 }
 
-/* 17. SERVICES PAGE — Component token classes */
+/* 17. SERVICES HERO — Gradient + Grid Overlay */
+.services-hero {
+  position: relative;
+  background: linear-gradient(135deg, #18625F 0%, #14523D 100%);
+  overflow: hidden;
+}
+.services-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.services-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 18. SERVICES PAGE — Component token classes */
 .afa-eyebrow {
   color: var(--green-authority);
 }

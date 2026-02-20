@@ -13,6 +13,7 @@ type ServicePhase = {
   description: string;
   deliverables: readonly string[];
   decisionInputs?: readonly DecisionInput[];
+  riskNotes?: readonly string[];
 };
 
 type Props = {
@@ -66,6 +67,23 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
                       </div>
                     ))}
                   </dl>
+                </div>
+              )}
+
+              {/* Mikro Risk Notları */}
+              {phase.riskNotes && phase.riskNotes.length > 0 && (
+                <div className="mt-6 rounded-lg border border-[var(--afa-risk)]/20 bg-[var(--afa-risk)]/[0.03] p-5">
+                  <p className="text-xs font-bold tracking-[0.15em] uppercase mb-3 afa-risk-keyword">
+                    Mikro Risk Notları
+                  </p>
+                  <ul className="space-y-1.5">
+                    {phase.riskNotes.map((note, idx) => (
+                      <li key={idx} className="flex items-start gap-2.5 text-sm">
+                        <span className="shrink-0 mt-1 w-1.5 h-1.5 rounded-full bg-[var(--afa-risk)]" />
+                        <span>{note}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
 

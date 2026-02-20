@@ -3,6 +3,7 @@ import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import ServicesHero from '@/components/services/ServicesHero';
 import MethodologyBlock from '@/components/services/MethodologyBlock';
 import ServicesGrid from '@/components/services/ServicesGrid';
+import RiskFramework from '@/components/services/RiskFramework';
 import TrustSection from '@/components/services/TrustSection';
 import CTASection from '@/components/services/CTASection';
 
@@ -13,82 +14,138 @@ const pageContent = {
   tr: {
     meta: {
       title: 'Hizmetler | ATR Analizi ve Yatırımcı Tarafı Teknik İnceleme | AFA Energy Romania',
-      description: 'Romanya yenilenebilir enerji projelerinde ATR Matrix™ metodolojisi ile grid feasibility ve bankability assessment hizmetleri.',
+      description: 'Romanya yenilenebilir enerji projelerinde ATR Matrix metodolojisi ile şebeke fizibilite analizi ve banka finansmanına uygunluk değerlendirmesi hizmetleri.',
     },
     hero: {
       title: 'Hizmetler',
-      subtitle: 'ATR Matrix™ metodolojisi ile yatırım öncesi teknik değerlendirme, şebeke fizibilite analizi ve banka finansmanına uygunluk raporlaması.',
+      subtitle: 'ATR Matrix metodolojisi ile yatırım öncesi teknik değerlendirme, şebeke fizibilite analizi ve banka finansmanına uygunluk raporlaması.',
     },
     navItems: [
-      { label: 'Aşama 1 — Ön Değerlendirme', anchor: 'asama-1' },
-      { label: 'Aşama 2 — Teknik Analiz', anchor: 'asama-2' },
-      { label: 'Aşama 3 — Raporlama', anchor: 'asama-3' },
+      { label: 'ATR Analizi', sub: 'Şebeke Uyum Değerlendirmesi', anchor: 'asama-1' },
+      { label: 'Teknik İnceleme', sub: 'Yatırımcı Tarafı Due Diligence', anchor: 'asama-2' },
+      { label: 'Operasyonel Denetim', sub: 'Performans Analizi', anchor: 'asama-3' },
     ],
     methodology: {
-      title: 'AFA ATR Matrix™ — Yatırım Öncesi Teknik Karar Filtresi',
+      title: 'AFA ATR Matrix — Yatırım Öncesi Teknik Karar Filtresi',
       description: 'Amaç, projenin yatırım açısından ilerlenebilir olup olmadığını erken aşamada netleştirmektir. Her değerlendirme üç temel sütun üzerine kuruludur.',
       pillars: [
         { id: 'TEKNİK DOĞRULAMA', title: 'Şebeke Kapasitesi ve Tahliye Analizi', description: 'Bağlantı noktasının mevcut yükü ile yeni projenin şebekeye tahliye edilebilirliğinin teknik açıdan değerlendirilmesi.' },
         { id: 'MEVZUAT UYUMU', title: 'Regülasyon ve İzin Kontrolü', description: 'Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması.' },
-        { id: 'FİNANSAL MODELLEME', title: 'Maliyet ve Risk Modelleme', description: 'Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, kısıntı ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi.' },
+        { id: 'FİNANSAL MODELLEME', title: 'Maliyet ve Risk Modelleme', description: 'Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, kısıntı (curtailment) ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi.' },
       ],
     },
     phases: [
       {
         id: 'phase-1',
         anchor: 'asama-1',
-        tag: 'AŞAMA 1',
-        title: 'Ön Teknik Değerlendirme (Pre-Screening)',
-        description: 'Projenin yatırım açısından ilerlenebilir olup olmadığını erken aşamada netleştiren hızlı teknik filtre. ATR durumu, şebeke kapasitesi ve temel regülasyon uyumu kontrol edilir.',
+        tag: 'HİZMET 1',
+        title: 'ATR Analizi ve Şebeke Uyum Değerlendirmesi',
+        description: 'Teknik Bağlantı Onayı (ATR) belgesinin geçerlilik kontrolü, şebeke kapasitesi ön değerlendirmesi ve ANRE mevzuatına uyum taraması. Projenin yatırım açısından ilerlenebilir olup olmadığını erken aşamada netleştirir.',
         deliverables: [
           'ATR belge durumu ve geçerlilik kontrolü',
           'Bağlantı noktası ön kapasite değerlendirmesi',
           'ANRE regülasyon uyumluluk taraması',
-          'İlerleme / Durdurma kararı için özet rapor',
+          'İlerlenebilirlik kararı için özet rapor',
         ],
         decisionInputs: [
           { label: 'ATR Durumu', value: 'Geçerli / Süresi dolmuş / Başvuru aşamasında' },
           { label: 'Kapasite Uyumu', value: 'Bağlantı noktası yeterli / Güçlendirme gerekli' },
         ],
+        riskNotes: [
+          'ATR belgesinin süresi dolmuş olabilir; yenileme süreci 6-12 ay sürebilir.',
+          'Bağlantı noktasındaki mevcut yük, yeni projeyi karşılayamayabilir.',
+          'ANRE mevzuat değişiklikleri izin sürecini etkileyebilir.',
+        ],
       },
       {
         id: 'phase-2',
         anchor: 'asama-2',
-        tag: 'AŞAMA 2',
-        title: 'Detaylı Teknik Analiz (Grid Feasibility)',
-        description: 'Şebeke bağlantı fizibilitesinin derinlemesine analizi. Curtailment riski, bağlantı maliyeti ve şebeke güçlendirme ihtiyacı modellenir.',
+        tag: 'HİZMET 2',
+        title: 'Yatırımcı Tarafı Teknik İnceleme',
+        description: 'Şebeke bağlantı fizibilitesinin (grid feasibility) derinlemesine analizi. Kısıntı riski (curtailment), bağlantı maliyeti ve şebeke güçlendirme ihtiyacı modellenir. Yatırımcı perspektifinden bağımsız teknik inceleme.',
         deliverables: [
           'Şebeke tahliye kapasitesi detaylı analizi',
-          'Curtailment risk modelleme ve senaryolar',
+          'Kısıntı riski (curtailment) modelleme ve senaryolar',
           'Bağlantı maliyeti kırılımı (hat, trafo, güçlendirme)',
           'Şebeke güçlendirme zaman çizelgesi',
           'Teknik risk matrisi',
         ],
         decisionInputs: [
-          { label: 'Curtailment Riski', value: 'Düşük / Orta / Yüksek — yıllık üretim kaybı projeksiyonu' },
+          { label: 'Kısıntı Riski', value: 'Düşük / Orta / Yüksek — yıllık üretim kaybı projeksiyonu' },
           { label: 'Bağlantı Maliyeti', value: 'Detaylı maliyet kırılımı ve bütçe etkisi' },
+        ],
+        riskNotes: [
+          'Şebeke güçlendirme maliyeti başlangıç tahmininin 2-3 katına çıkabilir.',
+          'Kısıntı oranı yıllık %5-15 arasında değişkenlik gösterebilir.',
+          'Güçlendirme zaman çizelgesi 18-36 ay gecikme riski taşır.',
+          'Komşu projelerin kümülatif etkisi kapasite hesabını değiştirebilir.',
         ],
       },
       {
         id: 'phase-3',
         anchor: 'asama-3',
-        tag: 'AŞAMA 3',
-        title: 'Banka Finansmanına Uygunluk Raporlaması',
-        description: 'Teknik bulguların banka finansmanına uygunluk kriterlerine göre yapılandırılmış raporlaması. IFC Performance Standards ve Equator Principles uyumlu format.',
+        tag: 'HİZMET 3',
+        title: 'Operasyonel Teknik Denetim ve Performans Analizi',
+        description: 'Teknik bulguların banka finansmanına uygunluk kriterlerine göre yapılandırılmış raporlaması. IFC Performans Standartları ve Ekvator Prensipleri uyumlu format. Operasyonel performans denetimi ve optimizasyon önerileri.',
         deliverables: [
           'Banka finansmanına uygunluk değerlendirme raporu',
-          'DSCR projeksiyonlarına teknik girdi',
+          'Borç Servis Karşılama Oranı (DSCR) projeksiyonlarına teknik girdi',
           'Risk matrisi ve azaltma önerileri',
           'Arazi ve izin belgelerinin teknik tutarlılık kontrolü',
           'Yatırım komitesi sunum paketi',
         ],
         decisionInputs: [
-          { label: 'Finansman Uygunluk Skoru', value: 'Uygun / Koşullu uygun / Uygun değil' },
+          { label: 'Finansman Uygunluk Skoru', value: 'İlerlenebilir / Koşullu İlerlenebilir / Bu Aşamada İlerlenemez' },
           { label: 'DSCR Etkisi', value: 'Teknik risklerin DSCR projeksiyonuna etkisi' },
+        ],
+        riskNotes: [
+          'Arazi izinlerindeki tutarsızlıklar finansman sürecini durdurabilir.',
+          'Teknik varsayımlar ile gerçek performans arasında sapma olabilir.',
+          'Çevresel etki değerlendirmesi eksiklikleri ek maliyet yaratabilir.',
         ],
       },
     ],
     ctaLabel: 'Teknik Ön Değerlendirme Talebi',
+    riskFramework: {
+      title: 'Merkezi Risk ve Varsayım Çerçevesi',
+      decisionTerms: {
+        title: 'Karar Terminolojisi',
+        terms: [
+          { label: 'İlerlenebilir', description: 'Teknik açıdan yatırım kararına devam edilebilir. Kritik risk unsuru tespit edilmemiştir.' },
+          { label: 'Koşullu İlerlenebilir', description: 'Belirli koşulların sağlanması kaydıyla ilerlenebilir. Koşullar raporda açıkça belirtilir.' },
+          { label: 'Bu Aşamada İlerlenemez', description: 'Mevcut teknik veriler ışığında yatırım kararı için yeterli güvence oluşmamaktadır.' },
+        ],
+      },
+      blocks: [
+        {
+          title: 'Çalışma Varsayımları',
+          items: [
+            'Değerlendirmeler, müşteri tarafından sağlanan verilere dayanır.',
+            'Şebeke operatörü (Transelectrica / Distribuție) verileri referans alınır.',
+            'Piyasa fiyat projeksiyonları bağımsız kaynaklardan doğrulanır.',
+            'Regülasyon çerçevesi değerlendirme tarihi itibarıyla geçerli olan mevzuata dayanır.',
+          ],
+        },
+        {
+          title: 'Kapsam Sınırları',
+          items: [
+            'Çevresel etki değerlendirmesi (ÇED) bu kapsamda yer almaz.',
+            'Hukuki due diligence ayrı bir iş kalemi olarak değerlendirilir.',
+            'Ekipman tedarik ve EPC ihale süreçleri kapsam dışıdır.',
+            'Arazi mülkiyet doğrulaması teknik tutarlılık kontrolü ile sınırlıdır.',
+          ],
+        },
+        {
+          title: 'Risk Yaklaşımı',
+          items: [
+            'Tüm riskler nicel ve nitel olarak sınıflandırılır.',
+            'Her risk için olasılık ve etki değerlendirmesi yapılır.',
+            'Azaltma önerileri somut ve uygulanabilir formatta sunulur.',
+            'Risk matrisi yatırım komitesi formatına uygun olarak hazırlanır.',
+          ],
+        },
+      ],
+    },
     trust: {
       title: 'Bağımsızlık ve Satıcı Tarafsızlığı',
       statements: [
@@ -107,33 +164,33 @@ const pageContent = {
   en: {
     meta: {
       title: 'Services | ATR Analysis & Investor-Side Technical Review | AFA Energy Romania',
-      description: 'Grid feasibility and bankability assessment services for renewable energy projects in Romania using the ATR Matrix™ methodology.',
+      description: 'Grid feasibility and bankability assessment services for renewable energy projects in Romania using the ATR Matrix methodology.',
     },
     hero: {
       title: 'Services',
-      subtitle: 'Pre-investment technical assessment, grid feasibility analysis, and bank-financeable reporting using the ATR Matrix™ methodology.',
+      subtitle: 'Pre-investment technical assessment, grid feasibility analysis, and bank-financeable reporting using the ATR Matrix methodology.',
     },
     navItems: [
-      { label: 'Phase 1 — Pre-Screening', anchor: 'asama-1' },
-      { label: 'Phase 2 — Technical Analysis', anchor: 'asama-2' },
-      { label: 'Phase 3 — Reporting', anchor: 'asama-3' },
+      { label: 'ATR Analysis', sub: 'Grid Compliance Assessment', anchor: 'asama-1' },
+      { label: 'Technical Review', sub: 'Investor-Side Due Diligence', anchor: 'asama-2' },
+      { label: 'Operational Audit', sub: 'Performance Analysis', anchor: 'asama-3' },
     ],
     methodology: {
-      title: 'AFA ATR Matrix™ — Pre-Investment Technical Decision Filter',
+      title: 'AFA ATR Matrix — Pre-Investment Technical Decision Filter',
       description: 'The goal is to clarify early whether a project is viable from an investment perspective. Each assessment is built on three core pillars.',
       pillars: [
-        { id: 'PILLAR 1', title: 'Grid Capacity & Evacuation Analysis', description: 'Technical assessment of the connection point\'s existing load and the new project\'s grid evacuation feasibility.' },
-        { id: 'PILLAR 2', title: 'Regulation & Permit Verification', description: 'Verification of Technical Connection Approval (ATR) and related permits\' validity periods and ANRE regulatory compliance.' },
-        { id: 'PILLAR 3', title: 'Cost & Risk Modeling', description: 'Verification of connection cost technical scope; making grid reinforcement, curtailment, and delay risks visible in the investment budget.' },
+        { id: 'TECHNICAL VALIDATION', title: 'Grid Capacity & Evacuation Analysis', description: 'Technical assessment of the connection point\'s existing load and the new project\'s grid evacuation feasibility.' },
+        { id: 'REGULATORY COMPLIANCE', title: 'Regulation & Permit Verification', description: 'Verification of Technical Connection Approval (ATR) and related permits\' validity periods and ANRE regulatory compliance.' },
+        { id: 'FINANCIAL MODELING', title: 'Cost & Risk Modeling', description: 'Verification of connection cost technical scope; making grid reinforcement, curtailment, and delay risks visible in the investment budget.' },
       ],
     },
     phases: [
       {
         id: 'phase-1',
         anchor: 'asama-1',
-        tag: 'PHASE 1',
-        title: 'Pre-Technical Screening',
-        description: 'A rapid technical filter to clarify early whether a project is viable from an investment perspective. ATR status, grid capacity, and basic regulatory compliance are checked.',
+        tag: 'SERVICE 1',
+        title: 'ATR Analysis & Grid Compliance Assessment',
+        description: 'Technical Connection Approval (ATR) document validity check, grid capacity pre-assessment, and ANRE regulatory compliance scan. Clarifies early whether a project is investable.',
         deliverables: [
           'ATR document status and validity check',
           'Connection point preliminary capacity assessment',
@@ -144,13 +201,18 @@ const pageContent = {
           { label: 'ATR Status', value: 'Valid / Expired / Application stage' },
           { label: 'Capacity Fit', value: 'Connection point sufficient / Reinforcement needed' },
         ],
+        riskNotes: [
+          'ATR document may have expired; renewal process can take 6-12 months.',
+          'Existing load at connection point may not accommodate the new project.',
+          'ANRE regulatory changes may affect the permitting process.',
+        ],
       },
       {
         id: 'phase-2',
         anchor: 'asama-2',
-        tag: 'PHASE 2',
-        title: 'Detailed Technical Analysis (Grid Feasibility)',
-        description: 'In-depth analysis of grid connection feasibility. Curtailment risk, connection cost, and grid reinforcement needs are modeled.',
+        tag: 'SERVICE 2',
+        title: 'Investor-Side Technical Review',
+        description: 'In-depth grid connection feasibility analysis. Curtailment risk, connection cost, and grid reinforcement needs are modeled. Independent technical review from the investor perspective.',
         deliverables: [
           'Grid evacuation capacity detailed analysis',
           'Curtailment risk modeling and scenarios',
@@ -162,13 +224,19 @@ const pageContent = {
           { label: 'Curtailment Risk', value: 'Low / Medium / High — annual production loss projection' },
           { label: 'Connection Cost', value: 'Detailed cost breakdown and budget impact' },
         ],
+        riskNotes: [
+          'Grid reinforcement cost may escalate 2-3x beyond initial estimates.',
+          'Curtailment rate may vary between 5-15% annually.',
+          'Reinforcement timeline carries 18-36 month delay risk.',
+          'Cumulative impact of neighboring projects may alter capacity calculations.',
+        ],
       },
       {
         id: 'phase-3',
         anchor: 'asama-3',
-        tag: 'PHASE 3',
-        title: 'Bankability Reporting',
-        description: 'Structured reporting of technical findings per bank financing eligibility criteria. IFC Performance Standards and Equator Principles compliant format.',
+        tag: 'SERVICE 3',
+        title: 'Operational Technical Audit & Performance Analysis',
+        description: 'Structured reporting of technical findings per bank financing eligibility criteria. IFC Performance Standards and Equator Principles compliant format. Operational performance audit and optimization recommendations.',
         deliverables: [
           'Bank financing eligibility assessment report',
           'Technical input for DSCR projections',
@@ -177,12 +245,57 @@ const pageContent = {
           'Investment committee presentation package',
         ],
         decisionInputs: [
-          { label: 'Bankability Score', value: 'Eligible / Conditionally eligible / Not eligible' },
+          { label: 'Financing Eligibility Score', value: 'Proceed / Conditionally Proceed / Cannot Proceed at This Stage' },
           { label: 'DSCR Impact', value: 'Impact of technical risks on DSCR projections' },
+        ],
+        riskNotes: [
+          'Land permit inconsistencies may halt the financing process.',
+          'Deviation between technical assumptions and actual performance is possible.',
+          'Environmental impact assessment gaps may create additional costs.',
         ],
       },
     ],
     ctaLabel: 'Request Technical Pre-Assessment',
+    riskFramework: {
+      title: 'Central Risk & Assumption Framework',
+      decisionTerms: {
+        title: 'Decision Terminology',
+        terms: [
+          { label: 'Proceed', description: 'Technically viable for investment decision. No critical risk factors identified.' },
+          { label: 'Conditionally Proceed', description: 'May proceed subject to specific conditions being met. Conditions are clearly stated in the report.' },
+          { label: 'Cannot Proceed at This Stage', description: 'Current technical data does not provide sufficient assurance for an investment decision.' },
+        ],
+      },
+      blocks: [
+        {
+          title: 'Working Assumptions',
+          items: [
+            'Assessments are based on data provided by the client.',
+            'Grid operator (Transelectrica / Distribution) data is used as reference.',
+            'Market price projections are verified from independent sources.',
+            'Regulatory framework is based on legislation valid as of the assessment date.',
+          ],
+        },
+        {
+          title: 'Scope Boundaries',
+          items: [
+            'Environmental impact assessment (EIA) is not included in this scope.',
+            'Legal due diligence is treated as a separate work item.',
+            'Equipment procurement and EPC tender processes are out of scope.',
+            'Land ownership verification is limited to technical consistency checks.',
+          ],
+        },
+        {
+          title: 'Risk Approach',
+          items: [
+            'All risks are classified quantitatively and qualitatively.',
+            'Probability and impact assessment is performed for each risk.',
+            'Mitigation recommendations are presented in actionable format.',
+            'Risk matrix is prepared in investment committee-ready format.',
+          ],
+        },
+      ],
+    },
     trust: {
       title: 'Independence & Vendor Neutrality',
       statements: [
@@ -201,33 +314,33 @@ const pageContent = {
   ro: {
     meta: {
       title: 'Servicii | Analiză ATR și Revizuire Tehnică din Partea Investitorului | AFA Energy Romania',
-      description: 'Servicii de fezabilitate a rețelei și evaluare a bancabilității pentru proiecte de energie regenerabilă în România folosind metodologia ATR Matrix™.',
+      description: 'Servicii de fezabilitate a rețelei și evaluare a bancabilității pentru proiecte de energie regenerabilă în România folosind metodologia ATR Matrix.',
     },
     hero: {
       title: 'Servicii',
-      subtitle: 'Evaluare tehnică pre-investiție, analiză de fezabilitate a rețelei și raportare conformă cu finanțarea bancară folosind metodologia ATR Matrix™.',
+      subtitle: 'Evaluare tehnică pre-investiție, analiză de fezabilitate a rețelei și raportare conformă cu finanțarea bancară folosind metodologia ATR Matrix.',
     },
     navItems: [
-      { label: 'Faza 1 — Pre-Screening', anchor: 'asama-1' },
-      { label: 'Faza 2 — Analiză Tehnică', anchor: 'asama-2' },
-      { label: 'Faza 3 — Raportare', anchor: 'asama-3' },
+      { label: 'Analiză ATR', sub: 'Evaluare Conformitate Rețea', anchor: 'asama-1' },
+      { label: 'Revizuire Tehnică', sub: 'Due Diligence Investitor', anchor: 'asama-2' },
+      { label: 'Audit Operațional', sub: 'Analiză Performanță', anchor: 'asama-3' },
     ],
     methodology: {
-      title: 'AFA ATR Matrix™ — Filtru de Decizie Tehnică Pre-Investiție',
+      title: 'AFA ATR Matrix — Filtru de Decizie Tehnică Pre-Investiție',
       description: 'Scopul este de a clarifica din timp dacă un proiect este viabil din perspectiva investiției. Fiecare evaluare este construită pe trei piloni fundamentali.',
       pillars: [
-        { id: 'PILON 1', title: 'Analiza Capacității Rețelei și Evacuării', description: 'Evaluarea tehnică a sarcinii existente a punctului de conectare și a fezabilității evacuării în rețea a noului proiect.' },
-        { id: 'PILON 2', title: 'Verificarea Reglementărilor și Autorizațiilor', description: 'Verificarea Avizului Tehnic de Racordare (ATR) și a perioadelor de valabilitate ale autorizațiilor conexe și conformitatea cu reglementările ANRE.' },
-        { id: 'PILON 3', title: 'Modelarea Costurilor și Riscurilor', description: 'Verificarea domeniului tehnic al costurilor de conectare; vizibilizarea riscurilor de întărire a rețelei, curtailment și întârziere în bugetul de investiții.' },
+        { id: 'VALIDARE TEHNICĂ', title: 'Analiza Capacității Rețelei și Evacuării', description: 'Evaluarea tehnică a sarcinii existente a punctului de conectare și a fezabilității evacuării în rețea a noului proiect.' },
+        { id: 'CONFORMITATE REGLEMENTARĂ', title: 'Verificarea Reglementărilor și Autorizațiilor', description: 'Verificarea Avizului Tehnic de Racordare (ATR) și a perioadelor de valabilitate ale autorizațiilor conexe și conformitatea cu reglementările ANRE.' },
+        { id: 'MODELARE FINANCIARĂ', title: 'Modelarea Costurilor și Riscurilor', description: 'Verificarea domeniului tehnic al costurilor de conectare; vizibilizarea riscurilor de întărire a rețelei, curtailment și întârziere în bugetul de investiții.' },
       ],
     },
     phases: [
       {
         id: 'phase-1',
         anchor: 'asama-1',
-        tag: 'FAZA 1',
-        title: 'Pre-Screening Tehnic',
-        description: 'Un filtru tehnic rapid pentru a clarifica din timp dacă un proiect este viabil din perspectiva investiției. Se verifică statutul ATR, capacitatea rețelei și conformitatea reglementară de bază.',
+        tag: 'SERVICIU 1',
+        title: 'Analiză ATR și Evaluare Conformitate Rețea',
+        description: 'Verificarea valabilității documentului Aviz Tehnic de Racordare (ATR), pre-evaluarea capacității rețelei și scanarea conformității cu reglementările ANRE.',
         deliverables: [
           'Verificarea statutului și valabilității documentului ATR',
           'Evaluarea preliminară a capacității punctului de conectare',
@@ -238,12 +351,17 @@ const pageContent = {
           { label: 'Statut ATR', value: 'Valid / Expirat / În faza de aplicare' },
           { label: 'Potrivire Capacitate', value: 'Punct de conectare suficient / Întărire necesară' },
         ],
+        riskNotes: [
+          'Documentul ATR poate fi expirat; procesul de reînnoire poate dura 6-12 luni.',
+          'Sarcina existentă la punctul de conectare poate fi insuficientă.',
+          'Modificările reglementărilor ANRE pot afecta procesul de autorizare.',
+        ],
       },
       {
         id: 'phase-2',
         anchor: 'asama-2',
-        tag: 'FAZA 2',
-        title: 'Analiză Tehnică Detaliată (Fezabilitate Rețea)',
+        tag: 'SERVICIU 2',
+        title: 'Revizuire Tehnică din Partea Investitorului',
         description: 'Analiză aprofundată a fezabilității conectării la rețea. Se modelează riscul de curtailment, costul de conectare și necesitățile de întărire a rețelei.',
         deliverables: [
           'Analiză detaliată a capacității de evacuare în rețea',
@@ -256,12 +374,18 @@ const pageContent = {
           { label: 'Risc Curtailment', value: 'Scăzut / Mediu / Ridicat — proiecția pierderii anuale de producție' },
           { label: 'Cost Conectare', value: 'Defalcare detaliată a costurilor și impactul bugetar' },
         ],
+        riskNotes: [
+          'Costul de întărire a rețelei poate crește de 2-3 ori față de estimarea inițială.',
+          'Rata de curtailment poate varia între 5-15% anual.',
+          'Cronologia întăririi prezintă risc de întârziere de 18-36 luni.',
+          'Impactul cumulativ al proiectelor vecine poate modifica calculele de capacitate.',
+        ],
       },
       {
         id: 'phase-3',
         anchor: 'asama-3',
-        tag: 'FAZA 3',
-        title: 'Raportare Bancabilitate',
+        tag: 'SERVICIU 3',
+        title: 'Audit Tehnic Operațional și Analiză de Performanță',
         description: 'Raportare structurată a constatărilor tehnice conform criteriilor de eligibilitate pentru finanțare bancară. Format conform IFC Performance Standards și Equator Principles.',
         deliverables: [
           'Raport de evaluare a eligibilității pentru finanțare bancară',
@@ -271,12 +395,57 @@ const pageContent = {
           'Pachet de prezentare pentru comitetul de investiții',
         ],
         decisionInputs: [
-          { label: 'Scor Bancabilitate', value: 'Eligibil / Eligibil condiționat / Neeligibil' },
+          { label: 'Scor Eligibilitate', value: 'Se poate continua / Continuare condiționată / Nu se poate continua în această etapă' },
           { label: 'Impact DSCR', value: 'Impactul riscurilor tehnice asupra proiecțiilor DSCR' },
+        ],
+        riskNotes: [
+          'Inconsistențele în autorizațiile de teren pot bloca procesul de finanțare.',
+          'Poate exista o abatere între ipotezele tehnice și performanța reală.',
+          'Lacunele în evaluarea impactului de mediu pot genera costuri suplimentare.',
         ],
       },
     ],
     ctaLabel: 'Solicitați Evaluare Tehnică Preliminară',
+    riskFramework: {
+      title: 'Cadrul Central de Risc și Ipoteze',
+      decisionTerms: {
+        title: 'Terminologie Decizională',
+        terms: [
+          { label: 'Se poate continua', description: 'Viabil din punct de vedere tehnic pentru decizia de investiție. Nu au fost identificați factori de risc critici.' },
+          { label: 'Continuare condiționată', description: 'Se poate continua sub rezerva îndeplinirii condițiilor specifice. Condițiile sunt clar precizate în raport.' },
+          { label: 'Nu se poate continua în această etapă', description: 'Datele tehnice actuale nu oferă suficientă asigurare pentru o decizie de investiție.' },
+        ],
+      },
+      blocks: [
+        {
+          title: 'Ipoteze de Lucru',
+          items: [
+            'Evaluările se bazează pe datele furnizate de client.',
+            'Datele operatorului de rețea (Transelectrica / Distribuție) sunt utilizate ca referință.',
+            'Proiecțiile prețurilor de piață sunt verificate din surse independente.',
+            'Cadrul de reglementare se bazează pe legislația valabilă la data evaluării.',
+          ],
+        },
+        {
+          title: 'Limite de Domeniu',
+          items: [
+            'Evaluarea impactului asupra mediului (EIM) nu este inclusă în acest domeniu.',
+            'Due diligence juridic este tratat ca un element de lucru separat.',
+            'Procesele de achiziție echipamente și licitații EPC sunt în afara domeniului.',
+            'Verificarea proprietății terenului se limitează la verificări de consistență tehnică.',
+          ],
+        },
+        {
+          title: 'Abordarea Riscului',
+          items: [
+            'Toate riscurile sunt clasificate cantitativ și calitativ.',
+            'Se efectuează evaluarea probabilității și impactului pentru fiecare risc.',
+            'Recomandările de atenuare sunt prezentate în format acționabil.',
+            'Matricea de risc este pregătită în format compatibil cu comitetul de investiții.',
+          ],
+        },
+      ],
+    },
     trust: {
       title: 'Independență și Neutralitate față de Furnizori',
       statements: [
@@ -361,6 +530,12 @@ export default async function HizmetlerPage({ params }: HizmetlerPageProps) {
         locale={locale}
         phases={content.phases}
         ctaLabel={content.ctaLabel}
+      />
+
+      <RiskFramework
+        title={content.riskFramework.title}
+        decisionTerms={content.riskFramework.decisionTerms}
+        blocks={content.riskFramework.blocks}
       />
 
       <TrustSection

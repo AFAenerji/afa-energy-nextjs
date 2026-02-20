@@ -75,6 +75,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [hp, setHp] = useState('');
 
   const totalSteps = 3;
 
@@ -128,21 +129,19 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
     setSubmitting(true);
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/submit-assessment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
           company: form.company,
-          role: 'technical-assessment',
+          atrStatus: form.atrStatus,
+          capacity: form.capacity,
+          projectPhase: form.projectPhase,
+          dataReady: form.dataReady,
           locale,
-          message: [
-            `ATR: ${form.atrStatus}`,
-            `Kapasite: ${form.capacity} MW`,
-            `Aşama: ${form.projectPhase}`,
-            `Veri Hazır: ${form.dataReady}`,
-          ].join('\n'),
+          _hp: hp,
         }),
       });
 
@@ -219,6 +218,12 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
         {step === 0 && (
           <fieldset className="space-y-5">
             <legend className="text-lg font-bold text-white mb-2">{content.step1.title}</legend>
+
+            {/* Honeypot */}
+            <div className="sr-only" aria-hidden="true">
+              <label htmlFor="_hp">Leave empty</label>
+              <input id="_hp" type="text" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" />
+            </div>
 
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-white/80 mb-1.5">

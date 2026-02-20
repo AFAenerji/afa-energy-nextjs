@@ -4,12 +4,12 @@ type Props = {
   locale: string;
   title: string;
   subtitle: string;
-  navItems: readonly { label: string; anchor: string }[];
+  navItems: readonly { label: string; sub: string; anchor: string }[];
 };
 
 export default function ServicesHero({ locale, title, subtitle, navItems }: Props) {
   return (
-    <section className="w-full dark-section pt-16 pb-12 lg:pt-20 lg:pb-16">
+    <section className="w-full services-hero pt-16 pb-12 lg:pt-20 lg:pb-16">
       <div className="afa-container">
         {/* Bridge accent */}
         <div className="mb-8" aria-hidden="true">
@@ -20,20 +20,25 @@ export default function ServicesHero({ locale, title, subtitle, navItems }: Prop
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
           {title}
         </h1>
-        <p className="mt-4 text-base md:text-lg afa-text-secondary max-w-3xl">
+        <p className="mt-4 text-base md:text-lg text-white/70 max-w-3xl">
           {subtitle}
         </p>
 
-        {/* Quick nav buttons */}
+        {/* Quick nav buttons — two-line structure */}
         {navItems.length > 0 && (
-          <nav className="mt-8 flex flex-wrap gap-3" aria-label="Service phases">
+          <nav className="mt-10 flex flex-wrap gap-4" aria-label="Service phases">
             {navItems.map((item) => (
               <Link
                 key={item.anchor}
                 href={`/${locale}/hizmetler#${item.anchor}`}
-                className="inline-flex items-center px-4 py-2 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--yellow-accent)] hover:text-[var(--yellow-accent)] transition-colors"
+                className="flex flex-col px-5 py-3 rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] transition-colors group"
               >
-                {item.label}
+                <span className="text-[14px] font-[800] leading-tight tracking-tight">
+                  {item.label}
+                </span>
+                <span className="text-[12px] font-[600] leading-tight mt-0.5 text-white/70 group-hover:text-white/90 transition-colors">
+                  {item.sub}
+                </span>
               </Link>
             ))}
           </nav>
