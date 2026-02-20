@@ -6,6 +6,7 @@ const ROUTES: { path: string; changeFrequency: 'weekly' | 'monthly'; priority: n
   { path: '/contact',  changeFrequency: 'monthly', priority: 0.7 },
   { path: '/investor', changeFrequency: 'monthly', priority: 0.8 },
   { path: '/developer',       changeFrequency: 'monthly', priority: 0.8 },
+  { path: '/hizmetler',     changeFrequency: 'monthly', priority: 0.9 },
   { path: '/bilgi-merkezi', changeFrequency: 'monthly', priority: 0.9 },
 ];
 

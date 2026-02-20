@@ -6,7 +6,7 @@ export const siteConfig = {
   ogImage: `${SITE_URL}/images/og-image.jpg`,
   locales: ['tr', 'en', 'ro'] as const,
   defaultLocale: 'tr' as const,
-  pages: ['/', '/contact', '/investor', '/developer', '/bilgi-merkezi'],
+  pages: ['/', '/contact', '/investor', '/developer', '/hizmetler', '/bilgi-merkezi'],
 };
 
 export const seoTranslations = {

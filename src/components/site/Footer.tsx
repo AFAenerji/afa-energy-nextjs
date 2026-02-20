@@ -13,7 +13,7 @@ export default function Footer({ locale }: FooterProps) {
     { key: 'home', path: '/' },
     { key: 'investorGate', path: '/investor' },
     { key: 'developerArea', path: '/developer' },
-    { key: 'services', path: '/services' },
+    { key: 'services', path: '/hizmetler' },
     { key: 'cases', path: '/cases' },
     { key: 'about', path: '/about' },
     { key: 'knowledgeCenter', path: '/bilgi-merkezi' },

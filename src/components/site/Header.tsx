@@ -63,7 +63,7 @@ export default function Header({ locale }: HeaderProps) {
                 {t('developer')}
               </button>
               <button
-                onClick={() => handleNavigation('/services')}
+                onClick={() => handleNavigation('/hizmetler')}
                 className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
               >
                 {t('services')}

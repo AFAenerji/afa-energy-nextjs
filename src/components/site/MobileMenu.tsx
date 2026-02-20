@@ -93,7 +93,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
             {servicesOpen && (
               <div className="mt-2 ml-4 space-y-2">
                 <button
-                  onClick={() => handleNavigation('/services/technical')}
+                  onClick={() => handleNavigation('/hizmetler')}
                   className="text-white/90 hover:opacity-100 text-left w-full"
                 >
                   {t('technicalServices')}
