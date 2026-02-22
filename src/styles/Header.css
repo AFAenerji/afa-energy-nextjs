@@ -1,0 +1,239 @@
+/* ============================================================
+   AFA ENERGY — Header Component Styles
+   Core Header Styling Refresh
+   ============================================================ */
+
+/* ── 1. Grid Layout ── */
+
+/* 3-column grid: Logo | Nav | Right controls */
+.afa-header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 72px;
+  gap: 24px;
+}
+
+/* ── 2. Left: Brand ── */
+
+.afa-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── 3. Center: Navigation ── */
+
+.afa-nav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Base nav link */
+.afa-nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 16px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #0B1F1E;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: none;
+}
+
+.afa-nav__link:hover {
+  color: var(--afa-deep, #18625F);
+}
+
+/* Active state */
+.afa-nav__link--active {
+  color: var(--afa-deep, #18625F);
+  border-bottom-color: var(--afa-deep, #18625F);
+}
+
+/* Tab variants — no resting border, fill on hover/active */
+.afa-nav__link--tab-investor {
+  border-color: transparent;
+}
+
+.afa-nav__link--tab-investor:hover,
+.afa-nav__link--tab-investor.afa-nav__link--active {
+  background-color: var(--afa-verdigris, #28AFB0);
+  color: #FFFFFF;
+}
+
+.afa-nav__link--tab-developer {
+  border-color: transparent;
+}
+
+.afa-nav__link--tab-developer:hover,
+.afa-nav__link--tab-developer.afa-nav__link--active {
+  background-color: var(--afa-yellow, #FFCB00);
+  color: #0B1F1E;
+}
+
+/* Disabled state */
+.afa-nav__link--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── 4. Right: Actions ── */
+
+.afa-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Language Switcher — Segmented Control */
+.afa-lang-switcher {
+  display: none;
+  align-items: center;
+  height: 36px;
+  border: 1px solid var(--border, #E0E0E0);
+  border-radius: 4px;
+  padding: 2px;
+  background: var(--white, #FFFFFF);
+}
+
+.afa-lang-switcher__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  border-radius: 2px;
+  background: transparent;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.afa-lang-switcher__btn:hover {
+  color: var(--afa-deep, #18625F);
+}
+
+.afa-lang-switcher__btn--active {
+  background-color: var(--afa-deep, #18625F);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* Contact CTA — hidden by default (mobile), shown at breakpoint */
+.afa-header__cta {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 20px;
+  border: 2px solid var(--afa-deep, #18625F);
+  border-radius: 4px;
+  background-color: var(--afa-deep, #18625F);
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.afa-header__cta:hover {
+  background-color: #FFFFFF;
+  color: var(--afa-deep, #18625F);
+}
+
+/* Mobile toggle — shown by default, hidden at breakpoint */
+.afa-header__mobile-toggle {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #0B1F1E;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── 5. Responsive Breakpoints ── */
+
+/*
+ * Default breakpoint: 960px (TR, EN)
+ * Desktop nav, lang switcher, CTA visible; hamburger hidden.
+ */
+@media (min-width: 960px) {
+  .afa-nav {
+    display: flex;
+  }
+
+  .afa-lang-switcher {
+    display: flex;
+  }
+
+  .afa-header__cta {
+    display: inline-flex;
+  }
+
+  .afa-header__mobile-toggle {
+    display: none;
+  }
+}
+
+/*
+ * Romanian override: longer labels need more room.
+ * Re-hide desktop elements between 960–1023px, show hamburger instead.
+ */
+html[lang="ro"] .afa-nav {
+  display: none;
+  gap: 20px;
+}
+
+html[lang="ro"] .afa-lang-switcher {
+  display: none;
+}
+
+html[lang="ro"] .afa-header__cta {
+  display: none;
+}
+
+html[lang="ro"] .afa-header__mobile-toggle {
+  display: flex;
+}
+
+html[lang="ro"] .afa-nav__link--tab {
+  min-width: 130px;
+}
+
+@media (min-width: 1024px) {
+  html[lang="ro"] .afa-nav {
+    display: flex;
+  }
+
+  html[lang="ro"] .afa-lang-switcher {
+    display: flex;
+  }
+
+  html[lang="ro"] .afa-header__cta {
+    display: inline-flex;
+  }
+
+  html[lang="ro"] .afa-header__mobile-toggle {
+    display: none;
+  }
+}

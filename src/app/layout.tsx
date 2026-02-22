@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import { ThemeProvider } from '@/components/providers/ThemeProvider';
-import OrganizationSchema from '@/components/seo/OrganizationSchema';
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,14 +16,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="tr" suppressHydrationWarning>
-      <body className="page-light">
-        <OrganizationSchema />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+  return children;
 }

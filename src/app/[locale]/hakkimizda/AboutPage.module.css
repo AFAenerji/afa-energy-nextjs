@@ -1,0 +1,325 @@
+/* ============================================================
+   AFA ENERGY — About (Hakkımızda) Page Module
+   Audit Aesthetic • v10.2 Investment Committee Standard
+   No box-shadows, opacity-only transitions, CSS-only checkmarks
+   ============================================================ */
+
+/* ── Page wrapper ── */
+.aboutPage {
+  background: #FFFFFF;
+  color: var(--afa-text, #1A1A1A);
+}
+
+/* ── Hero ── */
+.hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(24, 98, 95, 0.02) 0%, transparent 100%);
+}
+
+.motto {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--afa-accent, #FFCB00);
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--afa-primary, #18625F);
+}
+
+.heroSubtitle {
+  color: var(--afa-muted, #666666);
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* CSS-only checkbox checkmarks */
+.heroKeys {
+  list-style: none;
+  padding: 0;
+  margin: 40px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heroKey {
+  position: relative;
+  padding-left: 28px;
+  text-align: left;
+}
+
+.heroKey::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--afa-accent, #FFCB00);
+  border-radius: 3px;
+}
+
+.heroKey::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid var(--afa-accent, #FFCB00);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 56px;
+  }
+}
+
+/* ── Value Statement ── */
+.valueStatement {
+  background: var(--afa-primary, #18625F);
+  padding: 60px 0;
+}
+
+.valueSlogan {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ── Model Section ── */
+.modelSection {
+  padding: 72px 0;
+}
+
+.modelSection h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--afa-text, #1A1A1A);
+  margin-bottom: 32px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--afa-primary, #18625F);
+  margin-bottom: 8px;
+}
+
+/* Manifesto Box — left accent border */
+.manifestoBox {
+  border-left: 4px solid var(--afa-accent, #FFCB00);
+  background: var(--afa-bg-light, #F8FAFC);
+  padding: 36px;
+  margin: 40px 0;
+}
+
+.manifestoBox h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--afa-primary, #18625F);
+  margin-bottom: 12px;
+}
+
+.manifestoBox p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--afa-text, #1A1A1A);
+  margin: 0;
+}
+
+/* ATR Matrix Box */
+.atrMatrixBox {
+  border: 1px solid var(--afa-border, #E0E0E0);
+  border-radius: var(--radius, 4px);
+  padding: 32px;
+  background: var(--afa-bg-light, #F8FAFC);
+}
+
+.atrMatrixBox h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--afa-text, #1A1A1A);
+  margin-bottom: 20px;
+}
+
+.atrOutcome h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--afa-muted, #666666);
+  margin-bottom: 16px;
+}
+
+.outcomeList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.outcomeList li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: var(--afa-text, #1A1A1A);
+  line-height: 1.5;
+}
+
+/* Outcome tags — muted transparent backgrounds */
+.outcomeTag {
+  display: inline-block;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.green {
+  background: rgba(24, 98, 95, 0.1);
+  color: var(--afa-primary, #18625F);
+}
+
+.yellow {
+  background: rgba(255, 203, 0, 0.1);
+  color: #B8860B;
+}
+
+.gray {
+  background: #F5F5F5;
+  color: #666666;
+}
+
+@media (max-width: 768px) {
+  .modelSection {
+    padding: 48px 0;
+  }
+  .manifestoBox,
+  .atrMatrixBox {
+    padding: 24px;
+  }
+}
+
+/* ── Team Section ── */
+.teamSection {
+  padding: 72px 0;
+  background: var(--afa-bg-light, #F8FAFC);
+}
+
+.teamSection h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--afa-text, #1A1A1A);
+  margin-bottom: 32px;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.teamCard {
+  border: 1px solid var(--afa-border, #E0E0E0);
+  border-radius: var(--radius, 4px);
+  overflow: hidden;
+  background: #FFFFFF;
+  transition: border-color 0.3s ease;
+}
+
+.teamCard:hover {
+  border-color: var(--afa-primary, #18625F);
+}
+
+.teamPhoto {
+  position: relative;
+  overflow: hidden;
+  background: var(--muted, #F5F5F5);
+}
+
+.teamImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.teamCard:hover .teamImage {
+  filter: grayscale(50%);
+}
+
+.teamInfo {
+  padding: 20px 24px;
+}
+
+.teamMemberName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--afa-text, #1A1A1A);
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--afa-primary, #18625F);
+  margin-bottom: 8px;
+}
+
+.teamBio {
+  font-size: 0.875rem;
+  color: var(--afa-muted, #666666);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.teamLinkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--afa-primary, #18625F);
+  text-decoration: none;
+}
+
+.teamLinkedin:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 48px 0;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}

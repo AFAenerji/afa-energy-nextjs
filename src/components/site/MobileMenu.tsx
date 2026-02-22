@@ -117,7 +117,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               {t('cases')}
             </button>
             <button
-              onClick={() => handleNavigation('/about')}
+              onClick={() => handleNavigation('/hakkimizda')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('about')}

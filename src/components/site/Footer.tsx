@@ -15,7 +15,7 @@ export default function Footer({ locale }: FooterProps) {
     { key: 'developerArea', path: '/developer' },
     { key: 'services', path: '/hizmetler' },
     { key: 'cases', path: '/cases' },
-    { key: 'about', path: '/about' },
+    { key: 'about', path: '/hakkimizda' },
     { key: 'knowledgeCenter', path: '/bilgi-merkezi' },
     { key: 'reachUs', path: '/contact' },
   ];

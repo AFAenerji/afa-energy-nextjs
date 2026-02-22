@@ -2,39 +2,92 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { Locale, getTranslation } from '@/lib/i18n';
+import { useRouter, usePathname } from 'next/navigation';
+import { Locale, locales, getTranslation } from '@/lib/i18n';
+import type { Translations } from '@/lib/i18n';
 import MobileMenu from './MobileMenu';
 import ThemeToggle from '@/components/ui/ThemeToggle';
+import '@/styles/Header.css';
 
+/* ── Helpers ── */
+
+/** Prepend locale to a path: withLocale('tr', '/hizmetler') → '/tr/hizmetler' */
+function withLocale(locale: Locale, path: string): string {
+  return `/${locale}${path}`;
+}
+
+/** Check if the current pathname matches a nav item's path */
+function isActivePath(pathname: string, locale: Locale, path: string): boolean {
+  const full = withLocale(locale, path);
+  // Exact match or starts-with for nested routes
+  return pathname === full || pathname.startsWith(`${full}/`);
+}
+
+/* ── Dynamic nav items per locale ── */
+type NavItem = {
+  key: keyof Translations;
+  path: string;
+  tab?: 'investor' | 'developer';
+  disabled?: boolean;
+};
+
+const NAV_ITEMS: readonly NavItem[] = [
+  { key: 'investor', path: '/investor', tab: 'investor' },
+  { key: 'developer', path: '/developer', tab: 'developer' },
+  { key: 'services', path: '/hizmetler' },
+  { key: 'cases', path: '/cases', disabled: true },
+  { key: 'about', path: '/hakkimizda' },
+  { key: 'info', path: '/info', disabled: true },
+] as const;
+
+/* ── Component ── */
 interface HeaderProps {
   locale: Locale;
 }
 
 export default function Header({ locale }: HeaderProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
-  const t = (key: keyof import('@/lib/i18n').Translations) => getTranslation(locale, key);
 
-  const handleNavigation = (path: string) => {
-    router.push(`/${locale}${path}`);
-  };
+  const t = (key: keyof Translations) => getTranslation(locale, key);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+  function navigate(path: string) {
+    router.push(withLocale(locale, path));
+  }
+
+  function switchLocale(targetLocale: string) {
+    // Strip current locale prefix and prepend new one
+    const stripped = pathname.replace(new RegExp(`^/${locale}`), '') || '/';
+    router.push(`/${targetLocale}${stripped === '/' ? '' : stripped}`);
+  }
+
+  function navLinkClass(item: NavItem): string {
+    const classes = ['afa-nav__link'];
+    if (item.tab) {
+      classes.push('afa-nav__link--tab');
+      classes.push(`afa-nav__link--tab-${item.tab}`);
+    }
+    if (item.disabled) {
+      classes.push('afa-nav__link--disabled');
+    }
+    if (!item.disabled && isActivePath(pathname, locale, item.path)) {
+      classes.push('afa-nav__link--active');
+    }
+    return classes.join(' ');
+  }
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-24 bg-white border-b border-[#E0E0E0] shadow-[0_10px_30px_rgba(0,0,0,0.12)] relative">
+      <header className="sticky top-0 z-50 bg-white border-b border-[#E0E0E0] shadow-[0_10px_30px_rgba(0,0,0,0.12)] relative">
         <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#28AFB0]"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex items-center justify-between h-full">
-            {/* Logo + Brand Name */}
-            <a 
-              href={`/${locale}`}
-              className="h-full flex items-center gap-3 no-underline"
+          <div className="afa-header__inner">
+
+            {/* ── Left: Brand ── */}
+            <a
+              href={withLocale(locale, '')}
+              className="afa-header__brand"
             >
               <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
                 <Image
@@ -45,85 +98,62 @@ export default function Header({ locale }: HeaderProps) {
                   className="object-contain"
                 />
               </div>
-              <span className="text-xl font-bold tracking-tight whitespace-nowrap">AFA Energy Romania</span>
+              <span className="text-xl font-bold tracking-tight whitespace-nowrap">
+                AFA Energy Romania
+              </span>
             </a>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              <button
-                onClick={() => handleNavigation('/investor')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] border-2 border-[#28AFB0] px-4 rounded-[4px] hover:bg-[#28AFB0] hover:text-white transition-all duration-200"
-              >
-                {t('investor')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/developer')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] border-2 border-[#FFCB00] px-4 rounded-[4px] hover:bg-[#FFCB00] hover:text-[#0B1F1E] transition-all duration-200"
-              >
-                {t('developer')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/hizmetler')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
-              >
-                {t('services')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/cases')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200 pointer-events-none opacity-50 cursor-not-allowed"
-              >
-                {t('cases')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/about')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200"
-              >
-                {t('about')}
-              </button>
-              <button
-                onClick={() => handleNavigation('/info')}
-                className="flex items-center justify-center h-10 text-base font-semibold leading-none text-[#0B1F1E] hover:text-[#18625F] transition-all duration-200 pointer-events-none opacity-50 cursor-not-allowed"
-              >
-                {t('info')}
-              </button>
+            {/* ── Center: Nav ── */}
+            <nav className="afa-nav">
+              {NAV_ITEMS.map((item) => (
+                <button
+                  key={item.key}
+                  onClick={() => navigate(item.path)}
+                  className={navLinkClass(item)}
+                  aria-current={
+                    !item.disabled && isActivePath(pathname, locale, item.path)
+                      ? 'page'
+                      : undefined
+                  }
+                >
+                  {t(item.key)}
+                </button>
+              ))}
             </nav>
 
-            {/* Right Section */}
-            <div className="flex items-center gap-4">
-              {/* Language Switcher */}
-              <div className="hidden md:flex items-center h-full">
-                <div className="flex items-center border border-[#E0E0E0] rounded-[4px] p-1">
-                  {['tr', 'en', 'ro'].map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => router.push(`/${lang}`)}
-                      className={`px-3 py-1 text-sm font-medium rounded-[2px] transition-colors duration-200 ${
-                        locale === lang 
-                          ? 'bg-[#18625F] text-white' 
-                          : 'text-[#666666] hover:text-[#18625F]'
-                      }`}
-                    >
-                      {lang.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
+            {/* ── Right: Actions ── */}
+            <div className="afa-header__actions">
+              {/* Language Switcher — Segmented Control */}
+              <div className="afa-lang-switcher">
+                {locales.map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => switchLocale(lang)}
+                    className={`afa-lang-switcher__btn ${
+                      locale === lang ? 'afa-lang-switcher__btn--active' : ''
+                    }`}
+                    aria-current={locale === lang ? 'true' : undefined}
+                  >
+                    {lang.toUpperCase()}
+                  </button>
+                ))}
               </div>
 
               {/* Theme Toggle */}
               <ThemeToggle />
 
-              {/* CTA Button */}
+              {/* Contact CTA */}
               <button
-                onClick={() => handleNavigation('/contact')}
-                className="flex items-center justify-center h-10 px-5 bg-[#18625F] text-white border-2 border-[#18625F] rounded-[4px] text-base font-semibold leading-none hover:bg-white hover:text-[#18625F] transition-all duration-200"
+                onClick={() => navigate('/contact')}
+                className="afa-header__cta"
               >
                 {t('contact')}
               </button>
 
               {/* Mobile Toggle */}
               <button
-                onClick={toggleMobileMenu}
-                className="md:hidden p-2 text-[#0B1F1E]"
+                onClick={() => setMobileMenuOpen((prev) => !prev)}
+                className="afa-header__mobile-toggle"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu"
                 aria-label="Toggle navigation menu"
@@ -135,6 +165,7 @@ export default function Header({ locale }: HeaderProps) {
                 </div>
               </button>
             </div>
+
           </div>
         </div>
       </header>

@@ -5,6 +5,11 @@
 
 @import "tailwindcss";
 
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ============================================================
    AFA ENERGY ROMANIA - CORPORATE DIGITAL GOVERNANCE v5.0
    Audit Aesthetic • Investment Committee Interface Standard
@@ -27,6 +32,15 @@
   --afa-sky: #4CC9F0;
   --afa-yellow: #FFCB00;
   --afa-risk: #F25F5C;
+
+  /* v10.2 Investment Committee Standard Aliases */
+  --afa-primary: #18625F;
+  --afa-accent: #FFCB00;
+  --afa-secondary: #28AFB0;
+  --afa-text: #1A1A1A;
+  --afa-muted: #666666;
+  --afa-border: #E0E0E0;
+  --afa-bg-light: #F8FAFC;
 
   /* Status Colors */
   --error: #F25F5C;
@@ -493,4 +507,55 @@ input:focus, select:focus, textarea:focus {
     linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+/* 20. SKIP TO CONTENT — Accessibility (accesskey: 2) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--yellow-accent);
+  color: var(--text-on-yellow);
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 16px;
+}
+
+/* 21. ABOUT PAGE — Grayscale team card effect */
+.afa-team-photo {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.afa-team-photo:hover {
+  filter: grayscale(50%);
+}
+
+/* CSS-only checkmark for lists */
+.afa-check-list li::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  background: var(--green-authority);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.afa-check-list li {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
 }

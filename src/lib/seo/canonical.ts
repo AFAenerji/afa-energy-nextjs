@@ -21,3 +21,26 @@ export function generateAlternates(path = ''): Record<string, string> {
     locales.map((locale) => [locale, generateCanonical(locale as Locale, path)])
   );
 }
+
+/**
+ * Build a canonical URL from a LOCALE_PATHS full path (already includes locale prefix).
+ */
+export function canonicalFromFullPath(fullPath: string): string {
+  const clean = fullPath.replace(/^\/+|\/+$/g, '');
+  return `${SITE_URL}/${clean}`;
+}
+
+/**
+ * Generate hreflang alternates from a LOCALE_PATHS entry.
+ * Each value is a full path like '/tr/hakkimizda', '/en/about', '/ro/despre-noi'.
+ */
+export function alternatesFromLocalePaths(
+  paths: Record<Locale, string>,
+): Record<string, string> {
+  return Object.fromEntries(
+    locales.map((locale) => [
+      locale,
+      canonicalFromFullPath(paths[locale as Locale]),
+    ]),
+  );
+}
