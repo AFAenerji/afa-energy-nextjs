@@ -41,7 +41,19 @@ html {
   --afa-muted: #666666;
   --afa-border: #E0E0E0;
   --afa-bg-light: #F8FAFC;
+  /* AFA Alias Tokenları (Hizmetler sayfası ve modül CSS’ler için ortak dil) */
+  --afa-text-dark: var(--text-primary);
+  --afa-text-light: var(--text-on-green);
+  --afa-text-muted: var(--text-muted);
 
+  --afa-bg-white: var(--white);
+  --afa-bg-light-2: var(--afa-bg-light);
+
+  --afa-transition-duration: 120ms;
+  --afa-transition-timing: linear;
+
+  --afa-container-max-width: var(--container);
+  --afa-container-padding: var(--space-lg);
   /* Status Colors */
   --error: #F25F5C;
   --error-bg: #FFF5F5;
@@ -129,6 +141,30 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.02em;
   margin: 0;
+}
+
+/* AFA LIST STANDARD */
+
+ul {
+  margin: 0 0 18px 0;
+  padding-left: 22px;
+  list-style-type: disc;
+}
+
+ol {
+  margin: 0 0 18px 0;
+  padding-left: 22px;
+  list-style-type: decimal;
+}
+
+li {
+  line-height: 1.7;
+}
+
+/* Optional: Legal sections can override to remove default bullets */
+.legalList {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* Scoped light-section typography colors */
@@ -488,7 +524,6 @@ input:focus, select:focus, textarea:focus {
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   outline: none;
-  transition: border-color 0.2s;
 }
 .afa-input::placeholder {
   color: rgba(255, 255, 255, 0.35);
@@ -530,7 +565,6 @@ input:focus, select:focus, textarea:focus {
 /* 21. ABOUT PAGE — Grayscale team card effect */
 .afa-team-photo {
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
 }
 
 .afa-team-photo:hover {

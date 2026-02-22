@@ -48,7 +48,6 @@
   font-weight: 600;
   line-height: 1;
   color: #0B1F1E;
-  transition: all 0.2s ease;
   cursor: pointer;
   background: none;
 }
@@ -63,15 +62,14 @@
   border-bottom-color: var(--afa-deep, #18625F);
 }
 
-/* Tab variants — no resting border, fill on hover/active */
+/* Tab variants — text-only, no border or fill */
 .afa-nav__link--tab-investor {
   border-color: transparent;
 }
 
 .afa-nav__link--tab-investor:hover,
 .afa-nav__link--tab-investor.afa-nav__link--active {
-  background-color: var(--afa-verdigris, #28AFB0);
-  color: #FFFFFF;
+  color: var(--afa-deep, #18625F);
 }
 
 .afa-nav__link--tab-developer {
@@ -80,8 +78,7 @@
 
 .afa-nav__link--tab-developer:hover,
 .afa-nav__link--tab-developer.afa-nav__link--active {
-  background-color: var(--afa-yellow, #FFCB00);
-  color: #0B1F1E;
+  color: var(--afa-deep, #18625F);
 }
 
 /* Disabled state */
@@ -123,7 +120,6 @@
   font-weight: 500;
   color: #666666;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .afa-lang-switcher__btn:hover {
@@ -152,7 +148,6 @@
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .afa-header__cta:hover {
