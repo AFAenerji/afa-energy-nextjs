@@ -19,6 +19,7 @@ export default function ContactForm({ role, placeholder, locale }: ContactFormPr
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [hp, setHp] = useState('');
 
   if (submitted) {
     return <SuccessState />;
@@ -37,6 +38,7 @@ export default function ContactForm({ role, placeholder, locale }: ContactFormPr
       message: formData.get('message') as string,
       role,
       locale,
+      _hp: hp,
     };
 
     try {
@@ -64,6 +66,12 @@ export default function ContactForm({ role, placeholder, locale }: ContactFormPr
       {/* Hidden fields */}
       <input type="hidden" name="role" value={role} />
       <input type="hidden" name="locale" value={locale} />
+
+      {/* Honeypot — invisible to users, traps bots */}
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor="contact_hp">Leave empty</label>
+        <input id="contact_hp" type="text" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" />
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Name */}

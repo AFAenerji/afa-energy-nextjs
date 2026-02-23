@@ -5,8 +5,7 @@ import { LOCALE_PATHS } from '@/lib/routes';
 import { canonicalFromFullPath, alternatesFromLocalePaths } from '@/lib/seo/canonical';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import styles from './AboutPage.module.css';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+import { SITE_URL } from '@/lib/env';
 
 /* ── Per-locale content ── */
 const pageContent = {

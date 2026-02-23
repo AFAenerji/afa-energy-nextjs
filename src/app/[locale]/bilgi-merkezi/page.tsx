@@ -5,8 +5,7 @@ import TechnicalFAQ from '@/components/sections/TechnicalFAQ';
 import FAQSchema from '@/components/seo/FAQSchema';
 import GlossarySchema from '@/components/seo/GlossarySchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+import { SITE_URL } from '@/lib/env';
 
 const pageMeta: Record<Locale, { title: string; description: string; heroTitle: string; heroSubtitle: string; breadcrumbHome: string; breadcrumbSelf: string }> = {
   tr: {

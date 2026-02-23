@@ -1,12 +1,11 @@
 import type { GlossaryTerm } from '@/types/homepage';
 import { slugify } from '@/lib/slugify';
+import { SITE_URL } from '@/lib/env';
 
 type Props = {
   terms: GlossaryTerm[];
   locale: string;
 };
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
 
 export default function GlossarySchema({ terms, locale }: Props) {
   if (!terms?.length) return null;

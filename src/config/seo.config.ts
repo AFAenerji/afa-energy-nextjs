@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+import { SITE_URL } from '@/lib/env';
 
 export const siteConfig = {
   name: 'AFA Energy Romania',

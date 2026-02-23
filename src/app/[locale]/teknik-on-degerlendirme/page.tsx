@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import TechnicalAssessmentForm from '@/components/services/TechnicalAssessmentForm';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+import { SITE_URL } from '@/lib/env';
 
 /* ── Per-locale page content ── */
 const pageContent = {

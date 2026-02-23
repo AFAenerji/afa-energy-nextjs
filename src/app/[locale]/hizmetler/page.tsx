@@ -3,8 +3,7 @@ import Link from "next/link";
 import { Locale, locales, defaultLocale } from "@/lib/i18n";
 import { LOCALE_PATHS } from "@/lib/routes";
 import styles from "./ServicesPage.module.css";
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://afaenergy.eu";
+import { SITE_URL } from "@/lib/env";
 
 /* ── Canonical yardımcı fonksiyonlar ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;

@@ -75,6 +75,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [hp, setHp] = useState('');
 
   const totalSteps = 3;
@@ -128,6 +129,8 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
     if (!validateStep()) return;
     setSubmitting(true);
 
+    setSubmitError(null);
+
     try {
       const res = await fetch('/api/submit-assessment', {
         method: 'POST',
@@ -147,9 +150,12 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
 
       if (res.ok) {
         setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setSubmitError(data.error || 'An unexpected error occurred. Please try again.');
       }
     } catch {
-      // silent fail — form still shows
+      setSubmitError('Network error. Please check your connection and try again.');
     } finally {
       setSubmitting(false);
     }
@@ -377,6 +383,13 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
               {errors.dataReady && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.dataReady}</p>}
             </div>
           </fieldset>
+        )}
+
+        {/* Submission Error */}
+        {submitError && (
+          <div className="mt-4 rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+            {submitError}
+          </div>
         )}
 
         {/* Navigation Buttons */}

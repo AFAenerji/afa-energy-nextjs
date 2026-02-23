@@ -5,8 +5,7 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import OrganizationSchema from '@/components/seo/OrganizationSchema';
 import Header from '@/components/site/Header';
 import Footer from '@/components/site/Footer';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.ro';
+import { SITE_URL } from '@/lib/env';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

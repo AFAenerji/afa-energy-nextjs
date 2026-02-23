@@ -1,6 +1,5 @@
 import { locales, type Locale } from '@/lib/i18n';
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://afaenergy.eu';
+import { SITE_URL } from '@/lib/env';
 
 /**
  * Generate a canonical URL for a given locale and path.
