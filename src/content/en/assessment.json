@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Technical Pre-Assessment Request | AFA Energy Romania",
+    "description": "Request an independent technical pre-assessment for your renewable energy project in Romania. ATR analysis, grid feasibility, and bankability assessment."
+  },
+  "hero": {
+    "title": "Technical Pre-Assessment Request",
+    "subtitle": "Review the validation flows below and fill out the form to have your project's technical feasibility independently assessed. Initial response within 48 hours."
+  },
+  "serviceCompass": {
+    "title": "Service Compass",
+    "subtitle": "Identify the right technical validation path based on your project's phase.",
+    "description": "AFA Energy Romania, positioned on the investor side, offers three core validation flows. Each flow is structured according to your project's maturity level and data availability."
+  },
+  "flows": [
+    {
+      "id": "A",
+      "accentColor": "#18625F",
+      "title": "Path A — Technical Due Diligence (TDD)",
+      "subtitle": "Pre-acquisition stress test of design, equipment, and cost assumptions against bank-grade standards.",
+      "steps": [
+        {
+          "number": "A1",
+          "title": "Data Collection and Scope Definition",
+          "description": "Project file is received; single-line diagram, equipment list, energy yield simulation, and cost assumptions are evaluated.",
+          "details": [
+            "Single-line diagram and layout drawings",
+            "Equipment list and technical datasheets",
+            "Energy yield simulation and performance assumptions",
+            "CAPEX and OPEX assumptions"
+          ]
+        },
+        {
+          "number": "A2",
+          "title": "Technical Analysis and Red-Flag Identification",
+          "description": "Design choices, equipment compatibility, and cost reality are analyzed using the ATR Matrix™ methodology."
+        },
+        {
+          "number": "A3",
+          "title": "Report and Negotiation Input",
+          "description": "Technical findings summary, reasoned note on cost assumptions, and technical protection recommendations for contract negotiations are delivered."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "accentColor": "#FFCB00",
+      "title": "Path B — ATR & Grid Analysis",
+      "subtitle": "Technical analysis of grid connection conditions and validation of connection timeline against the investment plan.",
+      "steps": [
+        {
+          "number": "B1",
+          "title": "ATR Document and Grid Data Review",
+          "description": "ATR document or application pack, DSO/TSO correspondence, and connection assumptions are reviewed.",
+          "details": [
+            "ATR document or application pack",
+            "DSO/TSO correspondence",
+            "Connection level and connection assumptions",
+            "Substation and line capacity information"
+          ]
+        },
+        {
+          "number": "B2",
+          "title": "Capacity and Curtailment Analysis",
+          "description": "Export capacity constraints and curtailment likelihood are assessed on a technical scenario basis."
+        },
+        {
+          "number": "B3",
+          "title": "Technical Roadmap",
+          "description": "ATR feasibility assessment, critical checkpoints, and a technically focused roadmap are delivered."
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "accentColor": "#F25F5C",
+      "title": "Path C — Regulatory & Permit Audit",
+      "subtitle": "Hierarchical control of ANRE regulatory compliance and permit flow for investment security.",
+      "steps": [
+        {
+          "number": "C1",
+          "title": "Permit Inventory and Status Assessment",
+          "description": "Current permit list, land-use status, and environmental permitting processes are reviewed.",
+          "details": [
+            "Permit list and current status summary",
+            "Land-use and ownership information",
+            "Environmental and local permitting documents",
+            "Application/response correspondence and schedule assumptions"
+          ]
+        },
+        {
+          "number": "C2",
+          "title": "Consistency Check and Risk Map",
+          "description": "Permit flow consistency is verified; document gaps and risk concentration points are identified."
+        },
+        {
+          "number": "C3",
+          "title": "Permit Roadmap",
+          "description": "An investor-ready, trackable permit roadmap with checkpoints is delivered."
+        }
+      ]
+    }
+  ],
+  "afaDifference": {
+    "title": "The AFA Difference",
+    "paragraphs": [
+      "AFA Energy Romania does not act as a project developer, EPC contractor, O&M provider, or equipment vendor.",
+      "Our revenue model is advisory-fee based, not commission-based. This structure supports investor-side, impartial technical assessments.",
+      "Each engagement is structured based on data maturity and scope; final deliverable format and scope are defined in the written proposal and service agreement."
+    ]
+  },
+  "form": {
+    "stepLabels": ["Project Identity", "Technical Filter", "Data Status"],
+    "step1": {
+      "title": "Project Identity",
+      "nameLabel": "Full Name",
+      "namePlaceholder": "Your full name",
+      "companyLabel": "Company / Organization",
+      "companyPlaceholder": "Company name (optional)",
+      "emailLabel": "Email",
+      "emailPlaceholder": "example@company.com",
+      "emailHint": "Corporate email address preferred."
+    },
+    "step2": {
+      "title": "Technical Filter",
+      "atrLabel": "ATR Status",
+      "atrOptions": [
+        { "value": "approved", "label": "Approved" },
+        { "value": "in-process", "label": "In Process" },
+        { "value": "none", "label": "None" }
+      ],
+      "capacityLabel": "Installed Capacity (MW)",
+      "capacityPlaceholder": "e.g. 50",
+      "phaseLabel": "Project Phase",
+      "phaseOptions": [
+        { "value": "land-development", "label": "Land Development" },
+        { "value": "rtb", "label": "RTB (Ready to Build)" },
+        { "value": "operational", "label": "Operational" }
+      ]
+    },
+    "step3": {
+      "title": "Data Availability",
+      "dataLabel": "Are technical data (Yield, Grid Study) available?",
+      "dataOptions": [
+        { "value": "yes", "label": "Yes" },
+        { "value": "no", "label": "No" }
+      ]
+    },
+    "flowLabel": "Service Path of Interest",
+    "flowPlaceholder": "Select",
+    "next": "Continue",
+    "prev": "Back",
+    "submit": "Submit Request",
+    "submitting": "Submitting…",
+    "thankYou": {
+      "title": "Request Received",
+      "message": "Your technical pre-assessment request has been successfully submitted. Below are the next steps in the process.",
+      "steps": [
+        "Your request will be reviewed by our technical team within 48 hours.",
+        "Pre-assessment scope and timeline will be shared via email.",
+        "Independent technical analysis will be initiated using the ATR Matrix™ methodology.",
+        "Final report and investment decision support will be delivered."
+      ],
+      "backLabel": "← Back to Services"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "emailInvalid": "Please enter a valid email address."
+    }
+  },
+  "trustSignal": "Your data is kept confidential in accordance with our independence principles and is not shared with third parties."
+}

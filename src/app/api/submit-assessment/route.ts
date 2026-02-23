@@ -11,6 +11,7 @@ interface AssessmentBody {
   capacity: string;
   projectPhase: string;
   dataReady: string;
+  selectedFlow?: string;
   locale: string;
   _hp?: string;
 }
@@ -32,6 +33,12 @@ const PHASE_LABELS: Record<string, string> = {
 const DATA_LABELS: Record<string, string> = {
   yes: 'Evet',
   no: 'Hayır',
+};
+
+const FLOW_LABELS: Record<string, string> = {
+  A: 'Yol A — Teknik İnceleme (TDD)',
+  B: 'Yol B — ATR ve Şebeke Analizi',
+  C: 'Yol C — Mevzuat ve İzin Denetimi',
 };
 
 export async function POST(request: Request) {
@@ -98,6 +105,7 @@ export async function POST(request: Request) {
     const atrLabel = escapeHtml(ATR_LABELS[body.atrStatus] || body.atrStatus);
     const phaseLabel = escapeHtml(PHASE_LABELS[body.projectPhase] || body.projectPhase);
     const dataLabel = escapeHtml(DATA_LABELS[body.dataReady] || body.dataReady);
+    const safeFlow = escapeHtml(FLOW_LABELS[body.selectedFlow || ''] || body.selectedFlow || '—');
 
     const apiKey = process.env.RESEND_API_KEY;
     const targetInbox = process.env.ASSESSMENT_INBOX || 'afa_form_360@afaenerji.com';
@@ -112,6 +120,7 @@ export async function POST(request: Request) {
         projectPhase: phaseLabel,
         dataReady: dataLabel,
         locale: safeLocale,
+        selectedFlow: safeFlow,
         timestamp: new Date().toISOString(),
       });
 
@@ -162,6 +171,10 @@ export async function POST(request: Request) {
               <tr>
                 <td style="padding: 8px 0; color: #666;">Veri Durumu:</td>
                 <td style="padding: 8px 0;">${dataLabel}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; color: #666;">Hizmet Yolu:</td>
+                <td style="padding: 8px 0; font-weight: 600;">${safeFlow}</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; color: #666;">Dil:</td>

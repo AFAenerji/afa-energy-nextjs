@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Solicitare Evaluare Tehnică Preliminară | AFA Energy Romania",
+    "description": "Solicitați o evaluare tehnică preliminară independentă pentru proiectul dumneavoastră de energie regenerabilă din România. Analiză ATR, fezabilitate rețea și evaluare bancabilitate."
+  },
+  "hero": {
+    "title": "Solicitare Evaluare Tehnică Preliminară",
+    "subtitle": "Analizați fluxurile de validare de mai jos și completați formularul pentru evaluarea independentă a fezabilității tehnice a proiectului dumneavoastră. Răspuns inițial în 48 de ore."
+  },
+  "serviceCompass": {
+    "title": "Busola Serviciilor",
+    "subtitle": "Identificați calea corectă de validare tehnică în funcție de faza proiectului.",
+    "description": "AFA Energy Romania, poziționată pe partea investitorului, oferă trei fluxuri de validare fundamentale. Fiecare flux este structurat în funcție de nivelul de maturitate și disponibilitatea datelor proiectului."
+  },
+  "flows": [
+    {
+      "id": "A",
+      "accentColor": "#18625F",
+      "title": "Calea A — Due Diligence Tehnic (TDD)",
+      "subtitle": "Test de stres pre-achiziție al proiectării, echipamentelor și ipotezelor de cost față de standarde bancare.",
+      "steps": [
+        {
+          "number": "A1",
+          "title": "Colectare Date și Definire Domeniu",
+          "description": "Dosarul proiectului este primit; schema unifilară, lista de echipamente, simularea de producție și ipotezele de cost sunt evaluate.",
+          "details": [
+            "Schema unifilară și planuri de amplasament",
+            "Lista de echipamente și fișe tehnice",
+            "Simulare de producție (Yield) și ipoteze de performanță",
+            "Ipoteze CAPEX și OPEX"
+          ]
+        },
+        {
+          "number": "A2",
+          "title": "Analiză Tehnică și Identificare Semnale de Avertizare",
+          "description": "Alegerile de proiectare, compatibilitatea echipamentelor și realitatea costurilor sunt analizate folosind metodologia ATR Matrix™."
+        },
+        {
+          "number": "A3",
+          "title": "Raport și Input pentru Negociere",
+          "description": "Rezumatul constatărilor tehnice, nota argumentată privind ipotezele de cost și recomandările de protecție tehnică pentru negocierea contractelor sunt livrate."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "accentColor": "#FFCB00",
+      "title": "Calea B — Analiză ATR și Rețea",
+      "subtitle": "Analiza tehnică a condițiilor de racordare la rețea și validarea calendarului de racordare față de planul de investiții.",
+      "steps": [
+        {
+          "number": "B1",
+          "title": "Analiza Documentului ATR și Datelor de Rețea",
+          "description": "Documentul ATR sau dosarul de solicitare, corespondența cu operatorii de rețea și ipotezele de racordare sunt analizate.",
+          "details": [
+            "Document ATR sau dosar de solicitare",
+            "Corespondență cu operatorii de distribuție/transport",
+            "Nivel de tensiune și ipoteze de racordare",
+            "Informații despre capacitatea stației/liniilor"
+          ]
+        },
+        {
+          "number": "B2",
+          "title": "Analiză Capacitate și Curtailment",
+          "description": "Constrângerile de capacitate de evacuare și probabilitatea de curtailment sunt evaluate pe bază de scenarii tehnice."
+        },
+        {
+          "number": "B3",
+          "title": "Foaie de Parcurs Tehnică",
+          "description": "Evaluarea fezabilității ATR, punctele critice și o foaie de parcurs cu focus tehnic sunt livrate."
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "accentColor": "#F25F5C",
+      "title": "Calea C — Audit Reglementări și Autorizații",
+      "subtitle": "Control ierarhic al conformității cu cadrul ANRE și al fluxului de autorizații pentru securitatea investiției.",
+      "steps": [
+        {
+          "number": "C1",
+          "title": "Inventar Autorizații și Evaluare Status",
+          "description": "Lista curentă de autorizații, statutul utilizării terenului și procesele de autorizare de mediu sunt analizate.",
+          "details": [
+            "Lista de autorizații și rezumatul statusului",
+            "Informații despre utilizarea terenului și proprietate",
+            "Documente de mediu și autorizații locale",
+            "Corespondență cereri/răspunsuri și ipoteze de calendar"
+          ]
+        },
+        {
+          "number": "C2",
+          "title": "Verificare Coerență și Hartă de Risc",
+          "description": "Coerența fluxului de autorizații este verificată; lipsurile de documente și punctele de concentrare a riscului sunt identificate."
+        },
+        {
+          "number": "C3",
+          "title": "Foaie de Parcurs Autorizații",
+          "description": "O foaie de parcurs a autorizațiilor, pregătită pentru investitor, cu repere verificabile, este livrată."
+        }
+      ]
+    }
+  ],
+  "afaDifference": {
+    "title": "Diferența AFA",
+    "paragraphs": [
+      "AFA Energy Romania nu este dezvoltator de proiecte, contractor EPC, furnizor de O&M sau vânzător de echipamente.",
+      "Modelul nostru de venituri este bazat pe onorarii de consultanță, nu pe comision. Această structură susține evaluări tehnice imparțiale, pe partea investitorului.",
+      "Fiecare proiect este structurat în funcție de maturitatea datelor și domeniu; formatul și domeniul livrabilelor finale sunt definite în oferta scrisă și în contractul de servicii."
+    ]
+  },
+  "form": {
+    "stepLabels": ["Identitate Proiect", "Filtru Tehnic", "Disponibilitate Date"],
+    "step1": {
+      "title": "Identitate Proiect",
+      "nameLabel": "Nume Complet",
+      "namePlaceholder": "Numele dumneavoastră complet",
+      "companyLabel": "Companie / Organizație",
+      "companyPlaceholder": "Numele companiei (opțional)",
+      "emailLabel": "Email",
+      "emailPlaceholder": "exemplu@companie.com",
+      "emailHint": "Se preferă adresa de email corporativă."
+    },
+    "step2": {
+      "title": "Filtru Tehnic",
+      "atrLabel": "Statut ATR",
+      "atrOptions": [
+        { "value": "approved", "label": "Aprobat" },
+        { "value": "in-process", "label": "În Proces" },
+        { "value": "none", "label": "Inexistent" }
+      ],
+      "capacityLabel": "Capacitate Instalată (MW)",
+      "capacityPlaceholder": "ex. 50",
+      "phaseLabel": "Faza Proiectului",
+      "phaseOptions": [
+        { "value": "land-development", "label": "Dezvoltare Teren" },
+        { "value": "rtb", "label": "RTB (Ready to Build)" },
+        { "value": "operational", "label": "Operațional" }
+      ]
+    },
+    "step3": {
+      "title": "Disponibilitate Date",
+      "dataLabel": "Sunt disponibile datele tehnice (Yield, Grid Study)?",
+      "dataOptions": [
+        { "value": "yes", "label": "Da" },
+        { "value": "no", "label": "Nu" }
+      ]
+    },
+    "flowLabel": "Calea de Serviciu de Interes",
+    "flowPlaceholder": "Selectați",
+    "next": "Continuă",
+    "prev": "Înapoi",
+    "submit": "Trimite Solicitarea",
+    "submitting": "Se trimite…",
+    "thankYou": {
+      "title": "Solicitare Primită",
+      "message": "Solicitarea dumneavoastră de evaluare tehnică preliminară a fost trimisă cu succes. Mai jos sunt pașii următori.",
+      "steps": [
+        "Solicitarea dumneavoastră va fi analizată de echipa noastră tehnică în 48 de ore.",
+        "Domeniul și calendarul evaluării preliminare vor fi comunicate prin email.",
+        "Analiza tehnică independentă va fi inițiată folosind metodologia ATR Matrix™.",
+        "Raportul final și suportul pentru decizia de investiție vor fi livrate."
+      ],
+      "backLabel": "← Înapoi la Servicii"
+    },
+    "validation": {
+      "required": "Acest câmp este obligatoriu.",
+      "emailInvalid": "Vă rugăm introduceți o adresă de email validă."
+    }
+  },
+  "trustSignal": "Datele dumneavoastră sunt păstrate confidențiale conform principiilor noastre de independență și nu sunt partajate cu terți."
+}

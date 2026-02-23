@@ -1,6 +1,7 @@
 import type { GlossaryTerm } from '@/types/homepage';
 import { slugify } from '@/lib/slugify';
 import { SITE_URL } from '@/lib/env';
+import { safeJsonLd } from '@/lib/security/safeJsonLd';
 
 type Props = {
   terms: GlossaryTerm[];
@@ -27,7 +28,7 @@ export default function GlossarySchema({ terms, locale }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema as Record<string, unknown>) }}
     />
   );
 }

@@ -1,4 +1,5 @@
 import type { FAQGroup } from '@/types/homepage';
+import { safeJsonLd } from '@/lib/security/safeJsonLd';
 
 type Props = {
   groups: FAQGroup[];
@@ -27,7 +28,7 @@ export default function FAQSchema({ groups }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema as Record<string, unknown>) }}
     />
   );
 }

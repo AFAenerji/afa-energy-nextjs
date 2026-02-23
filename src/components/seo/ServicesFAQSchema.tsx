@@ -1,3 +1,5 @@
+import { safeJsonLd } from '@/lib/security/safeJsonLd';
+
 type FAQItem = {
   question: string;
   answer: string;
@@ -26,7 +28,7 @@ export default function ServicesFAQSchema({ items }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema as Record<string, unknown>) }}
     />
   );
 }

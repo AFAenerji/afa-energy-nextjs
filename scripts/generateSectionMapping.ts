@@ -31,9 +31,36 @@ type SectionSpec = {
 // --- KONFİGÜRASYON ---
 
 const LOCALES = ["tr", "en", "ro"] as const;
-const OUTPUT_DIR = path.join(process.cwd(), "docs", "governance");
+const PROJECT_ROOT = process.cwd();
+const OUTPUT_DIR = path.join(PROJECT_ROOT, "docs", "governance");
+
+/**
+ * Validates that a resolved path stays within the project root.
+ * Prevents path traversal attacks via malicious locale or path segments.
+ */
+function safePath(resolvedPath: string): string {
+  const normalized = path.resolve(resolvedPath);
+  if (!normalized.startsWith(PROJECT_ROOT + path.sep) && normalized !== PROJECT_ROOT) {
+    throw new Error(`[SECURITY] Path traversal detected: "${resolvedPath}" resolves outside project root.`);
+  }
+  return normalized;
+}
+
+/**
+ * Validates locale against the allowlist.
+ * Rejects any value not in LOCALES to prevent directory traversal via locale parameter.
+ */
+function validateLocale(locale: string): asserts locale is (typeof LOCALES)[number] {
+  if (!(LOCALES as readonly string[]).includes(locale)) {
+    throw new Error(`[SECURITY] Invalid locale "${locale}". Allowed: ${LOCALES.join(', ')}`);
+  }
+}
+
 // SÖZLÜK DOSYA YOLU ŞABLONU (Proje yapınıza göre burayı düzenleyin)
-const DICT_PATH_TEMPLATE = (locale: string) => path.join(process.cwd(), "src", "content", locale, "homepage.json");
+const DICT_PATH_TEMPLATE = (locale: string) => {
+  validateLocale(locale);
+  return safePath(path.join(PROJECT_ROOT, "src", "content", locale, "homepage.json"));
+};
 
 // v5.0 Homepage Sözlük Yapısına Uygun Bölüm Tanımları
 const SECTIONS: SectionSpec[] = [
@@ -275,7 +302,7 @@ async function main() {
       const { errors, markdown } = await validateAndGenerate(locale as string);
       allErrors = allErrors.concat(errors);
       
-      const outputPath = path.join(OUTPUT_DIR, `section-mapping.${locale}.md`);
+      const outputPath = safePath(path.join(OUTPUT_DIR, `section-mapping.${locale}.md`));
       fs.writeFileSync(outputPath, markdown);
       console.log(`[OK] Rapor olusturuldu: ${outputPath}`);
     } catch (e: any) {

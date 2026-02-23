@@ -1,9 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Locale, locales, defaultLocale } from "@/lib/i18n";
 import { LOCALE_PATHS } from "@/lib/routes";
 import styles from "./ServicesPage.module.css";
 import { SITE_URL } from "@/lib/env";
+
+/* ── v11.2 Institutional accent color sequence ── */
+const ACCENT_CLASSES = [
+  styles.accentDeepGreen,  // 01: #18625F
+  styles.accentJonquil,    // 02: #FFCB00
+  styles.accentDeepGreen,  // 03: #18625F
+  styles.accentVerdigris,  // 04: #28AFB0
+  styles.accentRisk,       // 05: #F25F5C
+] as const;
+
+/* ── Title color per accent ── */
+const TITLE_COLORS = [
+  "#18625F",  // 01
+  "#FFCB00",  // 02
+  "#18625F",  // 03
+  "#28AFB0",  // 04
+  "#F25F5C",  // 05
+] as const;
+
+/* ── Number color per accent ── */
+const NUMBER_COLORS = TITLE_COLORS;
+
+/* ── Service photos (180×180 descriptive) ── */
+const SERVICE_PHOTOS = [
+  "/images/service-tdd.svg",
+  "/images/service-atr.svg",
+  "/images/service-permit.svg",
+] as const;
 
 /* ── Canonical yardımcı fonksiyonlar ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;
@@ -434,17 +463,39 @@ export default async function ServicesPage({
         </div>
       </section>
 
-      {/* SERVICES — VERTICAL FLOW */}
-      <section id="hizmet-farklari" className={styles.verticalFlowSection}>
+      {/* SERVICES — v11.2 HORIZONTAL PROTOCOL FLOW */}
+      <section id="hizmet-farklari" className={styles.horizontalFlowSection}>
         <div className="afa-container">
           {content.services.map((service, index) => {
-            const zebra = index === 1 ? styles.zebraMuted : styles.zebraWhite;
+            const accentClass = ACCENT_CLASSES[index % ACCENT_CLASSES.length];
+            const titleColor = TITLE_COLORS[index % TITLE_COLORS.length];
+            const numberColor = NUMBER_COLORS[index % NUMBER_COLORS.length];
+            const photo = SERVICE_PHOTOS[index % SERVICE_PHOTOS.length];
+
             return (
-              <article key={service.number} className={`${styles.flowBlock} ${zebra}`}>
-                <div className={styles.flowAccent} />
-                <div className={styles.serviceInner}>
-                  <div className={styles.serviceNumber}>{service.number}</div>
-                  <h3 className={styles.cardTitle}>{service.title}</h3>
+              <article key={service.number} className={styles.serviceBand}>
+                {/* 8px institutional accent border */}
+                <div className={`${styles.bandAccent} ${accentClass}`} />
+
+                {/* 180×180 descriptive photo */}
+                <div className={styles.bandPhoto}>
+                  <Image
+                    src={photo}
+                    alt={service.title}
+                    width={180}
+                    height={180}
+                    style={{ aspectRatio: "1/1", objectFit: "cover" }}
+                  />
+                </div>
+
+                {/* Content */}
+                <div className={styles.bandContent}>
+                  <div className={styles.serviceNumber} style={{ color: numberColor }}>
+                    {service.number}
+                  </div>
+                  <h3 className={styles.cardTitle} style={{ color: titleColor }}>
+                    {service.title}
+                  </h3>
 
                   <p className={styles.serviceDesc}>{service.desc}</p>
 

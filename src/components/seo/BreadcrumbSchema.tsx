@@ -1,3 +1,5 @@
+import { safeJsonLd } from '@/lib/security/safeJsonLd';
+
 type Crumb = {
   name: string;
   url: string;
@@ -10,7 +12,7 @@ type Props = {
 export default function BreadcrumbSchema({ items }: Props) {
   if (items.length === 0) return null;
 
-  const schema = {
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, idx) => ({
@@ -24,7 +26,7 @@ export default function BreadcrumbSchema({ items }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
     />
   );
 }

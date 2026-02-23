@@ -1,0 +1,172 @@
+{
+  "meta": {
+    "title": "Teknik Ön Değerlendirme Talebi | AFA Energy Romania",
+    "description": "Romanya yenilenebilir enerji projeniz için bağımsız teknik ön değerlendirme talep formu. ATR analizi, şebeke fizibilite ve bankability değerlendirmesi."
+  },
+  "hero": {
+    "title": "Teknik Ön Değerlendirme Talebi",
+    "subtitle": "Projenizin teknik fizibilitesini bağımsız olarak değerlendirmek için aşağıdaki akışı inceleyin ve formu doldurun. İlk geri dönüş 48 saat içinde yapılır."
+  },
+  "serviceCompass": {
+    "title": "Hizmet Pusulası",
+    "subtitle": "Projenizin aşamasına göre doğru teknik doğrulama yolunu belirleyin.",
+    "description": "AFA Energy Romania, yatırımcı tarafında konumlanarak üç temel doğrulama akışı sunar. Her akış, projenizin olgunluk seviyesine ve veri durumuna göre yapılandırılır."
+  },
+  "flows": [
+    {
+      "id": "A",
+      "accentColor": "#18625F",
+      "title": "Yol A — Teknik İnceleme (TDD)",
+      "subtitle": "Satın alma öncesi tasarım, ekipman ve maliyet varsayımlarının banka standartlarıyla stres testi.",
+      "steps": [
+        {
+          "number": "A1",
+          "title": "Veri Toplama ve Kapsam Belirleme",
+          "description": "Proje dosyası alınır; tek hat şeması, ekipman listesi, üretim simülasyonu ve maliyet varsayımları değerlendirilir.",
+          "details": [
+            "Tek hat şeması ve yerleşim planları",
+            "Ekipman listesi ve teknik föyler",
+            "Üretim simülasyonu (Yield) ve performans varsayımları",
+            "Yatırım harcaması (CAPEX) ve işletme gideri (OPEX) varsayımları"
+          ]
+        },
+        {
+          "number": "A2",
+          "title": "Teknik Analiz ve Kırmızı Bayrak Tespiti",
+          "description": "Tasarım seçimleri, ekipman uyumu ve maliyet gerçekliği ATR Matrix™ metodolojisiyle analiz edilir."
+        },
+        {
+          "number": "A3",
+          "title": "Rapor ve Müzakere Girdisi",
+          "description": "Teknik bulgu özeti, maliyet varsayımlarına ilişkin gerekçeli not ve sözleşme müzakeresi için teknik koruma önerileri teslim edilir."
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "accentColor": "#FFCB00",
+      "title": "Yol B — ATR ve Şebeke Analizi",
+      "subtitle": "Şebeke bağlantı şartlarının teknik analizi ve bağlantı takviminin yatırım planıyla uyum doğrulaması.",
+      "steps": [
+        {
+          "number": "B1",
+          "title": "ATR Belgesi ve Şebeke Verisi İnceleme",
+          "description": "ATR belgesi veya başvuru dosyası, DSO/TSO yazışmaları ve bağlantı varsayımları incelenir.",
+          "details": [
+            "ATR belgesi veya başvuru dosyası",
+            "Dağıtım/iletim şebekesi işletmecisi yazışmaları",
+            "Bağlantı seviyesi ve bağlantı varsayımları",
+            "Trafo merkezi ve hat kapasitesi bilgileri"
+          ]
+        },
+        {
+          "number": "B2",
+          "title": "Kapasite ve Curtailment Analizi",
+          "description": "Aktarım kapasitesi kısıtları ve üretim kısıtı (curtailment) olasılığı teknik senaryo bazında değerlendirilir."
+        },
+        {
+          "number": "B3",
+          "title": "Teknik Yol Haritası",
+          "description": "ATR uygulanabilirlik değerlendirmesi, kritik takip noktaları ve teknik odaklı yol haritası teslim edilir."
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "accentColor": "#F25F5C",
+      "title": "Yol C — Mevzuat ve İzin Denetimi",
+      "subtitle": "ANRE düzenleyici çerçevesine uyum ve izin akışının yatırım güvenliği açısından hiyerarşik kontrolü.",
+      "steps": [
+        {
+          "number": "C1",
+          "title": "İzin Envanteri ve Durum Tespiti",
+          "description": "Mevcut izin listesi, arazi kullanım statüsü ve çevresel izin süreçleri incelenir.",
+          "details": [
+            "İzin listesi ve mevcut durum özeti",
+            "Arazi kullanım statüsü ve mülkiyet bilgisi",
+            "Çevresel ve yerel izin dokümanları",
+            "Başvuru/yanıt yazışmaları ve takvim varsayımları"
+          ]
+        },
+        {
+          "number": "C2",
+          "title": "Tutarlılık Kontrolü ve Risk Haritası",
+          "description": "İzin akışı tutarlılığı kontrol edilir; belge eksiklikleri ve risk yoğunlaşma noktaları tespit edilir."
+        },
+        {
+          "number": "C3",
+          "title": "İzin Yol Haritası",
+          "description": "Yatırımcı kararına uygun, takip edilebilir izin yol haritası ve kontrol noktaları teslim edilir."
+        }
+      ]
+    }
+  ],
+  "afaDifference": {
+    "title": "AFA'nın Farkı",
+    "paragraphs": [
+      "AFA Energy Romania; proje geliştirme, mühendislik-taahhüt yükleniciliği, işletme ve bakım (O&M) hizmeti veya ekipman satışı kapsamında hizmet vermez.",
+      "Gelir modeli komisyona değil, danışmanlık ücretine dayanır. Bu yapı, teknik değerlendirmelerin yatırımcı perspektifinde ve tarafsız denetim diliyle yürütülmesini sağlar.",
+      "Her çalışma, veri olgunluğu ve kapsamına göre yapılandırılır; nihai teslimat formatı ve kapsam, yazılı teklif ve hizmet sözleşmesi ile netleştirilir."
+    ]
+  },
+  "form": {
+    "stepLabels": ["Proje Kimliği", "Teknik Filtre", "Veri Durumu"],
+    "step1": {
+      "title": "Proje Kimliği",
+      "nameLabel": "Ad Soyad",
+      "namePlaceholder": "Adınız ve soyadınız",
+      "companyLabel": "Kurum / Şirket",
+      "companyPlaceholder": "Şirket adı (opsiyonel)",
+      "emailLabel": "E-posta",
+      "emailPlaceholder": "ornek@sirket.com",
+      "emailHint": "Kurumsal e-posta adresi tercih edilir."
+    },
+    "step2": {
+      "title": "Teknik Filtre",
+      "atrLabel": "ATR Durumu",
+      "atrOptions": [
+        { "value": "approved", "label": "Onaylandı" },
+        { "value": "in-process", "label": "Süreçte" },
+        { "value": "none", "label": "Yok" }
+      ],
+      "capacityLabel": "Kurulu Güç (MW)",
+      "capacityPlaceholder": "Örn: 50",
+      "phaseLabel": "Proje Aşaması",
+      "phaseOptions": [
+        { "value": "land-development", "label": "Arazi Geliştirme" },
+        { "value": "rtb", "label": "RTB (Ready to Build)" },
+        { "value": "operational", "label": "İşletme" }
+      ]
+    },
+    "step3": {
+      "title": "Veri Durumu",
+      "dataLabel": "Teknik veriler (Yield, Grid Study) hazır mı?",
+      "dataOptions": [
+        { "value": "yes", "label": "Evet" },
+        { "value": "no", "label": "Hayır" }
+      ]
+    },
+    "flowLabel": "İlgilendiğiniz Hizmet Yolu",
+    "flowPlaceholder": "Seçiniz",
+    "next": "Devam",
+    "prev": "Geri",
+    "submit": "Talebi Gönder",
+    "submitting": "Gönderiliyor…",
+    "thankYou": {
+      "title": "Talebiniz Alındı",
+      "message": "Teknik ön değerlendirme talebiniz başarıyla iletildi. Aşağıda sürecin sonraki adımlarını bulabilirsiniz.",
+      "steps": [
+        "Talebiniz 48 saat içinde teknik ekibimiz tarafından incelenecektir.",
+        "Ön değerlendirme kapsamı ve zaman çizelgesi e-posta ile paylaşılacaktır.",
+        "ATR Matrix™ metodolojisi ile bağımsız teknik analiz başlatılacaktır.",
+        "Nihai rapor ve yatırım kararı desteği sunulacaktır."
+      ],
+      "backLabel": "← Hizmetler Sayfasına Dön"
+    },
+    "validation": {
+      "required": "Bu alan zorunludur.",
+      "emailInvalid": "Geçerli bir e-posta adresi giriniz."
+    }
+  },
+  "trustSignal": "Verileriniz bağımsızlık ilkelerimiz gereği gizli tutulur ve üçüncü taraflarla paylaşılmaz."
+}
