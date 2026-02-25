@@ -25,9 +25,9 @@ const ATR_LABELS: Record<string, string> = {
 };
 
 const PHASE_LABELS: Record<string, string> = {
-  'land-development': 'Arazi Geliştirme',
-  rtb: 'RTB (Ready to Build)',
-  operational: 'İşletme',
+  'land-development': 'Arazi geliştirme',
+  rtb: 'İnşaata hazır (ready-to-build, RTB)',
+  operational: 'İşletmede',
 };
 
 const DATA_LABELS: Record<string, string> = {
@@ -36,9 +36,9 @@ const DATA_LABELS: Record<string, string> = {
 };
 
 const FLOW_LABELS: Record<string, string> = {
-  A: 'Yol A — Teknik İnceleme (TDD)',
-  B: 'Yol B — ATR ve Şebeke Analizi',
-  C: 'Yol C — Mevzuat ve İzin Denetimi',
+  A: 'Yol A — Teknik durum tespiti',
+  B: 'Yol B — ATR ve şebeke analizi',
+  C: 'Yol C — mevzuat ve izin denetimi',
 };
 
 export async function POST(request: Request) {
@@ -47,16 +47,16 @@ export async function POST(request: Request) {
     const ip = getClientIp(request);
     const limit = checkRateLimit(`assessment:${ip}`, RATE_LIMIT);
     if (!limit.allowed) {
-      return NextResponse.json(
-        { error: 'Too many requests. Please try again later.' },
-        {
-          status: 429,
-          headers: {
-            'Retry-After': String(Math.ceil((limit.resetAt - Date.now()) / 1000)),
-            'X-RateLimit-Remaining': '0',
-          },
-        },
-      );
+    return NextResponse.json(
+  { error: 'Çok fazla istek gönderildi. Lütfen daha sonra tekrar deneyiniz.' },
+  {
+    status: 429,
+    headers: {
+      'Retry-After': String(Math.ceil((limit.resetAt - Date.now()) / 1000)),
+      'X-RateLimit-Remaining': '0',
+    },
+  },
+);
     }
 
     const body: AssessmentBody = await request.json();
@@ -199,12 +199,12 @@ export async function POST(request: Request) {
           </div>
           <div style="background: #ffffff; padding: 32px; border: 1px solid #E0E0E0; border-top: none; border-radius: 0 0 8px 8px;">
             <p style="font-size: 14px; color: #333; line-height: 1.6;">Sayın ${safeName},</p>
-            <p style="font-size: 14px; color: #333; line-height: 1.6;">Teknik ön değerlendirme talebiniz başarıyla alınmıştır. Ekibimiz talebinizi 48 saat içinde inceleyecek ve size geri dönüş yapacaktır.</p>
+            <p style="font-size: 14px; color: #333; line-height: 1.6;">Teknik ön değerlendirme talebiniz başarıyla alınmıştır. Ekibimiz talebinizi inceleyerek 3 iş günü içinde size geri dönüş sağlayacaktır.</p>
             <p style="font-size: 14px; color: #333; line-height: 1.6; font-weight: 600;">Süreç Adımları:</p>
             <ol style="font-size: 14px; color: #333; line-height: 1.8; padding-left: 20px;">
               <li>Talebiniz teknik ekibimiz tarafından incelenecektir.</li>
               <li>Ön değerlendirme kapsamı ve zaman çizelgesi paylaşılacaktır.</li>
-              <li>ATR Matrix metodolojisi ile bağımsız teknik analiz başlatılacaktır.</li>
+              <li>ATR Matrisi metodolojisi ile bağımsız teknik analiz başlatılacaktır.</li>
               <li>Nihai rapor ve yatırım kararı desteği sunulacaktır.</li>
             </ol>
             <p style="font-size: 13px; color: #666; margin-top: 24px; border-top: 1px solid #E0E0E0; padding-top: 16px;">

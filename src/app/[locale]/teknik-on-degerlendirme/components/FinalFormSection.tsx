@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { FormContent, ServiceFlow } from './pageContract';
 
 interface FinalFormSectionProps {
@@ -8,6 +8,14 @@ interface FinalFormSectionProps {
   content: FormContent;
   flows: ServiceFlow[];
   trustSignal: string;
+
+  /**
+   * Kilit kural: Akış seçimi kullanıcıya açılmaz.
+   * Akış, akış kartından otomatik gelir.
+   *
+   * Beklenen değer: flow.id (ör. "A" veya "akis-a" mevcut sisteminize göre)
+   */
+  selectedFlow?: string;
 }
 
 type FormData = {
@@ -32,18 +40,59 @@ const INITIAL: FormData = {
   selectedFlow: '',
 };
 
-export default function FinalFormSection({ locale, content, flows, trustSignal }: FinalFormSectionProps) {
+type SubmitError =
+  | null
+  | 'Zorunlu alanları kontrol ediniz.'
+  | 'Başvuru gönderilemedi. Lütfen tekrar deneyiniz.'
+  | 'Ağ hatası oluştu. Lütfen bağlantınızı kontrol edip tekrar deneyiniz.';
+
+export default function FinalFormSection({
+  locale,
+  content,
+  flows,
+  trustSignal,
+  selectedFlow,
+}: FinalFormSectionProps) {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormData>(INITIAL);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<SubmitError>(null);
   const [hp, setHp] = useState('');
 
   const totalSteps = 3;
 
+  // Akış dışarıdan geldiyse forma kilitle
+  useEffect(() => {
+    if (selectedFlow && selectedFlow !== form.selectedFlow) {
+      setForm((prev) => ({ ...prev, selectedFlow }));
+      // Akış hatası varsa temizle
+      if (errors.selectedFlow) {
+        setErrors((prev) => {
+          const next = { ...prev };
+          delete next.selectedFlow;
+          return next;
+        });
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedFlow]);
+
+  const selectedFlowTitle = useMemo(() => {
+    const v = form.selectedFlow?.trim();
+    if (!v) return null;
+    const found =
+      flows.find((f) => String(f.id) === v) ||
+      flows.find((f) => String((f as any).code) === v) ||
+      flows.find((f) => String((f as any).kod) === v);
+    return found ? (found as any).title || (found as any).baslik || String(found.id) : v;
+  }, [flows, form.selectedFlow]);
+
   function set(field: keyof FormData, value: string) {
+    // selectedFlow kullanıcı tarafından değiştirilemez
+    if (field === 'selectedFlow') return;
+
     setForm((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => {
@@ -56,6 +105,11 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
 
   function validateStep(): boolean {
     const errs: Partial<Record<keyof FormData, string>> = {};
+
+    // Kilit kural: akış seçimi kullanıcıya açılmıyor; ancak gönderimde boş kalmamalı.
+    if (!form.selectedFlow.trim()) {
+      errs.selectedFlow = 'Lütfen bir akış seçiniz.';
+    }
 
     if (step === 0) {
       if (!form.name.trim()) errs.name = content.validation.required;
@@ -89,7 +143,11 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
   }
 
   async function handleSubmit() {
-    if (!validateStep()) return;
+    if (!validateStep()) {
+      setSubmitError('Zorunlu alanları kontrol ediniz.');
+      return;
+    }
+
     setSubmitting(true);
     setSubmitError(null);
 
@@ -113,45 +171,44 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
 
       if (res.ok) {
         setSubmitted(true);
-      } else {
-        const data = await res.json().catch(() => ({}));
-        setSubmitError(data.error || 'An unexpected error occurred. Please try again.');
+        return;
       }
+
+      const data = await res.json().catch(() => ({} as any));
+      const serverMsg = typeof data?.error === 'string' ? data.error : null;
+
+      setSubmitError(serverMsg || 'Başvuru gönderilemedi. Lütfen tekrar deneyiniz.');
     } catch {
-      setSubmitError('Network error. Please check your connection and try again.');
+      setSubmitError('Ağ hatası oluştu. Lütfen bağlantınızı kontrol edip tekrar deneyiniz.');
     } finally {
       setSubmitting(false);
     }
   }
 
-  /* ── Thank You Screen ── */
+  // Teşekkür ekranı
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--afa-deep)]">
-          <svg className="h-8 w-8 text-[var(--afa-yellow)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
+        <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-[var(--afa-deep)]" aria-hidden="true" />
         <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-4">
           {content.thankYou.title}
         </h2>
         <p className="text-base text-white/70 max-w-xl mx-auto mb-8">
           {content.thankYou.message}
         </p>
-        <ol className="text-left max-w-md mx-auto space-y-3 mb-10">
-          {content.thankYou.steps.map((s, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--afa-yellow)] text-xs font-bold text-[var(--text-on-yellow)]">
-                {i + 1}
-              </span>
-              <span className="text-sm text-white/80 leading-relaxed">{s}</span>
-            </li>
-          ))}
-        </ol>
+
+        <div className="max-w-xl mx-auto text-left">
+          <div className="text-sm font-bold text-white/80 mb-2">Süreç adımları</div>
+          <ol className="list-decimal pl-5 space-y-2 text-sm text-white/80 leading-relaxed">
+            {content.thankYou.steps.map((s, i) => (
+              <li key={i}>{s}</li>
+            ))}
+          </ol>
+        </div>
+
         <a
           href={`/${locale}/hizmetler`}
-          className="inline-flex items-center px-6 py-3 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] hover:text-[var(--afa-yellow)] transition-colors"
+          className="inline-flex px-6 py-3 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] hover:text-[var(--afa-yellow)] transition-colors mt-10"
         >
           {content.thankYou.backLabel}
         </a>
@@ -159,12 +216,22 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
     );
   }
 
-  /* ── Progress Bar ── */
   const progressPercent = ((step + 1) / totalSteps) * 100;
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      {/* Progress */}
+      {/* Akış kilidi bilgi satırı */}
+      <div className="mb-6 rounded-lg border border-white/10 bg-white/[0.03] p-4">
+        <div className="text-xs font-bold text-white/60 mb-1">Seçilen akış</div>
+        <div className="text-sm font-bold text-white">
+          {selectedFlowTitle || 'Akış seçilmedi. Lütfen üstteki akış kartlarından birini seçerek başvuruyu başlatınız.'}
+        </div>
+        {errors.selectedFlow && (
+          <div className="mt-2 text-xs text-[var(--afa-risk)]">{errors.selectedFlow}</div>
+        )}
+      </div>
+
+      {/* İlerleme */}
       <div className="mb-8">
         <div className="flex justify-between text-xs font-bold text-white/50 mb-2">
           {content.stepLabels.map((label, i) => (
@@ -174,24 +241,28 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
           ))}
         </div>
         <div className="h-1.5 w-full rounded-full bg-white/10">
-          <div
-            className="h-1.5 rounded-full bg-[var(--afa-yellow)] transition-all duration-300"
-            style={{ width: `${progressPercent}%` }}
-          />
+          <div className="h-1.5 rounded-full bg-[var(--afa-yellow)]" style={{ width: `${progressPercent}%` }} />
         </div>
       </div>
 
-      {/* Step Content */}
+      {/* Adım içerikleri */}
       <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 md:p-8">
-        {/* Step 1: Project Identity */}
+        {/* Adım 1 */}
         {step === 0 && (
           <fieldset className="space-y-5">
             <legend className="text-lg font-bold text-white mb-2">{content.step1.title}</legend>
 
             {/* Honeypot */}
             <div className="sr-only" aria-hidden="true">
-              <label htmlFor="_hp_form">Leave empty</label>
-              <input id="_hp_form" type="text" value={hp} onChange={(e) => setHp(e.target.value)} tabIndex={-1} autoComplete="off" />
+              <label htmlFor="_hp_form">Boş bırakınız</label>
+              <input
+                id="_hp_form"
+                type="text"
+                value={hp}
+                onChange={(e) => setHp(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+              />
             </div>
 
             <div>
@@ -241,7 +312,7 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
           </fieldset>
         )}
 
-        {/* Step 2: Technical Filter */}
+        {/* Adım 2 */}
         {step === 1 && (
           <fieldset className="space-y-5">
             <legend className="text-lg font-bold text-white mb-2">{content.step2.title}</legend>
@@ -302,9 +373,13 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
                 onChange={(e) => set('projectPhase', e.target.value)}
                 className="afa-input"
               >
-                <option value="" disabled>—</option>
+                <option value="" disabled>
+                  —
+                </option>
                 {content.step2.phaseOptions.map((opt) => (
-                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
                 ))}
               </select>
               {errors.projectPhase && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.projectPhase}</p>}
@@ -312,7 +387,7 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
           </fieldset>
         )}
 
-        {/* Step 3: Data Availability + Flow Selection */}
+        {/* Adım 3 */}
         {step === 2 && (
           <fieldset className="space-y-5">
             <legend className="text-lg font-bold text-white mb-2">{content.step3.title}</legend>
@@ -345,35 +420,17 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
               </div>
               {errors.dataReady && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.dataReady}</p>}
             </div>
-
-            {/* Flow Selection (optional) */}
-            <div>
-              <label htmlFor="f_selectedFlow" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.flowLabel}
-              </label>
-              <select
-                id="f_selectedFlow"
-                value={form.selectedFlow}
-                onChange={(e) => set('selectedFlow', e.target.value)}
-                className="afa-input"
-              >
-                <option value="">{content.flowPlaceholder}</option>
-                {flows.map((flow) => (
-                  <option key={flow.id} value={flow.id}>{flow.title}</option>
-                ))}
-              </select>
-            </div>
           </fieldset>
         )}
 
-        {/* Submission Error */}
+        {/* Gönderim hatası */}
         {submitError && (
-          <div className="mt-4 rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+          <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--afa-risk)]">
             {submitError}
           </div>
         )}
 
-        {/* Navigation Buttons */}
+        {/* Navigasyon */}
         <div className="mt-8 flex justify-between items-center">
           {step > 0 ? (
             <button
@@ -381,7 +438,7 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
               onClick={handlePrev}
               className="text-sm font-semibold text-white/60 hover:text-white transition-colors"
             >
-              ← {content.prev}
+              {content.prev}
             </button>
           ) : (
             <span />
@@ -391,16 +448,16 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-all"
+              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-colors"
             >
-              {content.next} →
+              {content.next}
             </button>
           ) : (
             <button
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? content.submitting : content.submit}
             </button>
@@ -409,9 +466,7 @@ export default function FinalFormSection({ locale, content, flows, trustSignal }
       </div>
 
       {/* Trust Signal */}
-      <p className="mt-6 text-center text-xs text-white/40 max-w-xl mx-auto">
-        {trustSignal}
-      </p>
+      <p className="mt-6 text-center text-xs text-white/40 max-w-xl mx-auto">{trustSignal}</p>
     </div>
   );
 }
