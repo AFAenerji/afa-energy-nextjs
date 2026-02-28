@@ -94,7 +94,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: 'AFA Energy <noreply@afaenergy.ro>',
-      to: ['info@afaenergy.ro'],
+      to: ['hq@afaenergy.ro'],
       replyTo: body.email,
       subject: `[${roleLabel}] Yeni İletişim Talebi — ${safeName}`,
       html: `

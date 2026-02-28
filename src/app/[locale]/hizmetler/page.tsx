@@ -5,6 +5,7 @@ import { Locale, locales, defaultLocale } from "@/lib/i18n";
 import { LOCALE_PATHS } from "@/lib/routes";
 import styles from "./ServicesPage.module.css";
 import { SITE_URL } from "@/lib/env";
+import ServicesFormInline from "./ServicesFormInline";
 
 /* ── v11.2 Institutional accent color sequence ── */
 const ACCENT_CLASSES = [
@@ -58,7 +59,7 @@ const pageContent = {
       motto: "Yatırımdan Önce Netlik.",
       title: "Teknik Doğrulama Hizmetleri",
       subtitle:
-        "Romanya pazarında yatırımcı tarafında konumlanarak, projelerin teknik ve finansal gerçekliğini ATR Matrix™ metodolojisi ile doğruluyoruz.",
+        "Romanya yenilenebilir enerji projelerinde yatırım kararını; şebeke bağlantı görüşü (Aviz Tehnic de Racordare – ATR), izin zinciri ve teknik uygulanabilirlik temelinde doğrularız.",
     },
     legalDisclaimer: {
       title: "Hukuki Kapsam ve Kullanım Notu",
@@ -140,6 +141,36 @@ const pageContent = {
         "AFA Energy Romania; proje geliştirme, mühendislik-taahhüt yükleniciliği, işletme ve bakım (O&M) hizmeti veya ekipman satışı kapsamında hizmet vermez.",
         "Gelir modeli komisyona değil, danışmanlık ücretine dayanır. Bu yapı, teknik değerlendirmelerin yatırımcı perspektifinde ve tarafsız denetim diliyle yürütülmesini sağlar.",
       ],
+    },
+    form: {
+      title: "Teknik Ön Değerlendirme Formu",
+      subtitle: "Proje parametrelerinizi paylaşın. Veri olgunluğuna göre en doğru teknik doğrulama kurgusunu önerelim.",
+      namePlaceholder: "Adınız ve soyadınız",
+      emailPlaceholder: "ornek@sirket.com",
+      companyPlaceholder: "Kurum veya şirket adı",
+      atrLabel: "ATR Durumu",
+      atrOptions: [
+        { value: "approved", label: "Onaylandı" },
+        { value: "in-process", label: "Süreçte" },
+        { value: "none", label: "Yok" },
+      ],
+      capacityPlaceholder: "ör. 50",
+      phasesLabel: "Proje Aşaması",
+      phaseOptions: [
+        { value: "land-development", label: "Arazi geliştirme" },
+        { value: "rtb", label: "İnşaata hazır (RTB)" },
+        { value: "operational", label: "İşletmede" },
+      ],
+      dataLabel: "Teknik veri seti hazır mı?",
+      dataOptions: [
+        { value: "yes", label: "Evet" },
+        { value: "no", label: "Hayır" },
+      ],
+      notesPlaceholder: "Proje hakkında eklemek istediğiniz notlar…",
+      submitLabel: "Talep Gönder",
+      footnote: "Not: Talep değerlendirmesi yalnızca ön filtreleme amaçlıdır; kesin kapsam ve bedel yazılı teklif ile netleştirilir.",
+      successTitle: "Talebiniz Alındı",
+      successText: "Teknik ekibimiz talebinizi inceleyerek 3 iş günü içinde geri dönüş sağlayacaktır.",
     },
     cta: {
       title: "Hangi hizmetin uygun olduğunu birlikte netleştirelim",
@@ -248,8 +279,38 @@ const pageContent = {
         "Our revenue model is advisory-fee based (not commission-based). This structure supports investor-side, impartial technical assessments.",
       ],
     },
+    form: {
+      title: "Technical Pre-Assessment Form",
+      subtitle: "Share your project parameters. We will propose the appropriate validation approach based on data maturity.",
+      namePlaceholder: "Your full name",
+      emailPlaceholder: "example@company.com",
+      companyPlaceholder: "Company or organization name",
+      atrLabel: "ATR Status",
+      atrOptions: [
+        { value: "approved", label: "Approved" },
+        { value: "in-process", label: "In Process" },
+        { value: "none", label: "None" },
+      ],
+      capacityPlaceholder: "e.g. 50",
+      phasesLabel: "Project Phase",
+      phaseOptions: [
+        { value: "land-development", label: "Land Development" },
+        { value: "rtb", label: "Ready-to-Build (RTB)" },
+        { value: "operational", label: "Operational" },
+      ],
+      dataLabel: "Is the technical dataset ready?",
+      dataOptions: [
+        { value: "yes", label: "Yes" },
+        { value: "no", label: "No" },
+      ],
+      notesPlaceholder: "Any additional notes about the project…",
+      submitLabel: "Submit Request",
+      footnote: "Note: Pre-assessment is for screening only; final scope and fees are defined in a written proposal.",
+      successTitle: "Request Received",
+      successText: "Our technical team will review your request and respond within 3 business days.",
+    },
     cta: {
-      title: "Let’s clarify the right service for your case",
+      title: "Let's clarify the right service for your case",
       subtitle:
         "Share your project parameters. Based on data maturity, we will propose the appropriate validation approach.",
       primaryLabel: "Request a Technical Pre-Assessment",
@@ -355,6 +416,36 @@ const pageContent = {
         "Modelul nostru este bazat pe onorarii de consultanță, nu pe comision. Această structură susține evaluări imparțiale, pe partea investitorului.",
       ],
     },
+    form: {
+      title: "Formular de Evaluare Tehnică Preliminară",
+      subtitle: "Trimiteți parametrii proiectului. Propunem abordarea corectă de validare în funcție de maturitatea datelor.",
+      namePlaceholder: "Numele complet",
+      emailPlaceholder: "exemplu@companie.com",
+      companyPlaceholder: "Numele companiei sau organizației",
+      atrLabel: "Statut ATR",
+      atrOptions: [
+        { value: "approved", label: "Aprobat" },
+        { value: "in-process", label: "În proces" },
+        { value: "none", label: "Nu există" },
+      ],
+      capacityPlaceholder: "ex. 50",
+      phasesLabel: "Faza proiectului",
+      phaseOptions: [
+        { value: "land-development", label: "Dezvoltare teren" },
+        { value: "rtb", label: "Gata de construcție (RTB)" },
+        { value: "operational", label: "Operațional" },
+      ],
+      dataLabel: "Setul de date tehnice este pregătit?",
+      dataOptions: [
+        { value: "yes", label: "Da" },
+        { value: "no", label: "Nu" },
+      ],
+      notesPlaceholder: "Note suplimentare despre proiect…",
+      submitLabel: "Trimite Solicitarea",
+      footnote: "Notă: Evaluarea preliminară este pentru pre-filtrare; domeniul și tarifele finale sunt definite în oferta scrisă.",
+      successTitle: "Solicitare Primită",
+      successText: "Echipa noastră tehnică va analiza solicitarea și va răspunde în termen de 3 zile lucrătoare.",
+    },
     cta: {
       title: "Clarificăm împreună serviciul potrivit",
       subtitle:
@@ -420,13 +511,48 @@ export default async function ServicesPage({
 
   return (
     <main className={styles.servicesPage}>
-      {/* HERO — Grid Background */}
+      {/* HERO — v1.2 Authority Terminal */}
       <section className={styles.hero}>
+        <div className={styles.heroBg} />
+        <div className={styles.heroOverlay} />
         <div className={styles.gridOverlay} />
-        <div className={`afa-container ${styles.heroInner}`}>
+        <div className={styles.heroSeal} />
+        <div className={styles.heroInner}>
           <p className={styles.motto}>{content.hero.motto}</p>
           <h1 className={styles.heroTitle}>{content.hero.title}</h1>
           <p className={styles.heroSubtitle}>{content.hero.subtitle}</p>
+
+          <Link href={LOCALE_PATHS.assessment[locale]} className={styles.heroCta}>
+            {locale === "tr"
+              ? "Teknik Ön Değerlendirme Talep Edin"
+              : locale === "en"
+              ? "Request Technical Pre-Assessment"
+              : "Solicitați Evaluarea Tehnică Preliminară"}
+          </Link>
+
+          <ul className={styles.heroNav}>
+            {content.services.map((s) => (
+              <li key={s.number}>
+                <a href={`#gate-${s.number}`} className={styles.heroNavItem}>
+                  <span className={styles.heroNavNum}>{s.number}</span>
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.heroFooter}>
+          <span className={styles.heroFooterLeft}>
+            AFA ENERGY ROMANIA | TECHNICAL VERIFICATION DEPT.
+          </span>
+          <a href="#hizmet-farklari" className={styles.heroFooterRight}>
+            <span className={styles.heroFooterSeal} />
+            {locale === "tr"
+              ? "Hangi Karar Aşamasındasınız?"
+              : locale === "en"
+              ? "Which Decision Stage Are You At?"
+              : "În ce etapă de decizie vă aflați?"}
+          </a>
         </div>
       </section>
 
@@ -473,7 +599,7 @@ export default async function ServicesPage({
             const photo = SERVICE_PHOTOS[index % SERVICE_PHOTOS.length];
 
             return (
-              <article key={service.number} className={styles.serviceBand}>
+              <article key={service.number} id={`gate-${service.number}`} className={styles.serviceBand}>
                 {/* 8px institutional accent border */}
                 <div className={`${styles.bandAccent} ${accentClass}`} />
 
@@ -565,6 +691,17 @@ export default async function ServicesPage({
                 {p}
               </p>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TECHNICAL PRE-EVALUATION FORM */}
+      <section id="talep-formu" className={styles.formSection}>
+        <div className="afa-container">
+          <div className={styles.formWrapper}>
+            <h2 className={styles.formTitle}>{content.form.title}</h2>
+            <p className={styles.formSubtitle}>{content.form.subtitle}</p>
+            <ServicesFormInline locale={locale} content={content.form} />
           </div>
         </div>
       </section>

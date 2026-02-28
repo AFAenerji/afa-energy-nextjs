@@ -108,7 +108,7 @@ export async function POST(request: Request) {
     const safeFlow = escapeHtml(FLOW_LABELS[body.selectedFlow || ''] || body.selectedFlow || '—');
 
     const apiKey = process.env.RESEND_API_KEY;
-    const targetInbox = process.env.ASSESSMENT_INBOX || 'afa_form_360@afaenerji.com';
+    const targetInbox = process.env.ASSESSMENT_INBOX || 'hq@afaenergy.ro';
 
     if (!apiKey) {
       console.log('[Technical Assessment Submission]', {
