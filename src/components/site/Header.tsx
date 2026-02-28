@@ -144,7 +144,7 @@ export default function Header({ locale }: HeaderProps) {
 
               {/* Contact CTA */}
               <button
-                onClick={() => navigate('/contact')}
+                onClick={() => navigate('/iletisim')}
                 className="afa-header__cta"
               >
                 {t('contact')}

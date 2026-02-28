@@ -17,7 +17,7 @@ export default function Footer({ locale }: FooterProps) {
     { key: 'cases', path: '/cases' },
     { key: 'about', path: '/hakkimizda' },
     { key: 'knowledgeCenter', path: '/bilgi-merkezi' },
-    { key: 'reachUs', path: '/contact' },
+    { key: 'reachUs', path: '/iletisim' },
   ];
 
   return (
@@ -103,7 +103,7 @@ export default function Footer({ locale }: FooterProps) {
                 {t('addressLine3')}
               </address>
               <Link
-                href={`/${locale}/contact`}
+                href={`/${locale}/iletisim`}
                 className="text-sm text-[#28AFB0] hover:!text-white mt-4 inline-block"
               >
                 {t('contactForm')} →

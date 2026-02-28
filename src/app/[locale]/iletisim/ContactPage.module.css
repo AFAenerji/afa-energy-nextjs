@@ -1,0 +1,544 @@
+/* ============================================================
+   AFA ENERGY — Contact (İletişim) Page Module
+   Silent Authority • v13.5
+   ============================================================ */
+
+.contactPage {
+  background: #FFFFFF;
+}
+
+/* ── HERO ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 50vh;
+  min-height: 360px;
+  width: 100%;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(24, 98, 95, 0.85) 0%,
+      rgba(11, 31, 30, 0.92) 100%
+    ),
+    url('/images/services-hero.jpeg');
+  background-size: cover, cover;
+  background-position: center 30%, center center;
+  background-repeat: no-repeat, no-repeat;
+  filter: grayscale(15%);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #18625F;
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 10;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.heroInner {
+  border-left: 4px solid #FFCB00;
+  padding-left: 32px;
+  max-width: 640px;
+}
+
+.heroMotto {
+  color: #FFCB00;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.heroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+}
+
+.heroSubtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #D1D5DB;
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+  .heroContainer {
+    padding: 0 20px;
+  }
+  .heroTitle {
+    font-size: 26px;
+  }
+  .heroInner {
+    padding-left: 20px;
+    max-width: 100%;
+  }
+}
+
+/* ── MAIN CONTENT ───────────────────────────────────── */
+.mainSection {
+  padding: 64px 0;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* ── LEFT COLUMN — Info + Routing ───────────────────── */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #18625F;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.pageIntro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+/* Routing Note Cards */
+.routingCard {
+  border: 1px solid #E0E0E0;
+  border-left: 4px solid #18625F;
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.routingTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: #18625F;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.routingText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.routingLink {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #18625F;
+  text-decoration: none;
+  border-bottom: 1px solid #18625F;
+  transition: color 150ms linear;
+}
+
+.routingLink:hover {
+  color: #FFCB00;
+  border-bottom-color: #FFCB00;
+}
+
+/* Contact Info Card */
+.infoCard {
+  border: 1px solid #E0E0E0;
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 4px;
+}
+
+.infoCardTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #18625F;
+  margin: 0 0 16px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #E0E0E0;
+  text-align: left;
+}
+
+.infoGroup {
+  margin-bottom: 16px;
+}
+
+.infoGroup:last-child {
+  margin-bottom: 0;
+}
+
+.infoLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  color: #333333;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px 0;
+  text-align: left;
+}
+
+.infoValue {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+.infoLink {
+  color: #18625F;
+  text-decoration: none;
+  border-bottom: 1px solid #18625F;
+  transition: color 150ms linear;
+}
+
+.infoLink:hover {
+  color: #FFCB00;
+  border-bottom-color: #FFCB00;
+}
+
+/* ── RIGHT COLUMN — Form ────────────────────────────── */
+.formCard {
+  border: 1px solid #E0E0E0;
+  border-top: 4px solid #18625F;
+  background: #FFFFFF;
+  padding: 28px;
+  border-radius: 4px;
+}
+
+.formTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #18625F;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.formIntro {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #E0E0E0;
+  text-align: left;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formLabel {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #18625F;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.formRequired {
+  color: #F25F5C;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #1A1A1A;
+  background: #F0F8F7;
+  border: 1px solid #D4E8E6;
+  border-radius: 4px;
+  padding: 10px 12px;
+  box-shadow: none;
+  outline: none;
+  transition: border-color 150ms linear;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: #18625F;
+}
+
+.formInputError {
+  border-color: #F25F5C;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #B0B0B0;
+}
+
+.formSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 32px;
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.formHint {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  color: #666666;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.formDisclaimer {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  color: #666666;
+  line-height: 1.6;
+  padding-top: 16px;
+  border-top: 1px solid #E0E0E0;
+  margin: 0;
+  text-align: left;
+}
+
+.formSubmit {
+  width: 100%;
+  background: #18625F;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 150ms linear;
+  margin-top: 8px;
+  box-shadow: none;
+}
+
+.formSubmit:hover {
+  background: #0B1F1E;
+}
+
+.formSubmit:disabled {
+  background: #E0E0E0;
+  cursor: not-allowed;
+}
+
+.formSuccess {
+  padding: 20px;
+  border: 1px solid #18625F;
+  border-radius: 4px;
+  background: rgba(24, 98, 95, 0.04);
+  box-shadow: none;
+}
+
+.formSuccessTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #18625F;
+  margin: 0 0 6px 0;
+}
+
+.formSuccessText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #1A1A1A;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.formReferenceCode {
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 15px;
+  color: #18625F;
+  margin-top: 10px;
+}
+
+.formError {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #F25F5C;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.formHoneypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* ── MAP SECTION ────────────────────────────────────── */
+.mapSection {
+  padding: 0 0 48px;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 240px;
+  background: #F5F5F5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mapFrame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(30%);
+}
+
+/* ── COMMUNICATION STANDARDS ────────────────────────── */
+.standardsSection {
+  padding: 48px 0;
+  border-top: 1px solid #E0E0E0;
+  background: #FFFFFF;
+}
+
+.standardsTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #18625F;
+  margin: 0 0 24px 0;
+  text-align: left;
+}
+
+.standardsIntro {
+  background: #F5F5F5;
+  border-left: 2px solid #18625F;
+  padding: 20px 24px;
+  margin: 0 0 32px 0;
+}
+
+.standardsIntroText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.7;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+.standardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .standardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.standardBlock {
+  border-left: 2px solid #18625F;
+  padding-left: 16px;
+}
+
+.standardBlockFull {
+  border-left: 2px solid #18625F;
+  padding-left: 16px;
+  grid-column: 1 / -1;
+}
+
+.standardBlockTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #18625F;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.standardBlockText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.7;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+.standardBlockText:last-child {
+  margin-bottom: 0;
+}
+
+.standardBlockStrong {
+  color: #18625F;
+  font-weight: 600;
+}

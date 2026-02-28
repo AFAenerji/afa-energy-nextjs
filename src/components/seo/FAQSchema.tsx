@@ -28,7 +28,8 @@ export default function FAQSchema({ groups }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema as Record<string, unknown>) }}
-    />
+    >
+      {safeJsonLd(schema as Record<string, unknown>)}
+    </script>
   );
 }

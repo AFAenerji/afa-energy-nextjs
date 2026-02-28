@@ -129,7 +129,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               {t('info')}
             </button>
             <button
-              onClick={() => handleNavigation('/contact')}
+              onClick={() => handleNavigation('/iletisim')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('contact')}

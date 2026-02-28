@@ -56,6 +56,7 @@ export default function ServicesFormInline({ locale, content }: Props) {
   const [form, setForm] = useState<FormState>(INITIAL);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [referenceCode, setReferenceCode] = useState("");
   const [error, setError] = useState("");
 
   function set(field: keyof FormState, value: string) {
@@ -96,11 +97,15 @@ export default function ServicesFormInline({ locale, content }: Props) {
         }),
       });
 
+      const data = await res.json().catch(() => null);
+
       if (!res.ok) {
-        const data = await res.json().catch(() => null);
         throw new Error(data?.error || "Sunucu hatası");
       }
 
+      if (data?.referenceCode) {
+        setReferenceCode(data.referenceCode);
+      }
       setSubmitted(true);
     } catch (err) {
       setError(
@@ -120,6 +125,11 @@ export default function ServicesFormInline({ locale, content }: Props) {
       <div className={styles.formSuccess}>
         <h3 className={styles.formSuccessTitle}>{content.successTitle}</h3>
         <p className={styles.formSuccessText}>{content.successText}</p>
+        {referenceCode && (
+          <p className={styles.formReferenceCode}>
+            {locale === "tr" ? "Referans Kodu" : locale === "en" ? "Reference Code" : "Cod de Referință"}: {referenceCode}
+          </p>
+        )}
       </div>
     );
   }

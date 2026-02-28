@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { escapeHtml } from '@/lib/security/escapeHtml';
 import { isValidEmail } from '@/lib/security/validateEmail';
 import { checkRateLimit, getClientIp } from '@/lib/security/rateLimit';
+import { generateReferenceCode } from '@/lib/referenceCode';
 
 interface AssessmentBody {
   name: string;
@@ -107,11 +108,14 @@ export async function POST(request: Request) {
     const dataLabel = escapeHtml(DATA_LABELS[body.dataReady] || body.dataReady);
     const safeFlow = escapeHtml(FLOW_LABELS[body.selectedFlow || ''] || body.selectedFlow || '—');
 
+    const referenceCode = generateReferenceCode();
+
     const apiKey = process.env.RESEND_API_KEY;
     const targetInbox = process.env.ASSESSMENT_INBOX || 'hq@afaenergy.ro';
 
     if (!apiKey) {
       console.log('[Technical Assessment Submission]', {
+        referenceCode,
         name: safeName,
         email: safeEmail,
         company: safeCompany,
@@ -124,7 +128,7 @@ export async function POST(request: Request) {
         timestamp: new Date().toISOString(),
       });
 
-      return NextResponse.json({ success: true });
+      return NextResponse.json({ success: true, referenceCode });
     }
 
     const { Resend } = await import('resend');
@@ -135,7 +139,7 @@ export async function POST(request: Request) {
       from: 'AFA Energy <noreply@afaenergy.ro>',
       to: [targetInbox],
       replyTo: body.email,
-      subject: `[Teknik Ön Değerlendirme] ${safeName} — ${safeCapacity} MW`,
+      subject: `[${referenceCode}] Teknik Ön Değerlendirme — ${safeName} — ${safeCapacity} MW`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #18625F; padding: 24px 32px; border-radius: 8px 8px 0 0;">
@@ -144,6 +148,10 @@ export async function POST(request: Request) {
           </div>
           <div style="background: #ffffff; padding: 32px; border: 1px solid #E0E0E0; border-top: none; border-radius: 0 0 8px 8px;">
             <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+              <tr>
+                <td style="padding: 8px 0; color: #666; width: 140px;">Referans Kodu:</td>
+                <td style="padding: 8px 0; font-weight: 700; color: #18625F; font-family: monospace; font-size: 15px;">${referenceCode}</td>
+              </tr>
               <tr>
                 <td style="padding: 8px 0; color: #666; width: 140px;">Ad Soyad:</td>
                 <td style="padding: 8px 0; font-weight: 600;">${safeName}</td>
@@ -190,7 +198,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: 'AFA Energy <noreply@afaenergy.ro>',
       to: [body.email],
-      subject: 'Teknik Ön Değerlendirme Talebiniz Alındı — AFA Energy Romania',
+      subject: `[${referenceCode}] Teknik Ön Değerlendirme Talebiniz Alındı — AFA Energy Romania`,
       html: `
         <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #18625F; padding: 24px 32px; border-radius: 8px 8px 0 0;">
@@ -200,6 +208,7 @@ export async function POST(request: Request) {
           <div style="background: #ffffff; padding: 32px; border: 1px solid #E0E0E0; border-top: none; border-radius: 0 0 8px 8px;">
             <p style="font-size: 14px; color: #333; line-height: 1.6;">Sayın ${safeName},</p>
             <p style="font-size: 14px; color: #333; line-height: 1.6;">Teknik ön değerlendirme talebiniz başarıyla alınmıştır. Ekibimiz talebinizi inceleyerek 3 iş günü içinde size geri dönüş sağlayacaktır.</p>
+            <p style="font-size: 14px; color: #18625F; line-height: 1.6; font-weight: 600;">Referans Kodunuz: <span style="font-family: monospace; font-size: 15px;">${referenceCode}</span></p>
             <p style="font-size: 14px; color: #333; line-height: 1.6; font-weight: 600;">Süreç Adımları:</p>
             <ol style="font-size: 14px; color: #333; line-height: 1.8; padding-left: 20px;">
               <li>Talebiniz teknik ekibimiz tarafından incelenecektir.</li>
@@ -215,7 +224,7 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true, referenceCode });
   } catch (err) {
     console.error('[Assessment API Error]', err);
     return NextResponse.json(

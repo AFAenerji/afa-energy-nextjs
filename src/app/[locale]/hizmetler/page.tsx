@@ -57,9 +57,15 @@ const pageContent = {
     breadcrumbSelf: "Hizmetler",
     hero: {
       motto: "Yatırımdan Önce Netlik.",
-      title: "Teknik Doğrulama Hizmetleri",
+      title: "Teknik Doğrulama Hizmetleri.",
       subtitle:
-        "Romanya yenilenebilir enerji projelerinde yatırım kararını; şebeke bağlantı görüşü (Aviz Tehnic de Racordare – ATR), izin zinciri ve teknik uygulanabilirlik temelinde doğrularız.",
+        "AFA, Romanya'da ATR Matrix™ metodolojisi ile incelediği yatırıma uygun projeleri yatırımcılara sunar. Her proje, banka finansmanına uygunluk standardında doğrulanmıştır.",
+      cta: "Yatırıma Uygun Projeleri Keşfet",
+      axes: [
+        { label: "Eksen 1", title: "Şebeke Entegrasyonu" },
+        { label: "Eksen 2", title: "Finansal Dayanıklılık" },
+        { label: "Eksen 3", title: "Yasal Uyum" },
+      ],
     },
     legalDisclaimer: {
       title: "Hukuki Kapsam ve Kullanım Notu",
@@ -193,10 +199,16 @@ const pageContent = {
     breadcrumbHome: "Home",
     breadcrumbSelf: "Services",
     hero: {
-      motto: "Decision Support Mechanism",
-      title: "Technical Validation Services",
+      motto: "Clarity Before Investment.",
+      title: "Technical Validation Services.",
       subtitle:
-        "Positioned on the investor side in Romania, we validate the technical and financial reality of projects through the ATR Matrix™ methodology.",
+        "AFA presents investor-suitable projects evaluated through the ATR Matrix™ methodology in Romania. Each project is validated at bank-financing eligibility standards.",
+      cta: "Explore Investment-Ready Projects",
+      axes: [
+        { label: "Axis 1", title: "Grid Integration" },
+        { label: "Axis 2", title: "Financial Resilience" },
+        { label: "Axis 3", title: "Regulatory Compliance" },
+      ],
     },
     legalDisclaimer: {
       title: "Scope and Use Note",
@@ -330,10 +342,16 @@ const pageContent = {
     breadcrumbHome: "Acasă",
     breadcrumbSelf: "Servicii",
     hero: {
-      motto: "Mecanism de Suport Decizional",
-      title: "Servicii de Validare Tehnică",
+      motto: "Claritate Înainte de Investiție.",
+      title: "Servicii de Validare Tehnică.",
       subtitle:
-        "Poziționați pe partea investitorului în România, validăm realitatea tehnică și financiară a proiectelor prin metodologia ATR Matrix™.",
+        "AFA prezintă investitorilor proiecte potrivite evaluate prin metodologia ATR Matrix™ în România. Fiecare proiect este validat la standardele de eligibilitate pentru finanțare bancară.",
+      cta: "Explorați Proiectele Eligibile",
+      axes: [
+        { label: "Axa 1", title: "Integrare Rețea" },
+        { label: "Axa 2", title: "Reziliență Financiară" },
+        { label: "Axa 3", title: "Conformitate Reglementară" },
+      ],
     },
     legalDisclaimer: {
       title: "Notă de Utilizare și Limitare",
@@ -511,47 +529,56 @@ export default async function ServicesPage({
 
   return (
     <main className={styles.servicesPage}>
-      {/* HERO — v1.2 Authority Terminal */}
+      {/* HERO — v13.5.2 Audit-Pure FINAL */}
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroOverlay} />
+        <div className={styles.heroContrastOverlay} />
         <div className={styles.gridOverlay} />
-        <div className={styles.heroSeal} />
-        <div className={styles.heroInner}>
-          <p className={styles.motto}>{content.hero.motto}</p>
-          <h1 className={styles.heroTitle}>{content.hero.title}</h1>
-          <p className={styles.heroSubtitle}>{content.hero.subtitle}</p>
 
-          <Link href={LOCALE_PATHS.assessment[locale]} className={styles.heroCta}>
-            {locale === "tr"
-              ? "Teknik Ön Değerlendirme Talep Edin"
-              : locale === "en"
-              ? "Request Technical Pre-Assessment"
-              : "Solicitați Evaluarea Tehnică Preliminară"}
-          </Link>
+        <div className={styles.heroContainer}>
+          <div className={styles.heroInner}>
+            <p className={styles.motto}>{content.hero.motto}</p>
+            <h1 className={styles.heroTitle}>{content.hero.title}</h1>
+            <p className={styles.heroSubtitle}>
+              {(() => {
+                const text = content.hero.subtitle;
+                const atrIdx = text.indexOf("ATR Matrix™");
+                if (atrIdx === -1) return text;
+                return (
+                  <>
+                    {text.slice(0, atrIdx)}
+                    <span className={styles.atrEmphasis}>ATR Matrix™</span>
+                    {text.slice(atrIdx + "ATR Matrix™".length)}
+                  </>
+                );
+              })()}
+            </p>
 
-          <ul className={styles.heroNav}>
-            {content.services.map((s) => (
-              <li key={s.number}>
-                <a href={`#gate-${s.number}`} className={styles.heroNavItem}>
-                  <span className={styles.heroNavNum}>{s.number}</span>
-                  {s.title}
-                </a>
-              </li>
-            ))}
-          </ul>
+            <Link href={LOCALE_PATHS.assessment[locale]} className={styles.heroCta}>
+              {content.hero.cta}
+            </Link>
+
+            <div className={styles.axisBand}>
+              {content.hero.axes.map((axis, i) => (
+                <div key={i} className={styles.axisItem}>
+                  <span className={styles.axisLabel}>{axis.label}</span>
+                  <span className={styles.axisTitle}>{axis.title}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
         <div className={styles.heroFooter}>
-          <span className={styles.heroFooterLeft}>
-            AFA ENERGY ROMANIA | TECHNICAL VERIFICATION DEPT.
-          </span>
           <a href="#hizmet-farklari" className={styles.heroFooterRight}>
-            <span className={styles.heroFooterSeal} />
-            {locale === "tr"
-              ? "Hangi Karar Aşamasındasınız?"
-              : locale === "en"
-              ? "Which Decision Stage Are You At?"
-              : "În ce etapă de decizie vă aflați?"}
+            <span className={styles.heroFooterRightText}>
+              {locale === "tr"
+                ? "Hangi Karar Aşamasındasınız? ↓"
+                : locale === "en"
+                ? "Which Decision Stage Are You At? ↓"
+                : "În ce etapă de decizie vă aflați? ↓"}
+            </span>
           </a>
         </div>
       </section>

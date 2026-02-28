@@ -26,7 +26,8 @@ export default function BreadcrumbSchema({ items }: Props) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: safeJsonLd(schema) }}
-    />
+    >
+      {safeJsonLd(schema)}
+    </script>
   );
 }

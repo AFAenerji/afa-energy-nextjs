@@ -59,6 +59,7 @@ export default function FinalFormSection({
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<SubmitError>(null);
+  const [referenceCode, setReferenceCode] = useState('');
   const [hp, setHp] = useState('');
 
   const totalSteps = 3;
@@ -169,12 +170,13 @@ export default function FinalFormSection({
         }),
       });
 
+      const data = await res.json().catch(() => ({} as any));
+
       if (res.ok) {
+        if (data?.referenceCode) setReferenceCode(data.referenceCode);
         setSubmitted(true);
         return;
       }
-
-      const data = await res.json().catch(() => ({} as any));
       const serverMsg = typeof data?.error === 'string' ? data.error : null;
 
       setSubmitError(serverMsg || 'Başvuru gönderilemedi. Lütfen tekrar deneyiniz.');
@@ -193,9 +195,14 @@ export default function FinalFormSection({
         <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-4">
           {content.thankYou.title}
         </h2>
-        <p className="text-base text-white/70 max-w-xl mx-auto mb-8">
+        <p className="text-base text-white/70 max-w-xl mx-auto mb-4">
           {content.thankYou.message}
         </p>
+        {referenceCode && (
+          <p className="text-base font-bold text-[var(--afa-yellow)] mb-8 font-mono">
+            Referans: {referenceCode}
+          </p>
+        )}
 
         <div className="max-w-xl mx-auto text-left">
           <div className="text-sm font-bold text-white/80 mb-2">Süreç adımları</div>
