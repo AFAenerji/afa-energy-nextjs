@@ -558,19 +558,19 @@ export default async function ServicesPage({
             <Link href={LOCALE_PATHS.assessment[locale]} className={styles.heroCta}>
               {content.hero.cta}
             </Link>
-
-            <div className={styles.axisBand}>
-              {content.hero.axes.map((axis, i) => (
-                <div key={i} className={styles.axisItem}>
-                  <span className={styles.axisLabel}>{axis.label}</span>
-                  <span className={styles.axisTitle}>{axis.title}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
+        {/* Status Bar — split bottom: axes left, scroll hint right */}
         <div className={styles.heroFooter}>
+          <div className={styles.axisBand}>
+            {content.hero.axes.map((axis, i) => (
+              <div key={i} className={styles.axisItem}>
+                <span className={styles.axisLabel}>{axis.label}</span>
+                <span className={styles.axisTitle}>{axis.title}</span>
+              </div>
+            ))}
+          </div>
           <a href="#hizmet-farklari" className={styles.heroFooterRight}>
             <span className={styles.heroFooterRightText}>
               {locale === "tr"
