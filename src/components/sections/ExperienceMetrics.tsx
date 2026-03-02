@@ -12,7 +12,7 @@ export default function ExperienceMetrics({ data }: Props) {
   const panelId = useId();
   const eyebrow = data.eyebrow || "Veriye Dayalı Deneyim";
   const note = data.note || "";
-  const methodology = (data as MetricsData & { methodology?: string }).methodology;
+  const { methodology } = data as MetricsData & { methodology?: string };
 
   if (!data?.items?.length) return null;
 
@@ -77,7 +77,7 @@ export default function ExperienceMetrics({ data }: Props) {
                 type="button"
                 onClick={() => setMethodologyOpen((v) => !v)}
                 aria-expanded={methodologyOpen}
-                aria-controls={panelId}
+                aria-controls={methodologyOpen ? panelId : undefined}
                 className="inline-flex items-center gap-3 text-sm font-semibold text-[#FFCB00] hover:text-white transition-colors"
               >
                 <span>Metodoloji</span>

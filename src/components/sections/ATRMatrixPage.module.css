@@ -47,10 +47,40 @@
   position: relative;
 }
 
-.heroContent {
+.heroGrid {
   composes: container;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 55fr 45fr;
+    gap: 48px;
+  }
+}
+
+.heroTextColumn {
   position: relative;
   z-index: 1;
+}
+
+.heroPhotoColumn {
+  background-color: var(--green-deep);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .heroPhotoColumn {
+    min-height: 360px;
+  }
 }
 
 .heroEyebrow {
@@ -116,7 +146,7 @@
 /* ── SECTION 3: FOUR PILLARS ── */
 .pillars {
   composes: sectionBase;
-  background-color: var(--muted);
+  background-color: rgba(24, 98, 95, 0.05);
 }
 
 .pillarsGrid {
@@ -136,6 +166,7 @@
   border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--afa-border);
+  border-left: 4px solid var(--afa-secondary);
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -199,7 +230,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid var(--afa-secondary);
+  background-color: var(--afa-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +241,7 @@
 .stepNumber {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--afa-secondary);
+  color: #FFFFFF;
 }
 
 .stepLabel {
@@ -252,7 +283,7 @@
 /* ── SECTION 5: DECISION CLASSIFICATION ── */
 .decision {
   composes: sectionBase;
-  background-color: var(--muted);
+  background-color: rgba(24, 98, 95, 0.05);
 }
 
 .decisionGrid {
@@ -305,13 +336,13 @@
 }
 
 .badge {
-  background-color: var(--muted);
+  background-color: rgba(24, 98, 95, 0.1);
   color: var(--afa-primary);
   font-size: 0.875rem;
   font-weight: 500;
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid var(--afa-border);
+  border-left: 4px solid var(--afa-secondary);
 }
 
 /* ── SECTION 7: INDEPENDENCE ── */
@@ -336,7 +367,7 @@
 /* ── SECTION 8: STAKEHOLDER IMPACT ── */
 .stakeholders {
   composes: sectionBase;
-  background-color: var(--muted);
+  background-color: rgba(24, 98, 95, 0.05);
 }
 
 .stakeholderGrid {
@@ -353,6 +384,7 @@
   border-radius: 8px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--afa-border);
+  border-top: 4px solid var(--afa-secondary);
   padding: 24px;
   transition: border-color 150ms ease-out;
 }
@@ -447,6 +479,31 @@
 .ctaSecondary:focus-visible {
   outline: 2px solid var(--afa-secondary);
   outline-offset: 2px;
+}
+
+/* ── PHOTO BANDS ── */
+.photoBand {
+  background-color: var(--green-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 192px;
+}
+@media (min-width: 768px) {
+  .photoBand { height: 256px; }
+}
+@media (min-width: 1024px) {
+  .photoBand { height: 320px; }
+}
+
+.photoBandAlt {
+  composes: photoBand;
+}
+@media (min-width: 1024px) {
+  .photoBandAlt { height: 288px; }
 }
 
 /* ── SECTION 10: DISCLAIMER ── */

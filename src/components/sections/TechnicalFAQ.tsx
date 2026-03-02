@@ -112,15 +112,15 @@ export default function TechnicalFAQ({ data, locale = 'tr' }: Props) {
                       <li
                         key={key}
                         id={faqId(gIdx, iIdx)}
-                        className="rounded-lg border border-white/10 bg-white/[0.03] scroll-mt-24"
+                        className="rounded-lg border border-white/10 bg-white/5 scroll-mt-24"
                       >
                         <button
                           id={buttonId}
                           type="button"
                           onClick={() => toggleItem(key)}
                           aria-expanded={isOpen}
-                          aria-controls={panelId}
-                          className="afa-faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/[0.04] focus-visible:ring-2 focus-visible:ring-[var(--yellow-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--green-deep)] rounded-lg"
+                          aria-controls={isOpen ? panelId : undefined}
+                          className="afa-faq-trigger flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-afa-gold focus-visible:ring-offset-2 focus-visible:ring-offset-afa-deep rounded-lg"
                         >
                           <span className="text-sm md:text-base font-medium afa-text-primary">
                             {highlightAndLink(item.question)}

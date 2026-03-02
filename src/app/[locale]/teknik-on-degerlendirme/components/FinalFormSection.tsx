@@ -191,7 +191,7 @@ export default function FinalFormSection({
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-[var(--afa-deep)]" aria-hidden="true" />
+        <div className="mx-auto mb-6 h-16 w-16 rounded-full bg-afa-deep" aria-hidden="true" />
         <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-4">
           {content.thankYou.title}
         </h2>
@@ -199,7 +199,7 @@ export default function FinalFormSection({
           {content.thankYou.message}
         </p>
         {referenceCode && (
-          <p className="text-base font-bold text-[var(--afa-yellow)] mb-8 font-mono">
+          <p className="text-base font-bold text-afa-gold mb-8 font-mono">
             Referans: {referenceCode}
           </p>
         )}
@@ -215,7 +215,7 @@ export default function FinalFormSection({
 
         <a
           href={`/${locale}/hizmetler`}
-          className="inline-flex px-6 py-3 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] hover:text-[var(--afa-yellow)] transition-colors mt-10"
+          className="inline-flex px-6 py-3 text-sm font-bold rounded border border-white/20 text-white hover:border-afa-gold hover:text-afa-gold transition-colors mt-10"
         >
           {content.thankYou.backLabel}
         </a>
@@ -228,13 +228,13 @@ export default function FinalFormSection({
   return (
     <div className="w-full max-w-2xl mx-auto">
       {/* Akış kilidi bilgi satırı */}
-      <div className="mb-6 rounded-lg border border-white/10 bg-white/[0.03] p-4">
+      <div className="mb-6 rounded-lg border border-white/10 bg-white/5 p-4">
         <div className="text-xs font-bold text-white/60 mb-1">Seçilen akış</div>
         <div className="text-sm font-bold text-white">
           {selectedFlowTitle || 'Akış seçilmedi. Lütfen üstteki akış kartlarından birini seçerek başvuruyu başlatınız.'}
         </div>
         {errors.selectedFlow && (
-          <div className="mt-2 text-xs text-[var(--afa-risk)]">{errors.selectedFlow}</div>
+          <div className="mt-2 text-xs text-afa-warning">{errors.selectedFlow}</div>
         )}
       </div>
 
@@ -242,18 +242,18 @@ export default function FinalFormSection({
       <div className="mb-8">
         <div className="flex justify-between text-xs font-bold text-white/50 mb-2">
           {content.stepLabels.map((label, i) => (
-            <span key={i} className={i <= step ? 'text-[var(--afa-yellow)]' : ''}>
+            <span key={i} className={i <= step ? 'text-afa-gold' : ''}>
               {label}
             </span>
           ))}
         </div>
         <div className="h-1.5 w-full rounded-full bg-white/10">
-          <div className="h-1.5 rounded-full bg-[var(--afa-yellow)]" style={{ width: `${progressPercent}%` }} />
+          <div className="h-1.5 rounded-full bg-afa-gold" style={{ width: `${progressPercent}%` }} />
         </div>
       </div>
 
       {/* Adım içerikleri */}
-      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 md:p-8">
+      <div className="rounded-lg border border-white/10 bg-white/5 p-6 md:p-8">
         {/* Adım 1 */}
         {step === 0 && (
           <fieldset className="space-y-5">
@@ -274,7 +274,7 @@ export default function FinalFormSection({
 
             <div>
               <label htmlFor="f_name" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step1.nameLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step1.nameLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
                 id="f_name"
@@ -284,7 +284,7 @@ export default function FinalFormSection({
                 placeholder={content.step1.namePlaceholder}
                 className="afa-input"
               />
-              {errors.name && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.name}</p>}
+              {errors.name && <p className="mt-1 text-xs text-afa-warning">{errors.name}</p>}
             </div>
 
             <div>
@@ -303,7 +303,7 @@ export default function FinalFormSection({
 
             <div>
               <label htmlFor="f_email" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step1.emailLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step1.emailLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
                 id="f_email"
@@ -314,7 +314,7 @@ export default function FinalFormSection({
                 className="afa-input"
               />
               <p className="mt-1 text-xs text-white/40">{content.step1.emailHint}</p>
-              {errors.email && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.email}</p>}
+              {errors.email && <p className="mt-1 text-xs text-afa-warning">{errors.email}</p>}
             </div>
           </fieldset>
         )}
@@ -326,15 +326,15 @@ export default function FinalFormSection({
 
             <div>
               <p className="text-sm font-semibold text-white/80 mb-2">
-                {content.step2.atrLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.atrLabel} <span className="text-afa-warning">*</span>
               </p>
               <div className="flex flex-wrap gap-3">
                 {content.step2.atrOptions.map((opt) => (
                   <label
                     key={opt.value}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-[6px] border cursor-pointer transition-colors text-sm ${
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded-md border cursor-pointer transition-colors text-sm ${
                       form.atrStatus === opt.value
-                        ? 'border-[var(--afa-yellow)] bg-[var(--afa-yellow)]/10 text-[var(--afa-yellow)] font-bold'
+                        ? 'border-afa-gold bg-afa-gold/10 text-afa-gold font-bold'
                         : 'border-white/20 text-white/70 hover:border-white/40'
                     }`}
                   >
@@ -350,12 +350,12 @@ export default function FinalFormSection({
                   </label>
                 ))}
               </div>
-              {errors.atrStatus && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.atrStatus}</p>}
+              {errors.atrStatus && <p className="mt-1 text-xs text-afa-warning">{errors.atrStatus}</p>}
             </div>
 
             <div>
               <label htmlFor="f_capacity" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step2.capacityLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.capacityLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
                 id="f_capacity"
@@ -367,12 +367,12 @@ export default function FinalFormSection({
                 placeholder={content.step2.capacityPlaceholder}
                 className="afa-input"
               />
-              {errors.capacity && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.capacity}</p>}
+              {errors.capacity && <p className="mt-1 text-xs text-afa-warning">{errors.capacity}</p>}
             </div>
 
             <div>
               <label htmlFor="f_projectPhase" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step2.phaseLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.phaseLabel} <span className="text-afa-warning">*</span>
               </label>
               <select
                 id="f_projectPhase"
@@ -389,7 +389,7 @@ export default function FinalFormSection({
                   </option>
                 ))}
               </select>
-              {errors.projectPhase && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.projectPhase}</p>}
+              {errors.projectPhase && <p className="mt-1 text-xs text-afa-warning">{errors.projectPhase}</p>}
             </div>
           </fieldset>
         )}
@@ -401,15 +401,15 @@ export default function FinalFormSection({
 
             <div>
               <p className="text-sm font-semibold text-white/80 mb-2">
-                {content.step3.dataLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step3.dataLabel} <span className="text-afa-warning">*</span>
               </p>
               <div className="flex flex-wrap gap-3">
                 {content.step3.dataOptions.map((opt) => (
                   <label
                     key={opt.value}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-[6px] border cursor-pointer transition-colors text-sm ${
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded-md border cursor-pointer transition-colors text-sm ${
                       form.dataReady === opt.value
-                        ? 'border-[var(--afa-yellow)] bg-[var(--afa-yellow)]/10 text-[var(--afa-yellow)] font-bold'
+                        ? 'border-afa-gold bg-afa-gold/10 text-afa-gold font-bold'
                         : 'border-white/20 text-white/70 hover:border-white/40'
                     }`}
                   >
@@ -425,14 +425,14 @@ export default function FinalFormSection({
                   </label>
                 ))}
               </div>
-              {errors.dataReady && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.dataReady}</p>}
+              {errors.dataReady && <p className="mt-1 text-xs text-afa-warning">{errors.dataReady}</p>}
             </div>
           </fieldset>
         )}
 
         {/* Gönderim hatası */}
         {submitError && (
-          <div className="mt-4 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-[var(--afa-risk)]">
+          <div className="mt-4 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-sm text-afa-warning">
             {submitError}
           </div>
         )}
@@ -455,7 +455,7 @@ export default function FinalFormSection({
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-colors"
+              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:brightness-95 transition-colors"
             >
               {content.next}
             </button>
@@ -464,7 +464,7 @@ export default function FinalFormSection({
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-6 py-2.5 text-sm font-bold rounded-[6px] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:brightness-95 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? content.submitting : content.submit}
             </button>

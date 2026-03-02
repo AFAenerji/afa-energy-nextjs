@@ -359,22 +359,27 @@ export function ATRMatrixPage({
 
   return (
     <main>
-      {/* SECTION 1 — HERO */}
+      {/* SECTION 1 — HERO (Split Layout) */}
       <section
         id="atr-matrix-hero"
         aria-labelledby="atr-matrix-hero-heading"
         className={`${styles.hero} atrMatrixHero`}
       >
-        <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow} aria-hidden="true">
-            {t.hero.eyebrow}
-          </p>
-          <h1 id="atr-matrix-hero-heading" className={styles.heroTitle}>
-            {t.hero.title}<span className={styles.seal}>.</span>
-          </h1>
-          <p className={styles.heroSubtitle}>{t.hero.subtitle}</p>
-          <div className={styles.heroDivider} aria-hidden="true" />
-          <p className={styles.heroEmphasis}>{t.hero.emphasis}</p>
+        <div className={styles.heroGrid}>
+          <div className={styles.heroTextColumn}>
+            <p className={styles.heroEyebrow} aria-hidden="true">
+              {t.hero.eyebrow}
+            </p>
+            <h1 id="atr-matrix-hero-heading" className={styles.heroTitle}>
+              {t.hero.title}
+            </h1>
+            <p className={styles.heroSubtitle}>{t.hero.subtitle}</p>
+            <div className={styles.heroDivider} aria-hidden="true" />
+            <p className={styles.heroEmphasis}>{t.hero.emphasis}</p>
+          </div>
+          <div className={styles.heroPhotoColumn} aria-hidden="true">
+            Photo Placeholder
+          </div>
         </div>
       </section>
 
@@ -417,6 +422,11 @@ export function ATRMatrixPage({
           </div>
         </div>
       </section>
+
+      {/* PHOTO BAND 1 */}
+      <div className={styles.photoBand} aria-hidden="true">
+        Photo Placeholder
+      </div>
 
       {/* SECTION 4 — PROCESS FLOW */}
       <section id="process-flow" aria-labelledby="process-flow-heading" className={styles.process}>
@@ -515,6 +525,11 @@ export function ATRMatrixPage({
           </div>
         </div>
       </section>
+
+      {/* PHOTO BAND 2 */}
+      <div className={styles.photoBandAlt} aria-hidden="true">
+        Photo Placeholder
+      </div>
 
       {/* SECTION 8 — STAKEHOLDERS (hover: Level 1) */}
       <section id="stakeholder-impact" aria-labelledby="stakeholder-impact-heading" className={styles.stakeholders}>

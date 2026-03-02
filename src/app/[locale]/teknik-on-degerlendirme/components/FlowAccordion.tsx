@@ -41,11 +41,12 @@ export default function FlowAccordion({ compass, flows }: FlowAccordionProps) {
               <div className={styles.bandContent}>
                 {/* Accordion Header */}
                 <button
+                  id={`flow-header-${flow.id}`}
                   type="button"
                   className={styles.accordionHeader}
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  aria-controls={`flow-body-${flow.id}`}
+                  aria-controls={isOpen ? `flow-body-${flow.id}` : undefined}
                 >
                   <div className={styles.headerText}>
                     <h3

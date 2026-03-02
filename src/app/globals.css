@@ -5,6 +5,19 @@
 
 @import "tailwindcss";
 
+/* AFA Theme — Tailwind v4 canonical color registration */
+@theme {
+  --color-afa-primary: #18625F;
+  --color-afa-accent: #28AFB0;
+  --color-afa-secondary: #4CC9F0;
+  --color-afa-gold: #FFCB00;
+  --color-afa-warning: #F25F5C;
+  --color-afa-deep: #0F2E2C;
+  --color-afa-light: #F5F5F5;
+  --color-afa-dark: #0B1F1E;
+  --color-afa-border: #E0E0E0;
+}
+
 /* Smooth scrolling for anchor navigation */
 html {
   scroll-behavior: smooth;

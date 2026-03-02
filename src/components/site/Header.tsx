@@ -80,8 +80,8 @@ export default function Header({ locale }: HeaderProps) {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white border-b border-[#E0E0E0] shadow-[0_10px_30px_rgba(0,0,0,0.12)] relative">
-        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#28AFB0]"></div>
+      <header className="sticky top-0 z-50 bg-white border-b border-afa-border shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
+        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-afa-accent"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="afa-header__inner">
 
@@ -156,13 +156,13 @@ export default function Header({ locale }: HeaderProps) {
                 onClick={() => setMobileMenuOpen((prev) => !prev)}
                 className="afa-header__mobile-toggle"
                 aria-expanded={mobileMenuOpen}
-                aria-controls="mobile-menu"
-                aria-label="Toggle navigation menu"
+                aria-controls={mobileMenuOpen ? "mobile-menu" : undefined}
+                aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
               >
                 <div className="w-6 h-5 relative flex flex-col justify-center">
-                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                  <span className={`block h-0.5 w-full bg-[#0B1F1E] transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
                 </div>
               </button>
             </div>
