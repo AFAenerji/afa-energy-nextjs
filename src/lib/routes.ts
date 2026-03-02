@@ -52,6 +52,18 @@ export const LOCALE_PATHS = {
     ro: "/ro/developer",
   },
 
+  atrMatrix: {
+    tr: "/tr/atr-matrix",
+    en: "/en/atr-matrix",
+    ro: "/ro/atr-matrix",
+  },
+
+  cases: {
+    tr: "/tr/vakalar",
+    en: "/en/vakalar",
+    ro: "/ro/vakalar",
+  },
+
   contact: {
     tr: "/tr/iletisim",
     en: "/en/iletisim",

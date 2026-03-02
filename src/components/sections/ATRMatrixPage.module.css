@@ -1,0 +1,469 @@
+/* ═══════════════════════════════════════════════════
+   ATR Matrix Page — CSS Module
+   Design System: AFA Energy v4.2
+   Token remapping: uses project's existing :root tokens
+   ═══════════════════════════════════════════════════ */
+
+/* ── SHARED ── */
+.container { max-width: 1152px; margin: 0 auto; }
+.narrowContainer { max-width: 768px; margin: 0 auto; }
+
+.sectionBase {
+  padding: 64px 16px;
+}
+@media (min-width: 768px) {
+  .sectionBase { padding: 80px 24px; }
+}
+@media (min-width: 1024px) {
+  .sectionBase { padding: 96px 32px; }
+}
+
+.sectionHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--afa-primary);
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.bodyText {
+  font-size: 1rem;
+  color: var(--afa-gray-600);
+  line-height: 1.7;
+}
+
+.smallText {
+  font-size: 0.875rem;
+  color: var(--afa-gray-600);
+  line-height: 1.7;
+}
+
+.italic { font-style: italic; }
+
+/* ── SECTION 1: HERO ── */
+.hero {
+  composes: sectionBase;
+  background-color: var(--afa-primary);
+  position: relative;
+}
+
+.heroContent {
+  composes: container;
+  position: relative;
+  z-index: 1;
+}
+
+.heroEyebrow {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.seal { color: var(--afa-yellow); }
+
+.heroSubtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  max-width: 768px;
+  margin-bottom: 24px;
+}
+
+.heroDivider {
+  width: 64px;
+  height: 2px;
+  background-color: var(--afa-secondary);
+  margin-bottom: 24px;
+}
+
+.heroEmphasis {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--afa-yellow);
+}
+
+/* ── SECTION 2: WHY ── */
+.why {
+  composes: sectionBase;
+  background-color: #FFFFFF;
+}
+
+.questionBlock {
+  border-left: 4px solid var(--afa-yellow);
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.questionText {
+  font-size: 1rem;
+  color: var(--afa-gray-600);
+  font-weight: 500;
+}
+
+/* ── SECTION 3: FOUR PILLARS ── */
+.pillars {
+  composes: sectionBase;
+  background-color: var(--muted);
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+.pillarCard {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--afa-border);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 150ms ease-out;
+}
+.pillarCard:hover {
+  border-color: var(--afa-secondary);
+}
+
+.pillarNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--afa-secondary);
+  margin-bottom: 12px;
+}
+
+.pillarHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--afa-primary);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.pillarChecks {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pillarClosing {
+  composes: smallText;
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* ── SECTION 4: PROCESS FLOW ── */
+.process {
+  composes: sectionBase;
+  background-color: #FFFFFF;
+}
+
+/* Desktop horizontal */
+.processDesktop {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .processDesktop { display: flex; }
+}
+
+.processStep { display: flex; align-items: flex-start; flex: 1; }
+.processStepContent { display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; }
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--afa-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.stepNumber {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--afa-secondary);
+}
+
+.stepLabel {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--afa-primary);
+  margin-bottom: 4px;
+}
+
+.horizontalConnector {
+  flex-shrink: 0;
+  width: 32px;
+  border-top: 2px solid var(--afa-secondary);
+  margin-top: 20px;
+}
+
+/* Mobile vertical */
+.processMobile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+  .processMobile { display: none; }
+}
+
+.mobileStep { display: flex; align-items: flex-start; gap: 16px; }
+.mobileStepLeft { display: flex; flex-direction: column; align-items: center; }
+
+.verticalConnector {
+  width: 2px;
+  height: 32px;
+  background-color: var(--afa-secondary);
+  margin-top: 8px;
+}
+
+.mobileStepContent { padding-top: 8px; padding-bottom: 16px; }
+
+/* ── SECTION 5: DECISION CLASSIFICATION ── */
+.decision {
+  composes: sectionBase;
+  background-color: var(--muted);
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .decisionGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.decisionCard {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  /* NO hover — Level 0 static authority */
+}
+
+.borderProceed { border-top: 4px solid var(--afa-primary); }
+.borderConditional { border-top: 4px solid var(--afa-yellow); }
+.borderHold { border-top: 4px solid var(--afa-risk); }
+
+.decisionHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--afa-primary);
+  margin-bottom: 12px;
+}
+
+.disclaimerBox {
+  margin-top: 24px;
+  border: 1px solid var(--afa-border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* ── SECTION 6: PROJECT TYPES ── */
+.projectTypes {
+  composes: sectionBase;
+  background-color: #FFFFFF;
+}
+
+.badgeWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+  /* LEFT-ALIGNED — not centered (corporate discipline) */
+}
+
+.badge {
+  background-color: var(--muted);
+  color: var(--afa-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--afa-border);
+}
+
+/* ── SECTION 7: INDEPENDENCE ── */
+.independence {
+  composes: sectionBase;
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--afa-border);
+  /* border-top separator — consecutive white bg after Section 6 */
+}
+
+.independenceBlock {
+  border-left: 4px solid var(--afa-secondary);
+  padding-left: 24px;
+}
+
+.independenceEmphasis {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--afa-primary);
+}
+
+/* ── SECTION 8: STAKEHOLDER IMPACT ── */
+.stakeholders {
+  composes: sectionBase;
+  background-color: var(--muted);
+}
+
+.stakeholderGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .stakeholderGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.stakeholderCard {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--afa-border);
+  padding: 24px;
+  transition: border-color 150ms ease-out;
+}
+.stakeholderCard:hover {
+  border-color: var(--afa-secondary);
+}
+
+.stakeholderHeading {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--afa-primary);
+  margin-bottom: 12px;
+}
+
+/* ── SECTION 9: CTA GOLD ZONE ── */
+.ctaBand {
+  composes: sectionBase;
+  background-color: var(--afa-yellow);
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+
+.ctaFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .ctaFlex { flex-direction: row; align-items: flex-start; }
+}
+
+.ctaGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+}
+
+.ctaDescription {
+  font-size: 1rem;
+  color: #0B1F1E;
+  /* NEVER white or gray on gold */
+  margin-bottom: 16px;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green-deep);
+  color: #FFFFFF;
+  height: 48px;
+  padding: 0 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  transition: opacity 150ms ease-out;
+}
+.ctaPrimary:hover { opacity: 0.95; }
+.ctaPrimary:focus-visible {
+  outline: 2px solid var(--afa-secondary);
+  outline-offset: 2px;
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--green-deep);
+  height: 48px;
+  padding: 0 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid var(--green-deep);
+  transition: opacity 150ms ease-out;
+}
+.ctaSecondary:hover { opacity: 0.95; }
+.ctaSecondary:focus-visible {
+  outline: 2px solid var(--afa-secondary);
+  outline-offset: 2px;
+}
+
+/* ── SECTION 10: DISCLAIMER ── */
+.disclaimer {
+  background-color: var(--muted);
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

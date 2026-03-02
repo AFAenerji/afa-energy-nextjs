@@ -111,7 +111,13 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
           {/* Regular Links */}
           <div className="space-y-3">
             <button
-              onClick={() => handleNavigation('/cases')}
+              onClick={() => handleNavigation('/atr-matrix')}
+              className="text-white/90 hover:opacity-100 text-left w-full"
+            >
+              {t('atrMatrix')}
+            </button>
+            <button
+              onClick={() => handleNavigation('/vakalar')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('cases')}
@@ -123,7 +129,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               {t('about')}
             </button>
             <button
-              onClick={() => handleNavigation('/info')}
+              onClick={() => handleNavigation('/bilgi-merkezi')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('info')}

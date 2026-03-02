@@ -88,6 +88,9 @@ html {
   --bp-tablet: 1024px;
   --bp-mobile: 768px;
 
+  /* ATR Matrix Page Token */
+  --afa-gray-600: #4A5568;
+
   /* White Opacity Tokens */
   --white-85: rgba(255, 255, 255, 0.85);
   --white-70: rgba(255, 255, 255, 0.70);
@@ -569,6 +572,23 @@ input:focus, select:focus, textarea:focus {
 
 .afa-team-photo:hover {
   filter: grayscale(50%);
+}
+
+/* 22. ATR Matrix Hero — Grid Texture Overlay */
+.atrMatrixHero {
+  position: relative;
+}
+
+.atrMatrixHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* CSS-only checkmark for lists */

@@ -16,6 +16,7 @@ export interface Translations {
   developer: string;
   services: string;
   cases: string;
+  atrMatrix: string;
   about: string;
   info: string;
   contact: string;
@@ -64,6 +65,7 @@ export const translations: Record<Locale, Translations> = {
     developer: 'Developer',
     services: 'Services',
     cases: 'Cases',
+    atrMatrix: 'ATR Matrix',
     about: 'About',
     info: 'Info',
     contact: 'Contact',
@@ -102,6 +104,7 @@ export const translations: Record<Locale, Translations> = {
     developer: 'Dezvoltator',
     services: 'Servicii',
     cases: 'Cazuri',
+    atrMatrix: 'Matrice ATR',
     about: 'Despre noi',
     info: 'Informații',
     contact: 'Contact',
@@ -141,6 +144,7 @@ export const translations: Record<Locale, Translations> = {
     developer: 'Geliştirici',
     services: 'Hizmetler',
     cases: 'Vakalar',
+    atrMatrix: 'ATR Matrix',
     about: 'Hakkımızda',
     info: 'Bilgi',
     contact: 'İletişim',

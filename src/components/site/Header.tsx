@@ -35,9 +35,10 @@ const NAV_ITEMS: readonly NavItem[] = [
   { key: 'investor', path: '/investor', tab: 'investor' },
   { key: 'developer', path: '/developer', tab: 'developer' },
   { key: 'services', path: '/hizmetler' },
-  { key: 'cases', path: '/cases', disabled: true },
+  { key: 'cases', path: '/vakalar' },
+  { key: 'atrMatrix', path: '/atr-matrix' },
   { key: 'about', path: '/hakkimizda' },
-  { key: 'info', path: '/info', disabled: true },
+  { key: 'info', path: '/bilgi-merkezi' },
 ] as const;
 
 /* ── Component ── */
