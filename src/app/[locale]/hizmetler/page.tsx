@@ -35,6 +35,13 @@ const SERVICE_PHOTOS = [
   "/images/service-permit.svg",
 ] as const;
 
+/* ── Anchor IDs mapping service index → axis anchor ── */
+const SERVICE_ANCHOR_IDS = [
+  "finansal-dayaniklilik",   // 01 TDD → Axis 2
+  "sebeke-entegrasyonu",     // 02 ATR → Axis 1
+  "yasal-uyum",              // 03 Regulatory → Axis 3
+] as const;
+
 /* ── Canonical yardımcı fonksiyonlar ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;
 const alternatesFromLocalePaths = (paths: Record<Locale, string>) => {
@@ -62,9 +69,9 @@ const pageContent = {
         "AFA, Romanya'da ATR Matrix™ metodolojisi ile incelediği yatırıma uygun projeleri yatırımcılara sunar. Her proje, banka finansmanına uygunluk standardında doğrulanmıştır.",
       cta: "Yatırıma Uygun Projeleri Keşfet",
       axes: [
-        { label: "Eksen 1", title: "Şebeke Entegrasyonu" },
-        { label: "Eksen 2", title: "Finansal Dayanıklılık" },
-        { label: "Eksen 3", title: "Yasal Uyum" },
+        { title: "Şebeke Entegrasyonu", href: "#sebeke-entegrasyonu" },
+        { title: "Finansal Dayanıklılık", href: "#finansal-dayaniklilik" },
+        { title: "Yasal Uyum", href: "#yasal-uyum" },
       ],
     },
     legalDisclaimer: {
@@ -205,9 +212,9 @@ const pageContent = {
         "AFA presents investor-suitable projects evaluated through the ATR Matrix™ methodology in Romania. Each project is validated at bank-financing eligibility standards.",
       cta: "Explore Investment-Ready Projects",
       axes: [
-        { label: "Axis 1", title: "Grid Integration" },
-        { label: "Axis 2", title: "Financial Resilience" },
-        { label: "Axis 3", title: "Regulatory Compliance" },
+        { title: "Grid Integration", href: "#sebeke-entegrasyonu" },
+        { title: "Financial Resilience", href: "#finansal-dayaniklilik" },
+        { title: "Regulatory Compliance", href: "#yasal-uyum" },
       ],
     },
     legalDisclaimer: {
@@ -348,9 +355,9 @@ const pageContent = {
         "AFA prezintă investitorilor proiecte potrivite evaluate prin metodologia ATR Matrix™ în România. Fiecare proiect este validat la standardele de eligibilitate pentru finanțare bancară.",
       cta: "Explorați Proiectele Eligibile",
       axes: [
-        { label: "Axa 1", title: "Integrare Rețea" },
-        { label: "Axa 2", title: "Reziliență Financiară" },
-        { label: "Axa 3", title: "Conformitate Reglementară" },
+        { title: "Integrare Rețea", href: "#sebeke-entegrasyonu" },
+        { title: "Reziliență Financiară", href: "#finansal-dayaniklilik" },
+        { title: "Conformitate Reglementară", href: "#yasal-uyum" },
       ],
     },
     legalDisclaimer: {
@@ -561,59 +568,50 @@ export default async function ServicesPage({
           </div>
         </div>
 
-        {/* Status Bar — split bottom: axes left, scroll hint right */}
+        {/* Status Bar — axis anchor links */}
         <div className={styles.heroFooter}>
           <div className={styles.axisBand}>
             {content.hero.axes.map((axis, i) => (
-              <div key={i} className={styles.axisItem}>
-                <span className={styles.axisLabel}>{axis.label}</span>
+              <a key={i} href={axis.href} className={styles.axisItem}>
                 <span className={styles.axisTitle}>{axis.title}</span>
-              </div>
+              </a>
             ))}
           </div>
-          <a href="#hizmet-farklari" className={styles.heroFooterRight}>
-            <span className={styles.heroFooterRightText}>
-              {locale === "tr"
-                ? "Hangi Karar Aşamasındasınız? ↓"
-                : locale === "en"
-                ? "Which Decision Stage Are You At? ↓"
-                : "În ce etapă de decizie vă aflați? ↓"}
-            </span>
-          </a>
+          {/* "Hangi Karar Aşamasındasınız?" — removed per hero v13.6 */}
         </div>
       </section>
 
-      {/* LEGAL DISCLAIMER */}
+      {/* LEGAL DISCLAIMER — Frame wraps text only, photo below */}
       <section className={styles.legalDisclaimerSection}>
-        <div className="afa-container">
-          <div className={styles.legalBox}>
-            <div className={styles.legalContent}>
-              <h2 className={styles.sectionTitle}>
-                {content.legalDisclaimer.title}
-                {!content.legalDisclaimer.title.endsWith(".") && "."}
-              </h2>
-              <ol className={styles.legalList}>
-                {content.legalDisclaimer.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ol>
-              <p className={styles.legalNote}>
-                {(() => {
-                  const match = content.legalDisclaimer.note.match(/^(Not[aeă]?:\s?)/);
-                  if (match) {
-                    return (
-                      <>
-                        <strong className={styles.legalNoteLabel}>{match[1]}</strong>
-                        {content.legalDisclaimer.note.slice(match[1].length)}
-                      </>
-                    );
-                  }
-                  return content.legalDisclaimer.note;
-                })()}
-              </p>
-            </div>
-          </div>
+        <div className={styles.legalFrame}>
+          <h2 className={styles.legalTitle}>
+            {content.legalDisclaimer.title}
+          </h2>
+          <ol className={styles.legalList}>
+            {content.legalDisclaimer.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ol>
+          <p className={styles.legalNote}>
+            {(() => {
+              const match = content.legalDisclaimer.note.match(/^(Not[aeă]?:\s?)/);
+              if (match) {
+                return (
+                  <>
+                    <strong className={styles.legalNoteLabel}>{match[1]}</strong>
+                    {content.legalDisclaimer.note.slice(match[1].length)}
+                  </>
+                );
+              }
+              return content.legalDisclaimer.note;
+            })()}
+          </p>
         </div>
+        <img
+          src="/images/legal-disclaimer-bg.jpg"
+          alt=""
+          className={styles.legalImage}
+        />
       </section>
 
       {/* SERVICES — v11.2 HORIZONTAL PROTOCOL FLOW */}
@@ -626,7 +624,7 @@ export default async function ServicesPage({
             const photo = SERVICE_PHOTOS[index % SERVICE_PHOTOS.length];
 
             return (
-              <article key={service.number} id={`gate-${service.number}`} className={styles.serviceBand}>
+              <article key={service.number} id={SERVICE_ANCHOR_IDS[index]} className={styles.serviceBand}>
                 {/* 8px institutional accent border */}
                 <div className={`${styles.bandAccent} ${accentClass}`} />
 

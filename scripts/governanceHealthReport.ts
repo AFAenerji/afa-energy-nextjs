@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { safePath, validateLocale } from "../src/utils/safePath";
 
 /**
  * AFA ENERGY ROMANIA — GOVERNANCE HEALTH REPORT v5.2.1
@@ -44,9 +45,16 @@ type Dictionary = {
 
 // --- KONFİGÜRASYON ---
 
+// SECURITY NOTE: This script runs only at build time.
+// All path inputs are derived from the project's internal file structure,
+// not from external user input. Path sanitization applied as defense-in-depth.
+
 const LOCALES = ["tr", "en", "ro"] as const;
-const DICT_PATH = (locale: string) =>
-  path.join(process.cwd(), "src", "content", locale, "homepage.json");
+const PROJECT_ROOT = process.cwd();
+const DICT_PATH = (locale: string) => {
+  validateLocale(locale, LOCALES);
+  return safePath(PROJECT_ROOT, path.join("src", "content", locale, "homepage.json"));
+};
 
 const VALID_COMPONENTS = [
   "HeroSection",
