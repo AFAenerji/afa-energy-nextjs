@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import { getAssessmentDictionary } from '@/lib/getAssessmentDictionary';
 import { SITE_URL } from '@/lib/env';
+import { LOCALE_PATHS } from '@/lib/routes';
 import FlowAccordion from './components/FlowAccordion';
 import FinalFormSection from './components/FinalFormSection';
 
@@ -22,15 +23,15 @@ export async function generateMetadata({
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
-      canonical: `${SITE_URL}/${validLocale}/teknik-on-degerlendirme`,
+      canonical: `${SITE_URL}${LOCALE_PATHS.assessment[validLocale]}`,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/teknik-on-degerlendirme`]),
+        locales.map((l) => [l, `${SITE_URL}${LOCALE_PATHS.assessment[l]}`]),
       ),
     },
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
-      url: `${SITE_URL}/${validLocale}/teknik-on-degerlendirme`,
+      url: `${SITE_URL}${LOCALE_PATHS.assessment[validLocale]}`,
       siteName: 'AFA Energy Romania',
       type: 'website',
     },

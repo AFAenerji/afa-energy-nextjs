@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 import type { FormContent, ServiceFlow } from './pageContract';
 
 interface FinalFormSectionProps {
@@ -214,7 +216,7 @@ export default function FinalFormSection({
         </div>
 
         <a
-          href={`/${locale}/hizmetler`}
+          href={`/${locale}/${getLocalizedSlug('services', locale as Locale) ?? 'services'}`}
           className="inline-flex px-6 py-3 text-sm font-bold rounded border border-white/20 text-white hover:border-afa-gold hover:text-afa-gold transition-colors mt-10"
         >
           {content.thankYou.backLabel}

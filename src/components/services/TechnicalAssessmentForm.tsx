@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 
 type FormData = {
   name: string;
@@ -187,7 +189,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
           ))}
         </ol>
         <a
-          href={`/${locale}/hizmetler`}
+          href={`/${locale}/${getLocalizedSlug('services', locale as Locale) ?? 'services'}`}
           className="inline-flex items-center px-6 py-3 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] hover:text-[var(--afa-yellow)] transition-colors"
         >
           {content.thankYou.backLabel}

@@ -1,5 +1,7 @@
 import type { GlossaryTerm } from '@/types/homepage';
 import { slugify } from '@/lib/slugify';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 
 type FAQBackLink = { id: string; label: string };
 
@@ -10,13 +12,13 @@ type Props = {
   faqBackLinks?: Record<string, FAQBackLink[]>;
 };
 
-const SERVICE_MAP: Record<string, { label: string; path: string }> = {
-  ATR: { label: 'ATR Analizi', path: '/hizmetler#asama-1' },
-  'Grid Connection': { label: 'Teknik İnceleme', path: '/hizmetler#asama-2' },
-  Curtailment: { label: 'Teknik İnceleme', path: '/hizmetler#asama-2' },
-  Bankability: { label: 'Operasyonel Denetim', path: '/hizmetler#asama-3' },
-  DSCR: { label: 'Operasyonel Denetim', path: '/hizmetler#asama-3' },
-  'Pre-TDD': { label: 'ATR Analizi', path: '/hizmetler#asama-1' },
+const SERVICE_MAP: Record<string, { label: string; anchor: string }> = {
+  ATR: { label: 'ATR Analizi', anchor: '#asama-1' },
+  'Grid Connection': { label: 'Teknik İnceleme', anchor: '#asama-2' },
+  Curtailment: { label: 'Teknik İnceleme', anchor: '#asama-2' },
+  Bankability: { label: 'Operasyonel Denetim', anchor: '#asama-3' },
+  DSCR: { label: 'Operasyonel Denetim', anchor: '#asama-3' },
+  'Pre-TDD': { label: 'ATR Analizi', anchor: '#asama-1' },
 };
 
 export default function TechnicalGlossary({
@@ -53,7 +55,7 @@ export default function TechnicalGlossary({
                   {item.definition}
                   {service && (
                     <a
-                      href={`/${locale}${service.path}`}
+                      href={`/${locale}/${getLocalizedSlug('services', locale as Locale) ?? 'services'}${service.anchor}`}
                       className="ml-2 inline-block afa-term-link hover:underline text-xs font-medium"
                     >
                       → {service.label}

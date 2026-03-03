@@ -5,40 +5,41 @@ import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import { Locale, locales, getTranslation } from '@/lib/i18n';
 import type { Translations } from '@/lib/i18n';
+import { getLocalizedSlug } from '@/lib/slugs';
 import MobileMenu from './MobileMenu';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import '@/styles/Header.css';
 
 /* ── Helpers ── */
 
-/** Prepend locale to a path: withLocale('tr', '/hizmetler') → '/tr/hizmetler' */
-function withLocale(locale: Locale, path: string): string {
-  return `/${locale}${path}`;
+/** Build a localized path: localePath('tr', 'services') → '/tr/hizmetler' */
+function localePath(locale: Locale, canonical: string): string {
+  const slug = getLocalizedSlug(canonical, locale) ?? canonical;
+  return `/${locale}/${slug}`;
 }
 
-/** Check if the current pathname matches a nav item's path */
-function isActivePath(pathname: string, locale: Locale, path: string): boolean {
-  const full = withLocale(locale, path);
-  // Exact match or starts-with for nested routes
+/** Check if the current pathname matches a nav item's canonical key */
+function isActivePath(pathname: string, locale: Locale, canonical: string): boolean {
+  const full = localePath(locale, canonical);
   return pathname === full || pathname.startsWith(`${full}/`);
 }
 
 /* ── Dynamic nav items per locale ── */
 type NavItem = {
   key: keyof Translations;
-  path: string;
+  slug: string;
   tab?: 'investor' | 'developer';
   disabled?: boolean;
 };
 
 const NAV_ITEMS: readonly NavItem[] = [
-  { key: 'investor', path: '/investor', tab: 'investor' },
-  { key: 'developer', path: '/developer', tab: 'developer' },
-  { key: 'services', path: '/hizmetler' },
-  { key: 'cases', path: '/vakalar' },
-  { key: 'atrMatrix', path: '/atr-matrix' },
-  { key: 'about', path: '/hakkimizda' },
-  { key: 'info', path: '/bilgi-merkezi' },
+  { key: 'investor', slug: 'investor', tab: 'investor' },
+  { key: 'developer', slug: 'developer', tab: 'developer' },
+  { key: 'services', slug: 'services' },
+  { key: 'cases', slug: 'cases' },
+  { key: 'atrMatrix', slug: 'atr-matrix' },
+  { key: 'about', slug: 'about' },
+  { key: 'info', slug: 'knowledge-center' },
 ] as const;
 
 /* ── Component ── */
@@ -53,8 +54,8 @@ export default function Header({ locale }: HeaderProps) {
 
   const t = (key: keyof Translations) => getTranslation(locale, key);
 
-  function navigate(path: string) {
-    router.push(withLocale(locale, path));
+  function navigate(canonical: string) {
+    router.push(localePath(locale, canonical));
   }
 
   function switchLocale(targetLocale: string) {
@@ -72,7 +73,7 @@ export default function Header({ locale }: HeaderProps) {
     if (item.disabled) {
       classes.push('afa-nav__link--disabled');
     }
-    if (!item.disabled && isActivePath(pathname, locale, item.path)) {
+    if (!item.disabled && isActivePath(pathname, locale, item.slug)) {
       classes.push('afa-nav__link--active');
     }
     return classes.join(' ');
@@ -87,7 +88,7 @@ export default function Header({ locale }: HeaderProps) {
 
             {/* ── Left: Brand ── */}
             <a
-              href={withLocale(locale, '')}
+              href={`/${locale}`}
               className="afa-header__brand"
             >
               <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
@@ -109,10 +110,10 @@ export default function Header({ locale }: HeaderProps) {
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.key}
-                  onClick={() => navigate(item.path)}
+                  onClick={() => navigate(item.slug)}
                   className={navLinkClass(item)}
                   aria-current={
-                    !item.disabled && isActivePath(pathname, locale, item.path)
+                    !item.disabled && isActivePath(pathname, locale, item.slug)
                       ? 'page'
                       : undefined
                   }
@@ -145,7 +146,7 @@ export default function Header({ locale }: HeaderProps) {
 
               {/* Contact CTA */}
               <button
-                onClick={() => navigate('/iletisim')}
+                onClick={() => navigate('contact')}
                 className="afa-header__cta"
               >
                 {t('contact')}

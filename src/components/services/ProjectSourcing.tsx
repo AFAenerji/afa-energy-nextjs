@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ServicesContent } from "@/content/services";
-import styles from "@/app/[locale]/hizmetler/hizmetler.module.css";
+import styles from "@/app/[locale]/services/hizmetler.module.css";
 
 type Props = {
   content: ServicesContent["block1"];

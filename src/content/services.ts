@@ -291,7 +291,7 @@ export const servicesContent: Record<"tr" | "en" | "ro", ServicesContent> = {
           result: "Proceed · Conditional Proceed · Hold at This Stage",
           cta: {
             text: "Submit Pre-TDD Application",
-            href: "/en/teknik-on-degerlendirme",
+            href: "/en/technical-assessment",
           },
         },
         {
@@ -366,7 +366,7 @@ export const servicesContent: Record<"tr" | "en" | "ro", ServicesContent> = {
       },
       ctaTertiary: {
         text: "Submit Pre-TDD Application",
-        href: "/en/teknik-on-degerlendirme",
+        href: "/en/technical-assessment",
       },
     },
     disclaimer:
@@ -448,7 +448,7 @@ export const servicesContent: Record<"tr" | "en" | "ro", ServicesContent> = {
           result: "Procedează · Procedează Condiționat · Oprire la Această Etapă",
           cta: {
             text: "Depune Cerere Pre-TDD",
-            href: "/ro/teknik-on-degerlendirme",
+            href: "/ro/evaluare-tehnica",
           },
         },
         {
@@ -523,7 +523,7 @@ export const servicesContent: Record<"tr" | "en" | "ro", ServicesContent> = {
       },
       ctaTertiary: {
         text: "Depune Cerere Pre-TDD",
-        href: "/ro/teknik-on-degerlendirme",
+        href: "/ro/evaluare-tehnica",
       },
     },
     disclaimer:

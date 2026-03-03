@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/i18n';
+import { getLocalizedSlug } from '@/lib/slugs';
 
 interface FooterProps {
   locale: Locale;
@@ -8,16 +9,17 @@ interface FooterProps {
 
 export default function Footer({ locale }: FooterProps) {
   const t = (key: keyof import('@/lib/i18n').Translations) => getTranslation(locale, key);
+  const lp = (canonical: string) => `/${locale}/${getLocalizedSlug(canonical, locale) ?? canonical}`;
 
   const navigationLinks = [
-    { key: 'home', path: '/' },
-    { key: 'investorGate', path: '/investor' },
-    { key: 'developerArea', path: '/developer' },
-    { key: 'services', path: '/hizmetler' },
-    { key: 'cases', path: '/cases' },
-    { key: 'about', path: '/hakkimizda' },
-    { key: 'knowledgeCenter', path: '/bilgi-merkezi' },
-    { key: 'reachUs', path: '/iletisim' },
+    { key: 'home', href: `/${locale}` },
+    { key: 'investorGate', href: lp('investor') },
+    { key: 'developerArea', href: lp('developer') },
+    { key: 'services', href: lp('services') },
+    { key: 'cases', href: lp('cases') },
+    { key: 'about', href: lp('about') },
+    { key: 'knowledgeCenter', href: lp('knowledge-center') },
+    { key: 'reachUs', href: lp('contact') },
   ];
 
   return (
@@ -83,7 +85,7 @@ export default function Footer({ locale }: FooterProps) {
                 {navigationLinks.map((link) => (
                   <Link
                     key={link.key}
-                    href={`/${locale}${link.path}`}
+                    href={link.href}
                     className="footer-link text-sm !text-white/70 hover:!text-white py-1"
                   >
                     {t(link.key as keyof import('@/lib/i18n').Translations)}
@@ -103,7 +105,7 @@ export default function Footer({ locale }: FooterProps) {
                 {t('addressLine3')}
               </address>
               <Link
-                href={`/${locale}/iletisim`}
+                href={lp('contact')}
                 className="text-sm text-[#28AFB0] hover:!text-white mt-4 inline-block"
               >
                 {t('contactForm')} →

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Locale, getTranslation } from '@/lib/i18n';
+import { getLocalizedSlug } from '@/lib/slugs';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface MobileMenuProps {
@@ -15,8 +16,9 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
   const router = useRouter();
   const t = (key: keyof import('@/lib/i18n').Translations) => getTranslation(locale, key);
 
-  const handleNavigation = (path: string) => {
-    router.push(`/${locale}${path}`);
+  const handleNavigation = (canonical: string) => {
+    const slug = getLocalizedSlug(canonical, locale) ?? canonical;
+    router.push(`/${locale}/${slug}`);
     onClose();
   };
 
@@ -93,13 +95,13 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
             {servicesOpen && (
               <div className="mt-2 ml-4 space-y-2">
                 <button
-                  onClick={() => handleNavigation('/hizmetler')}
+                  onClick={() => handleNavigation('services')}
                   className="text-white/90 hover:opacity-100 text-left w-full"
                 >
                   {t('technicalServices')}
                 </button>
                 <button
-                  onClick={() => handleNavigation('/bilgi-merkezi')}
+                  onClick={() => handleNavigation('knowledge-center')}
                   className="text-white/90 hover:opacity-100 text-left w-full"
                 >
                   {t('knowledgeCenter')}
@@ -117,25 +119,25 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
               {t('atrMatrix')}
             </button>
             <button
-              onClick={() => handleNavigation('/vakalar')}
+              onClick={() => handleNavigation('cases')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('cases')}
             </button>
             <button
-              onClick={() => handleNavigation('/hakkimizda')}
+              onClick={() => handleNavigation('about')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('about')}
             </button>
             <button
-              onClick={() => handleNavigation('/bilgi-merkezi')}
+              onClick={() => handleNavigation('knowledge-center')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('info')}
             </button>
             <button
-              onClick={() => handleNavigation('/iletisim')}
+              onClick={() => handleNavigation('contact')}
               className="text-white/90 hover:opacity-100 text-left w-full"
             >
               {t('contact')}

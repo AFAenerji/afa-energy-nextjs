@@ -1,5 +1,5 @@
 import type { ServicesContent } from "@/content/services";
-import styles from "@/app/[locale]/hizmetler/hizmetler.module.css";
+import styles from "@/app/[locale]/services/hizmetler.module.css";
 import TimelineStage from "./TimelineStage";
 
 type Props = {

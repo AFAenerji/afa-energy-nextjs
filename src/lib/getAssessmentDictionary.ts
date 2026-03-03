@@ -1,5 +1,5 @@
 import type { Locale } from '@/lib/i18n';
-import type { AssessmentDictionary } from '@/app/[locale]/teknik-on-degerlendirme/components/pageContract';
+import type { AssessmentDictionary } from '@/app/[locale]/technical-assessment/components/pageContract';
 
 const dictionaries: Record<Locale, () => Promise<AssessmentDictionary>> = {
   tr: () => import('@/content/tr/assessment.json').then((m) => m.default as unknown as AssessmentDictionary),

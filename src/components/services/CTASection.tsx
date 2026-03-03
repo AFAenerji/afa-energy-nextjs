@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 
 type Props = {
   locale: string;
@@ -18,7 +20,7 @@ export default function CTASection({ locale, title, subtitle, ctaLabel }: Props)
           {subtitle}
         </p>
         <Link
-          href={`/${locale}/teknik-on-degerlendirme`}
+          href={`/${locale}/${getLocalizedSlug('technical-assessment', locale as Locale) ?? 'technical-assessment'}`}
           className="afa-btn-primary inline-flex items-center text-base no-underline"
         >
           {ctaLabel}

@@ -1,15 +1,26 @@
 import type { MetadataRoute } from 'next';
 import { siteConfig } from '@/config/seo.config';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 
-const ROUTES: { path: string; changeFrequency: 'weekly' | 'monthly'; priority: number }[] = [
-  { path: '',          changeFrequency: 'weekly',  priority: 1.0 },
-  { path: '/contact',  changeFrequency: 'monthly', priority: 0.7 },
-  { path: '/investor', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/developer',       changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/hizmetler',     changeFrequency: 'monthly', priority: 0.9 },
-  { path: '/teknik-on-degerlendirme', changeFrequency: 'monthly', priority: 0.8 },
-  { path: '/bilgi-merkezi', changeFrequency: 'monthly', priority: 0.9 },
+const ROUTES: { canonical: string; changeFrequency: 'weekly' | 'monthly'; priority: number }[] = [
+  { canonical: '',                    changeFrequency: 'weekly',  priority: 1.0 },
+  { canonical: 'contact',            changeFrequency: 'monthly', priority: 0.7 },
+  { canonical: 'investor',           changeFrequency: 'monthly', priority: 0.8 },
+  { canonical: 'developer',          changeFrequency: 'monthly', priority: 0.8 },
+  { canonical: 'services',           changeFrequency: 'monthly', priority: 0.9 },
+  { canonical: 'technical-assessment', changeFrequency: 'monthly', priority: 0.8 },
+  { canonical: 'knowledge-center',   changeFrequency: 'monthly', priority: 0.9 },
+  { canonical: 'cases',              changeFrequency: 'monthly', priority: 0.8 },
+  { canonical: 'about',              changeFrequency: 'monthly', priority: 0.7 },
+  { canonical: 'atr-matrix',         changeFrequency: 'monthly', priority: 0.8 },
 ];
+
+function localizedPath(canonical: string, locale: Locale): string {
+  if (!canonical) return `/${locale}`;
+  const slug = getLocalizedSlug(canonical, locale) ?? canonical;
+  return `/${locale}/${slug}`;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -17,13 +28,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const route of ROUTES) {
     for (const locale of siteConfig.locales) {
       entries.push({
-        url: `${siteConfig.url}/${locale}${route.path}`,
+        url: `${siteConfig.url}${localizedPath(route.canonical, locale as Locale)}`,
         lastModified: new Date(),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         alternates: {
           languages: Object.fromEntries(
-            siteConfig.locales.map((l) => [l, `${siteConfig.url}/${l}${route.path}`])
+            siteConfig.locales.map((l) => [
+              l,
+              `${siteConfig.url}${localizedPath(route.canonical, l as Locale)}`,
+            ])
           ),
         },
       });

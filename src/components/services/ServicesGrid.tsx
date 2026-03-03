@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { getLocalizedSlug } from '@/lib/slugs';
+import type { Locale } from '@/lib/i18n';
 
 /* ── Internal linking: key terms → /bilgi-merkezi glossary anchors ── */
 const TERM_LINKS: { pattern: RegExp; slug: string; }[] = [
@@ -25,7 +27,7 @@ function linkTerms(text: string, locale: string): React.ReactNode {
       return (
         <a
           key={i}
-          href={`/${locale}/bilgi-merkezi#${match.slug}`}
+          href={`/${locale}/${getLocalizedSlug('knowledge-center', locale as Locale) ?? 'knowledge-center'}#${match.slug}`}
           className="font-semibold text-[var(--afa-deep)] hover:underline"
         >
           {part}
@@ -126,7 +128,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
               {/* Phase CTA */}
               <div className="mt-8">
                 <Link
-                  href={`/${locale}/teknik-on-degerlendirme`}
+                  href={`/${locale}/${getLocalizedSlug('technical-assessment', locale as Locale) ?? 'technical-assessment'}`}
                   className="afa-btn-primary inline-flex items-center text-sm no-underline"
                 >
                   {ctaLabel}

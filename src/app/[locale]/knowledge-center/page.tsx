@@ -6,6 +6,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import GlossarySchema from '@/components/seo/GlossarySchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { SITE_URL } from '@/lib/env';
+import { LOCALE_PATHS } from '@/lib/routes';
 
 const pageMeta: Record<Locale, { title: string; description: string; heroTitle: string; heroSubtitle: string; breadcrumbHome: string; breadcrumbSelf: string }> = {
   tr: {
@@ -52,15 +53,15 @@ export async function generateMetadata({
     title: meta.title,
     description: meta.description,
     alternates: {
-      canonical: `${SITE_URL}/${validLocale}/bilgi-merkezi`,
+      canonical: `${SITE_URL}${LOCALE_PATHS.knowledgeCenter[validLocale]}`,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/bilgi-merkezi`]),
+        locales.map((l) => [l, `${SITE_URL}${LOCALE_PATHS.knowledgeCenter[l]}`]),
       ),
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `${SITE_URL}/${validLocale}/bilgi-merkezi`,
+      url: `${SITE_URL}${LOCALE_PATHS.knowledgeCenter[validLocale]}`,
       siteName: 'AFA Energy Romania',
       type: 'website',
     },
@@ -97,7 +98,7 @@ export default async function BilgiMerkeziPage({
       <BreadcrumbSchema
         items={[
           { name: meta.breadcrumbHome, url: `${SITE_URL}/${locale}` },
-          { name: meta.breadcrumbSelf, url: `${SITE_URL}/${locale}/bilgi-merkezi` },
+          { name: meta.breadcrumbSelf, url: `${SITE_URL}${LOCALE_PATHS.knowledgeCenter[locale]}` },
         ]}
       />
       <FAQSchema groups={kc.groups} />

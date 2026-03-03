@@ -1,7 +1,6 @@
 // src/lib/routes.ts
-// AFA Energy Romania - Rota Tanımları v1.1
-// Fiziksel klasör yapısıyla birebir uyumlu
-// Not: Tüm dillerde segment aynıdır (rewrite yok)
+// AFA Energy Romania - Route Definitions v2.0
+// User-facing localized URLs (middleware rewrites to canonical directories)
 
 export const LOCALE_PATHS = {
   home: {
@@ -12,20 +11,20 @@ export const LOCALE_PATHS = {
 
   about: {
     tr: "/tr/hakkimizda",
-    en: "/en/hakkimizda",
-    ro: "/ro/hakkimizda",
+    en: "/en/about",
+    ro: "/ro/despre-noi",
   },
 
   services: {
     tr: "/tr/hizmetler",
-    en: "/en/hizmetler",
-    ro: "/ro/hizmetler",
+    en: "/en/services",
+    ro: "/ro/servicii",
   },
 
   assessment: {
     tr: "/tr/teknik-on-degerlendirme",
-    en: "/en/teknik-on-degerlendirme",
-    ro: "/ro/teknik-on-degerlendirme",
+    en: "/en/technical-assessment",
+    ro: "/ro/evaluare-tehnica",
   },
 
   methodology: {
@@ -36,20 +35,20 @@ export const LOCALE_PATHS = {
 
   knowledgeCenter: {
     tr: "/tr/bilgi-merkezi",
-    en: "/en/bilgi-merkezi",
-    ro: "/ro/bilgi-merkezi",
+    en: "/en/knowledge-center",
+    ro: "/ro/centrul-cunostintelor",
   },
 
   investor: {
-    tr: "/tr/investor",
+    tr: "/tr/yatirimci",
     en: "/en/investor",
-    ro: "/ro/investor",
+    ro: "/ro/investitor",
   },
 
   developer: {
-    tr: "/tr/developer",
+    tr: "/tr/gelistirici",
     en: "/en/developer",
-    ro: "/ro/developer",
+    ro: "/ro/dezvoltator",
   },
 
   atrMatrix: {
@@ -60,14 +59,14 @@ export const LOCALE_PATHS = {
 
   cases: {
     tr: "/tr/vakalar",
-    en: "/en/vakalar",
-    ro: "/ro/vakalar",
+    en: "/en/cases",
+    ro: "/ro/cazuri",
   },
 
   contact: {
     tr: "/tr/iletisim",
-    en: "/en/iletisim",
-    ro: "/ro/iletisim",
+    en: "/en/contact",
+    ro: "/ro/contact",
   },
 } as const;
 
