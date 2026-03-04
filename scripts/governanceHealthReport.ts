@@ -53,6 +53,7 @@ const LOCALES = ["tr", "en", "ro"] as const;
 const PROJECT_ROOT = process.cwd();
 const DICT_PATH = (locale: string) => {
   validateLocale(locale, LOCALES);
+  // safe: locale validated by validateLocale above; remaining segments are internal constants
   return safePath(PROJECT_ROOT, path.join("src", "content", locale, "homepage.json"));
 };
 

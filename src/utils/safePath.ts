@@ -8,7 +8,18 @@ export function safePath(baseDir: string, userInput: string): string {
   // Remove null bytes
   const cleaned = userInput.replace(/\0/g, "");
 
-  // Resolve the full path
+  // Reject bare traversal segments before resolution
+  const segments = cleaned.split(/[/\\]/);
+  for (const seg of segments) {
+    const trimmed = seg.trim();
+    if (trimmed === ".." || trimmed === ".") {
+      throw new Error(
+        `[SECURITY] Path traversal segment detected: "${trimmed}" in "${userInput}".`
+      );
+    }
+  }
+
+  // safe: resolve is the sanitization boundary — containment check follows immediately
   const resolved = path.resolve(baseDir, cleaned);
 
   // Ensure the resolved path is still within the base directory

@@ -33,6 +33,7 @@ type SectionSpec = {
 
 const LOCALES = ["tr", "en", "ro"] as const;
 const PROJECT_ROOT = process.cwd();
+// safe: all arguments are internal constants, not user-provided
 const OUTPUT_DIR = path.join(PROJECT_ROOT, "docs", "governance");
 
 // SECURITY NOTE: This script runs only at build time.
@@ -42,6 +43,7 @@ const OUTPUT_DIR = path.join(PROJECT_ROOT, "docs", "governance");
 // SÖZLÜK DOSYA YOLU ŞABLONU (Proje yapınıza göre burayı düzenleyin)
 const DICT_PATH_TEMPLATE = (locale: string) => {
   validateLocale(locale, LOCALES);
+  // safe: locale validated by validateLocale above; remaining segments are internal constants
   return safePath(PROJECT_ROOT, path.join("src", "content", locale, "homepage.json"));
 };
 
@@ -285,6 +287,7 @@ async function main() {
       const { errors, markdown } = await validateAndGenerate(locale as string);
       allErrors = allErrors.concat(errors);
       
+      // safe: locale is from internal LOCALES constant; path wrapped by safePath as defense-in-depth
       const outputPath = safePath(PROJECT_ROOT, path.join("docs", "governance", `section-mapping.${locale}.md`));
       fs.writeFileSync(outputPath, markdown);
       console.log(`[OK] Rapor olusturuldu: ${outputPath}`);
