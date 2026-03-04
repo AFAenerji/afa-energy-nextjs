@@ -74,7 +74,7 @@ export default function HeroSection({ data, locale }: Props) {
         <div className="pointer-events-none absolute inset-0 z-10 bg-black/15" />
 
         <div className="absolute inset-y-0 right-0 z-20 flex w-[40%] max-w-[580px] min-w-[480px] items-center justify-center pr-16 pl-4">
-          <div className="w-full rounded-2xl bg-white/95 p-10 shadow-2xl backdrop-blur-sm">
+          <div className="w-full rounded-2xl bg-white/95 p-10 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] backdrop-blur-sm">
             <p className="text-xs font-bold tracking-[0.18em] text-[#28AFB0] uppercase mb-4">
               {data.tag}
             </p>

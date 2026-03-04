@@ -42,10 +42,10 @@ export default function DecisionInterface({ data, locale }: Props) {
                 onClick={() => setSelectedId(card.type)}
                 className={`
                   relative text-left p-8 rounded-lg flex flex-col
-                  transition-all duration-300 cursor-pointer
+                  transition-colors duration-300 cursor-pointer
                   ${isInvestor
-                    ? "border-2 border-[#18625F] bg-white shadow-md"
-                    : "border border-gray-300 bg-white shadow-sm"
+                    ? "border-2 border-[#18625F] bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]"
+                    : "border border-gray-300 bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]"
                   }
                   ${isSelected ? "ring-2 ring-[#FFCB00] ring-offset-2" : ""}
                 `}

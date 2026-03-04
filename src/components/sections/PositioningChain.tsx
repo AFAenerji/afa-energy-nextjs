@@ -46,9 +46,9 @@ export default function PositioningChain({ data }: Props) {
                 <div
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
-                  className={`bg-white rounded-lg p-6 lg:p-8 flex flex-col flex-grow hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ${
+                  className={`bg-white rounded-lg p-6 lg:p-8 flex flex-col flex-grow transition-colors duration-300 ${
                     isHighlighted
-                      ? "border-2 border-[#FFCB00] shadow-md"
+                      ? "border-2 border-[#FFCB00] shadow-[0_1px_2px_0_rgba(0,0,0,0.05)]"
                       : "border border-[#E0E0E0]"
                   }`}
                 >

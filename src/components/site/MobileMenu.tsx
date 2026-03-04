@@ -48,7 +48,7 @@ export default function MobileMenu({ locale, isOpen, onClose }: MobileMenuProps)
       />
 
       {/* Menu Panel */}
-      <div id="mobile-menu" className="absolute right-0 top-0 bottom-0 w-80 max-w-[92vw] bg-[#18625F] shadow-xl flex flex-col">
+      <div id="mobile-menu" className="absolute right-0 top-0 bottom-0 w-80 max-w-[92vw] bg-[#18625F] shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] flex flex-col">
         {/* Top Section */}
         <div className="border-b border-white/10 p-4">
           <div className="flex items-center justify-between">

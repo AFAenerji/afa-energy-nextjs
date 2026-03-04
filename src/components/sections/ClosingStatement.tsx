@@ -33,7 +33,7 @@ export default function ClosingStatement({ data }: Props) {
     >
       {/* Background layer — gradient without affecting text */}
       <div
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent to-[#0F2E2C]/40"
+        className="absolute inset-0 -z-10 bg-afa-deep/50"
         aria-hidden="true"
       />
 

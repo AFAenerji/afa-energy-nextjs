@@ -36,7 +36,8 @@
         { "value": "300+", "unit": "MW", "label": "Experiență în Proiectare." },
         { "value": "10+", "unit": "Ani", "label": "Experiență în Sector." }
       ],
-      "note": "Aceste cifre reprezintă totalul evaluărilor tehnice efectuate în cadrul analizei ATR, fezabilității rețelei și Pre-TDD."
+      "note": "Aceste cifre reprezintă totalul evaluărilor tehnice efectuate în cadrul analizei ATR, fezabilității rețelei și Pre-TDD.",
+      "methodology": "Toate calculele noastre sunt verificate utilizând standardele ANRE și algoritmii de analiză a constrângerilor rețelei."
     },
     "atrMatrix": {
       "title": "AFA ATR Matrix™ — Filtru Tehnic Pre-Investiție",
@@ -46,7 +47,8 @@
         { "id": "02", "title": "Verificare Avize Tehnice și Reglementări", "description": "Verificarea termenelor de valabilitate ATR și conformitatea cu reglementările ANRE." },
         { "id": "03", "title": "Cost și Risc Conectare Rețea", "description": "Verificarea sferei costurilor de conectare; vizibilitatea riscurilor de întărire rețea, limitare și întârzieri în buget." },
         { "id": "04", "title": "Verificare Bancabilitate", "description": "Verificarea faptului că constatările tehnice sunt acceptabile pentru finanțarea bancară și susținerea lor cu documentație." }
-      ]
+      ],
+      "framework": ["Analiză Capacitate", "Verificare Reglementări", "Cost și Risc", "Bancabilitate"]
     },
     "roleClarity": {
       "title": "Limita Independenței — Ce Facem și Ce Nu",

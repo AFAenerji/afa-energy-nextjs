@@ -160,9 +160,9 @@ export default function Header({ locale }: HeaderProps) {
                 aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
               >
                 <div className="w-6 h-5 relative flex flex-col justify-center">
-                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                  <span className={`block h-0.5 w-full bg-afa-dark transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-transform duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-opacity duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                  <span className={`block h-0.5 w-full bg-afa-dark transition-transform duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
                 </div>
               </button>
             </div>

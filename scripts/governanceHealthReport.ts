@@ -64,7 +64,9 @@ const VALID_COMPONENTS = [
   "ExperienceMetrics",
   "RoleClarity",
   "DecisionInterface",
+  "ScopeDisclaimer",
   "ClosingStatement",
+  "TechnicalFAQ",
 ];
 
 // --- YARDIMCI FONKSİYONLAR ---

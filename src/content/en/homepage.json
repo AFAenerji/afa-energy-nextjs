@@ -36,7 +36,8 @@
         { "value": "100+", "unit": "", "label": "Critical Risks Identified." },
         { "value": "10+", "unit": "Years", "label": "Sector Experience." }
       ],
-      "note": "These figures represent total technical assessments within the scope of ATR analysis, grid feasibility, and Pre-TDD."
+      "note": "These figures represent total technical assessments within the scope of ATR analysis, grid feasibility, and Pre-TDD.",
+      "methodology": "All our calculations are verified using ANRE standards and grid constraint analysis algorithms."
     },
     "atrMatrix": {
       "title": "AFA ATR Matrix™ — Pre-Investment Technical Filter",
@@ -46,7 +47,8 @@
         { "id": "02", "title": "Technical Permitting & Regulation Check", "description": "Verification of ATR validity periods and compliance with ANRE regulations." },
         { "id": "03", "title": "Grid Connection Cost & Risk", "description": "Verification of connection cost scope; making grid reinforcement, curtailment, and delay risks visible in the budget." },
         { "id": "04", "title": "Bankability Verification", "description": "Verifying that technical findings are acceptable for bank financing and supporting them with documentation." }
-      ]
+      ],
+      "framework": ["Capacity Analysis", "Regulation Check", "Cost & Risk", "Bankability"]
     },
     "roleClarity": {
       "title": "Independence Boundary — Do's and Don'ts",

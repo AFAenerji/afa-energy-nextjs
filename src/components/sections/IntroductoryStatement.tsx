@@ -75,9 +75,9 @@ export default function IntroductoryStatement({ data }: Props) {
                 key={idx}
                 ref={(el) => setCardRef(el, idx)}
                 aria-label={card.title}
-                className={`rounded-2xl border p-8 transition-all duration-500 ${
+                className={`rounded-2xl border p-8 transition-colors duration-500 ${
                   activeIndex === idx
-                    ? "border-[#18625F]/20 bg-white shadow-lg opacity-100 scale-100"
+                    ? "border-[#18625F]/20 bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] opacity-100 scale-100"
                     : "border-gray-100 bg-gray-50/50 opacity-50 scale-[0.98] hover:opacity-70"
                 }`}
               >

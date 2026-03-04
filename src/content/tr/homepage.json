@@ -47,7 +47,8 @@
         { "id": "02", "title": "Teknik İzinler ve Regülasyon Kontrolü", "description": "Teknik Bağlantı Onayı (ATR) ve ilgili izinlerin geçerlilik süreleri ile ANRE mevzuatına uyumunun doğrulanması." },
         { "id": "03", "title": "Şebeke Bağlantı Maliyeti ve Riski", "description": "Bağlantı maliyetinin teknik kapsamının doğrulanması; şebeke güçlendirme, operasyonel kısıntı ve zaman gecikmesi risklerinin yatırım bütçesinde görünür hâle getirilmesi." },
         { "id": "04", "title": "Banka Finansmanına Uygunluk Dokümantasyonu", "description": "Teknik bulguların banka finansmanına uygunluk açısından dokümante edilmesi; arazi ve izin belgelerinin teknik tutarlılık kontrolü; gerektiğinde uzman hukuk danışmanına yönlendirme ve koordinasyon." }
-      ]
+      ],
+      "framework": ["Kapasite Analizi", "Regülasyon Kontrolü", "Maliyet ve Risk", "Bankabilite"]
     },
     "roleClarity": {
       "title": "Bağımsızlık Sınırı — AFA Yapar ve Yapmaz",
