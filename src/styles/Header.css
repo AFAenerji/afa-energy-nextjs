@@ -53,13 +53,13 @@
 }
 
 .afa-nav__link:hover {
-  color: var(--afa-deep, #18625F);
+  color: var(--afa-deep, #0F2E2C);
 }
 
 /* Active state */
 .afa-nav__link--active {
-  color: var(--afa-deep, #18625F);
-  border-bottom-color: var(--afa-deep, #18625F);
+  color: var(--afa-deep, #0F2E2C);
+  border-bottom-color: var(--afa-deep, #0F2E2C);
 }
 
 /* Tab variants — text-only, no border or fill */
@@ -69,7 +69,7 @@
 
 .afa-nav__link--tab-investor:hover,
 .afa-nav__link--tab-investor.afa-nav__link--active {
-  color: var(--afa-deep, #18625F);
+  color: var(--afa-deep, #0F2E2C);
 }
 
 .afa-nav__link--tab-developer {
@@ -78,7 +78,7 @@
 
 .afa-nav__link--tab-developer:hover,
 .afa-nav__link--tab-developer.afa-nav__link--active {
-  color: var(--afa-deep, #18625F);
+  color: var(--afa-deep, #0F2E2C);
 }
 
 /* Disabled state */
@@ -123,7 +123,7 @@
 }
 
 .afa-lang-switcher__btn:hover {
-  color: var(--afa-deep, #18625F);
+  color: var(--afa-deep, #0F2E2C);
 }
 
 .afa-lang-switcher__btn--active {

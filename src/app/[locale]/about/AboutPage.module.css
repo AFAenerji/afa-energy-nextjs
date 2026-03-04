@@ -29,7 +29,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(2.2rem, 4vw, 3rem);
   font-weight: 700;
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
 }
 
 .heroSubtitle {
@@ -87,7 +87,7 @@
 
 /* ── Value Statement ── */
 .valueStatement {
-  background: var(--afa-primary, #18625F);
+  background: var(--afa-primary-dark, #18625F);
   padding: 60px 0;
 }
 
@@ -118,7 +118,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
   margin-bottom: 8px;
 }
 
@@ -134,7 +134,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
   margin-bottom: 12px;
 }
 
@@ -200,7 +200,7 @@
 
 .green {
   background: rgba(24, 98, 95, 0.1);
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
 }
 
 .yellow {
@@ -254,7 +254,7 @@
 }
 
 .teamCard:hover {
-  border-color: var(--afa-primary, #18625F);
+  border-color: var(--afa-primary-dark, #18625F);
 }
 
 .teamPhoto {
@@ -290,7 +290,7 @@
 .teamRole {
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
   margin-bottom: 8px;
 }
 
@@ -307,7 +307,7 @@
   gap: 6px;
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--afa-primary, #18625F);
+  color: var(--afa-primary-dark, #18625F);
   text-decoration: none;
 }
 
