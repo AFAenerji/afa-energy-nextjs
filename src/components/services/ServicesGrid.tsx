@@ -28,7 +28,7 @@ function linkTerms(text: string, locale: string): React.ReactNode {
         <a
           key={i}
           href={`/${locale}/${getLocalizedSlug('knowledge-center', locale as Locale) ?? 'knowledge-center'}#${match.slug}`}
-          className="font-semibold text-[var(--afa-deep)] hover:underline"
+          className={clsx('font-semibold', 'text-afa-deep', 'hover:underline')}
         >
           {part}
         </a>
@@ -62,30 +62,30 @@ type Props = {
 
 export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
   return (
-    <section className="w-full bg-[var(--muted)] py-20 lg:py-24" aria-label="Service phases">
+    <section className={clsx('w-full', 'bg-afa-light', 'py-20', 'lg:py-24')} aria-label="Service phases">
       <div className="afa-container">
         <div className="space-y-16">
           {phases.map((phase) => (
             <article
               key={phase.id}
               id={phase.anchor}
-              className="scroll-mt-24 rounded-lg border border-[var(--border)] bg-white p-8 md:p-10"
+              className={clsx('scroll-mt-24', 'rounded-lg', 'border', 'border-afa-border', 'bg-white', 'p-8', 'md:p-10')}
             >
-              <span className="text-xs font-bold tracking-[0.2em] uppercase afa-eyebrow mb-2 block">
+              <span className={clsx('text-xs', 'font-bold', 'tracking-[0.2em]', 'uppercase', 'afa-eyebrow', 'mb-2', 'block')}>
                 {phase.tag}
               </span>
-              <h3 className="text-xl md:text-2xl font-extrabold tracking-tight mb-4">
+              <h3 className={clsx('text-xl', 'md:text-2xl', 'font-extrabold', 'tracking-tight', 'mb-4')}>
                 {phase.title}
               </h3>
-              <p className="text-sm md:text-base leading-relaxed afa-text-body-muted mb-6">
+              <p className={clsx('text-sm', 'md:text-base', 'leading-relaxed', 'afa-text-body-muted', 'mb-6')}>
                 {linkTerms(phase.description, locale)}
               </p>
 
               {/* Deliverables */}
-              <ul className="space-y-2 mb-6">
+              <ul className={clsx('space-y-2', 'mb-6')}>
                 {phase.deliverables.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
-                    <span className={`shrink-0 mt-1 w-1.5 h-1.5 rounded-full ${phase.anchor === 'asama-2' ? 'afa-sky-dot' : 'bg-[var(--green-authority)]'}`} />
+                  <li key={idx} className={clsx('flex', 'items-start', 'gap-3', 'text-sm')}>
+                    <span className={`shrink-0 mt-1 w-1.5 h-1.5 rounded-full ${phase.anchor === 'asama-2' ? 'afa-sky-dot' : 'bg-afa-primary'}`} />
                     <span>{linkTerms(item, locale)}</span>
                   </li>
                 ))}
@@ -93,15 +93,15 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
 
               {/* Decision Inputs (Karar Girdisi) */}
               {phase.decisionInputs && phase.decisionInputs.length > 0 && (
-                <div className="mt-6 rounded-lg border border-[var(--border)] bg-[var(--muted)] p-5">
-                  <p className="text-xs font-bold tracking-[0.15em] uppercase afa-eyebrow mb-3">
+                <div className={clsx('mt-6', 'rounded-lg', 'border', 'border-afa-border', 'bg-afa-light', 'p-5')}>
+                  <p className={clsx('text-xs', 'font-bold', 'tracking-[0.15em]', 'uppercase', 'afa-eyebrow', 'mb-3')}>
                     Karar Girdisi
                   </p>
                   <dl className="space-y-2">
                     {phase.decisionInputs.map((input, idx) => (
-                      <div key={idx} className="flex flex-col sm:flex-row sm:gap-3">
-                        <dt className="text-sm shrink-0 sm:w-48 afa-decision-label">{input.label}</dt>
-                        <dd className="text-sm afa-text-body-muted">{input.value}</dd>
+                      <div key={idx} className={clsx('flex', 'flex-col', 'sm:flex-row', 'sm:gap-3')}>
+                        <dt className={clsx('text-sm', 'shrink-0', 'sm:w-48', 'afa-decision-label')}>{input.label}</dt>
+                        <dd className={clsx('text-sm', 'afa-text-body-muted')}>{input.value}</dd>
                       </div>
                     ))}
                   </dl>
@@ -110,14 +110,14 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
 
               {/* Mikro Risk Notları */}
               {phase.riskNotes && phase.riskNotes.length > 0 && (
-                <div className="mt-6 rounded-lg border border-[var(--afa-risk)]/20 bg-[var(--afa-risk)]/[0.03] p-5">
-                  <p className="text-xs font-bold tracking-[0.15em] uppercase mb-3 afa-risk-keyword">
+                <div className={clsx('mt-6', 'rounded-lg', 'border', 'border-afa-warning/20', 'bg-afa-warning/3', 'p-5')}>
+                  <p className={clsx('text-xs', 'font-bold', 'tracking-[0.15em]', 'uppercase', 'mb-3', 'afa-risk-keyword')}>
                     Mikro Risk Notları
                   </p>
                   <ul className="space-y-1.5">
                     {phase.riskNotes.map((note, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5 text-sm">
-                        <span className="shrink-0 mt-1 w-1.5 h-1.5 rounded-full bg-[var(--afa-risk)]" />
+                      <li key={idx} className={clsx('flex', 'items-start', 'gap-2.5', 'text-sm')}>
+                        <span className={clsx('shrink-0', 'mt-1', 'w-1.5', 'h-1.5', 'rounded-full', 'bg-afa-warning')} />
                         <span>{note}</span>
                       </li>
                     ))}
@@ -129,7 +129,7 @@ export default function ServicesGrid({ locale, phases, ctaLabel }: Props) {
               <div className="mt-8">
                 <Link
                   href={`/${locale}/${getLocalizedSlug('technical-assessment', locale as Locale) ?? 'technical-assessment'}`}
-                  className="afa-btn-primary inline-flex items-center text-sm no-underline"
+                  className={clsx('afa-btn-primary', 'inline-flex', 'items-center', 'text-sm', 'no-underline')}
                 >
                   {ctaLabel}
                 </Link>

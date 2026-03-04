@@ -167,8 +167,8 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[var(--afa-deep)]">
-          <svg className="h-8 w-8 text-[var(--afa-yellow)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-afa-deep">
+          <svg className="h-8 w-8 text-afa-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
@@ -181,7 +181,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
         <ol className="text-left max-w-md mx-auto space-y-3 mb-10">
           {content.thankYou.steps.map((s, i) => (
             <li key={i} className="flex items-start gap-3">
-              <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--afa-yellow)] text-xs font-bold text-[var(--text-on-yellow)]">
+              <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-afa-yellow text-xs font-bold text-text-on-yellow">
                 {i + 1}
               </span>
               <span className="text-sm text-white/80 leading-relaxed">{s}</span>
@@ -190,7 +190,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
         </ol>
         <a
           href={`/${locale}/${getLocalizedSlug('services', locale as Locale) ?? 'services'}`}
-          className="inline-flex items-center px-6 py-3 text-sm font-bold rounded-[var(--radius)] border border-white/20 text-white hover:border-[var(--afa-yellow)] hover:text-[var(--afa-yellow)] transition-colors"
+          className="inline-flex items-center px-6 py-3 text-sm font-bold rounded border border-white/20 text-white hover:border-afa-yellow hover:text-afa-yellow transition-colors"
         >
           {content.thankYou.backLabel}
         </a>
@@ -207,21 +207,21 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
       <div className="mb-8">
         <div className="flex justify-between text-xs font-bold text-white/50 mb-2">
           {content.stepLabels.map((label, i) => (
-            <span key={i} className={i <= step ? 'text-[var(--afa-yellow)]' : ''}>
+            <span key={i} className={i <= step ? 'text-afa-yellow' : ''}>
               {label}
             </span>
           ))}
         </div>
         <div className="h-1.5 w-full rounded-full bg-white/10">
           <div
-            className="h-1.5 rounded-full bg-[var(--afa-yellow)] transition-all duration-300"
+            className="h-1.5 rounded-full bg-afa-yellow transition-[width] duration-300 ease-linear"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </div>
 
       {/* Step Content */}
-      <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6 md:p-8">
+      <div className="rounded-lg border border-white/10 bg-white/3 p-6 md:p-8">
         {/* Step 1: Project Identity */}
         {step === 0 && (
           <fieldset className="space-y-5">
@@ -235,7 +235,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
 
             <div>
               <label htmlFor="name" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step1.nameLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step1.nameLabel} <span className="text-afa-risk">*</span>
               </label>
               <input
                 id="name"
@@ -245,7 +245,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 placeholder={content.step1.namePlaceholder}
                 className="afa-input"
               />
-              {errors.name && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.name}</p>}
+              {errors.name && <p className="mt-1 text-xs text-afa-risk">{errors.name}</p>}
             </div>
 
             <div>
@@ -264,7 +264,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
 
             <div>
               <label htmlFor="email" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step1.emailLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step1.emailLabel} <span className="text-afa-risk">*</span>
               </label>
               <input
                 id="email"
@@ -275,7 +275,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 className="afa-input"
               />
               <p className="mt-1 text-xs text-white/40">{content.step1.emailHint}</p>
-              {errors.email && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.email}</p>}
+              {errors.email && <p className="mt-1 text-xs text-afa-risk">{errors.email}</p>}
             </div>
           </fieldset>
         )}
@@ -287,15 +287,15 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
 
             <div>
               <p className="text-sm font-semibold text-white/80 mb-2">
-                {content.step2.atrLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.atrLabel} <span className="text-afa-risk">*</span>
               </p>
               <div className="flex flex-wrap gap-3">
                 {content.step2.atrOptions.map((opt) => (
                   <label
                     key={opt.value}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius)] border cursor-pointer transition-colors text-sm ${
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded border cursor-pointer transition-colors text-sm ${
                       form.atrStatus === opt.value
-                        ? 'border-[var(--afa-yellow)] bg-[var(--afa-yellow)]/10 text-[var(--afa-yellow)] font-bold'
+                        ? 'border-afa-yellow bg-afa-yellow/10 text-afa-yellow font-bold'
                         : 'border-white/20 text-white/70 hover:border-white/40'
                     }`}
                   >
@@ -311,12 +311,12 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   </label>
                 ))}
               </div>
-              {errors.atrStatus && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.atrStatus}</p>}
+              {errors.atrStatus && <p className="mt-1 text-xs text-afa-risk">{errors.atrStatus}</p>}
             </div>
 
             <div>
               <label htmlFor="capacity" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step2.capacityLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.capacityLabel} <span className="text-afa-risk">*</span>
               </label>
               <input
                 id="capacity"
@@ -328,12 +328,12 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 placeholder={content.step2.capacityPlaceholder}
                 className="afa-input"
               />
-              {errors.capacity && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.capacity}</p>}
+              {errors.capacity && <p className="mt-1 text-xs text-afa-risk">{errors.capacity}</p>}
             </div>
 
             <div>
               <label htmlFor="projectPhase" className="block text-sm font-semibold text-white/80 mb-1.5">
-                {content.step2.phaseLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step2.phaseLabel} <span className="text-afa-risk">*</span>
               </label>
               <select
                 id="projectPhase"
@@ -346,7 +346,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   <option key={opt.value} value={opt.value}>{opt.label}</option>
                 ))}
               </select>
-              {errors.projectPhase && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.projectPhase}</p>}
+              {errors.projectPhase && <p className="mt-1 text-xs text-afa-risk">{errors.projectPhase}</p>}
             </div>
           </fieldset>
         )}
@@ -358,15 +358,15 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
 
             <div>
               <p className="text-sm font-semibold text-white/80 mb-2">
-                {content.step3.dataLabel} <span className="text-[var(--afa-risk)]">*</span>
+                {content.step3.dataLabel} <span className="text-afa-risk">*</span>
               </p>
               <div className="flex flex-wrap gap-3">
                 {content.step3.dataOptions.map((opt) => (
                   <label
                     key={opt.value}
-                    className={`flex items-center gap-2 px-4 py-2.5 rounded-[var(--radius)] border cursor-pointer transition-colors text-sm ${
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded border cursor-pointer transition-colors text-sm ${
                       form.dataReady === opt.value
-                        ? 'border-[var(--afa-yellow)] bg-[var(--afa-yellow)]/10 text-[var(--afa-yellow)] font-bold'
+                        ? 'border-afa-yellow bg-afa-yellow/10 text-afa-yellow font-bold'
                         : 'border-white/20 text-white/70 hover:border-white/40'
                     }`}
                   >
@@ -382,7 +382,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   </label>
                 ))}
               </div>
-              {errors.dataReady && <p className="mt-1 text-xs text-[var(--afa-risk)]">{errors.dataReady}</p>}
+              {errors.dataReady && <p className="mt-1 text-xs text-afa-risk">{errors.dataReady}</p>}
             </div>
           </fieldset>
         )}
@@ -412,7 +412,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-2.5 text-sm font-bold rounded-[var(--radius)] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-all"
+              className="px-6 py-2.5 text-sm font-bold rounded bg-afa-yellow text-text-on-yellow hover:bg-afa-deep hover:text-white transition-colors duration-[120ms] ease-out"
             >
               {content.next} →
             </button>
@@ -421,7 +421,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-6 py-2.5 text-sm font-bold rounded-[var(--radius)] bg-[var(--afa-yellow)] text-[var(--text-on-yellow)] hover:brightness-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2.5 text-sm font-bold rounded bg-afa-yellow text-text-on-yellow hover:bg-afa-deep hover:text-white transition-colors duration-[120ms] ease-out disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? content.submitting : content.submit}
             </button>

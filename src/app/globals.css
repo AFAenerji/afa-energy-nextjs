@@ -28,28 +28,40 @@ html {
    Audit Aesthetic • Investment Committee Interface Standard
    ============================================================ */
 
+/* --- TOKEN UYARI ---
+ * @theme (Tailwind v4) ve :root farkli token isimleri kullanir.
+ * Tailwind siniflari (bg-afa-*) @theme’den beslenir.
+ * var() referanslari :root’tan beslenir.
+ * Referans: Design Tokens v1.0
+ * Legacy alias’lar Sprint 2 (Mayis 2026)’da kaldirilacak.
+ * --- */
+
 /* 1. GLOBAL DESIGN RULES - CSS VARIABLES */
 :root {
-  /* Primary Colors */
+  /* ─── ANA RENK TOKENLARI ─────────────── */
+  --afa-deep: #0F2E2C;
+  --afa-primary-dark: #18625F;
+  --afa-verdigris: #28AFB0;
+  --afa-yellow: #FFCB00;
+  --afa-sky: #4CC9F0;
+  --afa-risk: #F25F5C;
+
+  /* ─── GECİS DONEMI LEGACY TOKENLAR ────── */
+  /* UYARI: Yeni bilesenlerde kullanmayin.   */
+  /* Silinecek: Sprint 2 (Mayis 2026)        */
   --green-authority: #18625F;
   --green-deep: #0F2E2C;
+  --afa-primary: #18625F;
+  --afa-secondary: #28AFB0;
+
+  /* Primary Colors */
   --yellow-accent: #FFCB00;
   --yellow-hover: #e6b800;
   --white: #FFFFFF;
   --muted: #F5F5F5;
   --border: #E0E0E0;
 
-  /* AFA Corporate Palette */
-  --afa-deep: #18625F;
-  --afa-verdigris: #28AFB0;
-  --afa-sky: #4CC9F0;
-  --afa-yellow: #FFCB00;
-  --afa-risk: #F25F5C;
-
   /* v10.2 Investment Committee Standard Aliases */
-  --afa-primary: #18625F;
-  --afa-accent: #FFCB00;
-  --afa-secondary: #28AFB0;
   --afa-text: #1A1A1A;
   --afa-muted: #666666;
   --afa-border: #E0E0E0;
@@ -67,6 +79,7 @@ html {
 
   --afa-container-max-width: var(--container);
   --afa-container-padding: var(--space-lg);
+
   /* Status Colors */
   --error: #F25F5C;
   --error-bg: #FFF5F5;
@@ -111,6 +124,18 @@ html {
   --white-50: rgba(255, 255, 255, 0.50);
   --white-40: rgba(255, 255, 255, 0.40);
 }
+
+/* --afa-accent: #FFCB00;
+   KALDIRILDI: @theme’de --color-afa-accent #28AFB0 ile cakisiyordu.
+   Gold Zone icin --afa-yellow kullanilmali. (Karar: Mart 2026) */
+
+/* --afa-primary: #18625F;
+   KALDIRILDI: @theme ile ayni deger, tekrar olusturuyordu.
+   Yeni adi: --afa-primary-dark. (Karar: Mart 2026) */
+
+/* --afa-secondary: #28AFB0;
+   KALDIRILDI: @theme’de --color-afa-secondary #4CC9F0 ile cakisiyordu.
+   Verdigris icin --afa-verdigris kullanilmali. (Karar: Mart 2026) */
 
 /* 2. MOTION — Respect user preference */
 @media (prefers-reduced-motion: reduce) {

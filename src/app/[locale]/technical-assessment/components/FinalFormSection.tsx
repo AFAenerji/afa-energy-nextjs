@@ -457,7 +457,7 @@ export default function FinalFormSection({
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:brightness-95 transition-colors"
+              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:bg-afa-deep hover:text-white transition-colors"
             >
               {content.next}
             </button>
@@ -466,7 +466,7 @@ export default function FinalFormSection({
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:brightness-95 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2.5 text-sm font-bold rounded-md bg-afa-gold text-afa-dark hover:bg-afa-deep hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? content.submitting : content.submit}
             </button>
