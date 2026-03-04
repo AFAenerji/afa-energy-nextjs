@@ -3,14 +3,15 @@ import { Locale, locales, defaultLocale } from "@/lib/i18n";
 import { LOCALE_PATHS } from "@/lib/routes";
 import { SITE_URL } from "@/lib/env";
 import { servicesContent } from "@/content/services";
-import styles from "./hizmetler.module.css";
+import { timelineStages, whyAfaCards, positioningData, photoBreaks } from "./data";
 import ServicesHero from "@/components/services/ServicesHero";
 import PositioningBlock from "@/components/services/PositioningBlock";
 import ProjectSourcing from "@/components/services/ProjectSourcing";
-import TransitionBridge from "@/components/services/TransitionBridge";
+import PhotoBreak from "@/components/services/PhotoBreak";
 import ServiceTimeline from "@/components/services/ServiceTimeline";
 import WhyAfaGrid from "@/components/services/WhyAfaGrid";
 import ClosingCTA from "@/components/services/ClosingCTA";
+import DisclaimerSection from "@/components/services/DisclaimerSection";
 
 /* ── Canonical helpers ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;
@@ -70,66 +71,49 @@ export default async function ServicesPage({
     : defaultLocale;
 
   const content = servicesContent[locale];
+  const stages = timelineStages[locale];
+  const cards = whyAfaCards[locale];
+  const positioning = positioningData[locale];
+  const breaks = photoBreaks[locale];
 
   return (
     <main>
-      {/* Section 1: Hero */}
+      {/* Hero */}
       <ServicesHero content={content.hero} />
 
-      {/* Section 2: Positioning */}
-      <PositioningBlock content={content.positioning} />
+      {/* Positioning */}
+      <PositioningBlock content={positioning} />
 
-      {/* Section 3: Project Sourcing (Block 1) + Transition Bridge */}
-      <section
-        id="project-sourcing"
-        aria-labelledby="project-sourcing-title"
-        className={styles.block1}
-      >
-        <div className={styles.block1Content}>
-          <ProjectSourcing content={content.block1} />
-          <TransitionBridge text={content.bridge} />
-        </div>
-      </section>
+      {/* Project Sourcing (Block 1) */}
+      <ProjectSourcing content={content.block1} bridge={content.bridge} />
 
-      {/* Section 4: Technical Validation (Block 2) */}
-      <section
-        id="technical-validation"
-        aria-labelledby="technical-validation-title"
-        className={styles.block2}
-      >
-        <div className={styles.block2Content}>
-          <ServiceTimeline content={content.block2} />
-        </div>
-      </section>
+      {/* Photo Break 1 — Transition */}
+      <PhotoBreak data={breaks[0]} />
 
-      {/* Section 5: Why AFA */}
-      <section
-        id="why-afa"
-        aria-labelledby="why-afa-title"
-        className={styles.whyAfa}
-      >
-        <div className={styles.whyAfaContent}>
-          <WhyAfaGrid content={content.whyAfa} />
-        </div>
-      </section>
+      {/* Technical Validation Timeline (Block 2) */}
+      <ServiceTimeline
+        locale={locale}
+        label={content.block2.label}
+        title={content.block2.title}
+        intro={content.block2.intro}
+        stages={stages}
+      />
 
-      {/* Section 6: Closing CTA */}
-      <section
-        id="get-started"
-        aria-labelledby="get-started-title"
-        className={styles.closing}
-      >
-        <div className={styles.closingContent}>
-          <ClosingCTA content={content.closing} />
-        </div>
-      </section>
+      {/* Photo Break 2 — Breathe */}
+      <PhotoBreak data={breaks[1]} />
 
-      {/* Section 7: Disclaimer */}
-      <section id="disclaimer" className={styles.disclaimer}>
-        <div className={styles.disclaimerContent}>
-          <p className={styles.disclaimerText}>{content.disclaimer}</p>
-        </div>
-      </section>
+      {/* Why AFA */}
+      <WhyAfaGrid
+        title={content.whyAfa.title}
+        cards={cards}
+        link={content.whyAfa.link}
+      />
+
+      {/* Closing CTA */}
+      <ClosingCTA content={content.closing} />
+
+      {/* Disclaimer */}
+      <DisclaimerSection text={content.disclaimer} />
     </main>
   );
 }

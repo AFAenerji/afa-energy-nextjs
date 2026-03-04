@@ -4,6 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronDown, ChevronUp, Linkedin } from 'lucide-react';
 
+// Local clsx helper — temporary fix for externally modified file
+function clsx(...args: (string | false | null | undefined)[]): string {
+  return args.filter(Boolean).join(' ');
+}
+
 const AFA = {
   primary: '#18625F',
   accent: '#28AFB0',
@@ -263,39 +268,39 @@ export default function ContactPageClient({ locale }: { locale: string }) {
           }}
           aria-hidden="true"
         />
-        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-20 md:py-24 lg:py-28">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-            <div className="flex-shrink-0 mb-8 md:mb-0 md:ml-8 lg:ml-16 md:order-last">
+        <div className={clsx('relative', 'z-10', 'max-w-6xl', 'mx-auto', 'px-4', 'md:px-6', 'lg:px-8', 'py-20', 'md:py-24', 'lg:py-28')}>
+          <div className={clsx('flex', 'flex-col', 'md:flex-row', 'md:items-center', 'md:justify-between')}>
+            <div className={clsx('flex-shrink-0', 'mb-8', 'md:mb-0', 'md:ml-8', 'lg:ml-16', 'md:order-last')}>
               <Image
                 src="/images/dikey_afa_beyaz.png"
                 alt="AFA Energy Romania logosu"
                 width={192}
                 height={231}
-                className="w-24 mx-auto md:w-40 lg:w-48 h-auto md:mx-0"
+                className={clsx('w-24', 'mx-auto', 'md:w-40', 'lg:w-48', 'h-auto', 'md:mx-0')}
                 style={{ opacity: 0.9 }}
               />
             </div>
-            <div className="flex-1 max-w-2xl">
+            <div className={clsx('flex-1', 'max-w-2xl')}>
               <h1
-                className="text-5xl md:text-6xl font-normal leading-tight mb-2"
+                className={clsx('text-5xl', 'md:text-6xl', 'font-normal', 'leading-tight', 'mb-2')}
                 style={{ color: '#FFFFFF' }}
               >
                 İletişim
               </h1>
               <p
-                className="text-lg md:text-xl font-semibold tracking-wide mb-6"
+                className={clsx('text-lg', 'md:text-xl', 'font-semibold', 'tracking-wide', 'mb-6')}
                 style={{ color: AFA.accent }}
               >
                 Yatırımdan Önce Netlik.
               </p>
               <p
-                className="text-base md:text-lg leading-relaxed mb-4"
+                className={clsx('text-base', 'md:text-lg', 'leading-relaxed', 'mb-4')}
                 style={{ color: 'rgba(255,255,255,0.9)' }}
               >
                 AFA, teknik gerçekliği netleştirerek doğru projeyi doğru yatırımcıyla buluşturur.
               </p>
               <p
-                className="text-sm md:text-base leading-relaxed"
+                className={clsx('text-sm', 'md:text-base', 'leading-relaxed')}
                 style={{ color: 'rgba(255,255,255,0.7)' }}
               >
                 Yatırım kararınızı netleştirmek veya projenizin teknik güvenilirliğini değerlendirmek için bizimle iletişime geçebilirsiniz.
@@ -306,24 +311,24 @@ export default function ContactPageClient({ locale }: { locale: string }) {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className={clsx('max-w-6xl', 'mx-auto', 'px-4', 'md:px-6', 'lg:px-8', 'py-12', 'md:py-16')}>
+          <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-3', 'gap-6')}>
             <div
-              className="flex flex-col h-full bg-white rounded-lg p-6 border border-gray-200"
+              className={clsx('flex', 'flex-col', 'h-full', 'bg-white', 'rounded-lg', 'p-6', 'border', 'border-gray-200')}
               style={{ borderLeft: `4px solid ${AFA.accent}`, boxShadow: SHADOW }}
             >
               <p
-                className="text-xs font-bold uppercase tracking-wider mb-3"
+                className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider', 'mb-3')}
                 style={{ color: AFA.primary }}
               >
                 FİLTRELENMİŞ PROJE AKIŞI
               </p>
-              <p className="text-sm leading-relaxed text-gray-600 mb-4">
+              <p className={clsx('text-sm', 'leading-relaxed', 'text-gray-600', 'mb-4')}>
                 Romanya&apos;da yenilenebilir enerji yatırımı arıyorsanız, ham proje listelerine zaman harcamanıza gerek yok. AFA&apos;nın ATR Matrix™ metodolojisinden geçmiş, teknik riski sınıflandırılmış ve yatırım komitesine sunulabilir projelere doğrudan erişin.
               </p>
               <a
                 href="/tr/yatirimci"
-                className="mt-auto pt-4 text-sm font-semibold underline"
+                className={clsx('mt-auto', 'pt-4', 'text-sm', 'font-semibold', 'underline')}
                 style={{ color: AFA.accent, transition: 'color 150ms ease-out' }}
                 {...linkHover}
               >
@@ -332,21 +337,21 @@ export default function ContactPageClient({ locale }: { locale: string }) {
             </div>
 
             <div
-              className="flex flex-col h-full bg-white rounded-lg p-6 border border-gray-200"
+              className={clsx('flex', 'flex-col', 'h-full', 'bg-white', 'rounded-lg', 'p-6', 'border', 'border-gray-200')}
               style={{ borderLeft: `4px solid ${AFA.accent}`, boxShadow: SHADOW }}
             >
               <p
-                className="text-xs font-bold uppercase tracking-wider mb-3"
+                className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider', 'mb-3')}
                 style={{ color: AFA.primary }}
               >
                 PROJENİZİN TEKNİK GÜVENİLİRLİĞİNİ ARTIRIN
               </p>
-              <p className="text-sm leading-relaxed text-gray-600 mb-4">
+              <p className={clsx('text-sm', 'leading-relaxed', 'text-gray-600', 'mb-4')}>
                 Projenizin teknik dosyası yatırımcı karşısında savunulabilir mi? AFA&apos;nın bağımsız değerlendirmesi, projenize yatırımcı nezdinde güvenilirlik kazandırır ve yatırımcı tarafında görünür hale getirir.
               </p>
               <a
                 href="/tr/gelistirici"
-                className="mt-auto pt-4 text-sm font-semibold underline"
+                className={clsx('mt-auto', 'pt-4', 'text-sm', 'font-semibold', 'underline')}
                 style={{ color: AFA.accent, transition: 'color 150ms ease-out' }}
                 {...linkHover}
               >
@@ -355,21 +360,21 @@ export default function ContactPageClient({ locale }: { locale: string }) {
             </div>
 
             <div
-              className="flex flex-col h-full bg-white rounded-lg p-6 border border-gray-200"
+              className={clsx('flex', 'flex-col', 'h-full', 'bg-white', 'rounded-lg', 'p-6', 'border', 'border-gray-200')}
               style={{ borderLeft: `4px solid ${AFA.accent}`, boxShadow: SHADOW }}
             >
               <p
-                className="text-xs font-bold uppercase tracking-wider mb-3"
+                className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider', 'mb-3')}
                 style={{ color: AFA.primary }}
               >
                 FİNANSMAN SÜRECİ TEKNİK DESTEĞİ
               </p>
-              <p className="text-sm leading-relaxed text-gray-600 mb-4">
+              <p className={clsx('text-sm', 'leading-relaxed', 'text-gray-600', 'mb-4')}>
                 Banka, altyapı fonu veya kurumsal ortaklık kapsamında teknik doğrulama veya portföy seviyesinde değerlendirme talepleriniz için doğrudan iletişim formunu kullanabilirsiniz.
               </p>
               <a
                 href="#contact-form"
-                className="mt-auto pt-4 text-sm font-semibold underline"
+                className={clsx('mt-auto', 'pt-4', 'text-sm', 'font-semibold', 'underline')}
                 style={{ color: AFA.accent, transition: 'color 150ms ease-out' }}
                 onClick={(e) => {
                   e.preventDefault();
@@ -385,31 +390,31 @@ export default function ContactPageClient({ locale }: { locale: string }) {
       </section>
 
       <section style={{ backgroundColor: '#F8FAFB' }}>
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-            <div className="lg:col-span-5 lg:sticky lg:top-24 lg:self-start">
-              <p className="text-base leading-relaxed text-gray-600 mb-8">
+        <div className={clsx('max-w-6xl', 'mx-auto', 'px-4', 'md:px-6', 'lg:px-8', 'py-16', 'md:py-20')}>
+          <div className={clsx('grid', 'grid-cols-1', 'lg:grid-cols-12', 'gap-8', 'lg:gap-10')}>
+            <div className={clsx('lg:col-span-5', 'lg:sticky', 'lg:top-24', 'lg:self-start')}>
+              <p className={clsx('text-base', 'leading-relaxed', 'text-gray-600', 'mb-8')}>
                 Talebinize uygun kanalı seçerek değerlendirme sürecinin hızlı ve öngörülebilir ilerlemesini sağlayabilirsiniz. Aşağıdaki formu doğrudan kullanabilir veya yatırımcı ve geliştirici sayfalarımızı ziyaret edebilirsiniz.
               </p>
 
               <div
-                className="bg-white rounded-lg p-6 border border-gray-200"
+                className={clsx('bg-white', 'rounded-lg', 'p-6', 'border', 'border-gray-200')}
                 style={{ boxShadow: SHADOW }}
               >
                 <p
-                  className="text-sm font-bold pb-2 mb-4"
+                  className={clsx('text-sm', 'font-bold', 'pb-2', 'mb-4')}
                   style={{ color: AFA.primary, borderBottom: `2px solid ${AFA.accent}` }}
                 >
                   OFİS BİLGİLERİ
                 </p>
                 <dl className="space-y-4">
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-wider" style={{ color: AFA.primary }}>
+                    <dt className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider')} style={{ color: AFA.primary }}>
                       BÜKREŞ OFİSİ
                     </dt>
                     <dd className="mt-1">
-                      <p className="text-sm font-semibold">AFA Energy Romania S.R.L.</p>
-                      <p className="text-sm text-gray-600">
+                      <p className={clsx('text-sm', 'font-semibold')}>AFA Energy Romania S.R.L.</p>
+                      <p className={clsx('text-sm', 'text-gray-600')}>
                         Sediu social: Bucureşti, Sectorul 3<br />
                         Strada Nerva Traian, Nr. 27–33<br />
                         Birou 6, Scara B, Etaj 1
@@ -417,12 +422,12 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-wider" style={{ color: AFA.primary }}>
+                    <dt className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider')} style={{ color: AFA.primary }}>
                       İSTANBUL OFİSİ
                     </dt>
                     <dd className="mt-1">
-                      <p className="text-sm font-semibold">AFA Enerji Danışmanlık</p>
-                      <p className="text-sm text-gray-600">
+                      <p className={clsx('text-sm', 'font-semibold')}>AFA Enerji Danışmanlık</p>
+                      <p className={clsx('text-sm', 'text-gray-600')}>
                         Fetih Mahallesi, Kavakyeli Sitesi<br />
                         Tahralı Sk. A Blok No:7 Kat:1 D:4<br />
                         34704 Ataşehir / İstanbul
@@ -430,24 +435,24 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-wider" style={{ color: AFA.primary }}>
+                    <dt className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider')} style={{ color: AFA.primary }}>
                       İLETİŞİM YÖNTEMİ
                     </dt>
-                    <dd className="text-sm text-gray-600">
+                    <dd className={clsx('text-sm', 'text-gray-600')}>
                       İlk iletişim formu üzerinden alınmaktadır. Kapsam belirleme sonrası iletişim süreciniz kişiselleştirilir.
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-wider" style={{ color: AFA.primary }}>
+                    <dt className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider')} style={{ color: AFA.primary }}>
                       LINKEDIN
                     </dt>
-                    <dd className="mt-1 flex items-center gap-2">
-                      <Linkedin className="w-4 h-4" style={{ color: AFA.accent }} />
+                    <dd className={clsx('mt-1', 'flex', 'items-center', 'gap-2')}>
+                      <Linkedin className={clsx('w-4', 'h-4')} style={{ color: AFA.accent }} />
                       <a
                         href="https://linkedin.com/company/afa-energy"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm font-semibold underline"
+                        className={clsx('text-sm', 'font-semibold', 'underline')}
                         style={{ color: AFA.accent, transition: 'color 150ms ease-out' }}
                         {...linkHover}
                       >
@@ -456,18 +461,18 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-xs font-bold uppercase tracking-wider" style={{ color: AFA.primary }}>
+                    <dt className={clsx('text-xs', 'font-bold', 'uppercase', 'tracking-wider')} style={{ color: AFA.primary }}>
                       ÇALIŞMA SAATLERİ
                     </dt>
                     <dd className="mt-1">
-                      <p className="text-sm text-gray-600">Pazartesi – Cuma, 09:00 – 18:00</p>
-                      <p className="text-sm text-gray-500">(İstanbul ve Bükreş saat dilimleri)</p>
+                      <p className={clsx('text-sm', 'text-gray-600')}>Pazartesi – Cuma, 09:00 – 18:00</p>
+                      <p className={clsx('text-sm', 'text-gray-500')}>(İstanbul ve Bükreş saat dilimleri)</p>
                     </dd>
                   </div>
                 </dl>
               </div>
 
-              <p className="text-sm leading-relaxed text-gray-600 mt-6">
+              <p className={clsx('text-sm', 'leading-relaxed', 'text-gray-600', 'mt-6')}>
                 Teknik değerlendirme ekibimiz talebinizi inceler; yatırımcı veya geliştirici profilinize uygun kapsamla size dönüş sağlar.
               </p>
             </div>
@@ -475,22 +480,22 @@ export default function ContactPageClient({ locale }: { locale: string }) {
             <div className="lg:col-span-7">
               <div
                 id="contact-form"
-                className="bg-white p-8"
+                className={clsx('bg-white', 'p-8')}
                 style={{ border: `2px solid ${AFA.accent}`, boxShadow: SHADOW }}
                 aria-labelledby="contact-form-title"
               >
-                <div className="flex items-center gap-3 mb-6">
+                <div className={clsx('flex', 'items-center', 'gap-3', 'mb-6')}>
                   <div
                     style={{ width: 4, height: 32, backgroundColor: AFA.accent, borderRadius: 9999 }}
                     aria-hidden="true"
                   />
-                  <h2 id="contact-form-title" className="text-2xl font-bold" style={{ color: AFA.primary }}>
+                  <h2 id="contact-form-title" className={clsx('text-2xl', 'font-bold')} style={{ color: AFA.primary }}>
                     İletişim Formu
                   </h2>
                 </div>
 
                 <p
-                  className="text-sm leading-relaxed text-gray-600 pb-6 mb-6"
+                  className={clsx('text-sm', 'leading-relaxed', 'text-gray-600', 'pb-6', 'mb-6')}
                   style={{ borderBottom: '1px solid #E5E7EB' }}
                 >
                   Yatırım fırsatı değerlendirmesi, teknik inceleme talebi, proje değerlendirme başvurusu veya iş birliği önerisi için bu formu kullanabilirsiniz. Talebiniz, kapsamına göre ilgili ekibe yönlendirilecektir.
@@ -500,11 +505,11 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                   <div
                     role="status"
                     aria-live="polite"
-                    className="p-4 mb-6"
+                    className={clsx('p-4', 'mb-6')}
                     style={{ backgroundColor: AFA.light, borderLeft: `4px solid ${AFA.accent}` }}
                   >
-                    <p className="font-semibold mb-1" style={{ color: AFA.primary }}>Mesaj Alındı</p>
-                    <p className="text-sm text-gray-600">
+                    <p className={clsx('font-semibold', 'mb-1')} style={{ color: AFA.primary }}>Mesaj Alındı</p>
+                    <p className={clsx('text-sm', 'text-gray-600')}>
                       Talebiniz alınmıştır. Kapsamına göre ilgili ekibe yönlendirilecek ve 2 iş günü içinde değerlendirilmeye alınacaktır.
                     </p>
                   </div>
@@ -513,7 +518,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                 <form onSubmit={handleSubmit} noValidate>
                   <div className="space-y-4">
                     <div>
-                      <label htmlFor="contact-name" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-name" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         Ad Soyad <span style={{ color: AFA.warning }} aria-label="gerekli">*</span>
                       </label>
                       <input
@@ -527,14 +532,14 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                         style={inputStyle('name')}
                       />
                       {touched.name && currentErrors.name && (
-                        <p className="text-xs mt-1" style={{ color: AFA.warning }} role="alert">
+                        <p className={clsx('text-xs', 'mt-1')} style={{ color: AFA.warning }} role="alert">
                           {currentErrors.name}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label htmlFor="contact-company" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-company" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         Şirket / Kuruluş <span style={{ color: AFA.warning }} aria-label="gerekli">*</span>
                       </label>
                       <input
@@ -548,14 +553,14 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                         style={inputStyle('company')}
                       />
                       {touched.company && currentErrors.company && (
-                        <p className="text-xs mt-1" style={{ color: AFA.warning }} role="alert">
+                        <p className={clsx('text-xs', 'mt-1')} style={{ color: AFA.warning }} role="alert">
                           {currentErrors.company}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label htmlFor="contact-email" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-email" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         E-posta Adresi <span style={{ color: AFA.warning }} aria-label="gerekli">*</span>
                       </label>
                       <input
@@ -569,14 +574,14 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                         style={inputStyle('email')}
                       />
                       {touched.email && currentErrors.email && (
-                        <p className="text-xs mt-1" style={{ color: AFA.warning }} role="alert">
+                        <p className={clsx('text-xs', 'mt-1')} style={{ color: AFA.warning }} role="alert">
                           {currentErrors.email}
                         </p>
                       )}
                     </div>
 
                     <div>
-                      <label htmlFor="contact-phone" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-phone" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         Telefon (İsteğe bağlı)
                       </label>
                       <input
@@ -592,7 +597,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     </div>
 
                     <div>
-                      <label htmlFor="contact-topic" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-topic" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         Konu (İsteğe bağlı)
                       </label>
                       <select
@@ -623,7 +628,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     </div>
 
                     <div>
-                      <label htmlFor="contact-message" className="block text-sm font-semibold mb-1 text-gray-700">
+                      <label htmlFor="contact-message" className={clsx('block', 'text-sm', 'font-semibold', 'mb-1', 'text-gray-700')}>
                         Mesaj <span style={{ color: AFA.warning }} aria-label="gerekli">*</span>
                       </label>
                       <textarea
@@ -637,7 +642,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                         style={{ ...inputStyle('message'), resize: 'vertical' as const }}
                       />
                       {touched.message && currentErrors.message && (
-                        <p className="text-xs mt-1" style={{ color: AFA.warning }} role="alert">
+                        <p className={clsx('text-xs', 'mt-1')} style={{ color: AFA.warning }} role="alert">
                           {currentErrors.message}
                         </p>
                       )}
@@ -660,14 +665,14 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                   </div>
 
                   <p
-                    className="text-xs leading-relaxed text-gray-500 pt-6 mt-6"
+                    className={clsx('text-xs', 'leading-relaxed', 'text-gray-500', 'pt-6', 'mt-6')}
                     style={{ borderTop: '1px solid #E5E7EB' }}
                   >
                     Bilgileriniz yalnızca değerlendirme amacıyla kullanılır ve gizlilik ilkelerimiz çerçevesinde korunur. Proje spesifik bilgi paylaşımı öncesinde karşılıklı NDA imzalanır. Talebiniz 2 iş günü içinde değerlendirilmeye alınır.
                   </p>
 
                   {submitError && (
-                    <p className="text-sm mt-4" style={{ color: AFA.warning }} role="alert">
+                    <p className={clsx('text-sm', 'mt-4')} style={{ color: AFA.warning }} role="alert">
                       {submitError}
                     </p>
                   )}
@@ -675,7 +680,7 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3 px-6 rounded-lg font-bold text-sm tracking-wide mt-6"
+                    className={clsx('w-full', 'py-3', 'px-6', 'rounded-lg', 'font-bold', 'text-sm', 'tracking-wide', 'mt-6')}
                     style={{
                       backgroundColor: isSubmitting ? '#E5E7EB' : AFA.gold,
                       color: isSubmitting ? '#9CA3AF' : AFA.deep,
@@ -706,8 +711,8 @@ export default function ContactPageClient({ locale }: { locale: string }) {
       </section>
 
       <section className="bg-white">
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
-          <h2 id="faq-title" className="text-3xl font-bold mb-2" style={{ color: AFA.primary }}>
+        <div className={clsx('max-w-6xl', 'mx-auto', 'px-4', 'md:px-6', 'lg:px-8', 'py-16', 'md:py-20')}>
+          <h2 id="faq-title" className={clsx('text-3xl', 'font-bold', 'mb-2')} style={{ color: AFA.primary }}>
             Sıkça Sorulan Sorular
           </h2>
           <div className="mb-8" style={{ borderBottom: `2px solid ${AFA.accent}`, paddingBottom: '1rem' }} aria-hidden="true" />
@@ -717,13 +722,13 @@ export default function ContactPageClient({ locale }: { locale: string }) {
               return (
                 <div
                   key={i}
-                  className="border border-gray-200 rounded-lg overflow-hidden"
+                  className={clsx('border', 'border-gray-200', 'rounded-lg', 'overflow-hidden')}
                   style={isOpen ? { borderLeft: `4px solid ${AFA.accent}` } : undefined}
                 >
                   <button
                     type="button"
                     onClick={() => toggleFaq(i)}
-                    className="w-full flex items-start justify-between gap-4 p-4 text-left"
+                    className={clsx('w-full', 'flex', 'items-start', 'justify-between', 'gap-4', 'p-4', 'text-left')}
                     style={{ backgroundColor: isOpen ? '#F0FDFA' : 'transparent', transition: 'background-color 150ms ease-out' }}
                     onMouseEnter={(e) => {
                       if (!isOpen) e.currentTarget.style.backgroundColor = '#F0FDFA';
@@ -733,16 +738,16 @@ export default function ContactPageClient({ locale }: { locale: string }) {
                     }}
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm md:text-base font-semibold leading-snug text-gray-800">{item.q}</span>
+                    <span className={clsx('text-sm', 'md:text-base', 'font-semibold', 'leading-snug', 'text-gray-800')}>{item.q}</span>
                     {isOpen ? (
-                      <ChevronUp className="w-5 h-5 flex-shrink-0" style={{ color: AFA.gold }} />
+                      <ChevronUp className={clsx('w-5', 'h-5', 'flex-shrink-0')} style={{ color: AFA.gold }} />
                     ) : (
-                      <ChevronDown className="w-5 h-5 flex-shrink-0" style={{ color: '#9CA3AF' }} />
+                      <ChevronDown className={clsx('w-5', 'h-5', 'flex-shrink-0')} style={{ color: '#9CA3AF' }} />
                     )}
                   </button>
                   {isOpen && (
-                    <div className="px-4 pb-4" style={{ borderTop: '1px solid rgba(40,175,176,0.2)', backgroundColor: 'rgba(240,253,250,0.5)' }}>
-                      <p className="text-sm md:text-base leading-relaxed text-gray-700 pt-4">{item.a}</p>
+                    <div className={clsx('px-4', 'pb-4')} style={{ borderTop: '1px solid rgba(40,175,176,0.2)', backgroundColor: 'rgba(240,253,250,0.5)' }}>
+                      <p className={clsx('text-sm', 'md:text-base', 'leading-relaxed', 'text-gray-700', 'pt-4')}>{item.a}</p>
                     </div>
                   )}
                 </div>
@@ -764,9 +769,9 @@ export default function ContactPageClient({ locale }: { locale: string }) {
           style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(15, 46, 44, 0.50)' }}
           aria-hidden="true"
         />
-        <div className="relative z-10 flex items-center justify-center px-4" style={{ minHeight: 'clamp(144px, 20vw, 256px)' }}>
+        <div className={clsx('relative', 'z-10', 'flex', 'items-center', 'justify-center', 'px-4')} style={{ minHeight: 'clamp(144px, 20vw, 256px)' }}>
           <p
-            className="text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide text-center max-w-3xl mx-auto"
+            className={clsx('text-xl', 'md:text-2xl', 'lg:text-3xl', 'font-semibold', 'tracking-wide', 'text-center', 'max-w-3xl', 'mx-auto')}
             style={{ color: '#FFFFFF', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
           >
             Teknik doğruluk, yatırım kararının temelidir.
@@ -775,16 +780,16 @@ export default function ContactPageClient({ locale }: { locale: string }) {
       </section>
 
       <section style={{ backgroundColor: AFA.light, borderTop: `4px solid ${AFA.accent}` }}>
-        <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
-          <h2 id="standards-title" className="text-3xl font-bold mb-6" style={{ color: AFA.primary }}>
+        <div className={clsx('max-w-6xl', 'mx-auto', 'px-4', 'md:px-6', 'lg:px-8', 'py-16', 'md:py-20')}>
+          <h2 id="standards-title" className={clsx('text-3xl', 'font-bold', 'mb-6')} style={{ color: AFA.primary }}>
             Yanıt ve Değerlendirme Standartları
           </h2>
-          <div className="p-5 mb-8" style={{ backgroundColor: AFA.deep, borderRadius: '8px' }}>
-            <p className="text-sm md:text-base leading-relaxed" style={{ color: '#FFFFFF' }}>
+          <div className={clsx('p-5', 'mb-8')} style={{ backgroundColor: AFA.deep, borderRadius: '8px' }}>
+            <p className={clsx('text-sm', 'md:text-base', 'leading-relaxed')} style={{ color: '#FFFFFF' }}>
               Geliştirici ve yatırımcı taleplerini proje özelinde, karar verilebilir teknik içeriklerle yanıtlıyoruz.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6')}>
             {[
               {
                 title: 'Talep Türüne Göre Yanıt Süresi',
@@ -813,20 +818,20 @@ export default function ContactPageClient({ locale }: { locale: string }) {
             ].map((card) => (
               <div
                 key={card.title}
-                className="bg-white rounded-lg p-5"
+                className={clsx('bg-white', 'rounded-lg', 'p-5')}
                 style={{ borderLeft: `4px solid ${AFA.accent}`, boxShadow: SHADOW }}
               >
-                <p className="text-sm font-bold mb-2" style={{ color: AFA.primary }}>{card.title}</p>
-                <p className="text-sm leading-relaxed text-gray-600">{card.text}</p>
+                <p className={clsx('text-sm', 'font-bold', 'mb-2')} style={{ color: AFA.primary }}>{card.title}</p>
+                <p className={clsx('text-sm', 'leading-relaxed', 'text-gray-600')}>{card.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section style={{ backgroundColor: AFA.deep }} className="py-8 px-4 md:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs text-center" style={{ color: 'rgba(255,255,255,0.6)' }}>
+      <section style={{ backgroundColor: AFA.deep }} className={clsx('py-8', 'px-4', 'md:px-6', 'lg:px-8')}>
+        <div className={clsx('max-w-6xl', 'mx-auto')}>
+          <p className={clsx('text-xs', 'text-center')} style={{ color: 'rgba(255,255,255,0.6)' }}>
             Proje-spesifik yasal ve teknik doğrulama tavsiye edilir. Bu sayfa üzerinden gönderilen bilgiler yatırım taahhüdü veya danışmanlık sözleşmesi oluşturmaz. AFA Energy Romania S.R.L. — Bağımsız Enerji Danışmanlığı.
           </p>
         </div>
