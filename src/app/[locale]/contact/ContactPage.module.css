@@ -21,26 +21,17 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background-image:
-    linear-gradient(
-      135deg,
-      rgba(24, 98, 95, 0.85) 0%,
-      rgba(11, 31, 30, 0.92) 100%
-    ),
-    url('/images/services-hero.jpeg');
-  background-size: cover, cover;
-  background-position: center 30%, center center;
-  background-repeat: no-repeat, no-repeat;
-  filter: grayscale(15%);
+  background-image: url('/images/contact_Page_Hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .heroOverlay {
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: #18625F;
-  opacity: 0.15;
-  mix-blend-mode: multiply;
+  background-color: rgba(15, 46, 44, 0.65);
   pointer-events: none;
 }
 
@@ -56,19 +47,14 @@
 }
 
 .heroInner {
-  border-left: 4px solid #FFCB00;
-  padding-left: 32px;
   max-width: 640px;
 }
 
-.heroMotto {
-  color: #FFCB00;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 0 0 16px 0;
+.heroLogo {
+  display: block;
+  height: 72px;
+  width: auto;
+  margin-bottom: 20px;
 }
 
 .heroTitle {
@@ -100,7 +86,6 @@
     font-size: 26px;
   }
   .heroInner {
-    padding-left: 20px;
     max-width: 100%;
   }
 }

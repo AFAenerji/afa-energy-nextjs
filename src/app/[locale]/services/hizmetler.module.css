@@ -29,8 +29,57 @@
   background-color: var(--afa-primary);
 }
 
+/* z-0 — background photograph */
+.heroImage {
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.50;
+}
+
+/* z-1 — flat brand-tint base overlay (afa-primary #18625F at 72%) */
+.overlayBase {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(24, 98, 95, 0.72);
+}
+
+/* z-2 — gradient vignette overlay */
+.overlayGradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(24, 98, 95, 0.15) 50%,
+    rgba(15, 46, 44, 0.40) 100%
+  );
+}
+
+/* z-3 — gold accent line, desktop-only decorative accent */
+.goldLine {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -32px;
+  width: 4px;
+  height: 100%;
+  background-color: var(--afa-yellow);
+  z-index: 3;
+}
+
+@media (min-width: 1024px) {
+  .goldLine {
+    display: block;
+  }
+}
+
+/* z-3 — foreground text content */
 .heroContent {
   composes: container;
+  position: relative;
+  z-index: 3;
 }
 
 .heroBadge {
@@ -56,7 +105,7 @@
 
 .heroDescription {
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   line-height: 1.7;
   max-width: 768px;
   margin-bottom: 32px;
@@ -92,7 +141,6 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 24px;
 }
 
@@ -108,15 +156,17 @@
 }
 
 .pillarLabel {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   margin-bottom: 4px;
 }
 
 .pillarDesc {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.90);
   line-height: 1.5;
 }
 
