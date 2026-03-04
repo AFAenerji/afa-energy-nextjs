@@ -12,7 +12,6 @@ export default function Footer({ locale }: FooterProps) {
   const lp = (canonical: string) => `/${locale}/${getLocalizedSlug(canonical, locale) ?? canonical}`;
 
   const navigationLinks = [
-    { key: 'home', href: `/${locale}` },
     { key: 'investorGate', href: lp('investor') },
     { key: 'developerArea', href: lp('developer') },
     { key: 'services', href: lp('services') },
@@ -45,7 +44,7 @@ export default function Footer({ locale }: FooterProps) {
       `}</style>
 
       <footer
-        className="dark-section footer-lock bg-[#0B2420] !text-white"
+        className="dark-section footer-lock bg-afa-deep !text-white"
         role="contentinfo"
       >
         <div className="mx-auto max-w-6xl px-8 py-16">
@@ -53,26 +52,21 @@ export default function Footer({ locale }: FooterProps) {
 
             {/* Brand col */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <div className="relative w-9 h-9 rounded-[4px] overflow-hidden flex items-center justify-center">
-                  <Image
-                    src="/images/afa_beyaz.png"
-                    alt="AFA Energy Romania"
-                    fill
-                    className="object-contain"
-                    sizes="36px"
-                  />
-                </div>
+              <Link href={`/${locale}`} aria-label="Ana Sayfaya Don" className="flex items-center gap-3 mb-6">
+                <Image
+                  src="/images/afa_beyaz.png"
+                  alt="AFA Energy Romania"
+                  width={128}
+                  height={36}
+                  className="w-32 h-auto object-contain"
+                />
                 <span className="font-bold text-sm !text-white">{t('companyName')}</span>
-              </div>
-              <p className="text-lg font-bold !text-white leading-snug">
+              </Link>
+              <p className="text-lg font-bold !text-white leading-snug max-w-[340px]">
                 {t('motto')}
               </p>
-              <p className="text-sm !text-white/70 mt-1">
+              <p className="text-sm !text-white/70 mt-1 max-w-[340px]">
                 {t('valueSlogan')}
-              </p>
-              <p className="text-sm !text-white/50 leading-relaxed mt-4">
-                {t('financeSlogan')}
               </p>
             </div>
 
@@ -106,7 +100,7 @@ export default function Footer({ locale }: FooterProps) {
               </address>
               <Link
                 href={lp('contact')}
-                className="text-sm text-[#28AFB0] hover:!text-white mt-4 inline-block"
+                className="footer-link text-sm !text-white/70 hover:!text-white mt-4 inline-block"
               >
                 {t('contactForm')} →
               </Link>
@@ -119,7 +113,7 @@ export default function Footer({ locale }: FooterProps) {
               </h4>
               <Link
                 href={`/${locale}/developer`}
-                className="w-full bg-[#FFCB00] !text-[#0B1F1E] font-semibold text-sm px-5 py-3 rounded-[4px] text-center block"
+                className="w-full bg-afa-gold text-afa-deep font-semibold text-sm px-5 py-3 rounded-[4px] text-center block"
               >
                 {t('contactForm')}
               </Link>
