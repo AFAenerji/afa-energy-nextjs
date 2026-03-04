@@ -82,7 +82,6 @@ export default function Header({ locale }: HeaderProps) {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white border-b border-afa-border shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
-        <div className="absolute bottom-0 left-0 w-full h-[3px] bg-afa-accent"></div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="afa-header__inner">
 
@@ -91,7 +90,7 @@ export default function Header({ locale }: HeaderProps) {
               href={`/${locale}`}
               className="afa-header__brand"
             >
-              <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center hover:scale-105 transition-transform">
+              <div className="w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center">
                 <Image
                   src="/images/afa_1.png"
                   alt="AFA Energy Romania"

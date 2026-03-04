@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { getLocalizedSlug } from '@/lib/slugs';
 import type { Locale } from '@/lib/i18n';
+import clsx from 'clsx';
 
 type FormData = {
   name: string;
@@ -166,31 +167,31 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
   /* ── Thank You Screen ── */
   if (submitted) {
     return (
-      <div className="text-center py-12">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-afa-deep">
-          <svg className="h-8 w-8 text-afa-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+      <div className={clsx('text-center', 'py-12')}>
+        <div className={clsx('mx-auto', 'mb-6', 'flex', 'h-16', 'w-16', 'items-center', 'justify-center', 'rounded-full', 'bg-afa-deep')}>
+          <svg className={clsx('h-8', 'w-8', 'text-afa-gold')} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-4">
+        <h2 className={clsx('text-2xl', 'md:text-3xl', 'font-extrabold', 'tracking-tight', 'text-white', 'mb-4')}>
           {content.thankYou.title}
         </h2>
-        <p className="text-base text-white/70 max-w-xl mx-auto mb-8">
+        <p className={clsx('text-base', 'text-white/70', 'max-w-xl', 'mx-auto', 'mb-8')}>
           {content.thankYou.message}
         </p>
-        <ol className="text-left max-w-md mx-auto space-y-3 mb-10">
+        <ol className={clsx('text-left', 'max-w-md', 'mx-auto', 'space-y-3', 'mb-10')}>
           {content.thankYou.steps.map((s, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-afa-gold text-xs font-bold text-afa-dark">
+            <li key={i} className={clsx('flex', 'items-start', 'gap-3')}>
+              <span className={clsx('shrink-0', 'flex', 'h-6', 'w-6', 'items-center', 'justify-center', 'rounded-full', 'bg-afa-gold', 'text-xs', 'font-bold', 'text-afa-dark')}>
                 {i + 1}
               </span>
-              <span className="text-sm text-white/80 leading-relaxed">{s}</span>
+              <span className={clsx('text-sm', 'text-white/80', 'leading-relaxed')}>{s}</span>
             </li>
           ))}
         </ol>
         <a
           href={`/${locale}/${getLocalizedSlug('services', locale as Locale) ?? 'services'}`}
-          className="inline-flex items-center px-6 py-3 text-sm font-bold rounded border border-white/20 text-white hover:border-afa-gold hover:text-afa-gold transition-colors"
+          className={clsx('inline-flex', 'items-center', 'px-6', 'py-3', 'text-sm', 'font-bold', 'rounded', 'border', 'border-white/20', 'text-white', 'hover:border-afa-gold', 'hover:text-afa-gold', 'transition-colors')}
         >
           {content.thankYou.backLabel}
         </a>
@@ -202,30 +203,30 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
   const progressPercent = ((step + 1) / totalSteps) * 100;
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <div className={clsx('w-full', 'max-w-2xl', 'mx-auto')}>
       {/* Progress */}
       <div className="mb-8">
-        <div className="flex justify-between text-xs font-bold text-white/50 mb-2">
+        <div className={clsx('flex', 'justify-between', 'text-xs', 'font-bold', 'text-white/50', 'mb-2')}>
           {content.stepLabels.map((label, i) => (
             <span key={i} className={i <= step ? 'text-afa-gold' : ''}>
               {label}
             </span>
           ))}
         </div>
-        <div className="h-1.5 w-full rounded-full bg-white/10">
+        <div className={clsx('h-1.5', 'w-full', 'rounded-full', 'bg-white/10')}>
           <div
-            className="h-1.5 rounded-full bg-afa-gold transition-[width] duration-300 ease-linear"
+            className={clsx('h-1.5', 'rounded-full', 'bg-afa-gold', 'transition-[width]', 'duration-300', 'ease-linear')}
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </div>
 
       {/* Step Content */}
-      <div className="rounded-lg border border-white/10 bg-white/3 p-6 md:p-8">
+      <div className={clsx('rounded-lg', 'border', 'border-white/10', 'bg-white/3', 'p-6', 'md:p-8')}>
         {/* Step 1: Project Identity */}
         {step === 0 && (
           <fieldset className="space-y-5">
-            <legend className="text-lg font-bold text-white mb-2">{content.step1.title}</legend>
+            <legend className={clsx('text-lg', 'font-bold', 'text-white', 'mb-2')}>{content.step1.title}</legend>
 
             {/* Honeypot */}
             <div className="sr-only" aria-hidden="true">
@@ -234,7 +235,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
             </div>
 
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-white/80 mb-1.5">
+              <label htmlFor="name" className={clsx('block', 'text-sm', 'font-semibold', 'text-white/80', 'mb-1.5')}>
                 {content.step1.nameLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
@@ -245,11 +246,11 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 placeholder={content.step1.namePlaceholder}
                 className="afa-input"
               />
-              {errors.name && <p className="mt-1 text-xs text-afa-warning">{errors.name}</p>}
+              {errors.name && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.name}</p>}
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-semibold text-white/80 mb-1.5">
+              <label htmlFor="company" className={clsx('block', 'text-sm', 'font-semibold', 'text-white/80', 'mb-1.5')}>
                 {content.step1.companyLabel}
               </label>
               <input
@@ -263,7 +264,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-white/80 mb-1.5">
+              <label htmlFor="email" className={clsx('block', 'text-sm', 'font-semibold', 'text-white/80', 'mb-1.5')}>
                 {content.step1.emailLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
@@ -274,8 +275,8 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 placeholder={content.step1.emailPlaceholder}
                 className="afa-input"
               />
-              <p className="mt-1 text-xs text-white/40">{content.step1.emailHint}</p>
-              {errors.email && <p className="mt-1 text-xs text-afa-warning">{errors.email}</p>}
+              <p className={clsx('mt-1', 'text-xs', 'text-white/40')}>{content.step1.emailHint}</p>
+              {errors.email && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.email}</p>}
             </div>
           </fieldset>
         )}
@@ -283,13 +284,13 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
         {/* Step 2: Technical Filter */}
         {step === 1 && (
           <fieldset className="space-y-5">
-            <legend className="text-lg font-bold text-white mb-2">{content.step2.title}</legend>
+            <legend className={clsx('text-lg', 'font-bold', 'text-white', 'mb-2')}>{content.step2.title}</legend>
 
             <div>
-              <p className="text-sm font-semibold text-white/80 mb-2">
+              <p className={clsx('text-sm', 'font-semibold', 'text-white/80', 'mb-2')}>
                 {content.step2.atrLabel} <span className="text-afa-warning">*</span>
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className={clsx('flex', 'flex-wrap', 'gap-3')}>
                 {content.step2.atrOptions.map((opt) => (
                   <label
                     key={opt.value}
@@ -311,11 +312,11 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   </label>
                 ))}
               </div>
-              {errors.atrStatus && <p className="mt-1 text-xs text-afa-warning">{errors.atrStatus}</p>}
+              {errors.atrStatus && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.atrStatus}</p>}
             </div>
 
             <div>
-              <label htmlFor="capacity" className="block text-sm font-semibold text-white/80 mb-1.5">
+              <label htmlFor="capacity" className={clsx('block', 'text-sm', 'font-semibold', 'text-white/80', 'mb-1.5')}>
                 {content.step2.capacityLabel} <span className="text-afa-warning">*</span>
               </label>
               <input
@@ -328,11 +329,11 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                 placeholder={content.step2.capacityPlaceholder}
                 className="afa-input"
               />
-              {errors.capacity && <p className="mt-1 text-xs text-afa-warning">{errors.capacity}</p>}
+              {errors.capacity && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.capacity}</p>}
             </div>
 
             <div>
-              <label htmlFor="projectPhase" className="block text-sm font-semibold text-white/80 mb-1.5">
+              <label htmlFor="projectPhase" className={clsx('block', 'text-sm', 'font-semibold', 'text-white/80', 'mb-1.5')}>
                 {content.step2.phaseLabel} <span className="text-afa-warning">*</span>
               </label>
               <select
@@ -346,7 +347,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   <option key={opt.value} value={opt.value}>{opt.label}</option>
                 ))}
               </select>
-              {errors.projectPhase && <p className="mt-1 text-xs text-afa-warning">{errors.projectPhase}</p>}
+              {errors.projectPhase && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.projectPhase}</p>}
             </div>
           </fieldset>
         )}
@@ -354,13 +355,13 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
         {/* Step 3: Data Availability */}
         {step === 2 && (
           <fieldset className="space-y-5">
-            <legend className="text-lg font-bold text-white mb-2">{content.step3.title}</legend>
+            <legend className={clsx('text-lg', 'font-bold', 'text-white', 'mb-2')}>{content.step3.title}</legend>
 
             <div>
-              <p className="text-sm font-semibold text-white/80 mb-2">
+              <p className={clsx('text-sm', 'font-semibold', 'text-white/80', 'mb-2')}>
                 {content.step3.dataLabel} <span className="text-afa-warning">*</span>
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className={clsx('flex', 'flex-wrap', 'gap-3')}>
                 {content.step3.dataOptions.map((opt) => (
                   <label
                     key={opt.value}
@@ -382,25 +383,25 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
                   </label>
                 ))}
               </div>
-              {errors.dataReady && <p className="mt-1 text-xs text-afa-warning">{errors.dataReady}</p>}
+              {errors.dataReady && <p className={clsx('mt-1', 'text-xs', 'text-afa-warning')}>{errors.dataReady}</p>}
             </div>
           </fieldset>
         )}
 
         {/* Submission Error */}
         {submitError && (
-          <div className="mt-4 rounded-lg border border-red-400/30 bg-red-500/10 px-4 py-3 text-sm text-red-300">
+          <div className={clsx('mt-4', 'rounded-lg', 'border', 'border-red-400/30', 'bg-red-500/10', 'px-4', 'py-3', 'text-sm', 'text-red-300')}>
             {submitError}
           </div>
         )}
 
         {/* Navigation Buttons */}
-        <div className="mt-8 flex justify-between items-center">
+        <div className={clsx('mt-8', 'flex', 'justify-between', 'items-center')}>
           {step > 0 ? (
             <button
               type="button"
               onClick={handlePrev}
-              className="text-sm font-semibold text-white/60 hover:text-white transition-colors"
+              className={clsx('text-sm', 'font-semibold', 'text-white/60', 'hover:text-white', 'transition-colors')}
             >
               ← {content.prev}
             </button>
@@ -412,7 +413,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
             <button
               type="button"
               onClick={handleNext}
-              className="px-6 py-2.5 text-sm font-bold rounded bg-afa-gold text-afa-dark hover:bg-afa-deep hover:text-white transition-colors duration-120 ease-out"
+              className={clsx('px-6', 'py-2.5', 'text-sm', 'font-bold', 'rounded', 'bg-afa-gold', 'text-afa-dark', 'hover:bg-afa-deep', 'hover:text-white', 'transition-colors', 'duration-120', 'ease-out')}
             >
               {content.next} →
             </button>
@@ -421,7 +422,7 @@ export default function TechnicalAssessmentForm({ locale, content }: Props) {
               type="button"
               onClick={handleSubmit}
               disabled={submitting}
-              className="px-6 py-2.5 text-sm font-bold rounded bg-afa-gold text-afa-dark hover:bg-afa-deep hover:text-white transition-colors duration-120 ease-out disabled:opacity-50 disabled:cursor-not-allowed"
+              className={clsx('px-6', 'py-2.5', 'text-sm', 'font-bold', 'rounded', 'bg-afa-gold', 'text-afa-dark', 'hover:bg-afa-deep', 'hover:text-white', 'transition-colors', 'duration-120', 'ease-out', 'disabled:opacity-50', 'disabled:cursor-not-allowed')}
             >
               {submitting ? content.submitting : content.submit}
             </button>

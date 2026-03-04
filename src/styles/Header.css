@@ -127,9 +127,15 @@
 }
 
 .afa-lang-switcher__btn--active {
-  background-color: var(--afa-deep, #18625F);
-  color: #FFFFFF;
+  background-color: var(--afa-yellow);
+  color: var(--afa-deep);
   font-weight: 600;
+}
+
+.afa-lang-switcher__btn:focus-visible {
+  outline: 2px solid var(--afa-verdigris);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Contact CTA — hidden by default (mobile), shown at breakpoint */
@@ -139,10 +145,10 @@
   justify-content: center;
   height: 40px;
   padding: 0 20px;
-  border: 2px solid var(--afa-deep, #18625F);
+  border: 2px solid var(--afa-yellow);
   border-radius: 4px;
-  background-color: var(--afa-deep, #18625F);
-  color: #FFFFFF;
+  background-color: var(--afa-yellow);
+  color: var(--afa-deep);
   font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1;
@@ -151,8 +157,13 @@
 }
 
 .afa-header__cta:hover {
-  background-color: #FFFFFF;
-  color: var(--afa-deep, #18625F);
+  filter: brightness(1.05);
+  transition: filter 120ms linear;
+}
+
+.afa-header__cta:active {
+  filter: brightness(0.95);
+  transition: filter 60ms linear;
 }
 
 /* Mobile toggle — shown by default, hidden at breakpoint */
