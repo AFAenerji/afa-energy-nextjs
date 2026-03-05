@@ -224,6 +224,14 @@ export default function Header({ locale }: HeaderProps) {
 
             {/* ── Right: Actions ── */}
             <div className="afa-header__actions">
+              {/* Contact CTA */}
+              <button
+                onClick={() => navigate('contact')}
+                className="afa-header__cta"
+              >
+                {t('contact')}
+              </button>
+
               {/* Language Switcher — Segmented Control */}
               <div className="afa-lang-switcher">
                 {locales.map((lang) => (
@@ -242,14 +250,6 @@ export default function Header({ locale }: HeaderProps) {
 
               {/* Theme Toggle */}
               <ThemeToggle />
-
-              {/* Contact CTA */}
-              <button
-                onClick={() => navigate('contact')}
-                className="afa-header__cta"
-              >
-                {t('contact')}
-              </button>
 
               {/* Mobile Toggle */}
               <button
