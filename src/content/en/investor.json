@@ -1,0 +1,125 @@
+{
+  "heroHeading": "Your Trusted Partner\nin Renewable Energy",
+  "heroSubheading": "Invest strategically in clean energy projects with AFA Energy. We stand by your side with transparent processes, an experienced team, and a sustainable return-focused approach.",
+  "approachTitle": "Our Investor-Focused Approach",
+  "approachIntro": "As AFA Energy, we provide transparent, reliable, and value-oriented services to our investors in the renewable energy sector. We conduct detailed technical and financial analysis for each project, ensuring risk management and efficiency optimization.",
+  "approachClosing": "Strengthen your portfolio with sustainable energy projects and create long-term value.",
+  "trustSignals": [
+    {
+      "label": "Project Experience",
+      "value": "50+ MW"
+    },
+    {
+      "label": "Average ROI",
+      "value": "8-12%"
+    },
+    {
+      "label": "Industry Experience",
+      "value": "15+ Years"
+    }
+  ],
+  "assetIntakeTitle": "Asset Acquisition and Project Development",
+  "assetIntakeIntro": "With two different investment models, we offer the solution that best suits your needs:",
+  "operationalCard": {
+    "heading": "Operational Assets",
+    "description": "Ready investment opportunities for solar power plants that are commissioned and generating electricity. Start immediate cash flow.",
+    "timeline": "Ready to Operate",
+    "primaryCTA": "View Portfolio",
+    "secondaryLink": "Learn More"
+  },
+  "rtbCard": {
+    "heading": "Ready-to-Build (RTB) Projects",
+    "description": "Projects with all permits obtained, ready for construction. Create value from the development phase and shape the project according to your own strategy.",
+    "timeline": "Operational in 6-12 Months",
+    "primaryCTA": "See RTB Projects",
+    "badge": "High Return Potential",
+    "secondaryLink": "Investment Terms",
+    "comingSoon": "Coming Soon",
+    "comingSoonNote": "Our RTB project portfolio will be published soon"
+  },
+  "portfolioTitle": "Portfolio Management and Monitoring",
+  "portfolioSubheading": "Manage your investments transparently and effectively",
+  "portfolioFeatures": [
+    {
+      "title": "Real-Time Monitoring",
+      "description": "Track your plant performance in real-time. Visualize production, efficiency, and revenue data."
+    },
+    {
+      "title": "Periodic Reporting",
+      "description": "Review your investment status in detail with monthly and annual performance reports."
+    },
+    {
+      "title": "Technical Support",
+      "description": "Receive uninterrupted service in your plant operations with our 24/7 technical support team."
+    },
+    {
+      "title": "Optimization Recommendations",
+      "description": "Increase efficiency with data analytics and AI-powered optimization recommendations."
+    }
+  ],
+  "portfolioCTA": "Portfolio Management Dashboard",
+  "trustTitle": "Why AFA Energy?",
+  "trustPoints": [
+    {
+      "title": "Technical Expertise",
+      "description": "With 15+ years of industry experience and an engineering team, we apply technical excellence standards to every project."
+    },
+    {
+      "title": "Transparency and Trust",
+      "description": "We work with full transparency principles in all our processes. Each investor has instant access to all data about their project."
+    },
+    {
+      "title": "Risk Management",
+      "description": "We protect your investment with detailed feasibility studies, insurance packages, and risk mitigation strategies."
+    },
+    {
+      "title": "Sustainable Value",
+      "description": "We create long-term value by generating not only financial returns but also environmental and social impact."
+    }
+  ],
+  "faqTitle": "Frequently Asked Questions",
+  "faqs": [
+    {
+      "question": "What is the minimum investment amount?",
+      "answer": "The minimum investment amount varies depending on the project type. Typically, EUR 500,000 for operational assets and EUR 1,000,000 for RTB projects. For detailed information, please contact our investment team."
+    },
+    {
+      "question": "What is the investment return period?",
+      "answer": "Solar power plants typically have a lifespan of 25-30 years. The payback period is typically 7-10 years. For operational assets, cash flow starts immediately, while for RTB projects it begins after commissioning."
+    },
+    {
+      "question": "In which regions are the projects located?",
+      "answer": "Our portfolio includes projects in Turkey, Romania, and Balkan countries. Different regulatory frameworks and incentive mechanisms exist for each region. Please contact us for region-specific detailed information."
+    },
+    {
+      "question": "What services do you provide after investment?",
+      "answer": "We offer operation and maintenance (O&M), technical supervision, performance monitoring, reporting, asset management, and optimization services. Our investors can choose a full service package or select specific services."
+    },
+    {
+      "question": "How is legal and regulatory compliance ensured?",
+      "answer": "All our projects are fully compliant with local legislation. We manage licensing, permits, land rights, and grid connection processes with our legal team and local consultants. All legal documents are transparently provided to our investors."
+    },
+    {
+      "question": "What are the exit strategy and liquidity options?",
+      "answer": "We offer liquidity options such as secondary market exit opportunities, project sales, or refinancing for our investors. Projects are typically suitable for revaluation and sale after 5-7 years."
+    }
+  ],
+  "nextStepsTitle": "Next Steps",
+  "ctaCards": [
+    {
+      "title": "Explore the Portfolio",
+      "description": "Review our current and future projects, access detailed financial models.",
+      "cta": "View Projects"
+    },
+    {
+      "title": "Meet with Investment Team",
+      "description": "Have a one-on-one meeting with our expert team and evaluate investment opportunities tailored to you.",
+      "cta": "Request Meeting"
+    }
+  ],
+  "motto": "Sustainable energy, sustainable value.",
+  "closingText": "Invest in the future of clean energy with AFA Energy. Feel free to contact us with your questions.",
+  "contactEmail": "investor@afa.energy",
+  "contactPhone": "+90 (XXX) XXX XX XX",
+  "footerLine": "AFA Energy - Renewable Energy Investment Platform"
+}

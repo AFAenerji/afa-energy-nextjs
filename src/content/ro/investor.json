@@ -1,0 +1,125 @@
+{
+  "heroHeading": "Partenerul Dvs. de Încredere\nîn Energie Regenerabilă",
+  "heroSubheading": "Investiți strategic în proiecte de energie curată cu AFA Energy. Suntem alături de dvs. cu procese transparente, o echipă experimentată și o abordare axată pe rentabilitate sustenabilă.",
+  "approachTitle": "Abordarea Noastră Axată pe Investitori",
+  "approachIntro": "Ca AFA Energy, oferim servicii transparente, fiabile și orientate către valoare investitorilor noștri din sectorul energiei regenerabile. Efectuăm analize tehnice și financiare detaliate pentru fiecare proiect, asigurând gestionarea riscurilor și optimizarea eficienței.",
+  "approachClosing": "Întăriți-vă portofoliul cu proiecte de energie durabilă și creați valoare pe termen lung.",
+  "trustSignals": [
+    {
+      "label": "Experiență Proiecte",
+      "value": "50+ MW"
+    },
+    {
+      "label": "ROI Mediu",
+      "value": "8-12%"
+    },
+    {
+      "label": "Experiență Industrie",
+      "value": "15+ Ani"
+    }
+  ],
+  "assetIntakeTitle": "Achiziție Active și Dezvoltare Proiecte",
+  "assetIntakeIntro": "Cu două modele diferite de investiție, oferim soluția care se potrivește cel mai bine nevoilor dvs.:",
+  "operationalCard": {
+    "heading": "Active Operaționale",
+    "description": "Oportunități de investiție gata pentru centrale solare puse în funcțiune și care generează electricitate. Începeți fluxul de numerar imediat.",
+    "timeline": "Gata de Operare",
+    "primaryCTA": "Vizualizați Portofoliul",
+    "secondaryLink": "Aflați Mai Multe"
+  },
+  "rtbCard": {
+    "heading": "Proiecte Ready-to-Build (RTB)",
+    "description": "Proiecte cu toate autorizațiile obținute, gata pentru construcție. Creați valoare din faza de dezvoltare și modelați proiectul conform strategiei dvs.",
+    "timeline": "Operațional în 6-12 Luni",
+    "primaryCTA": "Vedeți Proiecte RTB",
+    "badge": "Potențial Ridicat de Rentabilitate",
+    "secondaryLink": "Termeni Investiție",
+    "comingSoon": "În Curând",
+    "comingSoonNote": "Portofoliul nostru de proiecte RTB va fi publicat în curând"
+  },
+  "portfolioTitle": "Gestionare și Monitorizare Portofoliu",
+  "portfolioSubheading": "Gestionați investițiile dvs. în mod transparent și eficient",
+  "portfolioFeatures": [
+    {
+      "title": "Monitorizare în Timp Real",
+      "description": "Urmăriți performanța centralei dvs. în timp real. Vizualizați datele de producție, eficiență și venituri."
+    },
+    {
+      "title": "Raportare Periodică",
+      "description": "Examinați în detaliu starea investiției dvs. cu rapoarte lunare și anuale de performanță."
+    },
+    {
+      "title": "Asistență Tehnică",
+      "description": "Primiți servicii neîntrerupte în operațiunile centralei dvs. cu echipa noastră de asistență tehnică 24/7."
+    },
+    {
+      "title": "Recomandări de Optimizare",
+      "description": "Creșteți eficiența cu analiza datelor și recomandări de optimizare bazate pe AI."
+    }
+  ],
+  "portfolioCTA": "Tablou de Bord Gestionare Portofoliu",
+  "trustTitle": "De Ce AFA Energy?",
+  "trustPoints": [
+    {
+      "title": "Expertiză Tehnică",
+      "description": "Cu peste 15 ani de experiență în industrie și o echipă de ingineri, aplicăm standarde de excelență tehnică fiecărui proiect."
+    },
+    {
+      "title": "Transparență și Încredere",
+      "description": "Lucrăm cu principii de transparență completă în toate procesele noastre. Fiecare investitor are acces instantaneu la toate datele despre proiectul său."
+    },
+    {
+      "title": "Gestionarea Riscurilor",
+      "description": "Protejăm investiția dvs. cu studii detaliate de fezabilitate, pachete de asigurări și strategii de atenuare a riscurilor."
+    },
+    {
+      "title": "Valoare Durabilă",
+      "description": "Creăm valoare pe termen lung generând nu doar randamente financiare, ci și impact de mediu și social."
+    }
+  ],
+  "faqTitle": "Întrebări Frecvente",
+  "faqs": [
+    {
+      "question": "Care este suma minimă de investiție?",
+      "answer": "Suma minimă de investiție variază în funcție de tipul de proiect. De obicei, 500.000 EUR pentru active operaționale și 1.000.000 EUR pentru proiecte RTB. Pentru informații detaliate, vă rugăm să contactați echipa noastră de investiții."
+    },
+    {
+      "question": "Care este perioada de recuperare a investiției?",
+      "answer": "Centralele solare au de obicei o durată de viață de 25-30 de ani. Perioada de recuperare este de obicei de 7-10 ani. Pentru activele operaționale, fluxul de numerar începe imediat, în timp ce pentru proiectele RTB începe după punerea în funcțiune."
+    },
+    {
+      "question": "În ce regiuni se află proiectele?",
+      "answer": "Portofoliul nostru include proiecte în Turcia, România și țările balcanice. Există cadre de reglementare și mecanisme de stimulare diferite pentru fiecare regiune. Vă rugăm să ne contactați pentru informații detaliate specifice regiunii."
+    },
+    {
+      "question": "Ce servicii oferiți după investiție?",
+      "answer": "Oferim servicii de operare și întreținere (O&M), supraveghere tehnică, monitorizare a performanței, raportare, gestionare active și optimizare. Investitorii noștri pot alege un pachet complet de servicii sau pot selecta servicii specifice."
+    },
+    {
+      "question": "Cum este asigurată conformitatea legală și de reglementare?",
+      "answer": "Toate proiectele noastre sunt pe deplin conforme cu legislația locală. Gestionăm procesele de licențiere, autorizații, drepturi de teren și conectare la rețea cu echipa noastră juridică și consultanți locali. Toate documentele legale sunt furnizate transparent investitorilor noștri."
+    },
+    {
+      "question": "Care sunt strategia de ieșire și opțiunile de lichiditate?",
+      "answer": "Oferim opțiuni de lichiditate precum oportunități de ieșire pe piața secundară, vânzarea proiectelor sau refinanțarea pentru investitorii noștri. Proiectele sunt de obicei potrivite pentru reevaluare și vânzare după 5-7 ani."
+    }
+  ],
+  "nextStepsTitle": "Pașii Următori",
+  "ctaCards": [
+    {
+      "title": "Explorați Portofoliul",
+      "description": "Examinați proiectele noastre actuale și viitoare, accesați modele financiare detaliate.",
+      "cta": "Vizualizați Proiectele"
+    },
+    {
+      "title": "Întâlniți Echipa de Investiții",
+      "description": "Aveți o întâlnire individuală cu echipa noastră de experți și evaluați oportunități de investiții personalizate.",
+      "cta": "Solicitați Întâlnire"
+    }
+  ],
+  "motto": "Energie durabilă, valoare durabilă.",
+  "closingText": "Investiți în viitorul energiei curate cu AFA Energy. Nu ezitați să ne contactați cu întrebările dvs.",
+  "contactEmail": "investor@afa.energy",
+  "contactPhone": "+90 (XXX) XXX XX XX",
+  "footerLine": "AFA Energy - Platformă de Investiții în Energie Regenerabilă"
+}

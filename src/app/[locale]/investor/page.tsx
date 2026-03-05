@@ -1,5 +1,6 @@
 import type { Locale } from '@/lib/i18n';
-import LegalScopeDisclaimer from '@/components/legal/LegalScopeDisclaimer';
+import { getInvestorDictionary } from '@/lib/getInvestorDictionary';
+import InvestorPageClient from './InvestorPageClient';
 
 interface InvestorPageProps {
   params: Promise<{ locale: Locale }>;
@@ -7,16 +8,14 @@ interface InvestorPageProps {
 
 export default async function InvestorPage({ params }: InvestorPageProps) {
   const { locale } = await params;
+  const effectiveLocale = locale || 'tr';
+  
+  const initialMessages = await getInvestorDictionary(effectiveLocale);
 
   return (
-    <div className="max-w-3xl mx-auto px-6 py-24 text-center">
-      <h1 className="text-3xl font-bold text-slate-900 font-heading mb-4">
-        Investor Portal
-      </h1>
-      <p className="text-slate-600 mb-12">
-        This page is under construction. Coming soon.
-      </p>
-      <LegalScopeDisclaimer className="max-w-xl mx-auto rounded-sm" />
-    </div>
+    <InvestorPageClient 
+      initialLocale={effectiveLocale} 
+      initialMessages={initialMessages} 
+    />
   );
 }
