@@ -1,3 +1,11 @@
+/* AFA KURAL — Koyu Zemin Kontrast Standardı:
+ * afa-deep (#0F2E2C) zemin üzerinde minimum text-white/75
+ * text-white/50 yalnızca legal bar (bottom bar) için
+ * WCAG AA: normal metin 4.5:1, büyük metin 3:1 minimum
+ *
+ * AFA KURAL — Footer İletişim Bilgisi Yasağı:
+ * Footer'da telefon, e-posta veya doğrudan iletişim bilgisi
+ * gösterilemez. Yalnızca /iletisim sayfasına yönlendirme yapılır. */
 import Image from 'next/image';
 import Link from 'next/link';
 import { Locale, getTranslation } from '@/lib/i18n';
@@ -25,7 +33,7 @@ export default function Footer({ locale }: FooterProps) {
 
   return (
       <footer className="dark-section bg-afa-deep text-white" data-theme="dark">
-        <div className="mx-auto max-w-6xl px-8 py-10">
+        <div className="mx-auto max-w-6xl px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-start gap-8 lg:gap-10">
 
             {/* Col 1: Brand + Address */}
@@ -133,7 +141,7 @@ export default function Footer({ locale }: FooterProps) {
           <div className="mt-6 pt-6 border-t border-white/10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-xs text-white/50">
-                {t('footerIdentity')}
+                {t('footerIdentity')} · {t('footerDisclaimer')}
               </p>
               <div className="flex gap-6">
                 <Link
@@ -150,9 +158,6 @@ export default function Footer({ locale }: FooterProps) {
                 </Link>
               </div>
             </div>
-            <p className="text-xs text-white/50 mt-1">
-              {t('footerDisclaimer')}
-            </p>
           </div>
         </div>
       </footer>

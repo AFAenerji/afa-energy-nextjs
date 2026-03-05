@@ -1,3 +1,6 @@
+/* AFA KURAL: Bu component'ta telefon, e-posta veya
+ * doğrudan iletişim bilgisi gösterilemez.
+ * Yönlendirme yalnızca /iletisim sayfası üzerinden yapılır. */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -387,17 +390,6 @@ export default function InvestorPageClient({
           <p className="text-base mb-8">
             {messages.closingText}
           </p>
-          <div className="flex flex-col md:flex-row justify-center gap-6 mb-8">
-            <a
-              href={`mailto:${messages.contactEmail}`}
-              className="hover:underline"
-              style={{ color: COLORS.primary }}
-            >
-              {messages.contactEmail}
-            </a>
-            <span className="hidden md:inline" style={{ color: COLORS.gray400 }}>|</span>
-            <span>{messages.contactPhone}</span>
-          </div>
           <div className="text-sm" style={{ color: COLORS.gray400 }}>
             {messages.footerLine}
           </div>

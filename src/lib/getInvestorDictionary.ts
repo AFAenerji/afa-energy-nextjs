@@ -38,8 +38,6 @@ export interface InvestorDictionary {
   ctaCards: Array<{ title: string; description: string; cta: string }>;
   motto: string;
   closingText: string;
-  contactEmail: string;
-  contactPhone: string;
   footerLine: string;
 }
 
