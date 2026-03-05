@@ -40,10 +40,12 @@ export interface Translations {
   formsOnlyPolicy: string;
   privacyPolicy: string;
   terms: string;
+  footerNavHeading: string;
   footerCtaHeading: string;
   footerCtaInvestor: string;
   footerCtaDeveloper: string;
   footerCtaNote: string;
+  footerIdentity: string;
   
   // Company info
   companyName: string;
@@ -87,10 +89,12 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'Contact Form',
     investorIntake: 'Investor Profiling',
     formsOnlyPolicy: 'Requests are accepted only through forms.',
+    footerNavHeading: 'Quick Access',
     footerCtaHeading: 'APPLICATION',
     footerCtaInvestor: 'Investor Form',
     footerCtaDeveloper: 'Developer Form',
-    footerCtaNote: 'All requests are reviewed exclusively through our forms.',
+    footerCtaNote: 'All applications are processed through forms.',
+    footerIdentity: 'Independent Technical Advisor · AFA Energy Romania S.R.L.',
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -130,10 +134,12 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'Formular de Contact',
     investorIntake: 'Profilare Investitor',
     formsOnlyPolicy: 'Cererile sunt acceptate doar prin formulare.',
+    footerNavHeading: 'Acces Rapid',
     footerCtaHeading: 'APLICAȚIE',
     footerCtaInvestor: 'Formular Investitor',
     footerCtaDeveloper: 'Formular Dezvoltator',
-    footerCtaNote: 'Solicitările sunt evaluate exclusiv prin intermediul formularelor.',
+    footerCtaNote: 'Toate aplicațiile sunt procesate prin formulare.',
+    footerIdentity: 'Consultant Tehnic Independent · AFA Energy Romania S.R.L.',
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -178,10 +184,12 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'İletişim Formu',
     investorIntake: 'Yatırımcı Profilleme',
     formsOnlyPolicy: 'Talepler yalnızca formlar üzerinden alınır.',
+    footerNavHeading: 'Hızlı Erişim',
     footerCtaHeading: 'BAŞVURU',
     footerCtaInvestor: 'Yatırımcı Formu',
     footerCtaDeveloper: 'Geliştirici Formu',
-    footerCtaNote: 'Talepler yalnızca formlar üzerinden değerlendirmeye alınır.',
+    footerCtaNote: 'Tüm başvurular form üzerinden işleme alınır.',
+    footerIdentity: 'Bağımsız Teknik Danışman · AFA Energy Romania S.R.L.',
     privacyPolicy: 'Gizlilik Politikası',
     terms: 'Şartlar',
     
