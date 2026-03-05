@@ -40,6 +40,10 @@ export interface Translations {
   formsOnlyPolicy: string;
   privacyPolicy: string;
   terms: string;
+  footerCtaHeading: string;
+  footerCtaInvestor: string;
+  footerCtaDeveloper: string;
+  footerCtaNote: string;
   
   // Company info
   companyName: string;
@@ -83,6 +87,10 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'Contact Form',
     investorIntake: 'Investor Profiling',
     formsOnlyPolicy: 'Requests are accepted only through forms.',
+    footerCtaHeading: 'APPLICATION',
+    footerCtaInvestor: 'Investor Form',
+    footerCtaDeveloper: 'Developer Form',
+    footerCtaNote: 'All requests are reviewed exclusively through our forms.',
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -122,6 +130,10 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'Formular de Contact',
     investorIntake: 'Profilare Investitor',
     formsOnlyPolicy: 'Cererile sunt acceptate doar prin formulare.',
+    footerCtaHeading: 'APLICAȚIE',
+    footerCtaInvestor: 'Formular Investitor',
+    footerCtaDeveloper: 'Formular Dezvoltator',
+    footerCtaNote: 'Solicitările sunt evaluate exclusiv prin intermediul formularelor.',
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -166,6 +178,10 @@ export const translations: Record<Locale, Translations> = {
     contactForm: 'İletişim Formu',
     investorIntake: 'Yatırımcı Profilleme',
     formsOnlyPolicy: 'Talepler yalnızca formlar üzerinden alınır.',
+    footerCtaHeading: 'BAŞVURU',
+    footerCtaInvestor: 'Yatırımcı Formu',
+    footerCtaDeveloper: 'Geliştirici Formu',
+    footerCtaNote: 'Talepler yalnızca formlar üzerinden değerlendirmeye alınır.',
     privacyPolicy: 'Gizlilik Politikası',
     terms: 'Şartlar',
     

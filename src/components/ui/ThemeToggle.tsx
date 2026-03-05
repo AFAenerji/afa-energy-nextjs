@@ -16,7 +16,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={cycle}
       aria-label={`Current theme: ${theme}. Click to change.`}
-      className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-[#0B1F1E] dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-colors"
+      className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-afa-deep dark:text-white hover:bg-gray-50 dark:hover:bg-white/10 transition-colors"
     >
       {theme === 'light' && (
         <svg aria-hidden="true" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

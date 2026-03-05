@@ -35,7 +35,7 @@ function highlightAndLink(
       <a
         key={i}
         href={`/${locale}/knowledge-center#${slugify(part)}`}
-        className="text-[#FFCB00] font-semibold hover:underline"
+        className="text-afa-gold font-semibold hover:underline"
       >
         {part}
       </a>
@@ -61,13 +61,13 @@ export default function KnowledgeCenterClient({ data, locale }: Props) {
   };
 
   return (
-    <div className="w-full dark-section bg-[#0F2E2C] min-h-screen">
+    <div className="w-full dark-section bg-afa-deep min-h-screen">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8 py-20 lg:py-24">
         {/* Page Header */}
         <header className="mb-14">
           <div className="mb-8" aria-hidden="true">
             <div className="h-px w-full bg-white/10" />
-            <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
+            <div className="mt-4 h-[3px] w-16 bg-afa-gold rounded-sm" />
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             {data.title}
@@ -125,7 +125,7 @@ export default function KnowledgeCenterClient({ data, locale }: Props) {
                   id={`group-${gIdx}`}
                   className="scroll-mt-24"
                 >
-                  <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-[#FFCB00]">
+                  <h2 className="mb-6 text-sm font-bold uppercase tracking-[0.25em] text-afa-gold">
                     {group.name}
                   </h2>
                   <ul className="space-y-3 list-none p-0 m-0" role="list">
@@ -152,7 +152,7 @@ export default function KnowledgeCenterClient({ data, locale }: Props) {
                               {highlightAndLink(item.question, locale)}
                             </span>
                             <span
-                              className="shrink-0 text-xs font-semibold text-[#FFCB00]"
+                              className="shrink-0 text-xs font-semibold text-afa-gold"
                               aria-hidden="true"
                             >
                               {isOpen ? '−' : '+'}

@@ -43,11 +43,11 @@ export default function IntroductoryStatement({ data }: Props) {
 
         {/* Signature Header & Gold Bar */}
         <div className="text-center mb-16 lg:mb-24">
-          <div className="h-[3px] w-16 bg-[#FFCB00] mx-auto mb-8 rounded-sm" />
-          <h2 className="text-3xl lg:text-5xl font-extrabold text-[#0B1F1E] tracking-tight max-w-3xl mx-auto leading-tight">
+          <div className="h-[3px] w-16 bg-afa-gold mx-auto mb-8 rounded-sm" />
+          <h2 className="text-3xl lg:text-5xl font-extrabold text-afa-deep tracking-tight max-w-3xl mx-auto leading-tight">
             Yatırım Öncesi Teknik ve Ticari Netlik
           </h2>
-          <p className="text-lg text-[#374151] mt-6 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-afa-neutral-600 mt-6 max-w-2xl mx-auto leading-relaxed">
             Romanya pazarında projenin gerçek değeri, kâğıt üzerindeki kurgusu ile şebekenin fiilî kapasitesinin uyumuna bağlıdır.
           </p>
         </div>
@@ -58,11 +58,11 @@ export default function IntroductoryStatement({ data }: Props) {
           {/* Left Column (5/12): Sticky Navigation */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
             {/* Methodology Card */}
-            <div className="hidden lg:block rounded-xl border border-[#E0E0E0] bg-[#F5F5F5] p-6">
-              <p className="text-xs font-bold tracking-[0.15em] uppercase text-[#28AFB0] mb-2">
+            <div className="hidden lg:block rounded-xl border border-afa-border bg-afa-neutral-50 p-6">
+              <p className="text-xs font-bold tracking-[0.15em] uppercase text-afa-accent mb-2">
                 METODOLOJİ
               </p>
-              <p className="text-sm text-[#5A5A5A] leading-relaxed">
+              <p className="text-sm text-afa-neutral-600 leading-relaxed">
                 Her değerlendirme, şebeke verisi, maliyet analizi ve bağımsız risk modellemesi üzerine kuruludur.
               </p>
             </div>
@@ -77,7 +77,7 @@ export default function IntroductoryStatement({ data }: Props) {
                 aria-label={card.title}
                 className={`rounded-2xl border p-8 transition-colors duration-500 ${
                   activeIndex === idx
-                    ? "border-[#18625F]/20 bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] opacity-100 scale-100"
+                    ? "border-afa-primary/20 bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] opacity-100 scale-100"
                     : "border-gray-100 bg-gray-50/50 opacity-50 scale-[0.98] hover:opacity-70"
                 }`}
               >
@@ -85,7 +85,7 @@ export default function IntroductoryStatement({ data }: Props) {
                   <span
                     className={`w-8 h-8 rounded-full text-sm font-bold flex items-center justify-center shrink-0 transition-colors duration-300 ${
                       activeIndex === idx
-                        ? "bg-[#FFCB00] text-[#0B1F1E]"
+                        ? "bg-afa-gold text-afa-deep"
                         : "bg-gray-100 text-gray-400"
                     }`}
                   >
@@ -93,7 +93,7 @@ export default function IntroductoryStatement({ data }: Props) {
                   </span>
                   <h3
                     className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-                      activeIndex === idx ? "text-[#0B1F1E]" : "text-[#999999]"
+                      activeIndex === idx ? "text-afa-deep" : "text-afa-neutral-400"
                     }`}
                   >
                     {card.title}
@@ -101,7 +101,7 @@ export default function IntroductoryStatement({ data }: Props) {
                 </div>
                 <p
                   className={`text-base leading-relaxed transition-colors duration-300 ${
-                    activeIndex === idx ? "text-[#667085]" : "text-[#999999]"
+                    activeIndex === idx ? "text-afa-neutral-500" : "text-afa-neutral-400"
                   }`}
                 >
                   {card.desc}

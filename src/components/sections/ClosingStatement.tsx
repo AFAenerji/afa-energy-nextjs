@@ -28,7 +28,7 @@ export default function ClosingStatement({ data }: Props) {
 
   return (
     <section
-      className="relative w-full py-20 lg:py-24 dark-section bg-[#0F2E2C]"
+      className="relative w-full py-20 lg:py-24 dark-section bg-afa-deep"
       style={{ isolation: "isolate" }}
     >
       {/* Background layer — gradient without affecting text */}
@@ -40,7 +40,7 @@ export default function ClosingStatement({ data }: Props) {
       <div className="mx-auto w-full max-w-6xl px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-center">
           <div className="h-px w-full bg-white/10" />
-          <div className="mt-3 h-[3px] w-16 bg-[#FFCB00]" />
+          <div className="mt-3 h-[3px] w-16 bg-afa-gold" />
         </div>
 
         <header className="mx-auto max-w-4xl text-center">
@@ -61,7 +61,7 @@ export default function ClosingStatement({ data }: Props) {
               key={`${label}-${idx}`}
               className="w-full rounded-lg border border-white/10 bg-white/5 px-6 py-10 text-center"
             >
-              <div className="mx-auto h-[2px] w-12 bg-[#FFCB00]" aria-hidden="true" />
+              <div className="mx-auto h-[2px] w-12 bg-afa-gold" aria-hidden="true" />
               <p className="mt-6 text-sm md:text-base font-semibold text-white/90">
                 {label}
               </p>

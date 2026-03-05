@@ -105,7 +105,7 @@ export default async function TeknikOnDegerlendirmePage({ params }: PageProps) {
             {dict.afaDifference.title}
           </h2>
           {dict.afaDifference.paragraphs.map((p: string) => (
-            <p key={p} className="text-[#0B1F1E] leading-relaxed mb-3 text-left last:mb-0">
+            <p key={p} className="text-afa-deep leading-relaxed mb-3 text-left last:mb-0">
               {p}
             </p>
           ))}

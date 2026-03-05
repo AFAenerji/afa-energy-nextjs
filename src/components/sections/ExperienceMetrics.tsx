@@ -17,13 +17,13 @@ export default function ExperienceMetrics({ data }: Props) {
   if (!data?.items?.length) return null;
 
   return (
-    <section id="experience-metrics" className="w-full dark-section bg-[#0F2E2C] py-20 lg:py-24">
+    <section id="experience-metrics" className="w-full dark-section bg-afa-deep py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
 
         {/* Scenario A Bridge: Line + Yellow Highlight to soften dark block entry */}
         <div className="mb-12" aria-hidden="true">
           <div className="h-px w-full bg-white/10" />
-          <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
+          <div className="mt-4 h-[3px] w-16 bg-afa-gold rounded-sm" />
         </div>
 
         {/* Eyebrow */}
@@ -44,11 +44,11 @@ export default function ExperienceMetrics({ data }: Props) {
               )}
 
               <div className="flex flex-col items-center lg:items-start">
-                <span className="text-5xl font-extrabold leading-none text-[#FFCB00] md:text-[54px] tracking-tight">
+                <span className="text-5xl font-extrabold leading-none text-afa-gold md:text-[54px] tracking-tight">
                   {item.value}
                 </span>
                 {item.unit && (
-                  <span className="mt-3 text-lg font-bold uppercase tracking-[0.1em] text-[#FFCB00] md:text-xl">
+                  <span className="mt-3 text-lg font-bold uppercase tracking-[0.1em] text-afa-gold md:text-xl">
                     {item.unit}
                   </span>
                 )}
@@ -78,7 +78,7 @@ export default function ExperienceMetrics({ data }: Props) {
                 onClick={() => setMethodologyOpen((v) => !v)}
                 aria-expanded={methodologyOpen}
                 aria-controls={methodologyOpen ? panelId : undefined}
-                className="inline-flex items-center gap-3 text-sm font-semibold text-[#FFCB00] hover:text-white transition-colors"
+                className="inline-flex items-center gap-3 text-sm font-semibold text-afa-gold hover:text-white transition-colors"
               >
                 <span>Metodoloji</span>
                 <span

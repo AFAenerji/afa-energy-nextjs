@@ -16,6 +16,14 @@
   --color-afa-light: #F5F5F5;
   --color-afa-dark: #0B1F1E;
   --color-afa-border: #E0E0E0;
+
+  /* Neutral system — Munsell perceptual scale, cool-teal hue */
+  --color-afa-neutral-50:  #F4F8F8;
+  --color-afa-neutral-200: #CBD5D5;
+  --color-afa-neutral-400: #94A3A3;
+  --color-afa-neutral-500: #6B8080;
+  --color-afa-neutral-600: #4A5F5F;
+  --color-afa-neutral-800: #2D3F3F;
 }
 
 /* Smooth scrolling for anchor navigation */
@@ -45,6 +53,14 @@ html {
   --afa-yellow: #FFCB00;
   --afa-sky: #4CC9F0;
   --afa-risk: #F25F5C;
+
+  /* ─── NEUTRAL SISTEM ────────────────── */
+  --afa-neutral-50:  #F4F8F8;
+  --afa-neutral-200: #CBD5D5;
+  --afa-neutral-400: #94A3A3;
+  --afa-neutral-500: #6B8080;
+  --afa-neutral-600: #4A5F5F;
+  --afa-neutral-800: #2D3F3F;
 
   /* ─── GECİS DONEMI LEGACY TOKENLAR ────── */
   /* UYARI: Yeni bilesenlerde kullanmayin.   */
@@ -280,6 +296,11 @@ li {
 
 .afa-btn-primary:hover {
   background: var(--yellow-hover);
+}
+
+.afa-cta-gold:hover {
+  filter: brightness(0.9);
+  transition: filter 120ms linear;
 }
 
 .btn-ghost {

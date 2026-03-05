@@ -107,11 +107,11 @@ export default async function BilgiMerkeziPage({
       )}
 
       {/* Page Hero */}
-      <section className="w-full bg-[#0F2E2C] pt-16 pb-12 lg:pt-20 lg:pb-16">
+      <section className="w-full bg-afa-deep pt-16 pb-12 lg:pt-20 lg:pb-16">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="mb-8" aria-hidden="true">
             <div className="h-px w-full bg-white/10" />
-            <div className="mt-4 h-[3px] w-16 bg-[#FFCB00] rounded-sm" />
+            <div className="mt-4 h-[3px] w-16 bg-afa-gold rounded-sm" />
           </div>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
             {meta.heroTitle}

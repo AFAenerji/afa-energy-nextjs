@@ -33,10 +33,10 @@ export default function Footer({ locale }: FooterProps) {
           color: inherit !important;
         }
         .footer-lock .footer-link {
-          color: rgba(255,255,255,0.7) !important;
+          color: rgba(255,255,255,0.85) !important;
         }
         .footer-lock .footer-link:hover {
-          color: #FFFFFF !important;
+          color: var(--yellow-accent) !important;
         }
         .footer-lock .footer-muted {
           color: rgba(255,255,255,0.3) !important;
@@ -48,17 +48,17 @@ export default function Footer({ locale }: FooterProps) {
         role="contentinfo"
       >
         <div className="mx-auto max-w-6xl px-8 py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-            {/* Brand col */}
+            {/* Col 1: Brand + Address */}
             <div>
               <Link href={`/${locale}`} aria-label="Ana Sayfaya Don" className="inline-block mb-6">
                 <Image
                   src="/images/afa_beyaz.png"
                   alt="AFA Energy Romania"
-                  width={128}
-                  height={36}
-                  className="w-32 h-auto object-contain"
+                  width={144}
+                  height={40}
+                  className="w-36 h-auto object-contain"
                 />
               </Link>
               <p className="text-lg font-bold !text-white leading-snug max-w-[340px]">
@@ -67,9 +67,19 @@ export default function Footer({ locale }: FooterProps) {
               <p className="text-sm !text-white/70 mt-1 max-w-[340px]">
                 {t('valueSlogan')}
               </p>
+              <div className="mt-4 text-sm !text-white/60 leading-relaxed">
+                <p>Strada NERVA TRAIAN, Nr. 27–33</p>
+                <p>București, Sector 3</p>
+                <p>Romania</p>
+              </div>
+              <div className="mt-3 text-sm !text-white/60 leading-relaxed">
+                <p>Fetih Mah., Kavakyeli Sitesi</p>
+                <p>Tahralı Sk. A Blok No:7 Kat:1 D:4</p>
+                <p>34704 Ataşehir / İstanbul</p>
+              </div>
             </div>
 
-            {/* Nav col */}
+            {/* Col 2: Navigation */}
             <div>
               <h4 className="text-xs font-semibold tracking-[0.15em] !text-white/40 uppercase mb-5">
                 {t('technicalServices')}
@@ -79,7 +89,7 @@ export default function Footer({ locale }: FooterProps) {
                   <Link
                     key={link.key}
                     href={link.href}
-                    className="footer-link text-sm !text-white/70 hover:!text-white py-1"
+                    className="footer-link text-sm !text-white/85 hover:text-afa-gold py-1"
                   >
                     {t(link.key as keyof import('@/lib/i18n').Translations)}
                   </Link>
@@ -87,43 +97,25 @@ export default function Footer({ locale }: FooterProps) {
               </nav>
             </div>
 
-            {/* Contact col */}
+            {/* Col 3: CTA Block */}
             <div>
               <h4 className="text-xs font-semibold tracking-[0.15em] !text-white/40 uppercase mb-5">
-                {t('contact')}
-              </h4>
-              <address className="not-italic text-sm !text-white/60 leading-relaxed">
-                {t('addressLine1')}<br />
-                {t('addressLine2')}<br />
-                {t('addressLine3')}
-              </address>
-              <Link
-                href={lp('contact')}
-                className="footer-link text-sm !text-white/70 hover:!text-white mt-4 inline-block"
-              >
-                {t('contactForm')} →
-              </Link>
-            </div>
-
-            {/* CTA col */}
-            <div>
-              <h4 className="text-xs font-semibold tracking-[0.15em] !text-white/40 uppercase mb-5">
-                {t('investorIntake')}
+                {t('footerCtaHeading')}
               </h4>
               <Link
-                href={`/${locale}/developer`}
-                className="w-full bg-afa-gold text-afa-deep font-semibold text-sm px-5 py-3 rounded-[4px] text-center block"
+                href={lp('investor')}
+                className="w-full bg-afa-gold text-afa-deep font-semibold text-sm py-3 px-4 rounded-[4px] text-center block transition-colors"
               >
-                {t('contactForm')}
+                {t('footerCtaInvestor')}
               </Link>
               <Link
-                href={`/${locale}/investor`}
-                className="w-full mt-3 border border-white/20 !text-white font-semibold text-sm px-5 py-3 rounded-[4px] text-center block hover:border-white/50"
+                href={lp('developer')}
+                className="w-full border border-white/40 !text-white font-medium text-sm py-3 px-4 rounded-[4px] text-center block transition-colors hover:border-white mt-3"
               >
-                {t('investorGate')}
+                {t('footerCtaDeveloper')}
               </Link>
-              <p className="footer-muted mt-5 text-xs !text-white/30 leading-relaxed">
-                {t('formsOnlyPolicy')}
+              <p className="footer-muted text-xs !text-white/50 mt-4 leading-relaxed">
+                {t('footerCtaNote')}
               </p>
             </div>
 
