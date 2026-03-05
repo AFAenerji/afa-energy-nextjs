@@ -24,6 +24,9 @@
   --color-afa-neutral-500: #6B8080;
   --color-afa-neutral-600: #4A5F5F;
   --color-afa-neutral-800: #2D3F3F;
+
+  /* Transition durations */
+  --transition-duration-120: 120ms;
 }
 
 /* Smooth scrolling for anchor navigation */

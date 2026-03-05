@@ -18,7 +18,6 @@ const COLORS = {
   deep: '#0F2E2C',
   light: '#F5F5F5',
   ice: '#F8FAFB',
-  white: '#FFFFFF',
   gray600: '#4A5568',
   gray400: '#999999',
 };
@@ -381,20 +380,6 @@ export default function InvestorPageClient({
         </div>
       </section>
 
-      {/* Footer Section */}
-      <footer className="py-12 px-6" style={{ backgroundColor: COLORS.deep, color: COLORS.white }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-xl font-semibold mb-6" style={{ color: COLORS.gold }}>
-            {messages.motto}
-          </p>
-          <p className="text-base mb-8">
-            {messages.closingText}
-          </p>
-          <div className="text-sm" style={{ color: COLORS.gray400 }}>
-            {messages.footerLine}
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

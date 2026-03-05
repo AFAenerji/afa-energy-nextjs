@@ -75,7 +75,7 @@ export default function Footer({ locale }: FooterProps) {
                   <Link
                     key={link.key}
                     href={link.href}
-                    className="text-sm text-white font-medium hover:text-afa-gold transition-colors duration-150 py-1"
+                    className="text-sm text-white/85 font-medium hover:text-afa-gold transition-colors duration-120 py-1"
                   >
                     {t(link.key as keyof import('@/lib/i18n').Translations)}
                   </Link>
@@ -93,7 +93,7 @@ export default function Footer({ locale }: FooterProps) {
                   <Link
                     key={link.key}
                     href={link.href}
-                    className="text-sm text-white font-medium hover:text-afa-gold transition-colors duration-150 py-1"
+                    className="text-sm text-white/85 font-medium hover:text-afa-gold transition-colors duration-120 py-1"
                   >
                     {t(link.key as keyof import('@/lib/i18n').Translations)}
                   </Link>
@@ -108,25 +108,13 @@ export default function Footer({ locale }: FooterProps) {
               </h4>
               <Link
                 href={lp('investor')}
-                className="text-sm text-white/80 font-medium hover:text-afa-gold transition-colors duration-150 block py-1"
-              >
-                {t('investorGate')}
-              </Link>
-              <Link
-                href={lp('developer')}
-                className="text-sm text-white/80 font-medium hover:text-afa-gold transition-colors duration-150 block py-1 mb-3"
-              >
-                {t('developerArea')}
-              </Link>
-              <Link
-                href={lp('investor')}
-                className="w-full bg-afa-gold text-afa-deep font-bold text-sm py-3 px-4 rounded-[4px] text-center block transition-colors duration-150"
+                className="w-full bg-afa-gold text-afa-deep font-bold text-sm py-3 px-4 rounded-[4px] text-center block transition-colors duration-120"
               >
                 {t('footerCtaInvestor')}
               </Link>
               <Link
                 href={lp('developer')}
-                className="w-full border border-afa-accent text-afa-accent bg-transparent font-bold text-sm py-3 px-4 rounded-[4px] text-center block transition-colors duration-150 hover:bg-afa-accent hover:text-white mt-3"
+                className="w-full border border-afa-accent text-afa-accent bg-transparent font-bold text-sm py-3 px-4 rounded-[4px] text-center block transition-colors duration-120 hover:bg-afa-accent hover:text-white mt-3"
               >
                 {t('footerCtaDeveloper')}
               </Link>
@@ -146,13 +134,13 @@ export default function Footer({ locale }: FooterProps) {
               <div className="flex gap-6">
                 <Link
                   href={`/${locale}/privacy`}
-                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-150"
+                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-120"
                 >
                   {t('privacyPolicy')}
                 </Link>
                 <Link
                   href={`/${locale}/terms`}
-                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-150"
+                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-120"
                 >
                   {t('terms')}
                 </Link>
