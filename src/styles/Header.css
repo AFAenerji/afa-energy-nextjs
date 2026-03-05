@@ -108,6 +108,8 @@
   border-radius: 4px;
   padding: 2px;
   background: var(--white, #FFFFFF);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .afa-lang-switcher__btn {

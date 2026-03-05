@@ -162,9 +162,6 @@ export default function Header({ locale }: HeaderProps) {
                   className="object-contain"
                 />
               </div>
-              <span className="hidden lg:block text-xl font-bold tracking-tight whitespace-nowrap">
-                AFA Energy Romania
-              </span>
             </a>
 
             {/* ── Center: Nav ── */}
