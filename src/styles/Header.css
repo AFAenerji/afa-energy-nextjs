@@ -1,6 +1,14 @@
 /* ============================================================
    AFA ENERGY — Header Component Styles
    Core Header Styling Refresh
+   ============================================================
+   Design Rules (Hard Stop):
+   - No transition-all — use explicit property names
+   - No gradients — flat fills only
+   - shadow-sm maximum — never shadow-md/lg/xl
+   - No !important in new rules
+   - Hover color: var(--afa-verdigris)
+   - Active color: var(--green-authority)
    ============================================================ */
 
 /* ── 1. Grid Layout ── */
@@ -70,7 +78,10 @@
   border-color: transparent;
 }
 
-.afa-nav__link--tab-investor:hover,
+.afa-nav__link--tab-investor:hover {
+  color: var(--afa-verdigris, #28AFB0);
+}
+
 .afa-nav__link--tab-investor.afa-nav__link--active {
   color: var(--green-authority, #18625F);
 }
@@ -79,7 +90,10 @@
   border-color: transparent;
 }
 
-.afa-nav__link--tab-developer:hover,
+.afa-nav__link--tab-developer:hover {
+  color: var(--afa-verdigris, #28AFB0);
+}
+
 .afa-nav__link--tab-developer.afa-nav__link--active {
   color: var(--green-authority, #18625F);
 }
