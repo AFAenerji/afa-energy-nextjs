@@ -32,6 +32,7 @@
   align-items: center;
   justify-content: center;
   gap: 28px;
+  min-width: 0;
 }
 
 /* Base nav link */
@@ -144,7 +145,7 @@
   align-items: center;
   justify-content: center;
   height: 40px;
-  padding: 0 20px;
+  padding: 0 12px;
   border: 2px solid var(--afa-yellow);
   border-radius: 4px;
   background-color: var(--afa-yellow);
@@ -153,6 +154,7 @@
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
+  flex-shrink: 0;
   cursor: pointer;
 }
 

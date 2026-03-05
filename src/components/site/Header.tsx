@@ -82,7 +82,7 @@ export default function Header({ locale }: HeaderProps) {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white border-b border-afa-border shadow-[0_10px_30px_rgba(0,0,0,0.12)]">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 overflow-hidden">
           <div className="afa-header__inner">
 
             {/* ── Left: Brand ── */}
