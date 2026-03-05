@@ -10,7 +10,6 @@ import { Locale, locales, getTranslation } from '@/lib/i18n';
 import type { Translations } from '@/lib/i18n';
 import { getLocalizedSlug } from '@/lib/slugs';
 import MobileMenu from './MobileMenu';
-import ThemeToggle from '@/components/ui/ThemeToggle';
 import '@/styles/Header.css';
 
 /* ── Helpers ── */
@@ -247,9 +246,6 @@ export default function Header({ locale }: HeaderProps) {
                   </button>
                 ))}
               </div>
-
-              {/* Theme Toggle */}
-              <ThemeToggle />
 
               {/* Mobile Toggle */}
               <button
