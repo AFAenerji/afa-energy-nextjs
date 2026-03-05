@@ -11,7 +11,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 72px;
-  gap: 24px;
+  gap: 16px;
 }
 
 /* ── 2. Left: Brand ── */
@@ -45,22 +45,24 @@
   border: 2px solid transparent;
   border-radius: 4px;
   white-space: nowrap;
-  font-size: 0.9375rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 500;
   line-height: 1;
-  color: #0B1F1E;
+  color: var(--text-primary, #0B1F1E);
   cursor: pointer;
   background: none;
+  transition: color 150ms ease;
 }
 
 .afa-nav__link:hover {
-  color: var(--afa-deep, #0F2E2C);
+  color: var(--afa-verdigris, #28AFB0);
 }
 
 /* Active state */
 .afa-nav__link--active {
-  color: var(--afa-deep, #0F2E2C);
-  border-bottom-color: var(--afa-deep, #0F2E2C);
+  color: var(--green-authority, #18625F);
+  font-weight: 600;
+  border-bottom-color: var(--green-authority, #18625F);
 }
 
 /* Tab variants — text-only, no border or fill */
@@ -70,7 +72,7 @@
 
 .afa-nav__link--tab-investor:hover,
 .afa-nav__link--tab-investor.afa-nav__link--active {
-  color: var(--afa-deep, #0F2E2C);
+  color: var(--green-authority, #18625F);
 }
 
 .afa-nav__link--tab-developer {
@@ -79,7 +81,7 @@
 
 .afa-nav__link--tab-developer:hover,
 .afa-nav__link--tab-developer.afa-nav__link--active {
-  color: var(--afa-deep, #0F2E2C);
+  color: var(--green-authority, #18625F);
 }
 
 /* Disabled state */
