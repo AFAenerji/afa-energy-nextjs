@@ -139,8 +139,6 @@ const pageContent = {
       title: "Her Proje Farklıdır.",
       text: "AFA, yatırım kararınızı netleştirmek için bağımsız ve teknik bir bakış açısı sunar. Projenizin teknik tablosunu netleştirmek isterseniz, süreci birlikte değerlendirebiliriz.",
       button: "BİZE ULAŞIN",
-      legal:
-        "Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır.",
     },
   },
   en: {
@@ -196,8 +194,6 @@ const pageContent = {
       title: "Every Project Is Different.",
       text: "AFA provides an independent, technical perspective to clarify your investment decision. If you want to clarify the technical picture of your project, we can evaluate the process together.",
       button: "CONTACT US",
-      legal:
-        "Assessments are technical and commercial in nature. They do not constitute legal advice. The final investment decision is the investor\u2019s responsibility.",
     },
   },
   ro: {
@@ -253,8 +249,6 @@ const pageContent = {
       title: "Fiecare Proiect Este Diferit.",
       text: "AFA oferă o perspectivă independentă și tehnică pentru a clarifica decizia dumneavoastră de investiție. Dacă doriți să clarificați tabloul tehnic al proiectului, putem evalua procesul împreună.",
       button: "CONTACTAȚI-NE",
-      legal:
-        "Evaluările sunt de natură tehnică și comercială. Nu constituie consultanță juridică. Decizia finală de investiție aparține investitorului.",
     },
   },
 } as const;
@@ -373,7 +367,6 @@ export default async function CasesPage({
         <Link href={LOCALE_PATHS.contact[locale]} className={styles.ctaButton}>
           {content.cta.button}
         </Link>
-        <p className={styles.ctaLegal}>{content.cta.legal}</p>
       </section>
     </main>
   );

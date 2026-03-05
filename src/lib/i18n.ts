@@ -41,11 +41,14 @@ export interface Translations {
   privacyPolicy: string;
   terms: string;
   footerNavHeading: string;
+  footerTechnicalHeading: string;
+  footerCorporateHeading: string;
   footerCtaHeading: string;
   footerCtaInvestor: string;
   footerCtaDeveloper: string;
   footerCtaNote: string;
   footerIdentity: string;
+  footerDisclaimer: string;
   
   // Company info
   companyName: string;
@@ -90,11 +93,14 @@ export const translations: Record<Locale, Translations> = {
     investorIntake: 'Investor Profiling',
     formsOnlyPolicy: 'Requests are accepted only through forms.',
     footerNavHeading: 'Quick Access',
+    footerTechnicalHeading: 'Technical Services',
+    footerCorporateHeading: 'Corporate',
     footerCtaHeading: 'APPLICATION',
     footerCtaInvestor: 'Investor Form',
     footerCtaDeveloper: 'Developer Form',
     footerCtaNote: 'All applications are processed through forms.',
     footerIdentity: 'Independent Technical Advisor · AFA Energy Romania S.R.L.',
+    footerDisclaimer: 'This content is a technical assessment guide; it does not constitute investment advice.',
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -135,11 +141,14 @@ export const translations: Record<Locale, Translations> = {
     investorIntake: 'Profilare Investitor',
     formsOnlyPolicy: 'Cererile sunt acceptate doar prin formulare.',
     footerNavHeading: 'Acces Rapid',
+    footerTechnicalHeading: 'Servicii Tehnice',
+    footerCorporateHeading: 'Corporativ',
     footerCtaHeading: 'APLICAȚIE',
     footerCtaInvestor: 'Formular Investitor',
     footerCtaDeveloper: 'Formular Dezvoltator',
     footerCtaNote: 'Toate aplicațiile sunt procesate prin formulare.',
     footerIdentity: 'Consultant Tehnic Independent · AFA Energy Romania S.R.L.',
+    footerDisclaimer: 'Acest conținut este un ghid de evaluare tehnică; nu constituie consiliere de investiții.',
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -185,11 +194,14 @@ export const translations: Record<Locale, Translations> = {
     investorIntake: 'Yatırımcı Profilleme',
     formsOnlyPolicy: 'Talepler yalnızca formlar üzerinden alınır.',
     footerNavHeading: 'Hızlı Erişim',
+    footerTechnicalHeading: 'Teknik Hizmetler',
+    footerCorporateHeading: 'Kurumsal',
     footerCtaHeading: 'BAŞVURU',
     footerCtaInvestor: 'Yatırımcı Formu',
     footerCtaDeveloper: 'Geliştirici Formu',
     footerCtaNote: 'Tüm başvurular form üzerinden işleme alınır.',
     footerIdentity: 'Bağımsız Teknik Danışman · AFA Energy Romania S.R.L.',
+    footerDisclaimer: 'Bu içerik teknik değerlendirme rehberidir; yatırım tavsiyesi içermez.',
     privacyPolicy: 'Gizlilik Politikası',
     terms: 'Şartlar',
     
