@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import type { Metadata } from 'next';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import { getMetadata } from '@/lib/dictionaries/metadata';
@@ -71,9 +72,9 @@ export default async function LocaleLayout({
         </a>
         <OrganizationSchema />
         <ThemeProvider>
-          <div className="min-h-screen flex flex-col">
+          <div className={clsx('min-h-screen', 'flex', 'flex-col')}>
             <Header locale={locale} />
-            <main id="main-content" className="flex-grow w-full pt-[72px]">
+            <main id="main-content" className={clsx('flex-grow', 'w-full', 'pt-[72px]')}>
               {children}
             </main>
             <Footer locale={locale} />

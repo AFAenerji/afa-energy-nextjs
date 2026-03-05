@@ -52,7 +52,7 @@ export default function Footer({ locale }: FooterProps) {
 
             {/* Brand col */}
             <div>
-              <Link href={`/${locale}`} aria-label="Ana Sayfaya Don" className="flex items-center gap-3 mb-6">
+              <Link href={`/${locale}`} aria-label="Ana Sayfaya Don" className="inline-block mb-6">
                 <Image
                   src="/images/afa_beyaz.png"
                   alt="AFA Energy Romania"
@@ -60,7 +60,6 @@ export default function Footer({ locale }: FooterProps) {
                   height={36}
                   className="w-32 h-auto object-contain"
                 />
-                <span className="font-bold text-sm !text-white">{t('companyName')}</span>
               </Link>
               <p className="text-lg font-bold !text-white leading-snug max-w-[340px]">
                 {t('motto')}
