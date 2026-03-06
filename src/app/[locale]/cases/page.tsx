@@ -5,6 +5,7 @@ import { LOCALE_PATHS } from "@/lib/routes";
 import styles from "./vakalar.module.css";
 import { SITE_URL } from "@/lib/env";
 import CasesFilterGrid, { type CaseItem } from "./CasesFilterGrid";
+import LegalScopeDisclaimer from "@/components/legal/LegalScopeDisclaimer";
 
 /* ── Canonical helpers ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;
@@ -368,6 +369,8 @@ export default async function CasesPage({
           {content.cta.button}
         </Link>
       </section>
+
+      <LegalScopeDisclaimer locale={locale} />
     </main>
   );
 }

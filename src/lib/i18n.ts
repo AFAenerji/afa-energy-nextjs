@@ -49,6 +49,7 @@ export interface Translations {
   footerCtaNote: string;
   footerTagline: string;
   footerDescription: string;
+  pageDisclaimer: string;
   legalCompanyId: string;
   legalDisclaimer: string;
   cookiePolicy: string;
@@ -106,6 +107,7 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'Requests are answered within one business day.',
     footerTagline: 'Which projects are truly investment-ready, clearly visible.',
     footerDescription: 'Independent technical advisory in the Romanian and Turkish renewable energy markets.',
+    pageDisclaimer: 'Evaluations are of a technical and commercial nature. This content does not constitute legal advice. Final investment decisions are the responsibility of the investor.',
     legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
     legalDisclaimer: 'The information on this website is for general informational purposes only and does not constitute investment advice, financing guarantee, or legal advisory services.',
     cookiePolicy: 'Cookie Policy',
@@ -159,6 +161,7 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'Solicitările primesc răspuns în termen de o zi lucrătoare.',
     footerTagline: 'Care proiecte sunt cu adevărat pregătite pentru investiție, vizibil.',
     footerDescription: 'Consultanță tehnică independentă pe piețele de energie regenerabilă din România și Turcia.',
+    pageDisclaimer: 'Evaluările sunt de natură tehnică și comercială. Acest conținut nu constituie consiliere juridică. Decizia finală de investiție aparține investitorului.',
     legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
     legalDisclaimer: 'Informațiile de pe acest site sunt furnizate în scop general de informare și nu constituie consultanță de investiții, garanție de finanțare sau servicii de consiliere juridică.',
     cookiePolicy: 'Politica Cookie',
@@ -217,6 +220,7 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'Talepler bir iş günü içinde yanıtlanır.',
     footerTagline: 'Hangi projenin gerçekten yatırıma hazır olduğu net görünür.',
     footerDescription: 'Romanya ve Türkiye yenilenebilir enerji pazarlarında bağımsız teknik danışmanlık.',
+    pageDisclaimer: 'Değerlendirmeler teknik ve ticari niteliktedir. Hukuki tavsiye niteliği taşımaz. Nihai yatırım kararı yatırımcı sorumluluğundadır.',
     legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
     legalDisclaimer: 'Bu web sitesindeki bilgiler genel bilgilendirme amaçlıdır; yatırım tavsiyesi, finansman garantisi veya hukuki danışmanlık niteliği taşımaz.',
     cookiePolicy: 'Çerez Politikası',

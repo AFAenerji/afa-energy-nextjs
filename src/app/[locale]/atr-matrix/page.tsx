@@ -3,6 +3,7 @@ import { Locale, locales, defaultLocale } from "@/lib/i18n";
 import { LOCALE_PATHS } from "@/lib/routes";
 import { SITE_URL } from "@/lib/env";
 import { ATRMatrixPage } from "@/components/sections/ATRMatrixPage";
+import LegalScopeDisclaimer from "@/components/legal/LegalScopeDisclaimer";
 
 /* ── Canonical helpers ── */
 const canonicalFromFullPath = (path: string): string => `${SITE_URL}${path}`;
@@ -88,10 +89,13 @@ export default async function ATRMatrixRoute({
     : defaultLocale;
 
   return (
-    <ATRMatrixPage
-      locale={locale}
-      developerHref={LOCALE_PATHS.developer[locale]}
-      investorHref={LOCALE_PATHS.investor[locale]}
-    />
+    <>
+      <ATRMatrixPage
+        locale={locale}
+        developerHref={LOCALE_PATHS.developer[locale]}
+        investorHref={LOCALE_PATHS.investor[locale]}
+      />
+      <LegalScopeDisclaimer locale={locale} />
+    </>
   );
 }

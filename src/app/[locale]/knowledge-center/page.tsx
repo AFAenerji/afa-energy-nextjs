@@ -7,6 +7,7 @@ import GlossarySchema from '@/components/seo/GlossarySchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { SITE_URL } from '@/lib/env';
 import { LOCALE_PATHS } from '@/lib/routes';
+import LegalScopeDisclaimer from '@/components/legal/LegalScopeDisclaimer';
 
 const pageMeta: Record<Locale, { title: string; description: string; heroTitle: string; heroSubtitle: string; breadcrumbHome: string; breadcrumbSelf: string }> = {
   tr: {
@@ -124,6 +125,8 @@ export default async function BilgiMerkeziPage({
 
       {/* FAQ + Glossary */}
       <TechnicalFAQ data={kc} locale={locale} />
+
+      <LegalScopeDisclaimer locale={locale} />
     </>
   );
 }

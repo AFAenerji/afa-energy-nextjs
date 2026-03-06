@@ -1,5 +1,4 @@
 import type { Locale } from '@/lib/i18n';
-import LegalScopeDisclaimer from '@/components/legal/LegalScopeDisclaimer';
 
 interface DeveloperPageProps {
   params: Promise<{ locale: Locale }>;
@@ -16,7 +15,6 @@ export default async function DeveloperPage({ params }: DeveloperPageProps) {
       <p className="text-slate-600 mb-12">
         This page is under construction. Coming soon.
       </p>
-      <LegalScopeDisclaimer className="max-w-xl mx-auto rounded-sm" />
     </div>
   );
 }
