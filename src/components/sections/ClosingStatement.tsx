@@ -6,7 +6,6 @@ type ClosingStatementData = {
   title?: string;
   subtitle?: string;
   items?: string[];
-  disclaimer?: string;
 };
 
 type Props = {
@@ -21,10 +20,6 @@ export default function ClosingStatement({ data }: Props) {
 
   const items =
     data?.items ?? ["Tam Bağımsızlık.", "Teknik Filtreleme.", "Banka Finansmanına Uygunluk Odağı."];
-
-  const disclaimer =
-    data?.disclaimer ??
-    "Bu içerik teknik ve ticari değerlendirme rehberidir; resmî onay veya yatırım getirisi taahhüdü içermez.";
 
   return (
     <section
@@ -69,11 +64,7 @@ export default function ClosingStatement({ data }: Props) {
           ))}
         </ul>
 
-        <footer className="mx-auto mt-16 max-w-4xl border-t border-white/10 pt-8 text-center">
-          <p className="text-xs md:text-sm leading-relaxed text-white/50">
-            {disclaimer}
-          </p>
-        </footer>
+        <div className="mx-auto mt-16 max-w-4xl border-t border-white/10 pt-8" />
       </div>
     </section>
   );

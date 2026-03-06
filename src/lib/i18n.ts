@@ -47,8 +47,11 @@ export interface Translations {
   footerCtaInvestor: string;
   footerCtaDeveloper: string;
   footerCtaNote: string;
-  footerIdentity: string;
-  footerDisclaimer: string;
+  footerTagline: string;
+  footerDescription: string;
+  legalCompanyId: string;
+  legalDisclaimer: string;
+  cookiePolicy: string;
   officeRomania: string;
   officeTurkey: string;
   
@@ -100,11 +103,14 @@ export const translations: Record<Locale, Translations> = {
     footerCtaHeading: 'APPLICATION',
     footerCtaInvestor: 'Investor Form',
     footerCtaDeveloper: 'Developer Form',
-    footerCtaNote: 'All applications are processed through forms.',
-    footerIdentity: 'Independent Technical Advisor · AFA Energy Romania S.R.L.',
-    footerDisclaimer: 'This content is a technical assessment guide; it does not constitute investment advice.',
-    officeRomania: 'Romania Office',
-    officeTurkey: 'Turkey Office',
+    footerCtaNote: 'Requests are answered within one business day.',
+    footerTagline: 'Which projects are truly investment-ready, clearly visible.',
+    footerDescription: 'Independent technical advisory in the Romanian and Turkish renewable energy markets.',
+    legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
+    legalDisclaimer: 'The information on this website is for general informational purposes only and does not constitute investment advice, financing guarantee, or legal advisory services.',
+    cookiePolicy: 'Cookie Policy',
+    officeRomania: 'ROMANIA OFFICE',
+    officeTurkey: 'TURKEY OFFICE',
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -150,11 +156,14 @@ export const translations: Record<Locale, Translations> = {
     footerCtaHeading: 'APLICAȚIE',
     footerCtaInvestor: 'Formular Investitor',
     footerCtaDeveloper: 'Formular Dezvoltator',
-    footerCtaNote: 'Toate aplicațiile sunt procesate prin formulare.',
-    footerIdentity: 'Consultant Tehnic Independent · AFA Energy Romania S.R.L.',
-    footerDisclaimer: 'Acest conținut este un ghid de evaluare tehnică; nu constituie consiliere de investiții.',
-    officeRomania: 'Biroul România',
-    officeTurkey: 'Biroul Turcia',
+    footerCtaNote: 'Solicitările primesc răspuns în termen de o zi lucrătoare.',
+    footerTagline: 'Care proiecte sunt cu adevărat pregătite pentru investiție, vizibil.',
+    footerDescription: 'Consultanță tehnică independentă pe piețele de energie regenerabilă din România și Turcia.',
+    legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
+    legalDisclaimer: 'Informațiile de pe acest site sunt furnizate în scop general de informare și nu constituie consultanță de investiții, garanție de finanțare sau servicii de consiliere juridică.',
+    cookiePolicy: 'Politica Cookie',
+    officeRomania: 'BIROU ROMÂNIA',
+    officeTurkey: 'BIROU TURCIA',
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -205,11 +214,14 @@ export const translations: Record<Locale, Translations> = {
     footerCtaHeading: 'BAŞVURU',
     footerCtaInvestor: 'Yatırımcı Formu',
     footerCtaDeveloper: 'Geliştirici Formu',
-    footerCtaNote: 'Tüm başvurular form üzerinden işleme alınır.',
-    footerIdentity: 'Bağımsız Teknik Danışman · AFA Energy Romania S.R.L.',
-    footerDisclaimer: 'Bu içerik teknik değerlendirme rehberidir; yatırım tavsiyesi içermez.',
-    officeRomania: 'Romanya Ofisi',
-    officeTurkey: 'Türkiye Ofisi',
+    footerCtaNote: 'Talepler bir iş günü içinde yanıtlanır.',
+    footerTagline: 'Hangi projenin gerçekten yatırıma hazır olduğu net görünür.',
+    footerDescription: 'Romanya ve Türkiye yenilenebilir enerji pazarlarında bağımsız teknik danışmanlık.',
+    legalCompanyId: 'CUI 51196522 | J2025005686008 | EUID ROONRC.J2025005686008',
+    legalDisclaimer: 'Bu web sitesindeki bilgiler genel bilgilendirme amaçlıdır; yatırım tavsiyesi, finansman garantisi veya hukuki danışmanlık niteliği taşımaz.',
+    cookiePolicy: 'Çerez Politikası',
+    officeRomania: 'ROMANYA OFİSİ',
+    officeTurkey: 'TÜRKİYE OFİSİ',
     privacyPolicy: 'Gizlilik Politikası',
     terms: 'Şartlar',
     
