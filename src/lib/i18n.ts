@@ -49,6 +49,8 @@ export interface Translations {
   footerCtaNote: string;
   footerIdentity: string;
   footerDisclaimer: string;
+  officeRomania: string;
+  officeTurkey: string;
   
   // Company info
   companyName: string;
@@ -101,6 +103,8 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'All applications are processed through forms.',
     footerIdentity: 'Independent Technical Advisor · AFA Energy Romania S.R.L.',
     footerDisclaimer: 'This content is a technical assessment guide; it does not constitute investment advice.',
+    officeRomania: 'Romania Office',
+    officeTurkey: 'Turkey Office',
     privacyPolicy: 'Privacy Policy',
     terms: 'Terms',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -149,6 +153,8 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'Toate aplicațiile sunt procesate prin formulare.',
     footerIdentity: 'Consultant Tehnic Independent · AFA Energy Romania S.R.L.',
     footerDisclaimer: 'Acest conținut este un ghid de evaluare tehnică; nu constituie consiliere de investiții.',
+    officeRomania: 'Biroul România',
+    officeTurkey: 'Biroul Turcia',
     privacyPolicy: 'Politica de Confidențialitate',
     terms: 'Termeni',
     companyName: 'AFA Energy Romania S.R.L.',
@@ -202,6 +208,8 @@ export const translations: Record<Locale, Translations> = {
     footerCtaNote: 'Tüm başvurular form üzerinden işleme alınır.',
     footerIdentity: 'Bağımsız Teknik Danışman · AFA Energy Romania S.R.L.',
     footerDisclaimer: 'Bu içerik teknik değerlendirme rehberidir; yatırım tavsiyesi içermez.',
+    officeRomania: 'Romanya Ofisi',
+    officeTurkey: 'Türkiye Ofisi',
     privacyPolicy: 'Gizlilik Politikası',
     terms: 'Şartlar',
     

@@ -1,6 +1,6 @@
 /* AFA KURAL — Koyu Zemin Kontrast Standardı:
  * afa-deep (#0F2E2C) zemin üzerinde minimum text-white/75
- * text-white/50 yalnızca legal bar (bottom bar) için
+ * Legal bar: bg-white + text-afa-deep (beyaz zemin, koyu metin)
  * WCAG AA: normal metin 4.5:1, büyük metin 3:1 minimum
  *
  * AFA KURAL — Footer İletişim Bilgisi Yasağı:
@@ -53,16 +53,6 @@ export default function Footer({ locale }: FooterProps) {
               <p className="text-sm text-white/80 mt-1">
                 {t('valueSlogan')}
               </p>
-              <div className="mt-2 text-xs text-white/75 leading-relaxed">
-                <p>Strada NERVA TRAIAN, Nr. 27–33</p>
-                <p>București, Sector 3</p>
-                <p>Romania</p>
-              </div>
-              <div className="mt-2 text-xs text-white/75 leading-relaxed">
-                <p>Fetih Mah., Kavakyeli Sitesi</p>
-                <p>Tahralı Sk. A Blok No:7 Kat:1 D:4</p>
-                <p>34704 Ataşehir / İstanbul</p>
-              </div>
             </div>
 
             {/* Col 2: Teknik Hizmetler */}
@@ -102,7 +92,7 @@ export default function Footer({ locale }: FooterProps) {
             </div>
 
             {/* Col 4: Başvuru */}
-            <nav aria-label="Alt gezinme: Başvuru">
+            <nav aria-label="Alt gezinme: Başvuru" className="flex flex-col">
               <h4 className="text-afa-gold text-xs font-semibold uppercase tracking-widest mb-5">
                 {t('footerCtaHeading')}
               </h4>
@@ -125,26 +115,51 @@ export default function Footer({ locale }: FooterProps) {
 
           </div>
 
-          {/* Bottom bar */}
-          <div className="mt-6 pt-6 border-t border-white/10">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <p className="text-xs text-white/50">
-                {t('footerIdentity')} · {t('footerDisclaimer')}
+          {/* Address band */}
+          <div className="border-t border-white/10 mt-8 pt-8 -mx-8 px-8 py-6 bg-afa-primary/20 md:flex md:gap-12">
+            <div className="mb-4 md:mb-0">
+              <p className="text-xs font-semibold uppercase tracking-widest text-afa-gold mb-2">
+                {t('officeRomania')}
               </p>
-              <div className="flex gap-6">
-                <Link
-                  href={`/${locale}/privacy`}
-                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-120"
-                >
-                  {t('privacyPolicy')}
-                </Link>
-                <Link
-                  href={`/${locale}/terms`}
-                  className="text-xs text-white/50 hover:text-white/80 transition-colors duration-120"
-                >
-                  {t('terms')}
-                </Link>
-              </div>
+              <p className="text-sm text-white/80 leading-relaxed">
+                Strada NERVA TRAIAN, Nr. 27–33<br />
+                București, Sector 3<br />
+                Romania
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-afa-gold mb-2">
+                {t('officeTurkey')}
+              </p>
+              <p className="text-sm text-white/80 leading-relaxed">
+                Fetih Mah., Kavakyeli Sitesi<br />
+                Tahralı Sk. A Blok No:7 Kat:1 D:4<br />
+                34704 Ataşehir / İstanbul
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Legal bar — white background */}
+        <div className="bg-white -mx-0 px-8 py-4">
+          <div className="mx-auto max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-afa-deep">
+              {t('footerIdentity')} · {t('footerDisclaimer')}
+            </p>
+            <div className="flex gap-6">
+              <Link
+                href={`/${locale}/privacy`}
+                className="text-xs text-afa-deep hover:text-afa-primary transition-colors duration-120"
+              >
+                {t('privacyPolicy')}
+              </Link>
+              <Link
+                href={`/${locale}/terms`}
+                className="text-xs text-afa-deep hover:text-afa-primary transition-colors duration-120"
+              >
+                {t('terms')}
+              </Link>
             </div>
           </div>
         </div>
