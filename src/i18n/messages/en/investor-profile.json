@@ -1,0 +1,135 @@
+{
+  "heroBadge": "INVESTOR CRITERIA",
+  "heroHeading": "What Does a Renewable Energy\nInvestor Actually Buy?",
+  "heroSubheading": "Not a power plant — but the predictable cash flows it produces. AFA verifies that distinction with technical precision.",
+
+  "framingHeading": "Investors Don't Buy Uncertainty",
+  "framingQuote": "Can this project generate steady, reliable revenue for the next 10–20 years?",
+  "framingChecklist": [
+    "Can the plant actually connect to the grid?",
+    "Can all generated electricity be sold, or will it be curtailed by the system?",
+    "Are the required permits complete and legally sound?",
+    "Will construction finish on schedule?",
+    "Will the expected revenue cover debt service and return targets?"
+  ],
+  "framingClosing": "The investor isn't buying the project — they're buying its capacity to generate durable, sustained revenue.",
+
+  "validationHeading": "Developers Present Optimistically.\nInvestors Require Independent Verification.",
+  "validationIntro": "The investor views the project from the outside. That distance is an advantage — but the development team may present field risks more optimistically than reality warrants.",
+  "validationRisks": [
+    "A connection permit exists, but actual grid connection is not feasible.",
+    "Curtailment risk is not fully reflected in revenue forecasts.",
+    "Permits exist, but the process sequence contains errors.",
+    "The schedule is unrealistic, and delays will disrupt cash flow."
+  ],
+  "validationWithout": "Without technical verification: The investor may acquire risk without recognising it.",
+  "validationWith": "With technical verification: The investor measures risk and manages it at the right price.",
+
+  "profilesHeading": "Not All Investors Carry the Same Risk",
+  "profilesIntro": "The same project can be suitable for one investor and too risky for another.",
+  "profiles": [
+    {
+      "type": "Institutional Investor",
+      "subtitle": "Insurance companies, pension funds",
+      "colorRole": "deep",
+      "thinking": [
+        "Seeks long-term, low-volatility returns.",
+        "Dislikes surprises.",
+        "Expects revenue to be as predictable as possible."
+      ],
+      "preferences": [
+        "Ready-to-build or already operational plants.",
+        "Structures with contracted revenue or protection mechanisms.",
+        "Projects with low and measurable curtailment risk.",
+        "Projects with completed or clearly closing permit processes."
+      ],
+      "threshold": "Minimum surprises, maximum predictability.",
+      "thresholdDetail": "Typically will not proceed if uncertainty exists. Even in a conditionally viable project, will wait if it is unclear how and when open items will be resolved."
+    },
+    {
+      "type": "Infrastructure Fund",
+      "subtitle": "Mid-to-long term cash flow oriented professional funds",
+      "colorRole": "primary",
+      "thinking": [
+        "Wants cash flow but can conduct active management.",
+        "Seeks scale and growth potential.",
+        "Can scenario-plan and manage risks."
+      ],
+      "preferences": [
+        "Ready-to-build or operational projects.",
+        "Scalable structures suitable for portfolio building.",
+        "Projects with analysed and manageable curtailment risk.",
+        "Plants with performance improvement potential during operations."
+      ],
+      "threshold": "Quality + scale + manageable risk.",
+      "thresholdDetail": "More open to conditionally viable projects, but will not proceed unless it is clear who will manage the risks and how they will be contractually secured."
+    },
+    {
+      "type": "Private Equity Fund",
+      "subtitle": "Higher return-seeking investors",
+      "colorRole": "coral",
+      "thinking": [
+        "Targets higher returns.",
+        "Can tolerate more risk.",
+        "Plans to create value and exit via sale or refinancing."
+      ],
+      "preferences": [
+        "Projects in development or near ready-to-build stage.",
+        "Opportunities with restructurable risks.",
+        "Structures where value can be increased through improvement.",
+        "Projects with a clear exit story."
+      ],
+      "threshold": "Risk must be closeable; price adjusted accordingly.",
+      "thresholdDetail": "Most open to conditionally viable projects. However, if uncertainty cannot be resolved, will significantly reduce the price."
+    }
+  ],
+
+  "riskHeading": "Why Isn't the Same Project Right for Every Investor?",
+  "riskIntro": "What matters is not the risk itself, but its transferability.",
+  "riskRows": [
+    {
+      "investor": "Institutional Investor",
+      "approach": "Will not buy uncertainty."
+    },
+    {
+      "investor": "Infrastructure Fund",
+      "approach": "Analyses uncertainty; accepts it if it can be made manageable."
+    },
+    {
+      "investor": "Private Equity Fund",
+      "approach": "Prices uncertainty; converts it to opportunity if it can be resolved."
+    }
+  ],
+  "riskClosing": "A project is neither 'good' nor 'bad'. It is simply more suitable for a specific type of investor.",
+
+  "motivationHeading": "What Every Investor Has in Common",
+  "motivationIntro": "Regardless of investor type, all converge on four fundamental criteria.",
+  "motivations": [
+    {
+      "title": "Revenue Resilience",
+      "desc": "The capacity to generate stable and predictable cash flows over the long term."
+    },
+    {
+      "title": "Measurable Risk",
+      "desc": "The ability to characterise uncertainty within defined risk bands."
+    },
+    {
+      "title": "Viable Timeline",
+      "desc": "Construction and commissioning schedules that are realistic and defensible."
+    },
+    {
+      "title": "Exit Capability",
+      "desc": "A clear and actionable exit story for sale or refinancing."
+    }
+  ],
+  "motivationATRNote": "AFA's ATR Matrix™ methodology evaluates every project against these four criteria and brings the risk profile to a level suitable for investor presentation.",
+  "motivationATRLink": "Explore ATR Matrix™ Methodology",
+
+  "ctaHeading": "Know the Investor Type\nBefore You Look at the Project.",
+  "ctaSubtext": "AFA's filtered project pipeline presents projects with visible risk profiles and completed technical verification.",
+  "ctaPrimary": "Access Filtered Project Pipeline",
+  "ctaSecondary": "Explore ATR Matrix™ Methodology",
+  "disclaimer": "Project-specific legal and technical verification is recommended.",
+
+  "motto": "Clarity Before Investment."
+}

@@ -1,0 +1,135 @@
+{
+  "heroBadge": "YATIRIM KRİTERLERİ",
+  "heroHeading": "Yenilenebilir Enerji Yatırımcısı\nAslında Ne Satın Alır?",
+  "heroSubheading": "Santral değil; o santralin gelecekte üreteceği düzenli ve öngörülebilir nakit akışı. AFA, bu farkı teknik gerçeklikle doğrular.",
+
+  "framingHeading": "Yatırımcı Belirsizliği Satın Almaz",
+  "framingQuote": "Bu proje önümüzdeki 10–20 yıl boyunca düzenli ve güvenilir gelir üretebilir mi?",
+  "framingChecklist": [
+    "Santral gerçekten elektrik şebekesine bağlanabilir mi?",
+    "Üretilen elektriğin tamamı satılabilir mi, yoksa sistem tarafından kısıtlanır mı?",
+    "Gerekli izinler tamam mı ve hukuki açıdan sağlam mı?",
+    "İnşaat zamanında biter mi?",
+    "Beklenen gelir, borç ödemelerini ve yatırım getirisini karşılayacak mı?"
+  ],
+  "framingClosing": "Yatırımcı projeye değil; projenin gelir üretme kapasitesine ve bu gelirin dayanıklılığına yatırım yapar.",
+
+  "validationHeading": "Geliştirici İyimser Sunar.\nYatırımcı Bağımsız Doğrulama İster.",
+  "validationIntro": "Yatırımcı projeye dışarıdan bakar. Bu mesafe avantajdır; ancak projeyi geliştiren ekip sahadaki riskleri olduğundan daha iyimser sunabilir.",
+  "validationRisks": [
+    "Bağlantı belgesi vardır, ancak fiili bağlantı uygulanabilir değildir.",
+    "Elektrik üretim kısıtı riski gelir tahminlerine tam yansıtılmamıştır.",
+    "İzinler vardır, ancak süreç sıralaması hatalıdır.",
+    "Takvim gerçekçi değildir ve gecikme nakit akışını bozar."
+  ],
+  "validationWithout": "Teknik doğrulama olmadan: Yatırımcı riski fark etmeden satın alabilir.",
+  "validationWith": "Teknik doğrulama ile: Yatırımcı riski ölçer ve doğru fiyatla yönetir.",
+
+  "profilesHeading": "Her Yatırımcı Aynı Riski Taşımaz",
+  "profilesIntro": "Aynı proje, bir yatırımcı için uygun iken bir başkası için fazla riskli olabilir.",
+  "profiles": [
+    {
+      "type": "Kurumsal Yatırımcı",
+      "subtitle": "Sigorta şirketleri, emeklilik fonları",
+      "colorRole": "deep",
+      "thinking": [
+        "Uzun vadeli ve düşük oynaklık ister.",
+        "Sürprizden hoşlanmaz.",
+        "Gelirin mümkün olduğunca öngörülebilir olmasını bekler."
+      ],
+      "preferences": [
+        "İnşaata hazır veya halihazırda çalışan santraller.",
+        "Geliri kontratlı veya koruma mekanizması olan yapılar.",
+        "Elektrik üretim kısıtı riskinin düşük ve ölçülebilir olduğu projeler.",
+        "İzin süreci tamamlanmış veya kapanışı net olan projeler."
+      ],
+      "threshold": "En az sürpriz, en yüksek öngörülebilirlik.",
+      "thresholdDetail": "Belirsizlik varsa genellikle ilerlemez. Koşullu ilerlenebilir bir projede bile eksiklerin nasıl ve ne zaman kapanacağı net değilse bekler."
+    },
+    {
+      "type": "Altyapı Fonu",
+      "subtitle": "Orta-uzun vadeli nakit akışı odaklı profesyonel fonlar",
+      "colorRole": "primary",
+      "thinking": [
+        "Nakit akışı ister, ancak aktif yönetim yapabilir.",
+        "Ölçek ve büyüme potansiyeli arar.",
+        "Riskleri senaryolaştırabilir ve yönetilebilir hale getirebilir."
+      ],
+      "preferences": [
+        "İnşaata hazır veya operasyonel projeler.",
+        "Portföy oluşturulabilecek ölçekli yapılar.",
+        "Üretim kısıtı riskinin analiz edilmiş ve yönetilebilir olduğu projeler.",
+        "İşletme döneminde performans iyileştirme potansiyeli olan santraller."
+      ],
+      "threshold": "Kalite + ölçek + yönetilebilir risk.",
+      "thresholdDetail": "Koşullu ilerlenebilir projelere daha açıktır. Ancak risklerin kim tarafından yönetileceği ve sözleşmeyle nasıl güvence altına alınacağı net değilse ilerlemez."
+    },
+    {
+      "type": "Özel Sermaye Fonu",
+      "subtitle": "Daha yüksek getiri hedefleyen yatırımcılar",
+      "colorRole": "coral",
+      "thinking": [
+        "Daha yüksek getiri ister.",
+        "Daha fazla riski tolere edebilir.",
+        "Değer yaratıp çıkış (satış veya refinansman) yapmayı planlar."
+      ],
+      "preferences": [
+        "Geliştirme aşamasındaki veya inşaata yakın projeler.",
+        "Yeniden yapılandırılabilir riskler içeren fırsatlar.",
+        "İyileştirme ile değer artışı sağlanabilecek yapılar.",
+        "Net bir çıkış hikâyesi olan projeler."
+      ],
+      "threshold": "Riskin kapanabilir olması ve fiyatın buna göre ayarlanması.",
+      "thresholdDetail": "Koşullu ilerlenebilir projelere en açık yatırımcı tipidir. Ancak belirsizlik kapanmayacak düzeydeyse fiyatı ciddi şekilde düşürür."
+    }
+  ],
+
+  "riskHeading": "Aynı Proje Neden Farklı Yatırımcıya Uygun Olmaz?",
+  "riskIntro": "Riskin kendisi değil, riskin taşınabilirliği belirler.",
+  "riskRows": [
+    {
+      "investor": "Kurumsal Yatırımcı",
+      "approach": "Belirsizliği satın almaz."
+    },
+    {
+      "investor": "Altyapı Fonu",
+      "approach": "Belirsizliği analiz eder; yönetilebilir hale getirirse kabul eder."
+    },
+    {
+      "investor": "Özel Sermaye Fonu",
+      "approach": "Belirsizliği fiyatlar; kapanabilirse fırsata çevirir."
+    }
+  ],
+  "riskClosing": "Bir proje 'iyi' veya 'kötü' değildir. Sadece belirli bir yatırımcı tipi için daha uygundur.",
+
+  "motivationHeading": "Her Yatırımcının Ortak Noktası",
+  "motivationIntro": "Yatırımcı türü ne olursa olsun, dört temel kriterde buluşur.",
+  "motivations": [
+    {
+      "title": "Gelir Dayanıklılığı",
+      "desc": "Uzun vadede istikrarlı ve öngörülebilir nakit akışı üretme kapasitesi."
+    },
+    {
+      "title": "Riskin Ölçülebilir Olması",
+      "desc": "Belirsizliğin tanımlanmış risk bantları içinde nitelendirilebilmesi."
+    },
+    {
+      "title": "Takvimin Uygulanabilirliği",
+      "desc": "İnşaat ve devreye alma süreçlerinin gerçekçi ve savunulabilir olması."
+    },
+    {
+      "title": "Çıkış Kabiliyeti",
+      "desc": "Satış veya refinansman için net ve uygulanabilir bir çıkış hikâyesi."
+    }
+  ],
+  "motivationATRNote": "AFA'nın ATR Matrix™ metodolojisi, her projeyi bu dört kritere göre değerlendirir ve risk profilini yatırımcıya sunulabilir düzeye taşır.",
+  "motivationATRLink": "ATR Matrix™ Metodolojisini İnceleyin",
+
+  "ctaHeading": "Projeye Bakmadan Önce\nYatırımcı Tipini Bilin.",
+  "ctaSubtext": "AFA'nın filtrelenmiş proje akışı, risk profili görünür hale getirilmiş ve teknik doğrulaması tamamlanmış projeler sunar.",
+  "ctaPrimary": "Filtrelenmiş Proje Akışına Erişin",
+  "ctaSecondary": "ATR Matrix™ Metodolojisini İnceleyin",
+  "disclaimer": "Proje-spesifik yasal ve teknik doğrulama tavsiye edilir.",
+
+  "motto": "Yatırımdan Önce Netlik."
+}
