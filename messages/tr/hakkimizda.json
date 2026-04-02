@@ -3,84 +3,91 @@
     "sloganLabel": "YATIRIMDAN ÖNCE NETLİK.",
     "h1": "Romanya'da Her Proje Yatırıma Hazır Görünür.",
     "subheadline": "Teknik Doğrulama Başka Bir Tablo Gösterir.",
-    "body": "Bir projenin yatırım değeri dosyasında değil — şebekeye bağlanabilirliğinde, üretim kısıntısı riskinde ve izin zincirinin gerçek sağlamlığında saklıdır. AFA Energy, ATR Matrix™ metodolojisiyle bu katmanları yatırım kararından önce görünür kılar.",
+    "heroBody": "Bir projenin yatırım değeri dosyasında değil — şebekeye bağlanabilirliğinde ve izin zincirinin gerçek sağlamlığında saklıdır. AFA Energy, ATR Matrix™ metodolojisiyle bu katmanları yatırım kararından önce görünür kılar.",
+    "heroCta": "ATR Matrix™ Nasıl Çalışır",
     "metrics": [
       {
         "value": "1,3 GW",
-        "label": "Analiz edilen proje kapasitesi"
+        "label": "Analiz edilen kapasite"
       },
       {
         "value": "500+",
-        "label": "Değerlendirilen ATR belgesi"
+        "label": "ATR değerlendirmesi"
       },
       {
         "value": "10",
-        "label": "AB ülkesi menşeili kurumsal yatırımcı"
+        "label": "AB ülke deneyimi"
       }
     ],
-    "ctaText": "ATR Matrix™ Nasıl Çalışır",
+    "ctaText": "ATR Matrix™ metodolojisini inceleyin",
     "ctaHref": "/tr/atr-matrix"
   },
   "b2": {
     "kicker": "AFA ENERGY HAKKINDA",
     "h2": "Teknik Filtre. Doğru Buluşma.",
     "paragraph1": "AFA Energy; İstanbul ve Bükreş merkezli, Romanya ve Türkiye yenilenebilir enerji piyasalarında teknik değerlendirme ve danışmanlık hizmeti veren uzman bir şirkettir.",
-    "paragraph2": "ATR Matrix™ metodolojisiyle incelediğimiz projeler arasından yalnızca teknik gerçekliği sağlam olanları seçer, kurumsal yatırımcılarla buluştururuz. Geliştirici ile yatırımcı arasındaki bağ, seçim disiplinimizin ürünüdür.",
+    "paragraph2": "ATR Matrix™ metodolojisiyle yapılan teknik değerlendirmelerde projelerin şebeke uygulanabilirliği ve yatırım uygunluğu analiz edilir. Değerlendirme sonucunda yalnızca teknik gerçekliği doğrulanmış projeler yatırımcı incelemesine sunulur.",
     "statusLabel": "ATR Matrix™\nDeğerlendirme Sonuçları",
     "statusCards": [
       {
         "name": "İlerlenebilir",
-        "desc": "Yatırımcı tarafında görünür hale gelir",
-        "icon": "ph-check-circle"
+        "desc": "Yatırımcıya sunulabilir. Teknik ve şebeke koşulları yeterlidir.",
+        "icon": "ph-check-circle",
+        "barLabel": "ONAY"
       },
       {
         "name": "Koşullu",
-        "desc": "Tanımlanmış risk koşullarıyla değerlendirilebilir",
-        "icon": "ph-warning"
+        "desc": "Belirli teknik ve şebeke riskleri içerir. Düzeltmeler sonrası ilerlenebilir.",
+        "icon": "ph-warning",
+        "barLabel": "BEKLE"
       },
       {
-        "name": "Durdurucu Bulgular",
-        "desc": "Yatırımcı tarafında görünür hale gelmez",
-        "icon": "ph-x-circle"
+        "name": "Olumsuz",
+        "desc": "Teknik veya şebeke koşulları yatırım için elverişli değildir.",
+        "icon": "ph-x-circle",
+        "barLabel": "RET"
       }
     ],
     "footnote": "AFA ön teknik değerlendirmesi, ATR dokümanlarının analizi ve şebeke bağlantı koşullarının incelenmesini kapsar.",
     "photoAlt": "AFA Energy teknik değerlendirme",
-    "pullQuoteMain": ["Risk fiyatlanabilir.", "Belirsizlik", "fiyatlandırılamaz."],
+    "pullQuoteMain": ["Risk fiyatlanabilir.", "Belirsizlik fiyatlandırılamaz."],
     "pullQuoteSub": "AFA, projedeki belirsizliği ölçülebilir zemine taşır."
   },
   "b3": {
-    "kicker": "DEĞERLENDİRME ÇERÇEVEMİZ",
+    "sectionLabel": "DEĞERLENDİRME ÇERÇEVEMİZ",
     "h2": "Her Proje Dört Eksende İncelenir.",
     "intro": "AFA, incelediği her projeyi yatırım kararından önce aynı metodolojik disipline tabi tutar. Proje aşaması değişse de çerçeve değişmez.",
+    "ctaBandLabel": "ATR Matrix™",
+    "ctaBandH2": "ATR Matrix™ ile projelerinizi değerlendirin",
+    "ctaBandBody": "4 eksenli analiz metodolojimizle teknik riskleri erken aşamada tespit edin, yatırım kararlarınızı güçlendirin.",
+    "ctaBandButtonLabel": "Metodolojiyi İnceleyin →",
+    "ctaBandButtonHref": "/tr/atr-matrix",
     "cards": [
       {
         "number": "01",
-        "icon": "engineer.svg",
         "title": "Bağlantı Uygulanabilirliği",
-        "body": "ATR belgesi ve bağlantı koşullarının fiili uygulanabilirliği incelenir. Belge ile saha gerçekliği arasındaki boşluklar tespit edilir."
+        "body": "ATR belgesi ve bağlantı koşullarının fiili uygulanabilirliği incelenir. Belge ile saha gerçekliği arasındaki boşluklar tespit edilir.",
+        "icon": "/icons/engineer.svg"
       },
       {
         "number": "02",
-        "icon": "time-is-money.svg",
         "title": "Şebeke Kapasitesi ve Üretim Kısıntısı Riski",
-        "body": "Bölgesel şebeke yükü, mevcut kapasite ve üretim kısıntısı olasılığı değerlendirilir. Curtailment riski yatırım kararından önce görünür kılınır."
+        "body": "Bölgesel şebeke yükü, mevcut kapasite ve üretim kısıntısı olasılığı değerlendirilir. Curtailment riski yatırım kararından önce görünür kılınır.",
+        "icon": "/icons/time-is-money.svg"
       },
       {
         "number": "03",
-        "icon": "increase.svg",
         "title": "Bağlantı Maliyeti ve Şebeke Yatırımı",
-        "body": "Bağlantı bedeli, ilave şebeke işleri ve olası güçlendirme maliyetleri incelenir. ATR sonrası ortaya çıkabilecek gizli CAPEX riskleri erken aşamada görünür hale getirilir."
+        "body": "Bağlantı bedeli, ilave şebeke işleri ve olası güçlendirme maliyetleri incelenir. ATR sonrası ortaya çıkabilecek gizli CAPEX riskleri erken aşamada görünür hale getirilir.",
+        "icon": "/icons/increase.svg"
       },
       {
         "number": "04",
-        "icon": "approve.svg",
         "title": "İzin Zinciri ve Takvim Riski",
-        "body": "Projenin izin zinciri ve düzenleyici süreçleri kronolojik tutarlılık açısından değerlendirilir. Eksik izinler ve prosedürel boşlukların yatırım takvimine etkisi analiz edilir."
+        "body": "Projenin izin zinciri ve düzenleyici süreçleri kronolojik tutarlılık açısından değerlendirilir. Eksik izinler ve prosedürel boşlukların yatırım takvimine etkisi analiz edilir.",
+        "icon": "/icons/approve.svg"
       }
-    ],
-    "ctaText": "ATR Matrix™ metodolojisini inceleyin",
-    "ctaHref": "/tr/atr-matrix"
+    ]
   },
   "b4": {
     "kicker": "NEDEN AFA ENERGY",
@@ -117,25 +124,27 @@
   "b5": {
     "kicker": "PİYASA DİNAMİKLERİ",
     "h2": "İki Piyasa. Tek Karar Disiplini.",
+    "intro": "Romanya ve Türkiye, farklı şebeke yapıları ve düzenleyici dinamikler nedeniyle farklı risk türleri üretir. Aynı proje tipi, iki piyasada farklı belirsizlik kaynaklarıyla değerlendirilir. AFA'nın yaklaşımı, bu riskleri yatırım komitesi değerlendirmesine uygun, karşılaştırılabilir bir bağlamda görünür kılmaya odaklanır.",
     "markets": [
       {
         "number": "01",
         "name": "Romanya",
         "leftLabel": "KIRILMA NOKTASI",
-        "leftBody": "Şebeke bağlantı koşullarının belirsizliği, proje geliştirme sürecinin en kritik risk faktörüdür. ATR Matrix™ bu belirsizliği erken aşamada ölçülebilir verilere dönüştürür.",
+        "leftBody": "ATR belgesi teorik bağlantı hakkı tanır; ancak fiili şebeke kapasitesi ve üretim kısıntısı riski (curtailment) çoğu zaman belgede görünen tablodan farklı bir tablo ortaya koyabilir.",
         "rightLabel": "YATIRIM KOMİTESİ ÇEVİRİSİ",
-        "rightBody": "Bağlantı riskinin finansal etkisi netleştirilir; yatırım komitesi hangi koşullarda ilerleneceğini, hangi senaryolarda durulacağını önceden görür."
+        "rightBody": "Gelir görünürlüğü, takvim gerçekçiliği ve finansmana uygunluk üzerinde belirsizlik bandı oluşur. Bu belirsizlik hangi riskin hangi koşulla üstlenileceğini doğrudan etkiler."
       },
       {
         "number": "02",
         "name": "Türkiye",
         "leftLabel": "KIRILMA NOKTASI",
-        "leftBody": "Düzenleyici çerçevenin dinamik yapısı ve şebeke yatırımlarının zamanlaması, proje ekonomisini doğrudan etkiler. Mevzuat takibi teknik analizle birleşmelidir.",
+        "leftBody": "Düzenleyici çerçeve genel olarak sabit görünse de uygulama, Elektrik Dağıtım Şirketi düzeyinde farklılaşabilir. Bu farklılıklar; teorik kapasite ile fiili bağlantı gerçekliği arasındaki ayrışma, izin zinciri tutarsızlıkları ve bölgesel şebeke kısıtlarının öngörülebilirlik düzeyi gibi başlıklarda daha belirgin hale gelir.",
         "rightLabel": "YATIRIM KOMİTESİ ÇEVİRİSİ",
-        "rightBody": "İzin zinciri ve şebeke yatırım takvimi riskleri, finansal modelde senaryolaştırılır; yatırımcı bilinçli taahhüt kararı alır."
+        "rightBody": "Uygulama farklılıkları, proje takvimi, izin zinciri ve sözleşme risk dağılımının nakit akışı güvenilirliği üzerindeki belirsizlik bandını genişletebilir."
       }
     ],
-    "closingStatement": "Farklı regülasyon yapılarına rağmen, AFA'nın teknik değerlendirme disiplini her iki piyasada da tutarlı karar zemini sunar."
+    "closingParagraph1": "Aynı proje başlığı, iki piyasada farklı belirsizlik kaynakları nedeniyle farklı karar tartışmaları üretir. Piyasa dinamiklerini karşılaştırılabilir bir çerçevede okumak, yatırım komitesinin bu farkları erken aşamada ayırt etmesine zemin hazırlar.",
+    "closingParagraph2": "Romanya merkezli bu analiz çerçevesi, Orta ve Doğu Avrupa'daki gelişen yenilenebilir enerji piyasalarına yönelik genişleyen bir kapsama zemin hazırlamaktadır."
   },
   "b6b7": {
     "pullQuote": "Başkalarının varsaydığını biz doğrularız.",
@@ -146,6 +155,6 @@
     "cta1Href": "/tr/atr-matrix",
     "cta2Text": "Teknik Ön İnceleme Talep Edin",
     "cta2Href": "/tr/contact",
-    "disclaimer": "Proje-spesifik yasal ve teknik doğrulama tavsiye edilir."
+    "disclaimer": "AFA'nın çalışması ön teknik değerlendirme ve süreç koordinasyonu kapsamındadır. Projeye özgü nihai karar öncesinde, bağımsız hukuki durum tespiti ve gerekli görülen teknik doğrulamalar ayrıca yürütülmelidir."
   }
 }

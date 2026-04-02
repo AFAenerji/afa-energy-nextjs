@@ -15,8 +15,10 @@ interface B5PiyasaDinamikleriProps {
   content: {
     kicker: string;
     h2: string;
+    intro: string;
     markets: Market[];
-    closingStatement: string;
+    closingParagraph1: string;
+    closingParagraph2: string;
   };
 }
 
@@ -57,6 +59,21 @@ export default function B5PiyasaDinamikleri({ content }: B5PiyasaDinamikleriProp
             {content.h2}
           </h2>
         </div>
+
+        {/* Intro */}
+        <p
+          style={{
+            fontFamily: 'Open Sans, sans-serif',
+            fontSize: '15px',
+            lineHeight: '1.7',
+            color: 'rgba(255,255,255,0.82)',
+            maxWidth: '720px',
+            margin: '0 auto 48px',
+            textAlign: 'center',
+          }}
+        >
+          {content.intro}
+        </p>
 
         {/* Divider */}
         <div style={{ height: '1px', background: 'rgba(255,255,255,0.15)', marginBottom: '48px' }} />
@@ -163,26 +180,36 @@ export default function B5PiyasaDinamikleri({ content }: B5PiyasaDinamikleriProp
 
         {/* Gold Pull Statement */}
         <div
-          className={clsx('border-afa-gold', 'rounded-r-lg')}
           style={{
             marginTop: '48px',
-            padding: '32px 40px',
-            background: 'rgba(255,203,0,0.10)',
-            borderLeft: '3px solid',
+            padding: '28px 36px',
+            background: 'rgba(255,203,0,0.18)',
+            borderLeft: '4px solid #FFCB00',
             borderRadius: '0 8px 8px 0',
           }}
         >
           <p
-            className={clsx('text-afa-gold', 'font-semibold')}
+            className="font-semibold"
             style={{
               fontFamily: 'Montserrat, sans-serif',
-              fontSize: '18px',
-              lineHeight: '1.5',
+              fontSize: '17px',
+              lineHeight: '1.55',
               fontWeight: 600,
-              maxWidth: '700px',
+              color: '#FFCB00',
             }}
           >
-            {content.closingStatement}
+            {content.closingParagraph1}
+          </p>
+          <p
+            style={{
+              fontFamily: 'Open Sans, sans-serif',
+              fontSize: '14px',
+              lineHeight: '1.6',
+              color: 'rgba(255,203,0,0.75)',
+              marginTop: '12px',
+            }}
+          >
+            {content.closingParagraph2}
           </p>
         </div>
       </div>

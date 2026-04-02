@@ -1,24 +1,25 @@
 {
   "b1": {
     "sloganLabel": "CLARITY BEFORE INVESTMENT.",
-    "h1": "In Romania, Every Project Appears Investment-Ready.",
-    "subheadline": "Technical Validation Reveals a Different Picture.",
-    "body": "A project's investment value lies not in its file — but in its grid connectivity, production curtailment risk, and the true solidity of its permit chain. AFA Energy makes these layers visible before the investment decision through the ATR Matrix™ methodology.",
+    "h1": "Every Project in Romania Looks Investment-Ready.",
+    "subheadline": "Technical Validation Shows a Different Picture.",
+    "heroBody": "A project's investment value lies not in its documents — but in its grid connectivity and the true integrity of its permit chain. AFA Energy makes these layers visible before the investment decision, through the ATR Matrix™ methodology.",
+    "heroCta": "How ATR Matrix™ Works",
     "metrics": [
       {
         "value": "1.3 GW",
-        "label": "Project capacity analyzed"
+        "label": "Capacity analysed"
       },
       {
         "value": "500+",
-        "label": "ATR documents assessed"
+        "label": "ATR assessments"
       },
       {
         "value": "10",
-        "label": "EU-origin institutional investors"
+        "label": "EU countries"
       }
     ],
-    "ctaText": "How ATR Matrix™ Works",
+    "ctaText": "Explore ATR Matrix™ methodology",
     "ctaHref": "/en/atr-matrix"
   },
   "b2": {
@@ -31,17 +32,20 @@
       {
         "name": "Proceed",
         "desc": "Becomes visible on the investor side",
-        "icon": "ph-check-circle"
+        "icon": "ph-check-circle",
+        "barLabel": "VIABLE"
       },
       {
         "name": "Conditional",
         "desc": "Can be evaluated with defined risk conditions",
-        "icon": "ph-warning"
+        "icon": "ph-warning",
+        "barLabel": "CONDITIONAL"
       },
       {
         "name": "Blocking Findings",
         "desc": "Does not become visible on the investor side",
-        "icon": "ph-x-circle"
+        "icon": "ph-x-circle",
+        "barLabel": "NEGATIVE"
       }
     ],
     "footnote": "AFA preliminary technical assessment covers analysis of ATR documents and examination of grid connection conditions.",
@@ -50,37 +54,40 @@
     "pullQuoteSub": "AFA brings project uncertainty to a measurable ground."
   },
   "b3": {
-    "kicker": "OUR ASSESSMENT FRAMEWORK",
+    "sectionLabel": "OUR ASSESSMENT FRAMEWORK",
     "h2": "Every Project Is Examined on Four Axes.",
     "intro": "AFA subjects every project it examines to the same methodological discipline before the investment decision. The project phase may change, but the framework does not.",
+    "ctaBandLabel": "ATR Matrix™",
+    "ctaBandH2": "Evaluate your projects with ATR Matrix™",
+    "ctaBandBody": "Identify technical risks at an early stage with our 4-axis analysis methodology and strengthen your investment decisions.",
+    "ctaBandButtonLabel": "Explore the Methodology →",
+    "ctaBandButtonHref": "/en/atr-matrix",
     "cards": [
       {
         "number": "01",
-        "icon": "engineer.svg",
         "title": "Connection Applicability",
-        "body": "The actual applicability of ATR documents and connection conditions is examined. Gaps between documentation and field reality are identified."
+        "body": "The actual applicability of ATR documents and connection conditions is examined. Gaps between documentation and field reality are identified.",
+        "icon": "/icons/engineer.svg"
       },
       {
         "number": "02",
-        "icon": "time-is-money.svg",
         "title": "Grid Capacity and Production Curtailment Risk",
-        "body": "Regional grid load, existing capacity, and production curtailment probability are assessed. Curtailment risk is made visible before the investment decision."
+        "body": "Regional grid load, existing capacity, and production curtailment probability are assessed. Curtailment risk is made visible before the investment decision.",
+        "icon": "/icons/time-is-money.svg"
       },
       {
         "number": "03",
-        "icon": "increase.svg",
         "title": "Connection Cost and Grid Investment",
-        "body": "Connection fees, additional grid works, and possible reinforcement costs are examined. Hidden CAPEX risks that may arise post-ATR are made visible at an early stage."
+        "body": "Connection fees, additional grid works, and possible reinforcement costs are examined. Hidden CAPEX risks that may arise post-ATR are made visible at an early stage.",
+        "icon": "/icons/increase.svg"
       },
       {
         "number": "04",
-        "icon": "approve.svg",
         "title": "Permit Chain and Schedule Risk",
-        "body": "The project's permit chain and regulatory processes are assessed for chronological consistency. The impact of missing permits and procedural gaps on the investment schedule is analyzed."
+        "body": "The project's permit chain and regulatory processes are assessed for chronological consistency. The impact of missing permits and procedural gaps on the investment schedule is analyzed.",
+        "icon": "/icons/approve.svg"
       }
-    ],
-    "ctaText": "Explore ATR Matrix™ methodology",
-    "ctaHref": "/en/atr-matrix"
+    ]
   },
   "b4": {
     "kicker": "WHY AFA ENERGY",
@@ -117,25 +124,27 @@
   "b5": {
     "kicker": "MARKET DYNAMICS",
     "h2": "Two Markets. One Decision Discipline.",
+    "intro": "Romania and Turkey produce different types of risk due to different grid structures and regulatory dynamics. The same project type is evaluated with different sources of uncertainty in two markets. AFA's approach focuses on making these risks visible in a comparable context suitable for investment committee assessment.",
     "markets": [
       {
         "number": "01",
         "name": "Romania",
         "leftLabel": "BREAKING POINT",
-        "leftBody": "The uncertainty of grid connection conditions is the most critical risk factor in the project development process. ATR Matrix™ transforms this uncertainty into measurable data at an early stage.",
+        "leftBody": "The ATR document grants a theoretical connection right; however, actual grid capacity and production curtailment risk often present a different picture from what appears in the document.",
         "rightLabel": "INVESTMENT COMMITTEE TRANSLATION",
-        "rightBody": "The financial impact of connection risk is clarified; the investment committee sees in advance under which conditions to proceed and in which scenarios to halt."
+        "rightBody": "An uncertainty band forms over revenue visibility, schedule realism, and bankability. This uncertainty directly affects which risk is assumed under which conditions."
       },
       {
         "number": "02",
         "name": "Turkey",
         "leftLabel": "BREAKING POINT",
-        "leftBody": "The dynamic nature of the regulatory framework and the timing of grid investments directly affect project economics. Regulatory monitoring must be combined with technical analysis.",
+        "leftBody": "Although the regulatory framework appears generally stable, implementation can vary at the Electricity Distribution Company level. These differences become more pronounced in areas such as the divergence between theoretical capacity and actual connection reality, permit chain inconsistencies, and the predictability of regional grid constraints.",
         "rightLabel": "INVESTMENT COMMITTEE TRANSLATION",
-        "rightBody": "Permit chain and grid investment schedule risks are scenarioed in the financial model; the investor makes an informed commitment decision."
+        "rightBody": "Implementation differences can widen the uncertainty band on cash flow reliability through project schedule, permit chain, and contractual risk allocation."
       }
     ],
-    "closingStatement": "Despite different regulatory structures, AFA's technical assessment discipline provides a consistent decision ground in both markets."
+    "closingParagraph1": "The same project title produces different decision discussions in two markets due to different sources of uncertainty. Reading market dynamics in a comparable framework prepares the ground for the investment committee to distinguish these differences at an early stage.",
+    "closingParagraph2": "This Romania-centered analysis framework lays the groundwork for an expanding scope toward developing renewable energy markets in Central and Eastern Europe."
   },
   "b6b7": {
     "pullQuote": "We verify what others assume.",
@@ -146,6 +155,6 @@
     "cta1Href": "/en/atr-matrix",
     "cta2Text": "Request Technical Pre-Assessment",
     "cta2Href": "/en/contact",
-    "disclaimer": "Project-specific legal and technical validation is advised."
+    "disclaimer": "AFA's scope covers preliminary technical assessment and process coordination. Prior to project-specific final decisions, independent legal due diligence and required technical verifications should be conducted separately."
   }
 }

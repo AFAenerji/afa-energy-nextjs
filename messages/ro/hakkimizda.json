@@ -1,24 +1,16 @@
 {
   "b1": {
     "sloganLabel": "CLARITATE ÎNAINTE DE INVESTIȚIE.",
-    "h1": "În România, Fiecare Proiect Pare Gata de Investiție.",
-    "subheadline": "Validarea Tehnică Arată un Tablou Diferit.",
-    "body": "Valoarea de investiție a unui proiect nu se află în dosar — ci în conectivitatea sa la rețea, în riscul de reducere a producției și în soliditatea reală a lanțului de autorizații. AFA Energy face aceste straturi vizibile înainte de decizia de investiție prin metodologia ATR Matrix™.",
+    "h1": "Fiecare Proiect din România Pare Gata de Investiție.",
+    "subheadline": "Validarea Tehnică Arată un Alt Tablou.",
+    "heroBody": "Valoarea de investiție a unui proiect nu stă în documente — ci în conectivitatea la rețea și soliditatea reală a lanțului de autorizare. AFA Energy face aceste straturi vizibile înainte de decizia de investiție, prin metodologia ATR Matrix™.",
+    "heroCta": "Cum Funcționează ATR Matrix™",
     "metrics": [
-      {
-        "value": "1,3 GW",
-        "label": "Capacitate de proiect analizată"
-      },
-      {
-        "value": "500+",
-        "label": "Documente ATR evaluate"
-      },
-      {
-        "value": "10",
-        "label": "Investitori instituționali din UE"
-      }
+      { "value": "1,3 GW", "label": "Capacitate analizată" },
+      { "value": "500+", "label": "Evaluări ATR" },
+      { "value": "10", "label": "Țări UE" }
     ],
-    "ctaText": "Cum Funcționează ATR Matrix™",
+    "ctaText": "Explorați metodologia ATR Matrix™",
     "ctaHref": "/ro/atr-matrix"
   },
   "b2": {
@@ -31,17 +23,20 @@
       {
         "name": "Continuare",
         "desc": "Devine vizibil pe partea investitorului",
-        "icon": "ph-check-circle"
+        "icon": "ph-check-circle",
+        "barLabel": "VIABIL"
       },
       {
         "name": "Condiționat",
         "desc": "Poate fi evaluat cu condiții de risc definite",
-        "icon": "ph-warning"
+        "icon": "ph-warning",
+        "barLabel": "CONDIȚIONAT"
       },
       {
         "name": "Constatări Blocante",
         "desc": "Nu devine vizibil pe partea investitorului",
-        "icon": "ph-x-circle"
+        "icon": "ph-x-circle",
+        "barLabel": "NEGATIV"
       }
     ],
     "footnote": "Evaluarea tehnică preliminară AFA acoperă analiza documentelor ATR și examinarea condițiilor de conectare la rețea.",
@@ -50,37 +45,40 @@
     "pullQuoteSub": "AFA aduce incertitudinea proiectului pe un teren măsurabil."
   },
   "b3": {
-    "kicker": "CADRUL NOSTRU DE EVALUARE",
+    "sectionLabel": "CADRUL NOSTRU DE EVALUARE",
     "h2": "Fiecare Proiect Este Examinat pe Patru Axe.",
     "intro": "AFA supune fiecare proiect pe care îl examinează la aceeași disciplină metodologică înainte de decizia de investiție. Faza proiectului poate să se schimbe, dar cadrul nu.",
+    "ctaBandLabel": "ATR Matrix™",
+    "ctaBandH2": "Evaluați proiectele cu ATR Matrix™",
+    "ctaBandBody": "Identificați riscurile tehnice într-un stadiu timpuriu cu metodologia noastră de analiză pe 4 axe și consolidați deciziile de investiție.",
+    "ctaBandButtonLabel": "Explorați Metodologia →",
+    "ctaBandButtonHref": "/ro/atr-matrix",
     "cards": [
       {
         "number": "01",
-        "icon": "engineer.svg",
         "title": "Aplicabilitatea Conexiunii",
-        "body": "Aplicabilitatea efectivă a documentelor ATR și a condițiilor de conexiune este examinată. Golurile dintre documentație și realitatea din teren sunt identificate."
+        "body": "Aplicabilitatea efectivă a documentelor ATR și a condițiilor de conexiune este examinată. Golurile dintre documentație și realitatea din teren sunt identificate.",
+        "icon": "/icons/engineer.svg"
       },
       {
         "number": "02",
-        "icon": "time-is-money.svg",
         "title": "Capacitatea Rețelei și Riscul de Reducere a Producției",
-        "body": "Sarcina regională a rețelei, capacitatea existentă și probabilitatea de reducere a producției sunt evaluate. Riscul de curtailment este făcut vizibil înainte de decizia de investiție."
+        "body": "Sarcina regională a rețelei, capacitatea existentă și probabilitatea de reducere a producției sunt evaluate. Riscul de curtailment este făcut vizibil înainte de decizia de investiție.",
+        "icon": "/icons/time-is-money.svg"
       },
       {
         "number": "03",
-        "icon": "increase.svg",
         "title": "Costul Conexiunii și Investiția în Rețea",
-        "body": "Taxele de conexiune, lucrările suplimentare la rețea și costurile posibile de consolidare sunt examinate. Riscurile CAPEX ascunse care pot apărea post-ATR sunt făcute vizibile într-un stadiu timpuriu."
+        "body": "Taxele de conexiune, lucrările suplimentare la rețea și costurile posibile de consolidare sunt examinate. Riscurile CAPEX ascunse care pot apărea post-ATR sunt făcute vizibile într-un stadiu timpuriu.",
+        "icon": "/icons/increase.svg"
       },
       {
         "number": "04",
-        "icon": "approve.svg",
         "title": "Lanțul de Autorizații și Riscul de Program",
-        "body": "Lanțul de autorizații al proiectului și procesele de reglementare sunt evaluate pentru consistență cronologică. Impactul autorizațiilor lipsă și al golurilor procedurale asupra programului de investiție este analizat."
+        "body": "Lanțul de autorizații al proiectului și procesele de reglementare sunt evaluate pentru consistență cronologică. Impactul autorizațiilor lipsă și al golurilor procedurale asupra programului de investiție este analizat.",
+        "icon": "/icons/approve.svg"
       }
-    ],
-    "ctaText": "Explorați metodologia ATR Matrix™",
-    "ctaHref": "/ro/atr-matrix"
+    ]
   },
   "b4": {
     "kicker": "DE CE AFA ENERGY",
@@ -117,25 +115,27 @@
   "b5": {
     "kicker": "DINAMICA PIEȚELOR",
     "h2": "Două Piețe. O Singură Disciplină Decizională.",
+    "intro": "România și Turcia produc tipuri diferite de risc datorită structurilor diferite ale rețelelor și dinamicilor de reglementare. Același tip de proiect este evaluat cu surse diferite de incertitudine pe cele două piețe. Abordarea AFA se concentrează pe vizibilizarea acestor riscuri într-un context comparabil, adecvat evaluării comitetului de investiții.",
     "markets": [
       {
         "number": "01",
         "name": "România",
         "leftLabel": "PUNCT DE RUPERE",
-        "leftBody": "Incertitudinea condițiilor de conectare la rețea este cel mai critic factor de risc în procesul de dezvoltare a proiectului. ATR Matrix™ transformă această incertitudine în date măsurabile într-un stadiu timpuriu.",
+        "leftBody": "Documentul ATR acordă un drept teoretic de conexiune; cu toate acestea, capacitatea reală a rețelei și riscul de reducere a producției (curtailment) prezintă adesea un tablou diferit de cel care apare în document.",
         "rightLabel": "TRADUCERE PENTRU COMITETUL DE INVESTIȚII",
-        "rightBody": "Impactul financiar al riscului de conexiune este clarificat; comitetul de investiții vede în avans în ce condiții să procedeze și în ce scenarii să se oprească."
+        "rightBody": "Se formează o bandă de incertitudine asupra vizibilității veniturilor, realismului calendarului și bancabilității. Această incertitudine afectează direct ce risc este asumat în ce condiții."
       },
       {
         "number": "02",
         "name": "Turcia",
         "leftLabel": "PUNCT DE RUPERE",
-        "leftBody": "Natura dinamică a cadrului de reglementare și sincronizarea investițiilor în rețea afectează direct economia proiectului. Monitorizarea reglementărilor trebuie combinată cu analiza tehnică.",
+        "leftBody": "Deși cadrul de reglementare pare în general stabil, implementarea poate varia la nivelul Companiei de Distribuție a Electricității. Aceste diferențe devin mai pronunțate în domenii precum divergența dintre capacitatea teoretică și realitatea efectivă a conexiunii, inconsistențele lanțului de autorizații și nivelul de previzibilitate al constrângerilor regionale ale rețelei.",
         "rightLabel": "TRADUCERE PENTRU COMITETUL DE INVESTIȚII",
-        "rightBody": "Riscurile lanțului de autorizații și ale calendarului investițiilor în rețea sunt scenarioare în modelul financiar; investitorul ia o decizie de angajament informată."
+        "rightBody": "Diferențele de implementare pot lărgi banda de incertitudine asupra fiabilității fluxului de numerar prin calendarul proiectului, lanțul de autorizații și alocarea contractuală a riscurilor."
       }
     ],
-    "closingStatement": "În ciuda structurilor de reglementare diferite, disciplina de evaluare tehnică a AFA oferă un teren decizional consistent pe ambele piețe."
+    "closingParagraph1": "Același titlu de proiect produce discuții decizionale diferite pe cele două piețe din cauza surselor diferite de incertitudine. Citirea dinamicilor pieței într-un cadru comparabil pregătește terenul pentru ca comitetul de investiții să distingă aceste diferențe într-un stadiu timpuriu.",
+    "closingParagraph2": "Acest cadru de analiză centrat pe România pregătește terenul pentru o acoperire în expansiune către piețele de energie regenerabilă în dezvoltare din Europa Centrală și de Est."
   },
   "b6b7": {
     "pullQuote": "Verificăm ceea ce alții presupun.",
@@ -146,6 +146,6 @@
     "cta1Href": "/ro/atr-matrix",
     "cta2Text": "Solicitați Pre-evaluare Tehnică",
     "cta2Href": "/ro/contact",
-    "disclaimer": "Se recomandă validare juridică și tehnică specifică proiectului."
+    "disclaimer": "Activitatea AFA acoperă evaluarea tehnică preliminară și coordonarea procesului. Înainte de deciziile finale specifice proiectului, due diligence-ul juridic independent și verificările tehnice necesare trebuie efectuate separat."
   }
 }

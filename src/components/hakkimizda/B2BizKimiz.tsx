@@ -7,6 +7,7 @@ interface StatusCard {
   name: string;
   desc: string;
   icon: string;
+  barLabel: string;
 }
 
 interface B2BizKimizProps {
@@ -103,7 +104,7 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
               fontSize: '11px',
               letterSpacing: '0.18em',
               fontWeight: 600,
-              color: '#9CA3AF',
+              color: '#0F2E2C',
               marginTop: '24px',
               marginBottom: '14px',
               whiteSpace: 'pre-line',
@@ -119,94 +120,113 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
               const isYellow = idx === 1;
               const isRed = idx === 2;
 
-              const iconBgColor = isGreen
-                ? 'rgba(40,175,176,0.12)'
+              const barGradient = isGreen
+                ? 'linear-gradient(180deg, #1E9A9B 0%, #34C5C6 100%)'
                 : isYellow
-                  ? 'rgba(255,203,0,0.15)'
-                  : 'rgba(242,95,92,0.12)';
+                  ? 'linear-gradient(180deg, #E6B800 0%, #FFD740 100%)'
+                  : 'linear-gradient(180deg, #D94542 0%, #F47572 100%)';
 
-              const iconColor = isGreen
-                ? 'text-afa-accent'
+              const barLabelColor = isYellow ? '#0F2E2C' : '#FFFFFF';
+
+              const borderLeftColor = isGreen
+                ? '#28AFB0'
                 : isYellow
-                  ? ''
-                  : 'text-afa-warning';
+                  ? '#FFCB00'
+                  : '#F25F5C';
 
-              const iconColorInline = isYellow ? { color: '#B8880A' } : {};
-
-              const nameColor = isGreen
-                ? 'text-afa-accent'
+              const titleColor = isGreen
+                ? '#28AFB0'
                 : isYellow
-                  ? ''
-                  : 'text-afa-warning';
+                  ? '#C9950A'
+                  : '#F25F5C';
 
-              const nameColorInline = isYellow ? { color: '#B8880A' } : {};
-
-              const bandColor = isGreen
-                ? 'bg-afa-accent'
+              const hoverBg = isGreen
+                ? 'rgba(40,175,176,0.06)'
                 : isYellow
-                  ? 'bg-afa-gold'
-                  : 'bg-afa-warning';
+                  ? 'rgba(255,203,0,0.06)'
+                  : 'rgba(242,95,92,0.06)';
 
               return (
                 <div
                   key={idx}
-                  className={clsx('bg-white', 'rounded-2xl', 'overflow-hidden', 'mb-3', 'transition-box-shadow', 'duration-[120ms]', 'ease-linear')}
                   style={{
-                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    minHeight: '120px',
+                    padding: '22px',
+                    marginBottom: '16px',
+                    borderRadius: '12px',
+                    border: '1px solid #E5E7EB',
+                    borderLeft: `4px solid ${borderLeftColor}`,
+                    background: '#FFFFFF',
                     maxWidth: '480px',
-                    boxShadow:
-                      '0 1px 3px rgba(0,0,0,0.06), 0 4px 14px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.9)',
+                    transition: 'background-color 120ms linear, box-shadow 120ms linear',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = hoverBg;
+                    e.currentTarget.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.08)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = '#FFFFFF';
+                    e.currentTarget.style.boxShadow = 'none';
                   }}
                 >
-                  {/* Card Inner */}
+                  {/* Pill Bar */}
                   <div
-                    className={clsx('flex', 'items-center', 'gap-4')}
-                    style={{ padding: '18px 20px 14px 18px' }}
+                    style={{
+                      width: '36px',
+                      minHeight: '76px',
+                      borderRadius: '50px',
+                      flexShrink: 0,
+                      marginRight: '16px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      background: barGradient,
+                      boxShadow: 'inset 0 3px 6px rgba(0,0,0,0.30), inset 0 -1px 3px rgba(255,255,255,0.15), inset 2px 0 5px rgba(0,0,0,0.20)',
+                    }}
                   >
-                    {/* Icon Circle */}
-                    <div
-                      className={`flex items-center justify-center rounded-full flex-shrink-0 ${iconColor}`}
+                    <span
                       style={{
-                        width: '50px',
-                        height: '50px',
-                        background: iconBgColor,
-                        fontSize: '24px',
-                        ...iconColorInline,
+                        writingMode: 'vertical-rl',
+                        transform: 'rotate(180deg)',
+                        fontSize: '10px',
+                        fontWeight: 700,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        color: barLabelColor,
                       }}
                     >
-                      <i className={card.icon} />
-                    </div>
-
-                    {/* Text */}
-                    <div className="flex-1">
-                      <div
-                        className={`font-bold ${nameColor}`}
-                        style={{
-                          fontFamily: 'Open Sans, sans-serif',
-                          fontSize: '14px',
-                          lineHeight: '1.3',
-                          fontWeight: 700,
-                          marginBottom: '3px',
-                          ...nameColorInline,
-                        }}
-                      >
-                        {card.name}
-                      </div>
-                      <div
-                        style={{
-                          fontFamily: 'Open Sans, sans-serif',
-                          fontSize: '13px',
-                          lineHeight: '1.4',
-                          color: '#6B7280',
-                        }}
-                      >
-                        {card.desc}
-                      </div>
-                    </div>
+                      {card.barLabel}
+                    </span>
                   </div>
 
-                  {/* Bottom Band */}
-                  <div className={bandColor} style={{ height: '4px', width: '100%' }} />
+                  {/* Text */}
+                  <div style={{ flex: 1 }}>
+                    <div
+                      style={{
+                        fontFamily: 'Open Sans, sans-serif',
+                        fontSize: '14px',
+                        lineHeight: '1.3',
+                        fontWeight: 700,
+                        marginBottom: '4px',
+                        color: titleColor,
+                      }}
+                    >
+                      {card.name}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: 'Open Sans, sans-serif',
+                        fontSize: '13px',
+                        lineHeight: '1.4',
+                        color: '#6B7280',
+                      }}
+                    >
+                      {card.desc}
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -217,7 +237,7 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
             className="italic"
             style={{
               fontFamily: 'Open Sans, sans-serif',
-              fontSize: '11px',
+              fontSize: '13px',
               lineHeight: '1.65',
               color: '#6B7280',
               marginTop: '18px',
@@ -255,11 +275,13 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
 
             {/* Gold Pull-quote Overlay */}
             <div
-              className={clsx('absolute', 'bottom-0', 'left-0', 'right-0', 'flex', 'flex-col', 'justify-center')}
+              className={clsx('absolute', 'bottom-0', 'left-0', 'right-0', 'flex', 'flex-col')}
               style={{
                 height: '48%',
                 background: 'rgba(255,203,0,0.92)',
-                padding: '20px 24px 22px',
+                padding: '24px 28px 28px',
+                justifyContent: 'flex-end',
+                flexDirection: 'column',
                 WebkitMaskImage: 'linear-gradient(transparent, black 30%)',
                 maskImage: 'linear-gradient(transparent, black 30%)',
               }}
@@ -270,7 +292,7 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
                 style={{
                   fontFamily: 'Montserrat, sans-serif',
                   fontSize: 'clamp(16px, 1.8vw, 22px)',
-                  lineHeight: '1.12',
+                  lineHeight: '1.35',
                   color: '#0F2E2C',
                   letterSpacing: '-0.01em',
                   marginBottom: '8px',

@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import Link from 'next/link';
 
 interface B1HeroProps {
@@ -7,7 +8,8 @@ interface B1HeroProps {
     sloganLabel: string;
     h1: string;
     subheadline: string;
-    body: string;
+    heroBody: string;
+    heroCta: string;
     metrics: Array<{ value: string; label: string }>;
     ctaText: string;
     ctaHref: string;
@@ -22,12 +24,13 @@ export default function B1Hero({ content }: B1HeroProps) {
 
       {/* Grid Pattern Overlay */}
       <div
-        className={clsx('absolute', 'inset-0', 'pointer-events-none')}
         style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
-          backgroundSize: '56px 56px',
+          position: 'absolute',
+          inset: 0,
           zIndex: 0,
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          pointerEvents: 'none',
         }}
       />
 
@@ -81,109 +84,77 @@ export default function B1Hero({ content }: B1HeroProps) {
         </p>
 
         {/* Body */}
-        <p
-          style={{
-            fontFamily: 'Open Sans, sans-serif',
-            fontSize: 'clamp(14px, 1.15vw, 16px)',
-            lineHeight: '1.75',
-            maxWidth: '600px',
-            marginTop: '18px',
-            color: 'rgba(255,255,255,0.82)',
-          }}
-        >
-          {content.body}
+        <p style={{
+          fontSize: '15px',
+          color: 'rgba(255,255,255,0.78)',
+          lineHeight: 1.7,
+          maxWidth: '420px',
+          margin: '24px 0 0',
+        }}>
+          {content.heroBody}
         </p>
 
-        {/* Metric Cards */}
-        <div
-          className={clsx('grid', 'gap-6')}
-          style={{
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            marginTop: '32px',
-          }}
-        >
-          {content.metrics.map((metric, idx) => {
-            const borderColorClass =
-              idx === 0
-                ? 'border-afa-accent'
-                : idx === 1
-                  ? ''
-                  : 'border-afa-gold';
-            const borderColorInline = idx === 1 ? { borderBottomColor: '#4CC9F0' } : {};
-
-            return (
-              <div
-                key={idx}
-                className={`relative rounded-2xl ${borderColorClass}`}
-                style={{
-                  background: 'linear-gradient(160deg, #1f7d7a 0%, #165f5c 55%, #0f4846 100%)',
-                  padding: '36px 32px 32px',
-                  border: '1px solid rgba(40,175,176,0.25)',
-                  borderBottomWidth: '3px',
-                  boxShadow:
-                    '0 1px 0 rgba(255,255,255,0.12) inset, 0 -4px 0 rgba(0,0,0,0.30) inset, 0 20px 48px rgba(0,0,0,0.40), 0 6px 16px rgba(0,0,0,0.22)',
-                  overflow: 'hidden',
-                  ...borderColorInline,
-                }}
-              >
-                {/* Radial highlight */}
-                <div
-                  className="absolute"
-                  style={{
-                    top: '0',
-                    right: '0',
-                    width: '120px',
-                    height: '120px',
-                    background: 'radial-gradient(circle at top right, rgba(255,255,255,0.09), transparent 70%)',
-                    pointerEvents: 'none',
-                  }}
-                />
-
-                <div className={clsx('text-afa-gold', 'font-extrabold')} style={{ fontSize: 'clamp(40px, 3.8vw, 54px)', lineHeight: '1', fontFamily: 'Montserrat, sans-serif', fontWeight: 800 }}>
-                  {metric.value}
-                </div>
-                <div style={{ fontSize: '13px', lineHeight: '1.45', fontFamily: 'Open Sans, sans-serif', marginTop: '8px', color: 'rgba(255,255,255,0.70)' }}>
-                  {metric.label}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {/* CTA Button */}
-        <Link
-          href={content.ctaHref}
-          className={clsx('inline-flex', 'items-center', 'gap-2', 'bg-afa-gold', 'text-afa-deep', 'font-bold', 'rounded-md', 'transition-background-color', 'duration-[120ms]', 'ease-linear', 'transition-box-shadow')}
-          style={{
-            padding: '13px 24px',
-            fontFamily: 'Open Sans, sans-serif',
-            fontSize: '13px',
-            fontWeight: 700,
-            boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
-            marginTop: '22px',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#E6B800';
-            e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.15)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = '';
-            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.25)';
-          }}
-        >
-          <span>{content.ctaText}</span>
-          <span
-            className={clsx('inline-block', 'transition-transform', 'duration-[120ms]', 'ease-linear')}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateX(4px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateX(0)';
-            }}
-          >
-            →
-          </span>
+        <Link href="/tr/atr-matrix" style={{
+          display: 'inline-block',
+          background: '#FFCB00',
+          color: '#0F2E2C',
+          fontWeight: 700,
+          fontSize: '15px',
+          padding: '14px 28px',
+          borderRadius: '6px',
+          textDecoration: 'none',
+          marginTop: '32px',
+          marginBottom: '40px',
+          transition: 'background-color 120ms linear',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = '#E6B800';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = '#FFCB00';
+        }}>
+          {content.heroCta} →
         </Link>
+
+        {/* Metric Cards */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '12px',
+          width: 'fit-content',
+        }}>
+          {content.metrics.map((metric, index) => (
+            <div key={index} style={{
+              background: 'linear-gradient(160deg, #1E7A77 0%, #175E5C 100%)',
+              border: '1px solid rgba(255,255,255,0.18)',
+              borderRadius: '10px',
+              borderBottom: '2px solid #28AFB0',
+              padding: '20px 24px',
+              minWidth: '160px',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.25), 0 16px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.10)',
+            }}>
+              <p style={{
+                fontSize: '32px',
+                fontWeight: 800,
+                color: '#FFCB00',
+                margin: '0 0 6px',
+                lineHeight: 1,
+                fontFamily: 'Montserrat, sans-serif',
+              }}>
+                {metric.value}
+              </p>
+              <p style={{
+                fontSize: '12px',
+                color: 'rgba(255,255,255,0.78)',
+                margin: 0,
+                lineHeight: 1.4,
+              }}>
+                {metric.label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Mobile Responsive */}

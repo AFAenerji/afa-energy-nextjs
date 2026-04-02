@@ -149,12 +149,15 @@ export default function B6B7Kapanis({ content }: B6B7KapanisProps) {
 
         {/* Disclaimer */}
         <p
-          className={clsx('text-center', 'italic')}
           style={{
             fontFamily: 'Open Sans, sans-serif',
-            fontSize: '12px',
-            color: '#6B7280',
-            marginTop: '20px',
+            fontSize: '13px',
+            fontStyle: 'normal',
+            color: 'rgba(0,0,0,0.45)',
+            lineHeight: '1.65',
+            textAlign: 'center',
+            maxWidth: '640px',
+            margin: '20px auto 0',
           }}
         >
           {content.disclaimer}
