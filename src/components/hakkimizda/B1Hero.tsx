@@ -1,101 +1,123 @@
 'use client';
 
-import clsx from 'clsx';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface B1HeroProps {
   content: {
     sloganLabel: string;
     h1: string;
-    subheadline: string;
+    subtitle: string;
     heroBody: string;
     heroCta: string;
     metrics: Array<{ value: string; label: string }>;
-    ctaText: string;
-    ctaHref: string;
   };
+  locale: string;
 }
 
-export default function B1Hero({ content }: B1HeroProps) {
+export default function B1Hero({ content, locale }: B1HeroProps) {
   return (
-    <section className={clsx('relative', 'w-full', 'bg-afa-primary-dark')} style={{ padding: '96px 64px 88px' }}>
-      {/* Dark Overlay */}
-      <div className={clsx('absolute', 'inset-0', 'bg-afa-deep')} style={{ opacity: 0.65, zIndex: 0 }} />
+    <section style={{
+      position: 'relative',
+      background: '#18625F',
+      minHeight: '540px',
+      overflow: 'hidden',
+    }}>
+      {/* LAYER 1 — Grid Texture (z-index: 0) */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        zIndex: 0,
+        backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+        backgroundSize: '40px 40px',
+        pointerEvents: 'none',
+      }} />
 
-      {/* Grid Pattern Overlay */}
-      <div
-        style={{
+      {/* LAYER 2 — Photo + Gradient (z-index: 1) */}
+      <div style={{
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        width: '52%',
+        height: '100%',
+        zIndex: 1,
+        overflow: 'hidden',
+      }}>
+        <Image
+          src="/images/hero-romania-flag.jpg"
+          alt="Romanya bayrağı, Karpatlar"
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+          quality={85}
+        />
+        {/* Gradient overlay — left edge blends into teal */}
+        <div style={{
           position: 'absolute',
           inset: 0,
-          zIndex: 0,
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
-          pointerEvents: 'none',
-        }}
-      />
+          background: 'linear-gradient(to right, #18625F 0%, rgba(24,98,95,0.92) 18%, rgba(24,98,95,0.58) 42%, rgba(24,98,95,0.15) 72%, rgba(24,98,95,0.00) 100%)',
+        }} />
+      </div>
 
-      {/* Content */}
-      <div className={clsx('relative', 'mx-auto')} style={{ maxWidth: '1120px', zIndex: 1 }}>
-        {/* Slogan Label */}
-        <div className={clsx('flex', 'items-center', 'gap-3', 'mb-4')}>
-          <div className="bg-afa-gold" style={{ width: '24px', height: '2px' }} />
-          <span
-            className={clsx('text-afa-gold', 'uppercase', 'font-semibold')}
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontSize: '13px',
-              letterSpacing: '0.22em',
-              fontWeight: 600,
-            }}
-          >
+      {/* LAYER 3 — Content (z-index: 3) */}
+      <div style={{
+        position: 'relative',
+        zIndex: 3,
+        maxWidth: '1180px',
+        marginInline: 'auto',
+        paddingInline: '52px',
+        paddingBlock: '60px',
+      }}>
+        {/* Kicker */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+          <div style={{ width: '28px', height: '2px', background: '#FFCB00', flexShrink: 0 }} />
+          <span style={{
+            fontSize: '11px',
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#FFCB00',
+            fontWeight: 600,
+          }}>
             {content.sloganLabel}
           </span>
         </div>
 
         {/* H1 */}
-        <h1
-          className="font-extrabold"
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            fontSize: 'clamp(34px, 4.8vw, 62px)',
-            lineHeight: '1.10',
-            maxWidth: '640px',
-            color: 'rgba(255,255,255,0.95)',
-            fontWeight: 800,
-          }}
-        >
+        <h1 style={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontSize: 'clamp(32px, 3.5vw, 50px)',
+          fontWeight: 800,
+          color: '#FFFFFF',
+          lineHeight: 1.1,
+          margin: '0 0 20px',
+        }}>
           {content.h1}
         </h1>
 
-        {/* Subheadline */}
-        <p
-          className="font-semibold"
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            fontSize: 'clamp(16px, 1.6vw, 22px)',
-            lineHeight: '1.35',
-            maxWidth: '620px',
-            marginTop: '14px',
-            color: 'rgba(255,255,255,0.90)',
-            fontWeight: 600,
-          }}
-        >
-          {content.subheadline}
+        {/* Subtitle */}
+        <p style={{
+          fontFamily: 'Montserrat, sans-serif',
+          fontSize: 'clamp(15px, 1.5vw, 19px)',
+          fontWeight: 700,
+          color: 'rgba(255,255,255,0.90)',
+          margin: '0 0 16px',
+        }}>
+          {content.subtitle}
         </p>
 
         {/* Body */}
         <p style={{
           fontSize: '15px',
-          color: 'rgba(255,255,255,0.78)',
-          lineHeight: 1.7,
-          maxWidth: '420px',
-          margin: '24px 0 0',
+          color: 'rgba(255,255,255,0.76)',
+          lineHeight: 1.75,
+          maxWidth: '400px',
+          margin: '0 0 32px',
         }}>
           {content.heroBody}
         </p>
 
         {/* CTA Button */}
-        <Link href="/tr/atr-matrix" style={{
+        <Link href={`/${locale}/atr-matrix`} style={{
           display: 'inline-block',
           background: '#FFCB00',
           color: '#0F2E2C',
@@ -104,15 +126,9 @@ export default function B1Hero({ content }: B1HeroProps) {
           padding: '14px 28px',
           borderRadius: '6px',
           textDecoration: 'none',
-          marginTop: '32px',
-          marginBottom: '40px',
+          marginBottom: '48px',
+          letterSpacing: '0.01em',
           transition: 'background-color 120ms linear',
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.backgroundColor = '#E6B800';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.backgroundColor = '#FFCB00';
         }}>
           {content.heroCta} →
         </Link>
@@ -122,7 +138,7 @@ export default function B1Hero({ content }: B1HeroProps) {
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '12px',
-          width: 'fit-content',
+          maxWidth: '520px',
         }}>
           {content.metrics.map((metric, index) => (
             <div key={index} style={{
@@ -130,22 +146,21 @@ export default function B1Hero({ content }: B1HeroProps) {
               border: '1px solid rgba(255,255,255,0.18)',
               borderRadius: '10px',
               borderBottom: '2px solid #28AFB0',
-              padding: '20px 24px',
-              minWidth: '160px',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.25), 0 16px 32px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.10)',
+              padding: '20px 22px',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.20), 0 8px 20px rgba(0,0,0,0.30), 0 20px 40px rgba(0,0,0,0.20), inset 0 1px 0 rgba(255,255,255,0.15)',
             }}>
               <p style={{
-                fontSize: '32px',
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: '28px',
                 fontWeight: 800,
                 color: '#FFCB00',
                 margin: '0 0 6px',
                 lineHeight: 1,
-                fontFamily: 'Montserrat, sans-serif',
               }}>
                 {metric.value}
               </p>
               <p style={{
-                fontSize: '12px',
+                fontSize: '11px',
                 color: 'rgba(255,255,255,0.78)',
                 margin: 0,
                 lineHeight: 1.4,
@@ -159,18 +174,21 @@ export default function B1Hero({ content }: B1HeroProps) {
 
       {/* Mobile Responsive */}
       <style jsx>{`
-        @media (max-width: 768px) {
-          section {
-            padding: 64px 24px 56px !important;
+        @media (max-width: 767px) {
+          div[style*="width: 52%"] {
+            width: 100% !important;
+            opacity: 0.25;
           }
-          div[style*='grid-template-columns'] {
-            grid-template-columns: 1fr !important;
-            gap: 16px !important;
+          div[style*="maxWidth: 1180px"] {
+            padding-inline: 24px !important;
           }
         }
-        @media (min-width: 769px) and (max-width: 1024px) {
-          section {
-            padding: 80px 40px 72px !important;
+        @media (min-width: 768px) and (max-width: 1023px) {
+          div[style*="width: 52%"] {
+            width: 45% !important;
+          }
+          div[style*="maxWidth: 1180px"] {
+            padding-inline: 40px !important;
           }
         }
       `}</style>

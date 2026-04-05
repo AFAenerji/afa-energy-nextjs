@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface Card {
   number: string;
@@ -16,20 +15,13 @@ interface B3DegerlendirmeCercevesiProps {
     h2: string;
     intro: string;
     cards: Card[];
-    ctaBandLabel: string;
-    ctaBandH2: string;
-    ctaBandBody: string;
-    ctaBandButtonLabel: string;
-    ctaBandButtonHref: string;
   };
 }
 
 export default function B3DegerlendirmeCercevesi({ content }: B3DegerlendirmeCercevesiProps) {
   return (
-    <>
-      {/* PART 1 — Cards Section */}
       <section style={{ background: '#18625F', padding: '80px 0 64px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 40px' }}>
+        <div style={{ maxWidth: '1180px', margin: '0 auto', padding: '0 52px' }}>
           {/* Kicker */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
             <span style={{ width: '24px', height: '1px', background: '#FFCB00', display: 'inline-block', flexShrink: 0 }} />
@@ -139,7 +131,7 @@ export default function B3DegerlendirmeCercevesi({ content }: B3DegerlendirmeCer
             section {
               padding: 64px 0 48px !important;
             }
-            div[style*='maxWidth: 1200px'] {
+            div[style*='maxWidth: 1180px'] {
               padding: 0 24px !important;
             }
             div[style*='gridTemplateColumns'] {
@@ -148,101 +140,5 @@ export default function B3DegerlendirmeCercevesi({ content }: B3DegerlendirmeCer
           }
         `}</style>
       </section>
-
-      {/* PART 2 — Photo CTA Band */}
-      <div style={{ position: 'relative', width: '100%', height: '340px', overflow: 'hidden' }}>
-        {/* Background photo */}
-        <Image
-          src="/images/b3-cta-photo.jpg"
-          alt="Şebeke iletim altyapısı"
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center 40%',
-            filter: 'brightness(0.9) saturate(0.85)',
-          }}
-        />
-
-        {/* Dark overlay */}
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,46,44,0.78)' }} />
-
-        {/* Content */}
-        <div style={{
-          position: 'relative', zIndex: 1,
-          height: '100%',
-          display: 'flex', flexDirection: 'column' as const,
-          alignItems: 'center', justifyContent: 'center',
-          textAlign: 'center' as const,
-          padding: '48px 40px',
-          maxWidth: '1200px', margin: '0 auto',
-        }}>
-          {/* Label with lines */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-            <span style={{ width: '24px', height: '1px', background: 'rgba(255,203,0,0.60)', display: 'inline-block' }} />
-            <span style={{ color: 'rgba(255,203,0,0.90)', fontSize: '11px', fontWeight: 600, letterSpacing: '0.18em', textTransform: 'uppercase' as const }}>
-              {content.ctaBandLabel}
-            </span>
-            <span style={{ width: '24px', height: '1px', background: 'rgba(255,203,0,0.60)', display: 'inline-block' }} />
-          </div>
-
-          {/* H2 */}
-          <h2 style={{
-            fontFamily: 'Montserrat, sans-serif',
-            fontSize: 'clamp(22px, 2.8vw, 36px)', fontWeight: 800,
-            lineHeight: 1.15, letterSpacing: '-0.02em',
-            color: 'rgba(255,255,255,0.95)',
-            marginBottom: '16px', maxWidth: '640px',
-          }}>
-            {content.ctaBandH2}
-          </h2>
-
-          {/* Body */}
-          <p style={{
-            fontSize: '15px', lineHeight: 1.65,
-            color: 'rgba(255,255,255,0.78)',
-            maxWidth: '520px', marginBottom: '36px',
-          }}>
-            {content.ctaBandBody}
-          </p>
-
-          {/* Gold CTA Button */}
-          <Link
-            href={content.ctaBandButtonHref}
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: '10px',
-              padding: '15px 32px', borderRadius: '6px',
-              background: '#FFCB00', color: '#0F2E2C',
-              fontFamily: 'Open Sans, sans-serif',
-              fontSize: '15px', fontWeight: 700,
-              textDecoration: 'none',
-              boxShadow: '0 4px 16px rgba(255,203,0,0.35)',
-              transition: 'background-color 120ms linear, box-shadow 120ms linear',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#E6B800';
-              e.currentTarget.style.boxShadow = '0 2px 8px rgba(255,203,0,0.25)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#FFCB00';
-              e.currentTarget.style.boxShadow = '0 4px 16px rgba(255,203,0,0.35)';
-            }}
-          >
-            {content.ctaBandButtonLabel}
-          </Link>
-        </div>
-
-        {/* Mobile Responsive */}
-        <style jsx>{`
-          @media (max-width: 768px) {
-            div[style*='height: 340px'] {
-              height: 380px !important;
-            }
-            div[style*='padding: 48px 40px'] {
-              padding: 40px 24px !important;
-            }
-          }
-        `}</style>
-      </div>
-    </>
   );
 }

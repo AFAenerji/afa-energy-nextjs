@@ -20,7 +20,7 @@ interface B6B7KapanisProps {
 export default function B6B7Kapanis({ content }: B6B7KapanisProps) {
   return (
     <section style={{ backgroundColor: '#F8FAFB', paddingTop: '100px', paddingBottom: '100px' }}>
-      <div className={clsx('mx-auto', 'flex', 'flex-col', 'items-center')} style={{ maxWidth: '1180px', padding: '0 40px' }}>
+      <div className={clsx('mx-auto', 'flex', 'flex-col', 'items-center')} style={{ maxWidth: '1180px', padding: '0 52px' }}>
         {/* Pull Quote */}
         <div
           className={clsx('font-bold', 'italic')}
@@ -170,7 +170,7 @@ export default function B6B7Kapanis({ content }: B6B7KapanisProps) {
           section {
             padding: 64px 0 !important;
           }
-          div[style*='padding: 0 40px'] {
+          div[style*='padding: 0 52px'] {
             padding: 0 24px !important;
           }
           div[style*='fontSize: 26px'] {

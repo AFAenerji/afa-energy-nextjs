@@ -32,7 +32,7 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
         className={clsx('mx-auto', 'grid', 'items-stretch', 'gap-10')}
         style={{
           maxWidth: '1180px',
-          padding: '0 40px',
+          padding: '0 52px',
           gridTemplateColumns: '6fr 6fr',
           alignItems: 'stretch',
         }}

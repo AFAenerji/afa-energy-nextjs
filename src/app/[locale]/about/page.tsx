@@ -7,7 +7,7 @@ import { SITE_URL } from '@/lib/env';
 import B1Hero from '@/components/hakkimizda/B1Hero';
 import B2BizKimiz from '@/components/hakkimizda/B2BizKimiz';
 import B3DegerlendirmeCercevesi from '@/components/hakkimizda/B3DegerlendirmeCercevesi';
-import B4AfarklıYapan from '@/components/hakkimizda/B4AfarklıYapan';
+import ATRBand from '@/components/hakkimizda/ATRBand';
 import B5PiyasaDinamikleri from '@/components/hakkimizda/B5PiyasaDinamikleri';
 import B6B7Kapanis from '@/components/hakkimizda/B6B7Kapanis';
 
@@ -107,10 +107,10 @@ export default async function AboutPage({
         ]}
       />
 
-      <B1Hero content={content.b1} />
+      <B1Hero content={content.hero} locale={locale} />
       <B2BizKimiz content={content.b2} />
       <B3DegerlendirmeCercevesi content={content.b3} />
-      <B4AfarklıYapan content={content.b4} />
+      <ATRBand content={content.atrBand} />
       <B5PiyasaDinamikleri content={content.b5} />
       <B6B7Kapanis content={content.b6b7} />
     </main>

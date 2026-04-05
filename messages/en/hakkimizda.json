@@ -1,26 +1,15 @@
 {
-  "b1": {
+  "hero": {
     "sloganLabel": "CLARITY BEFORE INVESTMENT.",
     "h1": "Every Project in Romania Looks Investment-Ready.",
-    "subheadline": "Technical Validation Shows a Different Picture.",
-    "heroBody": "A project's investment value lies not in its documents — but in its grid connectivity and the true integrity of its permit chain. AFA Energy makes these layers visible before the investment decision, through the ATR Matrix™ methodology.",
+    "subtitle": "Technical Validation Shows a Different Picture.",
+    "heroBody": "A project's investment value lies not in its documents — but in its grid connectivity and the true integrity of its permit chain.",
     "heroCta": "How ATR Matrix™ Works",
     "metrics": [
-      {
-        "value": "1.3 GW",
-        "label": "Capacity analysed"
-      },
-      {
-        "value": "500+",
-        "label": "ATR assessments"
-      },
-      {
-        "value": "10",
-        "label": "EU countries"
-      }
-    ],
-    "ctaText": "Explore ATR Matrix™ methodology",
-    "ctaHref": "/en/atr-matrix"
+      { "value": "1.3 GW", "label": "Project capacity analysed" },
+      { "value": "500+", "label": "ATR documents reviewed" },
+      { "value": "10", "label": "EU Countries Experience" }
+    ]
   },
   "b2": {
     "kicker": "ABOUT AFA ENERGY",
@@ -89,37 +78,12 @@
       }
     ]
   },
-  "b4": {
-    "kicker": "WHY AFA ENERGY",
-    "h2": "What Makes AFA Different",
-    "banners": [
-      {
-        "number": "01",
-        "title": "ATR Matrix™ — Grid Connection Analysis",
-        "desc": "The financial impact of connection conditions is made visible at an early stage; uncertainty transforms into an assessment ground usable in the investment decision."
-      },
-      {
-        "number": "02",
-        "title": "Investment Committee-Ready Outputs",
-        "desc": "Each finding is defined, classified, and structured to strengthen the decision ground. Outputs are prepared with format and traceability logic suitable for investment committee assessment."
-      },
-      {
-        "number": "03",
-        "title": "Turkey–Romania Bridge",
-        "desc": "Different grid structures and regulatory frameworks are addressed together within a comparable analysis framework, providing consistent comparison and predictable decision process in both markets."
-      },
-      {
-        "number": "04",
-        "title": "Bankability Analysis",
-        "desc": "The analysis and reporting structure is designed to align with technical due diligence expectations based on a bankability perspective."
-      },
-      {
-        "number": "05",
-        "title": "Selectivity Is a Value Discipline",
-        "desc": "Projects with high uncertainty and limited maturity are filtered before becoming visible on the investor side; the presented project pool is maintained at a consistent maturity level.",
-        "isGold": true
-      }
-    ]
+  "atrBand": {
+    "kickerLabel": "ATR MATRIX™",
+    "h2": "Evaluate your projects with ATR Matrix™",
+    "body": "Identify technical risks at an early stage with our 4-axis analysis methodology and strengthen your investment decisions.",
+    "ctaLabel": "Explore the Methodology",
+    "ctaHref": "/en/atr-matrix"
   },
   "b5": {
     "kicker": "MARKET DYNAMICS",

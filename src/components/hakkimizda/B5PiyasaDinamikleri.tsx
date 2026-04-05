@@ -25,7 +25,7 @@ interface B5PiyasaDinamikleriProps {
 export default function B5PiyasaDinamikleri({ content }: B5PiyasaDinamikleriProps) {
   return (
     <section className="bg-afa-primary-dark" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
-      <div className="mx-auto" style={{ maxWidth: '1180px', padding: '0 40px' }}>
+      <div className="mx-auto" style={{ maxWidth: '1180px', padding: '0 52px' }}>
         {/* Header */}
         <div className={clsx('text-center', 'mb-12')}>
           {/* Kicker */}
@@ -220,7 +220,7 @@ export default function B5PiyasaDinamikleri({ content }: B5PiyasaDinamikleriProp
           section {
             padding: 64px 0 !important;
           }
-          div[style*='padding: 0 40px'] {
+          div[style*='padding: 0 52px'] {
             padding: 0 24px !important;
           }
           div[style*='gridTemplateColumns: 1fr 1fr'] {
