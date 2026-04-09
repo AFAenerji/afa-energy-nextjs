@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "sectionLabel": "PROJE GELİŞTİRİCİLERİ İÇİN",
+    "h1Line1": "İyi Bir Proje Yatırımcıya",
+    "h1Line2": "Yeterince Anlatılmadığında",
+    "h1Line3": "Değerini Yitirir.",
+    "subtitle": "İnşaata Hazır Statüsüne (Ready-to-Build, RTB) ulaşmış bir proje teknik olarak hazır olabilir. Ancak bağlantı varsayımları doğrulanmamışsa, maliyet öngörüleri savunulamıyorsa ya da yatırımcı soracağı soruların yanıtlarını dosyada bulamıyorsa — bu noktada AFA'nın teknik doğrulama süreci devreye girer.",
+    "ctaPrimary": "Teknik Doğrulama Başlatın",
+    "ctaSecondary": "ATR Matrix™ Hakkında",
+    "ctaSecondaryHref": "/atr-matrix",
+    "card1": { "kiker": "TEKNİK DOĞRULAMA", "body": "AFA'nın teknik incelemesi, projenizin gerçek değerini yatırımcıya görünür hale getirir." },
+    "card2": { "kiker": "ATR MATRIX™", "body": "AFA ATR Matrix™ — dört eksende sistematik teknik analiz." },
+    "card3": { "kiker": "KAPSAM", "body": "Romanya yenilenebilir enerji projeleri — ANRE düzenleyici çerçevesi kapsamında." }
+  }
+}
