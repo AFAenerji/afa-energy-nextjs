@@ -111,7 +111,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'linear-gradient(to right, #18625F 0%, #18625F var(--gradient-fade, 63%), transparent calc(var(--gradient-fade, 63%) + 12%))',
+              background: 'linear-gradient(to right, #18625F 0%, #18625F var(--gradient-fade, 42%), transparent calc(var(--gradient-fade, 42%) + 18%))',
               pointerEvents: 'none',
             }}
           />
