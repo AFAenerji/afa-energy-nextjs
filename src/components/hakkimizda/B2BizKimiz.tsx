@@ -20,8 +20,10 @@ interface B2BizKimizProps {
     statusCards: StatusCard[];
     footnote: string;
     photoAlt: string;
-    pullQuoteMain: string[];
-    pullQuoteSub: string;
+    pullLine1: string;
+    pullLine2: string;
+    pullLine3: string;
+    pullLine4: string;
   };
 }
 
@@ -273,61 +275,65 @@ export default function B2BizKimiz({ content }: B2BizKimizProps) {
               }}
             />
 
-            {/* Gold Pull-quote Overlay */}
+            {/* Pull-quote Overlay */}
             <div
-              className={clsx('absolute', 'bottom-0', 'left-0', 'right-0', 'flex', 'flex-col')}
               style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                right: 0,
                 height: '48%',
-                background: 'rgba(255,203,0,0.92)',
+                background: 'linear-gradient(to top, rgba(15,46,44,0.92), transparent)',
                 padding: '24px 28px 28px',
-                justifyContent: 'flex-end',
+                display: 'flex',
                 flexDirection: 'column',
-                WebkitMaskImage: 'linear-gradient(transparent, black 30%)',
-                maskImage: 'linear-gradient(transparent, black 30%)',
+                justifyContent: 'flex-end',
               }}
             >
-              {/* Pull quote main */}
-              <div
-                className="font-black"
-                style={{
+              <div style={{
+                borderLeft: '4px solid #FFCB00',
+                paddingLeft: '30px',
+                maxWidth: '900px'
+              }}>
+                <div style={{
                   fontFamily: 'Montserrat, sans-serif',
-                  fontSize: 'clamp(16px, 1.8vw, 22px)',
-                  lineHeight: '1.35',
-                  color: '#0F2E2C',
-                  letterSpacing: '-0.01em',
-                  marginBottom: '8px',
-                  fontWeight: 900,
-                }}
-              >
-                {content.pullQuoteMain.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </div>
-
-              {/* Pull separator */}
-              <div
-                style={{
-                  width: '28px',
-                  height: '2px',
-                  background: 'rgba(15,46,44,0.28)',
-                  marginBottom: '8px',
-                }}
-              />
-
-              {/* Pull sub */}
-              <p
-                className={clsx('italic', 'font-semibold')}
-                style={{
+                  fontSize: 'clamp(26px, 2.8vw, 42px)',
+                  fontWeight: 800,
+                  color: 'rgba(255,255,255,0.95)',
+                  lineHeight: 1.3,
+                  letterSpacing: '-0.02em'
+                }}>
+                  {content.pullLine1}
+                </div>
+                <div style={{
                   fontFamily: 'Open Sans, sans-serif',
-                  fontSize: '14px',
-                  lineHeight: '1.6',
-                  color: 'rgba(15,46,44,0.85)',
-                  maxWidth: '30ch',
-                  fontWeight: 600,
-                }}
-              >
-                {content.pullQuoteSub}
-              </p>
+                  fontSize: 'clamp(18px, 1.8vw, 28px)',
+                  fontWeight: 400,
+                  color: 'rgba(255,255,255,0.88)',
+                  lineHeight: 1.3
+                }}>
+                  {content.pullLine2}
+                </div>
+                <div style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 'clamp(26px, 2.8vw, 42px)',
+                  fontWeight: 800,
+                  color: '#FFCB00',
+                  lineHeight: 1.3,
+                  letterSpacing: '-0.02em'
+                }}>
+                  {content.pullLine3}
+                </div>
+                <div style={{
+                  fontFamily: 'Open Sans, sans-serif',
+                  fontSize: 'clamp(16px, 1.5vw, 24px)',
+                  fontWeight: 400,
+                  color: 'rgba(255,255,255,0.88)',
+                  lineHeight: 1.3
+                }}>
+                  {content.pullLine4}
+                </div>
+              </div>
             </div>
           </div>
         </div>

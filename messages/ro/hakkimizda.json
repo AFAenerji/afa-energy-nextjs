@@ -39,8 +39,10 @@
     ],
     "footnote": "Evaluarea tehnică preliminară AFA acoperă analiza documentelor ATR și examinarea condițiilor de conectare la rețea.",
     "photoAlt": "Evaluare tehnică AFA Energy",
-    "pullQuoteMain": ["Riscul este prețuibil.", "Incertitudinea", "nu este."],
-    "pullQuoteSub": "AFA aduce incertitudinea proiectului pe un teren măsurabil."
+    "pullLine1": "O decizie de investiție",
+    "pullLine2": "pe un proiect cu realitate tehnică verificată",
+    "pullLine3": "devine previzibilă.",
+    "pullLine4": ""
   },
   "b3": {
     "sectionLabel": "CADRUL NOSTRU DE EVALUARE",
@@ -79,46 +81,70 @@
     ]
   },
   "atrBand": {
-    "kickerLabel": "ATR MATRIX™",
-    "h2": "Evaluați-vă proiectele cu ATR Matrix™",
-    "body": "Identificați riscurile tehnice în stadiu incipient cu metodologia noastră de analiză pe 4 axe și consolidați deciziile de investiție.",
-    "ctaLabel": "Explorați Metodologia",
-    "ctaHref": "/ro/atr-matrix"
+    "line1": "Decizia de investiție,",
+    "line2": "într-un proiect cu realitate tehnică verificată",
+    "line3": "devine previzibilă.",
+    "line4": ""
+  },
+  "b4": {
+    "kicker": "DE CE AFA ENERGY",
+    "h2": "Ce Face AFA Diferit",
+    "cards": [
+      {
+        "number": "01",
+        "title": "ATR Matrix™ — Analiza Conexiunii la Rețea",
+        "description": "Impactul financiar al condițiilor de conexiune este vizibilizat într-un stadiu incipient; incertitudinea este transformată într-o bază de evaluare utilizabilă pentru decizii de investiție."
+      },
+      {
+        "number": "02",
+        "title": "Livrabile Pregătite pentru Comitetul de Investiții",
+        "description": "Fiecare constatare este definită, clasificată și structurată pentru a consolida baza decizională. Livrabilele sunt pregătite în formate aliniate cu standardele comitetului de investiții."
+      },
+      {
+        "number": "03",
+        "title": "Puntea Turcia–România",
+        "description": "Structuri de rețea diferite și cadre de reglementare sunt abordate împreună într-un cadru analitic comparabil, permițând comparații consistente între piețe."
+      },
+      {
+        "number": "04",
+        "title": "Conformitate cu Finanțarea Internațională",
+        "description": "Structura analitică și de raportare este concepută să se alinieze cu așteptările due diligence tehnice bazate pe perspectiva bancabilității."
+      },
+      {
+        "number": "05",
+        "title": "Selectivitatea Este o Disciplină a Valorii",
+        "description": "Proiectele cu incertitudine ridicată sunt filtrate înainte de a deveni vizibile pentru investitori; portofoliul prezentat este menținut la un nivel consistent de maturitate."
+      }
+    ]
   },
   "b5": {
     "kicker": "DINAMICA PIEȚELOR",
     "h2": "Două Piețe. O Singură Disciplină Decizională.",
-    "intro": "România și Turcia produc tipuri diferite de risc datorită structurilor diferite ale rețelelor și dinamicilor de reglementare. Același tip de proiect este evaluat cu surse diferite de incertitudine pe cele două piețe. Abordarea AFA se concentrează pe vizibilizarea acestor riscuri într-un context comparabil, adecvat evaluării comitetului de investiții.",
-    "markets": [
-      {
-        "number": "01",
-        "name": "România",
-        "leftLabel": "PUNCT DE RUPERE",
-        "leftBody": "Documentul ATR acordă un drept teoretic de conexiune; cu toate acestea, capacitatea reală a rețelei și riscul de reducere a producției (curtailment) prezintă adesea un tablou diferit de cel care apare în document.",
-        "rightLabel": "TRADUCERE PENTRU COMITETUL DE INVESTIȚII",
-        "rightBody": "Se formează o bandă de incertitudine asupra vizibilității veniturilor, realismului calendarului și bancabilității. Această incertitudine afectează direct ce risc este asumat în ce condiții."
-      },
-      {
-        "number": "02",
-        "name": "Turcia",
-        "leftLabel": "PUNCT DE RUPERE",
-        "leftBody": "Deși cadrul de reglementare pare în general stabil, implementarea poate varia la nivelul Companiei de Distribuție a Electricității. Aceste diferențe devin mai pronunțate în domenii precum divergența dintre capacitatea teoretică și realitatea efectivă a conexiunii, inconsistențele lanțului de autorizații și nivelul de previzibilitate al constrângerilor regionale ale rețelei.",
-        "rightLabel": "TRADUCERE PENTRU COMITETUL DE INVESTIȚII",
-        "rightBody": "Diferențele de implementare pot lărgi banda de incertitudine asupra fiabilității fluxului de numerar prin calendarul proiectului, lanțul de autorizații și alocarea contractuală a riscurilor."
-      }
-    ],
-    "closingParagraph1": "Același titlu de proiect produce discuții decizionale diferite pe cele două piețe din cauza surselor diferite de incertitudine. Citirea dinamicilor pieței într-un cadru comparabil pregătește terenul pentru ca comitetul de investiții să distingă aceste diferențe într-un stadiu timpuriu.",
-    "closingParagraph2": "Acest cadru de analiză centrat pe România pregătește terenul pentru o acoperire în expansiune către piețele de energie regenerabilă în dezvoltare din Europa Centrală și de Est."
+    "intro": "",
+    "romania": {
+      "title": "România",
+      "breakingPoint": "Un document ATR acordă drepturi teoretice de conexiune; cu toate acestea, capacitatea reală a rețelei și riscul de reducere a producției pot prezenta o imagine diferită față de document.",
+      "boardTranslation": "Se formează benzi de incertitudine în jurul vizibilității veniturilor, realismului calendarului și bancabilității — afectând direct ce riscuri pot fi asumate și în ce condiții."
+    },
+    "turkey": {
+      "title": "Turcia",
+      "breakingPoint": "Cadrul de reglementare pare în general stabil, dar implementarea poate diverge la nivelul companiei de distribuție a energiei electrice — divergențe care devin vizibile în realitățile de conexiune.",
+      "boardTranslation": "Variabilitatea implementării poate lărgi banda de incertitudine privind termenele proiectelor, lanțurile de autorizare și alocarea riscurilor contractuale, afectând fiabilitatea fluxului de numerar."
+    },
+    "pullQuoteMain": "Același titlu de proiect generează discuții diferite de decizie în două piețe din cauza diferitelor surse de incertitudine. Citirea dinamicii pieței într-un cadru comparabil oferă comitetului de investiții instrumentele necesare pentru a distinge aceste diferențe într-un stadiu incipient.",
+    "pullQuoteSub": "Acest cadru analitic centrat pe România pune bazele unei extinderi a scopului către piețele emergente de energie regenerabilă din Europa Centrală și de Est."
   },
   "b6b7": {
     "pullQuote": "Verificăm ceea ce alții presupun.",
+    "kicker": "DISCIPLINA INVESTITORULUI",
     "h2": "Claritate Înainte de Investiție.",
-    "subtitle": "Proiect corect. Investitor corect.\nTeren tehnic solid.",
-    "body": "Pentru investitori care caută acces la proiecte validate tehnic în România — sau pentru dezvoltatori care doresc să inițieze procesul de evaluare pentru proiectul lor — acesta este locul potrivit.",
-    "cta1Text": "Explorați Procesul de Evaluare",
-    "cta1Href": "/ro/atr-matrix",
-    "cta2Text": "Solicitați Pre-evaluare Tehnică",
-    "cta2Href": "/ro/contact",
-    "disclaimer": "Activitatea AFA acoperă evaluarea tehnică preliminară și coordonarea procesului. Înainte de deciziile finale specifice proiectului, due diligence-ul juridic independent și verificările tehnice necesare trebuie efectuate separat."
+    "subhead1": "Proiectul potrivit. Investitorul potrivit.",
+    "subhead2": "Fundament tehnic solid.",
+    "description": "Pentru investitorii care caută proiecte cu realitate tehnică verificată în România — sau pentru dezvoltatorii care doresc să inițieze procesul de evaluare al proiectului lor — acesta este locul potrivit.",
+    "ctaPrimary": "Explorați Procesul de Evaluare",
+    "ctaPrimaryHref": "/ro/servicii",
+    "ctaSecondary": "Solicitați o Pre-Analiză Tehnică",
+    "ctaSecondaryHref": "/ro/contact",
+    "disclaimer": "Activitatea AFA acoperă evaluarea tehnică preliminară și coordonarea procesului. Due diligence juridic independent și verificările tehnice necesare trebuie efectuate separat înainte de deciziile finale specifice proiectului."
   }
 }

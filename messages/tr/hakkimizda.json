@@ -39,8 +39,10 @@
     ],
     "footnote": "AFA ön teknik değerlendirmesi, ATR dokümanlarının analizi ve şebeke bağlantı koşullarının incelenmesini kapsar.",
     "photoAlt": "AFA Energy teknik değerlendirme",
-    "pullQuoteMain": ["Risk fiyatlanabilir.", "Belirsizlik fiyatlandırılamaz."],
-    "pullQuoteSub": "AFA, projedeki belirsizliği ölçülebilir zemine taşır."
+    "pullLine1": "Yatırım kararı,",
+    "pullLine2": "teknik gerçekliği doğrulanmış projede",
+    "pullLine3": "öngörülebilir",
+    "pullLine4": "bir zemine kavuşur."
   },
   "b3": {
     "sectionLabel": "DEĞERLENDİRME ÇERÇEVEMİZ",
@@ -79,46 +81,70 @@
     ]
   },
   "atrBand": {
-    "kickerLabel": "ATR MATRIX™",
-    "h2": "ATR Matrix™ ile projelerinizi değerlendirin",
-    "body": "4 eksenli analiz metodolojimizle teknik riskleri erken aşamada tespit edin, yatırım kararlarınızı güçlendirin.",
-    "ctaLabel": "Metodolojiyi İnceleyin",
-    "ctaHref": "/tr/atr-matrix"
+    "line1": "Yatırım kararı,",
+    "line2": "teknik gerçekliği doğrulanmış projede",
+    "line3": "öngörülebilir",
+    "line4": "bir zemine kavuşur."
+  },
+  "b4": {
+    "kicker": "NEDEN AFA ENERGY",
+    "h2": "AFA'yı Farklı Kılan",
+    "cards": [
+      {
+        "number": "01",
+        "title": "ATR Matrix™ — Şebeke Bağlantı Analizi",
+        "description": "Bağlantı koşullarının finansal etkisi erken aşamada görünür hale getirilir; belirsizlik, yatırım kararında kullanılabilir bir değerlendirme zeminine dönüşür."
+      },
+      {
+        "number": "02",
+        "title": "Yatırım Komitesine Hazır Çıktılar",
+        "description": "Her bulgu tanımlanır, sınıflandırılır ve karar zeminini güçlendirecek biçimde yapılandırılır. Çıktılar yatırım komitesi değerlendirmesine uygun formatta hazırlanır."
+      },
+      {
+        "number": "03",
+        "title": "Türkiye–Romanya Köprüsü",
+        "description": "Farklı şebeke yapıları ve düzenleyici çerçeveler karşılaştırılabilir bir analiz çerçevesi içinde birlikte ele alınır. İki piyasada tutarlı karşılaştırma sağlar."
+      },
+      {
+        "number": "04",
+        "title": "Uluslararası Finansman Uyumu",
+        "description": "Analiz ve raporlama yapısı, finansmana uygunluk (bankability) perspektifini esas alan teknik durum tespiti beklentileriyle uyumlu olacak biçimde kurgulanır."
+      },
+      {
+        "number": "05",
+        "title": "Seçicilik Bir Değer Disiplinidir",
+        "description": "Değerlendirme sürecinde belirsizliği yüksek projeler yatırımcı tarafında görünür hale gelmeden önce filtrelenir; sunulan havuz daha tutarlı bir olgunluk seviyesinde tutulur."
+      }
+    ]
   },
   "b5": {
     "kicker": "PİYASA DİNAMİKLERİ",
     "h2": "İki Piyasa. Tek Karar Disiplini.",
-    "intro": "Romanya ve Türkiye, farklı şebeke yapıları ve düzenleyici dinamikler nedeniyle farklı risk türleri üretir. Aynı proje tipi, iki piyasada farklı belirsizlik kaynaklarıyla değerlendirilir. AFA'nın yaklaşımı, bu riskleri yatırım komitesi değerlendirmesine uygun, karşılaştırılabilir bir bağlamda görünür kılmaya odaklanır.",
-    "markets": [
-      {
-        "number": "01",
-        "name": "Romanya",
-        "leftLabel": "KIRILMA NOKTASI",
-        "leftBody": "ATR belgesi teorik bağlantı hakkı tanır; ancak fiili şebeke kapasitesi ve üretim kısıntısı riski (curtailment) çoğu zaman belgede görünen tablodan farklı bir tablo ortaya koyabilir.",
-        "rightLabel": "YATIRIM KOMİTESİ ÇEVİRİSİ",
-        "rightBody": "Gelir görünürlüğü, takvim gerçekçiliği ve finansmana uygunluk üzerinde belirsizlik bandı oluşur. Bu belirsizlik hangi riskin hangi koşulla üstlenileceğini doğrudan etkiler."
-      },
-      {
-        "number": "02",
-        "name": "Türkiye",
-        "leftLabel": "KIRILMA NOKTASI",
-        "leftBody": "Düzenleyici çerçeve genel olarak sabit görünse de uygulama, Elektrik Dağıtım Şirketi düzeyinde farklılaşabilir. Bu farklılıklar; teorik kapasite ile fiili bağlantı gerçekliği arasındaki ayrışma, izin zinciri tutarsızlıkları ve bölgesel şebeke kısıtlarının öngörülebilirlik düzeyi gibi başlıklarda daha belirgin hale gelir.",
-        "rightLabel": "YATIRIM KOMİTESİ ÇEVİRİSİ",
-        "rightBody": "Uygulama farklılıkları, proje takvimi, izin zinciri ve sözleşme risk dağılımının nakit akışı güvenilirliği üzerindeki belirsizlik bandını genişletebilir."
-      }
-    ],
-    "closingParagraph1": "Aynı proje başlığı, iki piyasada farklı belirsizlik kaynakları nedeniyle farklı karar tartışmaları üretir. Piyasa dinamiklerini karşılaştırılabilir bir çerçevede okumak, yatırım komitesinin bu farkları erken aşamada ayırt etmesine zemin hazırlar.",
-    "closingParagraph2": "Romanya merkezli bu analiz çerçevesi, Orta ve Doğu Avrupa'daki gelişen yenilenebilir enerji piyasalarına yönelik genişleyen bir kapsama zemin hazırlamaktadır."
+    "intro": "",
+    "romania": {
+      "title": "Romanya",
+      "breakingPoint": "ATR belgesi teorik bağlantı hakkı tanır; ancak fiili şebeke kapasitesi ve üretim kısıntısı riski belgeden farklı bir tablo ortaya koyabilir.",
+      "boardTranslation": "Gelir görünürlüğü, takvim gerçekçiliği ve finansmana uygunluk üzerinde belirsizlik bandı oluşur. Bu belirsizlik hangi riskin hangi koşulla üstlenileceğini doğrudan etkiler."
+    },
+    "turkey": {
+      "title": "Türkiye",
+      "breakingPoint": "Düzenleyici çerçeve genel olarak sabit görünse de uygulama, Elektrik Dağıtım Şirketi düzeyinde farklılaşabilir. Bu farklılıklar bağlantı gerçekliğinde belirgin hale gelir.",
+      "boardTranslation": "Uygulama farklılıkları, proje takvimi, izin zinciri ve sözleşme risk dağılımının nakit akışı güvenilirliği üzerindeki belirsizlik bandını genişletebilir."
+    },
+    "pullQuoteMain": "Aynı proje başlığı, iki piyasada farklı belirsizlik kaynakları nedeniyle farklı karar tartışmaları üretir. Piyasa dinamiklerini karşılaştırılabilir bir çerçevede okumak, yatırım komitesinin bu farkları erken aşamada ayırt etmesine zemin hazırlar.",
+    "pullQuoteSub": "Romanya merkezli bu analiz çerçevesi, Orta ve Doğu Avrupa'daki gelişen yenilenebilir enerji piyasalarına yönelik genişleyen bir kapsama zemin hazırlamaktadır."
   },
   "b6b7": {
     "pullQuote": "Başkalarının varsaydığını biz doğrularız.",
+    "kicker": "YATIRIMCI DİSİPLİNİ",
     "h2": "Yatırımdan Önce Netlik.",
-    "subtitle": "Doğru proje. Doğru yatırımcı.\nTeknik zemin sağlam.",
-    "body": "Romanya'da teknik gerçekliği doğrulanmış projelere ulaşmak isteyen yatırımcılar için — ya da projesinin değerlendirme sürecini başlatmak isteyen geliştiriciler için — doğru yer burasıdır.",
-    "cta1Text": "Değerlendirme Sürecini İnceleyin",
-    "cta1Href": "/tr/atr-matrix",
-    "cta2Text": "Teknik Ön İnceleme Talep Edin",
-    "cta2Href": "/tr/contact",
+    "subhead1": "Doğru proje. Doğru yatırımcı.",
+    "subhead2": "Teknik zemin sağlam.",
+    "description": "Romanya'da teknik gerçekliği doğrulanmış projelere ulaşmak isteyen yatırımcılar için — ya da projesinin değerlendirme sürecini başlatmak isteyen geliştiriciler için — doğru yer burasıdır.",
+    "ctaPrimary": "Değerlendirme Sürecini İnceleyin",
+    "ctaPrimaryHref": "/tr/hizmetler",
+    "ctaSecondary": "Teknik Ön İnceleme Talep Edin",
+    "ctaSecondaryHref": "/tr/iletisim",
     "disclaimer": "AFA'nın çalışması ön teknik değerlendirme ve süreç koordinasyonu kapsamındadır. Projeye özgü nihai karar öncesinde, bağımsız hukuki durum tespiti ve gerekli görülen teknik doğrulamalar ayrıca yürütülmelidir."
   }
 }

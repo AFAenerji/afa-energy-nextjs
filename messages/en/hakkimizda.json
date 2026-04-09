@@ -39,8 +39,10 @@
     ],
     "footnote": "AFA preliminary technical assessment covers analysis of ATR documents and examination of grid connection conditions.",
     "photoAlt": "AFA Energy technical assessment",
-    "pullQuoteMain": ["Risk is priceable.", "Uncertainty", "is not."],
-    "pullQuoteSub": "AFA brings project uncertainty to a measurable ground."
+    "pullLine1": "An investment decision",
+    "pullLine2": "on a project with verified technical reality",
+    "pullLine3": "becomes predictable.",
+    "pullLine4": ""
   },
   "b3": {
     "sectionLabel": "OUR ASSESSMENT FRAMEWORK",
@@ -79,46 +81,70 @@
     ]
   },
   "atrBand": {
-    "kickerLabel": "ATR MATRIX™",
-    "h2": "Evaluate your projects with ATR Matrix™",
-    "body": "Identify technical risks at an early stage with our 4-axis analysis methodology and strengthen your investment decisions.",
-    "ctaLabel": "Explore the Methodology",
-    "ctaHref": "/en/atr-matrix"
+    "line1": "An investment decision",
+    "line2": "on a project with verified technical reality",
+    "line3": "becomes predictable.",
+    "line4": ""
+  },
+  "b4": {
+    "kicker": "WHY AFA ENERGY",
+    "h2": "What Makes AFA Different",
+    "cards": [
+      {
+        "number": "01",
+        "title": "ATR Matrix™ — Grid Connection Analysis",
+        "description": "The financial impact of connection conditions is made visible at an early stage; uncertainty is transformed into an actionable assessment basis for investment decisions."
+      },
+      {
+        "number": "02",
+        "title": "Investment Committee-Ready Deliverables",
+        "description": "Every finding is defined, classified, and structured to strengthen the decision basis. Deliverables are prepared in formats aligned with investment committee review standards."
+      },
+      {
+        "number": "03",
+        "title": "Turkey–Romania Bridge",
+        "description": "Different grid structures and regulatory frameworks are addressed together within a comparable analytical framework, enabling consistent cross-market comparison."
+      },
+      {
+        "number": "04",
+        "title": "International Financing Alignment",
+        "description": "The analytical and reporting structure is designed to align with technical due diligence expectations grounded in a bankability perspective."
+      },
+      {
+        "number": "05",
+        "title": "Selectivity Is a Value Discipline",
+        "description": "Projects with high uncertainty are filtered before reaching investor visibility; the presented pool is maintained at a consistent maturity level."
+      }
+    ]
   },
   "b5": {
     "kicker": "MARKET DYNAMICS",
     "h2": "Two Markets. One Decision Discipline.",
-    "intro": "Romania and Turkey produce different types of risk due to different grid structures and regulatory dynamics. The same project type is evaluated with different sources of uncertainty in two markets. AFA's approach focuses on making these risks visible in a comparable context suitable for investment committee assessment.",
-    "markets": [
-      {
-        "number": "01",
-        "name": "Romania",
-        "leftLabel": "BREAKING POINT",
-        "leftBody": "The ATR document grants a theoretical connection right; however, actual grid capacity and production curtailment risk often present a different picture from what appears in the document.",
-        "rightLabel": "INVESTMENT COMMITTEE TRANSLATION",
-        "rightBody": "An uncertainty band forms over revenue visibility, schedule realism, and bankability. This uncertainty directly affects which risk is assumed under which conditions."
-      },
-      {
-        "number": "02",
-        "name": "Turkey",
-        "leftLabel": "BREAKING POINT",
-        "leftBody": "Although the regulatory framework appears generally stable, implementation can vary at the Electricity Distribution Company level. These differences become more pronounced in areas such as the divergence between theoretical capacity and actual connection reality, permit chain inconsistencies, and the predictability of regional grid constraints.",
-        "rightLabel": "INVESTMENT COMMITTEE TRANSLATION",
-        "rightBody": "Implementation differences can widen the uncertainty band on cash flow reliability through project schedule, permit chain, and contractual risk allocation."
-      }
-    ],
-    "closingParagraph1": "The same project title produces different decision discussions in two markets due to different sources of uncertainty. Reading market dynamics in a comparable framework prepares the ground for the investment committee to distinguish these differences at an early stage.",
-    "closingParagraph2": "This Romania-centered analysis framework lays the groundwork for an expanding scope toward developing renewable energy markets in Central and Eastern Europe."
+    "intro": "",
+    "romania": {
+      "title": "Romania",
+      "breakingPoint": "An ATR document grants theoretical connection rights; however, actual grid capacity and curtailment risk may paint a different picture than the document suggests.",
+      "boardTranslation": "Uncertainty bands form around revenue visibility, schedule realism, and bankability — directly affecting which risks can be assumed and under what conditions."
+    },
+    "turkey": {
+      "title": "Turkey",
+      "breakingPoint": "The regulatory framework appears broadly stable, but implementation can diverge at the electricity distribution company level — divergences that become visible in connection realities.",
+      "boardTranslation": "Implementation variability may widen the uncertainty band around project timelines, permit chains, and contractual risk allocation, affecting cash flow reliability."
+    },
+    "pullQuoteMain": "The same project headline generates different decision discussions in two markets due to different sources of uncertainty. Reading market dynamics within a comparable framework gives the investment committee the tools to distinguish these differences at an early stage.",
+    "pullQuoteSub": "This Romania-centred analytical framework lays the groundwork for an expanding scope targeting emerging renewable energy markets across Central and Eastern Europe."
   },
   "b6b7": {
     "pullQuote": "We verify what others assume.",
+    "kicker": "INVESTOR DISCIPLINE",
     "h2": "Clarity Before Investment.",
-    "subtitle": "Right project. Right investor.\nSolid technical ground.",
-    "body": "For investors seeking access to technically validated projects in Romania — or for developers wanting to initiate the assessment process for their project — this is the right place.",
-    "cta1Text": "Explore the Assessment Process",
-    "cta1Href": "/en/atr-matrix",
-    "cta2Text": "Request Technical Pre-Assessment",
-    "cta2Href": "/en/contact",
-    "disclaimer": "AFA's scope covers preliminary technical assessment and process coordination. Prior to project-specific final decisions, independent legal due diligence and required technical verifications should be conducted separately."
+    "subhead1": "The right project. The right investor.",
+    "subhead2": "Technical ground solid.",
+    "description": "For investors seeking projects with verified technical reality in Romania — or for developers looking to initiate their project's assessment process — this is the right place.",
+    "ctaPrimary": "Explore the Assessment Process",
+    "ctaPrimaryHref": "/en/services",
+    "ctaSecondary": "Request a Technical Pre-Review",
+    "ctaSecondaryHref": "/en/contact",
+    "disclaimer": "AFA's work covers preliminary technical assessment and process coordination. Independent legal due diligence and any required technical verifications should be conducted separately prior to final project-specific decisions."
   }
 }
