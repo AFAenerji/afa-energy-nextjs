@@ -11,5 +11,14 @@
     "card1": { "kiker": "TEKNİK DOĞRULAMA", "body": "AFA'nın teknik incelemesi, projenizin gerçek değerini yatırımcıya görünür hale getirir." },
     "card2": { "kiker": "ATR MATRIX™", "body": "AFA ATR Matrix™ — dört eksende sistematik teknik analiz." },
     "card3": { "kiker": "KAPSAM", "body": "Romanya yenilenebilir enerji projeleri — ANRE düzenleyici çerçevesi kapsamında." }
+  },
+  "g2": {
+    "sectionLabel": "Geliştirici Rolü",
+    "h2": "Geliştirici Ne Yapar?",
+    "description": "Proje geliştirici; fikri yatırım yapılabilir bir enerji varlığına dönüştüren aktördür. Arazi güvenceye alınır, Teknik Bağlantı Onayı (ATR) süreci yönetilir, izin zinciri kurulur ve proje RTB aşamasına taşınır.",
+    "bridge": "Her tamamlanan adım projenin değerini artırır — ancak bu değerin korunabilmesi için varsayımların yatırımcı bakış açısıyla test edilmesi gerekir.",
+    "card1": { "pill": "Teknik", "subtitle": "Arazi & ATR", "body": "Bağlantı ve izin varsayımları teknik açıdan netleştirilir — proje uygulanabilirlik seviyesine taşınır." },
+    "card2": { "pill": "Ticari", "subtitle": "Değer Yaratımı", "body": "Risk azaldıkça proje değeri artar — geliştirme sürecinin her aşaması yatırımcı gözündeki değerini güçlendirir." },
+    "card3": { "pill": "Finansal", "subtitle": "Gerçekleşme", "body": "Proje belirli bir olgunluğa ulaştığında oluşan değer — satış, ortaklık veya devreye alım sonrası varlık devri yoluyla — somutlaştırılır." }
   }
 }

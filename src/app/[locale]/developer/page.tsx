@@ -5,6 +5,7 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { SITE_URL } from '@/lib/env';
 import { LOCALE_PATHS } from '@/lib/routes';
 import GelistiriciHero from '@/components/sections/GelistiriciHero';
+import GelistiriciRolTanimi from '@/components/sections/GelistiriciRolTanimi';
 import gelistiriciContent from '@/lib/content/gelistirici.json';
 
 const metaContent = {
@@ -90,6 +91,7 @@ export default async function DeveloperPage({
       />
 
       <GelistiriciHero content={gelistiriciContent.hero} locale={locale} />
+      <GelistiriciRolTanimi content={gelistiriciContent.g2} />
     </main>
   );
 }
