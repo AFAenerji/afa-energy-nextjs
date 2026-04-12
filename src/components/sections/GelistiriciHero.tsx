@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,20 +33,60 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
   const cards = [content.card1, content.card2, content.card3];
 
   return (
-    <section className={clsx('bg-afa-primary-dark', 'relative', 'overflow-hidden', 'mt-[-72px]', 'pt-[72px]')}>
+    <section className={clsx('relative', 'overflow-hidden', 'mt-[-72px]', 'pt-[72px]')} style={{ paddingBottom: '80px' }}>
+      {/* Full-bleed photo background */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{ background: '#18625F' }}
+      />
+      <Image
+        src="/images/gelistirici/hero-gelistirici-saha.jpg"
+        alt="Renewable energy project site"
+        fill
+        className="object-cover object-center"
+        quality={85}
+        style={{
+          zIndex: 1,
+          filter: 'brightness(0.85) saturate(0.80)',
+        }}
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.src = '/images/b3-cta-photo.jpg';
+        }}
+      />
+      {/* Full-width gradient overlay — desktop */}
+      <div
+        className="absolute inset-0 hidden lg:block"
+        style={{
+          background: 'linear-gradient(to right, #18625F 0%, #18625F 28%, transparent 58%)',
+          zIndex: 2,
+          pointerEvents: 'none',
+        }}
+      />
+      {/* Full-width teal overlay — mobile */}
+      <div
+        className="absolute inset-0 lg:hidden"
+        style={{
+          background: 'rgba(24, 98, 95, 0.82)',
+          zIndex: 2,
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Grid pattern overlay */}
       <div
-        className={clsx('pointer-events-none', 'absolute', 'inset-0', 'z-0')}
         style={{
-          opacity: 0.04,
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+          position: 'absolute',
+          inset: 0,
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)',
+          backgroundSize: '42px 42px',
+          pointerEvents: 'none',
+          zIndex: 0,
         }}
       />
 
       {/* Main grid */}
-      <div className={clsx('relative', 'z-[1]', 'mx-auto', 'grid', 'min-h-[620px]', 'max-w-[1180px]', 'grid-cols-1', 'lg:grid-cols-[48fr_52fr]')}>
+      <div className={clsx('relative', 'z-[10]', 'mx-auto', 'grid', 'min-h-[620px]', 'max-w-[1180px]', 'grid-cols-1', 'lg:grid-cols-[48fr_52fr]')}>
         {/* ── Left: Text panel ── */}
         <div className={clsx('flex', 'flex-col', 'justify-center', 'px-6', 'py-10', 'lg:px-[52px]', 'lg:py-16')}>
           {/* Section label */}
@@ -92,39 +133,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
         </div>
 
         {/* ── Right: Photo panel ── */}
-        <div className={clsx('relative', 'h-[40vh]', 'min-h-[280px]', 'max-h-[400px]', 'w-full', 'lg:h-full', 'lg:min-h-0', 'lg:max-h-none')}>
-          <Image
-            src="/images/gelistirici/hero-gelistirici-saha.jpg"
-            alt="Renewable energy project site"
-            fill
-            className="object-cover"
-            quality={85}
-            style={{ filter: 'brightness(0.9) saturate(0.85)', zIndex: 0 }}
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = '/images/b3-cta-photo.jpg';
-            }}
-          />
-          {/* Semi-transparent teal overlay */}
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'rgba(24, 98, 95, 0.35)',
-              pointerEvents: 'none',
-              zIndex: 1,
-            }}
-          />
-          {/* Gradient overlay — desktop only */}
-          <div
-            className={clsx('hidden', 'lg:block')}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              background: 'linear-gradient(to right, #18625F 0%, #18625F 30%, transparent 48%)',
-              pointerEvents: 'none',
-            }}
-          />
+        <div className={clsx('relative', 'overflow-hidden', 'h-[40vh]', 'min-h-[280px]', 'max-h-[400px]', 'w-full', 'lg:h-full', 'lg:min-h-0', 'lg:max-h-none')}>
           {/* Inset border — partial gold frame, top-right corner only */}
           <div
             style={{
@@ -133,12 +142,12 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               right: '20px',
               bottom: '20px',
               left: '20px',
-              borderTop: '4px solid rgba(255, 203, 0, 0.55)',
-              borderRight: '4px solid rgba(255, 203, 0, 0.55)',
+              borderTop: '6px solid rgba(255,203,0,0.75)',
+              borderRight: '6px solid rgba(255,203,0,0.75)',
               borderBottom: 'none',
               borderLeft: 'none',
               pointerEvents: 'none',
-              zIndex: 4,
+              zIndex: 3,
             }}
             className={clsx('hidden', 'lg:block')}
           />
@@ -151,7 +160,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                 className={i === 0 ? 'block' : 'hidden lg:block'}
                 style={{
                   flex: 1,
-                  background: 'rgba(15,46,44,0.85)',
+                  background: 'rgba(15, 46, 44, 0.72)',
                   borderLeft: '3px solid #FFCB00',
                   borderRadius: '2px',
                   padding: '16px 20px',

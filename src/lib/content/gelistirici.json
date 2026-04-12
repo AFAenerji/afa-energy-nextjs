@@ -10,15 +10,240 @@
     "ctaSecondaryHref": "/atr-matrix",
     "card1": { "kiker": "TEKNİK DOĞRULAMA", "body": "AFA'nın teknik incelemesi, projenizin gerçek değerini yatırımcıya görünür hale getirir." },
     "card2": { "kiker": "ATR MATRIX™", "body": "AFA ATR Matrix™ — dört eksende sistematik teknik analiz." },
-    "card3": { "kiker": "KAPSAM", "body": "Romanya yenilenebilir enerji projeleri — ANRE düzenleyici çerçevesi kapsamında." }
+    "card3": { "kiker": "KAPSAM", "body": "Romanya yenilenebilir enerji projeleri — ANRE düzenleyici çerçevesi kapsamında." },
+    "photoTag": "Romanya · ANRE Çerçevesi · Yenilenebilir Enerji"
   },
   "g2": {
-    "sectionLabel": "Geliştirici Rolü",
+    "sectionLabel": "GELİŞTİRİCİ ROLÜ",
     "h2": "Geliştirici Ne Yapar?",
     "description": "Proje geliştirici; fikri yatırım yapılabilir bir enerji varlığına dönüştüren aktördür. Arazi güvenceye alınır, Teknik Bağlantı Onayı (ATR) süreci yönetilir, izin zinciri kurulur ve proje RTB aşamasına taşınır.",
     "bridge": "Her tamamlanan adım projenin değerini artırır — ancak bu değerin korunabilmesi için varsayımların yatırımcı bakış açısıyla test edilmesi gerekir.",
-    "card1": { "pill": "Teknik", "subtitle": "Arazi & ATR", "body": "Bağlantı ve izin varsayımları teknik açıdan netleştirilir — proje uygulanabilirlik seviyesine taşınır." },
-    "card2": { "pill": "Ticari", "subtitle": "Değer Yaratımı", "body": "Risk azaldıkça proje değeri artar — geliştirme sürecinin her aşaması yatırımcı gözündeki değerini güçlendirir." },
-    "card3": { "pill": "Finansal", "subtitle": "Gerçekleşme", "body": "Proje belirli bir olgunluğa ulaştığında oluşan değer — satış, ortaklık veya devreye alım sonrası varlık devri yoluyla — somutlaştırılır." }
+    "card1": { "label": "TEKNİK", "subtitle": "Arazi & ATR", "body": "Bağlantı ve izin varsayımları teknik açıdan netleştirilir — proje uygulanabilirlik seviyesine taşınır." },
+    "card2": { "label": "TİCARİ", "subtitle": "Değer Yaratımı", "body": "Risk azaldıkça proje değeri artar — geliştirme sürecinin her aşaması yatırımcı gözündeki değerini güçlendirir." },
+    "card3": { "label": "FİNANSAL", "subtitle": "Gerçekleşme", "body": "Proje belirli bir olgunluğa ulaştığında oluşan değer — satış, ortaklık veya devreye alım sonrası varlık devri yoluyla — somutlaştırılır." }
+  },
+  "g3": {
+    "sectionLabel": "İKİ PERSPEKTİF",
+    "h2": "Aynı Proje, İki Farklı Görünüm",
+    "introP1": "Geliştirici ile yatırımcı aynı projeye, farklı sorularla bakar.",
+    "introP2": "Geliştirme sürecinde belirleyici olan şudur: hangi adım tamamlandı, hangisi bekliyor? Yatırımcı açısından ise kritik olan bu adımların yatırım komitesi için hangi belirsizlikleri taşıdığıdır.",
+    "introP3": "İnşaata Hazır (Ready-to-Build — RTB) aşamasına yaklaşıldığında bu iki perspektif arasındaki fark, şebeke bağlantı gerçekliği, izin zinciri tutarlılığı ve maliyet varsayımları üzerinde somutlaşır.",
+    "devLabel": "GELİŞTİRİCİ SÜRECİ",
+    "timeline": [
+      { "status": "completed", "phaseLabel": "Tamamlandı", "text": "Arazi güvence altına alındı, kiralama süreci tamamlandı." },
+      { "status": "inProgress", "phaseLabel": "Devam Ediyor", "text": "ATR başvurusu yapıldı — onay bekleniyor." },
+      { "status": "inProgress", "phaseLabel": "Başlatıldı", "text": "Çevresel Etki Değerlendirmesi (ÇED) süreci başlatıldı." },
+      { "status": "pending", "phaseLabel": "Hazırlık", "text": "Enerji Üretim Lisansı için başvuru hazırlanıyor." },
+      { "status": "pending", "phaseLabel": "Hedef", "text": "Proje RTB (Ready-to-Build) statüsüne yaklaşıyor." }
+    ],
+    "invLabel": "YATIRIMCI SORULARI",
+    "invSublabel": "Aşağıdaki sorular, yatırım komitesi ön taramasında bu başlıklar üzerinden şekillenen değerlendirme çerçevesini yansıtmaktadır.",
+    "accordion": [
+      { "question": "ATR kapasitesi gerçekten kullanılabilir mi, yoksa kağıt üzerinde mi?", "answer": "Bağlantı hakkı ile fiili üretim erişimi arasındaki fark teknik doğrulama ile netleşir. AFA, DSO belgelerini ve şebeke kapasitesini bağımsız olarak inceler." },
+      { "question": "Bağlantı noktası teknik açıdan yeterli mi — trafo kapasitesi doluluk oranı nedir?", "answer": "Trafo yük analizi ve şebeke güçlendirme gereksinimleri ATR Matrix™ metodolojisiyle değerlendirilir." },
+      { "question": "ÇED süreci risk taşıyor mu — yerel muhalefet var mı?", "answer": "Çevresel izin zinciri ve yerel paydaş dinamikleri erken aşamada haritalanır; olası gecikmeler ve itiraz senaryoları analiz edilir." },
+      { "question": "Lisans başvurusunda eksik ya da zayıf nokta var mı?", "answer": "İzin belgeleri kronolojik tutarlılık ve ANRE mevzuatı açısından bütünlüklü incelenir; boşluklar raporlanır." },
+      { "question": "Bu proje için gerçekçi bir LCOE hesabı yapıldı mı?", "answer": "Finansal varsayımların teknik bulgularla tutarlılığı doğrulanır; iyimser bağlantı ve üretim tahminleri bağımsız referans verileriyle karşılaştırılır." }
+    ],
+    "bridgeText": "AFA'nın teknik doğrulama süreci, bu iki perspektif arasındaki boşluğu kapatır — geliştiricinin iddialarını yatırımcının diliyle doğrular."
+  },
+  "g4": {
+    "sectionLabel": "AFA'NIN ROLÜ",
+    "h2": "AFA Bu Süreçte Nerede Duruyor?",
+    "intro1": "AFA Energy, proje geliştiricisinin veya yatırımcının doğrudan tarafı değildir. Bağımsız bir teknik danışman olarak, projenin teknik varsayımlarını ATR Matrix™ çerçevesinde değerlendirir.",
+    "intro2": "Bu değerlendirme dört temel eksende yapılır. Her eksen, projenin yatırıma hazır olup olmadığını belirleyen kritik bir alanı kapsar.",
+    "bridge": "ATR Matrix™ — projenin gerçek durumunu dört eksende görünür kılan sistematik analiz çerçevesi.",
+    "axes": [
+      {
+        "id": "baglanti",
+        "num": "01",
+        "title": "Bağlantı Fizibilitesi",
+        "subtitle": "Grid Connection Feasibility",
+        "body": "ATR kapasitesinin teknik olarak kullanılabilirliği, trafo merkezi yük durumu ve bağlantı altyapısının yeterliliği değerlendirilir.",
+        "metaLabel": "Değerlendirme Öğeleri",
+        "metaItems": ["ATR kapasite doğrulaması", "Trafo merkezi doluluk analizi", "Hat kapasitesi ve mesafe"],
+        "contextLabel": "Romanya Bağlamı",
+        "contextText": "Transelectrica şebeke haritaları ve ANRE veri tabanı referans alınır.",
+        "resultLabel": "Sonuç",
+        "resultText": "Bağlantı varsayımı doğrulanır veya risk senaryoları belirlenir."
+      },
+      {
+        "id": "uretim",
+        "num": "02",
+        "title": "Üretim Tahmini",
+        "subtitle": "Energy Yield Assessment",
+        "body": "Kapasite faktörü, kayıp analizi ve uzun vadeli enerji üretim tahmininin tutarlılığı incelenir.",
+        "metaLabel": "Değerlendirme Öğeleri",
+        "metaItems": ["P50/P90 üretim senaryoları", "Kayıp faktörleri (wake, curtailment, grid)", "Mevsimsel ve yıllık varyasyon"],
+        "contextLabel": "Romanya Bağlamı",
+        "contextText": "Bölgesel rüzgâr/güneş verileri ve Romanya grid kısıtlamaları dikkate alınır.",
+        "resultLabel": "Sonuç",
+        "resultText": "Üretim tahmini bankable seviyede doğrulanır veya revizyon önerilir."
+      },
+      {
+        "id": "maliyet",
+        "num": "03",
+        "title": "Maliyet Yapısı",
+        "subtitle": "Cost Structure Analysis",
+        "body": "CAPEX/OPEX varsayımlarının piyasa gerçekleriyle uyumu ve LCOE hesabının savunulabilirliği değerlendirilir.",
+        "metaLabel": "Değerlendirme Öğeleri",
+        "metaItems": ["CAPEX kıyaslama (benchmark)", "OPEX ve O&M maliyet projeksiyonu", "LCOE hesaplama metodolojisi"],
+        "contextLabel": "Romanya Bağlamı",
+        "contextText": "Romanya EPC piyasası ve tedarik zinciri koşulları referans alınır.",
+        "resultLabel": "Sonuç",
+        "resultText": "Maliyet yapısı yatırımcı standardında doğrulanır veya düzeltme önerilir."
+      },
+      {
+        "id": "izin",
+        "num": "04",
+        "title": "İzin & Uyumluluk",
+        "subtitle": "Permitting & Compliance",
+        "body": "ÇED, inşaat izni, lisans durumu ve düzenleyici uyumluluğun proje zaman çizelgesiyle tutarlılığı incelenir.",
+        "metaLabel": "Değerlendirme Öğeleri",
+        "metaItems": ["ÇED durumu ve riskleri", "İnşaat izni süreci", "Enerji üretim lisansı"],
+        "contextLabel": "Romanya Bağlamı",
+        "contextText": "ANRE düzenleyici çerçevesi ve Romanya izin süreçleri referans alınır.",
+        "resultLabel": "Sonuç",
+        "resultText": "İzin zinciri tamamlanmış veya eksik adımlar tanımlanmış olur."
+      }
+    ],
+    "statusTitle": "Değerlendirme Sonuçları",
+    "statusLabels": {
+      "proceed": "İlerlenebilir",
+      "conditional": "Koşullu",
+      "blocked": "Olumsuz"
+    },
+    "statusDescriptions": {
+      "proceed": "Teknik varsayımlar doğrulandı",
+      "conditional": "Ek inceleme veya düzeltme gerekli",
+      "blocked": "Kritik engel tespit edildi"
+    },
+    "disclaimer": "ATR Matrix™ sonuçları bağımsız teknik değerlendirmeye dayanır ve yatırım tavsiyesi niteliği taşımaz.",
+    "photoLabel": "ATR Matrix™",
+    "photoTitle": "Sistematik Teknik Analiz"
+  },
+  "g46": {
+    "sectionLabel": "ÇIKTI PAKETİ",
+    "h2": "AFA Teknik Değerlendirme Çıktıları",
+    "items": [
+      { "num": "01", "title": "ATR Kapasite Doğrulaması", "body": "Bağlantı noktası kapasitesinin teknik olarak kullanılabilirliği doğrulanır.", "badge": "" },
+      { "num": "02", "title": "Üretim Tahmini Değerlendirmesi", "body": "P50/P90 senaryoları ve kayıp analizleri ile üretim tahmini gözden geçirilir.", "badge": "" },
+      { "num": "03", "title": "Maliyet Yapısı Analizi", "body": "CAPEX/OPEX kıyaslaması ve LCOE hesabının savunulabilirliği değerlendirilir.", "badge": "" },
+      { "num": "04", "title": "İzin Durumu Raporu", "body": "ÇED, inşaat izni ve lisans süreçlerinin tamamlanma durumu raporlanır.", "badge": "Koşullu" },
+      { "num": "05", "title": "Risk Matrisi", "body": "Tespit edilen teknik risklerin öncelik ve etki düzeyine göre sınıflandırılması.", "badge": "" },
+      { "num": "06", "title": "Yatırımcı Özet Raporu", "body": "Tüm bulguların yatırımcı diline çevrilmiş executive summary formatı.", "badge": "Operasyonel" }
+    ]
+  },
+  "g5": {
+    "h2Part1": "Teknik Doğrulama ",
+    "h2Gold": "Doğru Yatırımcıyı",
+    "h2Part2": " Görünür Kılar.",
+    "subtitle": "AFA'nın bağımsız teknik değerlendirmesi, projenizin gerçek değerini yatırımcı gözünde somutlaştırır.",
+    "ctaPrimary": "Teknik Doğrulama Başlatın",
+    "ctaSecondary": "Süreç Hakkında",
+    "disclaimer": "Değerlendirme süreci bağımsız teknik analiz içerir ve yatırım tavsiyesi niteliği taşımaz."
+  },
+  "g6": {
+    "sectionLabel": "SÜREÇ",
+    "h2": "Nasıl Çalışır?",
+    "phases": [
+      { "num": "01", "title": "İlk Temas & Kapsam", "body": "Proje bilgileri alınır, değerlendirme kapsamı belirlenir. İlk geri dönüş 3 iş günü içinde yapılır.", "highlight": "3 iş günü içinde" },
+      { "num": "02", "title": "Veri Toplama & Analiz", "body": "ATR belgesi, üretim raporları, maliyet tahminleri ve izin dosyaları incelenir." },
+      { "num": "03", "title": "ATR Matrix™ Değerlendirmesi", "body": "Dört eksen üzerinden sistematik analiz gerçekleştirilir. Her eksen bağımsız olarak puanlanır." },
+      { "num": "04", "title": "Rapor & Sunum", "body": "Bulgular yatırımcı diline çevrilmiş rapor formatında sunulur. Gerekirse yüz yüze sunum yapılır." }
+    ],
+    "faqLabel": "SIKÇA SORULAN SORULAR",
+    "faqHeading": "Teknik Değerlendirme Sürecinde Merak Edilenler",
+    "faqIntro": "Projenizi AFA'nın teknik değerlendirme sürecine almadan önce en çok sorulan soruları aşağıda yanıtladık. ATR belgelerinin gerçek anlamından banka finansmanına uygunluğa, süreç takviminden gizlilik yapısına kadar — geliştirici olarak bilmeniz gereken temel konular bu bölümde ele alınmaktadır.",
+    "faqItems": [
+      { "q": "Değerlendirme süreci ne kadar sürer?", "a": "Standart bir değerlendirme 2-4 hafta içinde tamamlanır. Kapsam ve veri kullanılabilirliğine göre süre değişebilir." },
+      { "q": "Hangi proje türleri değerlendiriliyor?", "a": "Romanya'daki rüzgâr ve güneş enerjisi projeleri — geliştirme aşamasından operasyonel projelere kadar." },
+      { "q": "AFA yatırım tavsiyesi veriyor mu?", "a": "Hayır. AFA bağımsız teknik değerlendirme sunar. Yatırım kararı yatırımcıya aittir." },
+      { "q": "Değerlendirme maliyeti nedir?", "a": "Maliyet, proje kapsamına ve değerlendirme derinliğine göre belirlenir. İlk görüşme ücretsizdir." },
+      { "q": "Gizlilik nasıl sağlanıyor?", "a": "Tüm proje bilgileri NDA kapsamında korunur. Veriler üçüncü taraflarla paylaşılmaz." }
+    ]
+  },
+  "g7": {
+    "cta": {
+      "kicker": "DEĞERLENDİRME SÜRECİNİ BAŞLATIN",
+      "heading": "Teknik Değerlendirme Formu",
+      "subtitle": "Proje aşamasını seçin ve ilgili bilgileri paylaşın. Detaylı teknik dokümantasyon, gizlilik yapısı tesis edildikten sonra talep edilir.",
+      "button": "Değerlendirme Talebi Başlat"
+    },
+    "back": "← Geri Dön",
+    "tab1Label": "Geliştirme Aşaması / RtB",
+    "tab2Label": "Operasyonel Proje",
+    "phoneSearch": "Ülke ara...",
+    "phoneQuickPicks": "Sık Kullanılanlar",
+    "phoneAllCountries": "Tüm Ülkeler",
+    "tab1Submit": "Sürecini Başlatın →",
+    "tab2Submit": "Analizi Başlatın →",
+    "privacy": "Proje bilgileriniz NDA kapsamında korunur. Verileriniz yalnızca değerlendirme amacıyla kullanılır.",
+    "selectPlaceholder": "Seçin...",
+    "success": {
+      "title": "Talebiniz Alındı",
+      "message": "Değerlendirme ekibimiz en kısa sürede sizinle iletişime geçecektir.",
+      "reset": "Yeni Başvuru"
+    },
+    "errors": {
+      "required": "Bu alan zorunludur",
+      "email": "Geçerli bir e-posta adresi giriniz",
+      "checkbox": "En az bir seçenek işaretleyin"
+    },
+    "labels": {
+      "name": "Ad Soyad",
+      "company": "Şirket Adı",
+      "email": "Kurumsal E-posta",
+      "phone": "Telefon",
+      "assessmentType": "Değerlendirme amacı nedir?",
+      "projectLocation": "Proje Lokasyonu",
+      "technology": "Teknoloji",
+      "targetCapacity": "Hedef Kurulu Güç",
+      "projectStage": "Proje Aşaması",
+      "notes": "Notlar",
+      "applicationPurpose": "Bu başvurunun ana amacı nedir?",
+      "installedCapacity": "Kurulu Güç",
+      "location": "Lokasyon",
+      "codYear": "Devreye Alım Yılı (COD)",
+      "annualProduction": "Son 12 Ay Üretim (MWh)",
+      "scadaSystem": "SCADA / İzleme Sistemi",
+      "performanceStatus": "Performans Durumu",
+      "revenueModel": "Gelir Modeli",
+      "ppaMaturity": "PPA Vade",
+      "priceStructure": "Fiyat Yapısı",
+      "actionTimeline": "Planlanan Aksiyon Takvimi"
+    },
+    "placeholders": {
+      "location": "İl / Bölge",
+      "annualProduction": "Örn: 12.500 MWh",
+      "notesTab1": "Proje hakkında paylaşmak istediğiniz ek bilgiler...",
+      "notesTab2": "Satış hedefi, mevcut yatırımcı ilgisi, performans sorunu, banka süreci vb."
+    },
+    "assessmentTypeOptions": [
+      "Projem için bağımsız teknik değerlendirme",
+      "ATR Matrix™ raporu",
+      "Teknik ön inceleme / Ön TDD",
+      "Diğer"
+    ],
+    "technologyOptionsTab1": ["Güneş PV", "Rüzgar", "BESS", "Hibrit (Güneş + BESS)", "Hibrit (Rüzgar + BESS)", "Diğer"],
+    "targetCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW ve üzeri", "Esnek"],
+    "projectStageOptions": ["Geliştirme aşaması", "İnşaata hazır (RtB)", "İnşaat aşaması"],
+    "applicationPurposeOptions": [
+      "Varlık satışı öncesi teknik konumlandırma",
+      "Performans ve gelir dayanıklılığı analizi",
+      "Refinansman / bankability değerlendirmesi",
+      "İşveren mühendisliği / teknik gözetim",
+      "Portföy içi performans iyileştirme ve varlık yönetimi",
+      "Diğer"
+    ],
+    "technologyOptionsTab2": ["Güneş PV", "Rüzgar", "Hibrit (Güneş + BESS)", "Hibrit (Rüzgar + BESS)", "Diğer"],
+    "installedCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW ve üzeri"],
+    "codYearOptions": ["2018 ve öncesi", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+    "scadaOptions": ["Evet — tam veri erişimi", "Evet — kısıtlı veri", "Hayır"],
+    "performanceOptions": ["Beklenti ile uyumlu", "Beklentinin altında", "Belirsiz — analiz edilmedi"],
+    "revenueModelOptions": ["Piyasa bazlı gelir (merchant)", "Elektrik Alım Anlaşması (PPA)", "Karma"],
+    "ppaMaturityOptions": ["1–5 yıl", "5–10 yıl", "10–15 yıl", "15+ yıl"],
+    "priceStructureOptions": ["Sabit", "Endeksli", "Karma"],
+    "actionTimelineOptions": ["0–3 ay", "3–6 ay", "6–12 ay", "Uzun vadeli"]
   }
 }

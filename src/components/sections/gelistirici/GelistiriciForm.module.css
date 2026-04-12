@@ -1,0 +1,47 @@
+/* GelistiriciForm — Component-scoped design tokens (DSS v8.2 Rule 21) */
+
+.section {
+  --afa-deep: #0F2E2C;
+  --afa-primary: #28AFB0;
+  --afa-primary-dark: #1E8A8B;
+  --afa-gold: #FFCB00;
+  --afa-gold-light: #FFD740;
+  --afa-card: #18625F;
+  --afa-coral: #F25F5C;
+  --white-95: rgba(255, 255, 255, 0.95);
+  --white-85: rgba(255, 255, 255, 0.85);
+  --white-70: rgba(255, 255, 255, 0.70);
+  --white-60: rgba(255, 255, 255, 0.60);
+  --white-50: rgba(255, 255, 255, 0.50);
+  --white-10: rgba(255, 255, 255, 0.10);
+  --white-08: rgba(255, 255, 255, 0.08);
+  --white-05: rgba(255, 255, 255, 0.05);
+  --white-03: rgba(255, 255, 255, 0.03);
+  --black-40: rgba(0, 0, 0, 0.40);
+  --black-35: rgba(0, 0, 0, 0.35);
+  --black-25: rgba(0, 0, 0, 0.25);
+  --shadow-gold: rgba(255, 203, 0, 0.40);
+  --shadow-gold-hover: rgba(255, 203, 0, 0.50);
+  --teal-tab: #28AFB0;
+  --teal-tab-dark: #1E8A8B;
+}
+
+/* Panel visibility transitions — opacity/visibility only per UI Spec v2.1 */
+
+.panelVisible {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
+}
+
+.panelHidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
+}

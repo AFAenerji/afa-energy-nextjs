@@ -37,6 +37,11 @@ const PILL_TEXT_STYLES: React.CSSProperties[] = [
 
 const GHOST_NUMBERS = ['01', '02', '03'];
 
+const CARD_SHADOW =
+  '10px 10px 24px rgba(0,0,0,0.11), -5px -5px 16px rgba(255,255,255,0.85), inset 2px 2px 4px rgba(255,255,255,1), inset -2px -2px 4px rgba(0,0,0,0.03)';
+const CARD_SHADOW_HOVER =
+  '14px 16px 32px rgba(0,0,0,0.13), -5px -5px 16px rgba(255,255,255,0.85), inset 2px 2px 4px rgba(255,255,255,1), inset -2px -2px 4px rgba(0,0,0,0.03)';
+
 function RolCard({
   card,
   index,
@@ -50,17 +55,20 @@ function RolCard({
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative flex flex-row items-stretch overflow-hidden"
+      className="g2-card"
       style={{
         width: '240px',
         flexShrink: 0,
         minHeight: '210px',
         borderRadius: '20px',
-        background: 'linear-gradient(145deg, #f8f8f8 0%, #ffffff 50%, #f5f5f5 100%)',
+        position: 'relative',
+        overflow: 'hidden',
+        display: 'flex',
+        flexDirection: 'row',
         padding: '20px',
         gap: '16px',
-        boxShadow:
-          '10px 10px 24px rgba(0,0,0,0.11), -5px -5px 16px rgba(255,255,255,0.85), inset 2px 2px 4px rgba(255,255,255,1), inset -2px -2px 4px rgba(0,0,0,0.03)',
+        background: 'linear-gradient(145deg, #f8f8f8 0%, #ffffff 50%, #f5f5f5 100%)',
+        boxShadow: hovered ? CARD_SHADOW_HOVER : CARD_SHADOW,
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'transform 160ms ease-out, box-shadow 160ms ease-out',
       }}
@@ -158,110 +166,108 @@ export default function GelistiriciRolTanimi({ content }: GelistiriciRolTanimiPr
   const cards = [content.card1, content.card2, content.card3];
 
   return (
-    <section className="bg-white">
-      <div className="mx-auto grid min-h-[600px] max-w-[1180px] grid-cols-1 lg:grid-cols-[70fr_30fr]">
-        {/* ── Mobile photo (top) ── */}
-        <div className="relative h-[300px] w-full lg:hidden">
-          <Image
-            src="/images/gelistirici/dkj7.jpg"
-            alt="Project developer on site"
-            fill
-            className="object-cover"
-            quality={85}
-            style={{ filter: 'brightness(0.9) saturate(0.85)' }}
-          />
-        </div>
-
-        {/* ── Left: Text panel ── */}
-        <div className="px-6 py-10 lg:pl-[52px] lg:pr-[36px] lg:py-[64px]">
-          {/* Section label */}
-          <span className="text-afa-primary text-xs uppercase tracking-[0.18em] font-medium mb-[14px] block">
-            {content.sectionLabel}
-          </span>
-
-          {/* H2 */}
-          <h2
-            className="font-bold text-afa-primary-dark mb-[16px]"
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: 'clamp(22px, 2.2vw, 28px)',
-              lineHeight: 1.2,
-            }}
-          >
-            {content.h2}
-          </h2>
-
-          {/* Description */}
-          <p className="text-gray-700 text-sm leading-relaxed mb-[12px] max-w-[620px]">
-            {content.description}
-          </p>
-
-          {/* Cards */}
-          <div className="flex gap-[16px] items-stretch flex-wrap lg:flex-nowrap">
-            {cards.map((card, i) => (
-              <RolCard key={i} card={card} index={i} />
-            ))}
-          </div>
-
-          {/* Bridge — renders AFTER cards */}
-          <p
-            className="text-gray-600 text-sm italic mb-[36px] max-w-[620px]"
-            style={{
-              paddingTop: '20px',
-              marginTop: '24px',
-              borderTop: '1px solid rgba(24,98,95,0.15)',
-            }}
-          >
-            {content.bridge}
-          </p>
-        </div>
-
-        {/* ── Right: Photo panel (desktop) ── */}
-        <div className="relative hidden lg:block">
-          <Image
-            src="/images/gelistirici/dkj7.jpg"
-            alt="Project developer on site"
-            fill
-            className="object-cover"
-            quality={85}
-            style={{ filter: 'brightness(0.9) saturate(0.85)' }}
-          />
-
-          {/* Accent bar — left edge */}
-          <div
-            className="hidden lg:block"
-            style={{
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              bottom: 0,
-              width: '5px',
-              zIndex: 4,
-              background:
-                'linear-gradient(to bottom, transparent 0%, #FFCB00 12%, #FFCB00 88%, transparent 100%)',
-              pointerEvents: 'none',
-            }}
-          />
-
-          {/* Inset border — top-right corner only */}
-          <div
-            className="hidden lg:block"
-            style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              bottom: '20px',
-              left: '20px',
-              zIndex: 3,
-              borderTop: '3px solid rgba(255,203,0,0.75)',
-              borderRight: '3px solid rgba(255,203,0,0.75)',
-              borderBottom: 'none',
-              borderLeft: 'none',
-              pointerEvents: 'none',
-            }}
-          />
-        </div>
+    <section className="bg-white" style={{ borderTop: '48px solid #FFFFFF' }}>
+      {/* ── Photo band — full width ── */}
+      <div className="relative w-full h-[300px] lg:h-[420px]">
+        <Image
+          src="/images/gelistirici/dkj7.jpg"
+          alt="Project developer on site"
+          fill
+          quality={85}
+          style={{ filter: 'brightness(0.9) saturate(0.85)', objectFit: 'cover', objectPosition: 'center top', width: '100%', height: '100%' }}
+        />
+        {/* Teal overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, rgba(24,98,95,0.15) 0%, rgba(24,98,95,0.40) 100%)',
+            pointerEvents: 'none',
+          }}
+        />
+        {/* Vertical accent bar — left edge */}
+        <div
+          className="hidden lg:block"
+          style={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            left: '16px',
+            width: '10px',
+            zIndex: 3,
+            pointerEvents: 'none',
+            background: 'linear-gradient(to bottom, transparent 0%, #FFCB00 15%, #FFCB00 85%, transparent 100%)',
+          }}
+        />
+        {/* Horizontal accent bar — bottom edge */}
+        <div
+          className="hidden lg:block"
+          style={{
+            position: 'absolute',
+            bottom: '16px',
+            left: '16px',
+            right: '16px',
+            height: '10px',
+            zIndex: 3,
+            pointerEvents: 'none',
+            background: 'linear-gradient(to right, transparent 0%, #FFCB00 15%, #FFCB00 85%, transparent 100%)',
+          }}
+        />
       </div>
+
+      {/* ── Content area ── */}
+      <div className="mx-auto max-w-[1180px] px-[24px] py-[40px] lg:px-[52px] lg:pt-[56px] lg:pb-[64px]">
+        {/* Section label */}
+        <span className="text-afa-primary text-xs uppercase tracking-[0.18em] font-medium mb-[14px] block">
+          {content.sectionLabel}
+        </span>
+
+        {/* H2 */}
+        <h2
+          className="font-bold text-afa-primary-dark mb-[16px]"
+          style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: 'clamp(22px, 2.2vw, 28px)',
+            lineHeight: 1.2,
+          }}
+        >
+          {content.h2}
+        </h2>
+
+        {/* Description */}
+        <p className="text-gray-700 text-sm leading-relaxed mb-[36px] max-w-[720px]">
+          {content.description}
+        </p>
+
+        {/* Cards */}
+        <div className="lg:flex-row flex-col" style={{ display: 'flex', flexDirection: 'row', gap: '16px', alignItems: 'stretch' }}>
+          {cards.map((card, i) => (
+            <RolCard key={i} card={card} index={i} />
+          ))}
+        </div>
+
+        {/* Bridge — renders AFTER cards */}
+        <p
+          className="text-gray-600 text-sm italic max-w-[720px]"
+          style={{
+            marginTop: '28px',
+            paddingTop: '20px',
+            borderTop: '1px solid rgba(24,98,95,0.15)',
+          }}
+        >
+          {content.bridge}
+        </p>
+      </div>
+
+      {/* Responsive card widths */}
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .g2-card {
+            width: 100% !important;
+            flex-shrink: 1 !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,11 +1,19 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Locale, locales, defaultLocale } from '@/lib/i18n';
 import { canonicalFromFullPath, alternatesFromLocalePaths } from '@/lib/seo/canonical';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { SITE_URL } from '@/lib/env';
 import { LOCALE_PATHS } from '@/lib/routes';
-import GelistiriciHero from '@/components/sections/GelistiriciHero';
-import GelistiriciRolTanimi from '@/components/sections/GelistiriciRolTanimi';
+import GelistiriciHero from '@/components/sections/gelistirici/GelistiriciHero';
+import GelistiriciRol from '@/components/sections/gelistirici/GelistiriciRol';
+import GelistiriciGerilim from '@/components/sections/gelistirici/GelistiriciGerilim';
+import GelistiriciATR from '@/components/sections/gelistirici/GelistiriciATR';
+import GelistiriciCiktilar from '@/components/sections/gelistirici/GelistiriciCiktilar';
+import GelistiriciCTA from '@/components/sections/gelistirici/GelistiriciCTA';
+import GelistiriciSurec from '@/components/sections/gelistirici/GelistiriciSurec';
+import GelistiriciForm from '@/components/sections/gelistirici/GelistiriciForm';
+import GelistiriciFaq from '@/components/sections/gelistirici/GelistiriciFaq';
 import gelistiriciContent from '@/lib/content/gelistirici.json';
 
 const metaContent = {
@@ -91,7 +99,14 @@ export default async function DeveloperPage({
       />
 
       <GelistiriciHero content={gelistiriciContent.hero} locale={locale} />
-      <GelistiriciRolTanimi content={gelistiriciContent.g2} />
+      <GelistiriciRol content={gelistiriciContent.g2} />
+      <GelistiriciGerilim content={gelistiriciContent.g3 as React.ComponentProps<typeof GelistiriciGerilim>['content']} />
+      <GelistiriciATR content={gelistiriciContent.g4} />
+      <GelistiriciCiktilar content={gelistiriciContent.g46} />
+      <GelistiriciCTA content={gelistiriciContent.g5} locale={locale} />
+      <GelistiriciSurec content={gelistiriciContent.g6} />
+      <GelistiriciForm content={gelistiriciContent.g7} locale={locale} />
+      <GelistiriciFaq content={gelistiriciContent.g6} />
     </main>
   );
 }
