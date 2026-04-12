@@ -7,6 +7,7 @@ interface PhaseData {
   title: string;
   body: string;
   highlight?: string;
+  note?: string;
 }
 
 interface FaqItem {
@@ -145,6 +146,12 @@ function PhaseCard({ phase, index }: { phase: PhaseData; index: number }) {
         <p style={{ fontSize: '15px', color: '#18625F', lineHeight: 1.7 }}>
           {renderBody()}
         </p>
+        {/* Conditional note */}
+        {phase.note && (
+          <p style={{ fontSize: '13px', fontStyle: 'italic', color: 'rgba(24,98,95,0.60)', lineHeight: 1.5, marginTop: '10px' }}>
+            {phase.note}
+          </p>
+        )}
       </div>
 
       {/* Ghost number — DSS Rule 18.5 */}

@@ -36,14 +36,14 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
     <section className={clsx('relative', 'overflow-hidden', 'mt-[-72px]', 'pt-[72px]')} style={{ paddingBottom: '80px' }}>
       {/* Full-bleed photo background */}
       <div
-        className="absolute inset-0 z-0"
+        className={clsx('absolute', 'inset-0', 'z-0')}
         style={{ background: '#18625F' }}
       />
       <Image
         src="/images/gelistirici/hero-gelistirici-saha.jpg"
         alt="Renewable energy project site"
         fill
-        className="object-cover object-center"
+        className={clsx('object-cover', 'object-center')}
         quality={85}
         style={{
           zIndex: 1,
@@ -56,7 +56,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
       />
       {/* Full-width gradient overlay — desktop */}
       <div
-        className="absolute inset-0 hidden lg:block"
+        className={clsx('absolute', 'inset-0', 'hidden', 'lg:block')}
         style={{
           background: 'linear-gradient(to right, #18625F 0%, #18625F 28%, transparent 58%)',
           zIndex: 2,
@@ -65,7 +65,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
       />
       {/* Full-width teal overlay — mobile */}
       <div
-        className="absolute inset-0 lg:hidden"
+        className={clsx('absolute', 'inset-0', 'lg:hidden')}
         style={{
           background: 'rgba(24, 98, 95, 0.82)',
           zIndex: 2,

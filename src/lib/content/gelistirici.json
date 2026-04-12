@@ -1,16 +1,17 @@
 {
   "hero": {
-    "sectionLabel": "PROJE GELİŞTİRİCİLERİ İÇİN",
-    "h1Line1": "İyi Bir Proje Yatırımcıya",
-    "h1Line2": "Yeterince Anlatılmadığında",
-    "h1Line3": "Değerini Yitirir.",
-    "subtitle": "İnşaata Hazır Statüsüne (Ready-to-Build, RTB) ulaşmış bir proje teknik olarak hazır olabilir. Ancak bağlantı varsayımları doğrulanmamışsa, maliyet öngörüleri savunulamıyorsa ya da yatırımcı soracağı soruların yanıtlarını dosyada bulamıyorsa — bu noktada AFA'nın teknik doğrulama süreci devreye girer.",
-    "ctaPrimary": "Teknik Doğrulama Başlatın",
-    "ctaSecondary": "ATR Matrix™ Hakkında",
+    "sectionLabel": "GELİŞTİRİCİLER VE SANTRAL SAHİPLERİ İÇİN",
+    "motto": "Doğru Proje. Doğru Yatırımcı. Doğru Zeminde.",
+    "h1Line1": "İyi Proje, Yanlış Yatırımcıyla",
+    "h1Line2": "",
+    "h1Line3": "Değer Kaybeder.",
+    "subtitle": "İnşaata hazır aşama (Ready-to-Build, RTB) statüsüne taşıdığınız bir proje teknik olarak hazır olabilir. Ancak bağlantı varsayımları doğrulanmamışsa, maliyet öngörüleri savunulamıyorsa ya da yatırımcı soracağı soruların yanıtlarını dosyada bulamıyorsa — süreç tıkanır, değer aşınır.\n\nAFA, projenizi ATR Matrix™ kapsamında bağımsız olarak değerlendirir. Teknik doğrulamadan geçen projeler yatırımcı incelemesine daha güçlü girer.",
+    "ctaPrimary": "Projenizi Değerlendirmeye Alın",
+    "ctaSecondary": "ATR Matrix™ Nasıl Çalışır",
     "ctaSecondaryHref": "/atr-matrix",
-    "card1": { "kiker": "TEKNİK DOĞRULAMA", "body": "AFA'nın teknik incelemesi, projenizin gerçek değerini yatırımcıya görünür hale getirir." },
-    "card2": { "kiker": "ATR MATRIX™", "body": "AFA ATR Matrix™ — dört eksende sistematik teknik analiz." },
-    "card3": { "kiker": "KAPSAM", "body": "Romanya yenilenebilir enerji projeleri — ANRE düzenleyici çerçevesi kapsamında." },
+    "card1": { "kiker": "DOSYA GÜCÜ", "body": "Yatırımcının soracağı teknik sorular görüşmeden önce yanıtlanmış olur." },
+    "card2": { "kiker": "BAĞIMSIZ ANALİZ", "body": "Şebeke, maliyet ve izin zinciri ATR Matrix™ kapsamında sistematik biçimde netleşir." },
+    "card3": { "kiker": "TEKNİK ZEMİN", "body": "Doğrulamadan geçen proje, yatırımcı incelemesinde savunulabilir bir dosyayla durur." },
     "photoTag": "Romanya · ANRE Çerçevesi · Yenilenebilir Enerji"
   },
   "g2": {
@@ -45,12 +46,12 @@
       { "question": "Lisans başvurusunda eksik ya da zayıf nokta var mı?", "answer": "İzin belgeleri kronolojik tutarlılık ve ANRE mevzuatı açısından bütünlüklü incelenir; boşluklar raporlanır." },
       { "question": "Bu proje için gerçekçi bir LCOE hesabı yapıldı mı?", "answer": "Finansal varsayımların teknik bulgularla tutarlılığı doğrulanır; iyimser bağlantı ve üretim tahminleri bağımsız referans verileriyle karşılaştırılır." }
     ],
-    "bridgeText": "AFA'nın teknik doğrulama süreci, bu iki perspektif arasındaki boşluğu kapatır — geliştiricinin iddialarını yatırımcının diliyle doğrular."
+    "bridgeText": "Teknik filtre olmadan bu riskler yatırımcı değerlendirme sürecinde — çoğu zaman fiyat ve takvim baskısı olarak — ortaya çıkar. Teknik filtre ile geliştirici riskleri sürecin başında kontrol altına alır."
   },
   "g4": {
     "sectionLabel": "AFA'NIN ROLÜ",
     "h2": "AFA Bu Süreçte Nerede Duruyor?",
-    "intro1": "AFA Energy, proje geliştiricisinin veya yatırımcının doğrudan tarafı değildir. Bağımsız bir teknik danışman olarak, projenin teknik varsayımlarını ATR Matrix™ çerçevesinde değerlendirir.",
+    "intro1": "AFA Energy, proje geliştiricisinin veya yatırımcının doğrudan tarafı değildir. AFA'nın işlevi bağımsız teknik doğrulamadır. Projenin teknik varsayımlarını ATR Matrix™ çerçevesinde değerlendirir.",
     "intro2": "Bu değerlendirme dört temel eksende yapılır. Her eksen, projenin yatırıma hazır olup olmadığını belirleyen kritik bir alanı kapsar.",
     "bridge": "ATR Matrix™ — projenin gerçek durumunu dört eksende görünür kılan sistematik analiz çerçevesi.",
     "axes": [
@@ -139,15 +140,16 @@
     "h2Gold": "Doğru Yatırımcıyı",
     "h2Part2": " Görünür Kılar.",
     "subtitle": "AFA'nın bağımsız teknik değerlendirmesi, projenizin gerçek değerini yatırımcı gözünde somutlaştırır.",
-    "ctaPrimary": "Teknik Doğrulama Başlatın",
-    "ctaSecondary": "Süreç Hakkında",
-    "disclaimer": "Değerlendirme süreci bağımsız teknik analiz içerir ve yatırım tavsiyesi niteliği taşımaz."
+    "ctaPrimary": "Projenizi Değerlendirmeye Alın →",
+    "ctaSecondary": "ATR Matrix™ Nasıl Çalışır",
+    "privacyNote": "Koordinat, parsel ve bağlantı noktası bilgilerini ilk aşamada paylaşmanız gerekmez.",
+    "disclaimer": "Proje-spesifik yasal ve teknik doğrulama tavsiye edilir."
   },
   "g6": {
     "sectionLabel": "SÜREÇ",
     "h2": "Nasıl Çalışır?",
     "phases": [
-      { "num": "01", "title": "İlk Temas & Kapsam", "body": "Proje bilgileri alınır, değerlendirme kapsamı belirlenir. İlk geri dönüş 3 iş günü içinde yapılır.", "highlight": "3 iş günü içinde" },
+      { "num": "01", "title": "İlk Temas & Kapsam", "body": "Proje bilgileri alınır, değerlendirme kapsamı belirlenir. İlk geri dönüş 3 iş günü içinde yapılır.", "highlight": "3 iş günü içinde", "note": "Takvim, geliştiricinin belge hazırlık seviyesi ve veri erişimine bağlı olarak değişebilir." },
       { "num": "02", "title": "Veri Toplama & Analiz", "body": "ATR belgesi, üretim raporları, maliyet tahminleri ve izin dosyaları incelenir." },
       { "num": "03", "title": "ATR Matrix™ Değerlendirmesi", "body": "Dört eksen üzerinden sistematik analiz gerçekleştirilir. Her eksen bağımsız olarak puanlanır." },
       { "num": "04", "title": "Rapor & Sunum", "body": "Bulgular yatırımcı diline çevrilmiş rapor formatında sunulur. Gerekirse yüz yüze sunum yapılır." }
@@ -156,11 +158,12 @@
     "faqHeading": "Teknik Değerlendirme Sürecinde Merak Edilenler",
     "faqIntro": "Projenizi AFA'nın teknik değerlendirme sürecine almadan önce en çok sorulan soruları aşağıda yanıtladık. ATR belgelerinin gerçek anlamından banka finansmanına uygunluğa, süreç takviminden gizlilik yapısına kadar — geliştirici olarak bilmeniz gereken temel konular bu bölümde ele alınmaktadır.",
     "faqItems": [
-      { "q": "Değerlendirme süreci ne kadar sürer?", "a": "Standart bir değerlendirme 2-4 hafta içinde tamamlanır. Kapsam ve veri kullanılabilirliğine göre süre değişebilir." },
+      { "q": "Değerlendirme süreci ne kadar sürer?", "a": "AFA, yatırımcı tarafında bağımsız teknik filtre olarak konumlanır; proje geliştirici veya sermaye sağlayıcı değildir. Teknik doğrulamadan geçen projeler yatırımcı incelemesine uygun bir dosya zemininde ilerler — nihai karar ve işlem tarafları yatırımcı ile geliştirici arasında şekillenir." },
       { "q": "Hangi proje türleri değerlendiriliyor?", "a": "Romanya'daki rüzgâr ve güneş enerjisi projeleri — geliştirme aşamasından operasyonel projelere kadar." },
       { "q": "AFA yatırım tavsiyesi veriyor mu?", "a": "Hayır. AFA bağımsız teknik değerlendirme sunar. Yatırım kararı yatırımcıya aittir." },
       { "q": "Değerlendirme maliyeti nedir?", "a": "Maliyet, proje kapsamına ve değerlendirme derinliğine göre belirlenir. İlk görüşme ücretsizdir." },
-      { "q": "Gizlilik nasıl sağlanıyor?", "a": "Tüm proje bilgileri NDA kapsamında korunur. Veriler üçüncü taraflarla paylaşılmaz." }
+      { "q": "Gizlilik nasıl sağlanıyor?", "a": "Tüm proje bilgileri NDA kapsamında korunur. Veriler üçüncü taraflarla paylaşılmaz." },
+      { "q": "Projem teknik doğrulamadan geçtikten sonra ne olur?", "a": "Değerlendirme tamamlandığında AFA, teknik bulgular ve statü sınıflandırmasını içeren raporu geliştiriciye iletir. İlerlenebilir bulunan projeler için yatırımcı sürecine yönelik bir sonraki adım önerisi de sunulur. Sürecin nasıl ilerleyeceği projenin statüsüne, geliştiricinin hedefine ve yatırımcı tarafındaki eşleşme olasılığına bağlı olarak şekillenir." }
     ]
   },
   "g7": {
@@ -225,7 +228,7 @@
       "Teknik ön inceleme / Ön TDD",
       "Diğer"
     ],
-    "technologyOptionsTab1": ["Güneş PV", "Rüzgar", "BESS", "Hibrit (Güneş + BESS)", "Hibrit (Rüzgar + BESS)", "Diğer"],
+    "technologyOptionsTab1": ["Güneş enerjisi (GES)", "Rüzgar enerjisi (RES)", "BESS", "Hibrit GES+BESS", "Hibrit RES+BESS", "Diğer"],
     "targetCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW ve üzeri", "Esnek"],
     "projectStageOptions": ["Geliştirme aşaması", "İnşaata hazır (RtB)", "İnşaat aşaması"],
     "applicationPurposeOptions": [
@@ -236,7 +239,7 @@
       "Portföy içi performans iyileştirme ve varlık yönetimi",
       "Diğer"
     ],
-    "technologyOptionsTab2": ["Güneş PV", "Rüzgar", "Hibrit (Güneş + BESS)", "Hibrit (Rüzgar + BESS)", "Diğer"],
+    "technologyOptionsTab2": ["Güneş enerjisi (GES)", "Rüzgar enerjisi (RES)", "Hibrit GES+BESS", "Hibrit RES+BESS", "Diğer"],
     "installedCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW ve üzeri"],
     "codYearOptions": ["2018 ve öncesi", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
     "scadaOptions": ["Evet — tam veri erişimi", "Evet — kısıtlı veri", "Hayır"],

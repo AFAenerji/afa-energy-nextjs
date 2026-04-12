@@ -11,6 +11,7 @@ interface GelistiriciCTAProps {
     subtitle: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    privacyNote: string;
     disclaimer: string;
   };
   locale: string;
@@ -126,6 +127,13 @@ export default function GelistiriciCTA({ content, locale }: GelistiriciCTAProps)
             {content.ctaSecondary}
           </Link>
         </div>
+
+        {/* Privacy note */}
+        {content.privacyNote && (
+          <p style={{ fontSize: '12px', fontStyle: 'italic', color: 'rgba(255,255,255,0.55)', marginBottom: '8px' }}>
+            {content.privacyNote}
+          </p>
+        )}
 
         {/* Disclaimer */}
         <p style={{ fontSize: '11px', fontStyle: 'italic', color: 'rgba(255,255,255,0.42)' }}>

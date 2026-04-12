@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 interface InfoCard {
   kiker: string;
@@ -12,6 +13,7 @@ interface InfoCard {
 interface GelistiriciHeroProps {
   content: {
     sectionLabel: string;
+    motto: string;
     h1Line1: string;
     h1Line2: string;
     h1Line3: string;
@@ -46,7 +48,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
 
   return (
     <section
-      className="relative overflow-hidden"
+      className={clsx('relative', 'overflow-hidden')}
       style={{
         background: '#18625F',
         minHeight: '100vh',
@@ -75,12 +77,12 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
 
       {/* Main grid */}
       <div
-        className="relative z-[1] mx-auto grid grid-cols-1 lg:grid-cols-[48fr_52fr]"
+        className={clsx('relative', 'z-[1]', 'mx-auto', 'grid', 'grid-cols-1', 'lg:grid-cols-[48fr_52fr]')}
         style={{ maxWidth: '1180px', minHeight: 'calc(100vh - 72px)' }}
       >
         {/* ── Left: Text panel ── */}
         <div
-          className="flex flex-col justify-center"
+          className={clsx('flex', 'flex-col', 'justify-center')}
           style={
             isMobile
               ? {
@@ -91,11 +93,11 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                   position: 'relative',
                   zIndex: 1,
                 }
-              : { padding: '120px 52px 100px' }
+              : { padding: '100px 52px 80px' }
           }
         >
           {/* Section label with gold line */}
-          <div className="flex items-center gap-3 mb-5">
+          <div className={clsx('flex', 'items-center', 'gap-3', 'mb-5')}>
             <div style={{ width: '20px', height: '2px', background: '#FFCB00' }} />
             <span
               style={{
@@ -110,6 +112,21 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             </span>
           </div>
 
+          {/* Motto */}
+          {content.motto && (
+            <p
+              style={{
+                fontSize: '14px',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.65)',
+                letterSpacing: '0.04em',
+                marginBottom: '16px',
+              }}
+            >
+              {content.motto}
+            </p>
+          )}
+
           {/* H1 */}
           <h1
             className="max-w-[560px]"
@@ -123,29 +140,34 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             }}
           >
             <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line1}</span>
-            <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line2}</span>
+            {content.h1Line2 && (
+              <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line2}</span>
+            )}
             <span style={{ display: 'block', color: '#FFCB00' }}>{content.h1Line3}</span>
           </h1>
 
           {/* Subtitle */}
-          <p
-            style={{
-              fontSize: '16px',
-              fontWeight: 400,
-              color: 'rgba(245,247,246,0.82)',
-              lineHeight: 1.6,
-              maxWidth: '540px',
-              marginBottom: '32px',
-            }}
-          >
-            {content.subtitle}
-          </p>
+          {content.subtitle.split('\n\n').map((para, i, arr) => (
+            <p
+              key={i}
+              style={{
+                fontSize: '16px',
+                fontWeight: 400,
+                color: 'rgba(245,247,246,0.90)',
+                lineHeight: 1.6,
+                maxWidth: '540px',
+                marginBottom: i < arr.length - 1 ? '12px' : '32px',
+              }}
+            >
+              {para}
+            </p>
+          ))}
 
           {/* CTA buttons */}
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className={clsx('flex', 'flex-wrap', 'gap-3', 'mb-10')}>
             <Link
               href={contactHref}
-              className="inline-flex items-center justify-center"
+              className={clsx('inline-flex', 'items-center', 'justify-center')}
               style={{
                 fontFamily: "'Montserrat', sans-serif",
                 background: '#FFCB00',
@@ -165,7 +187,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             </Link>
             <Link
               href={atrHref}
-              className="inline-flex items-center justify-center"
+              className={clsx('inline-flex', 'items-center', 'justify-center')}
               style={{
                 fontSize: '13px',
                 fontWeight: 600,
@@ -190,91 +212,80 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             </Link>
           </div>
 
-          {/* Info cards */}
-          <div className="flex flex-col gap-[10px] max-w-[380px]">
-            {cards.map((card, i) => (
-              <div
-                key={i}
-                style={{
-                  background: 'rgba(255,255,255,0.07)',
-                  borderRadius: '8px',
-                  borderLeft: '3px solid rgba(255,203,0,0.50)',
-                  padding: '16px 20px',
-                  transition: 'background 160ms ease-out, border-left-color 160ms ease-out',
-                  cursor: 'default',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.10)';
-                  e.currentTarget.style.borderLeftColor = '#FFCB00';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(255,255,255,0.07)';
-                  e.currentTarget.style.borderLeftColor = 'rgba(255,203,0,0.50)';
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.18em',
-                    textTransform: 'uppercase',
-                    color: '#FFCB00',
-                    marginBottom: '4px',
-                  }}
-                >
-                  {card.kiker}
-                </div>
-                <div style={{ fontSize: '13px', fontWeight: 400, color: 'rgba(245,247,246,0.72)', lineHeight: 1.5 }}>
-                  {card.body}
-                </div>
-              </div>
-            ))}
+          {/* Info cards — DSS v8.2 Kural 19.H Neumorphic */}
+          <div
+            role="list"
+            style={{
+              display: 'flex',
+              flexDirection: isMobile ? 'column' : 'row',
+              gap: isMobile ? '16px' : '24px',
+              marginTop: '32px',
+              maxWidth: '560px',
+            }}
+          >
+            <NeuCard card={content.card1} ghostNumber="01" />
+            <NeuCard card={content.card2} ghostNumber="02" />
+            <NeuCard card={content.card3} ghostNumber="03" />
           </div>
         </div>
 
         {/* ── Right: Photo panel ── */}
         {!isMobile && (
-          <div className="relative overflow-hidden hidden lg:block">
+          <div
+            className={clsx('hidden', 'lg:block')}
+            style={{
+              position: 'absolute',
+              top: '72px',
+              right: 0,
+              bottom: 0,
+              width: '52%',
+              overflow: 'hidden',
+              zIndex: 0,
+            }}
+          >
             {/* Photo — no CSS filter, overlays handle harmonization */}
             <Image
               src={HERO_PHOTO_PATH}
               alt="Renewable energy project site"
               fill
-              className="object-cover"
+              priority
               quality={85}
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'center 60%',
+                zIndex: 1,
+                filter: 'brightness(0.85) saturate(0.80)',
+              }}
               onError={(e) => { e.currentTarget.style.display = 'none'; }}
             />
-            {/* Layer 1 — Teal brand overlay (DSS Rule 10, opacity 0.15) */}
+            {/* Top gradient — masks sky, blends into section bg #18625F */}
             <div
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'rgba(40,175,176,0.15)',
+                background: 'linear-gradient(to bottom, #18625F 0%, #18625F 8%, rgba(24,98,95,0.80) 28%, transparent 52%)',
                 pointerEvents: 'none',
-                zIndex: 9,
+                zIndex: 2,
               }}
             />
-            {/* Layer 2 — Top gradient: fades sky into section bg */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '45%',
-                background: 'linear-gradient(180deg, rgba(15,46,44,0.92) 0%, rgba(15,46,44,0.55) 50%, transparent 100%)',
-                pointerEvents: 'none',
-                zIndex: 10,
-              }}
-            />
-            {/* Layer 3 — Left gradient: fade into section bg (DSS Rule 10.19) */}
+            {/* Teal brand overlay */}
             <div
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(90deg, #0F2E2C 0%, rgba(15,46,44,0.60) 25%, transparent 55%)',
+                background: 'rgba(40,175,176,0.12)',
                 pointerEvents: 'none',
-                zIndex: 11,
+                zIndex: 3,
+              }}
+            />
+            {/* Left gradient: fade into section bg */}
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(90deg, #18625F 0%, rgba(24,98,95,0.60) 25%, transparent 65%)',
+                pointerEvents: 'none',
+                zIndex: 4,
               }}
             />
           </div>
@@ -284,7 +295,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
       {/* Photo fallback bg — behind right panel */}
       {!isMobile && (
         <div
-          className="absolute top-0 right-0 bottom-0 w-[52%] hidden lg:block"
+          className={clsx('absolute', 'top-0', 'right-0', 'bottom-0', 'w-[52%]', 'hidden', 'lg:block')}
           style={{
             background: 'linear-gradient(145deg, #1a7570 0%, #0d4a47 40%, #0a3533 100%)',
             zIndex: 0,
@@ -292,5 +303,82 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
         />
       )}
     </section>
+  );
+}
+
+/* ── NeuCard — DSS v8.2 Kural 19.H neumorphic info card ── */
+function NeuCard({ card, index, isMobile }: { card: InfoCard; index: number; isMobile: boolean }) {
+  const [hovered, setHovered] = useState(false);
+  const ghostNum = String(index + 1);
+
+  return (
+    <div
+      role="listitem"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: '#E8F0F0',
+        borderRadius: '12px',
+        overflow: 'hidden',
+        boxShadow: hovered ? NEU_SHADOW_HOVER : NEU_SHADOW,
+        transition: 'box-shadow 200ms ease-out',
+        flex: isMobile ? 'none' : '1 1 0',
+      }}
+    >
+      {/* Inner container with gradient */}
+      <div style={{ background: 'linear-gradient(135deg, #EEF5F5 0%, #E0EDED 100%)' }}>
+        {/* Teal top panel with ghost number */}
+        <div
+          style={{
+            position: 'relative',
+            overflow: 'hidden',
+            background: '#18625F',
+            padding: '14px 16px 10px',
+          }}
+        >
+          <span
+            aria-hidden="true"
+            className="select-none pointer-events-none"
+            style={{
+              position: 'absolute',
+              top: '-8px',
+              right: '8px',
+              fontFamily: "'Montserrat', sans-serif",
+              fontSize: '64px',
+              fontWeight: 900,
+              lineHeight: 1,
+              color: 'rgba(255,255,255,0.08)',
+            }}
+          >
+            {ghostNum}
+          </span>
+          <div
+            style={{
+              position: 'relative',
+              zIndex: 1,
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#FFCB00',
+            }}
+          >
+            {card.kiker}
+          </div>
+        </div>
+        {/* Debossed content area */}
+        <div
+          style={{
+            padding: '14px 16px',
+            boxShadow: DEBOSS_SHADOW,
+            borderRadius: '0 0 12px 12px',
+          }}
+        >
+          <div style={{ fontSize: '13px', fontWeight: 400, color: '#18625F', lineHeight: 1.5 }}>
+            {card.body}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
