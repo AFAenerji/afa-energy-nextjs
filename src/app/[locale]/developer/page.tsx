@@ -6,6 +6,7 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 import { SITE_URL } from '@/lib/env';
 import { LOCALE_PATHS } from '@/lib/routes';
 import GelistiriciHero from '@/components/sections/gelistirici/GelistiriciHero';
+import GelistiriciHeroKartlar from '@/components/sections/gelistirici/GelistiriciHeroKartlar';
 import GelistiriciRol from '@/components/sections/gelistirici/GelistiriciRol';
 import GelistiriciGerilim from '@/components/sections/gelistirici/GelistiriciGerilim';
 import GelistiriciATR from '@/components/sections/gelistirici/GelistiriciATR';
@@ -99,6 +100,7 @@ export default async function DeveloperPage({
       />
 
       <GelistiriciHero content={gelistiriciContent.hero} locale={locale} />
+      <GelistiriciHeroKartlar content={gelistiriciContent.hero} />
       <GelistiriciRol content={gelistiriciContent.g2} />
       <GelistiriciGerilim content={gelistiriciContent.g3 as React.ComponentProps<typeof GelistiriciGerilim>['content']} />
       <GelistiriciATR content={gelistiriciContent.g4} />

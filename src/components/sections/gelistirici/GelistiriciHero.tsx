@@ -5,11 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-interface InfoCard {
-  kiker: string;
-  body: string;
-}
-
 interface GelistiriciHeroProps {
   content: {
     sectionLabel: string;
@@ -21,9 +16,6 @@ interface GelistiriciHeroProps {
     ctaPrimary: string;
     ctaSecondary: string;
     ctaSecondaryHref: string;
-    card1: InfoCard;
-    card2: InfoCard;
-    card3: InfoCard;
     photoTag: string;
   };
   locale: string;
@@ -44,7 +36,6 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
 
   const contactHref = locale === 'tr' ? '/tr/iletisim' : locale === 'en' ? '/en/contact' : '/ro/contact';
   const atrHref = `/${locale}${content.ctaSecondaryHref}`;
-  const cards = [content.card1, content.card2, content.card3];
 
   return (
     <section
@@ -93,7 +84,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                   position: 'relative',
                   zIndex: 1,
                 }
-              : { padding: '100px 52px 80px' }
+              : { padding: '80px 52px 60px' }
           }
         >
           {/* Section label with gold line */}
@@ -116,9 +107,9 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
           {content.motto && (
             <p
               style={{
-                fontSize: '14px',
-                fontWeight: 500,
-                color: 'rgba(255,255,255,0.65)',
+                fontSize: '13px',
+                fontWeight: 600,
+                color: 'rgba(255,255,255,0.82)',
                 letterSpacing: '0.04em',
                 marginBottom: '16px',
               }}
@@ -164,7 +155,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
           ))}
 
           {/* CTA buttons */}
-          <div className={clsx('flex', 'flex-wrap', 'gap-3', 'mb-10')}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '10px', maxWidth: '560px' }}>
             <Link
               href={contactHref}
               className={clsx('inline-flex', 'items-center', 'justify-center')}
@@ -212,21 +203,6 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             </Link>
           </div>
 
-          {/* Info cards — DSS v8.2 Kural 19.H Neumorphic */}
-          <div
-            role="list"
-            style={{
-              display: 'flex',
-              flexDirection: isMobile ? 'column' : 'row',
-              gap: isMobile ? '16px' : '24px',
-              marginTop: '32px',
-              maxWidth: '560px',
-            }}
-          >
-            <NeuCard card={content.card1} ghostNumber="01" />
-            <NeuCard card={content.card2} ghostNumber="02" />
-            <NeuCard card={content.card3} ghostNumber="03" />
-          </div>
         </div>
 
         {/* ── Right: Photo panel ── */}
@@ -235,7 +211,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             className={clsx('hidden', 'lg:block')}
             style={{
               position: 'absolute',
-              top: '72px',
+              top: 0,
               right: 0,
               bottom: 0,
               width: '52%',
@@ -283,7 +259,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(90deg, #18625F 0%, rgba(24,98,95,0.60) 25%, transparent 65%)',
+                background: 'linear-gradient(90deg, #18625F 0%, #18625F 32%, rgba(24,98,95,0.75) 50%, transparent 68%)',
                 pointerEvents: 'none',
                 zIndex: 4,
               }}
@@ -303,82 +279,5 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
         />
       )}
     </section>
-  );
-}
-
-/* ── NeuCard — DSS v8.2 Kural 19.H neumorphic info card ── */
-function NeuCard({ card, index, isMobile }: { card: InfoCard; index: number; isMobile: boolean }) {
-  const [hovered, setHovered] = useState(false);
-  const ghostNum = String(index + 1);
-
-  return (
-    <div
-      role="listitem"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        background: '#E8F0F0',
-        borderRadius: '12px',
-        overflow: 'hidden',
-        boxShadow: hovered ? NEU_SHADOW_HOVER : NEU_SHADOW,
-        transition: 'box-shadow 200ms ease-out',
-        flex: isMobile ? 'none' : '1 1 0',
-      }}
-    >
-      {/* Inner container with gradient */}
-      <div style={{ background: 'linear-gradient(135deg, #EEF5F5 0%, #E0EDED 100%)' }}>
-        {/* Teal top panel with ghost number */}
-        <div
-          style={{
-            position: 'relative',
-            overflow: 'hidden',
-            background: '#18625F',
-            padding: '14px 16px 10px',
-          }}
-        >
-          <span
-            aria-hidden="true"
-            className="select-none pointer-events-none"
-            style={{
-              position: 'absolute',
-              top: '-8px',
-              right: '8px',
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: '64px',
-              fontWeight: 900,
-              lineHeight: 1,
-              color: 'rgba(255,255,255,0.08)',
-            }}
-          >
-            {ghostNum}
-          </span>
-          <div
-            style={{
-              position: 'relative',
-              zIndex: 1,
-              fontSize: '11px',
-              fontWeight: 700,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: '#FFCB00',
-            }}
-          >
-            {card.kiker}
-          </div>
-        </div>
-        {/* Debossed content area */}
-        <div
-          style={{
-            padding: '14px 16px',
-            boxShadow: DEBOSS_SHADOW,
-            borderRadius: '0 0 12px 12px',
-          }}
-        >
-          <div style={{ fontSize: '13px', fontWeight: 400, color: '#18625F', lineHeight: 1.5 }}>
-            {card.body}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }
