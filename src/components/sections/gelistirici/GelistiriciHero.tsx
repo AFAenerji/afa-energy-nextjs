@@ -238,8 +238,11 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             <div
               style={{
                 position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(to bottom, #18625F 0%, #18625F 8%, rgba(24,98,95,0.80) 28%, transparent 52%)',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '45%',
+                background: 'linear-gradient(180deg, #18625F 0%, #18625F 12%, rgba(24,98,95,0.85) 35%, rgba(24,98,95,0.40) 60%, transparent 100%)',
                 pointerEvents: 'none',
                 zIndex: 2,
               }}
@@ -249,17 +252,17 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'rgba(40,175,176,0.12)',
+                background: 'rgba(40,175,176,0.10)',
                 pointerEvents: 'none',
                 zIndex: 3,
               }}
             />
-            {/* Left gradient: fade into section bg */}
+            {/* Left gradient — soft edge transition only */}
             <div
               style={{
                 position: 'absolute',
                 inset: 0,
-                background: 'linear-gradient(90deg, #18625F 0%, #18625F 32%, rgba(24,98,95,0.75) 50%, transparent 68%)',
+                background: 'linear-gradient(90deg, #18625F 0%, rgba(24,98,95,0.85) 8%, rgba(24,98,95,0.30) 20%, transparent 38%)',
                 pointerEvents: 'none',
                 zIndex: 4,
               }}
