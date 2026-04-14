@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import clsx from 'clsx';
 
 interface GelistiriciHeroProps {
   content: {
@@ -21,59 +20,149 @@ interface GelistiriciHeroProps {
   locale: string;
 }
 
-const HERO_PHOTO_PATH = '/images/gelistirici/hero-developer-field.jpg';
+const PHOTO = '/images/gelistirici/hero-developer-field.jpg';
 
 export default function GelistiriciHero({ content, locale }: GelistiriciHeroProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 768px)');
+    const mq = window.matchMedia('(max-width: 1024px)');
     setIsMobile(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
+    const h = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', h);
+    return () => mq.removeEventListener('change', h);
   }, []);
 
-  const contactHref = locale === 'tr' ? '/tr/iletisim' : locale === 'en' ? '/en/contact' : '/ro/contact';
+  const contactHref =
+    locale === 'tr' ? '/tr/iletisim' :
+    locale === 'en' ? '/en/contact' : '/ro/contact';
   const atrHref = `/${locale}${content.ctaSecondaryHref}`;
 
   return (
     <section
-      className={clsx('relative', 'overflow-hidden')}
       style={{
+        position: 'relative',
+        overflow: 'hidden',
         background: '#18625F',
         minHeight: '100vh',
         marginTop: '-72px',
         paddingTop: '72px',
-        ...(isMobile
-          ? {
-              backgroundImage: `url(${HERO_PHOTO_PATH})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }
-          : {}),
       }}
     >
-      {/* Mobile: dark overlay for readability */}
+      {/* ─── FOTOĞRAF (sadece desktop) ─── */}
+      {!isMobile && (
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            bottom: 0,
+            width: '54%',
+            zIndex: 1,
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={PHOTO}
+            alt="Saha mühendisleri teknik plan inceliyor"
+            fill
+            priority
+            quality={85}
+            style={{
+              objectFit: 'cover',
+              objectPosition: 'center 65%',
+              filter: 'brightness(0.80) saturate(0.75)',
+            }}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              const parent = e.currentTarget.parentElement as HTMLElement;
+              if (parent) {
+                parent.style.background = 'linear-gradient(145deg, #1a7570 0%, #0d4a47 50%, #0a3533 100%)';
+              }
+            }}
+          />
+
+          {/*
+            TEK OVERLAY — radial vignette
+            Merkezden dışa doğru koyulaşır.
+            Tüm köşeler ve kenarlar (üst dahil) #18625F'ye karışır.
+            Merkez kısmı açık kalır — mühendis figürü görünür.
+          */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: `
+                radial-gradient(
+                  ellipse 70% 60% at 60% 65%,
+                  transparent 0%,
+                  transparent 30%,
+                  rgba(24,98,95,0.35) 52%,
+                  rgba(24,98,95,0.70) 70%,
+                  rgba(24,98,95,0.92) 85%,
+                  #18625F 100%
+                )
+              `,
+              pointerEvents: 'none',
+              zIndex: 2,
+            }}
+          />
+
+          {/*
+            SOL KENAR GEÇİŞİ — sol 42%'ye kadar yumuşak fade
+            Sol panel ile foto arasındaki sınırı yumuşatır.
+          */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(90deg, #18625F 0%, rgba(24,98,95,0.90) 10%, rgba(24,98,95,0.50) 20%, rgba(24,98,95,0.20) 30%, transparent 42%)',
+              pointerEvents: 'none',
+              zIndex: 3,
+            }}
+          />
+        </div>
+      )}
+
+      {/* ─── MOBİL: fotoğraf arka plan ─── */}
       {isMobile && (
         <div
           style={{
             position: 'absolute',
             inset: 0,
-            background: 'rgba(15,46,44,0.50)',
+            backgroundImage: `url(${PHOTO})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 50%',
             zIndex: 0,
           }}
         />
       )}
-
-      {/* Main grid */}
-      <div
-        className={clsx('relative', 'z-[1]', 'mx-auto', 'grid', 'grid-cols-1', 'lg:grid-cols-[48fr_52fr]')}
-        style={{ maxWidth: '1180px', minHeight: 'calc(100vh - 72px)' }}
-      >
-        {/* ── Left: Text panel ── */}
+      {isMobile && (
         <div
-          className={clsx('flex', 'flex-col', 'justify-center')}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'rgba(15,46,44,0.82)',
+            zIndex: 1,
+          }}
+        />
+      )}
+
+      {/* ─── İÇERİK GRID ─── */}
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 4,
+          maxWidth: '1180px',
+          margin: '0 auto',
+          minHeight: 'calc(100vh - 72px)',
+          display: 'grid',
+          gridTemplateColumns: isMobile ? '1fr' : '46fr 54fr',
+          alignItems: 'center',
+        }}
+      >
+        {/* SOL PANEL */}
+        <div
           style={
             isMobile
               ? {
@@ -81,55 +170,49 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                   borderRadius: '16px',
                   margin: '24px',
                   padding: '32px',
-                  position: 'relative',
-                  zIndex: 1,
                 }
-              : { padding: '80px 52px 60px' }
+              : { padding: '80px 52px 80px' }
           }
         >
-          {/* Section label with gold line */}
-          <div className={clsx('flex', 'items-center', 'gap-3', 'mb-5')}>
-            <div style={{ width: '20px', height: '2px', background: '#FFCB00' }} />
-            <span
-              style={{
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.22em',
-                textTransform: 'uppercase',
-                color: 'rgba(255,203,0,0.85)',
-              }}
-            >
+          {/* Kicker */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px' }}>
+            <div style={{ width: '20px', height: '2px', background: '#FFCB00', flexShrink: 0 }} />
+            <span style={{
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '0.20em',
+              textTransform: 'uppercase',
+              color: 'rgba(255,203,0,0.85)',
+            }}>
               {content.sectionLabel}
             </span>
           </div>
 
           {/* Motto */}
           {content.motto && (
-            <p
-              style={{
-                fontSize: '13px',
-                fontWeight: 600,
-                color: 'rgba(255,255,255,0.82)',
-                letterSpacing: '0.04em',
-                marginBottom: '16px',
-              }}
-            >
+            <p style={{
+              fontSize: '13px',
+              fontWeight: 600,
+              color: 'rgba(255,255,255,0.80)',
+              letterSpacing: '0.04em',
+              marginBottom: '14px',
+            }}>
               {content.motto}
             </p>
           )}
 
           {/* H1 */}
-          <h1
-            className="max-w-[560px]"
-            style={{
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: '52px',
-              fontWeight: 900,
-              lineHeight: 1.15,
-              letterSpacing: '-0.025em',
-              marginBottom: '24px',
-            }}
-          >
+          <h1 style={{
+            fontFamily: "'Montserrat', sans-serif",
+            fontSize: 'clamp(36px, 3.6vw, 52px)',
+            fontWeight: 900,
+            lineHeight: 1.12,
+            letterSpacing: '-0.025em',
+            marginBottom: '24px',
+            maxWidth: '540px',
+            maxHeight: '3.36em',
+            overflow: 'hidden',
+          }}>
             <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line1}</span>
             {content.h1Line2 && (
               <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line2}</span>
@@ -139,28 +222,26 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
 
           {/* Subtitle */}
           {content.subtitle.split('\n\n').map((para, i, arr) => (
-            <p
-              key={i}
-              style={{
-                fontSize: '16px',
-                fontWeight: 400,
-                color: 'rgba(245,247,246,0.90)',
-                lineHeight: 1.6,
-                maxWidth: '540px',
-                marginBottom: i < arr.length - 1 ? '12px' : '32px',
-              }}
-            >
+            <p key={i} style={{
+              fontSize: '15px',
+              lineHeight: 1.65,
+              color: 'rgba(245,247,246,0.88)',
+              maxWidth: '520px',
+              marginBottom: i < arr.length - 1 ? '10px' : '32px',
+            }}>
               {para}
             </p>
           ))}
 
-          {/* CTA buttons */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '10px', maxWidth: '560px' }}>
+          {/* CTA Butonları */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', maxWidth: '560px' }}>
             <Link
               href={contactHref}
-              className={clsx('inline-flex', 'items-center', 'justify-center')}
               style={{
                 fontFamily: "'Montserrat', sans-serif",
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 background: '#FFCB00',
                 color: '#0F2E2C',
                 fontWeight: 700,
@@ -171,15 +252,22 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                 boxShadow: '0 6px 28px rgba(255,203,0,0.40), 0 2px 8px rgba(0,0,0,0.20)',
                 transition: 'box-shadow 200ms ease-out',
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(255,203,0,0.60), 0 2px 8px rgba(0,0,0,0.20)'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.boxShadow = '0 6px 28px rgba(255,203,0,0.40), 0 2px 8px rgba(0,0,0,0.20)'; }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = '0 8px 32px rgba(255,203,0,0.60), 0 2px 8px rgba(0,0,0,0.20)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = '0 6px 28px rgba(255,203,0,0.40), 0 2px 8px rgba(0,0,0,0.20)';
+              }}
             >
               {content.ctaPrimary}
             </Link>
+
             <Link
               href={atrHref}
-              className={clsx('inline-flex', 'items-center', 'justify-center')}
               style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 fontSize: '13px',
                 fontWeight: 600,
                 padding: '14px 28px',
@@ -202,85 +290,11 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               {content.ctaSecondary}
             </Link>
           </div>
-
         </div>
 
-        {/* ── Right: Photo panel ── */}
-        {!isMobile && (
-          <div
-            className={clsx('hidden', 'lg:block')}
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 0,
-              bottom: 0,
-              width: '52%',
-              overflow: 'hidden',
-              zIndex: 0,
-            }}
-          >
-            {/* Photo — no CSS filter, overlays handle harmonization */}
-            <Image
-              src={HERO_PHOTO_PATH}
-              alt="Renewable energy project site"
-              fill
-              priority
-              quality={85}
-              style={{
-                objectFit: 'cover',
-                objectPosition: 'center 60%',
-                zIndex: 1,
-                filter: 'brightness(0.85) saturate(0.80)',
-              }}
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
-            />
-            {/* Top gradient — masks sky, blends into section bg #18625F */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                height: '45%',
-                background: 'linear-gradient(180deg, #18625F 0%, #18625F 12%, rgba(24,98,95,0.85) 35%, rgba(24,98,95,0.40) 60%, transparent 100%)',
-                pointerEvents: 'none',
-                zIndex: 2,
-              }}
-            />
-            {/* Teal brand overlay */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'rgba(40,175,176,0.10)',
-                pointerEvents: 'none',
-                zIndex: 3,
-              }}
-            />
-            {/* Left gradient — soft edge transition only */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(90deg, #18625F 0%, rgba(24,98,95,0.85) 8%, rgba(24,98,95,0.30) 20%, transparent 38%)',
-                pointerEvents: 'none',
-                zIndex: 4,
-              }}
-            />
-          </div>
-        )}
+        {/* SAĞ PANEL — desktop'ta boş, foto absolute olduğu için */}
+        {!isMobile && <div />}
       </div>
-
-      {/* Photo fallback bg — behind right panel */}
-      {!isMobile && (
-        <div
-          className={clsx('absolute', 'top-0', 'right-0', 'bottom-0', 'w-[52%]', 'hidden', 'lg:block')}
-          style={{
-            background: 'linear-gradient(145deg, #1a7570 0%, #0d4a47 40%, #0a3533 100%)',
-            zIndex: 0,
-          }}
-        />
-      )}
     </section>
   );
 }
