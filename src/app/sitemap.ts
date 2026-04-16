@@ -29,7 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const locale of siteConfig.locales) {
       entries.push({
         url: `${siteConfig.url}${localizedPath(route.canonical, locale as Locale)}`,
-        lastModified: new Date(),
+        lastModified: process.env.NEXT_PUBLIC_BUILD_DATE
+          ? new Date(process.env.NEXT_PUBLIC_BUILD_DATE)
+          : new Date('2026-04-01'),
         changeFrequency: route.changeFrequency,
         priority: route.priority,
         alternates: {

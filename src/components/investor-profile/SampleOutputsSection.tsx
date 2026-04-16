@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 interface SampleLine {
   label: string;
   value: string;
