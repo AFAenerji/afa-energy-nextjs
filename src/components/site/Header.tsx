@@ -209,11 +209,25 @@ export default function Header({ locale }: HeaderProps) {
                     key={item.key}
                     onClick={() => navigate(item.slug)}
                     className={navLinkClass(item)}
+                    style={item.key === 'atrMatrix' ? { transition: 'color 120ms linear' } : undefined}
                     aria-current={
                       !item.disabled && isActivePath(pathname, locale, item.slug)
                         ? 'page'
                         : undefined
                     }
+                    {...(item.key === 'atrMatrix' ? {
+                      onMouseEnter: (e: React.MouseEvent<HTMLButtonElement>) => {
+                        e.currentTarget.style.color = '#28AFB0';
+                        e.currentTarget.style.textDecoration = 'underline';
+                        e.currentTarget.style.textDecorationColor = '#FFCB00';
+                        e.currentTarget.style.textUnderlineOffset = '4px';
+                      },
+                      onMouseLeave: (e: React.MouseEvent<HTMLButtonElement>) => {
+                        e.currentTarget.style.color = '';
+                        e.currentTarget.style.textDecoration = '';
+                        e.currentTarget.style.textDecorationColor = '';
+                      },
+                    } : {})}
                   >
                     {t(item.key)}
                   </button>

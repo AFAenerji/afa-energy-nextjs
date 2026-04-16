@@ -11,11 +11,25 @@ import GelistiriciRol from '@/components/sections/gelistirici/GelistiriciRol';
 import GelistiriciGerilim from '@/components/sections/gelistirici/GelistiriciGerilim';
 import GelistiriciATR from '@/components/sections/gelistirici/GelistiriciATR';
 import GelistiriciCiktilar from '@/components/sections/gelistirici/GelistiriciCiktilar';
+import GelistiriciDegerKoruma from '@/components/sections/gelistirici/GelistiriciDegerKoruma';
 import GelistiriciCTA from '@/components/sections/gelistirici/GelistiriciCTA';
 import GelistiriciSurec from '@/components/sections/gelistirici/GelistiriciSurec';
 import GelistiriciForm from '@/components/sections/gelistirici/GelistiriciForm';
 import GelistiriciFaq from '@/components/sections/gelistirici/GelistiriciFaq';
-import gelistiriciContent from '@/lib/content/gelistirici.json';
+import gelistiriciTr from '@/lib/content/gelistirici.json';
+import gelistiriciEn from '@/lib/content/gelistirici-en.json';
+import gelistiriciRo from '@/lib/content/gelistirici-ro.json';
+
+function getGelistiriciContent(locale: Locale) {
+  switch (locale) {
+    case 'en': return gelistiriciEn;
+    case 'ro': return gelistiriciRo;
+    case 'tr': return gelistiriciTr;
+    default:
+      console.warn(`[DeveloperPage] Unknown locale: ${locale}, falling back to TR`);
+      return gelistiriciTr;
+  }
+}
 
 const metaContent = {
   tr: {
@@ -86,6 +100,7 @@ export default async function DeveloperPage({
     ? (rawLocale as Locale)
     : defaultLocale;
   const meta = metaContent[locale];
+  const gelistiriciContent = getGelistiriciContent(locale);
 
   return (
     <main>
@@ -105,6 +120,7 @@ export default async function DeveloperPage({
       <GelistiriciGerilim content={gelistiriciContent.g3 as React.ComponentProps<typeof GelistiriciGerilim>['content']} />
       <GelistiriciATR content={gelistiriciContent.g4} />
       <GelistiriciCiktilar content={gelistiriciContent.g46} />
+      <GelistiriciDegerKoruma content={gelistiriciContent.g47} />
       <GelistiriciCTA content={gelistiriciContent.g5} locale={locale} />
       <GelistiriciSurec content={gelistiriciContent.g6} />
       <GelistiriciForm content={gelistiriciContent.g7} locale={locale} />

@@ -121,6 +121,20 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               zIndex: 3,
             }}
           />
+
+          {/* Bottom fade — blends hero photo into cards section below */}
+          <div
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: 240,
+              background: 'linear-gradient(to top, #18625F 0%, rgba(24,98,95,0.85) 30%, rgba(24,98,95,0.40) 60%, transparent 100%)',
+              pointerEvents: 'none',
+              zIndex: 3,
+            }}
+          />
         </div>
       )}
 
@@ -171,7 +185,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
                   margin: '24px',
                   padding: '32px',
                 }
-              : { padding: '80px 52px 80px' }
+              : { padding: '60px 52px 60px' }
           }
         >
           {/* Kicker */}
@@ -210,8 +224,6 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
             letterSpacing: '-0.025em',
             marginBottom: '24px',
             maxWidth: '540px',
-            maxHeight: '3.36em',
-            overflow: 'hidden',
           }}>
             <span style={{ display: 'block', color: '#FFFFFF' }}>{content.h1Line1}</span>
             {content.h1Line2 && (
@@ -226,7 +238,7 @@ export default function GelistiriciHero({ content, locale }: GelistiriciHeroProp
               fontSize: '15px',
               lineHeight: 1.65,
               color: 'rgba(245,247,246,0.88)',
-              maxWidth: '520px',
+              maxWidth: '620px',
               marginBottom: i < arr.length - 1 ? '10px' : '32px',
             }}>
               {para}

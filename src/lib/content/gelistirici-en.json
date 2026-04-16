@@ -1,0 +1,275 @@
+{
+  "hero": {
+    "sectionLabel": "FOR PROJECT DEVELOPERS & PLANT OWNERS",
+    "motto": "Right Project. Right Investor. Right Foundation.",
+    "h1Line1": "Good Project, Wrong Investor",
+    "h1Line2": "",
+    "h1Line3": "Loses Value.",
+    "subtitle": "A project you have brought to Ready-to-Build (RTB) status may be technically ready. But if connection assumptions are unverified, cost projections are indefensible, or the investor cannot find answers to their questions in the file — the process stalls, value erodes.\n\nAFA evaluates your project independently within the ATR Matrix™ framework. Projects that pass technical validation enter investor review from a stronger position.",
+    "ctaPrimary": "Submit Your Project for Assessment",
+    "ctaSecondary": "How ATR Matrix™ Works",
+    "ctaSecondaryHref": "/atr-matrix",
+    "card1": { "kiker": "FILE STRENGTH", "body": "Grid connection reality, permit chain and cost assumptions are clarified for investor review. Discussions proceed on verifiable grounds rather than assumptions." },
+    "card2": { "kiker": "INDEPENDENT ANALYSIS", "body": "The assessment translates the technical file into investment committee language. Areas of uncertainty and items requiring verification are identified before negotiations." },
+    "card3": { "kiker": "TECHNICAL FOUNDATION", "body": "A project that passes validation enters investor review with a defensible file. Assumptions are supported by source documentation." },
+    "photoTag": "Romania · ANRE Framework · Renewable Energy"
+  },
+  "g2": {
+    "sectionLabel": "DEVELOPER ROLE",
+    "h2": "What Does a Developer Do?",
+    "description": "A project developer is the actor who transforms an idea into an investable energy asset. Land is secured, the Technical Connection Approval (ATR) process is managed, the permit chain is established, and the project is brought to RTB stage.",
+    "bridge": "Each completed step can increase the project's value — but to preserve that value, assumptions must be tested from the investor's perspective.",
+    "card1": { "label": "TECHNICAL", "subtitle": "Land & ATR", "body": "Connection and permit assumptions are technically clarified — the project is brought to a feasibility level." },
+    "card2": { "label": "COMMERCIAL", "subtitle": "Value Creation", "body": "As risk decreases, project value can increase — each stage of the development process can strengthen the value position in the investor's eyes." },
+    "card3": { "label": "FINANCIAL", "subtitle": "Realization", "body": "When the project reaches a certain maturity, the value created — through sale, partnership, or post-commissioning asset transfer — is realized." }
+  },
+  "g3": {
+    "sectionLabel": "TWO PERSPECTIVES",
+    "kicker": "TWO PERSPECTIVES",
+    "title": "Same Project, Two Different Assessments",
+    "h2": "Same Project, Two Different Assessments",
+    "subtitle": "The gap between developer and investor perspective",
+    "openingParagraph": "After months of development work, the natural feeling is: \"I'm making progress, I'm getting closer.\" This feeling is legitimate. \"Does the investor see what you see?\"",
+    "openingP1": "After months of development work, the natural feeling is: \"I'm making progress, I'm getting closer.\" This feeling is legitimate. What this section does is not reject that feeling — it asks a single question: \"Does the investor see what you see?\"",
+    "openingP2": "For the developer, the project means completed steps and progress. For the investor, what matters is the technical, financial, and timeline uncertainties those steps carry. As the Ready-to-Build (RTB) stage approaches, grid connection reality, cost scope, and the permit chain become direct decision topics for the investment committee.",
+    "pullQuote": "A project moving forward does not mean it is ready from the investor's perspective.",
+    "leftColumnTitle": "Pre-RTB Critical Thresholds",
+    "leftColumnItems": [
+      { "status": "completed", "text": "Land and use rights are secured. Ownership and lease structure is clarified." },
+      { "status": "completed", "text": "Environmental compliance document (Acord de Mediu) is in place. Construction permit: scope, conditions, and timeline dependencies must be clear for investor review." },
+      { "status": "critical", "label": "CRITICAL THRESHOLD — GRID CONNECTION", "text": "Technical Connection Approval (ATR) obtained. Connection point defined." },
+      { "status": "uncertainty", "label": "UNCERTAINTY — SAME THRESHOLD", "text": "The ATR document alone does not guarantee actual feasibility. The connection agreement, technical scope, and interface responsibilities may contain uncertainties for the investor." },
+      { "status": "risk", "label": "CRITICAL RISK — COST", "text": "Grid reinforcement scope and connection cost (EUR, excl. VAT) may cause cost deviation during the investment process. The budget cannot reach a testable level without clarifying the included/excluded scope and responsibility matrix." },
+      { "status": "risk", "label": "CRITICAL RISK — TIMELINE", "text": "Chronological inconsistency in the permit chain may increase the risk of re-permitting. Delays in the connection timeline may not align with the investor's financing plan." },
+      { "status": "target", "text": "Verified and defensible RTB project file ready for investor review." }
+    ],
+    "rightColumnTitle": "Investor Questions",
+    "rightColumnIntro": "When the investor comes to the table, the initial assessment is made on these topics. If answers are unclear, the process stalls — projects are often re-evaluated with price and timeline revisions.",
+    "rightColumnQuestions": [
+      { "q": "Can this project actually connect to the grid, or is it merely theoretical?", "note": "If grid deliverability assumptions are unrealistic, the project cannot advance to investment stage." },
+      { "q": "Do the connection cost (EUR, excl. VAT) and reinforcement scope carry cost deviation risk?", "note": "Unclear cost items can negatively influence the investor's price offer." },
+      { "q": "Does curtailment risk negatively affect revenue assumptions?", "note": "Curtailment risk can weaken the revenue model and investment return." },
+      { "q": "Is the connection timeline acceptable to the investor, or does it carry delay risk that strains the investment plan?", "note": "Timeline uncertainty can directly affect the financing process." },
+      { "q": "Does the permit chain put the investment timeline at risk?", "note": "Inconsistent or incomplete permitting processes can delay investment decisions." },
+      { "q": "Are financial assumptions defensible, or could they trigger a valuation revision?", "note": "Weak assumptions can lead to project revaluation." }
+    ],
+    "bridgeText": "Without a technical filter, these risks emerge in the investor process as pricing and timeline pressure. Pre-technical review makes these risks visible early and structures them appropriately for the investor process."
+  },
+  "g4": {
+    "sectionLabel": "AFA'S ROLE",
+    "h2": "Where Does AFA Stand in This Process?",
+    "intro1": "AFA Energy is not a direct party of the project developer or investor. AFA's function is independent technical validation. It evaluates the project's technical assumptions within the ATR Matrix™ framework.",
+    "intro2": "This assessment is conducted across four core axes. Each axis covers a critical area that determines whether the project is ready for investment.",
+    "intro3": "Connection costs and grid reinforcement requirements are an integral part of this analysis.\n\nThis analysis structures the pricing and timeline uncertainties that may emerge during the investor process at an early stage.",
+    "bridge": "ATR Matrix™ — a systematic analysis framework that makes the project's real status visible across four axes.",
+    "axes": [
+      {
+        "id": "baglanti",
+        "num": "01",
+        "title": "Connection Feasibility",
+        "subtitle": "Grid Connection Feasibility",
+        "body": "The technical usability of ATR capacity, substation load status, and the adequacy of connection infrastructure are assessed.",
+        "metaLabel": "Assessment Elements",
+        "metaItems": ["ATR capacity verification", "Substation occupancy analysis", "Line capacity and distance"],
+        "contextLabel": "Romanian Context",
+        "contextText": "Transelectrica grid maps and ANRE database are referenced.",
+        "resultLabel": "Result",
+        "resultText": "Connection assumption is verified or risk scenarios are identified."
+      },
+      {
+        "id": "uretim",
+        "num": "02",
+        "title": "Energy Yield Assessment",
+        "subtitle": "Energy Yield Assessment",
+        "body": "Capacity factor, loss analysis, and the consistency of long-term energy production estimates are examined.",
+        "metaLabel": "Assessment Elements",
+        "metaItems": ["P50/P90 production scenarios", "Loss factors (wake, curtailment, grid)", "Seasonal and annual variation"],
+        "contextLabel": "Romanian Context",
+        "contextText": "Regional wind/solar data and Romanian grid constraints are considered.",
+        "resultLabel": "Result",
+        "resultText": "Unexpected CAPEX pressure that may arise after connection becomes measurable before investment decision; the need for revision in the pricing process is structured."
+      },
+      {
+        "id": "maliyet",
+        "num": "03",
+        "title": "Cost Structure",
+        "subtitle": "Cost Structure Analysis",
+        "body": "The alignment of CAPEX/OPEX assumptions with market realities and the defensibility of the LCOE calculation are assessed.",
+        "metaLabel": "Assessment Elements",
+        "metaItems": ["CAPEX benchmarking", "OPEX and O&M cost projection", "LCOE calculation methodology"],
+        "contextLabel": "Romanian Context",
+        "contextText": "Romanian EPC market and supply chain conditions are referenced.",
+        "resultLabel": "Result",
+        "resultText": "Cost structure is verified to investor standard or correction is recommended."
+      },
+      {
+        "id": "izin",
+        "num": "04",
+        "title": "Permitting & Compliance",
+        "subtitle": "Permitting & Compliance",
+        "body": "The consistency of EIA, construction permit, license status, and regulatory compliance with the project timeline is examined.",
+        "metaLabel": "Assessment Elements",
+        "metaItems": ["EIA status and risks", "Construction permit process", "Energy production license", "Internal Rate of Return (IRR) expectation range"],
+        "contextLabel": "Romanian Context",
+        "contextText": "ANRE regulatory framework and Romanian permitting processes are referenced.",
+        "resultLabel": "Result",
+        "resultText": "Permit chain is complete or missing steps are identified."
+      }
+    ],
+    "statusTitle": "Assessment Results",
+    "statusLabels": {
+      "proceed": "Viable",
+      "conditional": "Conditional",
+      "blocked": "Not Viable"
+    },
+    "statusDescriptions": {
+      "proceed": "Technical assumptions verified",
+      "conditional": "Additional review or correction required",
+      "blocked": "Critical obstacle identified"
+    },
+    "disclaimer": "ATR Matrix™ results are based on independent technical assessment and do not constitute investment advice.",
+    "photoLabel": "ATR Matrix™",
+    "photoTitle": "Systematic Technical Analysis"
+  },
+  "g46": {
+    "sectionLabel": "OUTPUT PACKAGE",
+    "h2": "AFA Technical Assessment Outputs",
+    "items": [
+      { "num": "01", "title": "ATR Capacity Verification", "body": "The technical usability of the connection point capacity is verified.", "badge": "" },
+      { "num": "02", "title": "Energy Yield Assessment", "body": "Production estimates are reviewed with P50/P90 scenarios and loss analyses.", "badge": "" },
+      { "num": "03", "title": "Cost Structure Analysis", "body": "CAPEX/OPEX benchmarking and the defensibility of the LCOE calculation are assessed.", "badge": "" },
+      { "num": "04", "title": "Permit Status Report", "body": "The completion status of EIA, construction permit, and license processes is reported.", "badge": "Conditional" },
+      { "num": "05", "title": "Risk Matrix", "body": "Classification of identified technical risks by priority and impact level.", "badge": "" },
+      { "num": "06", "title": "Investor Summary Report", "body": "Executive summary format with all findings translated into investor language.", "badge": "Operational" }
+    ]
+  },
+  "g47": {
+    "sectionLabel": "AFTER TECHNICAL VALIDATION",
+    "h2": "After Technical Validation: How Is Value Preserved?",
+    "intro": "A project that has reached Ready-to-Build (RTB) status and been technically validated is on strong ground to enter investor review.\n\nHowever, value loss often stems not from technical shortcomings — but from wrong positioning, unclear assumptions, and uncontrolled presentation.\n\nAt this stage, what matters is not finding an investor — but preparing the project for investor review with correct assumptions, a clear risk framework, and a disciplined file structure.\n\nWhen this structure is not in place, the process drags on, repeated question cycles emerge, and pricing pressure can develop.",
+    "cards": [
+      { "num": "01", "title": "RIGHT SEGMENT", "body": "It becomes clear in which investor segment the project will be evaluated more strongly." },
+      { "num": "02", "title": "EVIDENCE CHAIN", "body": "Assumptions, supporting documents, and areas requiring verification are separated. Investment committee discussion proceeds on verifiable grounds rather than claims." },
+      { "num": "03", "title": "CONTROLLED PROCESS", "body": "Detailed information is shared after scope confirmation and non-disclosure agreement (NDA). The process proceeds without risk of uncontrolled data leakage and negotiation exposure." }
+    ],
+    "pullQuote": "A good project doesn't find investment; a correctly positioned project preserves its value in investor review."
+  },
+  "g5": {
+    "h2Part1": "Technical Validation Makes ",
+    "h2Gold": "the Right Investor",
+    "h2Part2": " Visible.",
+    "subtitle": "AFA's independent technical assessment makes your project's real value tangible in the investor's eyes.",
+    "ctaPrimary": "Submit Your Project for Assessment →",
+    "ctaSecondary": "How ATR Matrix™ Works",
+    "formIntro": "A summary overview is sufficient for the initial assessment. AFA evaluates all project information with strict confidentiality.",
+    "privacyNote": "You do not need to share coordinates, parcel numbers, or connection point details at this stage.",
+    "disclaimer": "Project-specific legal and technical verification is recommended."
+  },
+  "g6": {
+    "sectionLabel": "PROCESS",
+    "h2": "How Does It Work?",
+    "phases": [
+      { "num": "01", "title": "Pre-Assessment", "body": "Project basic information is received; the ATR status and development stage are evaluated to determine the scope framework. AFA responds within 3 business days with an initial reply and — if in scope — a next step recommendation.", "highlight": "within 3 business days", "note": "Timeline may vary depending on the developer's document readiness and data access." },
+      { "num": "02", "title": "Data Collection & Technical Review", "body": "The ATR document, production estimates, cost assumptions, and permit files are reviewed. Grid connection reality, connection cost and grid reinforcement, permit chain consistency, and financial assumptions are systematically assessed over this data set; risk topics that may affect cost, duration, and production assumptions during the investment process are made visible at an early stage." },
+      { "num": "03", "title": "ATR Matrix™ Assessment", "body": "The project is technically assessed across connection, cost, permit, and financial assumption topics using ATR Matrix™. The output of this phase is the classification of the project as Viable / Conditional / Not Currently Viable at this stage, and the clarification of critical topics to be verified before entering the investor process. Not every project may be found suitable for investor review as a result of this assessment." },
+      { "num": "04", "title": "Report & Delivery", "body": "Technical findings are delivered in a report format suitable for investor review. This report serves as a reference document for answering technical questions and managing uncertainties during the investor process." }
+    ],
+    "faqLabel": "FREQUENTLY ASKED QUESTIONS",
+    "faqHeading": "Questions About the Technical Assessment Process",
+    "faqIntro": "The following questions cover the topics that project developers most frequently want to clarify before starting the pre-technical review process. This section aims to explain what information is requested within the scope of the process, how project data is shared, and how assessment outputs can be used.\n\nAFA assessment is primarily focused on structuring grid connection reality, permit chain, and cost scope from an investor review perspective.",
+    "faqItems": [
+      { "q": "How long does the assessment process take?", "a": "AFA is positioned on the investor side as an independent technical filter. Projects that pass technical validation proceed on a file basis suitable for investor review — transaction parties are shaped between the developer and investor." },
+      { "q": "Which project types are assessed?", "a": "Wind and solar energy projects in Romania — from development stage to operational projects." },
+      { "q": "Does AFA provide investment advice?", "a": "No. AFA provides independent technical assessment. The investment decision belongs to the investor. Detailed project documents are shared after scope confirmation and mutual non-disclosure agreement." },
+      { "q": "What is the assessment cost?", "a": "Cost is determined based on project scope and assessment depth. The reference range for most projects is 12–18 months. The initial consultation is free." },
+      { "q": "How is confidentiality ensured?", "a": "All project information is protected under NDA. Data is not shared with third parties." },
+      { "q": "What happens after my project passes technical validation?", "a": "When the assessment is complete, AFA delivers the report containing technical findings and decision classification to the developer. For projects classified as Viable, a next step recommendation for the investor process is also provided. How the process proceeds depends on the project's status, the developer's objectives, and the likelihood of matching on the investor side. In projects that have gone through ATR Matrix™ assessment, the technical due diligence (TDD) process proceeds focused on verification and closing rather than risk discovery — making the process more predictable. This approach reduces repeated technical queries on the investor side. If the project is determined not to be ready for institutional investment at its current stage, this result also creates a concrete output for investor process preparation — the next step toward uncertainty becomes clear." },
+      { "q": "What topics are focused on in the Technical Connection Approval (ATR) document?", "a": "The Technical Connection Approval (ATR) document is treated as the primary reference for assessing the feasibility of the grid connection assumption. In this scope, the clarity of the connection point and level, the conditionality of the connection, which party undertakes the technical scope, and constraints that may affect the timeline are assessed. The aim is to ensure that the connection is not merely theoretically available, but is addressed within a feasibility framework that can be brought to investor review." },
+      { "q": "How are connection costs and grid reinforcement requirements addressed in the assessment?", "a": "Connection costs and grid reinforcement requirements are among the topics most frequently containing uncertainty in the project cost scope. During the assessment process, the included/excluded scope separation, interface responsibilities, and potential timeline impacts are structured and made visible. Inadequate forecasting of these topics is one of the most frequent causes of pricing revision in the investor process." },
+      { "q": "How is curtailment risk addressed in the assessment?", "a": "Curtailment risk is the possibility that production may be limited during certain periods due to grid conditions, and directly affects project revenue assumptions. During the assessment process, this topic is addressed at a high level within the framework of connection point conditions, regional grid density, and technical constraints. The aim is to clarify under what conditions production assumptions may be limited and to prevent this topic from emerging as a surprise risk in investor review." }
+    ]
+  },
+  "g7": {
+    "cta": {
+      "kicker": "START THE ASSESSMENT PROCESS",
+      "heading": "Technical Assessment Form",
+      "subtitle": "Select the project stage and share relevant information. Detailed technical documentation is requested after confidentiality structure is established.",
+      "button": "Start Assessment Request"
+    },
+    "back": "← Back",
+    "tab1Label": "Development Stage / RtB",
+    "tab2Label": "Operational Project",
+    "phoneSearch": "Search country...",
+    "phoneQuickPicks": "Frequently Used",
+    "phoneAllCountries": "All Countries",
+    "tab1Submit": "Start Your Process →",
+    "tab2Submit": "Start Analysis →",
+    "privacy": "Your project information is protected under NDA. Your data is used only for assessment purposes.",
+    "selectPlaceholder": "Select...",
+    "success": {
+      "title": "Your Request Has Been Received",
+      "message": "Our assessment team will contact you as soon as possible.",
+      "reset": "New Application"
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "checkbox": "Select at least one option"
+    },
+    "labels": {
+      "name": "Full Name",
+      "company": "Company Name",
+      "email": "Corporate Email",
+      "phone": "Phone",
+      "assessmentType": "What is the purpose of the assessment?",
+      "projectLocation": "Project Location",
+      "technology": "Technology",
+      "targetCapacity": "Target Installed Capacity",
+      "projectStage": "Project Stage",
+      "notes": "Notes",
+      "applicationPurpose": "What is the main purpose of this application?",
+      "installedCapacity": "Installed Capacity",
+      "location": "Location",
+      "codYear": "Commissioning Year (COD)",
+      "annualProduction": "Last 12 Months Production (MWh)",
+      "scadaSystem": "SCADA / Monitoring System",
+      "performanceStatus": "Performance Status",
+      "revenueModel": "Revenue Model",
+      "ppaMaturity": "PPA Maturity",
+      "priceStructure": "Price Structure",
+      "actionTimeline": "Planned Action Timeline"
+    },
+    "placeholders": {
+      "location": "Province / Region",
+      "annualProduction": "E.g.: 12,500 MWh",
+      "notesTab1": "Additional information about the project you would like to share...",
+      "notesTab2": "Sales target, existing investor interest, performance issue, bank process, etc."
+    },
+    "assessmentTypeOptions": [
+      "Independent technical assessment for my project",
+      "ATR Matrix™ report",
+      "Technical pre-review / Pre-TDD",
+      "Other"
+    ],
+    "technologyOptionsTab1": ["Solar energy (PV)", "Wind energy", "BESS", "Hybrid PV + Battery Energy Storage System (BESS)", "Hybrid Wind+BESS", "Other"],
+    "targetCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW and above", "Flexible"],
+    "projectStageOptions": ["Development stage", "Ready-to-Build (RtB)", "Construction stage"],
+    "applicationPurposeOptions": [
+      "Technical positioning before asset sale",
+      "Performance and revenue resilience analysis",
+      "Refinancing / bankability assessment",
+      "Employer's engineering / technical oversight",
+      "Portfolio performance improvement and asset management",
+      "Other"
+    ],
+    "technologyOptionsTab2": ["Solar energy (PV)", "Wind energy", "Hybrid PV+BESS", "Hybrid Wind+BESS", "Other"],
+    "installedCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW and above"],
+    "codYearOptions": ["2018 and before", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+    "scadaOptions": ["Yes — full data access", "Yes — limited data", "No"],
+    "performanceOptions": ["In line with expectations", "Below expectations", "Uncertain — not analyzed"],
+    "revenueModelOptions": ["Market-based revenue (merchant)", "Power Purchase Agreement (PPA)", "Mixed"],
+    "ppaMaturityOptions": ["1–5 years", "5–10 years", "10–15 years", "15+ years"],
+    "priceStructureOptions": ["Fixed", "Indexed", "Mixed"],
+    "actionTimelineOptions": ["0–3 months", "3–6 months", "6–12 months", "Long-term"]
+  }
+}

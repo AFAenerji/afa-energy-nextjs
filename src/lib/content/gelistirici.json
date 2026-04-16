@@ -10,7 +10,7 @@
     "ctaSecondary": "ATR Matrix™ Nasıl Çalışır",
     "ctaSecondaryHref": "/atr-matrix",
     "card1": { "kiker": "DOSYA GÜCÜ", "body": "Yatırımcının soracağı teknik sorular görüşmeden önce yanıtlanmış olur." },
-    "card2": { "kiker": "BAĞIMSIZ ANALİZ", "body": "Şebeke, maliyet ve izin zinciri ATR Matrix™ kapsamında sistematik biçimde netleşir." },
+    "card2": { "kiker": "BAĞIMSIZ ANALİZ", "body": "Değerlendirme, teknik dosyayı yatırım komitesi diline çevirir. Belirsizlik alanları ve doğrulama gerektiren noktalar görüşme öncesi ayrıştırılır." },
     "card3": { "kiker": "TEKNİK ZEMİN", "body": "Doğrulamadan geçen proje, yatırımcı incelemesinde savunulabilir bir dosyayla durur." },
     "photoTag": "Romanya · ANRE Çerçevesi · Yenilenebilir Enerji"
   },
@@ -18,41 +18,67 @@
     "sectionLabel": "GELİŞTİRİCİ ROLÜ",
     "h2": "Geliştirici Ne Yapar?",
     "description": "Proje geliştirici; fikri yatırım yapılabilir bir enerji varlığına dönüştüren aktördür. Arazi güvenceye alınır, Teknik Bağlantı Onayı (ATR) süreci yönetilir, izin zinciri kurulur ve proje RTB aşamasına taşınır.",
-    "bridge": "Her tamamlanan adım projenin değerini artırır — ancak bu değerin korunabilmesi için varsayımların yatırımcı bakış açısıyla test edilmesi gerekir.",
+    "bridge": "Her tamamlanan adım projenin değerini artırabilir — ancak bu değerin korunabilmesi için varsayımların yatırımcı bakış açısıyla test edilmesi gerekir.",
     "card1": { "label": "TEKNİK", "subtitle": "Arazi & ATR", "body": "Bağlantı ve izin varsayımları teknik açıdan netleştirilir — proje uygulanabilirlik seviyesine taşınır." },
-    "card2": { "label": "TİCARİ", "subtitle": "Değer Yaratımı", "body": "Risk azaldıkça proje değeri artar — geliştirme sürecinin her aşaması yatırımcı gözündeki değerini güçlendirir." },
+    "card2": { "label": "TİCARİ", "subtitle": "Değer Yaratımı", "body": "Risk azaldıkça proje değeri artabilir — geliştirme sürecinin her aşaması yatırımcı gözündeki değer konumunu güçlendirebilir." },
     "card3": { "label": "FİNANSAL", "subtitle": "Gerçekleşme", "body": "Proje belirli bir olgunluğa ulaştığında oluşan değer — satış, ortaklık veya devreye alım sonrası varlık devri yoluyla — somutlaştırılır." }
   },
   "g3": {
     "sectionLabel": "İKİ PERSPEKTİF",
-    "h2": "Aynı Proje, İki Farklı Görünüm",
-    "introP1": "Geliştirici ile yatırımcı aynı projeye, farklı sorularla bakar.",
-    "introP2": "Geliştirme sürecinde belirleyici olan şudur: hangi adım tamamlandı, hangisi bekliyor? Yatırımcı açısından ise kritik olan bu adımların yatırım komitesi için hangi belirsizlikleri taşıdığıdır.",
-    "introP3": "İnşaata Hazır (Ready-to-Build — RTB) aşamasına yaklaşıldığında bu iki perspektif arasındaki fark, şebeke bağlantı gerçekliği, izin zinciri tutarlılığı ve maliyet varsayımları üzerinde somutlaşır.",
-    "devLabel": "GELİŞTİRİCİ SÜRECİ",
-    "timeline": [
-      { "status": "completed", "phaseLabel": "Tamamlandı", "text": "Arazi güvence altına alındı, kiralama süreci tamamlandı." },
-      { "status": "inProgress", "phaseLabel": "Devam Ediyor", "text": "ATR başvurusu yapıldı — onay bekleniyor." },
-      { "status": "inProgress", "phaseLabel": "Başlatıldı", "text": "Çevresel Etki Değerlendirmesi (ÇED) süreci başlatıldı." },
-      { "status": "pending", "phaseLabel": "Hazırlık", "text": "Enerji Üretim Lisansı için başvuru hazırlanıyor." },
-      { "status": "pending", "phaseLabel": "Hedef", "text": "Proje RTB (Ready-to-Build) statüsüne yaklaşıyor." }
+    "kicker": "İKİ PERSPEKTİF",
+    "title": "Aynı Proje, İki Farklı Değerlendirme",
+    "h2": "Aynı Proje, İki Farklı Değerlendirme",
+    "subtitle": "Geliştirici ve yatırımcı perspektifi arasındaki fark",
+    "openingParagraph": "Aylarca süren geliştirme sürecinde doğal olan duygu şudur: \"İlerliyorum, yaklaşıyorum.\" Bu his meşrudur. \"Yatırımcı da senin gördüğünü görüyor mu?\"",
+    "openingP1": "Aylarca süren geliştirme sürecinde doğal olan duygu şudur: \"İlerliyorum, yaklaşıyorum.\" Bu his meşrudur. Bu bölümün yaptığı şey bu hissi reddetmek değil; tek bir soru sormaktır: \"Yatırımcı da senin gördüğünü görüyor mu?\"",
+    "openingP2": "Geliştirici için proje, tamamlanan adımlar ve ilerleme durumudur. Yatırımcı için belirleyici olan ise bu adımların hangi teknik, mali ve zamansal belirsizlikleri taşıdığıdır. İnşaata hazır aşama (Ready-to-Build, RTB) seviyesine yaklaşıldığında şebeke bağlantı gerçekliği, maliyet kapsamı ve izin zinciri yatırım komitesi açısından doğrudan karar başlığına dönüşür.",
+    "pullQuote": "Bir projenin ilerliyor olması, yatırımcı açısından hazır olduğu anlamına gelmez.",
+    "leftColumnTitle": "RTB Öncesi Kritik Eşikler",
+    "leftColumnItems": [
+      { "status": "completed", "text": "Arazi ve kullanım hakları güvence altına alındı. Mülkiyet ve kira yapısı netleşir." },
+      { "status": "completed", "text": "Çevresel uygunluk belgesi (Acord de Mediu) mevcut. İnşaat izni: kapsam, koşullar ve takvim bağımlılıkları yatırımcı incelemesine uygun şekilde net olmalı." },
+      { "status": "critical", "label": "KRİTİK EŞİK — ŞEBEKE BAĞLANTISI", "text": "Teknik Bağlantı Onayı (ATR) alındı. Bağlantı noktası tanımlandı." },
+      { "status": "uncertainty", "label": "BELİRSİZLİK — AYNI EŞİKTE", "text": "ATR dokümanı tek başına fiili uygulanabilirliği garanti etmez. Bağlantı anlaşması, teknik kapsam ve arayüz sorumlulukları yatırımcı açısından belirsizlik içerebilir." },
+      { "status": "risk", "label": "KRİTİK RİSK — MALİYET", "text": "Şebeke güçlendirme kapsamı ve bağlantı maliyeti (EUR, KDV hariç) yatırım sürecinde maliyet sapmasına neden olabilir. Dahil/hariç ayrımı ve sorumluluk matrisi netleşmeden bütçe test edilebilir seviyeye gelmez." },
+      { "status": "risk", "label": "KRİTİK RİSK — TAKVİM", "text": "İzin zincirindeki kronolojik tutarsızlık yeniden izin riskini artırabilir. Bağlantı takvimindeki gecikmeler yatırımcı finansman planıyla örtüşmeyebilir." },
+      { "status": "target", "text": "Yatırımcı incelemesine hazır, doğrulanmış ve savunulabilir RTB proje dosyası." }
     ],
-    "invLabel": "YATIRIMCI SORULARI",
-    "invSublabel": "Aşağıdaki sorular, yatırım komitesi ön taramasında bu başlıklar üzerinden şekillenen değerlendirme çerçevesini yansıtmaktadır.",
-    "accordion": [
-      { "question": "ATR kapasitesi gerçekten kullanılabilir mi, yoksa kağıt üzerinde mi?", "answer": "Bağlantı hakkı ile fiili üretim erişimi arasındaki fark teknik doğrulama ile netleşir. AFA, DSO belgelerini ve şebeke kapasitesini bağımsız olarak inceler." },
-      { "question": "Bağlantı noktası teknik açıdan yeterli mi — trafo kapasitesi doluluk oranı nedir?", "answer": "Trafo yük analizi ve şebeke güçlendirme gereksinimleri ATR Matrix™ metodolojisiyle değerlendirilir." },
-      { "question": "ÇED süreci risk taşıyor mu — yerel muhalefet var mı?", "answer": "Çevresel izin zinciri ve yerel paydaş dinamikleri erken aşamada haritalanır; olası gecikmeler ve itiraz senaryoları analiz edilir." },
-      { "question": "Lisans başvurusunda eksik ya da zayıf nokta var mı?", "answer": "İzin belgeleri kronolojik tutarlılık ve ANRE mevzuatı açısından bütünlüklü incelenir; boşluklar raporlanır." },
-      { "question": "Bu proje için gerçekçi bir LCOE hesabı yapıldı mı?", "answer": "Finansal varsayımların teknik bulgularla tutarlılığı doğrulanır; iyimser bağlantı ve üretim tahminleri bağımsız referans verileriyle karşılaştırılır." }
+    "rightColumnTitle": "Yatırımcı Soruları",
+    "rightColumnIntro": "Yatırımcı masaya oturduğunda ilk değerlendirme bu başlıklar üzerinden yapılır. Yanıtlar net değilse süreç ilerlemez; proje çoğu zaman fiyat ve takvim revizyonu ile yeniden değerlendirilir.",
+    "rightColumnQuestions": [
+      {
+        "q": "Bu proje gerçekten şebekeye bağlanabilir mi, yoksa yalnızca teorik mi?",
+        "note": "Şebekeye verilebilirlik varsayımı gerçekçi değilse proje yatırım sürecine taşınamaz."
+      },
+      {
+        "q": "Bağlantı maliyeti (EUR, KDV hariç) ve güçlendirme kapsamı maliyet sapması yaratma riski taşır mı?",
+        "note": "Belirsiz maliyet kalemleri yatırımcı fiyat teklifini aşağı yönlü etkileyebilir."
+      },
+      {
+        "q": "Üretim kısıntısı riski (curtailment) gelir varsayımlarını aşağı yönlü etkiler mi?",
+        "note": "Üretim kısıntısı riski gelir modelini ve yatırım geri dönüşünü zayıflatabilir."
+      },
+      {
+        "q": "Bağlantı takvimi yatırımcı açısından kabul edilebilir mi, yoksa gecikme riski taşıyor mu ve yatırım planını zorlar mı?",
+        "note": "Takvim belirsizliği finansman sürecini doğrudan etkileyebilir."
+      },
+      {
+        "q": "İzin zinciri yatırım takvimini riske atar mı?",
+        "note": "Tutarsız veya eksik izin süreçleri yatırım kararını geciktirebilir."
+      },
+      {
+        "q": "Finansal varsayımlar yatırımcı açısından savunulabilir mi, yoksa değerleme revizyonuna neden olabilir mi?",
+        "note": "Zayıf varsayımlar proje değerlemesinin yeniden yapılmasına yol açabilir."
+      }
     ],
-    "bridgeText": "Teknik filtre olmadan bu riskler yatırımcı değerlendirme sürecinde — çoğu zaman fiyat ve takvim baskısı olarak — ortaya çıkar. Teknik filtre ile geliştirici riskleri sürecin başında kontrol altına alır."
+    "bridgeText": "Teknik filtre olmadan bu riskler yatırımcı sürecinde fiyat ve takvim baskısı olarak ortaya çıkar. Ön teknik inceleme ile bu riskler erken aşamada görünür hale getirilir ve yatırımcı sürecine uygun şekilde yapılandırılır."
   },
   "g4": {
     "sectionLabel": "AFA'NIN ROLÜ",
     "h2": "AFA Bu Süreçte Nerede Duruyor?",
     "intro1": "AFA Energy, proje geliştiricisinin veya yatırımcının doğrudan tarafı değildir. AFA'nın işlevi bağımsız teknik doğrulamadır. Projenin teknik varsayımlarını ATR Matrix™ çerçevesinde değerlendirir.",
     "intro2": "Bu değerlendirme dört temel eksende yapılır. Her eksen, projenin yatırıma hazır olup olmadığını belirleyen kritik bir alanı kapsar.",
+    "intro3": "Bağlantı maliyetleri ve şebeke güçlendirme gereksinimleri bu analizin ayrılmaz bir parçasıdır.\n\nBu analiz, yatırımcı sürecinde ortaya çıkabilecek fiyat ve takvim belirsizliklerini erken aşamada yapılandırır.",
     "bridge": "ATR Matrix™ — projenin gerçek durumunu dört eksende görünür kılan sistematik analiz çerçevesi.",
     "axes": [
       {
@@ -79,7 +105,7 @@
         "contextLabel": "Romanya Bağlamı",
         "contextText": "Bölgesel rüzgâr/güneş verileri ve Romanya grid kısıtlamaları dikkate alınır.",
         "resultLabel": "Sonuç",
-        "resultText": "Üretim tahmini bankable seviyede doğrulanır veya revizyon önerilir."
+        "resultText": "Bağlantı sonrasında ortaya çıkabilecek beklenmedik CAPEX baskısı yatırım kararı öncesinde ölçülebilir hale gelir; fiyatlama sürecindeki revizyon ihtiyacı yapılandırılır."
       },
       {
         "id": "maliyet",
@@ -101,7 +127,7 @@
         "subtitle": "Permitting & Compliance",
         "body": "ÇED, inşaat izni, lisans durumu ve düzenleyici uyumluluğun proje zaman çizelgesiyle tutarlılığı incelenir.",
         "metaLabel": "Değerlendirme Öğeleri",
-        "metaItems": ["ÇED durumu ve riskleri", "İnşaat izni süreci", "Enerji üretim lisansı"],
+        "metaItems": ["ÇED durumu ve riskleri", "İnşaat izni süreci", "Enerji üretim lisansı", "İç verim oranı (Internal Rate of Return, IRR) beklenti aralığı"],
         "contextLabel": "Romanya Bağlamı",
         "contextText": "ANRE düzenleyici çerçevesi ve Romanya izin süreçleri referans alınır.",
         "resultLabel": "Sonuç",
@@ -135,6 +161,17 @@
       { "num": "06", "title": "Yatırımcı Özet Raporu", "body": "Tüm bulguların yatırımcı diline çevrilmiş executive summary formatı.", "badge": "Operasyonel" }
     ]
   },
+  "g47": {
+    "sectionLabel": "TEKNİK DOĞRULAMA SONRASI",
+    "h2": "Teknik Doğrulama Sonrası: Değer Nasıl Korunur?",
+    "intro": "İnşaata hazır aşama (Ready-to-Build, RTB) statüsüne ulaşmış ve teknik olarak doğrulanmış bir proje, yatırımcı incelemesine giriş için güçlü bir zemindir.\n\nAncak değer kaybı çoğu zaman teknik eksiklikten değil — yanlış konumlandırma, belirsiz varsayımlar ve kontrolsüz sunumdan kaynaklanır.\n\nBu aşamada kritik olan yatırımcı bulmak değil; projenin doğru varsayımlar, net risk çerçevesi ve disiplinli bir dosya yapısıyla yatırımcı incelemesine hazırlanmasıdır.\n\nBu yapı kurulmadığında süreç uzar, tekrar eden soru döngüsü oluşur ve fiyat baskısı oluşabilir.",
+    "cards": [
+      { "num": "01", "title": "DOĞRU SEGMENT", "body": "Projenin hangi yatırımcı segmentinde daha güçlü değerlendirileceği netleşir." },
+      { "num": "02", "title": "KANIT ZİNCİRİ", "body": "Varsayımlar, dayanak belgeler ve doğrulama gerektiren alanlar ayrıştırılır. Yatırım komitesi tartışması iddia yerine kanıtlanabilir başlıklar üzerinden ilerler." },
+      { "num": "03", "title": "KONTROLLÜ SÜREÇ", "body": "Detaylı bilgi kapsam teyidi ve gizlilik anlaşması (NDA) sonrasında paylaşılır. Süreç kontrolsüz veri sızıntısı ve pazarlık riskine girmeden ilerler." }
+    ],
+    "pullQuote": "İyi proje yatırım bulmaz; doğru konumlandırılmış proje yatırımcı incelemesinde değerini korur."
+  },
   "g5": {
     "h2Part1": "Teknik Doğrulama ",
     "h2Gold": "Doğru Yatırımcıyı",
@@ -142,6 +179,7 @@
     "subtitle": "AFA'nın bağımsız teknik değerlendirmesi, projenizin gerçek değerini yatırımcı gözünde somutlaştırır.",
     "ctaPrimary": "Projenizi Değerlendirmeye Alın →",
     "ctaSecondary": "ATR Matrix™ Nasıl Çalışır",
+    "formIntro": "İlk değerlendirme için özet bilgi yeterlidir. AFA, tüm proje bilgilerini gizlilik esasıyla değerlendirir.",
     "privacyNote": "Koordinat, parsel ve bağlantı noktası bilgilerini ilk aşamada paylaşmanız gerekmez.",
     "disclaimer": "Proje-spesifik yasal ve teknik doğrulama tavsiye edilir."
   },
@@ -149,21 +187,24 @@
     "sectionLabel": "SÜREÇ",
     "h2": "Nasıl Çalışır?",
     "phases": [
-      { "num": "01", "title": "İlk Temas & Kapsam", "body": "Proje bilgileri alınır, değerlendirme kapsamı belirlenir. İlk geri dönüş 3 iş günü içinde yapılır.", "highlight": "3 iş günü içinde", "note": "Takvim, geliştiricinin belge hazırlık seviyesi ve veri erişimine bağlı olarak değişebilir." },
-      { "num": "02", "title": "Veri Toplama & Analiz", "body": "ATR belgesi, üretim raporları, maliyet tahminleri ve izin dosyaları incelenir." },
-      { "num": "03", "title": "ATR Matrix™ Değerlendirmesi", "body": "Dört eksen üzerinden sistematik analiz gerçekleştirilir. Her eksen bağımsız olarak puanlanır." },
-      { "num": "04", "title": "Rapor & Sunum", "body": "Bulgular yatırımcı diline çevrilmiş rapor formatında sunulur. Gerekirse yüz yüze sunum yapılır." }
+      { "num": "01", "title": "Ön Değerlendirme", "body": "Proje temel bilgileri alınır; ATR durumu ve geliştirme aşaması değerlendirilerek kapsam çerçevesi belirlenir. AFA, 3 iş günü içinde ön yanıt ve — kapsama uygunsa — sonraki adım önerisiyle geri döner.", "highlight": "3 iş günü içinde", "note": "Takvim, geliştiricinin belge hazırlık seviyesi ve veri erişimine bağlı olarak değişebilir." },
+      { "num": "02", "title": "Veri Toplama & Teknik İnceleme", "body": "ATR belgesi, üretim tahmini, maliyet varsayımları ve izin dosyaları incelenir. Bu veri seti üzerinden şebeke bağlantı gerçekliği, bağlantı maliyeti ve şebeke güçlendirme, izin zinciri tutarlılığı ile finansal varsayımlar sistematik olarak değerlendirilir; yatırım sürecinde maliyet, süre ve üretim varsayımlarını etkileyebilecek risk başlıkları erken aşamada görünür hale getirilir." },
+      { "num": "03", "title": "ATR Matrix™ Değerlendirmesi", "body": "ATR Matrix™ ile proje; bağlantı, maliyet, izin ve finansal varsayım başlıklarında teknik olarak değerlendirilir. Bu fazın çıktısı, projenin İlerlenebilir / Koşullu / Bu Aşamada İlerlenemez şeklinde sınıflandırılması ve yatırımcı sürecine girmeden önce doğrulanması gereken kritik başlıkların netleşmesidir. Bu değerlendirme sonucunda her proje yatırımcı incelemesine uygun bulunmayabilir." },
+      { "num": "04", "title": "Rapor & Teslimat", "body": "Teknik bulgular yatırımcı incelemesine uygun rapor formatında teslim edilir. Bu rapor, yatırımcı sürecinde teknik soruların yanıtlanması ve belirsizliklerin yönetilmesi için referans doküman olarak kullanılır." }
     ],
     "faqLabel": "SIKÇA SORULAN SORULAR",
     "faqHeading": "Teknik Değerlendirme Sürecinde Merak Edilenler",
-    "faqIntro": "Projenizi AFA'nın teknik değerlendirme sürecine almadan önce en çok sorulan soruları aşağıda yanıtladık. ATR belgelerinin gerçek anlamından banka finansmanına uygunluğa, süreç takviminden gizlilik yapısına kadar — geliştirici olarak bilmeniz gereken temel konular bu bölümde ele alınmaktadır.",
+    "faqIntro": "Aşağıdaki sorular, proje geliştiricilerinin ön teknik inceleme sürecine başlamadan önce en sık netleştirmek istediği başlıkları kapsar. Bu bölüm; süreç kapsamında hangi bilgilerin talep edildiğini, proje verilerinin nasıl paylaşıldığını ve değerlendirme çıktılarının nasıl kullanılabileceğini açıklamayı amaçlar.\n\nAFA değerlendirmesi şebeke bağlantı gerçekliği, izin zinciri ve maliyet kapsamı başlıklarını yatırımcı incelemesi perspektifinde yapılandırmayı esas alır.",
     "faqItems": [
-      { "q": "Değerlendirme süreci ne kadar sürer?", "a": "AFA, yatırımcı tarafında bağımsız teknik filtre olarak konumlanır; proje geliştirici veya sermaye sağlayıcı değildir. Teknik doğrulamadan geçen projeler yatırımcı incelemesine uygun bir dosya zemininde ilerler — nihai karar ve işlem tarafları yatırımcı ile geliştirici arasında şekillenir." },
+      { "q": "Değerlendirme süreci ne kadar sürer?", "a": "AFA, bağımsız teknik filtre olarak yatırımcı tarafında konumlanır. Teknik doğrulamadan geçen projeler yatırımcı incelemesine uygun bir dosya zemininde ilerler — işlem tarafları geliştirici ile yatırımcı arasında şekillenir." },
       { "q": "Hangi proje türleri değerlendiriliyor?", "a": "Romanya'daki rüzgâr ve güneş enerjisi projeleri — geliştirme aşamasından operasyonel projelere kadar." },
-      { "q": "AFA yatırım tavsiyesi veriyor mu?", "a": "Hayır. AFA bağımsız teknik değerlendirme sunar. Yatırım kararı yatırımcıya aittir." },
-      { "q": "Değerlendirme maliyeti nedir?", "a": "Maliyet, proje kapsamına ve değerlendirme derinliğine göre belirlenir. İlk görüşme ücretsizdir." },
+      { "q": "AFA yatırım tavsiyesi veriyor mu?", "a": "Hayır. AFA bağımsız teknik değerlendirme sunar. Yatırım kararı yatırımcıya aittir. Detaylı proje dokümanları kapsam teyidi ve karşılıklı gizlilik anlaşması sonrasında paylaşılır." },
+      { "q": "Değerlendirme maliyeti nedir?", "a": "Maliyet, proje kapsamına ve değerlendirme derinliğine göre belirlenir. Çoğu projede referans aralığı 12–18 aydır. İlk görüşme ücretsizdir." },
       { "q": "Gizlilik nasıl sağlanıyor?", "a": "Tüm proje bilgileri NDA kapsamında korunur. Veriler üçüncü taraflarla paylaşılmaz." },
-      { "q": "Projem teknik doğrulamadan geçtikten sonra ne olur?", "a": "Değerlendirme tamamlandığında AFA, teknik bulgular ve statü sınıflandırmasını içeren raporu geliştiriciye iletir. İlerlenebilir bulunan projeler için yatırımcı sürecine yönelik bir sonraki adım önerisi de sunulur. Sürecin nasıl ilerleyeceği projenin statüsüne, geliştiricinin hedefine ve yatırımcı tarafındaki eşleşme olasılığına bağlı olarak şekillenir." }
+      { "q": "Projem teknik doğrulamadan geçtikten sonra ne olur?", "a": "Değerlendirme tamamlandığında AFA, teknik bulgular ve karar sınıflandırmasını içeren raporu geliştiriciye iletir. İlerlenebilir bulunan projeler için yatırımcı sürecine yönelik bir sonraki adım önerisi de sunulur. Sürecin nasıl ilerleyeceği projenin statüsüne, geliştiricinin hedefine ve yatırımcı tarafındaki eşleşme olasılığına bağlı olarak şekillenir. ATR Matrix™ değerlendirmesinden geçmiş projelerde teknik durum tespiti (Technical Due Diligence, TDD) süreci risk keşfi yerine doğrulama ve kapanış odaklı ilerler — bu da süreci daha öngörülebilir kılar. Bu yaklaşım, yatırımcı tarafında tekrar eden teknik sorguları azaltır. Projenin mevcut aşamasında kurumsal yatırım için hazır olmadığı belirlenirse bu sonuç da yatırımcı sürecine hazırlık açısından somut bir çıktı oluşturur — belirsizliğe yönelik sonraki adım netleşir." },
+      { "q": "Teknik Bağlantı Onayı (ATR) dokümanında hangi başlıklara odaklanılır?", "a": "Teknik Bağlantı Onayı (ATR) dokümanı, şebeke bağlantı varsayımının uygulanabilirliğini değerlendirmek için temel referans olarak ele alınır. Bu kapsamda bağlantı noktasının ve seviyesinin netliği, bağlantının koşulluluğu, teknik kapsamın hangi tarafça üstlenileceği ve takvimi etkileyebilecek kısıtlar değerlendirilir. Amaç, bağlantının yalnızca teorik olarak mevcut olmasını değil, yatırımcı incelemesine taşınabilir bir uygulanabilirlik çerçevesinde ele alınmasını sağlamaktır." },
+      { "q": "Bağlantı maliyetleri ve şebeke güçlendirme gereksinimleri değerlendirmede nasıl ele alınır?", "a": "Bağlantı maliyetleri ve şebeke güçlendirme gereksinimleri, proje maliyet kapsamında en sık belirsizlik içeren başlıklar arasındadır. Değerlendirme sürecinde kapsam dahil/hariç ayrımı, arayüz sorumlulukları ve takvime olası etkileri yapılandırılarak görünür hale getirilir. Bu başlıkların eksik öngörülmesi, yatırımcı sürecinde fiyatlama revizyonuna en sık yol açan nedenlerden biridir." },
+      { "q": "Üretim kısıntısı riski (curtailment) değerlendirmede nasıl ele alınır?", "a": "Üretim kısıntısı riski (curtailment), şebeke koşulları nedeniyle üretimin belirli dönemlerde sınırlanabilmesi olasılığıdır ve proje gelir varsayımlarını doğrudan etkiler. Değerlendirme sürecinde bu başlık; bağlantı noktası koşulları, bölgesel şebeke yoğunluğu ve teknik kısıtlar çerçevesinde yüksek seviyede ele alınır. Amaç, üretim varsayımlarının hangi koşullarda sınırlanabileceğini netleştirmek ve bu başlığın yatırımcı incelemesinde sürpriz bir risk olarak ortaya çıkmasını önlemektir." }
     ]
   },
   "g7": {
@@ -228,7 +269,7 @@
       "Teknik ön inceleme / Ön TDD",
       "Diğer"
     ],
-    "technologyOptionsTab1": ["Güneş enerjisi (GES)", "Rüzgar enerjisi (RES)", "BESS", "Hibrit GES+BESS", "Hibrit RES+BESS", "Diğer"],
+    "technologyOptionsTab1": ["Güneş enerjisi (GES)", "Rüzgar enerjisi (RES)", "BESS", "Hibrit GES + batarya enerji depolama sistemi (Battery Energy Storage System, BESS)", "Hibrit RES+BESS", "Diğer"],
     "targetCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW ve üzeri", "Esnek"],
     "projectStageOptions": ["Geliştirme aşaması", "İnşaata hazır (RtB)", "İnşaat aşaması"],
     "applicationPurposeOptions": [

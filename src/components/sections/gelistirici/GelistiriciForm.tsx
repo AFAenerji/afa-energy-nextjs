@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useId, useCallback } from 'react';
+import clsx from 'clsx';
 import styles from './GelistiriciForm.module.css';
 
 /* ================================================================== */
@@ -1023,7 +1024,7 @@ function Tab1Fields({
   return (
     <>
       {/* Contact info */}
-      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0 24px' }}>
+      <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')} style={{ gap: '0 24px' }}>
         <FormInput
           label={content.labels.name}
           id={`${idPrefix}-name`}
@@ -1076,7 +1077,7 @@ function Tab1Fields({
       <Divider />
 
       {/* Project info */}
-      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0 24px' }}>
+      <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')} style={{ gap: '0 24px' }}>
         <FormInput
           label={content.labels.projectLocation}
           id={`${idPrefix}-loc`}
@@ -1151,7 +1152,7 @@ function Tab2Fields({
   return (
     <>
       {/* Contact info */}
-      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0 24px' }}>
+      <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')} style={{ gap: '0 24px' }}>
         <FormInput
           label={content.labels.name}
           id={`${idPrefix}-name`}
@@ -1204,7 +1205,7 @@ function Tab2Fields({
       <Divider />
 
       {/* Plant profile */}
-      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0 24px' }}>
+      <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')} style={{ gap: '0 24px' }}>
         <FormSelect
           label={content.labels.technology}
           id={`${idPrefix}-tech`}
@@ -1249,7 +1250,7 @@ function Tab2Fields({
       <Divider />
 
       {/* Operational data */}
-      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '0 24px' }}>
+      <div className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')} style={{ gap: '0 24px' }}>
         <FormInput
           label={content.labels.annualProduction}
           id={`${idPrefix}-mwh`}
@@ -1307,7 +1308,7 @@ function Tab2Fields({
         }}
       >
         <div
-          className="grid grid-cols-1 md:grid-cols-2"
+          className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2')}
           style={{
             background: 'rgba(0,0,0,0.18)',
             borderRadius: '0 12px 12px 0',

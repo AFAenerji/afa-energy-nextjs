@@ -23,6 +23,7 @@ interface GelistiriciATRProps {
     h2: string;
     intro1: string;
     intro2: string;
+    intro3?: string;
     bridge: string;
     axes: AxisData[];
     statusTitle: string;
@@ -244,6 +245,22 @@ function SectionHeader({ content, isMobile }: { content: GelistiriciATRProps['co
       >
         {content.intro2}
       </p>
+      {content.intro3 && content.intro3.split('\n\n').map((para, i) => (
+        <p
+          key={`intro3-${i}`}
+          style={{
+            fontSize: isMobile ? '16px' : '18px',
+            lineHeight: 1.8,
+            color: '#18625F',
+            textAlign: 'center',
+            maxWidth: isMobile ? '100%' : '680px',
+            margin: '12px auto 0 auto',
+            padding: isMobile ? '0 16px' : undefined,
+          }}
+        >
+          {para}
+        </p>
+      ))}
 
       {/* Gold quote block — centered wrapper, left-aligned content */}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '32px' }}>

@@ -1,0 +1,275 @@
+{
+  "hero": {
+    "sectionLabel": "PENTRU DEZVOLTATORI DE PROIECTE ȘI PROPRIETARI DE CENTRALE",
+    "motto": "Proiect Potrivit. Investitor Potrivit. Fundație Solidă.",
+    "h1Line1": "Proiect Bun, Investitor Greșit",
+    "h1Line2": "",
+    "h1Line3": "Pierde Valoare.",
+    "subtitle": "Un proiect adus la statutul Ready-to-Build (RTB) poate fi pregătit tehnic. Dar dacă ipotezele de conexiune nu sunt verificate, proiecțiile de costuri nu pot fi apărate, sau investitorul nu poate găsi răspunsuri în dosar — procesul se blochează, valoarea se erodează.\n\nAFA evaluează proiectul dvs. independent în cadrul ATR Matrix™. Proiectele care trec validarea tehnică intră în examinarea investitorului dintr-o poziție mai puternică.",
+    "ctaPrimary": "Trimiteți Proiectul pentru Evaluare",
+    "ctaSecondary": "Cum Funcționează ATR Matrix™",
+    "ctaSecondaryHref": "/atr-matrix",
+    "card1": { "kiker": "PUTEREA DOSARULUI", "body": "Realitatea conexiunii la rețea, lanțul de autorizații și ipotezele de cost sunt clarificate pentru examinarea investitorului. Discuțiile avansează pe baze verificabile, nu pe ipoteze." },
+    "card2": { "kiker": "ANALIZĂ INDEPENDENTĂ", "body": "Evaluarea traduce dosarul tehnic în limbajul comitetului de investiții. Zonele de incertitudine și elementele care necesită verificare sunt identificate înainte de negocieri." },
+    "card3": { "kiker": "FUNDAMENT TEHNIC", "body": "Un proiect care trece validarea intră în examinarea investitorului cu un dosar defensibil. Ipotezele sunt susținute de documente justificative." },
+    "photoTag": "România · Cadrul ANRE · Energie Regenerabilă"
+  },
+  "g2": {
+    "sectionLabel": "ROLUL DEZVOLTATORULUI",
+    "h2": "Ce Face un Dezvoltator?",
+    "description": "Dezvoltatorul de proiecte este actorul care transformă o idee într-un activ energetic investibil. Terenul este asigurat, procesul de Aviz Tehnic de Racordare (ATR) este gestionat, lanțul de autorizații este stabilit, iar proiectul este adus la etapa RTB.",
+    "bridge": "Fiecare pas finalizat poate crește valoarea proiectului — dar pentru a păstra acea valoare, ipotezele trebuie testate din perspectiva investitorului.",
+    "card1": { "label": "TEHNIC", "subtitle": "Teren & ATR", "body": "Ipotezele de conexiune și autorizare sunt clarificate tehnic — proiectul este adus la un nivel de fezabilitate." },
+    "card2": { "label": "COMERCIAL", "subtitle": "Crearea Valorii", "body": "Pe măsură ce riscul scade, valoarea proiectului poate crește — fiecare etapă a procesului de dezvoltare poate consolida poziția de valoare în ochii investitorului." },
+    "card3": { "label": "FINANCIAR", "subtitle": "Realizare", "body": "Când proiectul atinge o anumită maturitate, valoarea creată — prin vânzare, parteneriat sau transfer de active după punerea în funcțiune — este realizată." }
+  },
+  "g3": {
+    "sectionLabel": "DOUĂ PERSPECTIVE",
+    "kicker": "DOUĂ PERSPECTIVE",
+    "title": "Același Proiect, Două Evaluări Diferite",
+    "h2": "Același Proiect, Două Evaluări Diferite",
+    "subtitle": "Diferența dintre perspectiva dezvoltatorului și a investitorului",
+    "openingParagraph": "După luni de activitate de dezvoltare, sentimentul natural este: \"Avansez, mă apropii.\" Acest sentiment este legitim. \"Vede investitorul ce vezi tu?\"",
+    "openingP1": "După luni de activitate de dezvoltare, sentimentul natural este: \"Avansez, mă apropii.\" Acest sentiment este legitim. Ceea ce face această secțiune nu este să respingă acel sentiment — ci să pună o singură întrebare: \"Vede investitorul ce vezi tu?\"",
+    "openingP2": "Pentru dezvoltator, proiectul înseamnă pași finalizați și progres. Pentru investitor, ceea ce contează sunt incertitudinile tehnice, financiare și de timp pe care le poartă acești pași. Pe măsură ce se apropie etapa Ready-to-Build (RTB), realitatea conexiunii la rețea, domeniul de cost și lanțul de autorizații devin subiecte directe de decizie pentru comitetul de investiții.",
+    "pullQuote": "Faptul că un proiect avansează nu înseamnă că este pregătit din perspectiva investitorului.",
+    "leftColumnTitle": "Praguri Critice Pre-RTB",
+    "leftColumnItems": [
+      { "status": "completed", "text": "Drepturile de teren și utilizare sunt asigurate. Structura de proprietate și chirie este clarificată." },
+      { "status": "completed", "text": "Acordul de Mediu este disponibil. Autorizația de construire: domeniu, condiții și dependențe de calendar trebuie să fie clare pentru examinarea investitorului." },
+      { "status": "critical", "label": "PRAG CRITIC — CONEXIUNE REȚEA", "text": "Avizul Tehnic de Racordare (ATR) obținut. Punctul de conexiune definit." },
+      { "status": "uncertainty", "label": "INCERTITUDINE — ACELAȘI PRAG", "text": "Documentul ATR singur nu garantează aplicabilitatea reală. Acordul de conexiune, domeniul tehnic și responsabilitățile de interfață pot conține incertitudini pentru investitor." },
+      { "status": "risk", "label": "RISC CRITIC — COST", "text": "Domeniul de consolidare a rețelei și costul de conexiune (EUR, fără TVA) pot cauza abateri de cost în procesul investițional. Bugetul nu poate fi testat fără clarificarea domeniului inclus/exclus." },
+      { "status": "risk", "label": "RISC CRITIC — CALENDAR", "text": "Inconsistența cronologică în lanțul de autorizații poate crește riscul re-autorizării. Întârzierile pot să nu se alinieze cu planul de finanțare al investitorului." },
+      { "status": "target", "text": "Dosar RTB verificat și defensibil, pregătit pentru examinarea investitorului." }
+    ],
+    "rightColumnTitle": "Întrebările Investitorului",
+    "rightColumnIntro": "Când investitorul vine la masă, evaluarea inițială se face pe aceste subiecte. Dacă răspunsurile nu sunt clare, procesul nu avansează — proiectele sunt adesea reevaluate cu revizuiri de preț și calendar.",
+    "rightColumnQuestions": [
+      { "q": "Proiectul se poate conecta cu adevărat la rețea, sau este doar teoretic?", "note": "Dacă ipoteza de livrare în rețea nu este realistă, proiectul nu poate avansa în procesul investițional." },
+      { "q": "Costul de conexiune (EUR, fără TVA) și domeniul de consolidare prezintă risc de abatere de cost?", "note": "Elementele de cost neclare pot influența negativ oferta de preț a investitorului." },
+      { "q": "Riscul de curtailment afectează negativ ipotezele de venit?", "note": "Riscul de curtailment poate slăbi modelul de venit și randamentul investiției." },
+      { "q": "Calendarul de conexiune este acceptabil pentru investitor sau prezintă risc de întârziere care forțează planul de investiție?", "note": "Incertitudinea de calendar poate afecta direct procesul de finanțare." },
+      { "q": "Lanțul de autorizații pune în pericol calendarul investiției?", "note": "Procese de autorizare inconsistente sau incomplete pot întârzia decizia de investiție." },
+      { "q": "Ipotezele financiare sunt defensibile sau pot necesita revizuire de evaluare?", "note": "Ipotezele slabe pot duce la reevaluarea proiectului." }
+    ],
+    "bridgeText": "Fără un filtru tehnic, aceste riscuri apar în procesul investitorului ca presiune de preț și calendar. Inspecția tehnică prealabilă face aceste riscuri vizibile timpuriu și le structurează corespunzător pentru procesul investitorului."
+  },
+  "g4": {
+    "sectionLabel": "ROLUL AFA",
+    "h2": "Unde Se Poziționează AFA în Acest Proces?",
+    "intro1": "AFA Energy nu este o parte directă a dezvoltatorului de proiecte sau a investitorului. Funcția AFA este validarea tehnică independentă. Evaluează ipotezele tehnice ale proiectului în cadrul ATR Matrix™.",
+    "intro2": "Această evaluare se realizează pe patru axe principale. Fiecare axă acoperă un domeniu critic care determină dacă proiectul este pregătit pentru investiție.",
+    "intro3": "Costurile de conexiune și cerințele de consolidare a rețelei sunt o parte integrantă a acestei analize.\n\nAceastă analiză structurează incertitudinile de preț și calendar care pot apărea în procesul investitorului la o etapă timpurie.",
+    "bridge": "ATR Matrix™ — un cadru sistematic de analiză care face vizibil statutul real al proiectului pe patru axe.",
+    "axes": [
+      {
+        "id": "baglanti",
+        "num": "01",
+        "title": "Fezabilitatea Conexiunii",
+        "subtitle": "Grid Connection Feasibility",
+        "body": "Utilizabilitatea tehnică a capacității ATR, starea de încărcare a stației de transformare și adecvarea infrastructurii de conexiune sunt evaluate.",
+        "metaLabel": "Elemente de Evaluare",
+        "metaItems": ["Verificarea capacității ATR", "Analiza ocupării stației de transformare", "Capacitatea liniei și distanța"],
+        "contextLabel": "Contextul Românesc",
+        "contextText": "Hărțile de rețea Transelectrica și baza de date ANRE sunt utilizate ca referință.",
+        "resultLabel": "Rezultat",
+        "resultText": "Ipoteza de conexiune este verificată sau scenariile de risc sunt identificate."
+      },
+      {
+        "id": "uretim",
+        "num": "02",
+        "title": "Estimarea Producției",
+        "subtitle": "Energy Yield Assessment",
+        "body": "Factorul de capacitate, analiza pierderilor și consistența estimărilor de producție de energie pe termen lung sunt examinate.",
+        "metaLabel": "Elemente de Evaluare",
+        "metaItems": ["Scenarii de producție P50/P90", "Factori de pierdere (wake, curtailment, grid)", "Variație sezonieră și anuală"],
+        "contextLabel": "Contextul Românesc",
+        "contextText": "Datele regionale eoliene/solare și constrângerile rețelei românești sunt luate în considerare.",
+        "resultLabel": "Rezultat",
+        "resultText": "Presiunea CAPEX neașteptată care poate apărea după conexiune devine măsurabilă înainte de decizia de investiție; necesitatea de revizuire în procesul de tarifare este structurată."
+      },
+      {
+        "id": "maliyet",
+        "num": "03",
+        "title": "Structura Costurilor",
+        "subtitle": "Cost Structure Analysis",
+        "body": "Alinierea ipotezelor CAPEX/OPEX cu realitățile pieței și defensibilitatea calculului LCOE sunt evaluate.",
+        "metaLabel": "Elemente de Evaluare",
+        "metaItems": ["Benchmarking CAPEX", "Proiecția costurilor OPEX și O&M", "Metodologia de calcul LCOE"],
+        "contextLabel": "Contextul Românesc",
+        "contextText": "Piața EPC din România și condițiile lanțului de aprovizionare sunt utilizate ca referință.",
+        "resultLabel": "Rezultat",
+        "resultText": "Structura costurilor este verificată la standardul investitorului sau se recomandă corecții."
+      },
+      {
+        "id": "izin",
+        "num": "04",
+        "title": "Autorizații & Conformitate",
+        "subtitle": "Permitting & Compliance",
+        "body": "Consistența EIM, autorizației de construire, statutului licenței și conformității reglementare cu calendarul proiectului este examinată.",
+        "metaLabel": "Elemente de Evaluare",
+        "metaItems": ["Statutul EIM și riscuri", "Procesul autorizației de construire", "Licența de producere a energiei electrice", "Intervalul de așteptare pentru Rata Internă de Rentabilitate (IRR)"],
+        "contextLabel": "Contextul Românesc",
+        "contextText": "Cadrul de reglementare ANRE și procesele de autorizare din România sunt utilizate ca referință.",
+        "resultLabel": "Rezultat",
+        "resultText": "Lanțul de autorizații este complet sau pașii lipsă sunt identificați."
+      }
+    ],
+    "statusTitle": "Rezultatele Evaluării",
+    "statusLabels": {
+      "proceed": "Viabil",
+      "conditional": "Condiționat",
+      "blocked": "Neviabil"
+    },
+    "statusDescriptions": {
+      "proceed": "Ipotezele tehnice verificate",
+      "conditional": "Revizuire sau corecție suplimentară necesară",
+      "blocked": "Obstacol critic identificat"
+    },
+    "disclaimer": "Rezultatele ATR Matrix™ se bazează pe evaluarea tehnică independentă și nu constituie consiliere pentru investiții.",
+    "photoLabel": "ATR Matrix™",
+    "photoTitle": "Analiză Tehnică Sistematică"
+  },
+  "g46": {
+    "sectionLabel": "PACHET DE LIVRABILE",
+    "h2": "Livrabilele Evaluării Tehnice AFA",
+    "items": [
+      { "num": "01", "title": "Verificarea Capacității ATR", "body": "Utilizabilitatea tehnică a capacității punctului de conexiune este verificată.", "badge": "" },
+      { "num": "02", "title": "Evaluarea Estimării de Producție", "body": "Estimările de producție sunt revizuite cu scenarii P50/P90 și analize de pierderi.", "badge": "" },
+      { "num": "03", "title": "Analiza Structurii Costurilor", "body": "Benchmarking-ul CAPEX/OPEX și defensibilitatea calculului LCOE sunt evaluate.", "badge": "" },
+      { "num": "04", "title": "Raport Statut Autorizații", "body": "Stadiul de finalizare al proceselor EIM, autorizației de construire și licenței este raportat.", "badge": "Condiționat" },
+      { "num": "05", "title": "Matricea de Risc", "body": "Clasificarea riscurilor tehnice identificate pe nivel de prioritate și impact.", "badge": "" },
+      { "num": "06", "title": "Raport Rezumat pentru Investitori", "body": "Format executive summary cu toate constatările traduse în limbajul investitorului.", "badge": "Operațional" }
+    ]
+  },
+  "g47": {
+    "sectionLabel": "DUPĂ VALIDAREA TEHNICĂ",
+    "h2": "După Validarea Tehnică: Cum Este Păstrată Valoarea?",
+    "intro": "Un proiect care a atins statutul Ready-to-Build (RTB) și a fost validat tehnic se află pe o fundație solidă pentru a intra în examinarea investitorului.\n\nCu toate acestea, pierderea de valoare provine adesea nu din deficiențe tehnice — ci din poziționare greșită, ipoteze neclare și prezentare necontrolată.\n\nÎn această etapă, important nu este să găsești un investitor — ci să pregătești proiectul pentru examinarea investitorului cu ipoteze corecte, un cadru de risc clar și o structură de dosar disciplinată.\n\nCând această structură nu este construită, procesul se prelungește, apar cicluri repetate de întrebări și poate apărea presiune de prețuri.",
+    "cards": [
+      { "num": "01", "title": "SEGMENTUL POTRIVIT", "body": "Devine clar în ce segment de investitori proiectul va fi evaluat mai puternic." },
+      { "num": "02", "title": "LANȚUL DE DOVEZI", "body": "Ipotezele, documentele justificative și domeniile care necesită verificare sunt separate. Discuția comitetului de investiții avansează pe baze verificabile, nu pe afirmații." },
+      { "num": "03", "title": "PROCES CONTROLAT", "body": "Informațiile detaliate sunt partajate după confirmarea domeniului și acordul de confidențialitate (NDA). Procesul avansează fără riscul scurgerii necontrolate de date și expunere în negociere." }
+    ],
+    "pullQuote": "Un proiect bun nu găsește investiții; un proiect corect poziționat își păstrează valoarea în examinarea investitorului."
+  },
+  "g5": {
+    "h2Part1": "Validarea Tehnică Face ",
+    "h2Gold": "Investitorul Potrivit",
+    "h2Part2": " Vizibil.",
+    "subtitle": "Evaluarea tehnică independentă a AFA face valoarea reală a proiectului dvs. tangibilă în ochii investitorului.",
+    "ctaPrimary": "Trimiteți Proiectul pentru Evaluare →",
+    "ctaSecondary": "Cum Funcționează ATR Matrix™",
+    "formIntro": "Un rezumat general este suficient pentru evaluarea inițială. AFA evaluează toate informațiile despre proiect cu strictă confidențialitate.",
+    "privacyNote": "Nu trebuie să partajați coordonate, numere de parcele sau detalii despre punctul de conexiune în această etapă.",
+    "disclaimer": "Verificarea juridică și tehnică specifică proiectului este recomandată."
+  },
+  "g6": {
+    "sectionLabel": "PROCES",
+    "h2": "Cum Funcționează?",
+    "phases": [
+      { "num": "01", "title": "Pre-Evaluare", "body": "Informațiile de bază ale proiectului sunt primite; statutul ATR și etapa de dezvoltare sunt evaluate pentru a determina cadrul de domeniu. AFA răspunde în termen de 3 zile lucrătoare cu un răspuns inițial și — dacă se încadrează în domeniu — o recomandare pentru pasul următor.", "highlight": "în termen de 3 zile lucrătoare", "note": "Calendarul poate varia în funcție de nivelul de pregătire a documentelor dezvoltatorului și accesul la date." },
+      { "num": "02", "title": "Colectare Date & Revizuire Tehnică", "body": "Documentul ATR, estimările de producție, ipotezele de costuri și dosarele de autorizare sunt revizuite. Realitatea conexiunii la rețea, costul de conexiune și consolidarea rețelei, consistența lanțului de autorizații și ipotezele financiare sunt evaluate sistematic; subiectele de risc care pot afecta ipotezele de cost, durată și producție în procesul investițional sunt vizibilizate la o etapă timpurie." },
+      { "num": "03", "title": "Evaluarea ATR Matrix™", "body": "Proiectul este evaluat tehnic pe axele conexiunii, costurilor, autorizațiilor și ipotezelor financiare folosind ATR Matrix™. Rezultatul acestei faze este clasificarea proiectului ca Viabil / Condiționat / Neviabil în această etapă și clarificarea subiectelor critice care trebuie verificate înainte de intrarea în procesul investitorului. Nu fiecare proiect poate fi găsit potrivit pentru examinarea investitorului ca rezultat al acestei evaluări." },
+      { "num": "04", "title": "Raport & Livrare", "body": "Constatările tehnice sunt livrate într-un format de raport potrivit pentru examinarea investitorului. Acest raport servește ca document de referință pentru răspunsul la întrebările tehnice și gestionarea incertitudinilor în procesul investitorului." }
+    ],
+    "faqLabel": "ÎNTREBĂRI FRECVENTE",
+    "faqHeading": "Întrebări despre Procesul de Evaluare Tehnică",
+    "faqIntro": "Următoarele întrebări acoperă subiectele pe care dezvoltatorii de proiecte doresc cel mai frecvent să le clarifice înainte de a începe procesul de revizuire pre-tehnică. Această secțiune urmărește să explice ce informații sunt solicitate în cadrul procesului, cum sunt partajate datele proiectului și cum pot fi utilizate livrabilele de evaluare.\n\nEvaluarea AFA se axează în primul rând pe structurarea realității conexiunii la rețea, a lanțului de autorizații și a domeniului de cost din perspectiva examinării investitorului.",
+    "faqItems": [
+      { "q": "Cât durează procesul de evaluare?", "a": "AFA este pozițonată pe partea investitorului ca filtru tehnic independent. Proiectele care trec validarea tehnică avansează pe o bază de dosar potrivită pentru examinarea investitorului — părțile tranzacției sunt configurate între dezvoltator și investitor." },
+      { "q": "Ce tipuri de proiecte sunt evaluate?", "a": "Proiecte eoliene și solare din România — de la etapa de dezvoltare până la proiecte operaționale." },
+      { "q": "AFA oferă consiliere pentru investiții?", "a": "Nu. AFA oferă evaluare tehnică independentă. Decizia de investiție aparține investitorului. Documentele detaliate ale proiectului sunt partajate după confirmarea domeniului și acordul de confidențialitate mutual." },
+      { "q": "Care este costul evaluării?", "a": "Costul este determinat pe baza domeniului proiectului și a profunzimii evaluării. Intervalul de referință pentru majoritatea proiectelor este de 12-18 luni. Consultarea inițială este gratuită." },
+      { "q": "Cum este asigurată confidențialitatea?", "a": "Toate informațiile despre proiect sunt protejate sub NDA. Datele nu sunt partajate cu terți." },
+      { "q": "Ce se întâmplă după ce proiectul meu trece validarea tehnică?", "a": "Când evaluarea este completă, AFA livrează raportul cu constatările tehnice și clasificarea deciziei către dezvoltator. Pentru proiectele clasificate ca Viabile, este furnizată și o recomandare pentru pasul următor orientat spre procesul investitorului. Modul în care procesul avansează depinde de statutul proiectului, obiectivele dezvoltatorului și probabilitatea de potrivire pe partea investitorului. În proiectele care au trecut prin evaluarea ATR Matrix™, procesul de due diligence tehnic (TDD) avansează axat pe verificare și închidere, nu pe descoperirea riscurilor — făcând procesul mai previzibil. Dacă proiectul este determinat ca nefiind pregătit pentru investiție instituțională în etapa sa actuală, acest rezultat creează, de asemenea, un livrabil concret pentru pregătirea procesului investitorului." },
+      { "q": "Ce subiecte sunt abordate în documentul Aviz Tehnic de Racordare (ATR)?", "a": "Documentul ATR este tratat ca referința principală pentru evaluarea fezabilității ipotezei de conexiune la rețea. În acest domeniu, claritatea punctului și nivelului de conexiune, condiționalitatea conexiunii, care parte preia domeniul tehnic și constrângerile care pot afecta calendarul sunt evaluate." },
+      { "q": "Cum sunt abordate costurile de conexiune și cerințele de consolidare a rețelei în evaluare?", "a": "Costurile de conexiune și cerințele de consolidare a rețelei sunt printre subiectele care conțin cel mai frecvent incertitudini în domeniul de costuri al proiectului. În procesul de evaluare, separarea domeniului inclus/exclus, responsabilitățile de interfață și impacturile potențiale asupra calendarului sunt structurate și vizibilizate." },
+      { "q": "Cum este abordat riscul de curtailment în evaluare?", "a": "Riscul de curtailment este posibilitatea ca producția să fie limitată în anumite perioade din cauza condițiilor rețelei și afectează direct ipotezele de venit ale proiectului. În procesul de evaluare, acest subiect este abordat la nivel înalt în cadrul condițiilor punctului de conexiune, densității regionale a rețelei și constrângerilor tehnice." }
+    ]
+  },
+  "g7": {
+    "cta": {
+      "kicker": "PORNIȚI PROCESUL DE EVALUARE",
+      "heading": "Formular de Evaluare Tehnică",
+      "subtitle": "Selectați etapa proiectului și partajați informațiile relevante. Documentația tehnică detaliată este solicitată după stabilirea structurii de confidențialitate.",
+      "button": "Porniți Cererea de Evaluare"
+    },
+    "back": "← Înapoi",
+    "tab1Label": "Etapă de Dezvoltare / RtB",
+    "tab2Label": "Proiect Operațional",
+    "phoneSearch": "Căutați țara...",
+    "phoneQuickPicks": "Frecvent Utilizate",
+    "phoneAllCountries": "Toate Țările",
+    "tab1Submit": "Porniți Procesul →",
+    "tab2Submit": "Porniți Analiza →",
+    "privacy": "Informațiile despre proiectul dvs. sunt protejate sub NDA. Datele dvs. sunt utilizate numai în scopuri de evaluare.",
+    "selectPlaceholder": "Selectați...",
+    "success": {
+      "title": "Cererea Dvs. a Fost Primită",
+      "message": "Echipa noastră de evaluare vă va contacta cât mai curând posibil.",
+      "reset": "Nouă Cerere"
+    },
+    "errors": {
+      "required": "Acest câmp este obligatoriu",
+      "email": "Introduceți o adresă de e-mail validă",
+      "checkbox": "Selectați cel puțin o opțiune"
+    },
+    "labels": {
+      "name": "Nume Complet",
+      "company": "Denumirea Companiei",
+      "email": "E-mail Corporativ",
+      "phone": "Telefon",
+      "assessmentType": "Care este scopul evaluării?",
+      "projectLocation": "Locația Proiectului",
+      "technology": "Tehnologie",
+      "targetCapacity": "Capacitate Instalată Țintă",
+      "projectStage": "Etapa Proiectului",
+      "notes": "Note",
+      "applicationPurpose": "Care este scopul principal al acestei cereri?",
+      "installedCapacity": "Capacitate Instalată",
+      "location": "Locație",
+      "codYear": "Anul Punerii în Funcțiune (COD)",
+      "annualProduction": "Producție Ultimele 12 Luni (MWh)",
+      "scadaSystem": "Sistem SCADA / Monitorizare",
+      "performanceStatus": "Starea Performanței",
+      "revenueModel": "Model de Venit",
+      "ppaMaturity": "Scadența PPA",
+      "priceStructure": "Structura Prețului",
+      "actionTimeline": "Calendar Acțiuni Planificate"
+    },
+    "placeholders": {
+      "location": "Județ / Regiune",
+      "annualProduction": "Ex.: 12.500 MWh",
+      "notesTab1": "Informații suplimentare despre proiect pe care doriți să le partajați...",
+      "notesTab2": "Obiectiv de vânzare, interes existent al investitorului, problemă de performanță, proces bancar, etc."
+    },
+    "assessmentTypeOptions": [
+      "Evaluare tehnică independentă pentru proiectul meu",
+      "Raport ATR Matrix™",
+      "Revizuire pre-tehnică / Pre-TDD",
+      "Altele"
+    ],
+    "technologyOptionsTab1": ["Energie solară (PV)", "Energie eoliană", "BESS", "Hibrid PV + Sistem de Stocare a Energiei în Baterii (BESS)", "Hibrid Eolian+BESS", "Altele"],
+    "targetCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW și peste", "Flexibil"],
+    "projectStageOptions": ["Etapă de dezvoltare", "Ready-to-Build (RtB)", "Etapă de construcție"],
+    "applicationPurposeOptions": [
+      "Poziționare tehnică înainte de vânzarea activului",
+      "Analiza rezilienței performanței și veniturilor",
+      "Evaluare refinanțare / bankability",
+      "Ingineria angajatorului / supraveghere tehnică",
+      "Îmbunătățirea performanței portofoliului și gestionarea activelor",
+      "Altele"
+    ],
+    "technologyOptionsTab2": ["Energie solară (PV)", "Energie eoliană", "Hibrid PV+BESS", "Hibrid Eolian+BESS", "Altele"],
+    "installedCapacityOptions": ["1–10 MW", "10–30 MW", "30–70 MW", "70 MW și peste"],
+    "codYearOptions": ["2018 și anterior", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+    "scadaOptions": ["Da — acces complet la date", "Da — date limitate", "Nu"],
+    "performanceOptions": ["În conformitate cu așteptările", "Sub așteptări", "Incert — neanalizat"],
+    "revenueModelOptions": ["Venit bazat pe piață (merchant)", "Acord de Achiziție de Energie (PPA)", "Mixt"],
+    "ppaMaturityOptions": ["1–5 ani", "5–10 ani", "10–15 ani", "15+ ani"],
+    "priceStructureOptions": ["Fix", "Indexat", "Mixt"],
+    "actionTimelineOptions": ["0–3 luni", "3–6 luni", "6–12 luni", "Termen lung"]
+  }
+}
